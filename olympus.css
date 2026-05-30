@@ -1,7 +1,18 @@
-/*
- * Aither — Greek Theme
- * Clean. Gold accents. Dark panels. No gimmicks.
- */
+/* ==========================================================
+   Aither — Greek Theme
+   Gold accents. Dark panels. Clean.
+ 
+   Author : AzureBelmont
+   Repo   : github.com/AzureBelmont/aither-css
+   Ver    : 1.0
+ 
+   Palette
+   ────────────────────────────────────────────
+   Gold         #f5a623   primary accent
+   Navy         #080b16   page background
+   Panel        #111928   surfaces
+   Text         #dde1f0   body text
+   ========================================================== */
 
 :root {
   --at-bg:        #080b16;   /* very dark navy — page background */
@@ -296,13 +307,6 @@ select.form__select {
 .form__select:hover, select.form__select:hover {
   border-color: rgba(245,166,35,0.4) !important;
 }
-
-
-
-/* ── Active nav pill — gold text via CSS :has() + main class ──────
-   UNIT3D adds a page-specific class to <main> on every page.
-   We use that to detect the current section and highlight the
-   matching nav pill — no JavaScript needed.                        */
 
 /* Torrents section — torrent list, single torrent, requests, mediahub, subtitles */
 html:has(main[class*="torrent"]) .top-nav--left__list-item:has(a[href="https://aither.cc/torrents"]) > a,
