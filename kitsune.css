@@ -1,0 +1,494 @@
+/* ==========================================================
+   Kitsune — OLED Black × Cherry Blossom Pink
+   A Japanese fox-spirit theme for Aither (UNIT3D)
+   
+   Author : AzureBelmont
+   Repo   : github.com/AzureBelmont/aither-css
+   Ver    : 1.0  — hex matching, commented stubs for new ranks
+   
+   Palette
+   ────────────────────────────────────────────
+   Sakura Pink  #F4AACA   primary accent
+   Torii Red    #C0392B   danger / leechers
+   Matcha       #4ade80   seeders / success
+   OLED Black   #000000   page bg
+   ========================================================== */
+
+:root {
+  --k-pink:        #F4AACA;
+  --k-pink-soft:   rgba(244,170,202,0.55);
+  --k-pink-dim:    rgba(244,170,202,0.20);
+  --k-pink-faint:  rgba(244,170,202,0.07);
+  --k-pink-border: rgba(244,170,202,0.18);
+  --k-torii:       #C0392B;
+  --k-matcha:      #4ade80;
+
+  --k-bg:    #000000;
+  --k-bg2:   #0c0c0c;
+  --k-bg3:   #111111;
+  --k-bg4:   #181818;
+  --k-bg5:   #202020;
+
+  --k-border-faint: rgba(255,255,255,0.04);
+  --k-border:       rgba(255,255,255,0.08);
+  --k-border-mid:   rgba(255,255,255,0.12);
+
+  --k-text:   #e8e8e8;
+  --k-text2:  #888888;
+  --k-text3:  #404040;
+
+  --k-radius:    10px;
+  --k-radius-sm: 6px;
+}
+
+/* ── Reset / Base ────────────────────────────────────────── */
+body, html {
+  background-color: var(--k-bg) !important;
+  color: var(--k-text) !important;
+  font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'Inter', system-ui, sans-serif !important;
+}
+
+/* ── Scrollbar ────────────────────────────────────────────── */
+::-webkit-scrollbar       { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: var(--k-bg); }
+::-webkit-scrollbar-thumb { background: var(--k-bg5); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(244,170,202,0.30); }
+
+/* Hide the column SVG favicon */
+a.top-nav__branding img { display: none !important; }
+
+/* Hide the text "Aither" — we inject our own via ::after */
+.top-nav__site-logo { display: none !important; }
+
+/* Style the branding link itself as a flex row */
+a.top-nav__branding {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  text-decoration: none !important;
+}
+
+/* 狐 fox kanji as the logo mark */
+a.top-nav__branding::before {
+  content: "狐" !important;
+  font-size: 22px !important;
+  line-height: 1 !important;
+  color: var(--k-pink) !important;
+  font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif !important;
+  text-shadow: 0 0 10px rgba(244,170,202,0.5) !important;
+}
+
+/* AITHER wordmark */
+a.top-nav__branding::after {
+  content: "AITHER" !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  letter-spacing: .18em !important;
+  color: var(--k-pink) !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
+}
+
+/* Footer logo — same treatment */
+.footer a.top-nav__branding img,
+.footer img[src*="favicon"],
+footer img[src*="favicon"] { display: none !important; }
+
+.footer .top-nav__site-logo,
+footer .top-nav__site-logo { display: none !important; }
+
+/* ─══════════════════════════════════════════════════════════
+   TOP NAV
+   ══════════════════════════════════════════════════════════ */
+.top-nav {
+  background-color: #000 !important;
+  border-bottom: 1px solid var(--k-pink-border) !important;
+}
+
+/* Stats bar — keep numbers white, only accent the icons with pink dots */
+.top-nav__ratio-bar { color: var(--k-text) !important; }
+.top-nav__ratio-bar a,
+.top-nav__ratio-bar span { color: var(--k-text) !important; }
+
+/* Nav links (not rank-coloured, not stats) */
+.top-nav__main-menus a:not([style*="color"]),
+.top-nav--left__list-item a:not([style*="color"]) {
+  color: var(--k-text) !important;
+}
+.top-nav__main-menus a:not([style*="color"]):hover {
+  color: var(--k-pink) !important;
+}
+
+/* Active nav section underline */
+html:has(main[class*="torrent"])  .top-nav--left__list-item:has(a[href*="/torrents"]) > a,
+html:has(main[class*="request"])  .top-nav--left__list-item:has(a[href*="/torrents"]) > a,
+html:has(main[class*="mediahub"]) .top-nav--left__list-item:has(a[href*="/torrents"]) > a,
+html:has(main[class*="topic"])    .top-nav--left__list-item:has(a[href*="/forums"]) > a,
+html:has(main[class*="forum"])    .top-nav--left__list-item:has(a[href*="/forums"]) > a,
+html:has(main[class*="article"])  .top-nav--left__list-item:has(a[href*="/forums"]) > a,
+html:has(main[class*="poll"])     .top-nav--left__list-item:has(a[href*="/forums"]) > a,
+html:has(main[class*="wiki"])     .top-nav--left__list-item:has(a[href*="/wiki"]) > a {
+  color: var(--k-pink) !important;
+  border-bottom: 2px solid var(--k-pink) !important;
+  padding-bottom: 2px !important;
+}
+
+/* Notification dot (SVG circle in bell icon) */
+.top-nav circle {
+  stroke: var(--k-pink) !important;
+  fill:   var(--k-pink) !important;
+}
+
+/* ─══════════════════════════════════════════════════════════
+   PANELS
+   ══════════════════════════════════════════════════════════ */
+.panelV2 {
+  background-color: var(--k-bg2) !important;
+  border: 0.5px solid var(--k-pink-border) !important;
+  border-radius: var(--k-radius) !important;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.7) !important;
+  overflow: hidden !important;
+}
+html body .panelV2 { overflow: hidden !important; }
+html body .panelV2 > :last-child {
+  border-radius: 0 0 var(--k-radius) var(--k-radius) !important;
+}
+
+.panel__heading,
+.panel__heading a,
+.panel__heading a:visited {
+  background-color: var(--k-bg3) !important;
+  border-bottom: 1px solid var(--k-pink-border) !important;
+  color: var(--k-pink) !important;
+  font-weight: 600 !important;
+  letter-spacing: .05em !important;
+  border-radius: var(--k-radius) var(--k-radius) 0 0 !important;
+  padding-left: 14px !important;
+}
+/* Pink bar accent left of heading text */
+.panel__heading::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 3px !important;
+  height: 1em !important;
+  background: var(--k-pink) !important;
+  border-radius: 2px !important;
+  margin-right: 10px !important;
+  vertical-align: middle !important;
+  opacity: 0.65 !important;
+}
+.panel__heading a:hover { opacity: 0.75 !important; }
+
+html body .panel__header {
+  background-color: var(--k-bg2) !important;
+  border-bottom: 0.5px solid var(--k-border) !important;
+  border-radius: var(--k-radius) var(--k-radius) 0 0 !important;
+  padding-right: 8px !important;
+}
+html body .panel__heading--centered { background-color: transparent !important; border: none !important; }
+html body .panel__header .panel__heading,
+html body .panel__header .panel__heading--centered { background-color: transparent !important; border: none !important; }
+html body .panel__actions { background-color: transparent !important; }
+html body .panel__action  { background-color: transparent !important; }
+
+html body .panel__tabs {
+  background-color: var(--k-bg2) !important;
+  border-bottom: 1px solid var(--k-pink-border) !important;
+  padding: 0 4px !important;
+}
+html body .panel__tab {
+  color: var(--k-text3) !important;
+  border-bottom: 2px solid transparent !important;
+  padding: 8px 12px !important;
+  font-size: 13px !important;
+  letter-spacing: .03em !important;
+  transition: color .15s !important;
+}
+html body .panel__tab:hover   { color: var(--k-text2) !important; }
+html body .panel__tab--active { color: var(--k-pink) !important; border-bottom-color: var(--k-pink) !important; }
+
+.panel--grid-item {
+  background-color: var(--k-bg2) !important;
+  border: 0.5px solid var(--k-pink-border) !important;
+  border-radius: var(--k-radius) !important;
+}
+
+/* ─══════════════════════════════════════════════════════════
+   DATA TABLES
+   ══════════════════════════════════════════════════════════ */
+.data-table-wrapper {
+  border-radius: var(--k-radius) !important;
+  overflow: hidden !important;
+  border: 0.5px solid var(--k-pink-border) !important;
+}
+.data-table thead th,
+.data-table thead td,
+.torrent-search--list__no-poster-headers th,
+.torrent-search--list__no-poster-headers td {
+  background-color: var(--k-bg3) !important;
+  color: var(--k-text2) !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: .08em !important;
+  text-transform: uppercase !important;
+  border-bottom: 1px solid var(--k-pink-border) !important;
+}
+.data-table tbody tr:hover td { background-color: var(--k-pink-faint) !important; }
+.data-table td { border-bottom: 0.5px solid var(--k-border-faint) !important; }
+
+/* ─══════════════════════════════════════════════════════════
+   TORRENT ROWS
+   ══════════════════════════════════════════════════════════ */
+.af-row {
+  background-color: var(--k-bg2) !important;
+  border-bottom: 0.5px solid var(--k-border-faint) !important;
+  transition: background .15s !important;
+}
+.af-row:hover {
+  background-color: var(--k-pink-faint) !important;
+  box-shadow: inset 3px 0 0 var(--k-pink) !important;
+}
+.torrent-search--list__name > a:first-child { color: var(--k-text) !important; font-weight: 500 !important; }
+.torrent-search--list__name > a:first-child:hover { color: var(--k-pink) !important; }
+.torrent-search--list__seeders  { color: var(--k-matcha) !important; font-size: 13px !important; font-weight: 600 !important; }
+.torrent-search--list__leechers { color: var(--k-torii)  !important; font-size: 13px !important; font-weight: 600 !important; }
+.torrent-icons__featured  { color: var(--k-pink)   !important; }
+.torrent-icons__freeleech { color: var(--k-matcha)  !important; }
+.torrent-icons__internal  { color: var(--k-text2)   !important; }
+.torrent-icons__verified  { color: var(--k-matcha)  !important; }
+
+/* ─══════════════════════════════════════════════════════════
+   CARDS / FORUM / WIKI
+   ══════════════════════════════════════════════════════════ */
+.internal-card {
+  background-color: var(--k-bg2) !important;
+  border: 0.5px solid var(--k-pink-border) !important;
+  border-radius: var(--k-radius) !important;
+  overflow: hidden !important;
+  transition: border-color .2s, transform .15s !important;
+}
+.internal-card:hover { border-color: rgba(244,170,202,0.4) !important; transform: translateY(-2px) !important; }
+.internal-card__footer, .internal-card__header { background-color: var(--k-bg3) !important; color: var(--k-text2) !important; }
+
+.topic-listing { border-left: 3px solid transparent !important; padding-left: 12px !important; }
+.topic-listing__item--unread { border-left-color: var(--k-pink) !important; }
+.topic-listing__item--unread .topic-listing__link { color: var(--k-text) !important; font-weight: 600 !important; }
+.topic-listing__item--read   .topic-listing__link { color: var(--k-text2) !important; }
+
+.wiki__content a:not([style*="color"])       { color: var(--k-pink) !important; }
+.wiki__content a:not([style*="color"]):hover { color: var(--k-pink-soft) !important; }
+
+/* ─══════════════════════════════════════════════════════════
+   BUTTONS
+   ══════════════════════════════════════════════════════════ */
+.form__button--text {
+  background: transparent !important; border: none !important;
+  color: var(--k-pink) !important; font-size: inherit !important;
+}
+.form__button--text:hover { color: var(--k-pink-soft) !important; }
+
+.form__button--filled, .form__button--filled.btn {
+  background: var(--k-pink) !important; color: #000 !important;
+  border-radius: 9999px !important; border: none !important; font-weight: 600 !important;
+}
+.form__button--filled:hover { background: var(--k-pink-soft) !important; color: #000 !important; }
+
+.form__standard-icon-button {
+  background: transparent !important; border: none !important;
+  color: var(--k-pink) !important; opacity: 0.55 !important; transition: opacity .15s !important;
+}
+.form__standard-icon-button:hover { opacity: 1 !important; }
+
+/* ─══════════════════════════════════════════════════════════
+   INPUTS & SELECTS
+   ══════════════════════════════════════════════════════════ */
+.form__input, input[type="text"], input[type="search"],
+input[type="email"], input[type="password"], textarea {
+  background-color: var(--k-bg3) !important;
+  border: 0.5px solid var(--k-border-mid) !important;
+  border-radius: var(--k-radius-sm) !important;
+  color: var(--k-text) !important; font-size: 14px !important;
+}
+input:focus, textarea:focus, select:focus,
+.form__input:focus, [type="search"]:focus, [type="text"]:focus {
+  border-color: var(--k-pink) !important; outline: none !important;
+  box-shadow: 0 0 0 3px rgba(244,170,202,0.10) !important;
+}
+.form__select, select.form__select, select {
+  background-color: var(--k-bg3) !important;
+  border: 0.5px solid var(--k-pink-border) !important;
+  border-radius: var(--k-radius-sm) !important;
+  color: var(--k-text) !important; font-size: 14px !important;
+}
+.form__select:hover, select:hover { border-color: rgba(244,170,202,0.35) !important; }
+
+html body .panel__header .form__button,
+html body .panel__header .form__button--text {
+  background: transparent !important; border: none !important;
+  color: var(--k-pink) !important; font-size: inherit !important;
+}
+html body .panel__header .form__select,
+html body .panel__header select {
+  background-color: rgba(244,170,202,0.04) !important;
+  border: 0.5px solid var(--k-pink-border) !important;
+  border-radius: var(--k-radius-sm) !important; color: var(--k-pink) !important;
+}
+
+/* VirtualSelect */
+.vscomp-wrapper, .vscomp-ele-wrapper, .vscomp-toggle-button {
+  background-color: var(--k-bg3) !important; border: 0.5px solid var(--k-pink-border) !important;
+  border-radius: var(--k-radius-sm) !important; color: var(--k-text2) !important;
+}
+.vscomp-toggle-button:hover { border-color: rgba(244,170,202,0.35) !important; }
+.vscomp-value { color: var(--k-text2) !important; font-size: 14px !important; }
+.vscomp-arrow { color: var(--k-pink) !important; border-color: var(--k-pink) !important; }
+.vscomp-dropbox-container, .vscomp-dropbox {
+  background-color: var(--k-bg2) !important; border: 0.5px solid var(--k-pink-border) !important;
+  border-radius: 8px !important; box-shadow: 0 8px 32px rgba(0,0,0,0.7) !important;
+}
+.vscomp-search-container, .vscomp-search-wrapper {
+  background-color: var(--k-bg3) !important; border-bottom: 0.5px solid var(--k-border) !important;
+}
+.vscomp-search-input {
+  background-color: var(--k-bg3) !important; border: 0.5px solid var(--k-border) !important;
+  color: var(--k-text) !important; border-radius: var(--k-radius-sm) !important; font-size: 14px !important;
+}
+.vscomp-search-input:focus { border-color: var(--k-pink) !important; box-shadow: 0 0 0 2px rgba(244,170,202,0.08) !important; }
+.vscomp-options-container, .vscomp-options-list { background-color: var(--k-bg2) !important; }
+.vscomp-option { background-color: var(--k-bg2) !important; color: var(--k-text2) !important; font-size: 14px !important; }
+.vscomp-option:hover   { background-color: var(--k-pink-faint) !important; color: var(--k-text) !important; }
+.vscomp-option.selected { background-color: var(--k-pink-faint) !important; color: var(--k-pink) !important; }
+
+/* ─══════════════════════════════════════════════════════════
+   SWEETALERT2
+   ══════════════════════════════════════════════════════════ */
+.swal2-popup, .swal2-toast {
+  background-color: var(--k-bg2) !important; border: 0.5px solid var(--k-pink-border) !important;
+  border-radius: var(--k-radius) !important; color: var(--k-text) !important;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.8) !important;
+}
+.swal2-title { color: var(--k-text) !important; }
+.swal2-html-container, .swal2-content { color: var(--k-text2) !important; }
+.swal2-icon.swal2-success { border-color: var(--k-pink) !important; color: var(--k-pink) !important; }
+.swal2-icon.swal2-success .swal2-success-ring { border-color: var(--k-pink-dim) !important; }
+.swal2-icon.swal2-success [class^="swal2-success-line"] { background-color: var(--k-pink) !important; }
+.swal2-timer-progress-bar { background: var(--k-pink) !important; }
+.swal2-confirm { background-color: var(--k-pink) !important; color: #000 !important; font-weight: 600 !important; border-radius: var(--k-radius-sm) !important; }
+.swal2-deny, .swal2-cancel { background-color: var(--k-bg4) !important; color: var(--k-text2) !important; border-radius: var(--k-radius-sm) !important; }
+
+/* ─══════════════════════════════════════════════════════════
+   MISC
+   ══════════════════════════════════════════════════════════ */
+.dot { background-color: var(--k-pink) !important; box-shadow: 0 0 8px rgba(244,170,202,0.55) !important; }
+.progress-bar, [class*="progress"] > [class*="bar"] { background-color: var(--k-pink) !important; }
+
+.footer, footer { background-color: #000 !important; border-top: 1px solid var(--k-pink-border) !important; }
+.footer__section-title { color: var(--k-pink) !important; font-weight: 600 !important; text-transform: uppercase !important; font-size: 11px !important; letter-spacing: .1em !important; }
+.footer__copyright, .footer__stats { color: var(--k-text3) !important; font-size: 12px !important; }
+
+/* ── Zero out span text for all rank colours ─────────────── */
+.group-requirements__group--header h3 > span[style*="color"] {
+  font-size: 0 !important;
+}
+
+/* ── Restore system ranks unchanged ──────────────────────── */
+.group-requirements__group--header h3 > span[style*="95A5A6"],
+.group-requirements__group--header h3 > span[style*="95a5a6"],
+.group-requirements__group--header h3 > span[style*="color: red"],
+.group-requirements__group--header h3 > span[style*="color:red"] {
+  font-size: inherit !important;
+}
+
+/* ── Main track ───────────────────────────────────────────── */
+.group-requirements__group--header h3 > span[style*="5E372F"]::before,
+.group-requirements__group--header h3 > span[style*="5e372f"]::before {
+  content: "Norowareshi"; font-size: 18px !important; color: #5E372F;
+}
+.group-requirements__group--header h3 > span[style*="b8c8ff"]::before,
+.group-requirements__group--header h3 > span[style*="B8C8FF"]::before {
+  content: "Hitodama"; font-size: 18px !important; color: #b8c8ff;
+}
+.group-requirements__group--header h3 > span[style*="a5b8ff"]::before,
+.group-requirements__group--header h3 > span[style*="A5B8FF"]::before {
+  content: "Tanuki"; font-size: 18px !important; color: #a5b8ff;
+}
+.group-requirements__group--header h3 > span[style*="7f8eff"]::before,
+.group-requirements__group--header h3 > span[style*="7F8EFF"]::before {
+  content: "Tengu"; font-size: 18px !important; color: #7f8eff;
+}
+.group-requirements__group--header h3 > span[style*="508bf2"]::before,
+.group-requirements__group--header h3 > span[style*="508BF2"]::before {
+  content: "Inugami"; font-size: 18px !important; color: #508bf2;
+}
+.group-requirements__group--header h3 > span[style*="6c7eff"]::before,
+.group-requirements__group--header h3 > span[style*="6C7EFF"]::before {
+  content: "Inari"; font-size: 18px !important; color: #6c7eff;
+}
+.group-requirements__group--header h3 > span[style*="596eff"]::before,
+.group-requirements__group--header h3 > span[style*="596EFF"]::before {
+  content: "Ryujin"; font-size: 18px !important; color: #596eff;
+}
+.group-requirements__group--header h3 > span[style*="466eff"]::before,
+.group-requirements__group--header h3 > span[style*="466EFF"]::before {
+  content: "Oni"; font-size: 18px !important; color: #466eff;
+}
+.group-requirements__group--header h3 > span[style*="214e96"]::before,
+.group-requirements__group--header h3 > span[style*="214E96"]::before {
+  content: "Okami"; font-size: 18px !important; color: #214e96;
+}
+
+/* ── Uploader track ───────────────────────────────────────── */
+.group-requirements__group--header h3 > span[style*="6cdb9b"]::before,
+.group-requirements__group--header h3 > span[style*="6CDB9B"]::before {
+  content: "Yoko"; font-size: 18px !important; color: #6cdb9b;
+}
+.group-requirements__group--header h3 > span[style*="2ECC71"]::before,
+.group-requirements__group--header h3 > span[style*="2ecc71"]::before {
+  content: "Nibi"; font-size: 18px !important; color: #2ECC71;
+}
+
+/* ── Staff ────────────────────────────────────────────────── */
+.group-requirements__group--header h3 > span[style*="7FFF00"]::before,
+.group-requirements__group--header h3 > span[style*="7fff00"]::before {
+  content: "Sanbi"; font-size: 18px !important; color: #7FFF00;
+}
+.group-requirements__group--header h3 > span[style*="912cdb"]::before,
+.group-requirements__group--header h3 > span[style*="912CDB"]::before {
+  content: "Sakura"; font-size: 18px !important; color: #912cdb;
+}
+.group-requirements__group--header h3 > span[style*="BF55EC"]::before,
+.group-requirements__group--header h3 > span[style*="bf55ec"]::before {
+  content: "Kitsune-gumi"; font-size: 18px !important; color: #BF55EC;
+}
+.group-requirements__group--header h3 > span[style*="BAAF92"]::before,
+.group-requirements__group--header h3 > span[style*="baaf92"]::before {
+  content: "Tsukai"; font-size: 18px !important; color: #BAAF92;
+}
+
+/* FLS and Editor share #20726c — split by icon class */
+.group-requirements__group--header h3:has(i.fa-life-ring) > span[style*="20726c"]::before {
+  content: "Kannagi"; font-size: 18px !important; color: #20726c;
+}
+.group-requirements__group--header h3:has(i.fa-edit) > span[style*="20726c"]::before {
+  content: "Fudeshi"; font-size: 18px !important; color: #20726c;
+}
+
+.group-requirements__group--header h3 > span[style*="15B097"]::before,
+.group-requirements__group--header h3 > span[style*="15b097"]::before {
+  content: "Shogun"; font-size: 18px !important; color: #15B097;
+}
+.group-requirements__group--header h3 > span[style*="4ECDC4"]::before,
+.group-requirements__group--header h3 > span[style*="4ecdc4"]::before {
+  content: "Daimyo"; font-size: 18px !important; color: #4ECDC4;
+}
+.group-requirements__group--header h3 > span[style*="f92672"]::before {
+  content: "Daimyo-no-Koe"; font-size: 18px !important; color: #f92672;
+}
+.group-requirements__group--header h3 > span[style*="ff9100"]::before {
+  content: "Tanuki-shi"; font-size: 18px !important; color: #ff9100;
+}
+.group-requirements__group--header h3 > span[style*="ffb24d"]::before {
+  content: "Oyakata"; font-size: 18px !important; color: #ffb24d;
+}
+.group-requirements__group--header h3 > span[style*="00abff"]::before {
+  content: "Kappa"; font-size: 18px !important; color: #00abff;
+}
