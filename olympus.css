@@ -1,0 +1,512 @@
+/*
+ * Aither — Greek Theme
+ * Clean. Gold accents. Dark panels. No gimmicks.
+ */
+
+:root {
+  --at-bg:        #080b16;   /* very dark navy — page background */
+  --at-bg2:       #111928;   /* panels — clearly lighter than body */
+  --at-bg3:       #1c2540;   /* panel headers/table headers — lighter still */
+  --at-border:    rgba(255,255,255,0.07);
+  --at-gold:      #f5a623;
+  --at-gold2:     #d4891a;
+  --at-goldfaint: rgba(245,166,35,0.14);
+  --at-text:      #dde1f0;
+  --at-text2:     #7a80a0;
+  --at-text3:     #444966;
+  --at-green:     #5dcaa5;
+  --at-red:       #f08060;
+  --at-radius:    10px;
+}
+
+/* ── Body ──────────────────────────────────────────── */
+body {
+  background-color: var(--at-bg) !important;
+  color: var(--at-text) !important;
+}
+
+/* ── Top nav ───────────────────────────────────────── */
+.top-nav {
+  background-color: #090c18 !important;
+  border-bottom: 1px solid var(--at-goldfaint) !important;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.5) !important;
+}
+
+/* ── Panels ────────────────────────────────────────── */
+.panelV2 {
+  background-color: var(--at-bg2) !important;
+  border: 0.5px solid var(--at-border) !important;
+  border-radius: var(--at-radius) !important;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.5) !important;
+}
+
+/* Gold on ALL panel headings — the biggest Greek feel impact */
+.panel__heading {
+  background-color: var(--at-bg3) !important;
+  border-bottom: 1px solid var(--at-goldfaint) !important;
+  color: var(--at-gold) !important;
+  font-weight: 600 !important;
+  letter-spacing: .04em !important;
+  border-radius: var(--at-radius) var(--at-radius) 0 0 !important;
+}
+/* panel__heading links (e.g. "Latest topics", "Latest posts" are <a> tags) */
+.panel__heading a,
+.panel__heading a:visited {
+  color: var(--at-gold) !important;
+  font-weight: 600 !important;
+}
+.panel__heading a:hover {
+  color: var(--at-gold2) !important;
+}
+/* panel__body — left to Aither Dark native to avoid chatbox conflicts */
+.panel--grid-item {
+  background-color: var(--at-bg2) !important;
+  border: 0.5px solid rgba(245,166,35,0.22) !important;
+  border-radius: var(--at-radius) !important;
+}
+
+/* ── Section headings sitewide ─────────────────────── */
+h1, h2, h3 { color: var(--at-text) !important; }
+
+/* Gold on page-level section labels like "Featured torrents", "Torrents" */
+.panelV2 > .panel__heading,
+.block__heading,
+[class*="section__title"],
+[class*="section-title"] {
+  color: var(--at-gold) !important;
+}
+
+/* ── Data tables ───────────────────────────────────── */
+.data-table-wrapper {
+  border-radius: var(--at-radius) !important;
+  overflow: hidden !important;
+  border: 0.5px solid rgba(245,166,35,0.15) !important;
+}
+.data-table thead th,
+.data-table thead td,
+.torrent-search--list__no-poster-headers th,
+.torrent-search--list__no-poster-headers td {
+  background-color: var(--at-bg3) !important;
+  color: var(--at-text2) !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: .08em !important;
+  text-transform: uppercase !important;
+  border-bottom: 1px solid var(--at-goldfaint) !important;
+}
+.data-table tbody tr:hover td {
+  background-color: rgba(245,166,35,0.025) !important;
+}
+.data-table td { border-bottom: 0.5px solid var(--at-border) !important; }
+
+/* ── Torrent list ──────────────────────────────────── */
+.af-row {
+  background-color: var(--at-bg2) !important;
+  border-bottom: 0.5px solid var(--at-border) !important;
+}
+.af-row:hover { background-color: rgba(245,166,35,0.025) !important; }
+
+.torrent-search--list__name > a:first-child {
+  color: var(--at-text) !important;
+  font-weight: 500 !important;
+}
+.torrent-search--list__name > a:first-child:hover { color: var(--at-gold) !important; }
+.torrent-search--list__seeders { color: var(--at-green) !important; }
+.torrent-search--list__leechers { color: var(--at-red) !important; }
+.torrent-icons__featured { color: var(--at-gold) !important; }
+.torrent-icons__freeleech { color: #8bc34a !important; }
+.torrent-icons__internal  { color: #baaf92 !important; }
+.torrent-icons__verified  { color: var(--at-green) !important; }
+
+/* ── Internal/featured cards ───────────────────────── */
+.internal-card {
+  background-color: var(--at-bg2) !important;
+  border: 0.5px solid rgba(245,166,35,0.18) !important;
+  border-radius: var(--at-radius) !important;
+  overflow: hidden !important;
+  transition: border-color .2s, transform .2s !important;
+}
+.internal-card:hover {
+  border-color: rgba(245,166,35,0.3) !important;
+  transform: translateY(-2px) !important;
+}
+.internal-card__footer,
+.internal-card__header {
+  background-color: var(--at-bg3) !important;
+  color: var(--at-text2) !important;
+}
+
+/* ── Wiki content ──────────────────────────────────── */
+.wiki__content a { color: var(--at-gold) !important; }
+.wiki__content a:hover { color: var(--at-gold2) !important; }
+
+/* ── Footer ────────────────────────────────────────── */
+.footer, footer {
+  background-color: #08090f !important;
+  border-top: 1px solid var(--at-goldfaint) !important;
+}
+.footer__section-title {
+  color: var(--at-gold) !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  font-size: 11px !important;
+  letter-spacing: .1em !important;
+}
+.footer__copyright,
+.footer__stats { color: var(--at-text3) !important; font-size: 12px !important; }
+
+/* ── Scrollbar ─────────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: var(--at-bg); }
+::-webkit-scrollbar-thumb { background: var(--at-bg3); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(245,166,35,0.4); }
+
+
+/* ── Logo — gold icon, white text (overrides gradient) ── */
+.top-nav__branding img {
+  filter: sepia(1) saturate(5) hue-rotate(5deg) brightness(1.1) !important;
+  transition: filter .3s, transform .3s !important;
+}
+.top-nav__branding:hover img {
+  filter: sepia(1) saturate(5) hue-rotate(5deg) brightness(1.3) drop-shadow(0 0 8px rgba(245,166,35,0.7)) !important;
+  transform: scale(1.05) !important;
+}
+/* Aither Dark uses background-clip:text gradient on the logo word.
+   Override with plain theme text colour. */
+.top-nav__site-logo {
+  background: none !important;
+  -webkit-background-clip: border-box !important;
+  background-clip: border-box !important;
+  -webkit-text-fill-color: var(--at-text) !important;
+  color: var(--at-text) !important;
+  font-weight: 700 !important;
+}
+
+/* ── Torrent row — gold left border hover ─────────── */
+.af-row {
+  border-left: 3px solid transparent !important;
+  transition: box-shadow .15s, background .15s !important;
+}
+.af-row:hover {
+  box-shadow: inset 3px 0 0 var(--at-gold) !important;
+  background-color: rgba(245,166,35,0.03) !important;
+}
+
+/* ── Forum topics — gold for unread only ──────────── */
+.topic-listing {
+  border-left: 3px solid transparent !important;
+  padding-left: 12px !important;
+}
+.topic-listing__item--unread {
+  border-left: 3px solid var(--at-gold) !important;
+  padding-left: 12px !important;
+}
+.topic-listing__item--read {
+  border-left: 3px solid transparent !important;
+  padding-left: 12px !important;
+  border-color: transparent !important;
+}
+.topic-listing__item--unread .topic-listing__link {
+  color: var(--at-text) !important;
+  font-weight: 600 !important;
+}
+.topic-listing__item--read .topic-listing__link {
+  color: var(--at-text2) !important;
+}
+
+/* ── Chatbox panel header + tabs ───────────────────── */
+html body .panelV2 { overflow: hidden !important; }
+
+html body .panel__header {
+  background-color: var(--at-bg2) !important;
+  border-bottom: 0.5px solid var(--at-border) !important;
+  padding-right: 8px !important;
+  border-radius: var(--at-radius) var(--at-radius) 0 0 !important;
+}
+html body .panel__actions {
+  background-color: transparent !important;
+}
+html body .panel__action {
+  background-color: transparent !important;
+}
+html body .panel__tabs {
+  background-color: var(--at-bg2) !important;
+  border-bottom: 1px solid var(--at-goldfaint) !important;
+  padding: 0 4px !important;
+}
+html body .panel__tab {
+  color: var(--at-text3) !important;
+  border-bottom: 2px solid transparent !important;
+  padding: 8px 12px !important;
+  transition: color .15s !important;
+}
+html body .panel__tab:hover { color: var(--at-text2) !important; }
+html body .panel__tab--active {
+  color: var(--at-text) !important;
+  border-bottom-color: var(--at-gold) !important;
+}
+/* panel__body — left to Aither Dark native to avoid chatbox conflicts */
+
+
+
+/* ── panel__heading inside panel__header — remove box background ── */
+/* Without this, the heading text area gets --at-bg3 (#1c2540)      */
+/* making the bar look split vs the controls area (#111928)          */
+html body .panel__header .panel__heading,
+html body .panel__header .panel__heading--centered {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+
+/* ── Text buttons (View all, SystemBot, Users, Refresh) — gold text ── */
+.form__button--text {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: var(--at-gold) !important;
+}
+.form__button--text:hover {
+  color: var(--at-gold2) !important;
+}
+
+/* ── Icon buttons (bell, keyboard, arrows, fullscreen) — gold, no border ── */
+.form__standard-icon-button {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: var(--at-gold) !important;
+  opacity: 0.65 !important;
+  transition: opacity .15s !important;
+}
+.form__standard-icon-button:hover {
+  opacity: 1 !important;
+}
+
+/* ── Room/Status selects everywhere (not just panel__header) ─────── */
+.form__select,
+select.form__select {
+  background-color: rgba(255,255,255,0.04) !important;
+  border: 0.5px solid rgba(245,166,35,0.18) !important;
+  border-radius: 6px !important;
+  box-shadow: none !important;
+  color: var(--at-gold) !important;
+}
+.form__select:hover, select.form__select:hover {
+  border-color: rgba(245,166,35,0.4) !important;
+}
+
+
+
+/* ── Active nav pill — gold text via CSS :has() + main class ──────
+   UNIT3D adds a page-specific class to <main> on every page.
+   We use that to detect the current section and highlight the
+   matching nav pill — no JavaScript needed.                        */
+
+/* Torrents section — torrent list, single torrent, requests, mediahub, subtitles */
+html:has(main[class*="torrent"]) .top-nav--left__list-item:has(a[href="https://aither.cc/torrents"]) > a,
+html:has(main[class*="request"]) .top-nav--left__list-item:has(a[href="https://aither.cc/torrents"]) > a,
+html:has(main[class*="mediahub"]) .top-nav--left__list-item:has(a[href="https://aither.cc/torrents"]) > a,
+html:has(main[class*="subtitle"]) .top-nav--left__list-item:has(a[href="https://aither.cc/torrents"]) > a {
+  color: var(--at-gold) !important;
+  border-bottom: 2px solid var(--at-gold) !important;
+  padding-bottom: 2px !important;
+}
+
+/* Community section — forums, topics, articles, polls, playlists, events, badges */
+html:has(main[class*="topic"]) .top-nav--left__list-item:has(a[href="https://aither.cc/forums"]) > a,
+html:has(main[class*="forum"]) .top-nav--left__list-item:has(a[href="https://aither.cc/forums"]) > a,
+html:has(main[class*="article"]) .top-nav--left__list-item:has(a[href="https://aither.cc/forums"]) > a,
+html:has(main[class*="poll"]) .top-nav--left__list-item:has(a[href="https://aither.cc/forums"]) > a,
+html:has(main[class*="playlist"]) .top-nav--left__list-item:has(a[href="https://aither.cc/forums"]) > a,
+html:has(main[class*="event"]) .top-nav--left__list-item:has(a[href="https://aither.cc/forums"]) > a,
+html:has(main[class*="collectible"]) .top-nav--left__list-item:has(a[href="https://aither.cc/forums"]) > a {
+  color: var(--at-gold) !important;
+  border-bottom: 2px solid var(--at-gold) !important;
+  padding-bottom: 2px !important;
+}
+
+/* Support/Other section — wikis, tickets */
+html:has(main[class*="wiki"]) .top-nav--left__list-item:has(a[href*="/wiki"]) > a,
+html:has(main[class*="ticket"]) .top-nav--left__list-item:has(a[href*="/ticket"]) > a {
+  color: var(--at-gold) !important;
+  border-bottom: 2px solid var(--at-gold) !important;
+  padding-bottom: 2px !important;
+}
+
+
+/* ── Notification dots — gold ──────────────────────── */
+.dot {
+  background-color: var(--at-gold) !important;
+  box-shadow: 0 0 6px rgba(245,166,35,0.6) !important;
+}
+/* SVG pulse dot in nav (e.g. Support ticket indicator) */
+.top-nav circle,
+.top-nav--left__container circle,
+.top-nav svg circle {
+  stroke: var(--at-gold) !important;
+  fill: var(--at-gold) !important;
+}
+
+
+/* ── Search/input focus — gold border instead of blue ─ */
+input:focus,
+textarea:focus,
+select:focus,
+.form__input:focus,
+[type="search"]:focus,
+[type="text"]:focus {
+  border-color: rgba(245,166,35,0.6) !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(245,166,35,0.12), 0 0 0 1px rgba(245,166,35,0.4) !important;
+}
+
+
+/* ── VirtualSelect dropdowns (advanced search white boxes) ── */
+.vscomp-wrapper,
+.vscomp-ele-wrapper,
+.vscomp-toggle-button {
+  background-color: var(--at-bg3) !important;
+  border: 0.5px solid rgba(245,166,35,0.22) !important;
+  border-radius: 6px !important;
+  color: var(--at-text2) !important;
+}
+.vscomp-toggle-button:hover {
+  border-color: rgba(245,166,35,0.45) !important;
+}
+.vscomp-value {
+  color: var(--at-text2) !important;
+}
+.vscomp-arrow {
+  color: var(--at-gold) !important;
+  border-color: var(--at-gold) !important;
+}
+.vscomp-dropbox-container,
+.vscomp-dropbox {
+  background-color: var(--at-bg2) !important;
+  border: 0.5px solid rgba(245,166,35,0.22) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5) !important;
+}
+.vscomp-search-container,
+.vscomp-search-wrapper {
+  background-color: var(--at-bg3) !important;
+  border-bottom: 0.5px solid var(--at-border) !important;
+}
+.vscomp-search-input {
+  background-color: var(--at-bg3) !important;
+  border: 0.5px solid var(--at-border) !important;
+  color: var(--at-text) !important;
+  border-radius: 6px !important;
+}
+.vscomp-search-input:focus {
+  border-color: rgba(245,166,35,0.5) !important;
+  box-shadow: 0 0 0 2px rgba(245,166,35,0.1) !important;
+}
+.vscomp-options-container,
+.vscomp-options-list {
+  background-color: var(--at-bg2) !important;
+}
+.vscomp-option {
+  background-color: var(--at-bg2) !important;
+  color: var(--at-text2) !important;
+}
+.vscomp-option:hover,
+.vscomp-option.selected {
+  background-color: rgba(245,166,35,0.08) !important;
+  color: var(--at-text) !important;
+}
+.vscomp-option.selected {
+  color: var(--at-gold) !important;
+}
+.vscomp-option-text { color: inherit !important; }
+.vscomp-dropbox-close-button,
+.vscomp-clear-button,
+.vscomp-search-clear {
+  background-color: var(--at-bg3) !important;
+  color: var(--at-text3) !important;
+  border-radius: 50% !important;
+}
+.vscomp-dropbox-close-button:hover,
+.vscomp-clear-button:hover { color: var(--at-gold) !important; }
+.vscomp-toggle-all-button { background-color: var(--at-bg3) !important; color: var(--at-text2) !important; }
+.vscomp-no-options { color: var(--at-text3) !important; background-color: var(--at-bg2) !important; }
+
+
+/* ── SweetAlert2 toasts & popups — dark theme ─────── */
+.swal2-popup {
+  background-color: var(--at-bg2) !important;
+  border: 0.5px solid rgba(245,166,35,0.25) !important;
+  border-radius: var(--at-radius) !important;
+  color: var(--at-text) !important;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.6) !important;
+}
+.swal2-toast {
+  background-color: var(--at-bg3) !important;
+  border: 0.5px solid rgba(245,166,35,0.25) !important;
+  border-radius: var(--at-radius) !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5) !important;
+}
+.swal2-title {
+  color: var(--at-text) !important;
+  font-size: 15px !important;
+}
+.swal2-html-container,
+.swal2-content {
+  color: var(--at-text2) !important;
+}
+/* Success icon — make it gold */
+.swal2-icon.swal2-success {
+  border-color: var(--at-gold) !important;
+  color: var(--at-gold) !important;
+}
+.swal2-icon.swal2-success .swal2-success-ring {
+  border-color: rgba(245,166,35,0.3) !important;
+}
+.swal2-icon.swal2-success [class^="swal2-success-line"] {
+  background-color: var(--at-gold) !important;
+}
+/* Timer progress bar */
+.swal2-timer-progress-bar {
+  background: var(--at-gold) !important;
+}
+/* Confirm/deny buttons */
+.swal2-confirm {
+  background-color: var(--at-gold) !important;
+  color: #0f1117 !important;
+  font-weight: 600 !important;
+  border-radius: 8px !important;
+}
+.swal2-deny, .swal2-cancel {
+  background-color: var(--at-bg3) !important;
+  color: var(--at-text2) !important;
+  border-radius: 8px !important;
+}
+
+/* ══ Rank & role color preservation ════════════════════ */
+[style*="color:#95A5A6"],[style*="color: #95A5A6"] { color: #95A5A6 !important; }
+[style*="color:#5E372F"],[style*="color: #5E372F"] { color: #5E372F !important; }
+[style*="color:#b8c8ff"],[style*="color: #b8c8ff"] { color: #b8c8ff !important; }
+[style*="color:#b8cbff"],[style*="color: #b8cbff"] { color: #b8cbff !important; }
+[style*="color:#a5b8ff"],[style*="color: #a5b8ff"] { color: #a5b8ff !important; }
+[style*="color:#a5bbff"],[style*="color: #a5bbff"] { color: #a5bbff !important; }
+[style*="color:#7f8eff"],[style*="color: #7f8eff"] { color: #7f8eff !important; }
+[style*="color:#508bf2"],[style*="color: #508bf2"] { color: #508bf2 !important; }
+[style*="color:#6c7eff"],[style*="color: #6c7eff"] { color: #6c7eff !important; }
+[style*="color:#596eff"],[style*="color: #596eff"] { color: #596eff !important; }
+[style*="color:#466eff"],[style*="color: #466eff"] { color: #466eff !important; }
+[style*="color:#214e96"],[style*="color: #214e96"] { color: #214e96 !important; }
+[style*="color:#6cdb9b"],[style*="color: #6cdb9b"] { color: #6cdb9b !important; }
+[style*="color:#2ECC71"],[style*="color: #2ECC71"],[style*="color:#2ecc71"],[style*="color: #2ecc71"] { color: #2ECC71 !important; }
+[style*="color:#7FFF00"],[style*="color: #7FFF00"],[style*="color:#7fff00"],[style*="color: #7fff00"] { color: #7FFF00 !important; }
+[style*="color:#912cdb"],[style*="color: #912cdb"] { color: #912cdb !important; }
+[style*="color:#BF55EC"],[style*="color: #BF55EC"],[style*="color:#bf55ec"],[style*="color: #bf55ec"] { color: #BF55EC !important; }
+[style*="color:#BAAF92"],[style*="color: #BAAF92"],[style*="color:#baaf92"],[style*="color: #baaf92"] { color: #BAAF92 !important; }
+[style*="color:#20726c"],[style*="color: #20726c"] { color: #20726c !important; }
+[style*="color:#15B097"],[style*="color: #15B097"],[style*="color:#15b097"],[style*="color: #15b097"] { color: #15B097 !important; }
+[style*="color:#4ECC4D"],[style*="color: #4ECC4D"],[style*="color:#4ecc4d"],[style*="color: #4ecc4d"] { color: #4ECC4D !important; }
+[style*="color:#f92672"],[style*="color: #f92672"] { color: #f92672 !important; }
+[style*="color:#ff9100"],[style*="color: #ff9100"] { color: #ff9100 !important; }
+[style*="color:#ffb24d"],[style*="color: #ffb24d"] { color: #ffb24d !important; }
+[style*="color:#00abff"],[style*="color: #00abff"] { color: #00abff !important; }
