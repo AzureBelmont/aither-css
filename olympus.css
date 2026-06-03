@@ -4,7 +4,7 @@
  
    Author : AzureBelmont
    Repo   : github.com/AzureBelmont/aither-css
-   Ver    : 1.0
+   Ver    : 1.1
  
    Palette
    ────────────────────────────────────────────
@@ -256,13 +256,8 @@ html body .panel__tab--active {
   color: var(--at-text) !important;
   border-bottom-color: var(--at-gold) !important;
 }
-/* panel__body — left to Aither Dark native to avoid chatbox conflicts */
 
 
-
-/* ── panel__heading inside panel__header — remove box background ── */
-/* Without this, the heading text area gets --at-bg3 (#1c2540)      */
-/* making the bar look split vs the controls area (#111928)          */
 html body .panel__header .panel__heading,
 html body .panel__header .panel__heading--centered {
   background-color: transparent !important;
@@ -514,3 +509,52 @@ select:focus,
 [style*="color:#ff9100"],[style*="color: #ff9100"] { color: #ff9100 !important; }
 [style*="color:#ffb24d"],[style*="color: #ffb24d"] { color: #ffb24d !important; }
 [style*="color:#00abff"],[style*="color: #00abff"] { color: #00abff !important; }
+
+h1.text-gold,
+h2.text-gold,
+h3.text-gold,
+h4.text-gold,
+.text-gold {
+  color: var(--at-gold) !important;
+}
+
+.fa-heartbeat.text-gold,
+.top-nav .fa-heartbeat {
+  color: var(--at-gold) !important;
+  text-shadow: 0 0 10px rgba(245,166,35,0.7) !important;
+  animation: none !important;
+}
+
+a[style*="color:#95A5A6"],a[style*="color: #95A5A6"] { color: #95A5A6 !important; }
+a[style*="color:#5E372F"],a[style*="color: #5E372F"] { color: #5E372F !important; }
+a[style*="color:#b8c8ff"],a[style*="color: #b8c8ff"] { color: #b8c8ff !important; }
+a[style*="color:#b8cbff"],a[style*="color: #b8cbff"] { color: #b8cbff !important; }
+a[style*="color:#a5b8ff"],a[style*="color: #a5b8ff"] { color: #a5b8ff !important; }
+a[style*="color:#a5bbff"],a[style*="color: #a5bbff"] { color: #a5bbff !important; }
+a[style*="color:#7f8eff"],a[style*="color: #7f8eff"] { color: #7f8eff !important; }
+a[style*="color:#508bf2"],a[style*="color: #508bf2"] { color: #508bf2 !important; }
+a[style*="color:#6c7eff"],a[style*="color: #6c7eff"] { color: #6c7eff !important; }
+a[style*="color:#596eff"],a[style*="color: #596eff"] { color: #596eff !important; }
+a[style*="color:#466eff"],a[style*="color: #466eff"] { color: #466eff !important; }
+a[style*="color:#214e96"],a[style*="color: #214e96"] { color: #214e96 !important; }
+a[style*="color:#6cdb9b"],a[style*="color: #6cdb9b"] { color: #6cdb9b !important; }
+a[style*="color:#2ECC71"],a[style*="color: #2ECC71"],
+a[style*="color:#2ecc71"],a[style*="color: #2ecc71"] { color: #2ECC71 !important; }
+a[style*="color:#7FFF00"],a[style*="color: #7FFF00"],
+a[style*="color:#7fff00"],a[style*="color: #7fff00"] { color: #7FFF00 !important; }
+a[style*="color:#912cdb"],a[style*="color: #912cdb"] { color: #912cdb !important; }
+a[style*="color:#BF55EC"],a[style*="color: #BF55EC"],
+a[style*="color:#bf55ec"],a[style*="color: #bf55ec"] { color: #BF55EC !important; }
+a[style*="color:#BAAF92"],a[style*="color: #BAAF92"],
+a[style*="color:#baaf92"],a[style*="color: #baaf92"] { color: #BAAF92 !important; }
+a[style*="color:#20726c"],a[style*="color: #20726c"] { color: #20726c !important; }
+a[style*="color:#15B097"],a[style*="color: #15B097"],
+a[style*="color:#15b097"],a[style*="color: #15b097"] { color: #15B097 !important; }
+a[style*="color:#4ECC4D"],a[style*="color: #4ECC4D"],
+a[style*="color:#4ecc4d"],a[style*="color: #4ecc4d"] { color: #4ECC4D !important; }
+a[style*="color:#f92672"],a[style*="color: #f92672"] { color: #f92672 !important; }
+a[style*="color:#ff9100"],a[style*="color: #ff9100"] { color: #ff9100 !important; }
+a[style*="color:#ffb24d"],a[style*="color: #ffb24d"] { color: #ffb24d !important; }
+a[style*="color:#00abff"],a[style*="color: #00abff"] { color: #00abff !important; }
+a[style*="color:#4ECDC4"],a[style*="color: #4ECDC4"],
+a[style*="color:#4ecdc4"],a[style*="color: #4ecdc4"] { color: #4ECDC4 !important; }
