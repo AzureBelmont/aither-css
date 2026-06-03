@@ -4,7 +4,7 @@
  
    Author : AzureBelmont
    Repo   : github.com/AzureBelmont/aither-css
-   Ver    : 1.1
+   Ver    : 1.2
  
    Palette
    ────────────────────────────────────────────
@@ -256,8 +256,11 @@ html body .panel__tab--active {
   color: var(--at-text) !important;
   border-bottom-color: var(--at-gold) !important;
 }
+/* panel__body — left to Aither Dark native to avoid chatbox conflicts */
 
 
+
+/* ── panel__heading inside panel__header — remove box background ── */
 html body .panel__header .panel__heading,
 html body .panel__header .panel__heading--centered {
   background-color: transparent !important;
@@ -359,6 +362,14 @@ select:focus,
   border-color: rgba(245,166,35,0.6) !important;
   outline: none !important;
   box-shadow: 0 0 0 3px rgba(245,166,35,0.12), 0 0 0 1px rgba(245,166,35,0.4) !important;
+}
+
+/* ── Floating label — */
+.form__label--floating {
+  background-color: var(--at-bg2) !important;
+  padding: 0 4px !important;
+  color: var(--at-text2) !important;
+  border-radius: 2px !important;
 }
 
 
@@ -510,6 +521,7 @@ select:focus,
 [style*="color:#ffb24d"],[style*="color: #ffb24d"] { color: #ffb24d !important; }
 [style*="color:#00abff"],[style*="color: #00abff"] { color: #00abff !important; }
 
+
 h1.text-gold,
 h2.text-gold,
 h3.text-gold,
@@ -520,9 +532,15 @@ h4.text-gold,
 
 .fa-heartbeat.text-gold,
 .top-nav .fa-heartbeat {
-  color: var(--at-gold) !important;
-  text-shadow: 0 0 10px rgba(245,166,35,0.7) !important;
-  animation: none !important;
+  filter: hue-rotate(-80deg) saturate(1.8) brightness(1.15) !important;
+  text-shadow:
+    0 0 6px  rgba(245,166,35,0.9),
+    0 0 14px rgba(245,166,35,0.7),
+    0 0 28px rgba(245,166,35,0.45) !important;
+}
+
+.panel__heading a[style*="color"] {
+  color: unset !important;
 }
 
 a[style*="color:#95A5A6"],a[style*="color: #95A5A6"] { color: #95A5A6 !important; }
