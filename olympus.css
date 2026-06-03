@@ -4,7 +4,7 @@
  
    Author : AzureBelmont
    Repo   : github.com/AzureBelmont/aither-css
-   Ver    : 1.2
+   Ver    : 1.3
  
    Palette
    ────────────────────────────────────────────
@@ -521,7 +521,6 @@ select:focus,
 [style*="color:#ffb24d"],[style*="color: #ffb24d"] { color: #ffb24d !important; }
 [style*="color:#00abff"],[style*="color: #00abff"] { color: #00abff !important; }
 
-
 h1.text-gold,
 h2.text-gold,
 h3.text-gold,
@@ -530,18 +529,81 @@ h4.text-gold,
   color: var(--at-gold) !important;
 }
 
+@keyframes at-heart-gold {
+  0%   { text-shadow: 0 0 4px  rgba(245,166,35,0.4); color: #c8820a; }
+  50%  { text-shadow: 0 0 12px rgba(245,166,35,1.0), 0 0 24px rgba(245,166,35,0.6); color: #f5a623; }
+  100% { text-shadow: 0 0 4px  rgba(245,166,35,0.4); color: #c8820a; }
+}
 .fa-heartbeat.text-gold,
 .top-nav .fa-heartbeat {
-  filter: hue-rotate(-80deg) saturate(1.8) brightness(1.15) !important;
-  text-shadow:
-    0 0 6px  rgba(245,166,35,0.9),
-    0 0 14px rgba(245,166,35,0.7),
-    0 0 28px rgba(245,166,35,0.45) !important;
+  color: var(--at-gold) !important;
+  text-shadow: 0 0 10px rgba(245,166,35,0.8) !important;
+  animation: at-heart-gold 1.5s ease-in-out infinite !important;
+  filter: none !important;
 }
 
-.panel__heading a[style*="color"] {
-  color: unset !important;
-}
+.panel__heading a.user-tag__link[style*="color:#95A5A6"],
+.panel__heading a.user-tag__link[style*="color: #95A5A6"] { color: #95A5A6 !important; }
+.panel__heading a.user-tag__link[style*="color:#5E372F"],
+.panel__heading a.user-tag__link[style*="color: #5E372F"] { color: #5E372F !important; }
+.panel__heading a.user-tag__link[style*="color:#b8c8ff"],
+.panel__heading a.user-tag__link[style*="color: #b8c8ff"] { color: #b8c8ff !important; }
+.panel__heading a.user-tag__link[style*="color:#a5b8ff"],
+.panel__heading a.user-tag__link[style*="color: #a5b8ff"] { color: #a5b8ff !important; }
+.panel__heading a.user-tag__link[style*="color:#7f8eff"],
+.panel__heading a.user-tag__link[style*="color: #7f8eff"] { color: #7f8eff !important; }
+.panel__heading a.user-tag__link[style*="color:#508bf2"],
+.panel__heading a.user-tag__link[style*="color: #508bf2"] { color: #508bf2 !important; }
+.panel__heading a.user-tag__link[style*="color:#6c7eff"],
+.panel__heading a.user-tag__link[style*="color: #6c7eff"] { color: #6c7eff !important; }
+.panel__heading a.user-tag__link[style*="color:#596eff"],
+.panel__heading a.user-tag__link[style*="color: #596eff"] { color: #596eff !important; }
+.panel__heading a.user-tag__link[style*="color:#466eff"],
+.panel__heading a.user-tag__link[style*="color: #466eff"] { color: #466eff !important; }
+.panel__heading a.user-tag__link[style*="color:#214e96"],
+.panel__heading a.user-tag__link[style*="color: #214e96"] { color: #214e96 !important; }
+.panel__heading a.user-tag__link[style*="color:#6cdb9b"],
+.panel__heading a.user-tag__link[style*="color: #6cdb9b"] { color: #6cdb9b !important; }
+.panel__heading a.user-tag__link[style*="color:#2ECC71"],
+.panel__heading a.user-tag__link[style*="color: #2ECC71"],
+.panel__heading a.user-tag__link[style*="color:#2ecc71"],
+.panel__heading a.user-tag__link[style*="color: #2ecc71"] { color: #2ECC71 !important; }
+.panel__heading a.user-tag__link[style*="color:#7FFF00"],
+.panel__heading a.user-tag__link[style*="color: #7FFF00"],
+.panel__heading a.user-tag__link[style*="color:#7fff00"],
+.panel__heading a.user-tag__link[style*="color: #7fff00"] { color: #7FFF00 !important; }
+.panel__heading a.user-tag__link[style*="color:#912cdb"],
+.panel__heading a.user-tag__link[style*="color: #912cdb"] { color: #912cdb !important; }
+.panel__heading a.user-tag__link[style*="color:#BF55EC"],
+.panel__heading a.user-tag__link[style*="color: #BF55EC"],
+.panel__heading a.user-tag__link[style*="color:#bf55ec"],
+.panel__heading a.user-tag__link[style*="color: #bf55ec"] { color: #BF55EC !important; }
+.panel__heading a.user-tag__link[style*="color:#BAAF92"],
+.panel__heading a.user-tag__link[style*="color: #BAAF92"],
+.panel__heading a.user-tag__link[style*="color:#baaf92"],
+.panel__heading a.user-tag__link[style*="color: #baaf92"] { color: #BAAF92 !important; }
+.panel__heading a.user-tag__link[style*="color:#20726c"],
+.panel__heading a.user-tag__link[style*="color: #20726c"] { color: #20726c !important; }
+.panel__heading a.user-tag__link[style*="color:#15B097"],
+.panel__heading a.user-tag__link[style*="color: #15B097"],
+.panel__heading a.user-tag__link[style*="color:#15b097"],
+.panel__heading a.user-tag__link[style*="color: #15b097"] { color: #15B097 !important; }
+.panel__heading a.user-tag__link[style*="color:#4ECC4D"],
+.panel__heading a.user-tag__link[style*="color: #4ECC4D"],
+.panel__heading a.user-tag__link[style*="color:#4ecc4d"],
+.panel__heading a.user-tag__link[style*="color: #4ecc4d"] { color: #4ECC4D !important; }
+.panel__heading a.user-tag__link[style*="color:#f92672"],
+.panel__heading a.user-tag__link[style*="color: #f92672"] { color: #f92672 !important; }
+.panel__heading a.user-tag__link[style*="color:#ff9100"],
+.panel__heading a.user-tag__link[style*="color: #ff9100"] { color: #ff9100 !important; }
+.panel__heading a.user-tag__link[style*="color:#ffb24d"],
+.panel__heading a.user-tag__link[style*="color: #ffb24d"] { color: #ffb24d !important; }
+.panel__heading a.user-tag__link[style*="color:#00abff"],
+.panel__heading a.user-tag__link[style*="color: #00abff"] { color: #00abff !important; }
+.panel__heading a.user-tag__link[style*="color:#4ECDC4"],
+.panel__heading a.user-tag__link[style*="color: #4ECDC4"],
+.panel__heading a.user-tag__link[style*="color:#4ecdc4"],
+.panel__heading a.user-tag__link[style*="color: #4ecdc4"] { color: #4ECDC4 !important; }
 
 a[style*="color:#95A5A6"],a[style*="color: #95A5A6"] { color: #95A5A6 !important; }
 a[style*="color:#5E372F"],a[style*="color: #5E372F"] { color: #5E372F !important; }
