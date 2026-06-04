@@ -440,7 +440,9 @@ li.pagination__previous--disabled, li.pagination__next--disabled {
 fieldset, .form__fieldset { border-color: rgba(255,255,255,0.12) !important; }
 fieldset.form, .form.form__fieldset { background-color: var(--at-bg3) !important; border-color: rgba(255,255,255,0.10) !important; }
 .form__label--floating { background-color: var(--at-bg2) !important; color: var(--at-text2) !important; border-radius: 2px !important; }
-fieldset .form__label--floating { background-color: var(--at-bg3) !important; }
+fieldset .form__label--floating,
+[class*="compact-search"] .form__label--floating,
+[class*="torrent-search"] .form__label--floating { background-color: var(--at-bg3) !important; }
 .form__group:has(select) .form__label--floating,
 .form__group:has(input:not(:placeholder-shown)) .form__label--floating,
 .form__group:has(textarea:not(:placeholder-shown)) .form__label--floating {
