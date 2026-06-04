@@ -35,6 +35,9 @@
   --panel-head-fg:                 #f5a623;
   --quick-search-bg:               #1c2540;
   --quick-search-result-hover-bg:  #111928;
+  --post-toolbar-bg:               #111928;
+  --post-toolbar-hover-bg:         #1c2540;
+  --post-toolbar-hover-fg:         #f5a623;
 }
 
 /* ── Body ───────────────────────────────────────────────── */
@@ -577,4 +580,13 @@ a[style*="color:#95A5A6"],a[style*="color: #95A5A6"] { color: #95A5A6 !important
 .bbcode-rendered__clipboard {
   background-color: var(--at-bg3) !important;
   opacity: 0.85 !important;
+}
+
+/* ── Post toolbar hover —  */
+.post__permalink:hover,
+.post__edit:hover,
+.post__quote:hover,
+.post__delete-button:hover {
+  color: var(--at-gold) !important;
+  background-color: var(--at-bg3) !important;
 }
