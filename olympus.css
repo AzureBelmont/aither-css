@@ -599,6 +599,12 @@ a[style*="color:#95A5A6"],a[style*="color: #95A5A6"] { color: #95A5A6 !important
   background-color: var(--at-bg3) !important;
   border-color: transparent !important;
 }
+li.top-nav__dropdown ul li:hover a.top-nav__username i.fas,
+li.top-nav__dropdown ul li a.top-nav__username:hover i.fas {
+  background-color: var(--at-bg3) !important;
+  border-color: transparent !important;
+  color: var(--at-text2) !important;
+}
 .top-nav__dropdown a.top-nav__username,
 li a.top-nav__username,
 li.top-nav__dropdown ul li a.top-nav__username,
