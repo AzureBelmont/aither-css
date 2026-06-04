@@ -509,8 +509,13 @@ a.nav-tab__link:hover { color: var(--at-text) !important; }
 .wiki__content a { color: var(--at-gold) !important; }
 .wiki__content a:hover { color: var(--at-gold2) !important; }
 
+@keyframes at-dot-pulse {
+  0%, 100% { color: var(--at-gold); filter: drop-shadow(0 0 2px rgba(245,166,35,0.4)); }
+  50%       { color: #ffc84a;        filter: drop-shadow(0 0 6px rgba(245,166,35,0.9)); }
+}
 table td i.fas.fa-circle.fa-xs {
   color: var(--at-gold) !important;
+  animation: at-dot-pulse 2s ease-in-out infinite !important;
 }
 
 .footer, footer { background-color: #08090f !important; border-top: 1px solid var(--at-goldfaint) !important; }
