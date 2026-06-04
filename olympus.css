@@ -3,7 +3,7 @@
    Gold accents. Dark panels. Clean.
    Author : AzureBelmont
    Repo   : github.com/AzureBelmont/aither-css
-   Ver    : 1.6
+   Ver    : 1.7
    Palette
    ────────────────────────────────────────────
    Gold         #f5a623   primary accent
@@ -252,14 +252,14 @@ article.quick-search__result--default:hover { background-color: var(--at-bg3) !i
 
 .panel__heading a.user-tag__link[style*="color:#95A5A6"],.panel__heading a.user-tag__link[style*="color: #95A5A6"] { color: #95A5A6 !important; }
 .panel__heading a.user-tag__link[style*="color:#5E372F"],.panel__heading a.user-tag__link[style*="color: #5E372F"] { color: #5E372F !important; }
-.panel__heading a.user-tag__link[style*="color:#b8c8ff"],.panel__heading a.user-tag__link[style*="color: #b8c8ff"] { color: #b8c8ff !important; }
-.panel__heading a.user-tag__link[style*="color:#a5b8ff"],.panel__heading a.user-tag__link[style*="color: #a5b8ff"] { color: #a5b8ff !important; }
-.panel__heading a.user-tag__link[style*="color:#7f8eff"],.panel__heading a.user-tag__link[style*="color: #7f8eff"] { color: #7f8eff !important; }
-.panel__heading a.user-tag__link[style*="color:#508bf2"],.panel__heading a.user-tag__link[style*="color: #508bf2"] { color: #508bf2 !important; }
-.panel__heading a.user-tag__link[style*="color:#6c7eff"],.panel__heading a.user-tag__link[style*="color: #6c7eff"] { color: #6c7eff !important; }
-.panel__heading a.user-tag__link[style*="color:#596eff"],.panel__heading a.user-tag__link[style*="color: #596eff"] { color: #596eff !important; }
-.panel__heading a.user-tag__link[style*="color:#466eff"],.panel__heading a.user-tag__link[style*="color: #466eff"] { color: #466eff !important; }
-.panel__heading a.user-tag__link[style*="color:#214e96"],.panel__heading a.user-tag__link[style*="color: #214e96"] { color: #214e96 !important; }
+.panel__heading a.user-tag__link[style*="color:#FB9D9D"],.panel__heading a.user-tag__link[style*="color: #FB9D9D"] { color: #FB9D9D !important; }
+.panel__heading a.user-tag__link[style*="color:#F96C6C"],.panel__heading a.user-tag__link[style*="color: #F96C6C"] { color: #F96C6C !important; }
+.panel__heading a.user-tag__link[style*="color:#F73B3B"],.panel__heading a.user-tag__link[style*="color: #F73B3B"] { color: #F73B3B !important; }
+.panel__heading a.user-tag__link[style*="color:#F50A0A"],.panel__heading a.user-tag__link[style*="color: #F50A0A"] { color: #F50A0A !important; }
+.panel__heading a.user-tag__link[style*="color:#C40808"],.panel__heading a.user-tag__link[style*="color: #C40808"] { color: #C40808 !important; }
+.panel__heading a.user-tag__link[style*="color:#930606"],.panel__heading a.user-tag__link[style*="color: #930606"] { color: #930606 !important; }
+.panel__heading a.user-tag__link[style*="color:#620404"],.panel__heading a.user-tag__link[style*="color: #620404"] { color: #620404 !important; }
+.panel__heading a.user-tag__link[style*="color:#310202"],.panel__heading a.user-tag__link[style*="color: #310202"] { color: #310202 !important; }
 .panel__heading a.user-tag__link[style*="color:#6cdb9b"],.panel__heading a.user-tag__link[style*="color: #6cdb9b"] { color: #6cdb9b !important; }
 .panel__heading a.user-tag__link[style*="color:#2ECC71"],.panel__heading a.user-tag__link[style*="color: #2ECC71"],.panel__heading a.user-tag__link[style*="color:#2ecc71"],.panel__heading a.user-tag__link[style*="color: #2ecc71"] { color: #2ECC71 !important; }
 .panel__heading a.user-tag__link[style*="color:#7FFF00"],.panel__heading a.user-tag__link[style*="color: #7FFF00"] { color: #7FFF00 !important; }
@@ -268,7 +268,7 @@ article.quick-search__result--default:hover { background-color: var(--at-bg3) !i
 .panel__heading a.user-tag__link[style*="color:#BAAF92"],.panel__heading a.user-tag__link[style*="color: #BAAF92"] { color: #BAAF92 !important; }
 .panel__heading a.user-tag__link[style*="color:#20726c"],.panel__heading a.user-tag__link[style*="color: #20726c"] { color: #20726c !important; }
 .panel__heading a.user-tag__link[style*="color:#15B097"],.panel__heading a.user-tag__link[style*="color: #15B097"] { color: #15B097 !important; }
-.panel__heading a.user-tag__link[style*="color:#f92672"],.panel__heading a.user-tag__link[style*="color: #f92672"] { color: #f92672 !important; }
+.panel__heading a.user-tag__link[style*="color:#f5a623"],.panel__heading a.user-tag__link[style*="color: #f5a623"] { color: #f5a623 !important; }
 .panel__heading a.user-tag__link[style*="color:#ff9100"],.panel__heading a.user-tag__link[style*="color: #ff9100"] { color: #ff9100 !important; }
 .panel__heading a.user-tag__link[style*="color:#ffb24d"],.panel__heading a.user-tag__link[style*="color: #ffb24d"] { color: #ffb24d !important; }
 .panel__heading a.user-tag__link[style*="color:#00abff"],.panel__heading a.user-tag__link[style*="color: #00abff"] { color: #00abff !important; }
@@ -535,16 +535,14 @@ table td i.fas.fa-circle.fa-xs {
 
 [style*="color:#95A5A6"],[style*="color: #95A5A6"] { color: #95A5A6 !important; }
 [style*="color:#5E372F"],[style*="color: #5E372F"] { color: #5E372F !important; }
-[style*="color:#b8c8ff"],[style*="color: #b8c8ff"] { color: #b8c8ff !important; }
-[style*="color:#b8cbff"],[style*="color: #b8cbff"] { color: #b8cbff !important; }
-[style*="color:#a5b8ff"],[style*="color: #a5b8ff"] { color: #a5b8ff !important; }
-[style*="color:#a5bbff"],[style*="color: #a5bbff"] { color: #a5bbff !important; }
-[style*="color:#7f8eff"],[style*="color: #7f8eff"] { color: #7f8eff !important; }
-[style*="color:#508bf2"],[style*="color: #508bf2"] { color: #508bf2 !important; }
-[style*="color:#6c7eff"],[style*="color: #6c7eff"] { color: #6c7eff !important; }
-[style*="color:#596eff"],[style*="color: #596eff"] { color: #596eff !important; }
-[style*="color:#466eff"],[style*="color: #466eff"] { color: #466eff !important; }
-[style*="color:#214e96"],[style*="color: #214e96"] { color: #214e96 !important; }
+[style*="color:#FB9D9D"],[style*="color: #FB9D9D"] { color: #FB9D9D !important; }
+[style*="color:#F96C6C"],[style*="color: #F96C6C"] { color: #F96C6C !important; }
+[style*="color:#F73B3B"],[style*="color: #F73B3B"] { color: #F73B3B !important; }
+[style*="color:#F50A0A"],[style*="color: #F50A0A"] { color: #F50A0A !important; }
+[style*="color:#C40808"],[style*="color: #C40808"] { color: #C40808 !important; }
+[style*="color:#930606"],[style*="color: #930606"] { color: #930606 !important; }
+[style*="color:#620404"],[style*="color: #620404"] { color: #620404 !important; }
+[style*="color:#310202"],[style*="color: #310202"] { color: #310202 !important; }
 [style*="color:#6cdb9b"],[style*="color: #6cdb9b"] { color: #6cdb9b !important; }
 [style*="color:#2ECC71"],[style*="color: #2ECC71"],[style*="color:#2ecc71"],[style*="color: #2ecc71"] { color: #2ECC71 !important; }
 [style*="color:#7FFF00"],[style*="color: #7FFF00"],[style*="color:#7fff00"],[style*="color: #7fff00"] { color: #7FFF00 !important; }
@@ -554,14 +552,14 @@ table td i.fas.fa-circle.fa-xs {
 [style*="color:#20726c"],[style*="color: #20726c"] { color: #20726c !important; }
 [style*="color:#15B097"],[style*="color: #15B097"],[style*="color:#15b097"],[style*="color: #15b097"] { color: #15B097 !important; }
 [style*="color:#4ECC4D"],[style*="color: #4ECC4D"],[style*="color:#4ecc4d"],[style*="color: #4ecc4d"] { color: #4ECC4D !important; }
-[style*="color:#f92672"],[style*="color: #f92672"] { color: #f92672 !important; }
+[style*="color:#f5a623"],[style*="color: #f5a623"] { color: #f5a623 !important; }
 [style*="color:#ff9100"],[style*="color: #ff9100"] { color: #ff9100 !important; }
 [style*="color:#ffb24d"],[style*="color: #ffb24d"] { color: #ffb24d !important; }
 [style*="color:#00abff"],[style*="color: #00abff"] { color: #00abff !important; }
 [style*="color:#4ECDC4"],[style*="color: #4ECDC4"],[style*="color:#4ecdc4"],[style*="color: #4ecdc4"] { color: #4ECDC4 !important; }
-a[style*="color:#f92672"],a[style*="color: #f92672"] { color: #f92672 !important; }
-a[style*="color:#7f8eff"],a[style*="color: #7f8eff"] { color: #7f8eff !important; }
-a[style*="color:#508bf2"],a[style*="color: #508bf2"] { color: #508bf2 !important; }
+a[style*="color:#f5a623"],a[style*="color: #f5a623"] { color: #f5a623 !important; }
+a[style*="color:#F73B3B"],a[style*="color: #F73B3B"] { color: #F73B3B !important; }
+a[style*="color:#F50A0A"],a[style*="color: #F50A0A"] { color: #F50A0A !important; }
 a[style*="color:#2ECC71"],a[style*="color: #2ECC71"],a[style*="color:#2ecc71"],a[style*="color: #2ecc71"] { color: #2ECC71 !important; }
 a[style*="color:#BF55EC"],a[style*="color: #BF55EC"],a[style*="color:#bf55ec"],a[style*="color: #bf55ec"] { color: #BF55EC !important; }
 a[style*="color:#15B097"],a[style*="color: #15B097"],a[style*="color:#15b097"],a[style*="color: #15b097"] { color: #15B097 !important; }
@@ -574,12 +572,12 @@ a[style*="color:#BAAF92"],a[style*="color: #BAAF92"],a[style*="color:#baaf92"],a
 a[style*="color:#20726c"],a[style*="color: #20726c"] { color: #20726c !important; }
 a[style*="color:#6cdb9b"],a[style*="color: #6cdb9b"] { color: #6cdb9b !important; }
 a[style*="color:#7FFF00"],a[style*="color: #7FFF00"],a[style*="color:#7fff00"],a[style*="color: #7fff00"] { color: #7FFF00 !important; }
-a[style*="color:#596eff"],a[style*="color: #596eff"] { color: #596eff !important; }
-a[style*="color:#466eff"],a[style*="color: #466eff"] { color: #466eff !important; }
-a[style*="color:#214e96"],a[style*="color: #214e96"] { color: #214e96 !important; }
-a[style*="color:#6c7eff"],a[style*="color: #6c7eff"] { color: #6c7eff !important; }
-a[style*="color:#a5b8ff"],a[style*="color: #a5b8ff"] { color: #a5b8ff !important; }
-a[style*="color:#b8c8ff"],a[style*="color: #b8c8ff"] { color: #b8c8ff !important; }
+a[style*="color:#930606"],a[style*="color: #930606"] { color: #930606 !important; }
+a[style*="color:#620404"],a[style*="color: #620404"] { color: #620404 !important; }
+a[style*="color:#310202"],a[style*="color: #310202"] { color: #310202 !important; }
+a[style*="color:#C40808"],a[style*="color: #C40808"] { color: #C40808 !important; }
+a[style*="color:#F96C6C"],a[style*="color: #F96C6C"] { color: #F96C6C !important; }
+a[style*="color:#FB9D9D"],a[style*="color: #FB9D9D"] { color: #FB9D9D !important; }
 a[style*="color:#5E372F"],a[style*="color: #5E372F"] { color: #5E372F !important; }
 a[style*="color:#95A5A6"],a[style*="color: #95A5A6"] { color: #95A5A6 !important; }
 
