@@ -439,7 +439,13 @@ li.pagination__previous--disabled, li.pagination__next--disabled {
 
 fieldset, .form__fieldset { border-color: rgba(255,255,255,0.12) !important; }
 fieldset.form, .form.form__fieldset { background-color: var(--at-bg3) !important; border-color: rgba(255,255,255,0.10) !important; }
-.form__label--floating { background-color: var(--at-bg2) !important; padding: 0 4px !important; color: var(--at-text2) !important; border-radius: 2px !important; }
+.form__label--floating { background-color: var(--at-bg2) !important; color: var(--at-text2) !important; border-radius: 2px !important; }
+fieldset .form__label--floating { background-color: var(--at-bg3) !important; }
+.form__group:has(select) .form__label--floating,
+.form__group:has(input:not(:placeholder-shown)) .form__label--floating,
+.form__group:has(textarea:not(:placeholder-shown)) .form__label--floating {
+  padding: 0 4px !important;
+}
 textarea, textarea.form__textarea, .form__textarea {
   background-color: var(--at-bg2) !important;
   border: 1px solid rgba(255,255,255,0.10) !important;
@@ -592,4 +598,10 @@ a[style*="color:#95A5A6"],a[style*="color: #95A5A6"] { color: #95A5A6 !important
 .top-nav__dropdown a.top-nav__username i.far {
   background-color: var(--at-bg3) !important;
   border-color: transparent !important;
+}
+.top-nav__dropdown a.top-nav__username,
+li a.top-nav__username,
+li.top-nav__dropdown ul li a.top-nav__username,
+li.top-nav__dropdown ul li a.top-nav__username:hover {
+  background-color: transparent !important;
 }
