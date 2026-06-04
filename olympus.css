@@ -4,7 +4,7 @@
 
    Author : AzureBelmont
    Repo   : github.com/AzureBelmont/aither-css
-   Ver    : 1.5
+   Ver    : 1.6
 
    Palette
    ────────────────────────────────────────────
@@ -117,25 +117,16 @@ html:has(main[class*="ticket"]).top-nav--left__list-item:has(a[href*="/ticket"])
   padding-bottom: 2px !important;
 }
 
-/* ── v1.6 fix: top-level nav trigger hover (all element types) ── */
-/* Covers <a>, <button>, <span>, <div> — Torrents/Community use <a>,
-   Support/Other use a different element that needs the broader net  */
 .top-nav--left__list-item > a:hover,
-.top-nav--left__list-item > button:hover,
-.top-nav--left__list-item > span:hover,
-.top-nav--left__list-item > div:hover,
 .top-nav--left__list-item:hover > a,
-.top-nav--left__list-item:hover > button,
-.top-nav--left__list-item:hover > span,
-.top-nav--left__list-item:hover > div {
+li.top-nav__dropdown > a:hover,
+li.top-nav__dropdown:hover > a {
   color: var(--at-gold) !important;
   background-color: transparent !important;
 }
 
-/* ── v1.6 fix: heart icon inside "Support Aither" dropdown tooltip ── */
-.top-nav--right__icon-link .fa-heartbeat,
-li.top-nav__dropdown .fa-heartbeat,
-.top-nav__dropdown .fa-heartbeat {
+li.top-nav__dropdown ul li a i.fas.fa-heartbeat,
+li.top-nav__dropdown ul li i.fas.fa-heartbeat {
   color: var(--at-gold) !important;
   text-shadow: 0 0 10px rgba(245,166,35,0.8) !important;
   animation: at-heart-gold 1.5s ease-in-out infinite !important;
