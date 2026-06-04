@@ -4,7 +4,7 @@
 
    Author : AzureBelmont
    Repo   : github.com/AzureBelmont/aither-css
-   Ver    : 1.4
+   Ver    : 1.5
 
    Palette
    ────────────────────────────────────────────
@@ -12,6 +12,7 @@
    Navy         #080b16   page background
    Panel        #111928   surfaces
    Text         #dde1f0   body text
+
    ========================================================== */
 
 :root {
@@ -114,6 +115,13 @@ html:has(main[class*="ticket"]).top-nav--left__list-item:has(a[href*="/ticket"])
   color: var(--at-gold) !important;
   border-bottom: 2px solid var(--at-gold) !important;
   padding-bottom: 2px !important;
+}
+
+/* ── v1.5 fix: top-level nav link hover (Torrents, Community…) ── */
+.top-nav--left__list-item > a:hover,
+.top-nav--left__list-item:hover > a {
+  color: var(--at-gold) !important;
+  background-color: transparent !important;
 }
 
 .top-nav--left__list-item ul,
