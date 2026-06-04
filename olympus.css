@@ -1,18 +1,15 @@
 /* ==========================================================
    Aither — Greek Theme
    Gold accents. Dark panels. Clean.
-
    Author : AzureBelmont
    Repo   : github.com/AzureBelmont/aither-css
    Ver    : 1.6
-
    Palette
    ────────────────────────────────────────────
    Gold         #f5a623   primary accent
    Navy         #080b16   page background
    Panel        #111928   surfaces
    Text         #dde1f0   body text
-
    ========================================================== */
 
 :root {
@@ -213,6 +210,10 @@ li.top-nav__dropdown ul li a:hover i.fas {
 }
 .alert strong, .special-event-alert strong { color: var(--at-gold) !important; }
 
+div.alerts, .alerts {
+  background-color: var(--at-bg3) !important;
+}
+
 .quick-search__input, input.quick-search__input {
   background-color: var(--at-bg3) !important;
   border: 0.5px solid var(--at-border) !important;
@@ -345,12 +346,8 @@ tr.torrent-search--list__sticky-row {
   border-left: 3px solid var(--at-gold) !important;
   box-shadow: inset 3px 0 0 var(--at-gold) !important;
 }
-tr.torrent-search--list__sticky-row td {
-  background-color: transparent !important;
-}
-tr.torrent-search--list__sticky-row .torrent-search--list__name > a:first-child {
-  color: var(--at-text) !important;
-}
+tr.torrent-search--list__sticky-row td { background-color: transparent !important; }
+tr.torrent-search--list__sticky-row .torrent-search--list__name > a:first-child { color: var(--at-text) !important; }
 
 .torrent-search--list__name > a:first-child { color: var(--at-text) !important; font-weight: 500 !important; }
 .torrent-search--list__name > a:first-child:hover { color: var(--at-gold) !important; }
@@ -497,6 +494,18 @@ input:focus, textarea:focus, select:focus, .form__input:focus,
 .swal2-confirm { background-color: var(--at-gold) !important; color: #0f1117 !important; font-weight: 600 !important; border-radius: 8px !important; }
 .swal2-deny, .swal2-cancel { background-color: var(--at-bg3) !important; color: var(--at-text2) !important; border-radius: 8px !important; }
 
+[class*="user-profile__column"] { background-color: var(--at-bg2) !important; }
+[class*="user-profile__column"] .panel__heading { background-color: var(--at-bg3) !important; }
+
+ul.nav-tab-menu__items {
+  background-color: var(--at-bg2) !important;
+  border-bottom: 1px solid var(--at-goldfaint) !important;
+}
+li.nav-tab--active, li.nav-tavV2 { background-color: transparent !important; }
+a.nav-tab--active__link { color: var(--at-gold) !important; border-bottom: 2px solid var(--at-gold) !important; }
+a.nav-tab__link { color: var(--at-text2) !important; }
+a.nav-tab__link:hover { color: var(--at-text) !important; }
+
 .wiki__content a { color: var(--at-gold) !important; }
 .wiki__content a:hover { color: var(--at-gold2) !important; }
 
@@ -559,13 +568,8 @@ a[style*="color:#b8c8ff"],a[style*="color: #b8c8ff"] { color: #b8c8ff !important
 a[style*="color:#5E372F"],a[style*="color: #5E372F"] { color: #5E372F !important; }
 a[style*="color:#95A5A6"],a[style*="color: #95A5A6"] { color: #95A5A6 !important; }
 
-.bbcode-input__tab-pane {
-  background-color: var(--at-bg2) !important;
-}
-.bbcode-rendered__clipboard {
-  background-color: var(--at-bg3) !important;
-  opacity: 0.85 !important;
-}
+.bbcode-input__tab-pane { background-color: var(--at-bg2) !important; }
+.bbcode-rendered__clipboard { background-color: var(--at-bg3) !important; opacity: 0.85 !important; }
 
 .post__permalink:hover,
 .post__edit:hover,
