@@ -3,7 +3,7 @@
    Gold accents. Dark panels. Clean.
    Author : AzureBelmont
    Repo   : github.com/AzureBelmont/aither-css
-   Ver    : 1.7
+   Ver    : 1.7.1
    Palette
    ────────────────────────────────────────────
    Gold         #f5a623   primary accent
@@ -382,6 +382,10 @@ p.form__group { background-color: transparent !important; }
 article.torrent-card, .torrent-card { background-color: var(--at-bg2) !important; border: 0.5px solid var(--at-border) !important; border-radius: var(--at-radius) !important; }
 .torrent-card:hover { background-color: var(--at-bg3) !important; }
 header.torrent-card__header { background-color: var(--at-bg3) !important; }
+.featured-carousel__feature-details { background-color: transparent !important; border: none !important; }
+.torrent-card__body { background-color: #151c2c !important; }
+.torrent-card__body:hover { background-color: #182033 !important; }
+.torrent-card__footer { background-color: #131522 !important; }
 article.user-stat-card, .user-stat-card { background-color: var(--at-bg2) !important; border: 0.5px solid var(--at-border) !important; border-radius: var(--at-radius) !important; }
 div.top-users__place { background-color: var(--at-bg3) !important; border-radius: var(--at-radius) !important; }
 
