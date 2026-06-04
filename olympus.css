@@ -117,11 +117,31 @@ html:has(main[class*="ticket"]).top-nav--left__list-item:has(a[href*="/ticket"])
   padding-bottom: 2px !important;
 }
 
-/* ── v1.5 fix: top-level nav link hover (Torrents, Community…) ── */
+/* ── v1.6 fix: top-level nav trigger hover (all element types) ── */
+/* Covers <a>, <button>, <span>, <div> — Torrents/Community use <a>,
+   Support/Other use a different element that needs the broader net  */
 .top-nav--left__list-item > a:hover,
-.top-nav--left__list-item:hover > a {
+.top-nav--left__list-item > button:hover,
+.top-nav--left__list-item > span:hover,
+.top-nav--left__list-item > div:hover,
+.top-nav--left__list-item:hover > a,
+.top-nav--left__list-item:hover > button,
+.top-nav--left__list-item:hover > span,
+.top-nav--left__list-item:hover > div {
   color: var(--at-gold) !important;
   background-color: transparent !important;
+}
+
+/* ── v1.6 fix: heart icon inside "Support Aither" dropdown tooltip ── */
+.top-nav--right__icon-link .fa-heartbeat,
+li.top-nav__dropdown .fa-heartbeat,
+.top-nav__dropdown .fa-heartbeat {
+  color: var(--at-gold) !important;
+  text-shadow: 0 0 10px rgba(245,166,35,0.8) !important;
+  animation: at-heart-gold 1.5s ease-in-out infinite !important;
+  filter: none !important;
+  background-color: transparent !important;
+  border: none !important;
 }
 
 .top-nav--left__list-item ul,
