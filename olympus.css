@@ -569,3 +569,12 @@ a[style*="color:#a5b8ff"],a[style*="color: #a5b8ff"] { color: #a5b8ff !important
 a[style*="color:#b8c8ff"],a[style*="color: #b8c8ff"] { color: #b8c8ff !important; }
 a[style*="color:#5E372F"],a[style*="color: #5E372F"] { color: #5E372F !important; }
 a[style*="color:#95A5A6"],a[style*="color: #95A5A6"] { color: #95A5A6 !important; }
+
+/* ── Forum reply box & code block clipboard ──────────────── */
+.bbcode-input__tab-pane {
+  background-color: var(--at-bg2) !important;
+}
+.bbcode-rendered__clipboard {
+  background-color: var(--at-bg3) !important;
+  opacity: 0.85 !important;
+}
