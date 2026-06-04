@@ -14,7 +14,6 @@
    Text         #dde1f0   body text
    ========================================================== */
 
-/* ── CSS variable overrides ─────────────────────────────── */
 :root {
   --at-bg:        #080b16;
   --at-bg2:       #111928;
@@ -40,17 +39,14 @@
   --post-toolbar-hover-fg:         #f5a623;
 }
 
-/* ── Body ───────────────────────────────────────────────── */
 body { background-color: var(--at-bg) !important; color: var(--at-text) !important; }
 
-/* ── Top nav ─────────────────────────────────────────────── */
 .top-nav {
   background-color: #090c18 !important;
   border-bottom: 1px solid var(--at-goldfaint) !important;
   box-shadow: 0 2px 20px rgba(0,0,0,0.5) !important;
 }
 
-/* Logo */
 .top-nav__branding img {
   filter: sepia(1) saturate(5) hue-rotate(5deg) brightness(1.1) !important;
   transition: filter .3s, transform .3s !important;
@@ -68,7 +64,6 @@ body { background-color: var(--at-bg) !important; color: var(--at-text) !importa
   font-weight: 700 !important;
 }
 
-/* Footer logo */
 .footer__section:first-child .footer__section-title {
   color: var(--at-text) !important;
   display: flex !important;
@@ -95,7 +90,6 @@ body { background-color: var(--at-bg) !important; color: var(--at-text) !importa
   letter-spacing: .05em !important;
 }
 
-/* Active nav underline */
 html:has(main[class*="torrent"])  .top-nav--left__list-item:has(a[href="https://aither.cc/torrents"]) > a,
 html:has(main[class*="request"])  .top-nav--left__list-item:has(a[href="https://aither.cc/torrents"]) > a,
 html:has(main[class*="mediahub"]) .top-nav--left__list-item:has(a[href="https://aither.cc/torrents"]) > a,
@@ -122,7 +116,6 @@ html:has(main[class*="ticket"]).top-nav--left__list-item:has(a[href*="/ticket"])
   padding-bottom: 2px !important;
 }
 
-/* Nav dropdown menus */
 .top-nav--left__list-item ul,
 .top-nav__dropdown ul,
 .top-nav--left__dropdown {
@@ -144,7 +137,6 @@ li.top-nav__dropdown ul li a:hover {
   color: var(--at-gold) !important;
 }
 
-/* Nav dropdown icons — Torrents/Community/Support/Other */
 .top-nav--left__list-item ul li i.fas,
 .top-nav--left__list-item ul li i.far,
 .top-nav--left__list-item ul li i.fab,
@@ -164,7 +156,6 @@ li.top-nav__dropdown ul li a:hover i.fas {
   color: var(--at-gold) !important;
 }
 
-/* Nav right icon buttons (gear/list/mail/bell only) */
 .top-nav--right__icon-link i.fas,
 .top-nav--right__icon-link i.far,
 .top-nav--right__link i.fas {
@@ -179,13 +170,11 @@ li.top-nav__dropdown ul li a:hover i.fas {
   color: var(--at-gold) !important;
 }
 
-/* Notification dots */
 .dot { background-color: var(--at-gold) !important; box-shadow: 0 0 6px rgba(245,166,35,0.6) !important; }
 .top-nav circle, .top-nav--left__container circle, .top-nav svg circle {
   stroke: var(--at-gold) !important; fill: var(--at-gold) !important;
 }
 
-/* Donation heart — gold pulse animation */
 @keyframes at-heart-gold {
   0%   { text-shadow: 0 0 4px rgba(245,166,35,0.4); color: #c8820a; }
   50%  { text-shadow: 0 0 12px rgba(245,166,35,1.0), 0 0 24px rgba(245,166,35,0.6); color: #f5a623; }
@@ -198,7 +187,6 @@ li.top-nav__dropdown ul li a:hover i.fas {
   filter: none !important;
 }
 
-/* Freeleech / event alert banner */
 .alert, .special-event-alert, .alerts .alert {
   background-color: var(--at-bg3) !important;
   border-bottom: 1px solid var(--at-goldfaint) !important;
@@ -206,7 +194,6 @@ li.top-nav__dropdown ul li a:hover i.fas {
 }
 .alert strong, .special-event-alert strong { color: var(--at-gold) !important; }
 
-/* Nav search */
 .quick-search__input, input.quick-search__input {
   background-color: var(--at-bg3) !important;
   border: 0.5px solid var(--at-border) !important;
@@ -220,7 +207,6 @@ li.top-nav__dropdown ul li a:hover i.fas {
 article.quick-search__result--default { background-color: var(--at-bg2) !important; }
 article.quick-search__result--default:hover { background-color: var(--at-bg3) !important; }
 
-/* ── Panels ──────────────────────────────────────────────── */
 .panelV2 {
   background-color: var(--at-bg2) !important;
   border: 0.5px solid var(--at-border) !important;
@@ -244,7 +230,6 @@ article.quick-search__result--default:hover { background-color: var(--at-bg3) !i
 }
 .panel__body, div.panel__body { background-color: var(--at-bg2) !important; }
 
-/* Conversation names — use rank colour not inherited gold */
 .panel__heading a.user-tag__link[style*="color:#95A5A6"],.panel__heading a.user-tag__link[style*="color: #95A5A6"] { color: #95A5A6 !important; }
 .panel__heading a.user-tag__link[style*="color:#5E372F"],.panel__heading a.user-tag__link[style*="color: #5E372F"] { color: #5E372F !important; }
 .panel__heading a.user-tag__link[style*="color:#b8c8ff"],.panel__heading a.user-tag__link[style*="color: #b8c8ff"] { color: #b8c8ff !important; }
@@ -269,7 +254,6 @@ article.quick-search__result--default:hover { background-color: var(--at-bg3) !i
 .panel__heading a.user-tag__link[style*="color:#00abff"],.panel__heading a.user-tag__link[style*="color: #00abff"] { color: #00abff !important; }
 .panel__heading a.user-tag__link[style*="color:#4ECDC4"],.panel__heading a.user-tag__link[style*="color: #4ECDC4"] { color: #4ECDC4 !important; }
 
-/* Chatbox */
 html body .panelV2 { overflow: hidden !important; }
 html body .panel__header {
   background-color: var(--at-bg2) !important;
@@ -296,13 +280,11 @@ article.chatbox-message {
 article.chatbox-message::before { border-right-color: var(--at-bg3) !important; }
 section.chatroom__users { background-color: var(--at-bg2) !important; }
 
-/* ── Section headings ────────────────────────────────────── */
 h1, h2, h3 { color: var(--at-text) !important; }
 .panelV2 > .panel__heading, .block__heading,
 [class*="section__title"], [class*="section-title"] { color: var(--at-gold) !important; }
 h1.text-gold, h2.text-gold, h3.text-gold, h4.text-gold, .text-gold { color: var(--at-gold) !important; }
 
-/* ── Data tables ─────────────────────────────────────────── */
 .data-table-wrapper {
   border-radius: var(--at-radius) !important;
   overflow: hidden !important;
@@ -328,7 +310,6 @@ thead td, thead th { background-color: var(--at-bg3) !important; }
 th { background-color: var(--at-bg3) !important; color: var(--at-text2) !important; border-bottom: 1px solid var(--at-goldfaint) !important; }
 td[class*="torrent-search--list__"] { background-color: transparent !important; }
 
-/* ── Torrent list ─────────────────────────────────────────── */
 .af-row {
   background-color: var(--at-bg2) !important;
   border-bottom: 0.5px solid var(--at-border) !important;
@@ -339,7 +320,7 @@ td[class*="torrent-search--list__"] { background-color: transparent !important; 
   box-shadow: inset 3px 0 0 var(--at-gold) !important;
   background-color: rgba(245,166,35,0.03) !important;
 }
-/* Pinned / sticky torrent rows */
+
 tr.torrent-search--list__sticky-row {
   background-color: rgba(245,166,35,0.05) !important;
   border-left: 3px solid var(--at-gold) !important;
@@ -362,7 +343,6 @@ tr.torrent-search--list__sticky-row .torrent-search--list__name > a:first-child 
 .torrent-icons__verified  { color: var(--at-green) !important; }
 .torrent-search--list__resolution-and-type { background-color: var(--at-bg3) !important; color: var(--at-text2) !important; }
 
-/* Torrent search bar */
 search.compact-search, .compact-search, .compact-search__visible-default,
 .torrent-search__filters, [class*="compact-search"] { background-color: var(--at-bg2) !important; border-color: var(--at-border) !important; }
 [class*="compact-search"] p.form__group, [class*="compact-search"] .form__group,
@@ -374,7 +354,6 @@ search.compact-search, .compact-search, .compact-search__visible-default,
 }
 p.form__group { background-color: transparent !important; }
 
-/* ── Internal / featured cards ───────────────────────────── */
 .internal-card {
   background-color: var(--at-bg2) !important;
   border: 0.5px solid rgba(245,166,35,0.18) !important;
@@ -390,7 +369,6 @@ header.torrent-card__header { background-color: var(--at-bg3) !important; }
 article.user-stat-card, .user-stat-card { background-color: var(--at-bg2) !important; border: 0.5px solid var(--at-border) !important; border-radius: var(--at-radius) !important; }
 div.top-users__place { background-color: var(--at-bg3) !important; border-radius: var(--at-radius) !important; }
 
-/* ── Forums ──────────────────────────────────────────────── */
 .topic-listing { border-left: 3px solid transparent !important; padding-left: 12px !important; }
 .topic-listing__item--unread { border-left: 3px solid var(--at-gold) !important; padding-left: 12px !important; }
 .topic-listing__item--read { border-left: 3px solid transparent !important; padding-left: 12px !important; border-color: transparent !important; }
@@ -403,7 +381,6 @@ li.subforum-listings__item:nth-child(even) { background-color: var(--at-bg3) !im
 li.subforum-listings__item:hover { background-color: rgba(245,166,35,0.04) !important; border-left: 3px solid var(--at-gold) !important; }
 .key-value__group, div.key-value__group { background-color: var(--at-bg2) !important; border: 0.5px solid var(--at-border) !important; border-radius: 4px !important; color: var(--at-text) !important; }
 
-/* Posts and comments */
 article.post { background-color: var(--at-bg2) !important; border: 0.5px solid var(--at-border) !important; border-radius: var(--at-radius) !important; }
 aside.post__aside { background-color: var(--at-bg3) !important; border-right: 0.5px solid var(--at-border) !important; }
 menu.post__toolbar { background-color: var(--at-bg3) !important; border-top: 0.5px solid var(--at-border) !important; }
@@ -413,7 +390,6 @@ ul.comment-list { background-color: var(--at-bg2) !important; }
 li.comment__list-item { border-bottom: 0.5px solid var(--at-border) !important; }
 article.article-preview { background-color: var(--at-bg2) !important; border: 0.5px solid var(--at-border) !important; border-radius: var(--at-radius) !important; }
 
-/* ── Pagination ──────────────────────────────────────────── */
 nav.pagination { background-color: var(--at-bg2) !important; border: 0.5px solid var(--at-border) !important; border-radius: var(--at-radius) !important; overflow: hidden !important; }
 .pagination__link, a.pagination__link, li.pagination__previous, li.pagination__next,
 li.pagination__ellipsis, .pagination__previous, .pagination__next {
@@ -440,13 +416,11 @@ li.pagination__previous--disabled, li.pagination__next--disabled {
   opacity: 0.5 !important;
 }
 
-/* ── Secondary nav (profile page tabs) ───────────────────── */
 .secondary-nav { background-color: var(--at-bg2) !important; border-bottom: 1px solid var(--at-goldfaint) !important; }
 .secondary-nav a, .secondary-nav__item { color: var(--at-text2) !important; }
 .secondary-nav a:hover, .secondary-nav__item:hover { color: var(--at-text) !important; }
 .secondary-nav__item--active, .secondary-nav a.active { color: var(--at-gold) !important; border-bottom-color: var(--at-gold) !important; }
 
-/* ── Fieldsets / forms ───────────────────────────────────── */
 fieldset, .form__fieldset { border-color: rgba(255,255,255,0.12) !important; }
 fieldset.form, .form.form__fieldset { background-color: var(--at-bg3) !important; border-color: rgba(255,255,255,0.10) !important; }
 .form__label--floating { background-color: var(--at-bg2) !important; padding: 0 4px !important; color: var(--at-text2) !important; border-radius: 2px !important; }
@@ -462,7 +436,6 @@ textarea:focus, textarea.form__textarea:focus, .form__textarea:focus {
   outline: none !important;
 }
 
-/* ── Buttons & inputs ────────────────────────────────────── */
 .form__button--text { background: transparent !important; border: none !important; box-shadow: none !important; color: var(--at-gold) !important; }
 .form__button--text:hover { color: var(--at-gold2) !important; }
 .form__standard-icon-button { background: transparent !important; border: none !important; box-shadow: none !important; color: var(--at-gold) !important; opacity: 0.65 !important; transition: opacity .15s !important; }
@@ -476,7 +449,6 @@ input:focus, textarea:focus, select:focus, .form__input:focus,
   box-shadow: 0 0 0 3px rgba(245,166,35,0.12), 0 0 0 1px rgba(245,166,35,0.4) !important;
 }
 
-/* ── VirtualSelect dropdowns ─────────────────────────────── */
 .vscomp-wrapper, .vscomp-ele-wrapper, .vscomp-toggle-button { background-color: var(--at-bg3) !important; border: 0.5px solid rgba(245,166,35,0.22) !important; border-radius: 6px !important; color: var(--at-text2) !important; }
 .vscomp-toggle-button:hover { border-color: rgba(245,166,35,0.45) !important; }
 .vscomp-value { color: var(--at-text2) !important; }
@@ -495,7 +467,6 @@ input:focus, textarea:focus, select:focus, .form__input:focus,
 .vscomp-toggle-all-button { background-color: var(--at-bg3) !important; color: var(--at-text2) !important; }
 .vscomp-no-options { color: var(--at-text3) !important; background-color: var(--at-bg2) !important; }
 
-/* ── SweetAlert2 ─────────────────────────────────────────── */
 .swal2-popup { background-color: var(--at-bg2) !important; border: 0.5px solid rgba(245,166,35,0.25) !important; border-radius: var(--at-radius) !important; color: var(--at-text) !important; box-shadow: 0 8px 32px rgba(0,0,0,0.6) !important; }
 .swal2-toast { background-color: var(--at-bg3) !important; border: 0.5px solid rgba(245,166,35,0.25) !important; border-radius: var(--at-radius) !important; box-shadow: 0 4px 20px rgba(0,0,0,0.5) !important; }
 .swal2-title { color: var(--at-text) !important; font-size: 15px !important; }
@@ -507,22 +478,18 @@ input:focus, textarea:focus, select:focus, .form__input:focus,
 .swal2-confirm { background-color: var(--at-gold) !important; color: #0f1117 !important; font-weight: 600 !important; border-radius: 8px !important; }
 .swal2-deny, .swal2-cancel { background-color: var(--at-bg3) !important; color: var(--at-text2) !important; border-radius: 8px !important; }
 
-/* ── Wiki ────────────────────────────────────────────────── */
 .wiki__content a { color: var(--at-gold) !important; }
 .wiki__content a:hover { color: var(--at-gold2) !important; }
 
-/* ── Footer ──────────────────────────────────────────────── */
 .footer, footer { background-color: #08090f !important; border-top: 1px solid var(--at-goldfaint) !important; }
 .footer__section-title { color: var(--at-gold) !important; font-weight: 600 !important; text-transform: uppercase !important; font-size: 11px !important; letter-spacing: .1em !important; }
 .footer__copyright, .footer__stats { color: var(--at-text3) !important; font-size: 12px !important; }
 
-/* ── Scrollbar ───────────────────────────────────────────── */
 ::-webkit-scrollbar { width: 5px; height: 5px; }
 ::-webkit-scrollbar-track { background: var(--at-bg); }
 ::-webkit-scrollbar-thumb { background: var(--at-bg3); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: rgba(245,166,35,0.4); }
 
-/* ── Rank colour preservation ────────────────────────────── */
 [style*="color:#95A5A6"],[style*="color: #95A5A6"] { color: #95A5A6 !important; }
 [style*="color:#5E372F"],[style*="color: #5E372F"] { color: #5E372F !important; }
 [style*="color:#b8c8ff"],[style*="color: #b8c8ff"] { color: #b8c8ff !important; }
@@ -573,7 +540,6 @@ a[style*="color:#b8c8ff"],a[style*="color: #b8c8ff"] { color: #b8c8ff !important
 a[style*="color:#5E372F"],a[style*="color: #5E372F"] { color: #5E372F !important; }
 a[style*="color:#95A5A6"],a[style*="color: #95A5A6"] { color: #95A5A6 !important; }
 
-/* ── Forum reply box & code block clipboard ──────────────── */
 .bbcode-input__tab-pane {
   background-color: var(--at-bg2) !important;
 }
@@ -582,11 +548,16 @@ a[style*="color:#95A5A6"],a[style*="color: #95A5A6"] { color: #95A5A6 !important
   opacity: 0.85 !important;
 }
 
-/* ── Post toolbar hover —  */
 .post__permalink:hover,
 .post__edit:hover,
 .post__quote:hover,
 .post__delete-button:hover {
   color: var(--at-gold) !important;
   background-color: var(--at-bg3) !important;
+}
+
+.top-nav__dropdown a.top-nav__username i.fas,
+.top-nav__dropdown a.top-nav__username i.far {
+  background-color: var(--at-bg3) !important;
+  border-color: transparent !important;
 }
