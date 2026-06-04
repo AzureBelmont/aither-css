@@ -509,6 +509,10 @@ a.nav-tab__link:hover { color: var(--at-text) !important; }
 .wiki__content a { color: var(--at-gold) !important; }
 .wiki__content a:hover { color: var(--at-gold2) !important; }
 
+table td i.fas.fa-circle.fa-xs {
+  color: var(--at-gold) !important;
+}
+
 .footer, footer { background-color: #08090f !important; border-top: 1px solid var(--at-goldfaint) !important; }
 .footer__section-title { color: var(--at-gold) !important; font-weight: 600 !important; text-transform: uppercase !important; font-size: 11px !important; letter-spacing: .1em !important; }
 .footer__copyright, .footer__stats { color: var(--at-text3) !important; font-size: 12px !important; }
