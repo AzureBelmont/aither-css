@@ -1,11 +1,11 @@
 /* ==========================================================
    Aither — Greek Theme
    Gold accents. Dark panels. Clean.
- 
+
    Author : AzureBelmont
    Repo   : github.com/AzureBelmont/aither-css
-   Ver    : 1.3
- 
+   Ver    : 1.4
+
    Palette
    ────────────────────────────────────────────
    Gold         #f5a623   primary accent
@@ -14,10 +14,11 @@
    Text         #dde1f0   body text
    ========================================================== */
 
+/* ── CSS variable overrides ─────────────────────────────── */
 :root {
-  --at-bg:        #080b16;   /* very dark navy — page background */
-  --at-bg2:       #111928;   /* panels — clearly lighter than body */
-  --at-bg3:       #1c2540;   /* panel headers/table headers — lighter still */
+  --at-bg:        #080b16;
+  --at-bg2:       #111928;
+  --at-bg3:       #1c2540;
   --at-border:    rgba(255,255,255,0.07);
   --at-gold:      #f5a623;
   --at-gold2:     #d4891a;
@@ -28,30 +29,201 @@
   --at-green:     #5dcaa5;
   --at-red:       #f08060;
   --at-radius:    10px;
+  --key-value-odd-bg:              #111928;
+  --key-value-even-bg:             #1c2540;
+  --color-links:                   #dde1f0;
+  --panel-head-fg:                 #f5a623;
+  --quick-search-bg:               #1c2540;
+  --quick-search-result-hover-bg:  #111928;
 }
 
-/* ── Body ──────────────────────────────────────────── */
-body {
-  background-color: var(--at-bg) !important;
-  color: var(--at-text) !important;
-}
+/* ── Body ───────────────────────────────────────────────── */
+body { background-color: var(--at-bg) !important; color: var(--at-text) !important; }
 
-/* ── Top nav ───────────────────────────────────────── */
+/* ── Top nav ─────────────────────────────────────────────── */
 .top-nav {
   background-color: #090c18 !important;
   border-bottom: 1px solid var(--at-goldfaint) !important;
   box-shadow: 0 2px 20px rgba(0,0,0,0.5) !important;
 }
 
-/* ── Panels ────────────────────────────────────────── */
+/* Logo */
+.top-nav__branding img {
+  filter: sepia(1) saturate(5) hue-rotate(5deg) brightness(1.1) !important;
+  transition: filter .3s, transform .3s !important;
+}
+.top-nav__branding:hover img {
+  filter: sepia(1) saturate(5) hue-rotate(5deg) brightness(1.3) drop-shadow(0 0 8px rgba(245,166,35,0.7)) !important;
+  transform: scale(1.05) !important;
+}
+.top-nav__site-logo {
+  background: none !important;
+  -webkit-background-clip: border-box !important;
+  background-clip: border-box !important;
+  -webkit-text-fill-color: var(--at-text) !important;
+  color: var(--at-text) !important;
+  font-weight: 700 !important;
+}
+
+/* Footer logo */
+.footer__section:first-child .footer__section-title {
+  color: var(--at-text) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+}
+.footer__section:first-child .footer__section-title img {
+  filter: sepia(1) saturate(5) hue-rotate(5deg) brightness(1.1) !important;
+  height: 28px !important;
+  width: auto !important;
+}
+.footer__section:first-child .footer__section-title .top-nav__site-logo {
+  background: none !important;
+  -webkit-background-clip: border-box !important;
+  background-clip: border-box !important;
+  -webkit-text-fill-color: var(--at-text) !important;
+  color: var(--at-text) !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  letter-spacing: .05em !important;
+}
+
+/* Active nav underline */
+html:has(main[class*="torrent"])  .top-nav--left__list-item:has(a[href="https://aither.cc/torrents"]) > a,
+html:has(main[class*="request"])  .top-nav--left__list-item:has(a[href="https://aither.cc/torrents"]) > a,
+html:has(main[class*="mediahub"]) .top-nav--left__list-item:has(a[href="https://aither.cc/torrents"]) > a,
+html:has(main[class*="subtitle"]) .top-nav--left__list-item:has(a[href="https://aither.cc/torrents"]) > a {
+  color: var(--at-gold) !important;
+  border-bottom: 2px solid var(--at-gold) !important;
+  padding-bottom: 2px !important;
+}
+html:has(main[class*="topic"])      .top-nav--left__list-item:has(a[href="https://aither.cc/forums"]) > a,
+html:has(main[class*="forum"])      .top-nav--left__list-item:has(a[href="https://aither.cc/forums"]) > a,
+html:has(main[class*="article"])    .top-nav--left__list-item:has(a[href="https://aither.cc/forums"]) > a,
+html:has(main[class*="poll"])       .top-nav--left__list-item:has(a[href="https://aither.cc/forums"]) > a,
+html:has(main[class*="playlist"])   .top-nav--left__list-item:has(a[href="https://aither.cc/forums"]) > a,
+html:has(main[class*="event"])      .top-nav--left__list-item:has(a[href="https://aither.cc/forums"]) > a,
+html:has(main[class*="collectible"]).top-nav--left__list-item:has(a[href="https://aither.cc/forums"]) > a {
+  color: var(--at-gold) !important;
+  border-bottom: 2px solid var(--at-gold) !important;
+  padding-bottom: 2px !important;
+}
+html:has(main[class*="wiki"])  .top-nav--left__list-item:has(a[href*="/wiki"]) > a,
+html:has(main[class*="ticket"]).top-nav--left__list-item:has(a[href*="/ticket"]) > a {
+  color: var(--at-gold) !important;
+  border-bottom: 2px solid var(--at-gold) !important;
+  padding-bottom: 2px !important;
+}
+
+/* Nav dropdown menus */
+.top-nav--left__list-item ul,
+.top-nav__dropdown ul,
+.top-nav--left__dropdown {
+  background-color: var(--at-bg3) !important;
+  border: 0.5px solid var(--at-goldfaint) !important;
+  border-radius: var(--at-radius) !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5) !important;
+}
+.top-nav--left__list-item ul li a,
+.top-nav__dropdown ul li a,
+li.top-nav__dropdown ul li a {
+  color: var(--at-text) !important;
+  transition: color .15s, background .15s !important;
+}
+.top-nav--left__list-item ul li a:hover,
+.top-nav__dropdown ul li a:hover,
+li.top-nav__dropdown ul li a:hover {
+  background-color: var(--at-goldfaint) !important;
+  color: var(--at-gold) !important;
+}
+
+/* Nav dropdown icons — Torrents/Community/Support/Other */
+.top-nav--left__list-item ul li i.fas,
+.top-nav--left__list-item ul li i.far,
+.top-nav--left__list-item ul li i.fab,
+li.top-nav__dropdown ul li i.fas,
+li.top-nav__dropdown ul li i.far,
+li.top-nav__dropdown ul li i.fab {
+  background-color: var(--at-bg2) !important;
+  border: 1px solid var(--at-border) !important;
+  color: var(--at-text2) !important;
+}
+.top-nav--left__list-item ul li:hover i.fas,
+.top-nav--left__list-item ul li a:hover i.fas,
+li.top-nav__dropdown ul li:hover i.fas,
+li.top-nav__dropdown ul li a:hover i.fas {
+  background-color: var(--at-goldfaint) !important;
+  border-color: var(--at-gold) !important;
+  color: var(--at-gold) !important;
+}
+
+/* Nav right icon buttons (gear/list/mail/bell only) */
+.top-nav--right__icon-link i.fas,
+.top-nav--right__icon-link i.far,
+.top-nav--right__link i.fas {
+  background-color: var(--at-bg3) !important;
+  border: 1px solid var(--at-goldfaint) !important;
+}
+.top-nav--right__icon-link:hover i.fas,
+.top-nav--right__icon-link:hover i.far,
+.top-nav--right__link:hover i.fas {
+  background-color: var(--at-goldfaint) !important;
+  border-color: var(--at-gold) !important;
+  color: var(--at-gold) !important;
+}
+
+/* Notification dots */
+.dot { background-color: var(--at-gold) !important; box-shadow: 0 0 6px rgba(245,166,35,0.6) !important; }
+.top-nav circle, .top-nav--left__container circle, .top-nav svg circle {
+  stroke: var(--at-gold) !important; fill: var(--at-gold) !important;
+}
+
+/* Donation heart — gold pulse animation */
+@keyframes at-heart-gold {
+  0%   { text-shadow: 0 0 4px rgba(245,166,35,0.4); color: #c8820a; }
+  50%  { text-shadow: 0 0 12px rgba(245,166,35,1.0), 0 0 24px rgba(245,166,35,0.6); color: #f5a623; }
+  100% { text-shadow: 0 0 4px rgba(245,166,35,0.4); color: #c8820a; }
+}
+.fa-heartbeat.text-gold, .top-nav .fa-heartbeat {
+  color: var(--at-gold) !important;
+  text-shadow: 0 0 10px rgba(245,166,35,0.8) !important;
+  animation: at-heart-gold 1.5s ease-in-out infinite !important;
+  filter: none !important;
+}
+
+/* Freeleech / event alert banner */
+.alert, .special-event-alert, .alerts .alert {
+  background-color: var(--at-bg3) !important;
+  border-bottom: 1px solid var(--at-goldfaint) !important;
+  color: var(--at-text) !important;
+}
+.alert strong, .special-event-alert strong { color: var(--at-gold) !important; }
+
+/* Nav search */
+.quick-search__input, input.quick-search__input {
+  background-color: var(--at-bg3) !important;
+  border: 0.5px solid var(--at-border) !important;
+  color: var(--at-text) !important;
+}
+.quick-search__input:focus {
+  border-color: rgba(245,166,35,0.6) !important;
+  box-shadow: 0 0 0 3px rgba(245,166,35,0.10) !important;
+  outline: none !important;
+}
+article.quick-search__result--default { background-color: var(--at-bg2) !important; }
+article.quick-search__result--default:hover { background-color: var(--at-bg3) !important; }
+
+/* ── Panels ──────────────────────────────────────────────── */
 .panelV2 {
   background-color: var(--at-bg2) !important;
   border: 0.5px solid var(--at-border) !important;
   border-radius: var(--at-radius) !important;
   box-shadow: 0 4px 24px rgba(0,0,0,0.5) !important;
 }
-
-/* Gold on ALL panel headings — the biggest Greek feel impact */
 .panel__heading {
   background-color: var(--at-bg3) !important;
   border-bottom: 1px solid var(--at-goldfaint) !important;
@@ -60,41 +232,80 @@ body {
   letter-spacing: .04em !important;
   border-radius: var(--at-radius) var(--at-radius) 0 0 !important;
 }
-/* panel__heading links (e.g. "Latest topics", "Latest posts" are <a> tags) */
-.panel__heading a,
-.panel__heading a:visited {
-  color: var(--at-gold) !important;
-  font-weight: 600 !important;
-}
-.panel__heading a:hover {
-  color: var(--at-gold2) !important;
-}
-/* panel__body — left to Aither Dark native to avoid chatbox conflicts */
+.panel__heading a, .panel__heading a:visited { color: var(--at-gold) !important; font-weight: 600 !important; }
+.panel__heading a:hover { color: var(--at-gold2) !important; }
 .panel--grid-item {
   background-color: var(--at-bg2) !important;
   border: 0.5px solid rgba(245,166,35,0.22) !important;
   border-radius: var(--at-radius) !important;
 }
+.panel__body, div.panel__body { background-color: var(--at-bg2) !important; }
 
-/* ── Section headings sitewide ─────────────────────── */
-h1, h2, h3 { color: var(--at-text) !important; }
+/* Conversation names — use rank colour not inherited gold */
+.panel__heading a.user-tag__link[style*="color:#95A5A6"],.panel__heading a.user-tag__link[style*="color: #95A5A6"] { color: #95A5A6 !important; }
+.panel__heading a.user-tag__link[style*="color:#5E372F"],.panel__heading a.user-tag__link[style*="color: #5E372F"] { color: #5E372F !important; }
+.panel__heading a.user-tag__link[style*="color:#b8c8ff"],.panel__heading a.user-tag__link[style*="color: #b8c8ff"] { color: #b8c8ff !important; }
+.panel__heading a.user-tag__link[style*="color:#a5b8ff"],.panel__heading a.user-tag__link[style*="color: #a5b8ff"] { color: #a5b8ff !important; }
+.panel__heading a.user-tag__link[style*="color:#7f8eff"],.panel__heading a.user-tag__link[style*="color: #7f8eff"] { color: #7f8eff !important; }
+.panel__heading a.user-tag__link[style*="color:#508bf2"],.panel__heading a.user-tag__link[style*="color: #508bf2"] { color: #508bf2 !important; }
+.panel__heading a.user-tag__link[style*="color:#6c7eff"],.panel__heading a.user-tag__link[style*="color: #6c7eff"] { color: #6c7eff !important; }
+.panel__heading a.user-tag__link[style*="color:#596eff"],.panel__heading a.user-tag__link[style*="color: #596eff"] { color: #596eff !important; }
+.panel__heading a.user-tag__link[style*="color:#466eff"],.panel__heading a.user-tag__link[style*="color: #466eff"] { color: #466eff !important; }
+.panel__heading a.user-tag__link[style*="color:#214e96"],.panel__heading a.user-tag__link[style*="color: #214e96"] { color: #214e96 !important; }
+.panel__heading a.user-tag__link[style*="color:#6cdb9b"],.panel__heading a.user-tag__link[style*="color: #6cdb9b"] { color: #6cdb9b !important; }
+.panel__heading a.user-tag__link[style*="color:#2ECC71"],.panel__heading a.user-tag__link[style*="color: #2ECC71"],.panel__heading a.user-tag__link[style*="color:#2ecc71"],.panel__heading a.user-tag__link[style*="color: #2ecc71"] { color: #2ECC71 !important; }
+.panel__heading a.user-tag__link[style*="color:#7FFF00"],.panel__heading a.user-tag__link[style*="color: #7FFF00"] { color: #7FFF00 !important; }
+.panel__heading a.user-tag__link[style*="color:#912cdb"],.panel__heading a.user-tag__link[style*="color: #912cdb"] { color: #912cdb !important; }
+.panel__heading a.user-tag__link[style*="color:#BF55EC"],.panel__heading a.user-tag__link[style*="color: #BF55EC"] { color: #BF55EC !important; }
+.panel__heading a.user-tag__link[style*="color:#BAAF92"],.panel__heading a.user-tag__link[style*="color: #BAAF92"] { color: #BAAF92 !important; }
+.panel__heading a.user-tag__link[style*="color:#20726c"],.panel__heading a.user-tag__link[style*="color: #20726c"] { color: #20726c !important; }
+.panel__heading a.user-tag__link[style*="color:#15B097"],.panel__heading a.user-tag__link[style*="color: #15B097"] { color: #15B097 !important; }
+.panel__heading a.user-tag__link[style*="color:#f92672"],.panel__heading a.user-tag__link[style*="color: #f92672"] { color: #f92672 !important; }
+.panel__heading a.user-tag__link[style*="color:#ff9100"],.panel__heading a.user-tag__link[style*="color: #ff9100"] { color: #ff9100 !important; }
+.panel__heading a.user-tag__link[style*="color:#ffb24d"],.panel__heading a.user-tag__link[style*="color: #ffb24d"] { color: #ffb24d !important; }
+.panel__heading a.user-tag__link[style*="color:#00abff"],.panel__heading a.user-tag__link[style*="color: #00abff"] { color: #00abff !important; }
+.panel__heading a.user-tag__link[style*="color:#4ECDC4"],.panel__heading a.user-tag__link[style*="color: #4ECDC4"] { color: #4ECDC4 !important; }
 
-/* Gold on page-level section labels like "Featured torrents", "Torrents" */
-.panelV2 > .panel__heading,
-.block__heading,
-[class*="section__title"],
-[class*="section-title"] {
-  color: var(--at-gold) !important;
+/* Chatbox */
+html body .panelV2 { overflow: hidden !important; }
+html body .panel__header {
+  background-color: var(--at-bg2) !important;
+  border-bottom: 0.5px solid var(--at-border) !important;
+  padding-right: 8px !important;
+  border-radius: var(--at-radius) var(--at-radius) 0 0 !important;
 }
+html body .panel__actions, html body .panel__action { background-color: transparent !important; }
+html body .panel__tabs {
+  background-color: var(--at-bg2) !important;
+  border-bottom: 1px solid var(--at-goldfaint) !important;
+  padding: 0 4px !important;
+}
+html body .panel__tab { color: var(--at-text3) !important; border-bottom: 2px solid transparent !important; padding: 8px 12px !important; transition: color .15s !important; }
+html body .panel__tab:hover { color: var(--at-text2) !important; }
+html body .panel__tab--active { color: var(--at-text) !important; border-bottom-color: var(--at-gold) !important; }
+html body .panel__header .panel__heading,
+html body .panel__header .panel__heading--centered { background-color: transparent !important; border: none !important; box-shadow: none !important; }
 
-/* ── Data tables ───────────────────────────────────── */
+article.chatbox-message {
+  background-color: var(--at-bg3) !important;
+  border-radius: 8px !important;
+}
+article.chatbox-message::before { border-right-color: var(--at-bg3) !important; }
+section.chatroom__users { background-color: var(--at-bg2) !important; }
+
+/* ── Section headings ────────────────────────────────────── */
+h1, h2, h3 { color: var(--at-text) !important; }
+.panelV2 > .panel__heading, .block__heading,
+[class*="section__title"], [class*="section-title"] { color: var(--at-gold) !important; }
+h1.text-gold, h2.text-gold, h3.text-gold, h4.text-gold, .text-gold { color: var(--at-gold) !important; }
+
+/* ── Data tables ─────────────────────────────────────────── */
 .data-table-wrapper {
   border-radius: var(--at-radius) !important;
   overflow: hidden !important;
   border: 0.5px solid rgba(245,166,35,0.15) !important;
 }
-.data-table thead th,
-.data-table thead td,
+.data-table thead th, .data-table thead td,
 .torrent-search--list__no-poster-headers th,
 .torrent-search--list__no-poster-headers td {
   background-color: var(--at-bg3) !important;
@@ -105,96 +316,19 @@ h1, h2, h3 { color: var(--at-text) !important; }
   text-transform: uppercase !important;
   border-bottom: 1px solid var(--at-goldfaint) !important;
 }
-.data-table tbody tr:hover td {
-  background-color: rgba(245,166,35,0.025) !important;
-}
+.data-table tbody tr:hover td { background-color: rgba(245,166,35,0.025) !important; }
 .data-table td { border-bottom: 0.5px solid var(--at-border) !important; }
+td { background-color: var(--at-bg2) !important; }
+tr:nth-child(even) td { background-color: var(--at-bg3) !important; }
+tr:hover td { background-color: rgba(245,166,35,0.025) !important; }
+thead td, thead th { background-color: var(--at-bg3) !important; }
+th { background-color: var(--at-bg3) !important; color: var(--at-text2) !important; border-bottom: 1px solid var(--at-goldfaint) !important; }
+td[class*="torrent-search--list__"] { background-color: transparent !important; }
 
-/* ── Torrent list ──────────────────────────────────── */
+/* ── Torrent list ─────────────────────────────────────────── */
 .af-row {
   background-color: var(--at-bg2) !important;
   border-bottom: 0.5px solid var(--at-border) !important;
-}
-.af-row:hover { background-color: rgba(245,166,35,0.025) !important; }
-
-.torrent-search--list__name > a:first-child {
-  color: var(--at-text) !important;
-  font-weight: 500 !important;
-}
-.torrent-search--list__name > a:first-child:hover { color: var(--at-gold) !important; }
-.torrent-search--list__seeders { color: var(--at-green) !important; }
-.torrent-search--list__leechers { color: var(--at-red) !important; }
-.torrent-icons__featured { color: var(--at-gold) !important; }
-.torrent-icons__freeleech { color: #8bc34a !important; }
-.torrent-icons__internal  { color: #baaf92 !important; }
-.torrent-icons__verified  { color: var(--at-green) !important; }
-
-/* ── Internal/featured cards ───────────────────────── */
-.internal-card {
-  background-color: var(--at-bg2) !important;
-  border: 0.5px solid rgba(245,166,35,0.18) !important;
-  border-radius: var(--at-radius) !important;
-  overflow: hidden !important;
-  transition: border-color .2s, transform .2s !important;
-}
-.internal-card:hover {
-  border-color: rgba(245,166,35,0.3) !important;
-  transform: translateY(-2px) !important;
-}
-.internal-card__footer,
-.internal-card__header {
-  background-color: var(--at-bg3) !important;
-  color: var(--at-text2) !important;
-}
-
-/* ── Wiki content ──────────────────────────────────── */
-.wiki__content a { color: var(--at-gold) !important; }
-.wiki__content a:hover { color: var(--at-gold2) !important; }
-
-/* ── Footer ────────────────────────────────────────── */
-.footer, footer {
-  background-color: #08090f !important;
-  border-top: 1px solid var(--at-goldfaint) !important;
-}
-.footer__section-title {
-  color: var(--at-gold) !important;
-  font-weight: 600 !important;
-  text-transform: uppercase !important;
-  font-size: 11px !important;
-  letter-spacing: .1em !important;
-}
-.footer__copyright,
-.footer__stats { color: var(--at-text3) !important; font-size: 12px !important; }
-
-/* ── Scrollbar ─────────────────────────────────────── */
-::-webkit-scrollbar { width: 5px; height: 5px; }
-::-webkit-scrollbar-track { background: var(--at-bg); }
-::-webkit-scrollbar-thumb { background: var(--at-bg3); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: rgba(245,166,35,0.4); }
-
-
-/* ── Logo — gold icon, white text (overrides gradient) ── */
-.top-nav__branding img {
-  filter: sepia(1) saturate(5) hue-rotate(5deg) brightness(1.1) !important;
-  transition: filter .3s, transform .3s !important;
-}
-.top-nav__branding:hover img {
-  filter: sepia(1) saturate(5) hue-rotate(5deg) brightness(1.3) drop-shadow(0 0 8px rgba(245,166,35,0.7)) !important;
-  transform: scale(1.05) !important;
-}
-/* Aither Dark uses background-clip:text gradient on the logo word.
-   Override with plain theme text colour. */
-.top-nav__site-logo {
-  background: none !important;
-  -webkit-background-clip: border-box !important;
-  background-clip: border-box !important;
-  -webkit-text-fill-color: var(--at-text) !important;
-  color: var(--at-text) !important;
-  font-weight: 700 !important;
-}
-
-/* ── Torrent row — gold left border hover ─────────── */
-.af-row {
   border-left: 3px solid transparent !important;
   transition: box-shadow .15s, background .15s !important;
 }
@@ -202,299 +336,190 @@ h1, h2, h3 { color: var(--at-text) !important; }
   box-shadow: inset 3px 0 0 var(--at-gold) !important;
   background-color: rgba(245,166,35,0.03) !important;
 }
-
-/* ── Forum topics — gold for unread only ──────────── */
-.topic-listing {
-  border-left: 3px solid transparent !important;
-  padding-left: 12px !important;
-}
-.topic-listing__item--unread {
+/* Pinned / sticky torrent rows */
+tr.torrent-search--list__sticky-row {
+  background-color: rgba(245,166,35,0.05) !important;
   border-left: 3px solid var(--at-gold) !important;
-  padding-left: 12px !important;
+  box-shadow: inset 3px 0 0 var(--at-gold) !important;
 }
-.topic-listing__item--read {
-  border-left: 3px solid transparent !important;
-  padding-left: 12px !important;
-  border-color: transparent !important;
+tr.torrent-search--list__sticky-row td {
+  background-color: transparent !important;
 }
-.topic-listing__item--unread .topic-listing__link {
+tr.torrent-search--list__sticky-row .torrent-search--list__name > a:first-child {
   color: var(--at-text) !important;
+}
+
+.torrent-search--list__name > a:first-child { color: var(--at-text) !important; font-weight: 500 !important; }
+.torrent-search--list__name > a:first-child:hover { color: var(--at-gold) !important; }
+.torrent-search--list__seeders { color: var(--at-green) !important; }
+.torrent-search--list__leechers { color: var(--at-red) !important; }
+.torrent-icons__featured { color: var(--at-gold) !important; }
+.torrent-icons__freeleech { color: #8bc34a !important; }
+.torrent-icons__internal  { color: #baaf92 !important; }
+.torrent-icons__verified  { color: var(--at-green) !important; }
+.torrent-search--list__resolution-and-type { background-color: var(--at-bg3) !important; color: var(--at-text2) !important; }
+
+/* Torrent search bar */
+search.compact-search, .compact-search, .compact-search__visible-default,
+.torrent-search__filters, [class*="compact-search"] { background-color: var(--at-bg2) !important; border-color: var(--at-border) !important; }
+[class*="compact-search"] p.form__group, [class*="compact-search"] .form__group,
+[class*="compact-search"] .form__text, [class*="compact-search"] input.form__text,
+[class*="torrent-search"] .form__group, [class*="torrent-search"] input {
+  background-color: var(--at-bg3) !important;
+  border-color: rgba(255,255,255,0.10) !important;
+  color: var(--at-text) !important;
+}
+p.form__group { background-color: transparent !important; }
+
+/* ── Internal / featured cards ───────────────────────────── */
+.internal-card {
+  background-color: var(--at-bg2) !important;
+  border: 0.5px solid rgba(245,166,35,0.18) !important;
+  border-radius: var(--at-radius) !important;
+  overflow: hidden !important;
+  transition: border-color .2s, transform .2s !important;
+}
+.internal-card:hover { border-color: rgba(245,166,35,0.3) !important; transform: translateY(-2px) !important; }
+.internal-card__footer, .internal-card__header { background-color: var(--at-bg3) !important; color: var(--at-text2) !important; }
+article.torrent-card, .torrent-card { background-color: var(--at-bg2) !important; border: 0.5px solid var(--at-border) !important; border-radius: var(--at-radius) !important; }
+.torrent-card:hover { background-color: var(--at-bg3) !important; }
+header.torrent-card__header { background-color: var(--at-bg3) !important; }
+article.user-stat-card, .user-stat-card { background-color: var(--at-bg2) !important; border: 0.5px solid var(--at-border) !important; border-radius: var(--at-radius) !important; }
+div.top-users__place { background-color: var(--at-bg3) !important; border-radius: var(--at-radius) !important; }
+
+/* ── Forums ──────────────────────────────────────────────── */
+.topic-listing { border-left: 3px solid transparent !important; padding-left: 12px !important; }
+.topic-listing__item--unread { border-left: 3px solid var(--at-gold) !important; padding-left: 12px !important; }
+.topic-listing__item--read { border-left: 3px solid transparent !important; padding-left: 12px !important; border-color: transparent !important; }
+.topic-listing__item--unread .topic-listing__link { color: var(--at-text) !important; font-weight: 600 !important; }
+.topic-listing__item--read .topic-listing__link { color: var(--at-text2) !important; }
+li.topic-listings__item { background-color: var(--at-bg2) !important; border-bottom: 0.5px solid var(--at-border) !important; }
+li.topic-listings__item:hover { background-color: var(--at-bg3) !important; }
+li.subforum-listings__item { background-color: var(--at-bg2) !important; border-bottom: 0.5px solid var(--at-border) !important; }
+li.subforum-listings__item:nth-child(even) { background-color: var(--at-bg3) !important; }
+li.subforum-listings__item:hover { background-color: rgba(245,166,35,0.04) !important; border-left: 3px solid var(--at-gold) !important; }
+.key-value__group, div.key-value__group { background-color: var(--at-bg2) !important; border: 0.5px solid var(--at-border) !important; border-radius: 4px !important; color: var(--at-text) !important; }
+
+/* Posts and comments */
+article.post { background-color: var(--at-bg2) !important; border: 0.5px solid var(--at-border) !important; border-radius: var(--at-radius) !important; }
+aside.post__aside { background-color: var(--at-bg3) !important; border-right: 0.5px solid var(--at-border) !important; }
+menu.post__toolbar { background-color: var(--at-bg3) !important; border-top: 0.5px solid var(--at-border) !important; }
+article.comment { background-color: var(--at-bg2) !important; border: 0.5px solid var(--at-border) !important; border-radius: var(--at-radius) !important; }
+aside.comment__aside { background-color: var(--at-bg3) !important; border-right: 0.5px solid var(--at-border) !important; }
+ul.comment-list { background-color: var(--at-bg2) !important; }
+li.comment__list-item { border-bottom: 0.5px solid var(--at-border) !important; }
+article.article-preview { background-color: var(--at-bg2) !important; border: 0.5px solid var(--at-border) !important; border-radius: var(--at-radius) !important; }
+
+/* ── Pagination ──────────────────────────────────────────── */
+nav.pagination { background-color: var(--at-bg2) !important; border: 0.5px solid var(--at-border) !important; border-radius: var(--at-radius) !important; overflow: hidden !important; }
+.pagination__link, a.pagination__link, li.pagination__previous, li.pagination__next,
+li.pagination__ellipsis, .pagination__previous, .pagination__next {
+  background-color: var(--at-bg2) !important;
+  color: var(--at-text2) !important;
+  border-color: var(--at-border) !important;
+}
+a.pagination__link, a.pagination__next, a.pagination__previous { color: var(--at-text2) !important; }
+.pagination__link:hover, a.pagination__link:hover,
+li.pagination__next:hover, li.pagination__previous:hover,
+a.pagination__next:hover, a.pagination__previous:hover {
+  background-color: var(--at-bg3) !important;
+  color: var(--at-gold) !important;
+}
+li.pagination__current, .pagination__current {
+  background-color: var(--at-bg3) !important;
+  color: var(--at-gold) !important;
+  border-color: var(--at-goldfaint) !important;
   font-weight: 600 !important;
 }
-.topic-listing__item--read .topic-listing__link {
-  color: var(--at-text2) !important;
-}
-
-/* ── Chatbox panel header + tabs ───────────────────── */
-html body .panelV2 { overflow: hidden !important; }
-
-html body .panel__header {
+li.pagination__previous--disabled, li.pagination__next--disabled {
   background-color: var(--at-bg2) !important;
-  border-bottom: 0.5px solid var(--at-border) !important;
-  padding-right: 8px !important;
-  border-radius: var(--at-radius) var(--at-radius) 0 0 !important;
-}
-html body .panel__actions {
-  background-color: transparent !important;
-}
-html body .panel__action {
-  background-color: transparent !important;
-}
-html body .panel__tabs {
-  background-color: var(--at-bg2) !important;
-  border-bottom: 1px solid var(--at-goldfaint) !important;
-  padding: 0 4px !important;
-}
-html body .panel__tab {
   color: var(--at-text3) !important;
-  border-bottom: 2px solid transparent !important;
-  padding: 8px 12px !important;
-  transition: color .15s !important;
+  opacity: 0.5 !important;
 }
-html body .panel__tab:hover { color: var(--at-text2) !important; }
-html body .panel__tab--active {
+
+/* ── Secondary nav (profile page tabs) ───────────────────── */
+.secondary-nav { background-color: var(--at-bg2) !important; border-bottom: 1px solid var(--at-goldfaint) !important; }
+.secondary-nav a, .secondary-nav__item { color: var(--at-text2) !important; }
+.secondary-nav a:hover, .secondary-nav__item:hover { color: var(--at-text) !important; }
+.secondary-nav__item--active, .secondary-nav a.active { color: var(--at-gold) !important; border-bottom-color: var(--at-gold) !important; }
+
+/* ── Fieldsets / forms ───────────────────────────────────── */
+fieldset, .form__fieldset { border-color: rgba(255,255,255,0.12) !important; }
+fieldset.form, .form.form__fieldset { background-color: var(--at-bg3) !important; border-color: rgba(255,255,255,0.10) !important; }
+.form__label--floating { background-color: var(--at-bg2) !important; padding: 0 4px !important; color: var(--at-text2) !important; border-radius: 2px !important; }
+textarea, textarea.form__textarea, .form__textarea {
+  background-color: var(--at-bg2) !important;
+  border: 1px solid rgba(255,255,255,0.10) !important;
   color: var(--at-text) !important;
-  border-bottom-color: var(--at-gold) !important;
+  border-radius: var(--at-radius) !important;
 }
-/* panel__body — left to Aither Dark native to avoid chatbox conflicts */
-
-
-
-/* ── panel__heading inside panel__header — remove box background ── */
-html body .panel__header .panel__heading,
-html body .panel__header .panel__heading--centered {
-  background-color: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
+textarea:focus, textarea.form__textarea:focus, .form__textarea:focus {
+  border-color: rgba(245,166,35,0.6) !important;
+  box-shadow: 0 0 0 3px rgba(245,166,35,0.10) !important;
+  outline: none !important;
 }
 
-
-/* ── Text buttons (View all, SystemBot, Users, Refresh) — gold text ── */
-.form__button--text {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  color: var(--at-gold) !important;
-}
-.form__button--text:hover {
-  color: var(--at-gold2) !important;
-}
-
-/* ── Icon buttons (bell, keyboard, arrows, fullscreen) — gold, no border ── */
-.form__standard-icon-button {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  color: var(--at-gold) !important;
-  opacity: 0.65 !important;
-  transition: opacity .15s !important;
-}
-.form__standard-icon-button:hover {
-  opacity: 1 !important;
-}
-
-/* ── Room/Status selects everywhere (not just panel__header) ─────── */
-.form__select,
-select.form__select {
-  background-color: rgba(255,255,255,0.04) !important;
-  border: 0.5px solid rgba(245,166,35,0.18) !important;
-  border-radius: 6px !important;
-  box-shadow: none !important;
-  color: var(--at-gold) !important;
-}
-.form__select:hover, select.form__select:hover {
-  border-color: rgba(245,166,35,0.4) !important;
-}
-
-/* Torrents section — torrent list, single torrent, requests, mediahub, subtitles */
-html:has(main[class*="torrent"]) .top-nav--left__list-item:has(a[href="https://aither.cc/torrents"]) > a,
-html:has(main[class*="request"]) .top-nav--left__list-item:has(a[href="https://aither.cc/torrents"]) > a,
-html:has(main[class*="mediahub"]) .top-nav--left__list-item:has(a[href="https://aither.cc/torrents"]) > a,
-html:has(main[class*="subtitle"]) .top-nav--left__list-item:has(a[href="https://aither.cc/torrents"]) > a {
-  color: var(--at-gold) !important;
-  border-bottom: 2px solid var(--at-gold) !important;
-  padding-bottom: 2px !important;
-}
-
-/* Community section — forums, topics, articles, polls, playlists, events, badges */
-html:has(main[class*="topic"]) .top-nav--left__list-item:has(a[href="https://aither.cc/forums"]) > a,
-html:has(main[class*="forum"]) .top-nav--left__list-item:has(a[href="https://aither.cc/forums"]) > a,
-html:has(main[class*="article"]) .top-nav--left__list-item:has(a[href="https://aither.cc/forums"]) > a,
-html:has(main[class*="poll"]) .top-nav--left__list-item:has(a[href="https://aither.cc/forums"]) > a,
-html:has(main[class*="playlist"]) .top-nav--left__list-item:has(a[href="https://aither.cc/forums"]) > a,
-html:has(main[class*="event"]) .top-nav--left__list-item:has(a[href="https://aither.cc/forums"]) > a,
-html:has(main[class*="collectible"]) .top-nav--left__list-item:has(a[href="https://aither.cc/forums"]) > a {
-  color: var(--at-gold) !important;
-  border-bottom: 2px solid var(--at-gold) !important;
-  padding-bottom: 2px !important;
-}
-
-/* Support/Other section — wikis, tickets */
-html:has(main[class*="wiki"]) .top-nav--left__list-item:has(a[href*="/wiki"]) > a,
-html:has(main[class*="ticket"]) .top-nav--left__list-item:has(a[href*="/ticket"]) > a {
-  color: var(--at-gold) !important;
-  border-bottom: 2px solid var(--at-gold) !important;
-  padding-bottom: 2px !important;
-}
-
-
-/* ── Notification dots — gold ──────────────────────── */
-.dot {
-  background-color: var(--at-gold) !important;
-  box-shadow: 0 0 6px rgba(245,166,35,0.6) !important;
-}
-/* SVG pulse dot in nav (e.g. Support ticket indicator) */
-.top-nav circle,
-.top-nav--left__container circle,
-.top-nav svg circle {
-  stroke: var(--at-gold) !important;
-  fill: var(--at-gold) !important;
-}
-
-
-/* ── Search/input focus — gold border instead of blue ─ */
-input:focus,
-textarea:focus,
-select:focus,
-.form__input:focus,
-[type="search"]:focus,
-[type="text"]:focus {
+/* ── Buttons & inputs ────────────────────────────────────── */
+.form__button--text { background: transparent !important; border: none !important; box-shadow: none !important; color: var(--at-gold) !important; }
+.form__button--text:hover { color: var(--at-gold2) !important; }
+.form__standard-icon-button { background: transparent !important; border: none !important; box-shadow: none !important; color: var(--at-gold) !important; opacity: 0.65 !important; transition: opacity .15s !important; }
+.form__standard-icon-button:hover { opacity: 1 !important; }
+.form__select, select.form__select { background-color: rgba(255,255,255,0.04) !important; border: 0.5px solid rgba(245,166,35,0.18) !important; border-radius: 6px !important; box-shadow: none !important; color: var(--at-gold) !important; }
+.form__select:hover, select.form__select:hover { border-color: rgba(245,166,35,0.4) !important; }
+input:focus, textarea:focus, select:focus, .form__input:focus,
+[type="search"]:focus, [type="text"]:focus {
   border-color: rgba(245,166,35,0.6) !important;
   outline: none !important;
   box-shadow: 0 0 0 3px rgba(245,166,35,0.12), 0 0 0 1px rgba(245,166,35,0.4) !important;
 }
 
-/* ── Floating label — */
-.form__label--floating {
-  background-color: var(--at-bg2) !important;
-  padding: 0 4px !important;
-  color: var(--at-text2) !important;
-  border-radius: 2px !important;
-}
-
-
-/* ── VirtualSelect dropdowns (advanced search white boxes) ── */
-.vscomp-wrapper,
-.vscomp-ele-wrapper,
-.vscomp-toggle-button {
-  background-color: var(--at-bg3) !important;
-  border: 0.5px solid rgba(245,166,35,0.22) !important;
-  border-radius: 6px !important;
-  color: var(--at-text2) !important;
-}
-.vscomp-toggle-button:hover {
-  border-color: rgba(245,166,35,0.45) !important;
-}
-.vscomp-value {
-  color: var(--at-text2) !important;
-}
-.vscomp-arrow {
-  color: var(--at-gold) !important;
-  border-color: var(--at-gold) !important;
-}
-.vscomp-dropbox-container,
-.vscomp-dropbox {
-  background-color: var(--at-bg2) !important;
-  border: 0.5px solid rgba(245,166,35,0.22) !important;
-  border-radius: 8px !important;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.5) !important;
-}
-.vscomp-search-container,
-.vscomp-search-wrapper {
-  background-color: var(--at-bg3) !important;
-  border-bottom: 0.5px solid var(--at-border) !important;
-}
-.vscomp-search-input {
-  background-color: var(--at-bg3) !important;
-  border: 0.5px solid var(--at-border) !important;
-  color: var(--at-text) !important;
-  border-radius: 6px !important;
-}
-.vscomp-search-input:focus {
-  border-color: rgba(245,166,35,0.5) !important;
-  box-shadow: 0 0 0 2px rgba(245,166,35,0.1) !important;
-}
-.vscomp-options-container,
-.vscomp-options-list {
-  background-color: var(--at-bg2) !important;
-}
-.vscomp-option {
-  background-color: var(--at-bg2) !important;
-  color: var(--at-text2) !important;
-}
-.vscomp-option:hover,
-.vscomp-option.selected {
-  background-color: rgba(245,166,35,0.08) !important;
-  color: var(--at-text) !important;
-}
-.vscomp-option.selected {
-  color: var(--at-gold) !important;
-}
+/* ── VirtualSelect dropdowns ─────────────────────────────── */
+.vscomp-wrapper, .vscomp-ele-wrapper, .vscomp-toggle-button { background-color: var(--at-bg3) !important; border: 0.5px solid rgba(245,166,35,0.22) !important; border-radius: 6px !important; color: var(--at-text2) !important; }
+.vscomp-toggle-button:hover { border-color: rgba(245,166,35,0.45) !important; }
+.vscomp-value { color: var(--at-text2) !important; }
+.vscomp-arrow { color: var(--at-gold) !important; border-color: var(--at-gold) !important; }
+.vscomp-dropbox-container, .vscomp-dropbox { background-color: var(--at-bg2) !important; border: 0.5px solid rgba(245,166,35,0.22) !important; border-radius: 8px !important; box-shadow: 0 8px 24px rgba(0,0,0,0.5) !important; }
+.vscomp-search-container, .vscomp-search-wrapper { background-color: var(--at-bg3) !important; border-bottom: 0.5px solid var(--at-border) !important; }
+.vscomp-search-input { background-color: var(--at-bg3) !important; border: 0.5px solid var(--at-border) !important; color: var(--at-text) !important; border-radius: 6px !important; }
+.vscomp-search-input:focus { border-color: rgba(245,166,35,0.5) !important; box-shadow: 0 0 0 2px rgba(245,166,35,0.1) !important; }
+.vscomp-options-container, .vscomp-options-list { background-color: var(--at-bg2) !important; }
+.vscomp-option { background-color: var(--at-bg2) !important; color: var(--at-text2) !important; }
+.vscomp-option:hover, .vscomp-option.selected { background-color: rgba(245,166,35,0.08) !important; color: var(--at-text) !important; }
+.vscomp-option.selected { color: var(--at-gold) !important; }
 .vscomp-option-text { color: inherit !important; }
-.vscomp-dropbox-close-button,
-.vscomp-clear-button,
-.vscomp-search-clear {
-  background-color: var(--at-bg3) !important;
-  color: var(--at-text3) !important;
-  border-radius: 50% !important;
-}
-.vscomp-dropbox-close-button:hover,
-.vscomp-clear-button:hover { color: var(--at-gold) !important; }
+.vscomp-dropbox-close-button, .vscomp-clear-button, .vscomp-search-clear { background-color: var(--at-bg3) !important; color: var(--at-text3) !important; border-radius: 50% !important; }
+.vscomp-dropbox-close-button:hover, .vscomp-clear-button:hover { color: var(--at-gold) !important; }
 .vscomp-toggle-all-button { background-color: var(--at-bg3) !important; color: var(--at-text2) !important; }
 .vscomp-no-options { color: var(--at-text3) !important; background-color: var(--at-bg2) !important; }
 
+/* ── SweetAlert2 ─────────────────────────────────────────── */
+.swal2-popup { background-color: var(--at-bg2) !important; border: 0.5px solid rgba(245,166,35,0.25) !important; border-radius: var(--at-radius) !important; color: var(--at-text) !important; box-shadow: 0 8px 32px rgba(0,0,0,0.6) !important; }
+.swal2-toast { background-color: var(--at-bg3) !important; border: 0.5px solid rgba(245,166,35,0.25) !important; border-radius: var(--at-radius) !important; box-shadow: 0 4px 20px rgba(0,0,0,0.5) !important; }
+.swal2-title { color: var(--at-text) !important; font-size: 15px !important; }
+.swal2-html-container, .swal2-content { color: var(--at-text2) !important; }
+.swal2-icon.swal2-success { border-color: var(--at-gold) !important; color: var(--at-gold) !important; }
+.swal2-icon.swal2-success .swal2-success-ring { border-color: rgba(245,166,35,0.3) !important; }
+.swal2-icon.swal2-success [class^="swal2-success-line"] { background-color: var(--at-gold) !important; }
+.swal2-timer-progress-bar { background: var(--at-gold) !important; }
+.swal2-confirm { background-color: var(--at-gold) !important; color: #0f1117 !important; font-weight: 600 !important; border-radius: 8px !important; }
+.swal2-deny, .swal2-cancel { background-color: var(--at-bg3) !important; color: var(--at-text2) !important; border-radius: 8px !important; }
 
-/* ── SweetAlert2 toasts & popups — dark theme ─────── */
-.swal2-popup {
-  background-color: var(--at-bg2) !important;
-  border: 0.5px solid rgba(245,166,35,0.25) !important;
-  border-radius: var(--at-radius) !important;
-  color: var(--at-text) !important;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.6) !important;
-}
-.swal2-toast {
-  background-color: var(--at-bg3) !important;
-  border: 0.5px solid rgba(245,166,35,0.25) !important;
-  border-radius: var(--at-radius) !important;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.5) !important;
-}
-.swal2-title {
-  color: var(--at-text) !important;
-  font-size: 15px !important;
-}
-.swal2-html-container,
-.swal2-content {
-  color: var(--at-text2) !important;
-}
-/* Success icon — make it gold */
-.swal2-icon.swal2-success {
-  border-color: var(--at-gold) !important;
-  color: var(--at-gold) !important;
-}
-.swal2-icon.swal2-success .swal2-success-ring {
-  border-color: rgba(245,166,35,0.3) !important;
-}
-.swal2-icon.swal2-success [class^="swal2-success-line"] {
-  background-color: var(--at-gold) !important;
-}
-/* Timer progress bar */
-.swal2-timer-progress-bar {
-  background: var(--at-gold) !important;
-}
-/* Confirm/deny buttons */
-.swal2-confirm {
-  background-color: var(--at-gold) !important;
-  color: #0f1117 !important;
-  font-weight: 600 !important;
-  border-radius: 8px !important;
-}
-.swal2-deny, .swal2-cancel {
-  background-color: var(--at-bg3) !important;
-  color: var(--at-text2) !important;
-  border-radius: 8px !important;
-}
+/* ── Wiki ────────────────────────────────────────────────── */
+.wiki__content a { color: var(--at-gold) !important; }
+.wiki__content a:hover { color: var(--at-gold2) !important; }
 
-/* ══ Rank & role color preservation ════════════════════ */
+/* ── Footer ──────────────────────────────────────────────── */
+.footer, footer { background-color: #08090f !important; border-top: 1px solid var(--at-goldfaint) !important; }
+.footer__section-title { color: var(--at-gold) !important; font-weight: 600 !important; text-transform: uppercase !important; font-size: 11px !important; letter-spacing: .1em !important; }
+.footer__copyright, .footer__stats { color: var(--at-text3) !important; font-size: 12px !important; }
+
+/* ── Scrollbar ───────────────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: var(--at-bg); }
+::-webkit-scrollbar-thumb { background: var(--at-bg3); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(245,166,35,0.4); }
+
+/* ── Rank colour preservation ────────────────────────────── */
 [style*="color:#95A5A6"],[style*="color: #95A5A6"] { color: #95A5A6 !important; }
 [style*="color:#5E372F"],[style*="color: #5E372F"] { color: #5E372F !important; }
 [style*="color:#b8c8ff"],[style*="color: #b8c8ff"] { color: #b8c8ff !important; }
@@ -520,121 +545,27 @@ select:focus,
 [style*="color:#ff9100"],[style*="color: #ff9100"] { color: #ff9100 !important; }
 [style*="color:#ffb24d"],[style*="color: #ffb24d"] { color: #ffb24d !important; }
 [style*="color:#00abff"],[style*="color: #00abff"] { color: #00abff !important; }
-
-h1.text-gold,
-h2.text-gold,
-h3.text-gold,
-h4.text-gold,
-.text-gold {
-  color: var(--at-gold) !important;
-}
-
-@keyframes at-heart-gold {
-  0%   { text-shadow: 0 0 4px  rgba(245,166,35,0.4); color: #c8820a; }
-  50%  { text-shadow: 0 0 12px rgba(245,166,35,1.0), 0 0 24px rgba(245,166,35,0.6); color: #f5a623; }
-  100% { text-shadow: 0 0 4px  rgba(245,166,35,0.4); color: #c8820a; }
-}
-.fa-heartbeat.text-gold,
-.top-nav .fa-heartbeat {
-  color: var(--at-gold) !important;
-  text-shadow: 0 0 10px rgba(245,166,35,0.8) !important;
-  animation: at-heart-gold 1.5s ease-in-out infinite !important;
-  filter: none !important;
-}
-
-.panel__heading a.user-tag__link[style*="color:#95A5A6"],
-.panel__heading a.user-tag__link[style*="color: #95A5A6"] { color: #95A5A6 !important; }
-.panel__heading a.user-tag__link[style*="color:#5E372F"],
-.panel__heading a.user-tag__link[style*="color: #5E372F"] { color: #5E372F !important; }
-.panel__heading a.user-tag__link[style*="color:#b8c8ff"],
-.panel__heading a.user-tag__link[style*="color: #b8c8ff"] { color: #b8c8ff !important; }
-.panel__heading a.user-tag__link[style*="color:#a5b8ff"],
-.panel__heading a.user-tag__link[style*="color: #a5b8ff"] { color: #a5b8ff !important; }
-.panel__heading a.user-tag__link[style*="color:#7f8eff"],
-.panel__heading a.user-tag__link[style*="color: #7f8eff"] { color: #7f8eff !important; }
-.panel__heading a.user-tag__link[style*="color:#508bf2"],
-.panel__heading a.user-tag__link[style*="color: #508bf2"] { color: #508bf2 !important; }
-.panel__heading a.user-tag__link[style*="color:#6c7eff"],
-.panel__heading a.user-tag__link[style*="color: #6c7eff"] { color: #6c7eff !important; }
-.panel__heading a.user-tag__link[style*="color:#596eff"],
-.panel__heading a.user-tag__link[style*="color: #596eff"] { color: #596eff !important; }
-.panel__heading a.user-tag__link[style*="color:#466eff"],
-.panel__heading a.user-tag__link[style*="color: #466eff"] { color: #466eff !important; }
-.panel__heading a.user-tag__link[style*="color:#214e96"],
-.panel__heading a.user-tag__link[style*="color: #214e96"] { color: #214e96 !important; }
-.panel__heading a.user-tag__link[style*="color:#6cdb9b"],
-.panel__heading a.user-tag__link[style*="color: #6cdb9b"] { color: #6cdb9b !important; }
-.panel__heading a.user-tag__link[style*="color:#2ECC71"],
-.panel__heading a.user-tag__link[style*="color: #2ECC71"],
-.panel__heading a.user-tag__link[style*="color:#2ecc71"],
-.panel__heading a.user-tag__link[style*="color: #2ecc71"] { color: #2ECC71 !important; }
-.panel__heading a.user-tag__link[style*="color:#7FFF00"],
-.panel__heading a.user-tag__link[style*="color: #7FFF00"],
-.panel__heading a.user-tag__link[style*="color:#7fff00"],
-.panel__heading a.user-tag__link[style*="color: #7fff00"] { color: #7FFF00 !important; }
-.panel__heading a.user-tag__link[style*="color:#912cdb"],
-.panel__heading a.user-tag__link[style*="color: #912cdb"] { color: #912cdb !important; }
-.panel__heading a.user-tag__link[style*="color:#BF55EC"],
-.panel__heading a.user-tag__link[style*="color: #BF55EC"],
-.panel__heading a.user-tag__link[style*="color:#bf55ec"],
-.panel__heading a.user-tag__link[style*="color: #bf55ec"] { color: #BF55EC !important; }
-.panel__heading a.user-tag__link[style*="color:#BAAF92"],
-.panel__heading a.user-tag__link[style*="color: #BAAF92"],
-.panel__heading a.user-tag__link[style*="color:#baaf92"],
-.panel__heading a.user-tag__link[style*="color: #baaf92"] { color: #BAAF92 !important; }
-.panel__heading a.user-tag__link[style*="color:#20726c"],
-.panel__heading a.user-tag__link[style*="color: #20726c"] { color: #20726c !important; }
-.panel__heading a.user-tag__link[style*="color:#15B097"],
-.panel__heading a.user-tag__link[style*="color: #15B097"],
-.panel__heading a.user-tag__link[style*="color:#15b097"],
-.panel__heading a.user-tag__link[style*="color: #15b097"] { color: #15B097 !important; }
-.panel__heading a.user-tag__link[style*="color:#4ECC4D"],
-.panel__heading a.user-tag__link[style*="color: #4ECC4D"],
-.panel__heading a.user-tag__link[style*="color:#4ecc4d"],
-.panel__heading a.user-tag__link[style*="color: #4ecc4d"] { color: #4ECC4D !important; }
-.panel__heading a.user-tag__link[style*="color:#f92672"],
-.panel__heading a.user-tag__link[style*="color: #f92672"] { color: #f92672 !important; }
-.panel__heading a.user-tag__link[style*="color:#ff9100"],
-.panel__heading a.user-tag__link[style*="color: #ff9100"] { color: #ff9100 !important; }
-.panel__heading a.user-tag__link[style*="color:#ffb24d"],
-.panel__heading a.user-tag__link[style*="color: #ffb24d"] { color: #ffb24d !important; }
-.panel__heading a.user-tag__link[style*="color:#00abff"],
-.panel__heading a.user-tag__link[style*="color: #00abff"] { color: #00abff !important; }
-.panel__heading a.user-tag__link[style*="color:#4ECDC4"],
-.panel__heading a.user-tag__link[style*="color: #4ECDC4"],
-.panel__heading a.user-tag__link[style*="color:#4ecdc4"],
-.panel__heading a.user-tag__link[style*="color: #4ecdc4"] { color: #4ECDC4 !important; }
-
-a[style*="color:#95A5A6"],a[style*="color: #95A5A6"] { color: #95A5A6 !important; }
-a[style*="color:#5E372F"],a[style*="color: #5E372F"] { color: #5E372F !important; }
-a[style*="color:#b8c8ff"],a[style*="color: #b8c8ff"] { color: #b8c8ff !important; }
-a[style*="color:#b8cbff"],a[style*="color: #b8cbff"] { color: #b8cbff !important; }
-a[style*="color:#a5b8ff"],a[style*="color: #a5b8ff"] { color: #a5b8ff !important; }
-a[style*="color:#a5bbff"],a[style*="color: #a5bbff"] { color: #a5bbff !important; }
+[style*="color:#4ECDC4"],[style*="color: #4ECDC4"],[style*="color:#4ecdc4"],[style*="color: #4ecdc4"] { color: #4ECDC4 !important; }
+a[style*="color:#f92672"],a[style*="color: #f92672"] { color: #f92672 !important; }
 a[style*="color:#7f8eff"],a[style*="color: #7f8eff"] { color: #7f8eff !important; }
 a[style*="color:#508bf2"],a[style*="color: #508bf2"] { color: #508bf2 !important; }
-a[style*="color:#6c7eff"],a[style*="color: #6c7eff"] { color: #6c7eff !important; }
+a[style*="color:#2ECC71"],a[style*="color: #2ECC71"],a[style*="color:#2ecc71"],a[style*="color: #2ecc71"] { color: #2ECC71 !important; }
+a[style*="color:#BF55EC"],a[style*="color: #BF55EC"],a[style*="color:#bf55ec"],a[style*="color: #bf55ec"] { color: #BF55EC !important; }
+a[style*="color:#15B097"],a[style*="color: #15B097"],a[style*="color:#15b097"],a[style*="color: #15b097"] { color: #15B097 !important; }
+a[style*="color:#4ECDC4"],a[style*="color: #4ECDC4"],a[style*="color:#4ecdc4"],a[style*="color: #4ecdc4"] { color: #4ECDC4 !important; }
+a[style*="color:#00abff"],a[style*="color: #00abff"] { color: #00abff !important; }
+a[style*="color:#ffb24d"],a[style*="color: #ffb24d"] { color: #ffb24d !important; }
+a[style*="color:#ff9100"],a[style*="color: #ff9100"] { color: #ff9100 !important; }
+a[style*="color:#912cdb"],a[style*="color: #912cdb"] { color: #912cdb !important; }
+a[style*="color:#BAAF92"],a[style*="color: #BAAF92"],a[style*="color:#baaf92"],a[style*="color: #baaf92"] { color: #BAAF92 !important; }
+a[style*="color:#20726c"],a[style*="color: #20726c"] { color: #20726c !important; }
+a[style*="color:#6cdb9b"],a[style*="color: #6cdb9b"] { color: #6cdb9b !important; }
+a[style*="color:#7FFF00"],a[style*="color: #7FFF00"],a[style*="color:#7fff00"],a[style*="color: #7fff00"] { color: #7FFF00 !important; }
 a[style*="color:#596eff"],a[style*="color: #596eff"] { color: #596eff !important; }
 a[style*="color:#466eff"],a[style*="color: #466eff"] { color: #466eff !important; }
 a[style*="color:#214e96"],a[style*="color: #214e96"] { color: #214e96 !important; }
-a[style*="color:#6cdb9b"],a[style*="color: #6cdb9b"] { color: #6cdb9b !important; }
-a[style*="color:#2ECC71"],a[style*="color: #2ECC71"],
-a[style*="color:#2ecc71"],a[style*="color: #2ecc71"] { color: #2ECC71 !important; }
-a[style*="color:#7FFF00"],a[style*="color: #7FFF00"],
-a[style*="color:#7fff00"],a[style*="color: #7fff00"] { color: #7FFF00 !important; }
-a[style*="color:#912cdb"],a[style*="color: #912cdb"] { color: #912cdb !important; }
-a[style*="color:#BF55EC"],a[style*="color: #BF55EC"],
-a[style*="color:#bf55ec"],a[style*="color: #bf55ec"] { color: #BF55EC !important; }
-a[style*="color:#BAAF92"],a[style*="color: #BAAF92"],
-a[style*="color:#baaf92"],a[style*="color: #baaf92"] { color: #BAAF92 !important; }
-a[style*="color:#20726c"],a[style*="color: #20726c"] { color: #20726c !important; }
-a[style*="color:#15B097"],a[style*="color: #15B097"],
-a[style*="color:#15b097"],a[style*="color: #15b097"] { color: #15B097 !important; }
-a[style*="color:#4ECC4D"],a[style*="color: #4ECC4D"],
-a[style*="color:#4ecc4d"],a[style*="color: #4ecc4d"] { color: #4ECC4D !important; }
-a[style*="color:#f92672"],a[style*="color: #f92672"] { color: #f92672 !important; }
-a[style*="color:#ff9100"],a[style*="color: #ff9100"] { color: #ff9100 !important; }
-a[style*="color:#ffb24d"],a[style*="color: #ffb24d"] { color: #ffb24d !important; }
-a[style*="color:#00abff"],a[style*="color: #00abff"] { color: #00abff !important; }
-a[style*="color:#4ECDC4"],a[style*="color: #4ECDC4"],
-a[style*="color:#4ecdc4"],a[style*="color: #4ecdc4"] { color: #4ECDC4 !important; }
+a[style*="color:#6c7eff"],a[style*="color: #6c7eff"] { color: #6c7eff !important; }
+a[style*="color:#a5b8ff"],a[style*="color: #a5b8ff"] { color: #a5b8ff !important; }
+a[style*="color:#b8c8ff"],a[style*="color: #b8c8ff"] { color: #b8c8ff !important; }
+a[style*="color:#5E372F"],a[style*="color: #5E372F"] { color: #5E372F !important; }
+a[style*="color:#95A5A6"],a[style*="color: #95A5A6"] { color: #95A5A6 !important; }
