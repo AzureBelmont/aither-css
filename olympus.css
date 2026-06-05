@@ -661,3 +661,50 @@ li.top-nav__dropdown ul li a.top-nav__username,
 li.top-nav__dropdown ul li a.top-nav__username:hover {
   background-color: transparent !important;
 }
+
+.page__torrent--create fieldset.form__fieldset {
+  border: none !important;
+  background-color: var(--at-bg3) !important;
+  border-radius: var(--at-radius) !important;
+  padding: 10px 14px 12px !important;
+  height: auto !important;
+}
+.page__torrent--create fieldset.form__fieldset legend {
+  color: var(--at-text2) !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  letter-spacing: .04em !important;
+  padding: 0 5px !important;
+}
+
+.page__torrent--create .form__fieldset-checkbox-container {
+  height: auto !important;
+}
+
+.page__torrent--create .form__group--short-horizontal {
+  align-items: start !important;
+}
+
+.page__torrent--create .form__group--horizontal .form__select {
+  background-color: var(--at-bg3) !important;
+  border: 1px solid var(--at-border) !important;
+  border-radius: 6px !important;
+  color: var(--at-text) !important;
+}
+.page__torrent--create .form__group--horizontal .form__select:focus {
+  border-color: rgba(245,166,35,0.4) !important;
+  box-shadow: 0 0 0 2px rgba(245,166,35,0.08) !important;
+}
+
+.page__torrent--create .form__group--horizontal .form__label--floating {
+  background-color: var(--at-bg2) !important;
+}
+.page__torrent--create fieldset .form__label--floating {
+  background-color: var(--at-bg3) !important;
+}
+
+.page__torrent--create .panel__sub-heading {
+  border-radius: 6px !important;
+  margin-top: 16px !important;
+  border: none !important;
+}
