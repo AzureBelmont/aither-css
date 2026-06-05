@@ -530,8 +530,12 @@ input:focus, textarea:focus, select:focus, .form__input:focus,
 .page__event--index .top-nav__dropdown > a { color: var(--at-text) !important; transition: color .15s, background .15s !important; }
 .page__event--index .top-nav__dropdown > a:hover { background-color: var(--at-goldfaint) !important; color: var(--at-gold) !important; }
 
+.panel__sub-heading { background-color: var(--at-bg3) !important; color: var(--at-gold) !important; }
+
 table.internal-claim__inner-table tr td,
 table.internal-claim__inner-table tr:nth-child(even) td { background-color: transparent !important; }
+tr.moderation__details-table--bottom td,
+tr.moderation__details-table--bottom:nth-child(even) td { background-color: transparent !important; }
 
 .form__button--filled { background-color: transparent !important; color: var(--at-text) !important; border: 1px solid var(--at-text2) !important; }
 .form__button--outlined { background-color: transparent !important; color: var(--at-text) !important; border: 1px solid var(--at-text2) !important; }
