@@ -661,6 +661,12 @@ li.top-nav__dropdown ul li a.top-nav__username,
 li.top-nav__dropdown ul li a.top-nav__username:hover {
   background-color: transparent !important;
 }
+#chatbox_header .form__select {
+  border-color: rgba(245,166,35,0.22) !important;
+}
+#chatbox_header .form__select:hover {
+  border-color: rgba(245,166,35,0.45) !important;
+}
 #chatbox_header .form__label--floating {
   color: var(--at-gold) !important;
 }
