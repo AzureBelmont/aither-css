@@ -678,6 +678,11 @@ li.top-nav__dropdown ul li a.top-nav__username:hover {
   font-weight: 600 !important;
   letter-spacing: .04em !important;
 }
+
+.group-requirements__group--requirement-row,
+.group-requirements__group--requirement-multirow {
+  background-color: var(--at-bg3) !important;
+}
 .page__torrent--create fieldset.form__fieldset {
   border: none !important;
   background-color: var(--at-bg3) !important;
