@@ -661,7 +661,9 @@ li.top-nav__dropdown ul li a.top-nav__username,
 li.top-nav__dropdown ul li a.top-nav__username:hover {
   background-color: transparent !important;
 }
-
+#chatbox_header .form__label--floating {
+  color: var(--at-gold) !important;
+}
 .page__torrent--create fieldset.form__fieldset {
   border: none !important;
   background-color: var(--at-bg3) !important;
@@ -676,15 +678,12 @@ li.top-nav__dropdown ul li a.top-nav__username:hover {
   letter-spacing: .04em !important;
   padding: 0 5px !important;
 }
-
 .page__torrent--create .form__fieldset-checkbox-container {
   height: auto !important;
 }
-
 .page__torrent--create .form__group--short-horizontal {
   align-items: start !important;
 }
-
 .page__torrent--create .form__group--horizontal .form__select {
   background-color: var(--at-bg3) !important;
   border: 1px solid var(--at-border) !important;
@@ -695,14 +694,12 @@ li.top-nav__dropdown ul li a.top-nav__username:hover {
   border-color: rgba(245,166,35,0.4) !important;
   box-shadow: 0 0 0 2px rgba(245,166,35,0.08) !important;
 }
-
 .page__torrent--create .form__group--horizontal .form__label--floating {
   background-color: var(--at-bg2) !important;
 }
 .page__torrent--create fieldset .form__label--floating {
   background-color: var(--at-bg3) !important;
 }
-
 .page__torrent--create .panel__sub-heading {
   border-radius: 6px !important;
   margin-top: 16px !important;
