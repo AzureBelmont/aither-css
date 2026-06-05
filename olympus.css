@@ -670,6 +670,14 @@ li.top-nav__dropdown ul li a.top-nav__username:hover {
 #chatbox_header .form__label--floating {
   color: var(--at-gold) !important;
 }
+
+.dialog__heading {
+  background-color: var(--at-bg3) !important;
+  color: var(--at-gold) !important;
+  border-bottom: 1px solid var(--at-goldfaint) !important;
+  font-weight: 600 !important;
+  letter-spacing: .04em !important;
+}
 .page__torrent--create fieldset.form__fieldset {
   border: none !important;
   background-color: var(--at-bg3) !important;
