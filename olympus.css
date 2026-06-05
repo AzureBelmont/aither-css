@@ -3,7 +3,7 @@
    Gold accents. Dark panels. Clean.
    Author : AzureBelmont
    Repo   : github.com/AzureBelmont/aither-css
-   Ver    : 1.7.2
+   Ver    : 1.7.3
    Palette
    ────────────────────────────────────────────
    Gold         #f5a623   primary accent
@@ -163,9 +163,9 @@ li.top-nav__dropdown ul li i.fab {
   border: 1px solid var(--at-border) !important;
   color: var(--at-text2) !important;
 }
-.top-nav--left__list-item ul li:hover i.fas,
+.top-nav--left__list-item ul li:hover > a i.fas,
 .top-nav--left__list-item ul li a:hover i.fas,
-li.top-nav__dropdown ul li:hover i.fas,
+li.top-nav__dropdown ul li:hover > a i.fas,
 li.top-nav__dropdown ul li a:hover i.fas {
   background-color: var(--at-goldfaint) !important;
   border-color: var(--at-gold) !important;
@@ -252,14 +252,14 @@ article.quick-search__result--default:hover { background-color: var(--at-bg3) !i
 
 .panel__heading a.user-tag__link[style*="color:#95A5A6"],.panel__heading a.user-tag__link[style*="color: #95A5A6"] { color: #95A5A6 !important; }
 .panel__heading a.user-tag__link[style*="color:#5E372F"],.panel__heading a.user-tag__link[style*="color: #5E372F"] { color: #5E372F !important; }
-.panel__heading a.user-tag__link[style*="color:#f2c4c8"],.panel__heading a.user-tag__link[style*="color: #f2c4c8"] { color: #f2c4c8 !important; }
-.panel__heading a.user-tag__link[style*="color:#e8a0aa"],.panel__heading a.user-tag__link[style*="color: #e8a0aa"] { color: #e8a0aa !important; }
-.panel__heading a.user-tag__link[style*="color:#d9788a"],.panel__heading a.user-tag__link[style*="color: #d9788a"] { color: #d9788a !important; }
-.panel__heading a.user-tag__link[style*="color:#c95870"],.panel__heading a.user-tag__link[style*="color: #c95870"] { color: #c95870 !important; }
-.panel__heading a.user-tag__link[style*="color:#b84060"],.panel__heading a.user-tag__link[style*="color: #b84060"] { color: #b84060 !important; }
-.panel__heading a.user-tag__link[style*="color:#a33055"],.panel__heading a.user-tag__link[style*="color: #a33055"] { color: #a33055 !important; }
-.panel__heading a.user-tag__link[style*="color:#8e224a"],.panel__heading a.user-tag__link[style*="color: #8e224a"] { color: #8e224a !important; }
-.panel__heading a.user-tag__link[style*="color:#7a1840"],.panel__heading a.user-tag__link[style*="color: #7a1840"] { color: #7a1840 !important; }
+.panel__heading a.user-tag__link[style*="color:#b8c8ff"],.panel__heading a.user-tag__link[style*="color: #b8c8ff"] { color: #b8c8ff !important; }
+.panel__heading a.user-tag__link[style*="color:#a5b8ff"],.panel__heading a.user-tag__link[style*="color: #a5b8ff"] { color: #a5b8ff !important; }
+.panel__heading a.user-tag__link[style*="color:#7f8eff"],.panel__heading a.user-tag__link[style*="color: #7f8eff"] { color: #7f8eff !important; }
+.panel__heading a.user-tag__link[style*="color:#508bf2"],.panel__heading a.user-tag__link[style*="color: #508bf2"] { color: #508bf2 !important; }
+.panel__heading a.user-tag__link[style*="color:#6c7eff"],.panel__heading a.user-tag__link[style*="color: #6c7eff"] { color: #6c7eff !important; }
+.panel__heading a.user-tag__link[style*="color:#596eff"],.panel__heading a.user-tag__link[style*="color: #596eff"] { color: #596eff !important; }
+.panel__heading a.user-tag__link[style*="color:#466eff"],.panel__heading a.user-tag__link[style*="color: #466eff"] { color: #466eff !important; }
+.panel__heading a.user-tag__link[style*="color:#214e96"],.panel__heading a.user-tag__link[style*="color: #214e96"] { color: #214e96 !important; }
 .panel__heading a.user-tag__link[style*="color:#6cdb9b"],.panel__heading a.user-tag__link[style*="color: #6cdb9b"] { color: #6cdb9b !important; }
 .panel__heading a.user-tag__link[style*="color:#2ECC71"],.panel__heading a.user-tag__link[style*="color: #2ECC71"],.panel__heading a.user-tag__link[style*="color:#2ecc71"],.panel__heading a.user-tag__link[style*="color: #2ecc71"] { color: #2ECC71 !important; }
 .panel__heading a.user-tag__link[style*="color:#7FFF00"],.panel__heading a.user-tag__link[style*="color: #7FFF00"] { color: #7FFF00 !important; }
@@ -268,7 +268,7 @@ article.quick-search__result--default:hover { background-color: var(--at-bg3) !i
 .panel__heading a.user-tag__link[style*="color:#BAAF92"],.panel__heading a.user-tag__link[style*="color: #BAAF92"] { color: #BAAF92 !important; }
 .panel__heading a.user-tag__link[style*="color:#20726c"],.panel__heading a.user-tag__link[style*="color: #20726c"] { color: #20726c !important; }
 .panel__heading a.user-tag__link[style*="color:#15B097"],.panel__heading a.user-tag__link[style*="color: #15B097"] { color: #15B097 !important; }
-.panel__heading a.user-tag__link[style*="color:#f5a623"],.panel__heading a.user-tag__link[style*="color: #f5a623"] { color: #f5a623 !important; }
+.panel__heading a.user-tag__link[style*="color:#f92672"],.panel__heading a.user-tag__link[style*="color: #f92672"] { color: #f92672 !important; }
 .panel__heading a.user-tag__link[style*="color:#ff9100"],.panel__heading a.user-tag__link[style*="color: #ff9100"] { color: #ff9100 !important; }
 .panel__heading a.user-tag__link[style*="color:#ffb24d"],.panel__heading a.user-tag__link[style*="color: #ffb24d"] { color: #ffb24d !important; }
 .panel__heading a.user-tag__link[style*="color:#00abff"],.panel__heading a.user-tag__link[style*="color: #00abff"] { color: #00abff !important; }
@@ -541,14 +541,6 @@ table td i.fas.fa-circle.fa-xs {
 
 [style*="color:#95A5A6"],[style*="color: #95A5A6"] { color: #95A5A6 !important; }
 [style*="color:#5E372F"],[style*="color: #5E372F"] { color: #5E372F !important; }
-[style*="color:#f2c4c8"],[style*="color: #f2c4c8"] { color: #f2c4c8 !important; }
-[style*="color:#e8a0aa"],[style*="color: #e8a0aa"] { color: #e8a0aa !important; }
-[style*="color:#d9788a"],[style*="color: #d9788a"] { color: #d9788a !important; }
-[style*="color:#c95870"],[style*="color: #c95870"] { color: #c95870 !important; }
-[style*="color:#b84060"],[style*="color: #b84060"] { color: #b84060 !important; }
-[style*="color:#a33055"],[style*="color: #a33055"] { color: #a33055 !important; }
-[style*="color:#8e224a"],[style*="color: #8e224a"] { color: #8e224a !important; }
-[style*="color:#7a1840"],[style*="color: #7a1840"] { color: #7a1840 !important; }
 [style*="color:#6cdb9b"],[style*="color: #6cdb9b"] { color: #6cdb9b !important; }
 [style*="color:#2ECC71"],[style*="color: #2ECC71"],[style*="color:#2ecc71"],[style*="color: #2ecc71"] { color: #2ECC71 !important; }
 [style*="color:#7FFF00"],[style*="color: #7FFF00"],[style*="color:#7fff00"],[style*="color: #7fff00"] { color: #7FFF00 !important; }
@@ -559,31 +551,21 @@ table td i.fas.fa-circle.fa-xs {
 [style*="color:#15B097"],[style*="color: #15B097"],[style*="color:#15b097"],[style*="color: #15b097"] { color: #15B097 !important; }
 [style*="color:#4ECC4D"],[style*="color: #4ECC4D"],[style*="color:#4ecc4d"],[style*="color: #4ecc4d"] { color: #4ECC4D !important; }
 [style*="color:#f5a623"],[style*="color: #f5a623"] { color: #f5a623 !important; }
-[style*="color:#b8c8ff"],[style*="color: #b8c8ff"],[style*="color:#b8cbff"],[style*="color: #b8cbff"] { color: #f2c4c8 !important; }
-[style*="color:#a5b8ff"],[style*="color: #a5b8ff"],[style*="color:#a5bbff"],[style*="color: #a5bbff"] { color: #e8a0aa !important; }
-[style*="color:#7f8eff"],[style*="color: #7f8eff"] { color: #d9788a !important; }
-[style*="color:#508bf2"],[style*="color: #508bf2"] { color: #c95870 !important; }
-[style*="color:#6c7eff"],[style*="color: #6c7eff"] { color: #b84060 !important; }
-[style*="color:#596eff"],[style*="color: #596eff"] { color: #a33055 !important; }
-[style*="color:#466eff"],[style*="color: #466eff"] { color: #8e224a !important; }
-[style*="color:#214e96"],[style*="color: #214e96"] { color: #7a1840 !important; }
-[style*="color:#f92672"],[style*="color: #f92672"] { color: #f5a623 !important; }
+[style*="color:#f92672"],[style*="color: #f92672"] { color: #f92672 !important; }
 [style*="color:#ff9100"],[style*="color: #ff9100"] { color: #ff9100 !important; }
 [style*="color:#ffb24d"],[style*="color: #ffb24d"] { color: #ffb24d !important; }
 [style*="color:#00abff"],[style*="color: #00abff"] { color: #00abff !important; }
 [style*="color:#4ECDC4"],[style*="color: #4ECDC4"],[style*="color:#4ecdc4"],[style*="color: #4ecdc4"] { color: #4ECDC4 !important; }
 a[style*="color:#f5a623"],a[style*="color: #f5a623"] { color: #f5a623 !important; }
-a[style*="color:#d9788a"],a[style*="color: #d9788a"] { color: #d9788a !important; }
-a[style*="color:#c95870"],a[style*="color: #c95870"] { color: #c95870 !important; }
-a[style*="color:#b8c8ff"],a[style*="color: #b8c8ff"],a[style*="color:#b8cbff"],a[style*="color: #b8cbff"] { color: #f2c4c8 !important; }
-a[style*="color:#a5b8ff"],a[style*="color: #a5b8ff"],a[style*="color:#a5bbff"],a[style*="color: #a5bbff"] { color: #e8a0aa !important; }
-a[style*="color:#7f8eff"],a[style*="color: #7f8eff"] { color: #d9788a !important; }
-a[style*="color:#508bf2"],a[style*="color: #508bf2"] { color: #c95870 !important; }
-a[style*="color:#6c7eff"],a[style*="color: #6c7eff"] { color: #b84060 !important; }
-a[style*="color:#596eff"],a[style*="color: #596eff"] { color: #a33055 !important; }
-a[style*="color:#466eff"],a[style*="color: #466eff"] { color: #8e224a !important; }
-a[style*="color:#214e96"],a[style*="color: #214e96"] { color: #7a1840 !important; }
-a[style*="color:#f92672"],a[style*="color: #f92672"] { color: #f5a623 !important; }
+a[style*="color:#b8c8ff"],a[style*="color: #b8c8ff"],a[style*="color:#b8cbff"],a[style*="color: #b8cbff"] { color: #b8c8ff !important; }
+a[style*="color:#a5b8ff"],a[style*="color: #a5b8ff"],a[style*="color:#a5bbff"],a[style*="color: #a5bbff"] { color: #a5b8ff !important; }
+a[style*="color:#7f8eff"],a[style*="color: #7f8eff"] { color: #7f8eff !important; }
+a[style*="color:#508bf2"],a[style*="color: #508bf2"] { color: #508bf2 !important; }
+a[style*="color:#6c7eff"],a[style*="color: #6c7eff"] { color: #6c7eff !important; }
+a[style*="color:#596eff"],a[style*="color: #596eff"] { color: #596eff !important; }
+a[style*="color:#466eff"],a[style*="color: #466eff"] { color: #466eff !important; }
+a[style*="color:#214e96"],a[style*="color: #214e96"] { color: #214e96 !important; }
+a[style*="color:#f92672"],a[style*="color: #f92672"] { color: #f92672 !important; }
 a[style*="color:#2ECC71"],a[style*="color: #2ECC71"],a[style*="color:#2ecc71"],a[style*="color: #2ecc71"] { color: #2ECC71 !important; }
 a[style*="color:#BF55EC"],a[style*="color: #BF55EC"],a[style*="color:#bf55ec"],a[style*="color: #bf55ec"] { color: #BF55EC !important; }
 a[style*="color:#15B097"],a[style*="color: #15B097"],a[style*="color:#15b097"],a[style*="color: #15b097"] { color: #15B097 !important; }
@@ -596,16 +578,11 @@ a[style*="color:#BAAF92"],a[style*="color: #BAAF92"],a[style*="color:#baaf92"],a
 a[style*="color:#20726c"],a[style*="color: #20726c"] { color: #20726c !important; }
 a[style*="color:#6cdb9b"],a[style*="color: #6cdb9b"] { color: #6cdb9b !important; }
 a[style*="color:#7FFF00"],a[style*="color: #7FFF00"],a[style*="color:#7fff00"],a[style*="color: #7fff00"] { color: #7FFF00 !important; }
-a[style*="color:#a33055"],a[style*="color: #a33055"] { color: #a33055 !important; }
-a[style*="color:#8e224a"],a[style*="color: #8e224a"] { color: #8e224a !important; }
-a[style*="color:#7a1840"],a[style*="color: #7a1840"] { color: #7a1840 !important; }
-a[style*="color:#b84060"],a[style*="color: #b84060"] { color: #b84060 !important; }
-a[style*="color:#e8a0aa"],a[style*="color: #e8a0aa"] { color: #e8a0aa !important; }
-a[style*="color:#f2c4c8"],a[style*="color: #f2c4c8"] { color: #f2c4c8 !important; }
 a[style*="color:#5E372F"],a[style*="color: #5E372F"] { color: #5E372F !important; }
 a[style*="color:#95A5A6"],a[style*="color: #95A5A6"] { color: #95A5A6 !important; }
 
 .bbcode-input__tab-pane { background-color: var(--at-bg2) !important; }
+.bbcode-input { border-color: var(--at-border) !important; }
 .bbcode-rendered__clipboard { background-color: var(--at-bg3) !important; opacity: 0.85 !important; }
 
 .post__permalink:hover,
