@@ -3,7 +3,7 @@
    Gold accents. Dark panels. Clean.
    Author : AzureBelmont
    Repo   : github.com/AzureBelmont/aither-css
-   Ver    : 1.7.6
+   Ver    : 1.7.7
    Palette
    ────────────────────────────────────────────
    Gold         #f5a623   primary accent
@@ -514,6 +514,23 @@ input:focus, textarea:focus, select:focus, .form__input:focus,
 
 [class*="user-profile__column"] { background-color: var(--at-bg2) !important; }
 [class*="user-profile__column"] .panel__heading { background-color: var(--at-bg3) !important; }
+
+.mediahub-card { background-color: var(--at-bg2) !important; }
+.mediahub-card:hover { background-color: var(--at-bg3) !important; }
+.collectible-card { background-color: var(--at-bg2) !important; }
+.collectible-card:hover { background-color: var(--at-bg3) !important; }
+.playlists__playlist-image--none { background-color: var(--at-bg3) !important; }
+.easy-upload3r__panel-beta { background-color: var(--at-bg2) !important; }
+.torrent-search--grouped__dropdown { background-color: var(--at-bg2) !important; }
+
+table.internal-claim__inner-table tr td,
+table.internal-claim__inner-table tr:nth-child(even) td { background-color: transparent !important; }
+
+.form__button--filled { background-color: transparent !important; color: var(--at-text) !important; border: 1px solid var(--at-text2) !important; }
+.form__button--outlined { background-color: transparent !important; color: var(--at-text) !important; border: 1px solid var(--at-text2) !important; }
+.form__button--filled:hover, .form__button--outlined:hover { background-color: var(--at-goldfaint) !important; border-color: var(--at-gold) !important; color: var(--at-gold) !important; }
+a.form__button[href*="/download"] { background-color: rgb(92, 181, 121) !important; color: #fff !important; border: 1px solid rgb(92, 181, 121) !important; }
+a.form__button[href*="/download"]:hover { background-color: var(--at-goldfaint) !important; border-color: var(--at-gold) !important; color: var(--at-gold) !important; }
 
 ul.nav-tab-menu__items {
   background-color: var(--at-bg2) !important;
