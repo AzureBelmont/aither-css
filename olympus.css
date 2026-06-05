@@ -12,7 +12,6 @@
    Text         #dde1f0   body text
    ========================================================== */
 
-
 :root {
   --at-bg:        #080b16;
   --at-bg2:       #111928;
@@ -694,6 +693,16 @@ li.top-nav__dropdown ul li a.top-nav__username:hover {
 .group-requirements__group--requirement-row:hover {
   background-color: rgba(245,166,35,0.06) !important;
 }
+
+article.achievement {
+  background-color: var(--at-bg3) !important;
+  border: 0.5px solid var(--at-border) !important;
+  border-radius: var(--at-radius) !important;
+}
+article.achievement progress.achievement__progress { accent-color: var(--at-gold) !important; }
+article.achievement progress.achievement__progress::-webkit-progress-value { background-color: var(--at-gold) !important; }
+article.achievement progress.achievement__progress::-webkit-progress-bar { background-color: var(--at-bg2) !important; }
+article.achievement progress.achievement__progress::-moz-progress-bar { background-color: var(--at-gold) !important; }
 .page__torrent--create fieldset.form__fieldset {
   border: none !important;
   background-color: var(--at-bg3) !important;
