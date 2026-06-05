@@ -515,7 +515,8 @@ input:focus, textarea:focus, select:focus, .form__input:focus,
 .vscomp-search-input:focus { border-color: rgba(245,166,35,0.5) !important; box-shadow: 0 0 0 2px rgba(245,166,35,0.1) !important; }
 .vscomp-options-container, .vscomp-options-list { background-color: var(--at-bg2) !important; }
 .vscomp-option { background-color: var(--at-bg2) !important; color: var(--at-text2) !important; }
-.vscomp-option:hover, .vscomp-option.selected { background-color: rgba(245,166,35,0.08) !important; color: var(--at-text) !important; }
+.vscomp-option:hover, .vscomp-option.selected { background-color: var(--at-bg3) !important; color: var(--at-text) !important; }
+.vscomp-option.focused { background-color: var(--at-bg3) !important; color: var(--at-text) !important; }
 .vscomp-option.selected { color: var(--at-gold) !important; }
 .vscomp-option-text { color: inherit !important; }
 .vscomp-dropbox-close-button, .vscomp-clear-button, .vscomp-search-clear { background-color: var(--at-bg3) !important; color: var(--at-text3) !important; border-radius: 50% !important; }
