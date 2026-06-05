@@ -473,6 +473,10 @@ textarea:focus, textarea.form__textarea:focus, .form__textarea:focus {
 
 .form__button--text { background: transparent !important; border: none !important; box-shadow: none !important; color: var(--at-gold) !important; }
 .form__button--text:hover { color: var(--at-gold2) !important; }
+.page__contributor--index .form__button--text { color: var(--at-text) !important; }
+.page__contributor--index .form__button--text:hover { color: var(--at-gold) !important; }
+.page__contributor--index a svg circle { stroke: var(--at-gold) !important; }
+.page__contributor--index a svg circle { stroke: var(--at-gold) !important; }
 .form__standard-icon-button { background: transparent !important; border: none !important; box-shadow: none !important; color: var(--at-gold) !important; opacity: 0.65 !important; transition: opacity .15s !important; }
 .form__standard-icon-button:hover { opacity: 1 !important; }
 .form__select, select.form__select { background-color: rgba(255,255,255,0.04) !important; border: 0.5px solid rgba(245,166,35,0.18) !important; border-radius: 6px !important; box-shadow: none !important; color: var(--at-gold) !important; }
