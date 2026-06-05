@@ -374,11 +374,18 @@ tr.torrent-search--list__sticky-row .torrent-search--list__name > a:first-child 
 search.compact-search, .compact-search, .compact-search__visible-default,
 .torrent-search__filters, [class*="compact-search"] { background-color: var(--at-bg2) !important; border-color: var(--at-border) !important; }
 [class*="compact-search"] p.form__group, [class*="compact-search"] .form__group,
+[class*="torrent-search"] .form__group {
+  background-color: transparent !important;
+}
 [class*="compact-search"] .form__text, [class*="compact-search"] input.form__text,
-[class*="torrent-search"] .form__group, [class*="torrent-search"] input {
+[class*="torrent-search"] input {
   background-color: var(--at-bg3) !important;
-  border-color: rgba(255,255,255,0.10) !important;
+  border-color: var(--at-border) !important;
   color: var(--at-text) !important;
+}
+[class*="compact-search"] input.form__text:focus,
+[class*="torrent-search"] input:focus {
+  border-color: rgba(245,166,35,0.4) !important;
 }
 p.form__group { background-color: transparent !important; }
 
