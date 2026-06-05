@@ -561,7 +561,7 @@ tr.moderation__details-table--bottom:nth-child(even) td { background-color: tran
 .form__button--filled { background-color: transparent !important; color: var(--at-text) !important; border: 1px solid var(--at-text2) !important; }
 .form__button--outlined { background-color: transparent !important; color: var(--at-text) !important; border: 1px solid var(--at-text2) !important; }
 .form__button--filled:hover, .form__button--outlined:hover { background-color: var(--at-goldfaint) !important; border-color: var(--at-gold) !important; color: var(--at-gold) !important; }
-a.form__button[href*="/torrents/download/"] { background-color: #3b82f6 !important; color: #fff !important; border: 1px solid #3b82f6 !important; }
+a.form__button[href*="/torrents/download/"] { background-color: #2563eb !important; color: #fff !important; border: 1px solid #2563eb !important; }
 a.form__button[href*="/torrents/download/"]:hover { background-color: var(--at-goldfaint) !important; border-color: var(--at-gold) !important; color: var(--at-gold) !important; }
 
 ul.nav-tab-menu__items {
@@ -703,6 +703,25 @@ article.achievement progress.achievement__progress { accent-color: var(--at-gold
 article.achievement progress.achievement__progress::-webkit-progress-value { background-color: var(--at-gold) !important; }
 article.achievement progress.achievement__progress::-webkit-progress-bar { background-color: var(--at-bg2) !important; }
 article.achievement progress.achievement__progress::-moz-progress-bar { background-color: var(--at-gold) !important; }
+
+span.badge-user {
+  background-color: var(--at-bg3) !important;
+}
+
+input[type="file"]::file-selector-button {
+  background-color: var(--at-bg3) !important;
+  color: var(--at-gold) !important;
+  border: 1px solid var(--at-goldfaint) !important;
+  border-radius: 6px !important;
+  padding: 6px 14px !important;
+  cursor: pointer !important;
+  font-weight: 500 !important;
+  transition: background .15s, border-color .15s !important;
+}
+input[type="file"]::file-selector-button:hover {
+  background-color: var(--at-goldfaint) !important;
+  border-color: var(--at-gold) !important;
+}
 .page__torrent--create fieldset.form__fieldset {
   border: none !important;
   background-color: var(--at-bg3) !important;
