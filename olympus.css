@@ -3,7 +3,7 @@
    Gold accents. Dark panels. Clean.
    Author : AzureBelmont
    Repo   : github.com/AzureBelmont/aither-css
-   Ver    : 1.7.8
+   Ver    : 1.8
    Palette
    ────────────────────────────────────────────
    Gold         #f5a623   primary accent
@@ -527,13 +527,16 @@ input:focus, textarea:focus, select:focus, .form__input:focus,
 .torrent-search--grouped__dropdown { background-color: var(--at-bg2) !important; }
 .torrent-search--grouped__header { background-color: var(--at-bg3) !important; }
 
+.page__event--index .top-nav__dropdown > a { color: var(--at-text) !important; transition: color .15s, background .15s !important; }
+.page__event--index .top-nav__dropdown > a:hover { background-color: var(--at-goldfaint) !important; color: var(--at-gold) !important; }
+
 table.internal-claim__inner-table tr td,
 table.internal-claim__inner-table tr:nth-child(even) td { background-color: transparent !important; }
 
 .form__button--filled { background-color: transparent !important; color: var(--at-text) !important; border: 1px solid var(--at-text2) !important; }
 .form__button--outlined { background-color: transparent !important; color: var(--at-text) !important; border: 1px solid var(--at-text2) !important; }
 .form__button--filled:hover, .form__button--outlined:hover { background-color: var(--at-goldfaint) !important; border-color: var(--at-gold) !important; color: var(--at-gold) !important; }
-a.form__button[href*="/torrents/download/"] { background-color: rgb(92, 181, 121) !important; color: #fff !important; border: 1px solid rgb(92, 181, 121) !important; }
+a.form__button[href*="/torrents/download/"] { background-color: #3b82f6 !important; color: #fff !important; border: 1px solid #3b82f6 !important; }
 a.form__button[href*="/torrents/download/"]:hover { background-color: var(--at-goldfaint) !important; border-color: var(--at-gold) !important; color: var(--at-gold) !important; }
 
 ul.nav-tab-menu__items {
