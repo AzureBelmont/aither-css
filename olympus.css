@@ -287,6 +287,7 @@ article.quick-search__result--default:hover { background-color: var(--at-bg3) !i
 .panel__heading a.user-tag__link[style*="color:#00abff"],.panel__heading a.user-tag__link[style*="color: #00abff"] { color: #00abff !important; }
 .panel__heading a.user-tag__link[style*="color:#4ECDC4"],.panel__heading a.user-tag__link[style*="color: #4ECDC4"] { color: #4ECDC4 !important; }
 
+a.user-tag__link[style*="color"] i.fas, a.user-tag__link[style*="color"] i.far, a.user-tag__link[style*="color"] i.fab { color: inherit !important; background-color: transparent !important; border-color: transparent !important; }
 html body .panelV2 { overflow: hidden !important; }
 html body .panel__header {
   background-color: var(--at-bg2) !important;
