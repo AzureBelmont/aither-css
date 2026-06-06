@@ -3,7 +3,7 @@
    Gold accents. Dark panels. Clean.
    Author : AzureBelmont
    Repo   : github.com/AzureBelmont/aither-css
-   Ver    : 1.8.2
+   Ver    : 1.9
    Palette
    ────────────────────────────────────────────
    Gold         #f5a623   primary accent
@@ -30,7 +30,7 @@
   --key-value-even-bg:             #1c2540;
   --color-links:                   #dde1f0;
   --panel-head-fg:                 #f5a623;
-  --quick-search-bg:               #1c2540;
+  --quick-search-bg:               #242d49;
   --quick-search-result-hover-bg:  #111928;
   --post-toolbar-bg:               #111928;
   --post-toolbar-hover-bg:         #1c2540;
@@ -108,11 +108,11 @@ li.top-nav__dropdown ul li a i.fas.fa-heartbeat, li.top-nav__dropdown ul li i.fa
 .alert strong, .special-event-alert strong { color: var(--at-gold) !important; }
 div.alerts, .alerts { background-color: var(--at-bg3) !important; }
 
-.quick-search__input, input.quick-search__input { background-color: var(--at-bg3) !important; border: 0.5px solid var(--at-border) !important; color: var(--at-text) !important; }
-.quick-search__input:focus { border-color: rgba(245,166,35,0.6) !important; box-shadow: 0 0 0 3px rgba(245,166,35,0.10) !important; outline: none !important; }
+.quick-search__input, input.quick-search__input { background-color: #1c2336 !important; border: 1px solid var(--at-border) !important; color: var(--at-text) !important; }
+.quick-search__input:focus { background-color: #242d49 !important; border-color: rgba(245,166,35,0.6) !important; border-bottom: none !important; outline: none !important; }
 article.quick-search__result--default { background-color: var(--at-bg2) !important; }
 article.quick-search__result--default:hover { background-color: var(--at-bg3) !important; }
-.quick-search__results { background-color: var(--at-bg2) !important; border: 0.5px solid rgba(245,166,35,0.6) !important; border-top: none !important; border-radius: 0 0 var(--at-radius) var(--at-radius) !important; box-shadow: 0 8px 24px rgba(0,0,0,0.5) !important; overflow: hidden !important; }
+.quick-search__results { background-color: var(--at-bg2) !important; border: 1px solid rgba(245,166,35,0.6) !important; border-top: none !important; border-radius: 0 0 var(--at-radius) var(--at-radius) !important; }
 
 .panelV2 { background-color: var(--at-bg2) !important; border: 0.5px solid var(--at-border) !important; border-radius: var(--at-radius) !important; box-shadow: 0 4px 24px rgba(0,0,0,0.5) !important; }
 .panel__heading { background-color: var(--at-bg3) !important; border-bottom: 1px solid var(--at-goldfaint) !important; color: var(--at-gold) !important; font-weight: 600 !important; letter-spacing: .04em !important; border-radius: var(--at-radius) var(--at-radius) 0 0 !important; }
