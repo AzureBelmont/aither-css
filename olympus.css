@@ -109,10 +109,13 @@ li.top-nav__dropdown ul li a i.fas.fa-heartbeat, li.top-nav__dropdown ul li i.fa
 div.alerts, .alerts { background-color: var(--at-bg3) !important; }
 
 .quick-search__input, input.quick-search__input { background-color: #1c2336 !important; border: 1px solid var(--at-border) !important; color: var(--at-text) !important; }
-.quick-search__input:focus { background-color: #242d49 !important; border-color: rgba(245,166,35,0.6) !important; border-bottom: none !important; outline: none !important; }
-article.quick-search__result--default { background-color: var(--at-bg2) !important; }
-article.quick-search__result--default:hover { background-color: var(--at-bg3) !important; }
-.quick-search__results { background-color: var(--at-bg2) !important; border: 1px solid rgba(245,166,35,0.6) !important; border-top: none !important; border-radius: 0 0 var(--at-radius) var(--at-radius) !important; }
+.quick-search__input:focus { background-color: #242d49 !important; border-color: rgba(245,166,35,0.6) !important; border-bottom: 1px solid rgba(255,255,255,0.04) !important; outline: none !important; }
+article.quick-search__result:nth-child(odd) { background-color: #0a0f1c !important; }
+article.quick-search__result:nth-child(even) { background-color: #0d1324 !important; }
+article.quick-search__result { border-bottom: 1px solid rgba(255,255,255,0.04) !important; }
+article.quick-search__result:last-child { border-bottom: none !important; }
+article.quick-search__result:hover { background-color: rgba(245,166,35,0.06) !important; }
+.quick-search__results { background-color: #080d18 !important; border: 1px solid rgba(245,166,35,0.6) !important; border-top: none !important; border-radius: 0 0 var(--at-radius) var(--at-radius) !important; overflow-y: auto !important; overflow-x: hidden !important; }
 
 .panelV2 { background-color: var(--at-bg2) !important; border: 0.5px solid var(--at-border) !important; border-radius: var(--at-radius) !important; box-shadow: 0 4px 24px rgba(0,0,0,0.5) !important; }
 .panel__heading { background-color: var(--at-bg3) !important; border-bottom: 1px solid var(--at-goldfaint) !important; color: var(--at-gold) !important; font-weight: 600 !important; letter-spacing: .04em !important; border-radius: var(--at-radius) var(--at-radius) 0 0 !important; }
