@@ -120,7 +120,7 @@ html:has(main[class*="ticket"])   .top-nav--left__list-item:has(a[href*="/ticket
 .alert i, .special-event-alert i { color: var(--k-pink) !important; }
 div.alerts, .alerts { background-color: var(--k-bg3) !important; }
 
-.quick-search__input, input.quick-search__input { background-color: #0e0e0e !important; border: 1px solid var(--k-border-mid) !important; border-radius: var(--k-radius-sm) !important; color: var(--k-text) !important; font-size: 13px !important; }
+.quick-search__input, input.quick-search__input { background-color: var(--k-bg3) !important; border: 1px solid var(--k-border-mid) !important; border-radius: var(--k-radius-sm) !important; color: var(--k-text) !important; font-size: 13px !important; }
 input.quick-search__input:focus { background-color: #151515 !important; border: 1px solid var(--k-pink) !important; border-bottom: 1px solid rgba(255,255,255,0.03) !important; box-shadow: none !important; outline: none !important; }
 .quick-search__input::placeholder { color: var(--k-text3) !important; opacity: 1 !important; }
 article.quick-search__result:nth-child(odd) { background-color: #030303 !important; }
@@ -278,7 +278,7 @@ a.form__button[href*="/torrents/download/"] { background-color: var(--k-pink) !i
 a.form__button[href*="/torrents/download/"]:hover { background-color: var(--k-pink-soft) !important; border-color: var(--k-pink-soft) !important; color: #000 !important; }
 
 fieldset, .form__fieldset { border-color: var(--k-border-mid) !important; }
-fieldset.form, .form.form__fieldset { background-color: var(--k-bg3) !important; border-color: var(--k-border-mid) !important; }
+fieldset.form, .form.form__fieldset, fieldset.form__fieldset { background-color: var(--k-bg3) !important; border-color: var(--k-border-mid) !important; }
 .form__label--floating { background-color: var(--k-bg2) !important; padding: 0 4px !important; color: var(--k-text2) !important; border-radius: 2px !important; }
 fieldset .form__label--floating, [class*="compact-search"] .form__label--floating, [class*="torrent-search"] .form__label--floating { background-color: var(--k-bg3) !important; }
 .form__group:has(select) .form__label--floating, .form__group:has(input:not(:placeholder-shown)) .form__label--floating, .form__group:has(textarea:not(:placeholder-shown)) .form__label--floating { padding: 0 4px !important; }
@@ -295,6 +295,8 @@ html body .panel__header .form__select, html body .panel__header select { backgr
 .bbcode-input__tab-pane { background-color: var(--k-bg2) !important; }
 .bbcode-input { border-color: var(--k-border) !important; }
 .bbcode-rendered__clipboard { background-color: var(--k-bg3) !important; opacity: 0.85 !important; }
+
+input[type="checkbox"], input[type="radio"] { accent-color: var(--k-pink) !important; }
 
 .vscomp-wrapper, .vscomp-ele-wrapper, .vscomp-toggle-button { background-color: var(--k-bg3) !important; border: 0.5px solid var(--k-pink-border) !important; border-radius: var(--k-radius-sm) !important; color: var(--k-text2) !important; }
 .vscomp-toggle-button:hover { border-color: rgba(244,170,202,0.35) !important; }
