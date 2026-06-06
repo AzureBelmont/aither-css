@@ -1,4 +1,4 @@
-/* ==========================================================
+\/* ==========================================================
    Aither — Greek Theme
    Gold accents. Dark panels. Clean.
    Author : AzureBelmont
@@ -108,7 +108,7 @@ li.top-nav__dropdown ul li a i.fas.fa-heartbeat, li.top-nav__dropdown ul li i.fa
 .alert strong, .special-event-alert strong { color: var(--at-gold) !important; }
 div.alerts, .alerts { background-color: var(--at-bg3) !important; }
 
-.quick-search__input, input.quick-search__input { background-color: #1c2336 !important; border: 1px solid var(--at-border) !important; color: var(--at-text) !important; }
+.quick-search__input, input.quick-search__input { background-color: var(--at-bg3) !important; border: 1px solid var(--at-border) !important; color: var(--at-text) !important; }
 input.quick-search__input:focus { background-color: #242d49 !important; border: 1px solid rgba(245,166,35,0.6) !important; border-bottom: 1px solid rgba(255,255,255,0.04) !important; box-shadow: none !important; outline: none !important; }
 article.quick-search__result:nth-child(odd) { background-color: #070b15 !important; }
 article.quick-search__result:nth-child(even) { background-color: #0a0f1c !important; }
@@ -245,7 +245,7 @@ li.pagination__previous--disabled, li.pagination__next--disabled { background-co
 .secondary-nav__item--active, .secondary-nav a.active { color: var(--at-gold) !important; border-bottom-color: var(--at-gold) !important; }
 
 fieldset, .form__fieldset { border-color: rgba(255,255,255,0.12) !important; }
-fieldset.form, .form.form__fieldset { background-color: var(--at-bg3) !important; border-color: rgba(255,255,255,0.10) !important; }
+fieldset.form, .form.form__fieldset, fieldset.form__fieldset { background-color: var(--at-bg3) !important; border-color: rgba(255,255,255,0.10) !important; }
 .form__label--floating { background-color: var(--at-bg2) !important; color: var(--at-text2) !important; border-radius: 2px !important; }
 fieldset .form__label--floating, [class*="compact-search"] .form__label--floating, [class*="torrent-search"] .form__label--floating { background-color: var(--at-bg3) !important; }
 .form__group:has(select) .form__label--floating, .form__group:has(input:not(:placeholder-shown)) .form__label--floating, .form__group:has(textarea:not(:placeholder-shown)) .form__label--floating { padding: 0 4px !important; }
@@ -269,6 +269,8 @@ a[href*="/dashboard/reports"] svg circle, a[href*="/contributors"] svg circle { 
 select.form__select option { background-color: var(--at-bg3) !important; color: var(--at-text) !important; }
 select.form__select option:checked { background-color: var(--at-bg2) !important; color: var(--at-gold) !important; }
 input:focus, textarea:focus, select:focus, .form__input:focus, [type="search"]:focus, [type="text"]:focus { border-color: rgba(245,166,35,0.6) !important; outline: none !important; box-shadow: 0 0 0 3px rgba(245,166,35,0.12), 0 0 0 1px rgba(245,166,35,0.4) !important; }
+input[type="checkbox"], input[type="radio"] { accent-color: var(--at-gold) !important; }
+
 .vscomp-wrapper, .vscomp-ele-wrapper, .vscomp-toggle-button { background-color: var(--at-bg3) !important; border: 0.5px solid rgba(245,166,35,0.22) !important; border-radius: 6px !important; color: var(--at-text2) !important; }
 .vscomp-toggle-button:hover { border-color: rgba(245,166,35,0.45) !important; }
 .vscomp-value { color: var(--at-text2) !important; }
