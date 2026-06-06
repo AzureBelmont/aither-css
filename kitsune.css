@@ -121,11 +121,14 @@ html:has(main[class*="ticket"])   .top-nav--left__list-item:has(a[href*="/ticket
 div.alerts, .alerts { background-color: var(--k-bg3) !important; }
 
 .quick-search__input, input.quick-search__input { background-color: #0e0e0e !important; border: 1px solid var(--k-border-mid) !important; border-radius: var(--k-radius-sm) !important; color: var(--k-text) !important; font-size: 13px !important; }
-.quick-search__input:focus, input.quick-search__input:focus { background-color: #161616 !important; border-color: var(--k-pink) !important; border-bottom: none !important; outline: none !important; }
+.quick-search__input:focus, input.quick-search__input:focus { background-color: #151515 !important; border-color: var(--k-pink) !important; border-bottom-color: rgba(255,255,255,0.03) !important; outline: none !important; }
 .quick-search__input::placeholder { color: var(--k-text3) !important; opacity: 1 !important; }
-article.quick-search__result--default { background-color: var(--k-bg2) !important; }
-article.quick-search__result--default:hover { background-color: var(--k-bg3) !important; }
-.quick-search__results { background-color: var(--k-bg2) !important; border: 1px solid var(--k-pink) !important; border-top: none !important; border-radius: 0 0 var(--k-radius) var(--k-radius) !important; }
+article.quick-search__result:nth-child(odd) { background-color: #040404 !important; }
+article.quick-search__result:nth-child(even) { background-color: #070707 !important; }
+article.quick-search__result { border-bottom: 1px solid rgba(255,255,255,0.03) !important; }
+article.quick-search__result:last-child { border-bottom: none !important; }
+article.quick-search__result:hover { background-color: var(--k-pink-faint) !important; }
+.quick-search__results { background-color: #020202 !important; border: 1px solid var(--k-pink) !important; border-top: none !important; border-radius: 0 0 var(--k-radius) var(--k-radius) !important; overflow-y: auto !important; overflow-x: hidden !important; }
 
 search.compact-search, .compact-search, .compact-search__visible-default, .torrent-search__filters, [class*="compact-search"] { background-color: var(--k-bg2) !important; border-color: var(--k-border) !important; }
 [class*="compact-search"] p.form__group, [class*="compact-search"] .form__group, [class*="torrent-search"] .form__group { background-color: transparent !important; }
