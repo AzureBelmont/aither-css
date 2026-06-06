@@ -3,7 +3,7 @@
    Gold accents. Dark panels. Clean.
    Author : AzureBelmont
    Repo   : github.com/AzureBelmont/aither-css
-   Ver    : 1.9
+   Ver    : 2.0
    Palette
    ────────────────────────────────────────────
    Gold         #f5a623   primary accent
@@ -157,8 +157,19 @@ html body .panel__tab:hover { color: var(--at-text2) !important; }
 html body .panel__tab--active { color: var(--at-text) !important; border-bottom-color: var(--at-gold) !important; }
 html body .panel__header .panel__heading, html body .panel__header .panel__heading--centered { background-color: transparent !important; border: none !important; box-shadow: none !important; }
 
-article.chatbox-message { background-color: var(--at-bg3) !important; border-radius: 8px !important; }
-article.chatbox-message::before { border-right-color: var(--at-bg3) !important; }
+article.chatbox-message { background-color: transparent !important; border-radius: 0 !important; padding: 5px 8px 5px 0 !important; margin: 0 !important; gap: 0px 8px !important; grid-template-columns: 40px auto 1fr auto !important; align-items: start !important; }
+article.chatbox-message::before { display: none !important; }
+article.chatbox-message:hover { background-color: rgba(245,166,35,0.02) !important; }
+.chatbox-message__aside { position: static !important; left: auto !important; padding: 0 !important; width: 40px !important; min-width: 40px !important; grid-row: 1 / -1 !important; align-self: start !important; }
+.chatbox-message__aside img { width: 40px !important; height: 40px !important; min-width: 40px !important; border-radius: 50% !important; object-fit: cover !important; }
+.chatbox-message__header .user-tag { padding-left: 0 !important; }
+.chatbox-message__header { line-height: 1.15 !important; }
+.chatbox-message__content { line-height: 1.2 !important; }
+.chatbox-message__source { opacity: 0.5 !important; }
+.chatroom__messages { gap: 0 !important; padding-left: 8px !important; }
+.chatroom__messages > li { padding: 0 !important; margin: 0 !important; width: 100% !important; box-sizing: border-box !important; }
+.chatroom__whispers { font-size: 11px !important; padding: 1px 8px !important; opacity: 0.5 !important; line-height: 1.2 !important; }
+.chatroom__new-message { padding-top: 4px !important; margin-top: 0 !important; }
 section.chatroom__users { background-color: var(--at-bg2) !important; }
 
 h1, h2, h3 { color: var(--at-text) !important; }
