@@ -690,6 +690,10 @@ li.top-nav__dropdown ul li a.top-nav__username:hover {
   letter-spacing: .04em !important;
 }
 
+.dialog__form {
+  background-color: var(--at-bg2) !important;
+}
+
 .group-requirements__group--requirement-row,
 .group-requirements__group--requirement-multirow {
   background-color: var(--at-bg3) !important;
