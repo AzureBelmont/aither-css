@@ -38,6 +38,7 @@
   --paginate-bg:                  #0c0c0c;
   --paginate-bg-hover:            #111111;
   --paginate-fg:                  #888888;
+  --data-table-tr-hover-bg:       rgba(244,170,202,0.07);
   --color-links:                  #e8e8e8;
   --panel-head-fg:                #F4AACA;
   --post-toolbar-bg:              #111111;
@@ -405,7 +406,9 @@ tr.moderation__details-table--bottom td, tr.moderation__details-table--bottom:nt
 .dialog__form { background-color: var(--k-bg2) !important; }
 .dialog__header { background-color: var(--k-bg3) !important; }
 .dialog__actions, .dialog__action { background-color: var(--k-bg3) !important; }
-dialog tr:hover td { background-color: var(--k-bg3) !important; }
+.dialog--auto-width tr:hover td { background-color: var(--k-bg3) !important; }
+.dialog--auto-width tr td { background-color: var(--k-bg2) !important; }
+.dialog--auto-width tr:nth-child(even) td { background-color: var(--k-bg3) !important; }
 
 .group-requirements__group--requirement-row, .group-requirements__group--requirement-multirow { background-color: var(--k-bg3) !important; }
 .group-requirements__group-wrapper:hover { background-color: var(--k-pink-faint) !important; }
