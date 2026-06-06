@@ -468,7 +468,8 @@ table td i.fas.fa-circle.fa-xs { color: var(--k-pink) !important; animation: k-d
 .group-requirements__group--header h3 > span[style*="ffb24d"]::before { content: "Oyakata"; font-size: 18px !important; color: #ffb24d; }
 .group-requirements__group--header h3 > span[style*="00abff"]::before { content: "Kappa"; font-size: 18px !important; color: #00abff; }
 
-a.user-tag__link[style*="color"] i.fas, a.user-tag__link[style*="color"] i.far, a.user-tag__link[style*="color"] i.fab { color: inherit !important; background-color: transparent !important; border-color: transparent !important; }
+a.user-tag__link[style*="color"] i[class*="fa-"] { color: inherit !important; background-color: transparent !important; border-color: transparent !important; }
+
 select.form__select option { background-color: var(--k-bg3) !important; color: var(--k-text) !important; }
 select.form__select option:checked { background-color: var(--k-bg4) !important; color: var(--k-pink) !important; }
 
