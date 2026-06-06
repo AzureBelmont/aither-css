@@ -313,6 +313,8 @@ input[type="checkbox"], input[type="radio"] { accent-color: var(--at-gold) !impo
 .playlists__playlist-image--none { background-color: var(--at-bg3) !important; }
 .easy-upload3r__panel-beta { background-color: var(--at-bg2) !important; }
 .torrent-search--grouped__dropdown { background-color: var(--at-bg2) !important; }
+.torrent-search--grouped__dropdown table { border-color: var(--at-border) !important; }
+.torrent-search--grouped__dropdown tbody { background-color: transparent !important; }
 .torrent-search--grouped__header { background-color: var(--at-bg3) !important; }
 
 .page__event--index .top-nav__dropdown > a { color: var(--at-text) !important; transition: color .15s, background .15s !important; }
