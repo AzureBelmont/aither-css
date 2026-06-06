@@ -41,6 +41,7 @@
   --paginate-bg:                   #111928;
   --paginate-bg-hover:             #1c2540;
   --paginate-fg:                   #7a80a0;
+  --data-table-tr-hover-bg:        rgba(245,166,35,0.025);
 }
 
 body { background-color: var(--at-bg) !important; color: var(--at-text) !important; }
@@ -701,8 +702,8 @@ li.top-nav__dropdown ul li a.top-nav__username:hover {
   background-color: var(--at-bg3) !important;
 }
 
-dialog tr:hover td {
-  background-color: var(--at-bg3) !important;
+dialog.dialog--auto-width tr:hover td {
+  background-color: #222e48 !important;
 }
 
 .group-requirements__group--requirement-row,
