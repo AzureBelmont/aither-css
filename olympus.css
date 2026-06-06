@@ -453,7 +453,7 @@ li.pagination__current, .pagination__current {
 li.pagination__previous--disabled, li.pagination__next--disabled {
   background-color: var(--at-bg2) !important;
   color: var(--at-text3) !important;
-  opacity: 0.5 !important;
+  opacity: 0.7 !important;
 }
 
 .secondary-nav { background-color: var(--at-bg2) !important; border-bottom: 1px solid var(--at-goldfaint) !important; }
