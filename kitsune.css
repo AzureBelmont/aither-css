@@ -3,7 +3,7 @@
    A Japanese fox-spirit theme for Aither (UNIT3D)
    Author : AzureBelmont
    Repo   : github.com/AzureBelmont/aither-css
-   Ver    : 1.3
+   Ver    : 1.2.1
    Palette
    ────────────────────────────────────────────
    Sakura Pink  #F4AACA   primary accent
@@ -51,8 +51,8 @@
   --label-fg-active:              #888888;
 }
 
-a.user-tag__link[style*="color"] i[class*="fa-"],
 li.top-nav__dropdown ul li a.top-nav__username i[class*="fa-"] { color: inherit !important; background-color: transparent !important; border-color: transparent !important; }
+a.user-tag__link i.fa-heart { color: var(--k-pink) !important; background-color: transparent !important; border-color: transparent !important; }
 
 .alert__statuspage-status { background-color: var(--k-bg3) !important; border-bottom: 1px solid var(--k-pink-border) !important; color: var(--k-text) !important; }
 .alert__statuspage-status a { color: var(--k-pink) !important; }
