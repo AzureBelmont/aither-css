@@ -109,7 +109,8 @@ html:has(main[class*="forum"])    .top-nav--left__list-item:has(a[href*="/forums
 html:has(main[class*="article"])  .top-nav--left__list-item:has(a[href*="/forums"]) > a,
 html:has(main[class*="poll"])     .top-nav--left__list-item:has(a[href*="/forums"]) > a,
 html:has(main[class*="playlist"]) .top-nav--left__list-item:has(a[href*="/forums"]) > a,
-html:has(main[class*="event"])    .top-nav--left__list-item:has(a[href*="/forums"]) > a,
+html:has(main[class*="event"])      .top-nav--left__list-item:has(a[href*="/forums"]) > a,
+html:has(main[class*="collectible"]).top-nav--left__list-item:has(a[href*="/forums"]) > a,
 html:has(main[class*="wiki"])     .top-nav--left__list-item:has(a[href*="/wiki"]) > a,
 html:has(main[class*="ticket"])   .top-nav--left__list-item:has(a[href*="/ticket"]) > a {
   color: var(--k-pink) !important;
@@ -300,8 +301,8 @@ a.form__button--text[href*="/dashboard/reports"]:hover, a.form__button--text[hre
 a[href*="/dashboard/reports"] svg circle, a[href*="/contributors"] svg circle { stroke: var(--k-pink) !important; fill: var(--k-pink) !important; }
 .page__contributor--index a svg circle { stroke: var(--k-pink) !important; }
 
-a.form__button[href*="/torrents/download/"] { background-color: #2563eb !important; color: #fff !important; border: 1px solid #2563eb !important; }
-a.form__button[href*="/torrents/download/"]:hover { background-color: var(--k-pink-faint) !important; border-color: var(--k-pink) !important; color: var(--k-pink) !important; }
+a.form__button[href*="/torrents/download/"] { background-color: var(--k-pink) !important; color: #000 !important; border: 1px solid var(--k-pink) !important; font-weight: 600 !important; border-radius: 9999px !important; }
+a.form__button[href*="/torrents/download/"]:hover { background-color: var(--k-pink-soft) !important; border-color: var(--k-pink-soft) !important; color: #000 !important; }
 
 fieldset, .form__fieldset { border-color: var(--k-border-mid) !important; }
 fieldset.form, .form.form__fieldset { background-color: var(--k-bg3) !important; border-color: var(--k-border-mid) !important; }
@@ -420,6 +421,7 @@ input[type="file"]::file-selector-button { background-color: var(--k-bg3) !impor
 input[type="file"]::file-selector-button:hover { background-color: var(--k-pink-faint) !important; border-color: var(--k-pink) !important; }
 
 .top-nav__dropdown a.top-nav__username, li a.top-nav__username, li.top-nav__dropdown ul li a.top-nav__username, li.top-nav__dropdown ul li a.top-nav__username:hover { background-color: transparent !important; }
+li.top-nav__dropdown ul li:hover a.top-nav__username i.fas, li.top-nav__dropdown ul li a.top-nav__username:hover i.fas { background-color: var(--k-bg3) !important; border-color: transparent !important; color: var(--k-text2) !important; }
 
 @keyframes k-dot-pulse {
   0%, 100% { color: var(--k-pink); filter: drop-shadow(0 0 2px rgba(244,170,202,0.4)); }
@@ -462,3 +464,13 @@ table td i.fas.fa-circle.fa-xs { color: var(--k-pink) !important; animation: k-d
 .group-requirements__group--header h3 > span[style*="ff9100"]::before { content: "Tanuki-shi"; font-size: 18px !important; color: #ff9100; }
 .group-requirements__group--header h3 > span[style*="ffb24d"]::before { content: "Oyakata"; font-size: 18px !important; color: #ffb24d; }
 .group-requirements__group--header h3 > span[style*="00abff"]::before { content: "Kappa"; font-size: 18px !important; color: #00abff; }
+
+select.form__select option { background-color: var(--k-bg3) !important; color: var(--k-text) !important; }
+select.form__select option:checked { background-color: var(--k-bg4) !important; color: var(--k-pink) !important; }
+
+.page__event--index article, .page__event--index .event-card, .page__event--index [class*="event"] > a, .page__event--index .panel__body > div > a { background-color: var(--k-bg3) !important; border: 0.5px solid var(--k-border) !important; border-radius: var(--k-radius) !important; transition: border-color .2s !important; }
+.page__event--index article:hover, .page__event--index .event-card:hover, .page__event--index [class*="event"] > a:hover, .page__event--index .panel__body > div > a:hover { border-color: var(--k-pink-border) !important; background-color: var(--k-bg4) !important; }
+
+[class*="compact-search"] input.form__text:focus, [class*="torrent-search"] input:focus { border-color: var(--k-pink) !important; box-shadow: 0 0 0 3px rgba(244,170,202,0.10) !important; }
+
+li.top-nav__dropdown ul li a i.fas.fa-heartbeat, li.top-nav__dropdown ul li i.fas.fa-heartbeat { color: var(--k-pink) !important; text-shadow: 0 0 10px rgba(244,170,202,0.8) !important; animation: k-heart-pulse 1.5s ease-in-out infinite !important; filter: none !important; background-color: transparent !important; border: none !important; }
