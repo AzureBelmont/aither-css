@@ -44,8 +44,8 @@
   --data-table-tr-hover-bg:        rgba(245,166,35,0.025);
 }
 
-a.user-tag__link[style*="color"] i[class*="fa-"],
 li.top-nav__dropdown ul li a.top-nav__username i[class*="fa-"] { color: inherit !important; background-color: transparent !important; border-color: transparent !important; }
+a.user-tag__link i.fa-heart { color: var(--at-gold) !important; background-color: transparent !important; border-color: transparent !important; }
 
 .alert__statuspage-status { background-color: var(--at-bg3) !important; border-bottom: 1px solid var(--at-goldfaint) !important; color: var(--at-text) !important; }
 .alert__statuspage-status a { color: var(--at-gold) !important; }
