@@ -121,7 +121,7 @@ html:has(main[class*="ticket"])   .top-nav--left__list-item:has(a[href*="/ticket
 div.alerts, .alerts { background-color: var(--k-bg3) !important; }
 
 .quick-search__input, input.quick-search__input { background-color: #0e0e0e !important; border: 1px solid var(--k-border-mid) !important; border-radius: var(--k-radius-sm) !important; color: var(--k-text) !important; font-size: 13px !important; }
-.quick-search__input:focus, input.quick-search__input:focus { background-color: #151515 !important; border: 1px solid var(--k-pink) !important; border-bottom: 1px solid rgba(255,255,255,0.03) !important; box-shadow: none !important; outline: none !important; }
+input.quick-search__input:focus { background-color: #151515 !important; border: 1px solid var(--k-pink) !important; border-bottom: 1px solid rgba(255,255,255,0.03) !important; box-shadow: none !important; outline: none !important; }
 .quick-search__input::placeholder { color: var(--k-text3) !important; opacity: 1 !important; }
 article.quick-search__result:nth-child(odd) { background-color: #030303 !important; }
 article.quick-search__result:nth-child(even) { background-color: #060606 !important; }
