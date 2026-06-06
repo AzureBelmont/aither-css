@@ -139,9 +139,7 @@ li.top-nav__dropdown ul li a:hover { background-color: var(--k-pink-faint) !impo
 li.top-nav__dropdown ul li i.fas,
 li.top-nav__dropdown ul li i.far,
 li.top-nav__dropdown ul li i.fab { background-color: var(--k-bg4) !important; border: 1px solid var(--k-border) !important; color: var(--k-text2) !important; }
-.top-nav--left__list-item ul li:hover i.fas,
 .top-nav--left__list-item ul li a:hover i.fas,
-li.top-nav__dropdown ul li:hover i.fas,
 li.top-nav__dropdown ul li a:hover i.fas { background-color: var(--k-pink-faint) !important; border-color: var(--k-pink-border) !important; color: var(--k-pink) !important; }
 
 .top-nav--right__icon-link i.fas,
@@ -188,7 +186,7 @@ p.form__group { background-color: transparent !important; }
 html body .panelV2 { overflow: hidden !important; }
 html body .panelV2 > :last-child { border-radius: 0 0 var(--k-radius) var(--k-radius) !important; }
 
-.panel__heading, .panel__heading a, .panel__heading a:visited { background-color: var(--k-bg3) !important; border-bottom: 1px solid var(--k-pink-border) !important; color: var(--k-pink) !important; font-weight: 600 !important; letter-spacing: .05em !important; border-radius: var(--k-radius) var(--k-radius) 0 0 !important; padding-left: 14px !important; }
+.panel__heading, .panel__heading a, .panel__heading a:visited { background-color: var(--k-bg3) !important; border-bottom: none !important; color: var(--k-pink) !important; font-weight: 600 !important; letter-spacing: .05em !important; border-radius: var(--k-radius) var(--k-radius) 0 0 !important; padding-left: 14px !important; }
 .panel__heading::before { content: '' !important; display: inline-block !important; width: 3px !important; height: 1em !important; background: var(--k-pink) !important; border-radius: 2px !important; margin-right: 10px !important; vertical-align: middle !important; opacity: 0.65 !important; }
 .panel__heading a:hover { opacity: 0.75 !important; }
 .panel__body, div.panel__body { background-color: var(--k-bg2) !important; }
@@ -471,6 +469,6 @@ select.form__select option:checked { background-color: var(--k-bg4) !important; 
 .page__event--index article, .page__event--index .event-card, .page__event--index [class*="event"] > a, .page__event--index .panel__body > div > a { background-color: var(--k-bg3) !important; border: 0.5px solid var(--k-border) !important; border-radius: var(--k-radius) !important; transition: border-color .2s !important; }
 .page__event--index article:hover, .page__event--index .event-card:hover, .page__event--index [class*="event"] > a:hover, .page__event--index .panel__body > div > a:hover { border-color: var(--k-pink-border) !important; background-color: var(--k-bg4) !important; }
 
-[class*="compact-search"] input.form__text:focus, [class*="torrent-search"] input:focus { border-color: var(--k-pink) !important; box-shadow: 0 0 0 3px rgba(244,170,202,0.10) !important; }
+[class*="compact-search"] input.form__text:focus, [class*="torrent-search"] input:focus { border: 1px solid var(--k-pink) !important; box-shadow: 0 0 0 3px rgba(244,170,202,0.10) !important; outline: none !important; }
 
 li.top-nav__dropdown ul li a i.fas.fa-heartbeat, li.top-nav__dropdown ul li i.fas.fa-heartbeat { color: var(--k-pink) !important; text-shadow: 0 0 10px rgba(244,170,202,0.8) !important; animation: k-heart-pulse 1.5s ease-in-out infinite !important; filter: none !important; background-color: transparent !important; border: none !important; }
