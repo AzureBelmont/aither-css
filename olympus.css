@@ -109,7 +109,7 @@ li.top-nav__dropdown ul li a i.fas.fa-heartbeat, li.top-nav__dropdown ul li i.fa
 div.alerts, .alerts { background-color: var(--at-bg3) !important; }
 
 .quick-search__input, input.quick-search__input { background-color: var(--at-bg3) !important; border: 1px solid var(--at-border) !important; color: var(--at-text) !important; }
-input.quick-search__input:focus { background-color: #242d49 !important; border: 1px solid rgba(245,166,35,0.6) !important; border-bottom: 1px solid rgba(255,255,255,0.04) !important; box-shadow: none !important; outline: none !important; }
+input.quick-search__input:focus { background-color: #2a3555 !important; border: 1px solid rgba(245,166,35,0.6) !important; border-bottom: 1px solid rgba(255,255,255,0.04) !important; box-shadow: none !important; outline: none !important; }
 article.quick-search__result:nth-child(odd) { background-color: #070b15 !important; }
 article.quick-search__result:nth-child(even) { background-color: #0a0f1c !important; }
 article.quick-search__result { border-bottom: 1px solid rgba(255,255,255,0.04) !important; }
