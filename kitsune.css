@@ -468,8 +468,10 @@ table td i.fas.fa-circle.fa-xs { color: var(--k-pink) !important; animation: k-d
 .group-requirements__group--header h3 > span[style*="ffb24d"]::before { content: "Oyakata"; font-size: 18px !important; color: #ffb24d; }
 .group-requirements__group--header h3 > span[style*="00abff"]::before { content: "Kappa"; font-size: 18px !important; color: #00abff; }
 
+a.user-tag__link[style*="color"] i.fas, a.user-tag__link[style*="color"] i.far, a.user-tag__link[style*="color"] i.fab { color: inherit !important; background-color: transparent !important; border-color: transparent !important; }
 select.form__select option { background-color: var(--k-bg3) !important; color: var(--k-text) !important; }
 select.form__select option:checked { background-color: var(--k-bg4) !important; color: var(--k-pink) !important; }
+
 
 .page__event--index article, .page__event--index .event-card, .page__event--index [class*="event"] > a, .page__event--index .panel__body > div > a { background-color: var(--k-bg3) !important; border: 0.5px solid var(--k-border) !important; border-radius: var(--k-radius) !important; transition: border-color .2s !important; }
 .page__event--index article:hover, .page__event--index .event-card:hover, .page__event--index [class*="event"] > a:hover, .page__event--index .panel__body > div > a:hover { border-color: var(--k-pink-border) !important; background-color: var(--k-bg4) !important; }
