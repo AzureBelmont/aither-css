@@ -402,6 +402,7 @@ table.internal-claim__inner-table tr td, table.internal-claim__inner-table tr:nt
 tr.moderation__details-table--bottom td, tr.moderation__details-table--bottom:nth-child(even) td { background-color: transparent !important; }
 
 .dialog__heading { background-color: var(--k-bg3) !important; color: var(--k-pink) !important; border-bottom: 1px solid var(--k-pink-border) !important; font-weight: 600 !important; letter-spacing: .04em !important; }
+.dialog__form { background-color: var(--k-bg2) !important; }
 
 .group-requirements__group--requirement-row, .group-requirements__group--requirement-multirow { background-color: var(--k-bg3) !important; }
 .group-requirements__group-wrapper:hover { background-color: var(--k-pink-faint) !important; }
