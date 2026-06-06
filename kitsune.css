@@ -3,7 +3,7 @@
    A Japanese fox-spirit theme for Aither (UNIT3D)
    Author : AzureBelmont
    Repo   : github.com/AzureBelmont/aither-css
-   Ver    : 1.2.1
+   Ver    : 1.3
    Palette
    ────────────────────────────────────────────
    Sakura Pink  #F4AACA   primary accent
@@ -33,7 +33,7 @@
   --k-text3:  #404040;
   --k-radius:    10px;
   --k-radius-sm: 6px;
-  --quick-search-bg:              #111111;
+  --quick-search-bg:              #161616;
   --quick-search-result-hover-bg: #0c0c0c;
   --paginate-bg:                  #0c0c0c;
   --paginate-bg-hover:            #111111;
@@ -120,12 +120,12 @@ html:has(main[class*="ticket"])   .top-nav--left__list-item:has(a[href*="/ticket
 .alert i, .special-event-alert i { color: var(--k-pink) !important; }
 div.alerts, .alerts { background-color: var(--k-bg3) !important; }
 
-.quick-search__input, input.quick-search__input { background-color: var(--k-bg3) !important; border: 0.5px solid var(--k-border-mid) !important; border-radius: var(--k-radius-sm) !important; color: var(--k-text) !important; font-size: 13px !important; }
-.quick-search__input:focus, input.quick-search__input:focus { border-color: var(--k-pink) !important; box-shadow: 0 0 0 3px rgba(244,170,202,0.10) !important; outline: none !important; }
+.quick-search__input, input.quick-search__input { background-color: #0e0e0e !important; border: 1px solid var(--k-border-mid) !important; border-radius: var(--k-radius-sm) !important; color: var(--k-text) !important; font-size: 13px !important; }
+.quick-search__input:focus, input.quick-search__input:focus { background-color: #161616 !important; border-color: var(--k-pink) !important; border-bottom: none !important; outline: none !important; }
 .quick-search__input::placeholder { color: var(--k-text3) !important; opacity: 1 !important; }
 article.quick-search__result--default { background-color: var(--k-bg2) !important; }
 article.quick-search__result--default:hover { background-color: var(--k-bg3) !important; }
-.quick-search__results { background-color: var(--k-bg2) !important; border: 0.5px solid var(--k-pink) !important; border-top: none !important; border-radius: 0 0 var(--k-radius) var(--k-radius) !important; box-shadow: 0 8px 24px rgba(0,0,0,0.7) !important; overflow: hidden !important; }
+.quick-search__results { background-color: var(--k-bg2) !important; border: 1px solid var(--k-pink) !important; border-top: none !important; border-radius: 0 0 var(--k-radius) var(--k-radius) !important; }
 
 search.compact-search, .compact-search, .compact-search__visible-default, .torrent-search__filters, [class*="compact-search"] { background-color: var(--k-bg2) !important; border-color: var(--k-border) !important; }
 [class*="compact-search"] p.form__group, [class*="compact-search"] .form__group, [class*="torrent-search"] .form__group { background-color: transparent !important; }
