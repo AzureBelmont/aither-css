@@ -121,7 +121,7 @@ html:has(main[class*="ticket"])   .top-nav--left__list-item:has(a[href*="/ticket
 div.alerts, .alerts { background-color: var(--k-bg3) !important; }
 
 .quick-search__input, input.quick-search__input { background-color: var(--k-bg3) !important; border: 1px solid var(--k-border-mid) !important; border-radius: var(--k-radius-sm) !important; color: var(--k-text) !important; font-size: 13px !important; }
-input.quick-search__input:focus { background-color: #151515 !important; border: 1px solid var(--k-pink) !important; border-bottom: 1px solid rgba(255,255,255,0.03) !important; box-shadow: none !important; outline: none !important; }
+input.quick-search__input:focus { background-color: #1a1a1a !important; border: 1px solid var(--k-pink) !important; border-bottom: 1px solid rgba(255,255,255,0.03) !important; box-shadow: none !important; outline: none !important; }
 .quick-search__input::placeholder { color: var(--k-text3) !important; opacity: 1 !important; }
 article.quick-search__result:nth-child(odd) { background-color: #030303 !important; }
 article.quick-search__result:nth-child(even) { background-color: #060606 !important; }
@@ -370,6 +370,8 @@ a.nav-tab__link:hover, span.nav-tab__link:hover { color: var(--k-text) !importan
 
 .easy-upload3r__panel-beta { background-color: var(--k-bg2) !important; }
 .torrent-search--grouped__dropdown { background-color: var(--k-bg2) !important; }
+.torrent-search--grouped__dropdown table { border-color: var(--k-border) !important; }
+.torrent-search--grouped__dropdown tbody { background-color: transparent !important; }
 .torrent-search--grouped__header { background-color: var(--k-bg3) !important; }
 
 .page__event--index .top-nav__dropdown > a { color: var(--k-text) !important; }
