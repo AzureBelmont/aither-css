@@ -231,6 +231,9 @@ header.torrent-card__header { background-color: var(--at-bg3) !important; }
 article.user-stat-card, .user-stat-card { background-color: var(--at-bg2) !important; border: 0.5px solid var(--at-border) !important; border-radius: var(--at-radius) !important; }
 div.top-users__place { background-color: var(--at-bg3) !important; border-radius: var(--at-radius) !important; }
 
+article.topic-listing { grid-template-columns: 95px 1fr repeat(3, auto) !important; }
+.topic-listing__figure { width: 95px !important; min-width: 95px !important; }
+.topic-listing__forum { font-size: 11px !important; word-wrap: break-word !important; overflow-wrap: break-word !important; }
 .topic-listing { border-left: 3px solid transparent !important; padding-left: 12px !important; }
 .topic-listing__item--unread { border-left: 3px solid var(--at-gold) !important; padding-left: 12px !important; }
 .topic-listing__item--read { border-left: 3px solid transparent !important; padding-left: 12px !important; border-color: transparent !important; }
