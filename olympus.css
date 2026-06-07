@@ -1,9 +1,9 @@
 /* ==========================================================
-   Aither — Greek Theme
+   Aither — Greek Themeh
    Gold accents. Dark panels. Clean.
    Author : AzureBelmont
    Repo   : github.com/AzureBelmont/aither-css
-   Ver    : 2.1
+      Ver    : 2.2
    Palette
    ────────────────────────────────────────────
    Gold         #f5a623   primary accent
@@ -262,6 +262,11 @@ li.pagination__previous--disabled, li.pagination__next--disabled { background-co
 .secondary-nav { background-color: var(--at-bg2) !important; border-bottom: 1px solid var(--at-goldfaint) !important; }
 .secondary-nav a, .secondary-nav__item { color: var(--at-text2) !important; }
 .secondary-nav a:hover, .secondary-nav__item:hover { color: var(--at-text) !important; }
+ul.pagination__items { display: flex !important; align-items: center !important; background-color: var(--at-bg2) !important; list-style: none !important; margin: 0 !important; padding: 0 !important; }
+ul.pagination__pages { display: flex !important; align-items: center !important; background-color: transparent !important; list-style: none !important; margin: 0 !important; padding: 0 !important; }
+li.pagination__page-wrapper { background-color: transparent !important; }
+ul.pagination__pages li { background-color: var(--at-bg2) !important; border-color: var(--at-border) !important; }
+ul.pagination__pages li:hover { background-color: var(--at-bg3) !important; }
 .secondary-nav__item--active, .secondary-nav a.active { color: var(--at-gold) !important; border-bottom-color: var(--at-gold) !important; }
 
 fieldset, .form__fieldset { border-color: rgba(255,255,255,0.12) !important; }
