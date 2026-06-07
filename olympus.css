@@ -342,6 +342,10 @@ input[type="checkbox"], input[type="radio"] { accent-color: var(--at-gold) !impo
 
 .page__event--index .top-nav__dropdown > a { color: var(--at-text) !important; transition: color .15s, background .15s !important; }
 .page__event--index .top-nav__dropdown > a:hover { background-color: var(--at-goldfaint) !important; color: var(--at-gold) !important; }
+.page__event--index .panel__body { background-color: var(--at-bg2) !important; }
+.page__event--index .panel__body > div { background-color: var(--at-bg2) !important; }
+.page__event--index .panel__body a:not(.event-card):not([class*="event"]) { background-color: transparent !important; }
+.page__event--index .panel__body a:hover { background-color: transparent !important; }
 .panel__sub-heading { background-color: var(--at-bg3) !important; color: var(--at-gold) !important; }
 
 table.internal-claim__inner-table tr td, table.internal-claim__inner-table tr:nth-child(even) td { background-color: transparent !important; }
