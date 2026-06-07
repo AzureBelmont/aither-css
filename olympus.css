@@ -3,7 +3,7 @@
    Gold accents. Dark panels. Clean.
    Author : AzureBelmont
    Repo   : github.com/AzureBelmont/aither-css
-   Ver    : 2.0
+   Ver    : 2.1
    Palette
    ────────────────────────────────────────────
    Gold         #f5a623   primary accent
@@ -157,8 +157,8 @@ html body .panel__tab:hover { color: var(--at-text2) !important; }
 html body .panel__tab--active { color: var(--at-text) !important; border-bottom-color: var(--at-gold) !important; }
 html body .panel__header .panel__heading, html body .panel__header .panel__heading--centered { background-color: transparent !important; border: none !important; box-shadow: none !important; }
 
-article.chatbox-message { background-color: transparent !important; border-radius: 0 !important; padding: 5px 8px 5px 0 !important; margin: 0 !important; gap: 0px 8px !important; grid-template-columns: 40px auto 1fr auto !important; align-items: start !important; }
-article.chatbox-message::before { display: none !important; }
+article.chatbox-message { background-color: #0d111b !important; border-radius: 0 !important; border-bottom: 1px dashed #393939; padding: 5px 8px 5px 0 !important; margin: 0 !important; gap: 0px 8px !important; grid-template-columns: 40px auto 1fr auto !important; align-items: start !important; }
+.panelV2.chatbox { background-color: #0d111b !important}article.chatbox-message::before { display: none !important; }
 article.chatbox-message:hover { background-color: rgba(245,166,35,0.02) !important; }
 .chatbox-message__aside { position: static !important; left: auto !important; padding: 0 !important; width: 40px !important; min-width: 40px !important; grid-row: 1 / -1 !important; align-self: start !important; line-height: 0 !important; font-size: 0 !important; }
 .chatbox-message__aside figure { line-height: 0 !important; font-size: 0 !important; margin: 0 !important; padding: 0 !important; }
