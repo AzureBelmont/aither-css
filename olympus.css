@@ -118,7 +118,7 @@ article.quick-search__result:hover { background-color: rgba(245,166,35,0.06) !im
 .quick-search__results { background-color: #060a12 !important; border: 1px solid rgba(245,166,35,0.6) !important; border-top: none !important; border-radius: 0 0 var(--at-radius) var(--at-radius) !important; overflow-y: auto !important; overflow-x: hidden !important; }
 
 .panelV2 { background-color: var(--at-bg2) !important; border: 0.5px solid var(--at-border) !important; border-radius: var(--at-radius) !important; box-shadow: 0 4px 24px rgba(0,0,0,0.5) !important; }
-.panel__heading { background-color: var(--at-bg3) !important; border-bottom: 1px solid var(--at-goldfaint) !important; color: var(--at-gold) !important; font-weight: 600 !important; letter-spacing: .04em !important; border-radius: var(--at-radius) var(--at-radius) 0 0 !important; padding-left: 12px !important; }
+.panel__heading { background-color: var(--at-bg3) !important; border-bottom: 1px solid var(--at-goldfaint) !important; color: var(--at-gold) !important; font-weight: 600 !important; letter-spacing: .04em !important; border-radius: var(--at-radius) var(--at-radius) 0 0 !important; padding-left: 16px !important; }
 .panel__heading a, .panel__heading a:visited { color: var(--at-gold) !important; font-weight: 600 !important; }
 .panel__heading a:hover { color: var(--at-gold2) !important; }
 .panel--grid-item { background-color: var(--at-bg2) !important; border: 0.5px solid rgba(245,166,35,0.22) !important; border-radius: var(--at-radius) !important; }
