@@ -183,8 +183,8 @@ h1.text-gold, h2.text-gold, h3.text-gold, h4.text-gold, .text-gold { color: var(
 .data-table td { border-bottom: 0.5px solid var(--at-border) !important; }
 td { background-color: var(--at-bg2) !important; }
 tr:nth-child(even) td { background-color: var(--at-bg3) !important; }
-table.similar-torrents__torrents tbody:nth-of-type(odd) td { background-color: var(--at-bg2) !important; }
-table.similar-torrents__torrents tbody:nth-of-type(even) td { background-color: var(--at-bg3) !important; }
+table.similar-torrents__torrents tbody:nth-of-type(odd) td, table.similar-torrents__torrents tbody:nth-of-type(odd) th { background-color: var(--at-bg2) !important; }
+table.similar-torrents__torrents tbody:nth-of-type(even) td, table.similar-torrents__torrents tbody:nth-of-type(even) th { background-color: var(--at-bg3) !important; }
 table.similar-torrents__torrents { border: none !important; }
 table.similar-torrents__torrents tbody + tbody { border-top: 2px solid var(--at-goldfaint) !important; }
 table.similar-torrents__torrents tbody th { border-bottom: none !important; }
