@@ -3,7 +3,7 @@
    A Japanese fox-spirit theme for Aither (UNIT3D)
    Author : AzureBelmont
    Repo   : github.com/AzureBelmont/aither-css
-   Ver    : 2.1
+   Ver    : 2.2
    Palette
    ────────────────────────────────────────────
    Sakura Pink  #F4AACA   primary accent
@@ -145,14 +145,14 @@ html body .panelV2 > :last-child { border-radius: 0 0 var(--k-radius) var(--k-ra
 
 .panel__heading a.user-tag__link[style*="color:#95A5A6"],.panel__heading a.user-tag__link[style*="color: #95A5A6"] { color: #95A5A6 !important; }
 .panel__heading a.user-tag__link[style*="color:#5E372F"],.panel__heading a.user-tag__link[style*="color: #5E372F"] { color: #5E372F !important; }
-.panel__heading a.user-tag__link[style*="color:#b8c8ff"],.panel__heading a.user-tag__link[style*="color: #b8c8ff"] { color: #b8c8ff !important; }
-.panel__heading a.user-tag__link[style*="color:#a5b8ff"],.panel__heading a.user-tag__link[style*="color: #a5b8ff"] { color: #a5b8ff !important; }
-.panel__heading a.user-tag__link[style*="color:#7f8eff"],.panel__heading a.user-tag__link[style*="color: #7f8eff"] { color: #7f8eff !important; }
-.panel__heading a.user-tag__link[style*="color:#508bf2"],.panel__heading a.user-tag__link[style*="color: #508bf2"] { color: #508bf2 !important; }
-.panel__heading a.user-tag__link[style*="color:#6c7eff"],.panel__heading a.user-tag__link[style*="color: #6c7eff"] { color: #6c7eff !important; }
-.panel__heading a.user-tag__link[style*="color:#596eff"],.panel__heading a.user-tag__link[style*="color: #596eff"] { color: #596eff !important; }
-.panel__heading a.user-tag__link[style*="color:#466eff"],.panel__heading a.user-tag__link[style*="color: #466eff"] { color: #466eff !important; }
-.panel__heading a.user-tag__link[style*="color:#214e96"],.panel__heading a.user-tag__link[style*="color: #214e96"] { color: #214e96 !important; }
+.panel__heading a.user-tag__link[style*="color:#b8c8ff"],.panel__heading a.user-tag__link[style*="color: #b8c8ff"] { color: #FFF2F5 !important; }
+.panel__heading a.user-tag__link[style*="color:#a5b8ff"],.panel__heading a.user-tag__link[style*="color: #a5b8ff"] { color: #FCE2E7 !important; }
+.panel__heading a.user-tag__link[style*="color:#7f8eff"],.panel__heading a.user-tag__link[style*="color: #7f8eff"] { color: #F9D3DB !important; }
+.panel__heading a.user-tag__link[style*="color:#508bf2"],.panel__heading a.user-tag__link[style*="color: #508bf2"] { color: #F6C4CE !important; }
+.panel__heading a.user-tag__link[style*="color:#6c7eff"],.panel__heading a.user-tag__link[style*="color: #6c7eff"] { color: #F4AACA !important; }
+.panel__heading a.user-tag__link[style*="color:#596eff"],.panel__heading a.user-tag__link[style*="color: #596eff"] { color: #E88FAF !important; }
+.panel__heading a.user-tag__link[style*="color:#466eff"],.panel__heading a.user-tag__link[style*="color: #466eff"] { color: #DC7394 !important; }
+.panel__heading a.user-tag__link[style*="color:#214e96"],.panel__heading a.user-tag__link[style*="color: #214e96"] { color: #C94D73 !important; }
 .panel__heading a.user-tag__link[style*="color:#6cdb9b"],.panel__heading a.user-tag__link[style*="color: #6cdb9b"] { color: #6cdb9b !important; }
 .panel__heading a.user-tag__link[style*="color:#2ECC71"],.panel__heading a.user-tag__link[style*="color: #2ECC71"],.panel__heading a.user-tag__link[style*="color:#2ecc71"],.panel__heading a.user-tag__link[style*="color: #2ecc71"] { color: #2ECC71 !important; }
 .panel__heading a.user-tag__link[style*="color:#7FFF00"],.panel__heading a.user-tag__link[style*="color: #7FFF00"] { color: #7FFF00 !important; }
@@ -161,7 +161,7 @@ html body .panelV2 > :last-child { border-radius: 0 0 var(--k-radius) var(--k-ra
 .panel__heading a.user-tag__link[style*="color:#BAAF92"],.panel__heading a.user-tag__link[style*="color: #BAAF92"] { color: #BAAF92 !important; }
 .panel__heading a.user-tag__link[style*="color:#20726c"],.panel__heading a.user-tag__link[style*="color: #20726c"] { color: #20726c !important; }
 .panel__heading a.user-tag__link[style*="color:#15B097"],.panel__heading a.user-tag__link[style*="color: #15B097"] { color: #15B097 !important; }
-.panel__heading a.user-tag__link[style*="color:#f92672"],.panel__heading a.user-tag__link[style*="color: #f92672"] { color: #f92672 !important; }
+.panel__heading a.user-tag__link[style*="color:#f92672"],.panel__heading a.user-tag__link[style*="color: #f92672"] { color: #FF6B81 !important; }
 .panel__heading a.user-tag__link[style*="color:#ff9100"],.panel__heading a.user-tag__link[style*="color: #ff9100"] { color: #ff9100 !important; }
 .panel__heading a.user-tag__link[style*="color:#ffb24d"],.panel__heading a.user-tag__link[style*="color: #ffb24d"] { color: #ffb24d !important; }
 .panel__heading a.user-tag__link[style*="color:#00abff"],.panel__heading a.user-tag__link[style*="color: #00abff"] { color: #00abff !important; }
@@ -264,6 +264,11 @@ a.pagination__link, a.pagination__next, a.pagination__previous { color: var(--k-
 .pagination__link:hover, a.pagination__link:hover, li.pagination__next:hover, li.pagination__previous:hover, a.pagination__next:hover, a.pagination__previous:hover { background-color: var(--k-bg3) !important; color: var(--k-pink) !important; }
 li.pagination__current, .pagination__current { background-color: var(--k-bg3) !important; color: var(--k-pink) !important; border-color: var(--k-pink-border) !important; font-weight: 600 !important; }
 li.pagination__previous--disabled, li.pagination__next--disabled { background-color: var(--k-bg2) !important; color: var(--k-text3) !important; opacity: 0.5 !important; }
+ul.pagination__items { display: flex !important; align-items: center !important; background-color: var(--k-bg2) !important; list-style: none !important; margin: 0 !important; padding: 0 !important; }
+ul.pagination__pages { display: flex !important; align-items: center !important; background-color: transparent !important; list-style: none !important; margin: 0 !important; padding: 0 !important; }
+li.pagination__page-wrapper { background-color: transparent !important; }
+ul.pagination__pages li { background-color: var(--k-bg2) !important; border-color: var(--k-border) !important; }
+ul.pagination__pages li:hover { background-color: var(--k-bg3) !important; }
 .form__button--text { background: transparent !important; border: none !important; color: var(--k-pink) !important; font-size: inherit !important; }
 .form__button--text:hover { color: var(--k-pink-soft) !important; }
 .form__button--filled, .form__button--filled.btn { background: var(--k-pink) !important; color: #000 !important; border-radius: 9999px !important; border: none !important; font-weight: 600 !important; }
@@ -442,14 +447,14 @@ table td i.fas.fa-circle.fa-xs { color: var(--k-pink) !important; animation: k-d
 .group-requirements__group--header h3 > span[style*="color"] { font-size: 0 !important; }
 .group-requirements__group--header h3 > span[style*="95A5A6"], .group-requirements__group--header h3 > span[style*="95a5a6"], .group-requirements__group--header h3 > span[style*="color: red"], .group-requirements__group--header h3 > span[style*="color:red"] { font-size: inherit !important; }
 .group-requirements__group--header h3 > span[style*="5E372F"]::before, .group-requirements__group--header h3 > span[style*="5e372f"]::before { content: "Norowareshi"; font-size: 18px !important; color: #5E372F; }
-.group-requirements__group--header h3 > span[style*="b8c8ff"]::before, .group-requirements__group--header h3 > span[style*="B8C8FF"]::before { content: "Hitodama"; font-size: 18px !important; color: #b8c8ff; }
-.group-requirements__group--header h3 > span[style*="a5b8ff"]::before, .group-requirements__group--header h3 > span[style*="A5B8FF"]::before { content: "Tanuki"; font-size: 18px !important; color: #a5b8ff; }
-.group-requirements__group--header h3 > span[style*="7f8eff"]::before, .group-requirements__group--header h3 > span[style*="7F8EFF"]::before { content: "Tengu"; font-size: 18px !important; color: #7f8eff; }
-.group-requirements__group--header h3 > span[style*="508bf2"]::before, .group-requirements__group--header h3 > span[style*="508BF2"]::before { content: "Inugami"; font-size: 18px !important; color: #508bf2; }
-.group-requirements__group--header h3 > span[style*="6c7eff"]::before, .group-requirements__group--header h3 > span[style*="6C7EFF"]::before { content: "Inari"; font-size: 18px !important; color: #6c7eff; }
-.group-requirements__group--header h3 > span[style*="596eff"]::before, .group-requirements__group--header h3 > span[style*="596EFF"]::before { content: "Ryujin"; font-size: 18px !important; color: #596eff; }
-.group-requirements__group--header h3 > span[style*="466eff"]::before, .group-requirements__group--header h3 > span[style*="466EFF"]::before { content: "Oni"; font-size: 18px !important; color: #466eff; }
-.group-requirements__group--header h3 > span[style*="214e96"]::before, .group-requirements__group--header h3 > span[style*="214E96"]::before { content: "Okami"; font-size: 18px !important; color: #214e96; }
+.group-requirements__group--header h3 > span[style*="b8c8ff"]::before, .group-requirements__group--header h3 > span[style*="B8C8FF"]::before { content: "Hitodama"; font-size: 18px !important; color: #FFF2F5; }
+.group-requirements__group--header h3 > span[style*="a5b8ff"]::before, .group-requirements__group--header h3 > span[style*="A5B8FF"]::before { content: "Tanuki"; font-size: 18px !important; color: #FCE2E7; }
+.group-requirements__group--header h3 > span[style*="7f8eff"]::before, .group-requirements__group--header h3 > span[style*="7F8EFF"]::before { content: "Tengu"; font-size: 18px !important; color: #F9D3DB; }
+.group-requirements__group--header h3 > span[style*="508bf2"]::before, .group-requirements__group--header h3 > span[style*="508BF2"]::before { content: "Inugami"; font-size: 18px !important; color: #F6C4CE; }
+.group-requirements__group--header h3 > span[style*="6c7eff"]::before, .group-requirements__group--header h3 > span[style*="6C7EFF"]::before { content: "Inari"; font-size: 18px !important; color: #F4AACA; }
+.group-requirements__group--header h3 > span[style*="596eff"]::before, .group-requirements__group--header h3 > span[style*="596EFF"]::before { content: "Ryujin"; font-size: 18px !important; color: #E88FAF; }
+.group-requirements__group--header h3 > span[style*="466eff"]::before, .group-requirements__group--header h3 > span[style*="466EFF"]::before { content: "Oni"; font-size: 18px !important; color: #DC7394; }
+.group-requirements__group--header h3 > span[style*="214e96"]::before, .group-requirements__group--header h3 > span[style*="214E96"]::before { content: "Okami"; font-size: 18px !important; color: #C94D73; }
 .group-requirements__group--header h3 > span[style*="6cdb9b"]::before, .group-requirements__group--header h3 > span[style*="6CDB9B"]::before { content: "Yoko"; font-size: 18px !important; color: #6cdb9b; }
 .group-requirements__group--header h3 > span[style*="2ECC71"]::before, .group-requirements__group--header h3 > span[style*="2ecc71"]::before { content: "Nibi"; font-size: 18px !important; color: #2ECC71; }
 .group-requirements__group--header h3 > span[style*="7FFF00"]::before, .group-requirements__group--header h3 > span[style*="7fff00"]::before { content: "Sanbi"; font-size: 18px !important; color: #7FFF00; }
@@ -460,7 +465,7 @@ table td i.fas.fa-circle.fa-xs { color: var(--k-pink) !important; animation: k-d
 .group-requirements__group--header h3:has(i.fa-edit) > span[style*="20726c"]::before { content: "Fudeshi"; font-size: 18px !important; color: #20726c; }
 .group-requirements__group--header h3 > span[style*="15B097"]::before, .group-requirements__group--header h3 > span[style*="15b097"]::before { content: "Shogun"; font-size: 18px !important; color: #15B097; }
 .group-requirements__group--header h3 > span[style*="4ECDC4"]::before, .group-requirements__group--header h3 > span[style*="4ecdc4"]::before { content: "Daimyo"; font-size: 18px !important; color: #4ECDC4; }
-.group-requirements__group--header h3 > span[style*="f92672"]::before { content: "Daimyo-no-Koe"; font-size: 18px !important; color: #f92672; }
+.group-requirements__group--header h3 > span[style*="f92672"]::before { content: "Daimyo-no-Koe"; font-size: 18px !important; color: #FF6B81; }
 .group-requirements__group--header h3 > span[style*="ff9100"]::before { content: "Tanuki-shi"; font-size: 18px !important; color: #ff9100; }
 .group-requirements__group--header h3 > span[style*="ffb24d"]::before { content: "Oyakata"; font-size: 18px !important; color: #ffb24d; }
 .group-requirements__group--header h3 > span[style*="00abff"]::before { content: "Kappa"; font-size: 18px !important; color: #00abff; }
@@ -474,3 +479,53 @@ select.form__select option:checked { background-color: var(--k-bg4) !important; 
 [class*="compact-search"] input.form__text:focus, [class*="torrent-search"] input:focus { border: 1px solid var(--k-pink) !important; box-shadow: 0 0 0 3px rgba(244,170,202,0.10) !important; outline: none !important; }
 
 li.top-nav__dropdown ul li a i.fas.fa-heartbeat, li.top-nav__dropdown ul li i.fas.fa-heartbeat { color: var(--k-pink) !important; text-shadow: 0 0 10px rgba(244,170,202,0.8) !important; animation: k-heart-pulse 1.5s ease-in-out infinite !important; filter: none !important; background-color: transparent !important; border: none !important; }
+
+[style*="color:#95A5A6"],[style*="color: #95A5A6"] { color: #95A5A6 !important; }
+[style*="color:#5E372F"],[style*="color: #5E372F"] { color: #5E372F !important; }
+[style*="color:#b8c8ff"],[style*="color: #b8c8ff"] { color: #FFF2F5 !important; }
+[style*="color:#a5b8ff"],[style*="color: #a5b8ff"] { color: #FCE2E7 !important; }
+[style*="color:#7f8eff"],[style*="color: #7f8eff"] { color: #F9D3DB !important; }
+[style*="color:#508bf2"],[style*="color: #508bf2"] { color: #F6C4CE !important; }
+[style*="color:#6c7eff"],[style*="color: #6c7eff"] { color: #F4AACA !important; }
+[style*="color:#596eff"],[style*="color: #596eff"] { color: #E88FAF !important; }
+[style*="color:#466eff"],[style*="color: #466eff"] { color: #DC7394 !important; }
+[style*="color:#214e96"],[style*="color: #214e96"] { color: #C94D73 !important; }
+[style*="color:#6cdb9b"],[style*="color: #6cdb9b"] { color: #6cdb9b !important; }
+[style*="color:#2ECC71"],[style*="color: #2ECC71"],[style*="color:#2ecc71"],[style*="color: #2ecc71"] { color: #2ECC71 !important; }
+[style*="color:#7FFF00"],[style*="color: #7FFF00"],[style*="color:#7fff00"],[style*="color: #7fff00"] { color: #7FFF00 !important; }
+[style*="color:#912cdb"],[style*="color: #912cdb"] { color: #912cdb !important; }
+[style*="color:#BF55EC"],[style*="color: #BF55EC"],[style*="color:#bf55ec"],[style*="color: #bf55ec"] { color: #BF55EC !important; }
+[style*="color:#BAAF92"],[style*="color: #BAAF92"],[style*="color:#baaf92"],[style*="color: #baaf92"] { color: #BAAF92 !important; }
+[style*="color:#20726c"],[style*="color: #20726c"] { color: #20726c !important; }
+[style*="color:#15B097"],[style*="color: #15B097"],[style*="color:#15b097"],[style*="color: #15b097"] { color: #15B097 !important; }
+[style*="color:#4ECC4D"],[style*="color: #4ECC4D"],[style*="color:#4ecc4d"],[style*="color: #4ecc4d"] { color: #4ECC4D !important; }
+[style*="color:#f5a623"],[style*="color: #f5a623"] { color: #f5a623 !important; }
+[style*="color:#f92672"],[style*="color: #f92672"] { color: #FF6B81 !important; }
+[style*="color:#ff9100"],[style*="color: #ff9100"] { color: #ff9100 !important; }
+[style*="color:#ffb24d"],[style*="color: #ffb24d"] { color: #ffb24d !important; }
+[style*="color:#00abff"],[style*="color: #00abff"] { color: #00abff !important; }
+[style*="color:#4ECDC4"],[style*="color: #4ECDC4"],[style*="color:#4ecdc4"],[style*="color: #4ecdc4"] { color: #4ECDC4 !important; }
+a[style*="color:#f5a623"],a[style*="color: #f5a623"] { color: #f5a623 !important; }
+a[style*="color:#b8c8ff"],a[style*="color: #b8c8ff"],a[style*="color:#b8cbff"],a[style*="color: #b8cbff"] { color: #FFF2F5 !important; }
+a[style*="color:#a5b8ff"],a[style*="color: #a5b8ff"],a[style*="color:#a5bbff"],a[style*="color: #a5bbff"] { color: #FCE2E7 !important; }
+a[style*="color:#7f8eff"],a[style*="color: #7f8eff"] { color: #F9D3DB !important; }
+a[style*="color:#508bf2"],a[style*="color: #508bf2"] { color: #F6C4CE !important; }
+a[style*="color:#6c7eff"],a[style*="color: #6c7eff"] { color: #F4AACA !important; }
+a[style*="color:#596eff"],a[style*="color: #596eff"] { color: #E88FAF !important; }
+a[style*="color:#466eff"],a[style*="color: #466eff"] { color: #DC7394 !important; }
+a[style*="color:#214e96"],a[style*="color: #214e96"] { color: #C94D73 !important; }
+a[style*="color:#f92672"],a[style*="color: #f92672"] { color: #FF6B81 !important; }
+a[style*="color:#2ECC71"],a[style*="color: #2ECC71"],a[style*="color:#2ecc71"],a[style*="color: #2ecc71"] { color: #2ECC71 !important; }
+a[style*="color:#BF55EC"],a[style*="color: #BF55EC"],a[style*="color:#bf55ec"],a[style*="color: #bf55ec"] { color: #BF55EC !important; }
+a[style*="color:#15B097"],a[style*="color: #15B097"],a[style*="color:#15b097"],a[style*="color: #15b097"] { color: #15B097 !important; }
+a[style*="color:#4ECDC4"],a[style*="color: #4ECDC4"],a[style*="color:#4ecdc4"],a[style*="color: #4ecdc4"] { color: #4ECDC4 !important; }
+a[style*="color:#00abff"],a[style*="color: #00abff"] { color: #00abff !important; }
+a[style*="color:#ffb24d"],a[style*="color: #ffb24d"] { color: #ffb24d !important; }
+a[style*="color:#ff9100"],a[style*="color: #ff9100"] { color: #ff9100 !important; }
+a[style*="color:#912cdb"],a[style*="color: #912cdb"] { color: #912cdb !important; }
+a[style*="color:#BAAF92"],a[style*="color: #BAAF92"],a[style*="color:#baaf92"],a[style*="color: #baaf92"] { color: #BAAF92 !important; }
+a[style*="color:#20726c"],a[style*="color: #20726c"] { color: #20726c !important; }
+a[style*="color:#6cdb9b"],a[style*="color: #6cdb9b"] { color: #6cdb9b !important; }
+a[style*="color:#7FFF00"],a[style*="color: #7FFF00"],a[style*="color:#7fff00"],a[style*="color: #7fff00"] { color: #7FFF00 !important; }
+a[style*="color:#5E372F"],a[style*="color: #5E372F"] { color: #5E372F !important; }
+a[style*="color:#95A5A6"],a[style*="color: #95A5A6"] { color: #95A5A6 !important; }
