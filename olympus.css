@@ -208,7 +208,8 @@ tr.torrent-search--list__sticky-row .torrent-search--list__name > a:first-child 
 .torrent-icons__freeleech { color: var(--at-gold) !important; }
 .torrent-icons__internal  { color: #baaf92 !important; }
 .torrent-icons__verified  { color: var(--at-green) !important; }
-.torrent-icons { background-color: #84848421 !important; padding: 0px 7px !important; border-radius: 10px !important; }
+.torrent-icons { background-color: #84848421 !important; padding: 0px 7px !important; border-radius: 10px !important; display: inline-flex !important; width: fit-content !important; }
+.torrent-icons__vision img { filter: invert(1) brightness(0.8) !important; }
 .torrent-search--list__resolution-and-type { background-color: transparent !important; color: var(--at-text2) !important; border: none !important; box-shadow: none !important; }
 
 search.compact-search, .compact-search, .compact-search__visible-default, .torrent-search__filters, [class*="compact-search"] { background-color: var(--at-bg2) !important; border-color: var(--at-border) !important; }
