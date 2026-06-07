@@ -139,7 +139,7 @@ html body .panelV2 { overflow: hidden !important; }
 html body .panelV2 > :last-child { border-radius: 0 0 var(--k-radius) var(--k-radius) !important; }
 
 .panel__heading, .panel__heading a, .panel__heading a:visited { background-color: var(--k-bg3) !important; border-bottom: none !important; color: var(--k-pink) !important; font-weight: 600 !important; letter-spacing: .05em !important; border-radius: var(--k-radius) var(--k-radius) 0 0 !important; padding-left: 14px !important; }
-.panel__heading::before { content: '' !important; display: inline-block !important; width: 3px !important; height: 1em !important; background: var(--k-pink) !important; border-radius: 2px !important; margin-right: 10px !important; vertical-align: middle !important; opacity: 0.65 !important; }
+.panel__heading::before { display: none !important; }
 .panel__heading a:hover { opacity: 0.75 !important; }
 .panel__body, div.panel__body { background-color: var(--k-bg2) !important; }
 
