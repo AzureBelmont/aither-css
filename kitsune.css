@@ -140,6 +140,8 @@ html body .panelV2 > :last-child { border-radius: 0 0 var(--k-radius) var(--k-ra
 .panelV2 > .data-table-wrapper { border-radius: 0 !important; border-left: none !important; border-right: none !important; border-top: none !important; }
 .panelV2 > table { border-radius: 0 !important; }
 .panelV2 > .panel__body > .data-table-wrapper { border-radius: 0 !important; border: none !important; }
+.panelV2 > nav.pagination { border-radius: 0 !important; border-left: none !important; border-right: none !important; border-top: none !important; }
+.panelV2 > .panel__body > nav.pagination { border-radius: 0 !important; border: none !important; }
 
 .panel__heading, .panel__heading a, .panel__heading a:visited { background-color: var(--k-bg3) !important; border-bottom: none !important; color: var(--k-pink) !important; font-weight: 600 !important; letter-spacing: .05em !important; border-radius: var(--k-radius) var(--k-radius) 0 0 !important; padding-left: 14px !important; }
 .panel__heading::before { display: none !important; }
