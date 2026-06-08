@@ -3,7 +3,7 @@
    Gold accents. Dark panels. Clean.
    Author : AzureBelmont
    Repo   : github.com/AzureBelmont/aither-css
-   Ver    : 2.1
+   Ver    : 2.1.1
    Palette
    ────────────────────────────────────────────
    Gold         #f5a623   primary accent
@@ -157,11 +157,10 @@ html body .panel__tab:hover { color: var(--at-text2) !important; }
 html body .panel__tab--active { color: var(--at-text) !important; border-bottom-color: var(--at-gold) !important; }
 html body .panel__header .panel__heading, html body .panel__header .panel__heading--centered { background-color: transparent !important; border: none !important; box-shadow: none !important; }
 
-article.chatbox-message { background-color: #0d111b !important; transition: background-color 0.15s ease; border-radius: 0 !important; padding: 5px 8px 5px 0 !important; margin: 0 !important; gap: 0px 8px !important; grid-template-columns: 40px auto 1fr auto !important; align-items: start !important; border-bottom: 1px dashed #393939 !important; }
+article.chatbox-message { background-color: #0d111b !important; position: relative !important; transition: background-color 0.15s ease; border-radius: 0 !important; padding: 5px 8px 5px 0 !important; margin: 0 !important; gap: 0px 8px !important; grid-template-columns: 40px auto 1fr auto !important; align-items: start !important; border-bottom: 1px dashed #393939 !important; }
 article.chatbox-message::before { display: none !important; }
 article.chatbox-message:hover { background-color: rgba(245,166,35,0.02) !important; }
-.chatbox-message__menu { display: block !important; visibility: hidden !important; opacity: 0 !important; transition: opacity 0.1s ease !important; }
-.chatbox-message:hover .chatbox-message__menu { visibility: visible !important; opacity: 1 !important; }
+.chatbox-message__menu { position: absolute !important; right: 8px !important; top: 4px !important; }
 .chatbox-message__aside { position: static !important; left: auto !important; padding: 0 !important; width: 40px !important; min-width: 40px !important; grid-row: 1 / -1 !important; align-self: start !important; line-height: 0 !important; font-size: 0 !important; }
 .chatbox-message__aside figure { line-height: 0 !important; font-size: 0 !important; margin: 0 !important; padding: 0 !important; }
 .chatbox-message__aside img { width: 40px !important; height: 40px !important; min-width: 40px !important; border-radius: 50% !important; object-fit: cover !important; }
@@ -318,11 +317,13 @@ input[type="checkbox"], input[type="radio"] { accent-color: var(--at-gold) !impo
 
 .swal2-popup { background-color: var(--at-bg2) !important; border: 0.5px solid rgba(245,166,35,0.25) !important; border-radius: var(--at-radius) !important; color: var(--at-text) !important; box-shadow: 0 8px 32px rgba(0,0,0,0.6) !important; }
 .swal2-toast { background-color: var(--at-bg3) !important; border: 0.5px solid rgba(245,166,35,0.25) !important; border-radius: var(--at-radius) !important; box-shadow: 0 4px 20px rgba(0,0,0,0.5) !important; }
-.swal2-title { color: var(--at-text) !important; font-size: 15px !important; }
+.swal2-title, .swal2-popup h2, .swal2-popup .swal2-title { color: var(--at-text) !important; font-size: 15px !important; }
 .swal2-html-container, .swal2-content { color: var(--at-text2) !important; }
 .swal2-icon.swal2-success { border-color: var(--at-gold) !important; color: var(--at-gold) !important; }
 .swal2-icon.swal2-success .swal2-success-ring { border-color: rgba(245,166,35,0.3) !important; }
 .swal2-icon.swal2-success [class^="swal2-success-line"] { background-color: var(--at-gold) !important; }
+.swal2-icon.swal2-error { border-color: var(--at-red) !important; color: var(--at-red) !important; }
+.swal2-icon.swal2-error [class^="swal2-x-mark-line"] { background-color: var(--at-red) !important; }
 .swal2-timer-progress-bar { background: var(--at-gold) !important; }
 .swal2-confirm { background-color: var(--at-gold) !important; color: #0f1117 !important; font-weight: 600 !important; border-radius: 8px !important; }
 .swal2-deny, .swal2-cancel { background-color: var(--at-bg3) !important; color: var(--at-text2) !important; border-radius: 8px !important; }
@@ -381,6 +382,7 @@ table td i.fas.fa-circle.fa-xs { color: var(--at-gold) !important; animation: at
 ::-webkit-scrollbar-track { background: var(--at-bg); }
 ::-webkit-scrollbar-thumb { background: var(--at-bg3); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: rgba(245,166,35,0.4); }
+html { scrollbar-width: thin !important; scrollbar-color: var(--at-bg3) var(--at-bg) !important; }
 
 [style*="color:#95A5A6"],[style*="color: #95A5A6"] { color: #95A5A6 !important; }
 [style*="color:#5E372F"],[style*="color: #5E372F"] { color: #5E372F !important; }
