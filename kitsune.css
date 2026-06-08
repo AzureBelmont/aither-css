@@ -3,7 +3,7 @@
    A Japanese fox-spirit theme for Aither (UNIT3D)
    Author : AzureBelmont
    Repo   : github.com/AzureBelmont/aither-css
-   Ver    : 2.3.1
+   Ver    : 2.3.2
    Palette
    ────────────────────────────────────────────
    Sakura Pink  #F4AACA   primary accent
@@ -219,7 +219,7 @@ tr.torrent-search--list__sticky-row .torrent-search--list__name > a:first-child 
 .torrent-icons__freeleech { color: var(--k-pink)   !important; }
 .torrent-icons__internal  { color: var(--k-text2)   !important; }
 .torrent-icons__verified  { color: var(--k-matcha)  !important; }
-.torrent-icons { background-color: #84848421 !important; padding: 0px 7px !important; border-radius: 10px !important; display: inline-flex !important; width: fit-content !important; }
+.torrent-icons { background-color: #84848421 !important; padding: 2px 7px !important; margin-top: 2px !important; border-radius: 10px !important; display: inline-flex !important; width: fit-content !important; }
 .torrent-icons__vision img { filter: invert(1) brightness(0.8) !important; }
 .torrent-search--list__resolution-and-type { background-color: transparent !important; color: var(--k-text2) !important; border: none !important; box-shadow: none !important; }
 
@@ -284,10 +284,10 @@ ul.pagination__pages li:hover { background-color: var(--k-bg3) !important; }
 .form__button--text:hover { color: var(--k-pink-soft) !important; }
 .form__button--filled, .form__button--filled.btn { background: var(--k-pink) !important; color: #000 !important; border-radius: 9999px !important; border: none !important; font-weight: 600 !important; }
 .form__button--filled:hover { background: var(--k-pink-soft) !important; color: #000 !important; }
-.form__button--outlined { background-color: transparent !important; color: var(--k-text) !important; border: 1px solid var(--k-text2) !important; }
+.form__button--outlined { background-color: transparent !important; color: var(--k-text) !important; border: 1px solid var(--k-text3) !important; }
 .form__button--outlined:hover { background-color: var(--k-pink-faint) !important; border-color: var(--k-pink) !important; color: var(--k-pink) !important; }
 .form__standard-icon-button { background: transparent !important; border: none !important; color: var(--k-pink) !important; opacity: 0.55 !important; transition: opacity .15s !important; }
-.form__standard-icon-button:hover { opacity: 1 !important; }
+.form__standard-icon-button:hover { opacity: 1 !important; filter: drop-shadow(0 0 4px rgba(244,170,202,0.5)) !important; }
 
 a.form__button--text[href*="/dashboard/reports"], a.form__button--text[href*="/contributors/internal-claim"], a.form__button--text[href*="/contributors/contest"] { color: var(--k-text) !important; }
 a.form__button--text[href*="/dashboard/reports"]:hover, a.form__button--text[href*="/contributors/internal-claim"]:hover, a.form__button--text[href*="/contributors/contest"]:hover { color: var(--k-pink) !important; }
@@ -660,12 +660,11 @@ article.user-stat-card, .user-stat-card {
   border-radius: 10% !important;
 }
 
-
 .internal-card__header {
   background-color: var(--k-bg3) !important;
 }
 .internal-card__footer {
-  background-color: var(--k-bg2) !important;
+  background-color: var(--k-bg3) !important;
 }
 
 .torrent-search--list__no-poster-headers th {
@@ -678,4 +677,11 @@ li.pagination__next--disabled,
 li.pagination__previous--disabled {
   background-color: transparent !important;
   border-color: transparent !important;
+}
+
+.torrent__mediainfo-header,
+.panel__heading:has(.form__standard-icon-button) {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
 }
