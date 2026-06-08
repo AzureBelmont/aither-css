@@ -104,7 +104,7 @@ html:has(main[class*="ticket"])   .top-nav--left__list-item:has(a[href*="/ticket
 
 .top-nav__dropdown a.top-nav__username i.fas, .top-nav__dropdown a.top-nav__username i.far { background-color: var(--k-bg3) !important; border-color: transparent !important; }
 
-.top-nav--left__list-item ul, li.top-nav__dropdown > ul { background-color: var(--k-bg2) !important; border: 0.5px solid var(--k-pink-border) !important; border-radius: var(--k-radius) !important; box-shadow: 0 8px 32px rgba(0,0,0,0.75) !important; }
+.top-nav--left__list-item ul, li.top-nav__dropdown > ul { background-color: var(--k-bg2) !important; border: 0.5px solid var(--k-pink-border) !important; border-radius: var(--k-radius) !important; box-shadow: 0 8px 32px rgba(20,20,20,0.8) !important; }
 
 .dot { background-color: var(--k-pink) !important; box-shadow: 0 0 8px rgba(244,170,202,0.55) !important; }
 .top-nav circle, .top-nav--left__container circle, .top-nav svg circle { stroke: var(--k-pink) !important; fill: var(--k-pink) !important; }
@@ -339,7 +339,7 @@ input[type="checkbox"], input[type="radio"] { accent-color: var(--k-pink) !impor
 .vscomp-no-options { color: var(--k-text3) !important; background-color: var(--k-bg2) !important; }
 
 .swal2-popup { background-color: var(--k-bg2) !important; border: 0.5px solid var(--k-pink-border) !important; border-radius: var(--k-radius) !important; color: var(--k-text) !important; box-shadow: 0 8px 40px rgba(0,0,0,0.8) !important; }
-.swal2-toast { background-color: var(--k-bg3) !important; border: 0.5px solid var(--k-pink-border) !important; border-radius: var(--k-radius) !important; box-shadow: 0 4px 20px rgba(0,0,0,0.5) !important; }
+.swal2-toast { background-color: var(--k-bg3) !important; border: 0.5px solid var(--k-pink-border) !important; border-radius: var(--k-radius) !important; box-shadow: 0 4px 20px rgba(20,20,20,0.6) !important; }
 .swal2-title, .swal2-popup h2, .swal2-popup .swal2-title, h2.swal2-title { color: var(--k-text) !important; font-size: 15px !important; }
 .swal2-html-container, .swal2-content { color: var(--k-text2) !important; }
 .swal2-popup.swal2-show h2.swal2-title { color: var(--k-text) !important; text-shadow: none !important; -webkit-text-fill-color: var(--k-text) !important; }
@@ -359,16 +359,16 @@ ul.meta__dropdown { backdrop-filter: none !important; background: var(--k-bg3) !
 ul.meta__dropdown a, ul.meta__dropdown button { color: var(--k-text) !important; }
 ul.meta__dropdown a:hover, ul.meta__dropdown button:hover { color: var(--k-pink) !important; background: var(--k-pink-faint) !important; }
 .meta__title-link:hover, .meta__title-link:hover .meta__title { color: var(--k-pink) !important; }
-.meta-chip:hover { background: rgba(0,0,0,0.75) !important; }
+.meta-chip:hover { background: rgba(20,20,20,0.8) !important; }
 table.similar-torrents__playlists td:first-child, table.similar-torrents__playlists th:first-child { display: none !important; }
 .meta__backdrop { filter: brightness(0.6) !important; }
 .work__tags, .meta__ids, .meta__description { margin-left: 0 !important; margin-right: 0 !important; justify-self: start !important; }
-.work__tags { background: rgba(0,0,0,0.55) !important; border-radius: 6px !important; }
+.work__tags { background: rgba(20,20,20,0.65) !important; border-radius: 6px !important; }
 .work__tags > li > a, .work__tags > li > span { padding: 3px 6px !important; }
-.meta__ids { background: rgba(0,0,0,0.55) !important; border-radius: 6px !important; }
-.meta__description { background: rgba(0,0,0,0.5) !important; padding: 3px 6px !important; border-radius: 6px !important; }
+.meta__ids { background: rgba(20,20,20,0.65) !important; border-radius: 6px !important; }
+.meta__description { background: rgba(20,20,20,0.6) !important; padding: 3px 6px !important; border-radius: 6px !important; }
 .meta__heading { background: none !important; }
-.meta-chip { background: rgba(0,0,0,0.55) !important; padding: 6px 10px !important; border-radius: 8px !important; margin-bottom: 4px !important; }
+.meta-chip { background: rgba(20,20,20,0.65) !important; padding: 6px 10px !important; border-radius: 8px !important; margin-bottom: 4px !important; }
 .meta__chip-container { max-height: 280px !important; overflow-y: auto !important; overflow-x: hidden !important; scrollbar-width: none !important; position: relative !important; -webkit-mask-image: linear-gradient(to bottom, black 0%, black 80%, transparent 100%) !important; mask-image: linear-gradient(to bottom, black 0%, black 80%, transparent 100%) !important; }
 .meta__chip-container::-webkit-scrollbar { width: 0 !important; display: none !important; }
 
