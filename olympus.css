@@ -383,7 +383,7 @@ table td i.fas.fa-circle.fa-xs { color: var(--at-gold) !important; animation: at
 ::-webkit-scrollbar-track { background: var(--at-bg); }
 ::-webkit-scrollbar-thumb { background: var(--at-bg3); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: rgba(245,166,35,0.4); }
-html { scrollbar-width: thin !important; scrollbar-color: rgba(245,166,35,0.25) var(--at-bg) !important; }
+html { scrollbar-width: thin !important; scrollbar-color: var(--at-bg3) var(--at-bg) !important; }
 
 [style*="color:#95A5A6"],[style*="color: #95A5A6"] { color: #95A5A6 !important; }
 [style*="color:#5E372F"],[style*="color: #5E372F"] { color: #5E372F !important; }
