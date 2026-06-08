@@ -373,6 +373,8 @@ a.nav-tab__link:hover, span.nav-tab__link:hover { color: var(--at-text) !importa
   0%, 100% { color: var(--at-gold); filter: drop-shadow(0 0 2px rgba(245,166,35,0.4)); }
   50%       { color: #ffc84a;        filter: drop-shadow(0 0 6px rgba(245,166,35,0.9)); }
 }
+i.fas.fa-circle { color: var(--at-gold) !important; }
+article i.fas.fa-circle, .article-preview i.fas.fa-circle { color: var(--at-gold) !important; }
 table td i.fas.fa-circle.fa-xs { color: var(--at-gold) !important; animation: at-dot-pulse 2s ease-in-out infinite !important; }
 
 .meta__dropdown-button { backdrop-filter: none !important; background: transparent !important; }
@@ -381,6 +383,7 @@ ul.meta__dropdown a, ul.meta__dropdown button { color: var(--at-text) !important
 ul.meta__dropdown a:hover, ul.meta__dropdown button:hover { color: var(--at-gold) !important; background: var(--at-goldfaint) !important; }
 .meta__title-link:hover, .meta__title-link:hover .meta__title { color: var(--at-gold) !important; }
 .meta-chip:hover { background: rgba(15,20,40,0.75) !important; }
+table.similar-torrents__playlists td:first-child, table.similar-torrents__playlists th:first-child { display: none !important; }
 .meta__backdrop { filter: brightness(0.6) !important; }
 .work__tags, .meta__ids, .meta__description { margin-left: 0 !important; margin-right: 0 !important; justify-self: start !important; }
 .work__tags { background: rgba(15,20,40,0.55) !important; border-radius: 6px !important; }
