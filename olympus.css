@@ -377,9 +377,9 @@ table td i.fas.fa-circle.fa-xs { color: var(--at-gold) !important; animation: at
 
 .meta__backdrop { filter: brightness(0.6) !important; }
 .work__tags, .meta__ids, .meta__description { margin-left: 0 !important; margin-right: 0 !important; justify-self: start !important; }
-.work__tags { background: rgba(15,20,40,0.55) !important; padding: 6px 12px !important; border-radius: 6px !important; }
-.meta__ids { background: rgba(15,20,40,0.55) !important; padding: 6px 12px !important; border-radius: 6px !important; }
-.meta__description { background: rgba(15,20,40,0.5) !important; padding: 8px 12px !important; border-radius: 6px !important; }
+.work__tags { background: rgba(15,20,40,0.55) !important; padding: 6px 8px !important; border-radius: 6px !important; }
+.meta__ids { background: rgba(15,20,40,0.55) !important; padding: 6px 8px !important; border-radius: 6px !important; }
+.meta__description { background: rgba(15,20,40,0.5) !important; padding: 8px 8px !important; border-radius: 6px !important; }
 .meta__heading { background: none !important; }
 .meta-chip { background: rgba(15,20,40,0.55) !important; padding: 6px 10px !important; border-radius: 8px !important; margin-bottom: 4px !important; }
 .meta__chip-container { max-height: 280px !important; overflow-y: auto !important; overflow-x: hidden !important; scrollbar-width: none !important; position: relative !important; -webkit-mask-image: linear-gradient(to bottom, black 0%, black 80%, transparent 100%) !important; mask-image: linear-gradient(to bottom, black 0%, black 80%, transparent 100%) !important; }
