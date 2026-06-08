@@ -354,6 +354,10 @@ input[type="checkbox"], input[type="radio"] { accent-color: var(--k-pink) !impor
 
 .progress-bar, [class*="progress"] > [class*="bar"] { background-color: var(--k-pink) !important; }
 
+.meta__dropdown-button { backdrop-filter: none !important; background: transparent !important; }
+ul.meta__dropdown { backdrop-filter: none !important; background: var(--k-bg3) !important; border: 0.5px solid var(--k-border) !important; border-radius: var(--k-radius) !important; box-shadow: 0 8px 24px rgba(0,0,0,0.7) !important; }
+ul.meta__dropdown a, ul.meta__dropdown button { color: var(--k-text) !important; }
+ul.meta__dropdown a:hover, ul.meta__dropdown button:hover { color: var(--k-pink) !important; background: var(--k-pink-faint) !important; }
 .meta__backdrop { filter: brightness(0.6) !important; }
 .work__tags, .meta__ids, .meta__description { margin-left: 0 !important; margin-right: 0 !important; justify-self: start !important; }
 .work__tags { background: rgba(15,20,40,0.55) !important; border-radius: 6px !important; }
