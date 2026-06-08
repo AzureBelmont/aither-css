@@ -655,3 +655,6 @@ table.similar-torrents__torrents a[title="Download"]:hover {
 ul.torrent__tags {
   align-items: center !important;
 }
+ul.torrent__tags > li::after {
+  color: var(--at-gold) !important;
+}
