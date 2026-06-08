@@ -149,8 +149,7 @@ html body .panelV2 { overflow: hidden !important; }
 .panelV2 > .panel__body > .data-table-wrapper { border-radius: 0 !important; border: none !important; }
 .panelV2 > nav.pagination { border-radius: 0 !important; border-left: none !important; border-right: none !important; border-top: none !important; }
 .panelV2 > .panel__body > nav.pagination { border-radius: 0 !important; border: none !important; }
-html body .panel__header { background-color: var(--at-bg2) !important; border-bottom: 0.5px solid var(--at-border) !important; padding-right: 8px !important; border-radius: var(--at-radius) var(--at-radius) 0 0 !important; display: flex !important; align-items: center !important; }
-.panel__heading i.fa-pull-right { float: none !important; }
+html body .panel__header { background-color: var(--at-bg2) !important; border-bottom: 0.5px solid var(--at-border) !important; padding-right: 8px !important; border-radius: var(--at-radius) var(--at-radius) 0 0 !important; }
 html body .panel__actions, html body .panel__action { background-color: transparent !important; }
 html body .panel__tabs { background-color: var(--at-bg2) !important; border-bottom: 1px solid var(--at-goldfaint) !important; padding: 0 4px !important; }
 html body .panel__tab { color: var(--at-text3) !important; border-bottom: 2px solid transparent !important; padding: 8px 12px !important; transition: color .15s !important; }
@@ -531,6 +530,9 @@ input[type="file"]::file-selector-button:hover { background-color: var(--at-gold
 .compact-search,
 .compact-search__visible-default {
   padding: 6px 8px !important;
+}
+.similar-torrents__filters {
+  display: none !important;
 }
 .compact-search .form__group {
   margin: 0 !important;
