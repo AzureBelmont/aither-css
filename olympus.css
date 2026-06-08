@@ -3,7 +3,7 @@
    Gold accents. Dark panels. Clean.
    Author : AzureBelmont
    Repo   : github.com/AzureBelmont/aither-css
-   Ver    : 2.2
+   Ver    : 2.2.1
    Palette
    ────────────────────────────────────────────
    Gold         #f5a623   primary accent
@@ -536,4 +536,37 @@ input[type="file"]::file-selector-button:hover { background-color: var(--at-gold
 .compact-search .form__text {
   padding: 8px 12px !important;
   font-size: 13px !important;
+}
+
+.panelV2 > .panel__heading {
+  background-color: var(--at-bg2) !important;
+  border-bottom: 0.5px solid var(--at-border) !important;
+}
+
+div.top-users__place {
+  border: 2px solid var(--at-gold) !important;
+  color: var(--at-gold) !important;
+  font-weight: 700 !important;
+}
+
+article.user-stat-card, .user-stat-card {
+  border: 1px solid rgba(245,166,35,0.22) !important;
+}
+.user-stat-card__avatar {
+  border: 2px solid rgba(245,166,35,0.25) !important;
+  border-radius: 10% !important;
+}
+
+article.comment {
+  grid-template-columns: 160px 1fr !important;
+}
+
+.torrent-card:hover .torrent-card__footer {
+  background-color: #1c2540 !important;
+}
+tr.torrent-search--list__sticky-row:hover td {
+  background-color: transparent !important;
+}
+tr.torrent-search--list__sticky-row:hover {
+  background-color: rgba(245,166,35,0.08) !important;
 }
