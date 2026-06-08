@@ -289,7 +289,7 @@ a.form__button--text[href*="/dashboard/reports"]:hover, a.form__button--text[hre
 a[href*="/dashboard/reports"] svg circle, a[href*="/contributors"] svg circle { stroke: var(--at-gold) !important; fill: var(--at-gold) !important; }
 .page__contributor--index a svg circle { stroke: var(--at-gold) !important; }
 .form__standard-icon-button { background: transparent !important; border: none !important; box-shadow: none !important; color: var(--at-gold) !important; opacity: 0.65 !important; transition: opacity .15s !important; }
-.form__standard-icon-button:hover { opacity: 1 !important; filter: drop-shadow(0 0 4px rgba(245,166,35,0.5)) !important; }
+.form__standard-icon-button:hover { opacity: 1 !important; color: var(--at-gold) !important; filter: drop-shadow(0 0 4px rgba(245,166,35,0.5)) !important; }
 .form__select, select.form__select { background-color: var(--at-bg3) !important; border: 1px solid var(--at-border) !important; border-radius: 6px !important; box-shadow: none !important; color: var(--at-text) !important; color-scheme: dark; }
 .form__select:hover, select.form__select:hover { border-color: rgba(245,166,35,0.4) !important; }
 .form__select:focus, select.form__select:focus { border-color: var(--at-gold) !important; color: var(--at-text) !important; }
@@ -360,8 +360,8 @@ tr.moderation__details-table--bottom td, tr.moderation__details-table--bottom:nt
 .form__button--filled { background-color: transparent !important; color: var(--at-text) !important; border: 1px solid var(--at-text3) !important; }
 .form__button--outlined { background-color: transparent !important; color: var(--at-text) !important; border: 1px solid var(--at-text3) !important; }
 .form__button--filled:hover, .form__button--outlined:hover { background-color: var(--at-goldfaint) !important; border-color: var(--at-gold) !important; color: var(--at-gold) !important; }
-a.form__button[href*="/torrents/download/"] { background-color: var(--at-gold) !important; color: #0f1117 !important; border: 1px solid var(--at-gold) !important; font-weight: 600 !important; border-radius: 8px !important; }
-a.form__button[href*="/torrents/download/"]:hover { background-color: var(--at-gold2) !important; border-color: var(--at-gold2) !important; color: #0f1117 !important; }
+a.form__button[href*="/torrents/download/"] { background-color: rgba(245,166,35,0.12) !important; color: var(--at-gold) !important; border: 1px solid var(--at-gold) !important; font-weight: 600 !important; border-radius: 8px !important; }
+a.form__button[href*="/torrents/download/"]:hover { background-color: rgba(245,166,35,0.20) !important; border-color: var(--at-gold) !important; color: var(--at-gold) !important; box-shadow: 0 0 12px rgba(245,166,35,0.4) !important; }
 
 ul.nav-tab-menu__items { background-color: var(--at-bg2) !important; border-bottom: 1px solid var(--at-goldfaint) !important; }
 li.nav-tab--active, li.nav-tavV2 { background-color: transparent !important; }
@@ -389,7 +389,7 @@ ul.meta__dropdown a, ul.meta__dropdown button { color: var(--at-text) !important
 ul.meta__dropdown a:hover, ul.meta__dropdown button:hover { color: var(--at-gold) !important; background: var(--at-goldfaint) !important; }
 .meta__title-link:hover, .meta__title-link:hover .meta__title { color: var(--at-gold) !important; }
 .meta-chip:hover { background: rgba(15,20,40,0.75) !important; }
-table.similar-torrents__torrents th:first-child, table.similar-torrents__torrents td[rowspan] { display: none !important; }
+
 .meta__backdrop { filter: brightness(0.6) !important; }
 .work__tags, .meta__ids, .meta__description { margin-left: 0 !important; margin-right: 0 !important; justify-self: start !important; }
 .work__tags { background: rgba(15,20,40,0.55) !important; border-radius: 6px !important; }
@@ -625,6 +625,13 @@ li.pagination__previous--disabled {
   background-color: transparent !important;
   border-color: transparent !important;
 }
+
+.data-table:not(.similar-torrents__torrents) td[rowspan] { font-size: 0 !important; color: transparent !important; }
+
+.internal-card__footer { overflow: hidden !important; scrollbar-width: none !important; }
+.internal-card__footer::-webkit-scrollbar { display: none !important; }
+.internal-card__left-footer { overflow: hidden !important; min-width: 0 !important; }
+.internal-card__title { overflow: hidden !important; text-overflow: ellipsis !important; white-space: nowrap !important; display: inline-block !important; max-width: 100% !important; vertical-align: bottom !important; }
 
 .torrent__mediainfo-header,
 .panel__heading:has(.form__standard-icon-button) {
