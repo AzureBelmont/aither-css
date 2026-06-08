@@ -606,3 +606,11 @@ a.pagination__next, a.pagination__previous {
 .torrent-search--list__no-poster-headers th {
   white-space: nowrap !important;
 }
+
+li.pagination__next,
+li.pagination__previous,
+li.pagination__next--disabled,
+li.pagination__previous--disabled {
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
