@@ -176,6 +176,7 @@ html body .panelV2 > :last-child { border-radius: 0 0 var(--k-radius) var(--k-ra
 html body .panel__header { background-color: var(--k-bg2) !important; border-bottom: 0.5px solid var(--k-border) !important; border-radius: var(--k-radius) var(--k-radius) 0 0 !important; padding-right: 8px !important; display: flex !important; align-items: center !important; }
 html body .panel__header .panel__heading { flex: 1 !important; }
 section.panel { background-color: var(--k-bg2) !important; border: 0.5px solid var(--k-pink-border) !important; border-radius: var(--k-radius) !important; overflow: hidden !important; box-shadow: 0 4px 32px rgba(0,0,0,0.7) !important; }
+section.panel > .panel__heading { background-color: var(--k-bg2) !important; border-bottom: 0.5px solid var(--k-border) !important; }
 html body .panel__heading--centered { background-color: transparent !important; border: none !important; }
 html body .panel__header .panel__heading, html body .panel__header .panel__heading--centered { background-color: transparent !important; border: none !important; }
 html body .panel__actions { background-color: transparent !important; display: flex !important; align-items: center !important; }
@@ -640,6 +641,8 @@ li.pagination__next { margin-left: 8px !important; }
 li.pagination__previous { margin-right: 4px !important; }
 a.pagination__next, a.pagination__previous {
   padding: 0 4px !important;
+  border-radius: 4px !important;
+  background-color: var(--k-bg2) !important;
 }
 
 .panel__action-text {
@@ -675,6 +678,21 @@ article.user-stat-card, .user-stat-card {
 
 .torrent-search--list__no-poster-headers th {
   white-space: nowrap !important;
+}
+
+article.comment {
+  grid-template-columns: 180px 1fr !important;
+}
+aside.comment__aside {
+  max-width: 180px !important;
+  overflow: hidden !important;
+}
+article.post {
+  grid-template-columns: 200px 1fr !important;
+}
+aside.post__aside {
+  max-width: 200px !important;
+  overflow: hidden !important;
 }
 
 li.pagination__next,
