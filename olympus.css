@@ -152,6 +152,7 @@ html body .panelV2 { overflow: hidden !important; }
 html body .panel__header { background-color: var(--at-bg2) !important; border-bottom: 0.5px solid var(--at-border) !important; padding-right: 8px !important; border-radius: var(--at-radius) var(--at-radius) 0 0 !important; display: flex !important; align-items: center !important; }
 html body .panel__header .panel__heading { flex: 1 !important; }
 section.panel { background-color: var(--at-bg2) !important; border: 0.5px solid var(--at-border) !important; border-radius: var(--at-radius) !important; overflow: hidden !important; box-shadow: 0 4px 24px rgba(0,0,0,0.5) !important; }
+section.panel > .panel__heading { background-color: var(--at-bg2) !important; border-bottom: 0.5px solid var(--at-border) !important; }
 html body .panel__actions, html body .panel__action { background-color: transparent !important; }
 html body .panel__actions { display: flex !important; align-items: center !important; }
 html body .panel__actions .form__button--text { padding-top: 0 !important; padding-bottom: 0 !important; line-height: 1 !important; display: inline-flex !important; align-items: center !important; transform: translateY(-2px) !important; }
@@ -606,6 +607,8 @@ li.pagination__next { margin-left: 8px !important; }
 li.pagination__previous { margin-right: 4px !important; }
 a.pagination__next, a.pagination__previous {
   padding: 0 4px !important;
+  border-radius: 4px !important;
+  background-color: var(--at-bg2) !important;
 }
 
 .panel__action-text {
