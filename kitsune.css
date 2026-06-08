@@ -64,7 +64,7 @@ body, html { background-color: var(--k-bg) !important; color: var(--k-text) !imp
 ::-webkit-scrollbar-track { background: var(--k-bg); }
 ::-webkit-scrollbar-thumb { background: var(--k-bg5); border-radius: 2px; }
 ::-webkit-scrollbar-thumb:hover { background: rgba(244,170,202,0.30); }
-html { scrollbar-width: thin !important; scrollbar-color: var(--k-bg5) var(--k-bg) !important; }
+html { scrollbar-width: thin !important; scrollbar-color: rgba(244,170,202,0.20) var(--k-bg) !important; }
 
 .top-nav { background-color: #000 !important; border-bottom: 1px solid var(--k-pink-border) !important; }
 
@@ -340,8 +340,9 @@ input[type="checkbox"], input[type="radio"] { accent-color: var(--k-pink) !impor
 
 .swal2-popup { background-color: var(--k-bg2) !important; border: 0.5px solid var(--k-pink-border) !important; border-radius: var(--k-radius) !important; color: var(--k-text) !important; box-shadow: 0 8px 40px rgba(0,0,0,0.8) !important; }
 .swal2-toast { background-color: var(--k-bg3) !important; border: 0.5px solid var(--k-pink-border) !important; border-radius: var(--k-radius) !important; box-shadow: 0 4px 20px rgba(0,0,0,0.5) !important; }
-.swal2-title, .swal2-popup h2, .swal2-popup .swal2-title { color: var(--k-text) !important; font-size: 15px !important; }
+.swal2-title, .swal2-popup h2, .swal2-popup .swal2-title, h2.swal2-title { color: var(--k-text) !important; font-size: 15px !important; }
 .swal2-html-container, .swal2-content { color: var(--k-text2) !important; }
+.swal2-popup.swal2-show h2.swal2-title { color: var(--k-text) !important; text-shadow: none !important; -webkit-text-fill-color: var(--k-text) !important; }
 .swal2-icon.swal2-success { border-color: var(--k-pink) !important; color: var(--k-pink) !important; }
 .swal2-icon.swal2-success .swal2-success-ring { border-color: var(--k-pink-dim) !important; }
 .swal2-icon.swal2-success [class^="swal2-success-line"] { background-color: var(--k-pink) !important; }
