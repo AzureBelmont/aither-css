@@ -389,7 +389,7 @@ ul.meta__dropdown a, ul.meta__dropdown button { color: var(--at-text) !important
 ul.meta__dropdown a:hover, ul.meta__dropdown button:hover { color: var(--at-gold) !important; background: var(--at-goldfaint) !important; }
 .meta__title-link:hover, .meta__title-link:hover .meta__title { color: var(--at-gold) !important; }
 .meta-chip:hover { background: rgba(15,20,40,0.75) !important; }
-table.similar-torrents__playlists td:first-child, table.similar-torrents__playlists th:first-child { display: none !important; }
+.panelV2:last-of-type .data-table th:first-child, .panelV2:last-of-type .data-table td[rowspan] { display: none !important; }
 .meta__backdrop { filter: brightness(0.6) !important; }
 .work__tags, .meta__ids, .meta__description { margin-left: 0 !important; margin-right: 0 !important; justify-self: start !important; }
 .work__tags { background: rgba(15,20,40,0.55) !important; border-radius: 6px !important; }
