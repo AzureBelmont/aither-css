@@ -718,3 +718,10 @@ table.similar-torrents__torrents a[title="Download"]:hover {
   align-items: center !important;
   gap: 6px !important;
 }
+
+ul.torrent__tags {
+  align-items: center !important;
+}
+ul.torrent__tags > li::after {
+  color: var(--k-pink) !important;
+}
