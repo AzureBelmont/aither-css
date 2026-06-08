@@ -375,6 +375,10 @@ a.nav-tab__link:hover, span.nav-tab__link:hover { color: var(--at-text) !importa
 }
 table td i.fas.fa-circle.fa-xs { color: var(--at-gold) !important; animation: at-dot-pulse 2s ease-in-out infinite !important; }
 
+.meta__dropdown-button { backdrop-filter: none !important; background: var(--at-bg3) !important; border-radius: 50% !important; }
+ul.meta__dropdown { backdrop-filter: none !important; background: var(--at-bg3) !important; border: 0.5px solid var(--at-border) !important; border-radius: var(--at-radius) !important; box-shadow: 0 8px 24px rgba(0,0,0,0.5) !important; }
+ul.meta__dropdown a, ul.meta__dropdown button { color: var(--at-text) !important; }
+ul.meta__dropdown a:hover, ul.meta__dropdown button:hover { color: var(--at-gold) !important; background: var(--at-goldfaint) !important; }
 .meta__backdrop { filter: brightness(0.6) !important; }
 .work__tags, .meta__ids, .meta__description { margin-left: 0 !important; margin-right: 0 !important; justify-self: start !important; }
 .work__tags { background: rgba(15,20,40,0.55) !important; border-radius: 6px !important; }
