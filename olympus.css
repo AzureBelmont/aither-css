@@ -635,6 +635,11 @@ li.pagination__previous--disabled {
   background-color: transparent !important;
   border-color: transparent !important;
 }
+li.pagination__next:hover,
+li.pagination__previous:hover {
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
 
 .data-table:not(.similar-torrents__torrents) td[rowspan],
 .data-table:not(.similar-torrents__torrents):has(td[rowspan]) th:first-child {
