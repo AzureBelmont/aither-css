@@ -466,7 +466,13 @@ li.top-nav__dropdown ul li:hover a.top-nav__username i.fas, li.top-nav__dropdown
   50%      { color: #f8c8e0;       filter: drop-shadow(0 0 6px rgba(244,170,202,0.9)); }
 }
 i.fas.fa-circle { color: var(--k-pink) !important; }
+circle[fill="#33B5E5"] { fill: var(--k-pink) !important; }
+circle[stroke="#33B5E5"] { stroke: var(--k-pink) !important; }
+.article-preview-wrapper i, .article-preview i.fas { color: var(--k-pink) !important; }
 article i.fas.fa-circle, .article-preview i.fas.fa-circle { color: var(--k-pink) !important; }
+circle[fill="#33B5E5"] { fill: var(--k-pink) !important; }
+circle[stroke="#33B5E5"] { stroke: var(--k-pink) !important; }
+.article-preview-wrapper i, .article-preview i.fas { color: var(--k-pink) !important; }
 table td i.fas.fa-circle.fa-xs { color: var(--k-pink) !important; animation: k-dot-pulse 2s ease-in-out infinite !important; }
 
 .page__torrent--create fieldset.form__fieldset { border: none !important; background-color: var(--k-bg3) !important; border-radius: var(--k-radius) !important; padding: 10px 14px 12px !important; height: auto !important; }
