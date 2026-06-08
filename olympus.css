@@ -3,7 +3,7 @@
    Gold accents. Dark panels. Clean.
    Author : AzureBelmont
    Repo   : github.com/AzureBelmont/aither-css
-   Ver    : 2.2.1
+   Ver    : 2.3
    Palette
    ────────────────────────────────────────────
    Gold         #f5a623   primary accent
@@ -225,7 +225,7 @@ p.form__group { background-color: transparent !important; }
 .internal-card__footer, .internal-card__header { background-color: var(--at-bg3) !important; color: var(--at-text2) !important; }
 article.torrent-card, .torrent-card { background-color: var(--at-bg2) !important; border: 0.5px solid var(--at-border) !important; border-radius: var(--at-radius) !important; }
 .torrent-card:hover { background-color: var(--at-bg3) !important; }
-header.torrent-card__header { background-color: var(--at-bg3) !important; }
+header.torrent-card__header { background-color: #131522 !important; }
 .featured-carousel__feature-details { background-color: transparent !important; border: none !important; }
 .torrent-card__body { background-color: #151c2c !important; }
 .torrent-card__body:hover { background-color: #182033 !important; }
@@ -259,7 +259,9 @@ article.article-preview { background-color: var(--at-bg2) !important; border: 0.
 
 nav.pagination { background-color: var(--at-bg2) !important; border: 0.5px solid var(--at-border) !important; border-radius: var(--at-radius) !important; overflow: hidden !important; }
 .pagination__link, a.pagination__link, li.pagination__previous, li.pagination__next, li.pagination__ellipsis, .pagination__previous, .pagination__next { background-color: var(--at-bg2) !important; color: var(--at-text2) !important; border-color: var(--at-border) !important; }
-a.pagination__link, a.pagination__next, a.pagination__previous { color: var(--at-text2) !important; }
+a.pagination__link, li.pagination__next { margin-left: 4px !important; }
+li.pagination__previous { margin-right: 4px !important; }
+a.pagination__next, a.pagination__previous { color: var(--at-text2) !important; }
 .pagination__link:hover, a.pagination__link:hover, li.pagination__next:hover, li.pagination__previous:hover, a.pagination__next:hover, a.pagination__previous:hover { background-color: var(--at-bg3) !important; color: var(--at-gold) !important; }
 li.pagination__current, .pagination__current { background-color: var(--at-bg3) !important; color: var(--at-gold) !important; border-color: var(--at-goldfaint) !important; font-weight: 600 !important; }
 li.pagination__previous--disabled, li.pagination__next--disabled { background-color: var(--at-bg2) !important; color: var(--at-text3) !important; opacity: 0.7 !important; }
@@ -387,7 +389,7 @@ ul.meta__dropdown a, ul.meta__dropdown button { color: var(--at-text) !important
 ul.meta__dropdown a:hover, ul.meta__dropdown button:hover { color: var(--at-gold) !important; background: var(--at-goldfaint) !important; }
 .meta__title-link:hover, .meta__title-link:hover .meta__title { color: var(--at-gold) !important; }
 .meta-chip:hover { background: rgba(15,20,40,0.75) !important; }
-.panelV2:last-of-type .data-table th:first-child, .panelV2:last-of-type .data-table td[rowspan] { display: none !important; }
+table.similar-torrents__torrents th:first-child, table.similar-torrents__torrents td[rowspan] { display: none !important; }
 .meta__backdrop { filter: brightness(0.6) !important; }
 .work__tags, .meta__ids, .meta__description { margin-left: 0 !important; margin-right: 0 !important; justify-self: start !important; }
 .work__tags { background: rgba(15,20,40,0.55) !important; border-radius: 6px !important; }
@@ -395,7 +397,7 @@ ul.meta__dropdown a:hover, ul.meta__dropdown button:hover { color: var(--at-gold
 .meta__ids { background: rgba(15,20,40,0.55) !important; border-radius: 6px !important; }
 .meta__description { background: rgba(15,20,40,0.5) !important; padding: 3px 6px !important; border-radius: 6px !important; }
 .meta__heading { background: none !important; }
-.meta-chip { background: rgba(15,20,40,0.55) !important; padding: 6px 10px !important; border-radius: 8px !important; margin-bottom: 4px !important; }
+.meta-chip { background: rgba(15,20,40,0.55) !important; padding: 0 10px !important; border-radius: 8px !important; margin-bottom: 4px !important; }
 .meta__chip-container { max-height: 280px !important; overflow-y: auto !important; overflow-x: hidden !important; scrollbar-width: none !important; position: relative !important; -webkit-mask-image: linear-gradient(to bottom, black 0%, black 80%, transparent 100%) !important; mask-image: linear-gradient(to bottom, black 0%, black 80%, transparent 100%) !important; }
 .meta__chip-container::-webkit-scrollbar { width: 0 !important; display: none !important; }
 
@@ -561,12 +563,46 @@ article.comment {
   grid-template-columns: 160px 1fr !important;
 }
 
-.torrent-card:hover .torrent-card__footer {
-  background-color: #1c2540 !important;
-}
+
 tr.torrent-search--list__sticky-row:hover td {
   background-color: transparent !important;
 }
 tr.torrent-search--list__sticky-row:hover {
   background-color: rgba(245,166,35,0.08) !important;
+}
+
+li.top-nav__dropdown ul li i.fas,
+li.top-nav__dropdown ul li i.far,
+li.top-nav__dropdown ul li i.fab {
+  width: 30px !important;
+  height: 30px !important;
+  text-align: center !important;
+}
+
+li.pagination__current, .pagination__current {
+  border-radius: 6px !important;
+}
+a.pagination__link {
+  border-radius: 4px !important;
+}
+li.pagination__next { margin-left: 4px !important; }
+li.pagination__previous { margin-right: 4px !important; }
+a.pagination__next, a.pagination__previous {
+  padding: 0 10px !important;
+}
+
+.panel__action-text {
+  color: var(--at-text3) !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+}
+
+
+.internal-card__header,
+.internal-card__footer {
+  background-color: #131522 !important;
+}
+
+.torrent-search--list__no-poster-headers th {
+  white-space: nowrap !important;
 }
