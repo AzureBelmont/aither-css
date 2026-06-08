@@ -679,7 +679,26 @@ li.pagination__previous--disabled {
   border-color: transparent !important;
 }
 
-.data-table:not(.similar-torrents__torrents) td[rowspan] { font-size: 0 !important; color: transparent !important; }
+.data-table:not(.similar-torrents__torrents) td[rowspan],
+.data-table:not(.similar-torrents__torrents):has(td[rowspan]) th:first-child {
+  width: 0 !important; max-width: 0 !important; min-width: 0 !important;
+  padding: 0 !important; font-size: 0 !important; border: none !important;
+  overflow: hidden !important;
+}
+
+table.similar-torrents__torrents a[title="Edit"],
+table.similar-torrents__torrents button[title="Bookmark"],
+table.similar-torrents__torrents a[title="Download"] {
+  color: var(--k-pink) !important; opacity: 0.65 !important;
+  background: transparent !important; border: none !important;
+  transition: opacity .15s, filter .15s !important;
+}
+table.similar-torrents__torrents a[title="Edit"]:hover,
+table.similar-torrents__torrents button[title="Bookmark"]:hover,
+table.similar-torrents__torrents a[title="Download"]:hover {
+  opacity: 1 !important; color: var(--k-pink) !important;
+  filter: drop-shadow(0 0 4px rgba(244,170,202,0.5)) !important;
+}
 
 .internal-card__footer { overflow: hidden !important; scrollbar-width: none !important; }
 .internal-card__footer::-webkit-scrollbar { display: none !important; }
