@@ -287,7 +287,7 @@ ul.pagination__pages li:hover { background-color: var(--k-bg3) !important; }
 .form__button--outlined { background-color: transparent !important; color: var(--k-text) !important; border: 1px solid var(--k-text3) !important; }
 .form__button--outlined:hover { background-color: var(--k-pink-faint) !important; border-color: var(--k-pink) !important; color: var(--k-pink) !important; }
 .form__standard-icon-button { background: transparent !important; border: none !important; color: var(--k-pink) !important; opacity: 0.55 !important; transition: opacity .15s !important; }
-.form__standard-icon-button:hover { opacity: 1 !important; filter: drop-shadow(0 0 4px rgba(244,170,202,0.5)) !important; }
+.form__standard-icon-button:hover { opacity: 1 !important; color: var(--k-pink) !important; filter: drop-shadow(0 0 4px rgba(244,170,202,0.5)) !important; }
 
 a.form__button--text[href*="/dashboard/reports"], a.form__button--text[href*="/contributors/internal-claim"], a.form__button--text[href*="/contributors/contest"] { color: var(--k-text) !important; }
 a.form__button--text[href*="/dashboard/reports"]:hover, a.form__button--text[href*="/contributors/internal-claim"]:hover, a.form__button--text[href*="/contributors/contest"]:hover { color: var(--k-pink) !important; }
@@ -297,8 +297,8 @@ a.form__button--text[href*="/dashboard/reports"]:hover, a.form__button--text[hre
 a[href*="/dashboard/reports"] svg circle, a[href*="/contributors"] svg circle { stroke: var(--k-pink) !important; fill: var(--k-pink) !important; }
 .page__contributor--index a svg circle { stroke: var(--k-pink) !important; }
 
-a.form__button[href*="/torrents/download/"] { background-color: var(--k-pink) !important; color: #000 !important; border: 1px solid var(--k-pink) !important; font-weight: 600 !important; border-radius: 9999px !important; }
-a.form__button[href*="/torrents/download/"]:hover { background-color: var(--k-pink-soft) !important; border-color: var(--k-pink-soft) !important; color: #000 !important; }
+a.form__button[href*="/torrents/download/"] { background-color: rgba(244,170,202,0.12) !important; color: var(--k-pink) !important; border: 1px solid var(--k-pink) !important; font-weight: 600 !important; border-radius: 9999px !important; }
+a.form__button[href*="/torrents/download/"]:hover { background-color: rgba(244,170,202,0.20) !important; border-color: var(--k-pink) !important; color: var(--k-pink) !important; box-shadow: 0 0 12px rgba(244,170,202,0.4) !important; }
 
 fieldset, .form__fieldset { border-color: var(--k-border-mid) !important; }
 fieldset.form, .form.form__fieldset, fieldset.form__fieldset { background-color: var(--k-bg3) !important; border-color: var(--k-border-mid) !important; }
@@ -362,7 +362,7 @@ ul.meta__dropdown a, ul.meta__dropdown button { color: var(--k-text) !important;
 ul.meta__dropdown a:hover, ul.meta__dropdown button:hover { color: var(--k-pink) !important; background: var(--k-pink-faint) !important; }
 .meta__title-link:hover, .meta__title-link:hover .meta__title { color: var(--k-pink) !important; }
 .meta-chip:hover { background: rgba(20,20,20,0.8) !important; }
-table.similar-torrents__torrents th:first-child, table.similar-torrents__torrents td[rowspan] { display: none !important; }
+
 .meta__backdrop { filter: brightness(0.6) !important; }
 .work__tags, .meta__ids, .meta__description { margin-left: 0 !important; margin-right: 0 !important; justify-self: start !important; }
 .work__tags { background: rgba(20,20,20,0.65) !important; border-radius: 6px !important; }
@@ -678,6 +678,13 @@ li.pagination__previous--disabled {
   background-color: transparent !important;
   border-color: transparent !important;
 }
+
+.data-table:not(.similar-torrents__torrents) td[rowspan] { font-size: 0 !important; color: transparent !important; }
+
+.internal-card__footer { overflow: hidden !important; scrollbar-width: none !important; }
+.internal-card__footer::-webkit-scrollbar { display: none !important; }
+.internal-card__left-footer { overflow: hidden !important; min-width: 0 !important; }
+.internal-card__title { overflow: hidden !important; text-overflow: ellipsis !important; white-space: nowrap !important; display: inline-block !important; max-width: 100% !important; vertical-align: bottom !important; }
 
 .torrent__mediainfo-header,
 .panel__heading:has(.form__standard-icon-button) {
