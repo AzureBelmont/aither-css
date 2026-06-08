@@ -3,7 +3,7 @@
    A Japanese fox-spirit theme for Aither (UNIT3D)
    Author : AzureBelmont
    Repo   : github.com/AzureBelmont/aither-css
-   Ver    : 2.2
+   Ver    : 2.2.1
    Palette
    ────────────────────────────────────────────
    Sakura Pink  #F4AACA   primary accent
@@ -64,6 +64,7 @@ body, html { background-color: var(--k-bg) !important; color: var(--k-text) !imp
 ::-webkit-scrollbar-track { background: var(--k-bg); }
 ::-webkit-scrollbar-thumb { background: var(--k-bg5); border-radius: 2px; }
 ::-webkit-scrollbar-thumb:hover { background: rgba(244,170,202,0.30); }
+html { scrollbar-width: thin !important; scrollbar-color: var(--k-bg5) var(--k-bg) !important; }
 
 .top-nav { background-color: #000 !important; border-bottom: 1px solid var(--k-pink-border) !important; }
 
@@ -144,8 +145,8 @@ html body .panelV2 > :last-child { border-radius: 0 0 var(--k-radius) var(--k-ra
 .panelV2 > .panel__body > nav.pagination { border-radius: 0 !important; border: none !important; }
 
 .panel__heading, .panel__heading a, .panel__heading a:visited { background-color: var(--k-bg3) !important; border-bottom: none !important; color: var(--k-pink) !important; font-weight: 600 !important; letter-spacing: .05em !important; border-radius: var(--k-radius) var(--k-radius) 0 0 !important; padding-left: 14px !important; }
-.panel__heading::before { display: none !important; }
 .panel__heading a:hover { opacity: 0.75 !important; }
+.panel__heading::before { display: none !important; }
 .panel__body, div.panel__body { background-color: var(--k-bg2) !important; }
 
 .panel__heading a.user-tag__link[style*="color:#95A5A6"],.panel__heading a.user-tag__link[style*="color: #95A5A6"] { color: #95A5A6 !important; }
@@ -339,11 +340,13 @@ input[type="checkbox"], input[type="radio"] { accent-color: var(--k-pink) !impor
 
 .swal2-popup { background-color: var(--k-bg2) !important; border: 0.5px solid var(--k-pink-border) !important; border-radius: var(--k-radius) !important; color: var(--k-text) !important; box-shadow: 0 8px 40px rgba(0,0,0,0.8) !important; }
 .swal2-toast { background-color: var(--k-bg3) !important; border: 0.5px solid var(--k-pink-border) !important; border-radius: var(--k-radius) !important; box-shadow: 0 4px 20px rgba(0,0,0,0.5) !important; }
-.swal2-title { color: var(--k-text) !important; font-size: 15px !important; }
+.swal2-title, .swal2-popup h2, .swal2-popup .swal2-title { color: var(--k-text) !important; font-size: 15px !important; }
 .swal2-html-container, .swal2-content { color: var(--k-text2) !important; }
 .swal2-icon.swal2-success { border-color: var(--k-pink) !important; color: var(--k-pink) !important; }
 .swal2-icon.swal2-success .swal2-success-ring { border-color: var(--k-pink-dim) !important; }
 .swal2-icon.swal2-success [class^="swal2-success-line"] { background-color: var(--k-pink) !important; }
+.swal2-icon.swal2-error { border-color: var(--k-torii) !important; color: var(--k-torii) !important; }
+.swal2-icon.swal2-error [class^="swal2-x-mark-line"] { background-color: var(--k-torii) !important; }
 .swal2-timer-progress-bar { background: var(--k-pink) !important; }
 .swal2-confirm { background-color: var(--k-pink) !important; color: #000 !important; font-weight: 600 !important; border-radius: var(--k-radius-sm) !important; }
 .swal2-deny, .swal2-cancel { background-color: var(--k-bg4) !important; color: var(--k-text2) !important; border-radius: var(--k-radius-sm) !important; }
@@ -367,11 +370,10 @@ h1.text-gold, h2.text-gold, h3.text-gold, h4.text-gold, .text-gold { color: var(
 #chatbox_header .form__select:hover { border-color: rgba(244,170,202,0.35) !important; }
 #chatbox_header .form__label--floating { color: var(--k-pink) !important; }
 
-article.chatbox-message { background-color: #060608 !important; transition: background-color 0.15s ease; border-radius: 0 !important; padding: 5px 8px 5px 0 !important; margin: 0 !important; gap: 0px 8px !important; grid-template-columns: 40px auto 1fr auto !important; align-items: start !important; border-bottom: 1px dashed #222222 !important; }
+article.chatbox-message { background-color: #060608 !important; position: relative !important; transition: background-color 0.15s ease; border-radius: 0 !important; padding: 5px 8px 5px 0 !important; margin: 0 !important; gap: 0px 8px !important; grid-template-columns: 40px auto 1fr auto !important; align-items: start !important; border-bottom: 1px dashed #222222 !important; }
 article.chatbox-message::before { display: none !important; }
 article.chatbox-message:hover { background-color: rgba(244,170,202,0.02) !important; }
-.chatbox-message__menu { display: block !important; visibility: hidden !important; opacity: 0 !important; transition: opacity 0.1s ease !important; }
-.chatbox-message:hover .chatbox-message__menu { visibility: visible !important; opacity: 1 !important; }
+.chatbox-message__menu { position: absolute !important; right: 8px !important; top: 4px !important; }
 .chatbox-message__aside { position: static !important; left: auto !important; padding: 0 !important; width: 40px !important; min-width: 40px !important; grid-row: 1 / -1 !important; align-self: start !important; line-height: 0 !important; font-size: 0 !important; }
 .chatbox-message__aside figure { line-height: 0 !important; font-size: 0 !important; margin: 0 !important; padding: 0 !important; }
 .chatbox-message__aside img { width: 40px !important; height: 40px !important; min-width: 40px !important; border-radius: 50% !important; object-fit: cover !important; }
