@@ -178,8 +178,9 @@ html body .panel__header .panel__heading { flex: 1 !important; }
 section.panel { background-color: var(--k-bg2) !important; border: 0.5px solid var(--k-pink-border) !important; border-radius: var(--k-radius) !important; overflow: hidden !important; box-shadow: 0 4px 32px rgba(0,0,0,0.7) !important; }
 html body .panel__heading--centered { background-color: transparent !important; border: none !important; }
 html body .panel__header .panel__heading, html body .panel__header .panel__heading--centered { background-color: transparent !important; border: none !important; }
-html body .panel__actions { background-color: transparent !important; }
+html body .panel__actions { background-color: transparent !important; display: flex !important; align-items: center !important; }
 html body .panel__action  { background-color: transparent !important; }
+html body .panel__actions .form__button--text { padding-top: 0 !important; padding-bottom: 0 !important; line-height: 1 !important; display: inline-flex !important; align-items: center !important; }
 
 html body .panel__tabs { background-color: var(--k-bg2) !important; border-bottom: 1px solid var(--k-pink-border) !important; padding: 0 4px !important; }
 html body .panel__tab { color: var(--k-text3) !important; border-bottom: 2px solid transparent !important; padding: 8px 12px !important; font-size: 13px !important; letter-spacing: .03em !important; transition: color .15s !important; }
