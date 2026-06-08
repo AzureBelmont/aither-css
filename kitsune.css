@@ -173,7 +173,9 @@ html body .panelV2 > :last-child { border-radius: 0 0 var(--k-radius) var(--k-ra
 .panel__heading a.user-tag__link[style*="color:#00abff"],.panel__heading a.user-tag__link[style*="color: #00abff"] { color: #00abff !important; }
 .panel__heading a.user-tag__link[style*="color:#4ECDC4"],.panel__heading a.user-tag__link[style*="color: #4ECDC4"] { color: #4ECDC4 !important; }
 
-html body .panel__header { background-color: var(--k-bg2) !important; border-bottom: 0.5px solid var(--k-border) !important; border-radius: var(--k-radius) var(--k-radius) 0 0 !important; padding-right: 8px !important; }
+html body .panel__header { background-color: var(--k-bg2) !important; border-bottom: 0.5px solid var(--k-border) !important; border-radius: var(--k-radius) var(--k-radius) 0 0 !important; padding-right: 8px !important; display: flex !important; align-items: center !important; }
+html body .panel__header .panel__heading { flex: 1 !important; }
+section.panel { background-color: var(--k-bg2) !important; border: 0.5px solid var(--k-pink-border) !important; border-radius: var(--k-radius) !important; overflow: hidden !important; box-shadow: 0 4px 32px rgba(0,0,0,0.7) !important; }
 html body .panel__heading--centered { background-color: transparent !important; border: none !important; }
 html body .panel__header .panel__heading, html body .panel__header .panel__heading--centered { background-color: transparent !important; border: none !important; }
 html body .panel__actions { background-color: transparent !important; }
