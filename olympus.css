@@ -267,7 +267,7 @@ nav.pagination { background-color: var(--at-bg2) !important; border: 0.5px solid
 a.pagination__link, li.pagination__next { margin-left: 8px !important; }
 li.pagination__previous { margin-right: 4px !important; }
 a.pagination__next, a.pagination__previous { color: var(--at-text2) !important; }
-.pagination__link:hover, a.pagination__link:hover, li.pagination__next:hover, li.pagination__previous:hover, a.pagination__next:hover, a.pagination__previous:hover { background-color: var(--at-bg3) !important; color: var(--at-gold) !important; }
+.pagination__link:hover, a.pagination__link:hover, a.pagination__next:hover, a.pagination__previous:hover { background-color: var(--at-bg3) !important; color: var(--at-gold) !important; }
 li.pagination__current, .pagination__current { background-color: var(--at-bg3) !important; color: var(--at-gold) !important; border-color: var(--at-goldfaint) !important; font-weight: 600 !important; }
 li.pagination__previous--disabled, li.pagination__next--disabled { background-color: var(--at-bg2) !important; color: var(--at-text3) !important; opacity: 0.7 !important; }
 
