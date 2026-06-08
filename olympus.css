@@ -378,6 +378,7 @@ table td i.fas.fa-circle.fa-xs { color: var(--at-gold) !important; animation: at
 .footer, footer { background-color: #08090f !important; border-top: 1px solid var(--at-goldfaint) !important; }
 .footer__section-title { color: var(--at-gold) !important; font-weight: 600 !important; text-transform: uppercase !important; font-size: 11px !important; letter-spacing: .1em !important; }
 .footer__copyright, .footer__stats { color: var(--at-text3) !important; font-size: 12px !important; }
+.footer__icons a[href*="rust-lang"] svg { filter: brightness(0) invert(1) opacity(0.6) !important; }
 
 ::-webkit-scrollbar { width: 5px; height: 5px; }
 ::-webkit-scrollbar-track { background: var(--at-bg); }
