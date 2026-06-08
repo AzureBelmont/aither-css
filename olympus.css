@@ -3,7 +3,7 @@
    Gold accents. Dark panels. Clean.
    Author : AzureBelmont
    Repo   : github.com/AzureBelmont/aither-css
-   Ver    : 2.2.1
+   Ver    : 2.2.2
    Palette
    ────────────────────────────────────────────
    Gold         #f5a623   primary accent
@@ -41,7 +41,7 @@
   --paginate-bg:                   #111928;
   --paginate-bg-hover:             #1c2540;
   --paginate-fg:                   #7a80a0;
-  --data-table-tr-hover-bg:        rgba(245,166,35,0.025);
+  --data-table-tr-hover-bg:        rgba(245,166,35,0.06);
 }
 
 li.top-nav__dropdown ul li a.top-nav__username i[class*="fa-"] { color: inherit !important; background-color: transparent !important; border-color: transparent !important; }
@@ -180,7 +180,7 @@ h1, h2, h3 { color: var(--at-text) !important; }
 h1.text-gold, h2.text-gold, h3.text-gold, h4.text-gold, .text-gold { color: var(--at-gold) !important; }
 .data-table-wrapper { border-radius: var(--at-radius) !important; overflow: hidden !important; border: 0.5px solid rgba(245,166,35,0.15) !important; }
 .data-table thead th, .data-table thead td, .torrent-search--list__no-poster-headers th, .torrent-search--list__no-poster-headers td { background-color: var(--at-bg3) !important; color: var(--at-text2) !important; font-size: 11px !important; font-weight: 600 !important; letter-spacing: .08em !important; text-transform: uppercase !important; border-bottom: 1px solid var(--at-goldfaint) !important; }
-.data-table tbody tr:hover td { background-color: rgba(245,166,35,0.025) !important; }
+.data-table tbody tr:hover td { background-color: rgba(245,166,35,0.06) !important; }
 .data-table td { border-bottom: 0.5px solid var(--at-border) !important; }
 td { background-color: var(--at-bg2) !important; }
 tr:nth-child(even) td { background-color: var(--at-bg3) !important; }
@@ -189,7 +189,7 @@ table.similar-torrents__torrents tbody:nth-of-type(even) td, table.similar-torre
 table.similar-torrents__torrents { border: none !important; }
 table.similar-torrents__torrents tbody + tbody { border-top: 2px solid var(--at-goldfaint) !important; }
 table.similar-torrents__torrents tbody th { border-bottom: none !important; }
-tr:hover td { background-color: rgba(245,166,35,0.025) !important; }
+tr:hover td { background-color: rgba(245,166,35,0.06) !important; }
 thead td, thead th { background-color: var(--at-bg3) !important; }
 th { background-color: var(--at-bg3) !important; color: var(--at-text2) !important; border-bottom: 1px solid var(--at-goldfaint) !important; }
 td[class*="torrent-search--list__"] { background-color: transparent !important; }
@@ -209,7 +209,7 @@ tr.torrent-search--list__sticky-row .torrent-search--list__name > a:first-child 
 .torrent-icons__freeleech { color: var(--at-gold) !important; }
 .torrent-icons__internal  { color: #baaf92 !important; }
 .torrent-icons__verified  { color: var(--at-green) !important; }
-.torrent-icons { background-color: #84848421 !important; padding: 0px 7px !important; border-radius: 10px !important; display: inline-flex !important; align-items: center !important; flex-wrap: nowrap !important; gap: 6px !important; width: fit-content !important; vertical-align: middle !important; }
+.torrent-icons { background-color: #84848421 !important; padding: 2px 7px !important; margin-top: 2px !important; border-radius: 10px !important; display: inline-flex !important; align-items: center !important; flex-wrap: nowrap !important; gap: 6px !important; width: fit-content !important; vertical-align: middle !important; }
 .torrent-icons__vision { display: inline-flex !important; align-items: center !important; }
 .torrent-icons__vision img { display: inline-block !important; vertical-align: middle !important; height: 14px !important; width: auto !important; filter: invert(1) brightness(0.8) !important; }
 .torrent-search--list__resolution-and-type { background-color: transparent !important; color: var(--at-text2) !important; border: none !important; box-shadow: none !important; }
@@ -289,7 +289,7 @@ a.form__button--text[href*="/dashboard/reports"]:hover, a.form__button--text[hre
 a[href*="/dashboard/reports"] svg circle, a[href*="/contributors"] svg circle { stroke: var(--at-gold) !important; fill: var(--at-gold) !important; }
 .page__contributor--index a svg circle { stroke: var(--at-gold) !important; }
 .form__standard-icon-button { background: transparent !important; border: none !important; box-shadow: none !important; color: var(--at-gold) !important; opacity: 0.65 !important; transition: opacity .15s !important; }
-.form__standard-icon-button:hover { opacity: 1 !important; }
+.form__standard-icon-button:hover { opacity: 1 !important; filter: drop-shadow(0 0 4px rgba(245,166,35,0.5)) !important; }
 .form__select, select.form__select { background-color: var(--at-bg3) !important; border: 1px solid var(--at-border) !important; border-radius: 6px !important; box-shadow: none !important; color: var(--at-text) !important; color-scheme: dark; }
 .form__select:hover, select.form__select:hover { border-color: rgba(245,166,35,0.4) !important; }
 .form__select:focus, select.form__select:focus { border-color: var(--at-gold) !important; color: var(--at-text) !important; }
@@ -357,11 +357,11 @@ input[type="checkbox"], input[type="radio"] { accent-color: var(--at-gold) !impo
 table.internal-claim__inner-table tr td, table.internal-claim__inner-table tr:nth-child(even) td { background-color: transparent !important; }
 tr.moderation__details-table--bottom td, tr.moderation__details-table--bottom:nth-child(even) td { background-color: transparent !important; }
 
-.form__button--filled { background-color: transparent !important; color: var(--at-text) !important; border: 1px solid var(--at-text2) !important; }
-.form__button--outlined { background-color: transparent !important; color: var(--at-text) !important; border: 1px solid var(--at-text2) !important; }
+.form__button--filled { background-color: transparent !important; color: var(--at-text) !important; border: 1px solid var(--at-text3) !important; }
+.form__button--outlined { background-color: transparent !important; color: var(--at-text) !important; border: 1px solid var(--at-text3) !important; }
 .form__button--filled:hover, .form__button--outlined:hover { background-color: var(--at-goldfaint) !important; border-color: var(--at-gold) !important; color: var(--at-gold) !important; }
-a.form__button[href*="/torrents/download/"] { background-color: #2563eb !important; color: #fff !important; border: 1px solid #2563eb !important; }
-a.form__button[href*="/torrents/download/"]:hover { background-color: var(--at-goldfaint) !important; border-color: var(--at-gold) !important; color: var(--at-gold) !important; }
+a.form__button[href*="/torrents/download/"] { background-color: var(--at-gold) !important; color: #0f1117 !important; border: 1px solid var(--at-gold) !important; font-weight: 600 !important; border-radius: 8px !important; }
+a.form__button[href*="/torrents/download/"]:hover { background-color: var(--at-gold2) !important; border-color: var(--at-gold2) !important; color: #0f1117 !important; }
 
 ul.nav-tab-menu__items { background-color: var(--at-bg2) !important; border-bottom: 1px solid var(--at-goldfaint) !important; }
 li.nav-tab--active, li.nav-tavV2 { background-color: transparent !important; }
@@ -574,7 +574,6 @@ aside.post__aside {
   overflow: hidden !important;
 }
 
-
 tr.torrent-search--list__sticky-row:hover td {
   background-color: transparent !important;
 }
@@ -608,12 +607,11 @@ a.pagination__next, a.pagination__previous {
   font-weight: 400 !important;
 }
 
-
 .internal-card__header {
   background-color: var(--at-bg3) !important;
 }
 .internal-card__footer {
-  background-color: #131522 !important;
+  background-color: var(--at-bg3) !important;
 }
 
 .torrent-search--list__no-poster-headers th {
@@ -626,4 +624,11 @@ li.pagination__next--disabled,
 li.pagination__previous--disabled {
   background-color: transparent !important;
   border-color: transparent !important;
+}
+
+.torrent__mediainfo-header,
+.panel__heading:has(.form__standard-icon-button) {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
 }
