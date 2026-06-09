@@ -542,7 +542,7 @@ input[type="file"]::file-selector-button:hover { background-color: var(--at-gold
   display: none !important;
 }
 .collection-posters {
-  overflow: hidden !important;
+  overflow-x: hidden !important;
 }
 .compact-search .form__group {
   margin: 0 !important;
