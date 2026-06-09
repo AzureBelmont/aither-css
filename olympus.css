@@ -459,8 +459,9 @@ a[style*="color:#95A5A6"],a[style*="color: #95A5A6"] { color: #95A5A6 !important
 
 .bbcode-input__tab-pane { background-color: var(--at-bg2) !important; }
 .bbcode-input { border-color: var(--at-border) !important; }
-.page__post--edit .bbcode-input__input { min-height: 70vh !important; field-sizing: content !important; }
-.page__user-conversation--show .bbcode-input__input { min-height: 200px !important; field-sizing: content !important; }
+.page__post--edit .bbcode-input__input { min-height: 70vh !important; }
+.page__user-conversation--show .bbcode-input__input { min-height: 200px !important; }
+.page__topic--show .bbcode-input__input { min-height: 180px !important; }
 .bbcode-input__tab-input:checked + .bbcode-input__tab-label { color: var(--at-gold) !important; border-bottom-color: var(--at-gold) !important; }
 .bbcode-rendered__clipboard { background-color: var(--at-bg3) !important; opacity: 0.85 !important; }
 
@@ -539,6 +540,9 @@ input[type="file"]::file-selector-button:hover { background-color: var(--at-gold
 }
 .similar-torrents__filters {
   display: none !important;
+}
+.collection-posters {
+  overflow: hidden !important;
 }
 .compact-search .form__group {
   margin: 0 !important;
