@@ -459,7 +459,7 @@ a[style*="color:#95A5A6"],a[style*="color: #95A5A6"] { color: #95A5A6 !important
 
 .bbcode-input__tab-pane { background-color: var(--at-bg2) !important; }
 .bbcode-input { border-color: var(--at-border) !important; }
-.bbcode-input__input { min-height: 70vh !important; }
+.page__post--edit .bbcode-input__input { min-height: 70vh !important; }
 .bbcode-input__tab-input:checked + .bbcode-input__tab-label { color: var(--at-gold) !important; border-bottom-color: var(--at-gold) !important; }
 .bbcode-rendered__clipboard { background-color: var(--at-bg3) !important; opacity: 0.85 !important; }
 
