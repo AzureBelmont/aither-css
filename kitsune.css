@@ -690,6 +690,11 @@ aside.post__aside {
   max-width: 250px !important;
   text-align: center !important;
 }
+aside.post__aside .user-tag,
+aside.comment__aside .user-tag {
+  justify-content: center !important;
+  flex-wrap: wrap !important;
+}
 
 
 
