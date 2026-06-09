@@ -572,24 +572,13 @@ article.user-stat-card, .user-stat-card {
   border-radius: 10% !important;
 }
 
-article.comment {
-  grid-template-columns: 250px 1fr !important;
-}
-aside.comment__aside {
-  max-width: 250px !important;
-  text-align: center !important;
-}
-article.post {
-  grid-template-columns: 250px 1fr !important;
-}
-aside.post__aside {
-  max-width: 250px !important;
-  text-align: center !important;
-}
-aside.post__aside .user-tag,
-aside.comment__aside .user-tag {
-  justify-content: center !important;
-  flex-wrap: wrap !important;
+@media (min-width: 768px) {
+  article.comment { grid-template-columns: 250px 1fr !important; }
+  aside.comment__aside { max-width: 250px !important; text-align: center !important; }
+  article.post { grid-template-columns: 250px 1fr !important; }
+  aside.post__aside { max-width: 250px !important; text-align: center !important; }
+  aside.post__aside .user-tag,
+  aside.comment__aside .user-tag { justify-content: center !important; flex-wrap: wrap !important; }
 }
 
 tr.torrent-search--list__sticky-row:hover td {
