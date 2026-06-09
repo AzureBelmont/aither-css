@@ -580,6 +580,10 @@ article.user-stat-card, .user-stat-card {
   aside.post__aside .user-tag,
   aside.comment__aside .user-tag { justify-content: center !important; flex-wrap: wrap !important; }
 }
+@media (max-width: 767px) {
+  article.comment { grid-template-columns: 1fr !important; }
+  aside.comment__aside { max-width: none !important; }
+}
 
 tr.torrent-search--list__sticky-row:hover td {
   background-color: transparent !important;
