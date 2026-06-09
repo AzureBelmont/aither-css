@@ -660,3 +660,6 @@ ul.torrent__tags {
 ul.torrent__tags > li::after {
   color: var(--at-gold) !important;
 }
+ul.torrent__tags .torrent-icons {
+  margin-left: 4px !important;
+}
