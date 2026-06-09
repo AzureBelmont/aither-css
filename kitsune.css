@@ -727,3 +727,6 @@ ul.torrent__tags {
 ul.torrent__tags > li::after {
   color: var(--k-pink) !important;
 }
+ul.torrent__tags .torrent-icons {
+  margin-left: 4px !important;
+}
