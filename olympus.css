@@ -279,7 +279,7 @@ fieldset.form, .form.form__fieldset, fieldset.form__fieldset { background-color:
 .form__label--floating { background-color: var(--at-bg2) !important; color: var(--at-text2) !important; border-radius: 2px !important; }
 fieldset .form__label--floating, [class*="compact-search"] .form__label--floating, [class*="torrent-search"] .form__label--floating { background-color: var(--at-bg3) !important; }
 .form__group:has(select) .form__label--floating, .form__group:has(input:not(:placeholder-shown)) .form__label--floating, .form__group:has(textarea:not(:placeholder-shown)) .form__label--floating { padding: 0 4px !important; }
-textarea, textarea.form__textarea, .form__textarea { background-color: var(--at-bg2) !important; border: 1px solid rgba(255,255,255,0.10) !important; color: var(--at-text) !important; border-radius: var(--at-radius) !important; resize: vertical !important; }
+textarea, textarea.form__textarea, .form__textarea { background-color: var(--at-bg2) !important; border: 1px solid rgba(255,255,255,0.10) !important; color: var(--at-text) !important; border-radius: var(--at-radius) !important; }
 textarea:focus, textarea.form__textarea:focus, .form__textarea:focus { border-color: rgba(245,166,35,0.6) !important; box-shadow: 0 0 0 3px rgba(245,166,35,0.10) !important; outline: none !important; }
 
 .form__button--text { background: transparent !important; border: none !important; box-shadow: none !important; color: var(--at-gold) !important; }
