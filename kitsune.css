@@ -684,6 +684,12 @@ article.user-stat-card, .user-stat-card {
   aside.post__aside .user-tag,
   aside.comment__aside .user-tag { justify-content: center !important; flex-wrap: wrap !important; }
 }
+@media (max-width: 767px) {
+  article.comment { display: flex !important; flex-direction: column !important; }
+  article.comment > aside.comment__aside { order: -1 !important; max-width: none !important; border-right: none !important; border-bottom: 0.5px solid var(--k-border) !important; }
+  article.comment > header.comment__header { order: 0 !important; }
+  article.comment > div.comment__content { order: 1 !important; }
+}
 
 
 
