@@ -155,7 +155,7 @@ section.panel { background-color: var(--at-bg2) !important; border: 0.5px solid 
 section.panel > .panel__heading { background-color: var(--at-bg2) !important; border-bottom: 0.5px solid var(--at-border) !important; }
 html body .panel__actions, html body .panel__action { background-color: transparent !important; }
 html body .panel__actions { display: flex !important; align-items: center !important; }
-html body .panel__actions .form__button--text { padding-top: 0 !important; padding-bottom: 0 !important; line-height: 1 !important; display: inline-flex !important; align-items: center !important; transform: translateY(-2px) !important; }
+html body .panel__actions .form__button--text { padding-top: 0 !important; padding-bottom: 0 !important; line-height: 1 !important; display: inline-flex !important; align-items: center !important; transform: translateY(-4px) !important; }
 html body .panel__tabs { background-color: var(--at-bg2) !important; border-bottom: 1px solid var(--at-goldfaint) !important; padding: 0 4px !important; }
 html body .panel__tab { color: var(--at-text3) !important; border-bottom: 2px solid transparent !important; padding: 8px 12px !important; transition: color .15s !important; }
 html body .panel__tab:hover { color: var(--at-text2) !important; }
