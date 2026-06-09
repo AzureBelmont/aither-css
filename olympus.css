@@ -582,7 +582,9 @@ article.user-stat-card, .user-stat-card {
 }
 @media (max-width: 767px) {
   article.comment { display: flex !important; flex-direction: column !important; }
-  aside.comment__aside { order: -1 !important; max-width: none !important; border-right: none !important; border-bottom: 0.5px solid var(--at-border) !important; }
+  article.comment > aside.comment__aside { order: -1 !important; max-width: none !important; border-right: none !important; border-bottom: 0.5px solid var(--at-border) !important; }
+  article.comment > header.comment__header { order: 0 !important; }
+  article.comment > div.comment__content { order: 1 !important; }
 }
 
 tr.torrent-search--list__sticky-row:hover td {
