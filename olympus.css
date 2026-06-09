@@ -581,8 +581,8 @@ article.user-stat-card, .user-stat-card {
   aside.comment__aside .user-tag { justify-content: center !important; flex-wrap: wrap !important; }
 }
 @media (max-width: 767px) {
-  article.comment { display: block !important; }
-  aside.comment__aside { max-width: none !important; border-right: none !important; border-bottom: 0.5px solid var(--at-border) !important; }
+  article.comment { display: flex !important; flex-direction: column !important; }
+  aside.comment__aside { order: -1 !important; max-width: none !important; border-right: none !important; border-bottom: 0.5px solid var(--at-border) !important; }
 }
 
 tr.torrent-search--list__sticky-row:hover td {
