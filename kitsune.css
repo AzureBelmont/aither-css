@@ -677,17 +677,17 @@ article.user-stat-card, .user-stat-card {
 }
 
 article.comment {
-  grid-template-columns: 220px 1fr !important;
+  grid-template-columns: 250px 1fr !important;
 }
 aside.comment__aside {
-  max-width: 220px !important;
+  max-width: 250px !important;
   text-align: center !important;
 }
 article.post {
-  grid-template-columns: 220px 1fr !important;
+  grid-template-columns: 250px 1fr !important;
 }
 aside.post__aside {
-  max-width: 220px !important;
+  max-width: 250px !important;
   text-align: center !important;
 }
 
