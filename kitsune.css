@@ -320,6 +320,8 @@ html body .panel__header .form__select, html body .panel__header select { backgr
 .bbcode-input__tab-pane { background-color: var(--k-bg2) !important; }
 .bbcode-input { border-color: var(--k-border) !important; }
 .page__post--edit .bbcode-input__input { min-height: 70vh !important; }
+.page__user-conversation--show .bbcode-input__input { min-height: 200px !important; }
+.page__topic--show .bbcode-input__input { min-height: 180px !important; }
 .bbcode-input__tab-input:checked + .bbcode-input__tab-label { color: var(--k-pink) !important; border-bottom-color: var(--k-pink) !important; }
 .bbcode-rendered__clipboard { background-color: var(--k-bg3) !important; opacity: 0.85 !important; }
 
@@ -613,6 +615,9 @@ a[style*="color:#95A5A6"],a[style*="color: #95A5A6"] { color: #95A5A6 !important
 }
 .similar-torrents__filters {
   display: none !important;
+}
+.collection-posters {
+  overflow: hidden !important;
 }
 .compact-search .form__group {
   margin: 0 !important;
