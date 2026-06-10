@@ -806,9 +806,3 @@ h2.meta__heading {
 .top-nav a:hover {
     text-decoration: var(--secondary-nav-tab-hover-text-decoration) !important;
 }
-
-.top-nav--left__list-item.top-nav__dropdown.active > a .top-nav--left__container {
-    text-decoration: underline;
-    text-decoration-color: var(--k-pink);
-    text-decoration-thickness: 2px;
-}
