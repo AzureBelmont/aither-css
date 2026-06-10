@@ -1381,6 +1381,14 @@ ul.torrent__tags .torrent-icons {
   text-decoration-thickness: var(--secondary-nav-tab-hover-text-decoration-thickness) !important;
 }
 
+.top-nav--left__list-item > a:hover,
+.top-nav__item > a:hover,
+.top-nav a:hover {
+  text-decoration-line: var(--secondary-nav-tab-hover-text-decoration-line) !important;
+  text-decoration-color: var(--secondary-nav-tab-hover-text-decoration-color) !important;
+  text-decoration-thickness: var(--secondary-nav-tab-hover-text-decoration-thickness) !important;
+}
+
 
 .form__button--text abbr {
     filter: brightness(.65) !important;
