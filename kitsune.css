@@ -750,3 +750,22 @@ h2.meta__heading {
   margin-top: 0 !important;
   margin-bottom: 6px !important;
 }
+
+@media (max-width: 768px) {
+  aside.post__aside {
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: none !important;
+  }
+
+  article.post {
+    grid-template-columns: 40px 1fr !important;
+  }
+
+  .post__content,
+  .post__body,
+  article.post {
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+  }
+}
