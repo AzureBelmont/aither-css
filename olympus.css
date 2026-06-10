@@ -42,9 +42,6 @@
   --paginate-bg-hover:             #1c2540;
   --paginate-fg:                   #7a80a0;
   --data-table-tr-hover-bg:        rgba(245,166,35,0.06);
-  --secondary-nav-tab-hover-text-decoration-line: underline;
-  --secondary-nav-tab-hover-text-decoration-color: var(--at-gold);
-  --secondary-nav-tab-hover-text-decoration-thickness: 2px;
   --secondary-nav-tab-hover-text-decoration: underline #f5a623 2px;
 }
 
@@ -2778,23 +2775,6 @@ ul.torrent__tags .torrent-icons {
     font-weight: inherit !important;
 }
 
-.top-nav--left__list-item > a:hover,
-.top-nav__item > a:hover,
-.top-nav a:hover {
-  text-decoration-line: var(--secondary-nav-tab-hover-text-decoration-line) !important;
-  text-decoration-color: var(--secondary-nav-tab-hover-text-decoration-color) !important;
-  text-decoration-thickness: var(--secondary-nav-tab-hover-text-decoration-thickness) !important;
-}
-
-.secondary-nav__item:hover > a,
-.secondary-nav__item a:hover,
-.secondary-nav a.secondary-nav__item:hover,
-.secondary-nav a:hover {
-  text-decoration-line: var(--secondary-nav-tab-hover-text-decoration-line) !important;
-  text-decoration-color: var(--secondary-nav-tab-hover-text-decoration-color) !important;
-  text-decoration-thickness: var(--secondary-nav-tab-hover-text-decoration-thickness) !important;
-}
-
 .secondary-nav a,
 .secondary-nav__item,
 .top-nav--left__list-item > a,
@@ -2813,3 +2793,4 @@ ul.torrent__tags .torrent-icons {
 .top-nav a:hover {
     text-decoration: var(--secondary-nav-tab-hover-text-decoration) !important;
 }
+
