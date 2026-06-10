@@ -783,8 +783,9 @@ h2.meta__heading {
     color: var(--k-pink) !important;
 }
 
---secondary-nav-tab-hover-text-decoration-line: underline;
---secondary-nav-tab-hover-text-decoration-color: var(--k-pink);
---secondary-nav-tab-hover-text-decoration-thickness: 2px;
-
-
+.secondary-nav__item:hover,
+.secondary-nav a:hover {
+  text-decoration-line: var(--secondary-nav-tab-hover-text-decoration-line) !important;
+  text-decoration-color: var(--secondary-nav-tab-hover-text-decoration-color) !important;
+  text-decoration-thickness: var(--secondary-nav-tab-hover-text-decoration-thickness) !important;
+}
