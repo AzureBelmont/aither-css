@@ -1358,3 +1358,7 @@ ul.torrent__tags .torrent-icons {
     word-break: break-word !important;
   }
 }
+
+.trending-poster__download-count {
+  color: var(--at-gold) !important;
+}
