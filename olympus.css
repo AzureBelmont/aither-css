@@ -45,6 +45,7 @@
   --secondary-nav-tab-hover-text-decoration-line: underline;
   --secondary-nav-tab-hover-text-decoration-color: var(--at-gold);
   --secondary-nav-tab-hover-text-decoration-thickness: 2px;
+  --secondary-nav-tab-hover-text-decoration: underline #f5a623 2px;
 }
 
 li.top-nav__dropdown ul li a.top-nav__username i[class*="fa-"] { color: inherit !important; background-color: transparent !important; border-color: transparent !important; }
@@ -2792,4 +2793,23 @@ ul.torrent__tags .torrent-icons {
   text-decoration-line: var(--secondary-nav-tab-hover-text-decoration-line) !important;
   text-decoration-color: var(--secondary-nav-tab-hover-text-decoration-color) !important;
   text-decoration-thickness: var(--secondary-nav-tab-hover-text-decoration-thickness) !important;
+}
+
+.secondary-nav a,
+.secondary-nav__item,
+.top-nav--left__list-item > a,
+.top-nav__item > a,
+.top-nav a {
+    text-decoration: none !important;
+}
+
+.secondary-nav a:hover,
+.secondary-nav__item:hover {
+    text-decoration: var(--secondary-nav-tab-hover-text-decoration) !important;
+}
+
+.top-nav--left__list-item > a:hover,
+.top-nav__item > a:hover,
+.top-nav a:hover {
+    text-decoration: var(--secondary-nav-tab-hover-text-decoration) !important;
 }
