@@ -789,3 +789,10 @@ h2.meta__heading {
   text-decoration-color: var(--secondary-nav-tab-hover-text-decoration-color) !important;
   text-decoration-thickness: var(--secondary-nav-tab-hover-text-decoration-thickness) !important;
 }
+
+.form__button--text abbr {
+    filter: brightness(.65) !important;
+    color: var(--k-text2) !important;
+    text-decoration: none !important;
+    font-weight: inherit !important;
+}
