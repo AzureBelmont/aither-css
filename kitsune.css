@@ -773,3 +773,10 @@ h2.meta__heading {
 .trending-poster__download-count {
   color: var(--k-pink) !important;
 }
+
+.trending-poster__download-count {
+    background: var(--k-bg3) !important;
+    border: 2px solid var(--k-pink) !important;
+    color: var(--k-pink) !important;
+}
+
