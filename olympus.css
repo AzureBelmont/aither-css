@@ -2774,3 +2774,25 @@ ul.torrent__tags .torrent-icons {
 .top-nav a:hover {
     text-decoration: var(--secondary-nav-tab-hover-text-decoration) !important;
 }
+.torrent-search--grouped__overview {
+    position: relative;
+}
+
+.torrent-search--grouped__overview::before,
+.torrent-search--grouped__overview::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--k-pink);
+    opacity: 0.8;
+}
+
+.torrent-search--grouped__overview::before {
+    top: -4px;
+}
+
+.torrent-search--grouped__overview::after {
+    bottom: -4px;
+}
