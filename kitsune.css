@@ -806,9 +806,3 @@ h2.meta__heading {
 .top-nav a:hover {
     text-decoration: var(--secondary-nav-tab-hover-text-decoration) !important;
 }
-
-.nav-link.active::after,
-.nav-item.active::after {
-  background-image: none !important;
-  content: none !important;
-}
