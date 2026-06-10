@@ -783,15 +783,14 @@ h2.meta__heading {
     color: var(--k-pink) !important;
 }
 
-.secondary-nav *:hover,
-.secondary-nav a:hover,
-.secondary-nav__item:hover,
-.secondary-nav__item a:hover {
+.secondary-nav__item:hover > a,
+.secondary-nav__item a:hover,
+.secondary-nav a.secondary-nav__item:hover,
+.secondary-nav a:hover {
   text-decoration-line: var(--secondary-nav-tab-hover-text-decoration-line) !important;
   text-decoration-color: var(--secondary-nav-tab-hover-text-decoration-color) !important;
   text-decoration-thickness: var(--secondary-nav-tab-hover-text-decoration-thickness) !important;
 }
-
 
 .form__button--text abbr {
     filter: brightness(.65) !important;
