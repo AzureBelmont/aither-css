@@ -1339,3 +1339,22 @@ ul.torrent__tags > li::after {
 ul.torrent__tags .torrent-icons {
   margin-left: 4px !important;
 }
+
+@media (max-width: 768px) {
+  aside.post__aside {
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: none !important;
+  }
+
+  article.post {
+    grid-template-columns: 40px 1fr !important;
+  }
+
+  .post__content,
+  .post__body,
+  article.post {
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+  }
+}
