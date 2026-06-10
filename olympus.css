@@ -2774,29 +2774,3 @@ ul.torrent__tags .torrent-icons {
 .top-nav a:hover {
     text-decoration: var(--secondary-nav-tab-hover-text-decoration) !important;
 }
-
-details.torrent-search--grouped__dropdown {
-    position: relative;
-    padding-top: 6px;
-    padding-bottom: 6px;
-}
-
-details.torrent-search--grouped__dropdown::before,
-details.torrent-search--grouped__dropdown::after {
-    content: "";
-    position: absolute;
-    left: 10%;
-    right: 10%;
-    height: 2px;
-    background-color: var(--at-gold);
-    border-radius: 2px;
-    opacity: 0.9;
-}
-
-details.torrent-search--grouped__dropdown::before {
-    top: 0;
-}
-
-details.torrent-search--grouped__dropdown::after {
-    bottom: 0;
-}
