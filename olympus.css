@@ -1362,11 +1362,3 @@ ul.torrent__tags .torrent-icons {
 .trending-poster__download-count {
   color: var(--at-gold) !important;
 }
-
-.trending-poster__download-count svg circle,
-.trending-poster__download-count::before,
-.trending-poster__download-count::after {
-  stroke: var(--at-gold) !important;
-  color: var(--at-gold) !important;
-  border-color: var(--at-gold) !important;
-}
