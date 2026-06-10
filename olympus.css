@@ -2759,18 +2759,22 @@ ul.torrent__tags .torrent-icons {
 .secondary-nav a,
 .secondary-nav__item,
 .top-nav--left__list-item > a,
-.top-nav__item > a,
-.top-nav a {
+.top-nav__item > a {
     text-decoration: none !important;
 }
 
-.secondary-nav a:hover,
-.secondary-nav__item:hover {
+.top-nav--left__list-item > a:hover,
+.top-nav__item > a:hover {
     text-decoration: var(--secondary-nav-tab-hover-text-decoration) !important;
 }
 
-.top-nav--left__list-item > a:hover,
-.top-nav__item > a:hover,
-.top-nav a:hover {
-    text-decoration: var(--secondary-nav-tab-hover-text-decoration) !important;
+.top-nav__site-logo,
+.top-nav__site-logo *,
+.top-nav--right__icon-link,
+.top-nav--right__icon-link *,
+.top-nav--right__link,
+.top-nav--right__link * {
+    text-decoration: none !important;
+    border-bottom: none !important;
 }
+
