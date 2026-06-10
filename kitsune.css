@@ -50,7 +50,6 @@
   --label-fg:                     #888888;
   --label-fg-active:              #888888;
   --secondary-nav-tab-hover-text-decoration: underline var(--k-pink) 2px;
-  --secondary-nav-tab-active-text-decoration: underline var(--k-pink) 2px !important;
 }
 
 li.top-nav__dropdown ul li a.top-nav__username i[class*="fa-"] { color: inherit !important; background-color: transparent !important; border-color: transparent !important; }
@@ -806,4 +805,12 @@ h2.meta__heading {
 .top-nav__item > a:hover,
 .top-nav a:hover {
     text-decoration: var(--secondary-nav-tab-hover-text-decoration) !important;
+}
+
+.top-nav__dropdown--nontouch.active::after,
+.top-nav__dropdown--touch.active::after {
+  content: none !important;
+  background: none !important;
+  border: none !important;
+  height: 0 !important;
 }
