@@ -735,3 +735,18 @@ ul.torrent__tags > li::after {
 ul.torrent__tags .torrent-icons {
   margin-left: 4px !important;
 }
+
+.work__tags > li > a:hover,
+.meta__ids > li > a:hover {
+  background-color: transparent !important;
+}
+
+.meta__ids > li > a,
+.meta__ids > li > a:hover {
+  border-radius: 6px !important;
+}
+
+h2.meta__heading {
+  margin-top: 0 !important;
+  margin-bottom: 6px !important;
+}
