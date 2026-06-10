@@ -768,22 +768,3 @@ h2.meta__heading {
     text-decoration: none !important;
     font-weight: inherit !important;
 }
-
-.secondary-nav a,
-.secondary-nav__item,
-.top-nav--left__list-item > a,
-.top-nav__item > a,
-.top-nav a {
-    text-decoration: none !important;
-}
-
-.secondary-nav a:hover,
-.secondary-nav__item:hover {
-    text-decoration: var(--secondary-nav-tab-hover-text-decoration) !important;
-}
-
-.top-nav--left__list-item > a:hover,
-.top-nav__item > a:hover,
-.top-nav a:hover {
-    text-decoration: var(--secondary-nav-tab-hover-text-decoration) !important;
-}
