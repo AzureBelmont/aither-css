@@ -807,6 +807,10 @@ h2.meta__heading {
     text-decoration: var(--secondary-nav-tab-hover-text-decoration) !important;
 }
 
+.nav-item.active::after {
+  background-image: none !important;
+}
+
 .nav-item.active {
   text-decoration: underline;
   text-decoration-color: var(--k-pink);
