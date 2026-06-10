@@ -49,9 +49,7 @@
   --key-value-even-bg:            #111111;
   --label-fg:                     #888888;
   --label-fg-active:              #888888;
-  --secondary-nav-tab-hover-text-decoration-line: underline;
-  --secondary-nav-tab-hover-text-decoration-color: var(--k-pink);
-  --secondary-nav-tab-hover-text-decoration-thickness: 2px;
+  --secondary-nav-tab-hover-text-decoration: underline var(--k-pink) 2px;
 }
 
 li.top-nav__dropdown ul li a.top-nav__username i[class*="fa-"] { color: inherit !important; background-color: transparent !important; border-color: transparent !important; }
@@ -783,18 +781,28 @@ h2.meta__heading {
     color: var(--k-pink) !important;
 }
 
-.secondary-nav__item:hover > a,
-.secondary-nav__item a:hover,
-.secondary-nav a.secondary-nav__item:hover,
-.secondary-nav a:hover {
-  text-decoration-line: var(--secondary-nav-tab-hover-text-decoration-line) !important;
-  text-decoration-color: var(--secondary-nav-tab-hover-text-decoration-color) !important;
-  text-decoration-thickness: var(--secondary-nav-tab-hover-text-decoration-thickness) !important;
-}
-
 .form__button--text abbr {
     filter: brightness(.65) !important;
     color: var(--k-text2) !important;
     text-decoration: none !important;
     font-weight: inherit !important;
+}
+
+.secondary-nav a,
+.secondary-nav__item,
+.top-nav--left__list-item > a,
+.top-nav__item > a,
+.top-nav a {
+    text-decoration: none !important;
+}
+
+.secondary-nav a:hover,
+.secondary-nav__item:hover {
+    text-decoration: var(--secondary-nav-tab-hover-text-decoration) !important;
+}
+
+.top-nav--left__list-item > a:hover,
+.top-nav__item > a:hover,
+.top-nav a:hover {
+    text-decoration: var(--secondary-nav-tab-hover-text-decoration) !important;
 }
