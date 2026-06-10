@@ -769,3 +769,7 @@ h2.meta__heading {
     word-break: break-word !important;
   }
 }
+
+.trending-poster__download-count {
+  color: var(--k-pink) !important;
+}
