@@ -773,3 +773,11 @@ h2.meta__heading {
 .trending-poster__download-count {
   color: var(--k-pink) !important;
 }
+
+.trending-poster__download-count svg circle,
+.trending-poster__download-count::before,
+.trending-poster__download-count::after {
+  stroke: var(--k-pink) !important;
+  color: var(--k-pink) !important;
+  border-color: var(--k-pink) !important;
+}
