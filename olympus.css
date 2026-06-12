@@ -42,6 +42,7 @@
   --paginate-bg-hover:             #1c2540;
   --paginate-fg:                   #7a80a0;
   --data-table-tr-hover-bg:        rgba(245,166,35,0.06);
+  --secondary-nav-tab-hover-text-decoration: underline #f5a623 2px;
 }
 
 li.top-nav__dropdown ul li a.top-nav__username i[class*="fa-"] { color: inherit !important; background-color: transparent !important; border-color: transparent !important; }
