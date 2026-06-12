@@ -752,3 +752,27 @@ h2.meta__heading {
     text-decoration: none !important;
     font-weight: inherit !important;
 }
+
+.donation__item {
+  max-width: 380px !important;
+}
+.donation__item--body {
+  padding: 30px 16px 10px !important;
+}
+
+html body .panel__header select,
+html body .panel__header .form__select {
+  min-width: 100px !important;
+}
+
+.group-requirements__group-wrapper:hover {
+  background-color: rgba(244,170,202,0.08) !important;
+}
+.group-requirements__group--requirement-row:hover {
+  background-color: rgba(244,170,202,0.12) !important;
+}
+
+.torrent-search--grouped__header {
+  border-top: 2px solid var(--k-pink-border) !important;
+  margin-top: 4px !important;
+}
