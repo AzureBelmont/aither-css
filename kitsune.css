@@ -751,3 +751,8 @@ h2.meta__heading {
     text-decoration: none !important;
     font-weight: inherit !important;
 }
+
+details.torrent-search--grouped__dropdown > details.torrent-search--grouped__dropdown + details.torrent-search--grouped__dropdown {
+  border-top: 2px solid rgba(244,170,202,0.25) !important;
+  margin-top: 4px !important;
+}
