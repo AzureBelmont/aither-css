@@ -424,7 +424,7 @@ ul.nav-tab-menu__items { background-color: var(--k-bg2) !important; border-botto
 li.nav-tab--active, li.nav-tavV2 { background-color: transparent !important; }
 a.nav-tab--active__link, span.nav-tab--active__link { color: var(--k-pink) !important; border-bottom: 2px solid var(--k-pink) !important; text-decoration: none !important; }
 a.nav-tab__link, span.nav-tab__link { color: var(--k-text2) !important; }
-a.nav-tab__link:hover, span.nav-tab__link:hover { color: var(--k-text) !important; }
+a.nav-tab__link:hover, span.nav-tab__link:hover { color: var(--k-pink) !important; text-decoration: underline var(--k-pink) 2px !important; text-underline-offset: 6px !important; }
 
 .mediahub-card { background-color: var(--k-bg2) !important; }
 .mediahub-card:hover { background-color: var(--k-bg3) !important; }
