@@ -557,7 +557,7 @@ details.torrent-search--grouped__dropdown > details.torrent-search--grouped__dro
 
 .torrent-icons { background-color: #84848421 !important; padding: 2px 7px !important; margin-top: 2px !important; border-radius: 10px !important; display: inline-flex !important; align-items: center !important; flex-wrap: nowrap !important; gap: 6px !important; width: fit-content !important; vertical-align: middle !important; }
 .torrent-icons__vision { display: inline-flex !important; align-items: center !important; }
-.torrent-icons img { display: inline-block !important; vertical-align: middle !important; height: 14px !important; width: auto !important; filter: invert(1) brightness(0.8) !important; }
+.torrent-icons img, .torrent-icons__vision img { display: inline-block !important; vertical-align: middle !important; height: 14px !important; width: auto !important; filter: invert(1) brightness(0.8) !important; }
 
 tr.torrent-search--list__sticky-row:hover td { background-color: transparent !important; }
 tr.torrent-search--list__sticky-row:hover { background-color: rgba(244,170,202,0.10) !important; }
