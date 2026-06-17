@@ -3,7 +3,7 @@
    A Japanese fox-spirit theme for Aither (UNIT3D)
    Author : AzureBelmont
    Repo   : github.com/AzureBelmont/aither-css
-   Ver    : 2.4
+   Ver    : 2.4.1
    Palette
    ────────────────────────────────────────────
    Sakura Pink  #F4AACA   primary accent
@@ -841,3 +841,25 @@ table.torrent-search--grouped__torrents tr:hover td { background-color: rgba(244
 
 
 .panelV2:nth-of-type(2) .group-requirements__group-wrapper { background: rgba(255,255,255,0.02) !important; border: 1px solid rgba(255,255,255,0.06) !important; }
+
+@media (min-width: 767px) {
+  .panelV2:nth-of-type(1) .group-requirements__group-wrapper > .group-requirements__group--header,
+  .panelV2:nth-of-type(2) .group-requirements__group-wrapper > .group-requirements__group--header {
+    grid-column: 1 / -1 !important;
+    z-index: 1 !important;
+  }
+  .panelV2:nth-of-type(2) .group-requirements__group-wrapper > .group-requirements__group--header {
+    grid-row: 1 !important;
+  }
+  .panelV2:nth-of-type(1) .group-requirements__group-wrapper > div:last-child,
+  .panelV2:nth-of-type(2) .group-requirements__group-wrapper > div:last-child {
+    position: relative !important;
+    z-index: 0 !important;
+    pointer-events: none !important;
+  }
+  .panelV2:nth-of-type(1) .group-requirements__group-wrapper > div:last-child[style*="display: none"],
+  .panelV2:nth-of-type(2) .group-requirements__group-wrapper > div:last-child[style*="display: none"] {
+    display: none !important;
+  }
+}
+.group-requirements__group-wrapper > .group-requirements__group--header { cursor: pointer !important; }
