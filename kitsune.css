@@ -55,8 +55,6 @@
   --label-fg-active:              #888888;
   --secondary-nav-tab-hover-text-decoration: underline var(--k-pink) 2px;
   --color-links-hover: #F4AACA;
-  /* === Rank palette: single source of truth (audit consolidation) === */
-  /* Main path - pink fox ladder (light -> dark) */
   --k-rank-main-1: #FFF2F5;
   --k-rank-main-2: #FCE2E7;
   --k-rank-main-3: #F9D3DB;
@@ -65,14 +63,12 @@
   --k-rank-main-6: #E88FAF;
   --k-rank-main-7: #DC7394;
   --k-rank-main-8: #C94D73;
-  /* Uploader path - orange fox ladder (light -> dark) */
   --k-rank-up-1: #FFE8D1;
   --k-rank-up-2: #FFD4A8;
   --k-rank-up-3: #FFB86B;
   --k-rank-up-4: #FF9D42;
   --k-rank-up-5: #F07E1E;
   --k-rank-up-6: #D4640F;
-  /* English rank-name badge color */
   --k-rank-badge: #9aa0b5;
 }
 
