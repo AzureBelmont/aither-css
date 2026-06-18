@@ -1157,7 +1157,6 @@ i.category__icon { color: var(--at-gold) !important; }
   .group-requirements__group-wrapper > div:last-child .group-requirements__group--perks-wrapper > *:has(> i.fa-chevron-double-up)    { order: 8 !important; }
 }
 
-:root {
   --button-filled-bg: #8839ef !important;
   --button-filled-fg: #eff1f5 !important;
   --button-filled-border: none !important;
@@ -1179,4 +1178,4 @@ menu.post__toolbar a:hover i, menu.post__toolbar button:hover i, menu.post__tool
 
 .bbcode-rendered pre, .bbcode-rendered code, pre, code { background-color: var(--at-bg3) !important; color: var(--at-text) !important; border-radius: 6px !important; }
 
-a.user-tag__link { background-color: rgba(76,79,105,0.08) !important; padding: 1px 6px !important; border-radius: 6px !important; }
+a.user-tag__link { background-color: rgba(76,79,105,0.16) !important; padding: 1px 6px !important; border-radius: 6px !important; }
