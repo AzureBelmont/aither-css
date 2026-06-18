@@ -704,7 +704,7 @@ input[type="checkbox"]:disabled { opacity: 0.6 !important; cursor: default !impo
 .page__stats--index .key-value__group--nested > dd { margin: 0 !important; }
 .page__stats--index .key-value { gap: 0 !important; }
 
-i.category__icon { color: #bababa !important; }
+i.category__icon { color: var(--k-pink) !important; }
 
 article.torrent-search--grouped__result { background-color: var(--k-bg2) !important; border: 0.5px solid var(--k-border) !important; border-radius: var(--k-radius) !important; overflow: hidden !important; }
 .torrent-search--grouped__plot { color: var(--k-text2) !important; }
