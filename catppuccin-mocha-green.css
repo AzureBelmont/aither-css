@@ -47,10 +47,10 @@
   --at-bg3:       #181825;   
   --at-border:    rgba(205,214,244,0.07);
   --at-gold:      #a6e3a1;   
-  --at-gold2:     #8ccf87;   
+  --at-gold2:     #8ccf87;  
   --at-goldfaint: rgba(166,227,161,0.14);
-  --at-text:      #cdd6f4;  
-  --at-text2:     #9399b2;   
+  --at-text:      #cdd6f4;   
+  --at-text2:     #9399b2;  
   --at-text3:     #585b70;  
   --at-green:     #a6e3a1;
   --at-red:       #f38ba8;
@@ -64,7 +64,7 @@
   --notification-unread:           #a6e3a1;
   --color-links-hover:             #a6e3a1;
   --panel-head-fg:                 #a6e3a1;
-  --quick-search-bg:               #1e1e2e;  
+  --quick-search-bg:               #1e1e2e; 
   --quick-search-result-hover-bg:  #1e1e2e;
   --post-toolbar-bg:               #1e1e2e;
   --post-toolbar-hover-bg:         #313244;
@@ -341,6 +341,10 @@ li.pagination__previous--disabled:hover, li.pagination__next--disabled:hover { b
 
 fieldset, .form__fieldset { border-color: rgba(205,214,244,0.12) !important; }
 fieldset.form, .form.form__fieldset, fieldset.form__fieldset { background-color: var(--at-bg3) !important; border-color: rgba(205,214,244,0.10) !important; }
+.torrent-search__filters fieldset.form__fieldset, .torrent-search__filters fieldset.form { background-color: var(--at-bg2) !important; border: 1px solid rgba(205,214,244,0.07) !important; border-radius: 6px !important; }
+.torrent-search__filters .vscomp-wrapper, .torrent-search__filters .vscomp-ele-wrapper, .torrent-search__filters .vscomp-toggle-button { background-color: var(--at-bg2) !important; }
+.torrent-search__filters .vscomp-toggle-button { min-height: 40px !important; height: 40px !important; }
+.torrent-search__filters .vscomp-ele-wrapper { min-height: 40px !important; }
 
 .form__label--floating { background-color: transparent !important; color: var(--at-text2) !important; border-radius: 2px !important; }
 fieldset .form__label--floating, [class*="compact-search"] .form__label--floating, [class*="torrent-search"] .form__label--floating { background-color: transparent !important; }
@@ -570,7 +574,7 @@ a[style*="color:#95A5A6"],a[style*="color: #95A5A6"] { color: #95A5A6 !important
 .post__permalink:hover, .post__edit:hover, .post__quote:hover, .post__delete-button:hover { color: var(--at-gold) !important; background-color: var(--at-bg3) !important; }
 .post__tip-input, .post__tip-input:focus { border: none !important; border-radius: 2px !important; }
 .post__content.bbcode-rendered, .post__header, .comment__content.bbcode-rendered, .comment__header { background-color: #181825; }
-.bbcode-rendered.bbcode-rendered blockquote { background-color: #121823 !important; border: 2px dotted #3e4455 !important; }
+.bbcode-rendered.bbcode-rendered blockquote { background-color: #313244 !important; border: 2px dotted #45475a !important; }
 
 .page__torrent--create .sidebar2 .panel__body a[href*="/wikis/"],
 .page__user-profile--show .data-table tfoot a[href*="/tickets"] { color: var(--at-gold) !important; text-decoration: none !important; transition: color .15s, text-shadow .15s !important; }
@@ -1131,7 +1135,6 @@ i.category__icon { color: #bababa !important; }
   }
 }
 .group-requirements__group-wrapper > .group-requirements__group--header { cursor: pointer !important; }
-
 
 @media (min-width: 767px) {
   .group-requirements__group-wrapper > div:last-child .group-requirements__group--perks-wrapper {
