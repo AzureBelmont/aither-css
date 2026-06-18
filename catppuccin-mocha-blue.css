@@ -342,9 +342,7 @@ li.pagination__previous--disabled:hover, li.pagination__next--disabled:hover { b
 fieldset, .form__fieldset { border-color: rgba(205,214,244,0.12) !important; }
 fieldset.form, .form.form__fieldset, fieldset.form__fieldset { background-color: var(--at-bg3) !important; border-color: rgba(205,214,244,0.10) !important; }
 .torrent-search__filters fieldset.form__fieldset, .torrent-search__filters fieldset.form { background-color: var(--at-bg2) !important; border: 1px solid rgba(205,214,244,0.07) !important; border-radius: 6px !important; }
-/* Subtitles page: Category fieldset matches the filter inputs (Base tone, not Mantle) */
 .page__subtitle--index fieldset.form__fieldset, .page__subtitle--index fieldset.form { background-color: var(--at-bg2) !important; border: 1px solid rgba(205,214,244,0.07) !important; border-radius: 6px !important; }
-/* Poll results: vote bars use the accent fill on a neutral track instead of default grey */
 .page__poll--result meter.form__meter { background: var(--at-bg3) !important; border: none !important; border-radius: 6px !important; overflow: hidden !important; }
 .page__poll--result meter.form__meter::-webkit-meter-bar { background: var(--at-bg3) !important; border: none !important; border-radius: 6px !important; }
 .page__poll--result meter.form__meter::-webkit-meter-optimum-value { background: var(--at-gold) !important; border-radius: 6px !important; }
@@ -635,7 +633,6 @@ input[type="file"]::file-selector-button:hover { background-color: var(--at-gold
 .page__torrent--create .form__group--horizontal .form__select { background-color: var(--at-bg3) !important; border: 1px solid var(--at-border) !important; border-radius: 6px !important; color: var(--at-text) !important; }
 .page__torrent--create .form__group--horizontal .form__select:focus { border-color: rgba(137,180,250,0.4) !important; box-shadow: 0 0 0 2px rgba(137,180,250,0.08) !important; }
 .page__torrent--create .panel__sub-heading { border-radius: 6px !important; margin-top: 16px !important; border: none !important; }
-/* Upload page: unify all controls to the panel tone, with borders (Mocha-style consistency) */
 .page__torrent--create input.form__text, .page__torrent--create .form__input, .page__torrent--create input[type="text"], .page__torrent--create .form__group input.form__text, .page__torrent--create .form__group--horizontal input.form__text, .page__torrent--create .panelV2 .form__group input.form__text, .page__torrent--create select.form__select, .page__torrent--create .form__group--horizontal .form__select, .page__torrent--create textarea.form__textarea, .page__torrent--create .form__textarea, .page__torrent--create fieldset.form__fieldset { background-color: var(--at-bg2) !important; border: 1px solid var(--at-border) !important; border-radius: var(--at-radius) !important; }
 label.form__label.form__label--floating { background-color: transparent !important; }
 
