@@ -594,6 +594,8 @@ input[type="checkbox"]:disabled { opacity: 0.6 !important; cursor: default !impo
 .page__stats--index .key-value__group--nested > dd { margin: 0 !important; }
 .page__stats--index .key-value { gap: 0 !important; }
 
+/* Quote blocks: themed surface instead of base aither-dark navy (clashes on OLED black) */
+.bbcode-rendered.bbcode-rendered blockquote { background-color: var(--k-bg3) !important; border: 2px dotted var(--k-border) !important; }
 i.category__icon { color: var(--k-pink) !important; }
 
 article.torrent-search--grouped__result { background-color: var(--k-bg2) !important; border: 0.5px solid var(--k-border) !important; border-radius: var(--k-radius) !important; overflow: hidden !important; }
@@ -766,6 +768,12 @@ table.torrent-search--grouped__torrents tr:hover td { background-color: rgba(244
 }
 
 .page__subtitle--index fieldset.form__fieldset, .page__subtitle--index fieldset.form { background-color: var(--k-bg2) !important; border: 1px solid var(--k-border) !important; border-radius: var(--k-radius-sm) !important; }
+
+.torrent-search__filters fieldset.form__fieldset, .torrent-search__filters fieldset.form { background-color: var(--k-bg2) !important; border: 1px solid var(--k-border) !important; border-radius: var(--k-radius-sm) !important; }
+.torrent-search__filters .vscomp-wrapper, .torrent-search__filters .vscomp-ele-wrapper, .torrent-search__filters .vscomp-toggle-button { background-color: var(--k-bg2) !important; }
+.torrent-search__filters .vscomp-toggle-button { min-height: 40px !important; height: 40px !important; }
+.torrent-search__filters .vscomp-ele-wrapper { min-height: 40px !important; }
+
 .page__poll--result meter.form__meter { background: var(--k-bg3) !important; border: none !important; border-radius: var(--k-radius-sm) !important; overflow: hidden !important; }
 .page__poll--result meter.form__meter::-webkit-meter-bar { background: var(--k-bg3) !important; border: none !important; border-radius: var(--k-radius-sm) !important; }
 .page__poll--result meter.form__meter::-webkit-meter-optimum-value { background: var(--k-pink) !important; border-radius: var(--k-radius-sm) !important; }
