@@ -42,21 +42,21 @@
   --ctp-mantle:    #181825;
   --ctp-crust:     #11111b;
 
-  --at-bg:        #181825;  
-  --at-bg2:       #1e1e2e;   
-  --at-bg3:       #313244;   
+  --at-bg:        #11111b;  
+  --at-bg2:       #1e1e2e;  
+  --at-bg3:       #181825;  
   --at-border:    rgba(205,214,244,0.07);
-  --at-gold:      #cba6f7;   
+  --at-gold:      #cba6f7;  
   --at-gold2:     #b4a0e8;   
   --at-goldfaint: rgba(203,166,247,0.14);
   --at-text:      #cdd6f4;  
-  --at-text2:     #9399b2;   
-  --at-text3:     #585b70;   
+  --at-text2:     #9399b2; 
+  --at-text3:     #585b70;  
   --at-green:     #a6e3a1;
   --at-red:       #f38ba8;
   --at-radius:    10px;
   --key-value-odd-bg:              #1e1e2e;
-  --key-value-even-bg:             #181825;  
+  --key-value-even-bg:             #181825;
   --color-links:                   #cdd6f4;
   --breadcrumb-fg:                 #9399b2;
   --breadcrumb-active-fg:          #cdd6f4;
@@ -64,7 +64,7 @@
   --notification-unread:           #cba6f7;
   --color-links-hover:             #cba6f7;
   --panel-head-fg:                 #cba6f7;
-  --quick-search-bg:               #313244;  
+  --quick-search-bg:               #1e1e2e; 
   --quick-search-result-hover-bg:  #1e1e2e;
   --post-toolbar-bg:               #1e1e2e;
   --post-toolbar-hover-bg:         #313244;
@@ -158,8 +158,8 @@ li.top-nav__dropdown ul li button.top-nav--right__link:hover i.fab { background-
 .alert i, .special-event-alert i { color: var(--at-gold) !important; }
 div.alerts, .alerts { background-color: var(--at-bg3) !important; }
 
-.quick-search__input, input.quick-search__input { background-color: #313244 !important; border: 1px solid var(--at-border) !important; color: var(--at-text) !important; }
-input.quick-search__input:focus { background-color: #313244 !important; border: 1px solid rgba(203,166,247,0.6) !important; border-bottom: 1px solid rgba(205,214,244,0.04) !important; box-shadow: none !important; outline: none !important; }
+.quick-search__input, input.quick-search__input { background-color: #1e1e2e !important; border: 1px solid var(--at-border) !important; color: var(--at-text) !important; }
+input.quick-search__input:focus { background-color: #1e1e2e !important; border: 1px solid rgba(203,166,247,0.6) !important; border-bottom: 1px solid rgba(205,214,244,0.04) !important; box-shadow: none !important; outline: none !important; }
 article.quick-search__result:nth-child(odd) { background-color: #181825 !important; }
 article.quick-search__result:nth-child(even) { background-color: #1e1e2e !important; }
 article.quick-search__result { border-bottom: 1px solid rgba(0, 0, 0, .15) !important; }
@@ -283,7 +283,7 @@ tr.torrent-search--list__sticky-row .torrent-search--list__name > a:first-child 
 
 search.compact-search, .compact-search, .compact-search__visible-default, .torrent-search__filters, [class*="compact-search"] { background-color: var(--at-bg2) !important; border-color: var(--at-border) !important; }
 [class*="compact-search"] p.form__group, [class*="compact-search"] .form__group, [class*="torrent-search"] .form__group { background-color: transparent !important; }
-[class*="compact-search"] .form__text, [class*="compact-search"] input.form__text, [class*="torrent-search"] input { background-color: #313244 !important; border-color: var(--at-border) !important; color: var(--at-text) !important; }
+[class*="compact-search"] .form__text, [class*="compact-search"] input.form__text, [class*="torrent-search"] input { background-color: #1e1e2e !important; border-color: var(--at-border) !important; color: var(--at-text) !important; }
 [class*="compact-search"] input.form__text:focus, [class*="torrent-search"] input:focus { background-color: #45475a !important; border-color: rgba(203,166,247,0.4) !important; }
 p.form__group { background-color: transparent !important; }
 
@@ -317,11 +317,11 @@ li.subforum-listings__item:hover { border-left: 3px solid var(--at-gold) !import
 .trending-poster__download-count { border: 2px solid var(--at-gold2); }
 
 article.post { background-color: var(--at-bg2) !important; border: 0.5px solid var(--at-border) !important; border-radius: var(--at-radius) !important; }
-aside.post__aside { background-color: #313244 !important; border-right: 0.5px solid var(--at-border) !important; }
-menu.post__toolbar { background-color: #313244 !important; border-top: 0.5px solid var(--at-border) !important; }
+aside.post__aside { background-color: #181825 !important; border-right: 0.5px solid var(--at-border) !important; }
+menu.post__toolbar { background-color: #181825 !important; border-top: 0.5px solid var(--at-border) !important; }
 .post__footer { background-color: #181825 !important }
 article.comment { background-color: var(--at-bg2) !important; border: 0.5px solid var(--at-border) !important; border-radius: var(--at-radius) !important; }
-aside.comment__aside { background-color: #313244 !important; border-right: 0.5px solid var(--at-border) !important; }
+aside.comment__aside { background-color: #181825 !important; border-right: 0.5px solid var(--at-border) !important; }
 ul.comment-list { background-color: var(--at-bg2) !important; }
 li.comment__list-item { border-bottom: 0.5px solid var(--at-border) !important; }
 article.article-preview { background-color: #1e1e2e !important; border: 0.5px solid var(--at-border) !important; border-radius: var(--at-radius) !important; }
@@ -329,7 +329,7 @@ article.article-preview { background-color: #1e1e2e !important; border: 0.5px so
 nav.pagination { background-color: var(--at-bg2) !important; border: 0.5px solid var(--at-border) !important; border-radius: var(--at-radius) !important; overflow: hidden !important; }
 .pagination__link, a.pagination__link, li.pagination__previous, li.pagination__next, li.pagination__ellipsis, .pagination__previous, .pagination__next { background-color: var(--at-bg2) !important; color: var(--at-text2) !important; border-color: var(--at-border) !important; }
 a.pagination__next, a.pagination__previous { color: var(--at-text2) !important; }
-.pagination__link:hover, a.pagination__link:hover, li.pagination__next:hover, li.pagination__previous:hover, a.pagination__next:hover, a.pagination__previous:hover { background-color: var(--at-bg3) !important; color: var(--at-gold) !important; }
+.pagination__link:hover, a.pagination__link:hover, li.pagination__next:hover, li.pagination__previous:hover, a.pagination__next:hover, a.pagination__previous:hover { background-color: #313244 !important; color: var(--at-gold) !important; }
 li.pagination__current, .pagination__current { background-color: var(--at-bg3) !important; color: var(--at-gold) !important; border-color: var(--at-goldfaint) !important; font-weight: 600 !important; }
 li.pagination__previous--disabled, li.pagination__next--disabled { background-color: var(--at-bg2) !important; color: var(--at-text3) !important; opacity: 0.7 !important; }
 li.pagination__previous--disabled:hover, li.pagination__next--disabled:hover { background-color: var(--at-bg2) !important; color: var(--at-text3) !important; cursor: default !important; }
@@ -360,8 +360,8 @@ a[href*="/dashboard/reports"] svg circle, a[href*="/contributors"] svg circle { 
 .page__contributor--index a svg circle { stroke: var(--at-gold) !important; }
 .form__standard-icon-button { background: transparent !important; border: none !important; box-shadow: none !important; color: var(--at-gold) !important; opacity: 0.65 !important; transition: opacity .15s !important; }
 .form__standard-icon-button:hover { opacity: 1 !important; color: var(--at-gold) !important; filter: drop-shadow(0 0 4px rgba(203,166,247,0.5)) !important; }
-.form__select, select.form__select { background-color: #313244 !important; border: 1px solid var(--at-border) !important; border-radius: 6px !important; box-shadow: none !important; color: var(--at-text) !important; color-scheme: dark; }
-#currentChatroom.form__select, #currentChatstatus.form__select { background-color: #313244 !important; border: 1px solid var(--at-border) !important; border-radius: 6px !important; box-shadow: none !important; color: var(--at-text) !important; color-scheme: dark; font-weight: 350 !important; font-size: 12px !important; }
+.form__select, select.form__select { background-color: #1e1e2e !important; border: 1px solid var(--at-border) !important; border-radius: 6px !important; box-shadow: none !important; color: var(--at-text) !important; color-scheme: dark; }
+#currentChatroom.form__select, #currentChatstatus.form__select { background-color: #1e1e2e !important; border: 1px solid var(--at-border) !important; border-radius: 6px !important; box-shadow: none !important; color: var(--at-text) !important; color-scheme: dark; font-weight: 350 !important; font-size: 12px !important; }
 
 .form__select:hover, select.form__select:hover { border-color: rgba(203,166,247,0.4) !important; }
 .form__select:focus, select.form__select:focus { border-color: var(--at-gold) !important; color: var(--at-text) !important; }
@@ -371,8 +371,11 @@ input:focus, textarea:focus, select:focus, .form__input:focus, [type="search"]:f
 input[type="radio"] { accent-color: var(--at-gold) !important; }
 input.form__text { border-color: rgba(205,214,244,0.17); }
 
+/* Conversations/PM filter inputs (subject/username/message) sit in .panel__actions,
+   outside compact-search scope; force consistent styling so type="text" vs type="search"
+   don't render differently via UA appearance */
 .panel__actions input.form__text,
-.panelV2 .form__group input.form__text { background-color: #313244 !important; border: 1px solid rgba(205,214,244,0.07) !important; color: var(--at-text) !important; appearance: none !important; -webkit-appearance: none !important; }
+.panelV2 .form__group input.form__text { background-color: #1e1e2e !important; border: 1px solid rgba(205,214,244,0.07) !important; color: var(--at-text) !important; appearance: none !important; -webkit-appearance: none !important; }
 .panel__actions input.form__text:focus,
 .panelV2 .form__group input.form__text:focus { background-color: #45475a !important; border-color: rgba(203,166,247,0.4) !important; outline: none !important; }
 
@@ -412,11 +415,11 @@ input.form__text { border-color: rgba(205,214,244,0.17); }
 [class*="user-profile__column"] { background-color: var(--at-bg2) !important; }
 [class*="user-profile__column"] .panel__heading { background-color: var(--at-bg3) !important; }
 .mediahub-card { background-color: var(--at-bg2) !important; }
-.mediahub-card:hover { background-color: var(--at-bg3) !important; }
+.mediahub-card:hover { background-color: #313244 !important; }
 .collectible-card { background-color: var(--at-bg2) !important; }
-.collectible-card:hover { background-color: var(--at-bg3) !important; }
+.collectible-card:hover { background-color: #313244 !important; }
 .playlists__playlist { background-color: var(--at-bg2) !important; }
-.playlists__playlist:hover { background-color: var(--at-bg3) !important; }
+.playlists__playlist:hover { background-color: #313244 !important; }
 .playlists__playlist-image--none { background-color: var(--at-bg3) !important; }
 .easy-upload3r__panel-beta { background-color: var(--at-bg2) !important; }
 .torrent-search--grouped__dropdown { background-color: var(--at-bg2) !important; }
@@ -569,7 +572,7 @@ a[style*="color:#95A5A6"],a[style*="color: #95A5A6"] { color: #95A5A6 !important
 
 .post__permalink:hover, .post__edit:hover, .post__quote:hover, .post__delete-button:hover { color: var(--at-gold) !important; background-color: var(--at-bg3) !important; }
 .post__tip-input, .post__tip-input:focus { border: none !important; border-radius: 2px !important; }
-.post__content.bbcode-rendered, .post__header, .comment__content.bbcode-rendered, .comment__header { background-color: #313244; }
+.post__content.bbcode-rendered, .post__header, .comment__content.bbcode-rendered, .comment__header { background-color: #181825; }
 .bbcode-rendered.bbcode-rendered blockquote { background-color: #121823 !important; border: 2px dotted #3e4455 !important; }
 
 .page__torrent--create .sidebar2 .panel__body a[href*="/wikis/"],
@@ -843,7 +846,7 @@ input[type="text"]:not(.quick-search__input):not(.post__tip-input),
 input[type="search"]:not(.quick-search__input),
 input[type="email"],
 input[type="password"] {
-  background-color: #313244 !important;
+  background-color: #1e1e2e !important;
   border: 1px solid var(--at-border) !important;
   border-radius: 6px !important;
   color: var(--at-text) !important;
