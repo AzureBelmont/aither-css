@@ -1121,3 +1121,11 @@ i.category__icon { color: #bababa !important; }
   .group-requirements__group-wrapper > div:last-child .group-requirements__group--perks-wrapper > *:has(> i.fa-syringe)              { order: 7 !important; }
   .group-requirements__group-wrapper > div:last-child .group-requirements__group--perks-wrapper > *:has(> i.fa-chevron-double-up)    { order: 8 !important; }
 }
+
+.page__subtitle--index fieldset.form__fieldset, .page__subtitle--index fieldset.form { background-color: var(--at-bg2) !important; border: 1px solid var(--at-border) !important; border-radius: var(--at-radius) !important; }
+.page__poll--result meter.form__meter { background: var(--at-bg3) !important; border: none !important; border-radius: var(--at-radius) !important; overflow: hidden !important; }
+.page__poll--result meter.form__meter::-webkit-meter-bar { background: var(--at-bg3) !important; border: none !important; border-radius: var(--at-radius) !important; }
+.page__poll--result meter.form__meter::-webkit-meter-optimum-value { background: var(--at-gold) !important; border-radius: var(--at-radius) !important; }
+.page__poll--result meter.form__meter::-webkit-meter-suboptimum-value { background: var(--at-gold) !important; border-radius: var(--at-radius) !important; }
+.page__poll--result meter.form__meter::-webkit-meter-even-less-good-value { background: var(--at-gold) !important; border-radius: var(--at-radius) !important; }
+.page__poll--result meter.form__meter::-moz-meter-bar { background: var(--at-gold) !important; border-radius: var(--at-radius) !important; }
