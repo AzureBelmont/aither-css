@@ -1156,3 +1156,27 @@ i.category__icon { color: var(--at-gold) !important; }
   .group-requirements__group-wrapper > div:last-child .group-requirements__group--perks-wrapper > *:has(> i.fa-syringe)              { order: 7 !important; }
   .group-requirements__group-wrapper > div:last-child .group-requirements__group--perks-wrapper > *:has(> i.fa-chevron-double-up)    { order: 8 !important; }
 }
+
+:root {
+  --button-filled-bg: #8839ef !important;
+  --button-filled-fg: #eff1f5 !important;
+  --button-filled-border: none !important;
+}
+.form__file::file-selector-button, input[type="file"]::file-selector-button { background: #8839ef !important; color: #eff1f5 !important; border: none !important; }
+.form__file::file-selector-button:hover, input[type="file"]::file-selector-button:hover { filter: brightness(1.08) !important; }
+
+.easy-upload3r__title { color: var(--at-gold) !important; }
+.easy-upload3r__panel-beta, .easy-upload3r__panel-beta span:not(.easy-upload3r__version):not(.easy-upload3r__disclaimer) { color: var(--at-text) !important; }
+.easy-upload3r__disclaimer { color: var(--at-text2) !important; }
+.easy-upload3r__version { background-color: var(--at-gold) !important; color: var(--at-bg) !important; }
+
+.internal-card__title { color: var(--at-text) !important; }
+.torrent-card__category, .torrent-card__resolution, .torrent-card__type, .torrent-card__size, .torrent-card__meta-separator, .torrent-card__title { color: var(--at-text) !important; }
+.featured-carousel time, .torrent-card time, .internal-card time, .featured-carousel__feature-details time { color: var(--at-text) !important; }
+
+menu.post__toolbar a, menu.post__toolbar button, menu.post__toolbar i, .post__toolbar .post__permalink, .post__toolbar .post__quote, .post__toolbar .post__tip-button, .post__toolbar .post__tip-button i, .post__toolbar .fa-link, .post__toolbar .fa-quote-left, .post__toolbar .fa-pencil, .post__toolbar .fa-trash, .comment__toolbar a, .comment__toolbar button, .comment__toolbar i { color: var(--at-text2) !important; }
+menu.post__toolbar a:hover i, menu.post__toolbar button:hover i, menu.post__toolbar a:hover, menu.post__toolbar button:hover { color: var(--at-gold) !important; }
+
+.bbcode-rendered pre, .bbcode-rendered code, pre, code { background-color: var(--at-bg3) !important; color: var(--at-text) !important; border-radius: 6px !important; }
+
+a.user-tag__link { background-color: rgba(76,79,105,0.08) !important; padding: 1px 6px !important; border-radius: 6px !important; }
