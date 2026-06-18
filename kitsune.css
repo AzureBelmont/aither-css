@@ -704,8 +704,8 @@ input[type="checkbox"]:disabled { opacity: 0.6 !important; cursor: default !impo
 .page__stats--index .key-value__group--nested > dd { margin: 0 !important; }
 .page__stats--index .key-value { gap: 0 !important; }
 
-/* Quote blocks: themed surface instead of base aither-dark navy (clashes on OLED black) */
 .bbcode-rendered.bbcode-rendered blockquote { background-color: var(--k-bg3) !important; border: 2px dotted var(--k-border) !important; }
+.post__footer { background-color: var(--k-bg2) !important; border-top: 1px solid var(--k-border) !important; }
 i.category__icon { color: var(--k-pink) !important; }
 
 article.torrent-search--grouped__result { background-color: var(--k-bg2) !important; border: 0.5px solid var(--k-border) !important; border-radius: var(--k-radius) !important; overflow: hidden !important; }
