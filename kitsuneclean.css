@@ -764,3 +764,11 @@ table.torrent-search--grouped__torrents tr:hover td { background-color: rgba(244
   .group-requirements__group-wrapper > div:last-child .group-requirements__group--perks-wrapper > *:has(> i.fa-syringe)              { order: 7 !important; }
   .group-requirements__group-wrapper > div:last-child .group-requirements__group--perks-wrapper > *:has(> i.fa-chevron-double-up)    { order: 8 !important; }
 }
+
+.page__subtitle--index fieldset.form__fieldset, .page__subtitle--index fieldset.form { background-color: var(--k-bg2) !important; border: 1px solid var(--k-border) !important; border-radius: var(--k-radius-sm) !important; }
+.page__poll--result meter.form__meter { background: var(--k-bg3) !important; border: none !important; border-radius: var(--k-radius-sm) !important; overflow: hidden !important; }
+.page__poll--result meter.form__meter::-webkit-meter-bar { background: var(--k-bg3) !important; border: none !important; border-radius: var(--k-radius-sm) !important; }
+.page__poll--result meter.form__meter::-webkit-meter-optimum-value { background: var(--k-pink) !important; border-radius: var(--k-radius-sm) !important; }
+.page__poll--result meter.form__meter::-webkit-meter-suboptimum-value { background: var(--k-pink) !important; border-radius: var(--k-radius-sm) !important; }
+.page__poll--result meter.form__meter::-webkit-meter-even-less-good-value { background: var(--k-pink) !important; border-radius: var(--k-radius-sm) !important; }
+.page__poll--result meter.form__meter::-moz-meter-bar { background: var(--k-pink) !important; border-radius: var(--k-radius-sm) !important; }
