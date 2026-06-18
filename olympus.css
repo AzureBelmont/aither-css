@@ -331,7 +331,7 @@ a[href*="/dashboard/reports"] svg circle, a[href*="/contributors"] svg circle { 
 .page__contributor--index a svg circle { stroke: var(--at-gold) !important; }
 .form__standard-icon-button { background: transparent !important; border: none !important; box-shadow: none !important; color: var(--at-gold) !important; opacity: 0.65 !important; transition: opacity .15s !important; }
 .form__standard-icon-button:hover { opacity: 1 !important; color: var(--at-gold) !important; filter: drop-shadow(0 0 4px rgba(245,166,35,0.5)) !important; }
-.form__select, select.form__select { background-color: #171e33 !important; border: 1px solid var(--at-border) !important; border-radius: 6px !important; box-shadow: none !important; color: var(--at-text) !important; color-scheme: dark; }
+.form__select, select.form__select { background-color: var(--at-bg2) !important; border: 1px solid var(--at-border) !important; border-radius: 6px !important; box-shadow: none !important; color: var(--at-text) !important; color-scheme: dark; }
 #currentChatroom.form__select, #currentChatstatus.form__select { background-color: #1e2434 !important; border: 1px solid var(--at-border) !important; border-radius: 6px !important; box-shadow: none !important; color: var(--at-text) !important; color-scheme: dark; font-weight: 350 !important; font-size: 12px !important; }
 
 .form__select:hover, select.form__select:hover { border-color: rgba(245,166,35,0.4) !important; }
