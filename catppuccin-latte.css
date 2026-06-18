@@ -153,13 +153,13 @@ li.top-nav__dropdown ul li button.top-nav--right__link:hover i.fab { background-
 div.alerts, .alerts { background-color: var(--at-bg3) !important; }
 
 .quick-search__input, input.quick-search__input { background-color: #e6e9ef !important; border: 1px solid var(--at-border) !important; color: var(--at-text) !important; }
-input.quick-search__input:focus { background-color: #e6e9ef !important; border: 1px solid rgba(136,57,239,0.6) !important; border-bottom: 1px solid rgba(76,79,105,0.04) !important; box-shadow: none !important; outline: none !important; }
+input.quick-search__input:focus { background-color: #e6e9ef !important; border: 2px solid rgba(136,57,239,0.85) !important; border-bottom: 2px solid rgba(76,79,105,0.25) !important; box-shadow: none !important; outline: none !important; }
 article.quick-search__result:nth-child(odd) { background-color: #dce0e8 !important; }
 article.quick-search__result:nth-child(even) { background-color: #e6e9ef !important; }
 article.quick-search__result { border-bottom: 1px solid rgba(0, 0, 0, .15) !important; }
 article.quick-search__result:last-child { border-bottom: none !important; }
 article.quick-search__result:hover { background-color: rgba(136,57,239,0.06) !important; }
-.quick-search__results { background-color: #eff1f5 !important; border: 1px solid rgba(136,57,239,0.6) !important; border-top: none !important; border-radius: 0 0 var(--at-radius) var(--at-radius) !important; overflow-y: auto !important; overflow-x: hidden !important; }
+.quick-search__results { background-color: #eff1f5 !important; border: 2px solid rgba(136,57,239,0.85) !important; border-top: none !important; border-radius: 0 0 var(--at-radius) var(--at-radius) !important; overflow-y: auto !important; overflow-x: hidden !important; }
 .quick-search__image { border: solid 1px var(--at-border) !important; box-sizing: border-box !important; width: 46px !important; height: 69px !important; border-radius: 6px !important; object-fit: cover !important; }
 .quick-search__result-name { font-weight: 600 !important; font-size: 14px !important; }
 .quick-search__result-type { font-weight: 350 !important; color: var(--at-text2) !important; }
@@ -258,7 +258,7 @@ td[class*="torrent-search--list__"] { background-color: transparent !important; 
 .af-row { background-color: var(--at-bg2) !important; border-bottom: 0.5px solid var(--at-border) !important; border-left: 3px solid transparent !important; transition: box-shadow .15s, background .15s !important; }
 .af-row:hover { box-shadow: inset 3px 0 0 var(--at-gold) !important; background-color: rgba(136,57,239,0.03) !important; }
 
-tr.torrent-search--list__sticky-row { background-color: #ccd0da !important; border-left: 3px solid var(--at-gold) !important; box-shadow: inset 3px 0 0 var(--at-gold) !important; }
+tr.torrent-search--list__sticky-row { background-color: #e6e9ef !important; border-left: 3px solid var(--at-gold) !important; box-shadow: inset 3px 0 0 var(--at-gold) !important; }
 tr.torrent-search--list__sticky-row td { background-color: transparent !important; }
 tr.torrent-search--list__sticky-row .torrent-search--list__name > a:first-child { color: var(--at-text) !important; }
 
@@ -336,9 +336,7 @@ li.pagination__previous--disabled:hover, li.pagination__next--disabled:hover { b
 fieldset, .form__fieldset { border-color: rgba(76,79,105,0.12) !important; }
 fieldset.form, .form.form__fieldset, fieldset.form__fieldset { background-color: var(--at-bg3) !important; border-color: rgba(76,79,105,0.10) !important; }
 .torrent-search__filters fieldset.form__fieldset, .torrent-search__filters fieldset.form { background-color: var(--at-bg2) !important; border: 1px solid rgba(76,79,105,0.07) !important; border-radius: 6px !important; }
-/* Subtitles page: Category fieldset matches the filter inputs (Base tone, not Mantle) */
 .page__subtitle--index fieldset.form__fieldset, .page__subtitle--index fieldset.form { background-color: var(--at-bg2) !important; border: 1px solid rgba(76,79,105,0.07) !important; border-radius: 6px !important; }
-/* Poll results: vote bars use the accent fill on a neutral track instead of default grey */
 .page__poll--result meter.form__meter { background: var(--at-bg3) !important; border: none !important; border-radius: 6px !important; overflow: hidden !important; }
 .page__poll--result meter.form__meter::-webkit-meter-bar { background: var(--at-bg3) !important; border: none !important; border-radius: 6px !important; }
 .page__poll--result meter.form__meter::-webkit-meter-optimum-value { background: var(--at-gold) !important; border-radius: 6px !important; }
@@ -629,7 +627,6 @@ input[type="file"]::file-selector-button:hover { background-color: var(--at-gold
 .page__torrent--create .form__group--horizontal .form__select { background-color: var(--at-bg3) !important; border: 1px solid var(--at-border) !important; border-radius: 6px !important; color: var(--at-text) !important; }
 .page__torrent--create .form__group--horizontal .form__select:focus { border-color: rgba(136,57,239,0.4) !important; box-shadow: 0 0 0 2px rgba(136,57,239,0.08) !important; }
 .page__torrent--create .panel__sub-heading { border-radius: 6px !important; margin-top: 16px !important; border: none !important; }
-/* Upload page: unify all controls to the panel tone, with borders (Mocha-style consistency) */
 .page__torrent--create input.form__text, .page__torrent--create .form__input, .page__torrent--create input[type="text"], .page__torrent--create .form__group input.form__text, .page__torrent--create .form__group--horizontal input.form__text, .page__torrent--create .panelV2 .form__group input.form__text, .page__torrent--create select.form__select, .page__torrent--create .form__group--horizontal .form__select, .page__torrent--create textarea.form__textarea, .page__torrent--create .form__textarea, .page__torrent--create fieldset.form__fieldset { background-color: var(--at-bg2) !important; border: 1px solid var(--at-border) !important; border-radius: var(--at-radius) !important; }
 label.form__label.form__label--floating { background-color: transparent !important; }
 
@@ -1203,3 +1200,6 @@ html body [style*="color:#ff9100" i], html body [style*="color: #ff9100" i] { co
 html body [style*="color:#ffb24d" i], html body [style*="color: #ffb24d" i] { color: #c97f12 !important; }
 html body [style*="color:#00abff" i], html body [style*="color: #00abff" i] { color: #0a8fd0 !important; }
 html body [style*="color:#f92672" i], html body [style*="color: #f92672" i] { color: #e01060 !important; }
+
+aside .data-table tbody tr th { background-color: var(--at-bg2) !important; }
+aside .data-table tbody tr:nth-child(even) th { background-color: var(--at-bg3) !important; }
