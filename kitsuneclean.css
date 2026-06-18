@@ -55,21 +55,6 @@
   --label-fg-active:              #888888;
   --secondary-nav-tab-hover-text-decoration: underline var(--k-pink) 2px;
   --color-links-hover: #F4AACA;
-  --k-rank-main-1: #FFF2F5;
-  --k-rank-main-2: #FCE2E7;
-  --k-rank-main-3: #F9D3DB;
-  --k-rank-main-4: #F6C4CE;
-  --k-rank-main-5: #F4AACA;
-  --k-rank-main-6: #E88FAF;
-  --k-rank-main-7: #DC7394;
-  --k-rank-main-8: #C94D73;
-  --k-rank-up-1: #FFE8D1;
-  --k-rank-up-2: #FFD4A8;
-  --k-rank-up-3: #FFB86B;
-  --k-rank-up-4: #FF9D42;
-  --k-rank-up-5: #F07E1E;
-  --k-rank-up-6: #D4640F;
-  --k-rank-badge: #9aa0b5;
 }
 
 li.top-nav__dropdown ul li a.top-nav__username i[class*="fa-"] { color: inherit !important; background-color: transparent !important; border-color: transparent !important; }
@@ -183,40 +168,6 @@ html body .panelV2 > :last-child { border-radius: 0 0 var(--k-radius) var(--k-ra
 .panel__heading a:hover { opacity: 0.75 !important; }
 .panel__heading::before { display: none !important; }
 .panel__body, div.panel__body { background-color: var(--k-bg2) !important; }
-
-/*------------------------------------*\
-  #RANK-RECOLOR (consolidated: was 3 families -> 1; case-insensitive; var-driven)
-\*------------------------------------*/
-[style*="color:#95a5a6" i],[style*="color: #95a5a6" i] { color: #95A5A6 !important; }
-[style*="color:#5e372f" i],[style*="color: #5e372f" i] { color: #5E372F !important; }
-[style*="color:#b8c8ff" i],[style*="color: #b8c8ff" i] { color: var(--k-rank-main-1) !important; }
-[style*="color:#a5b8ff" i],[style*="color: #a5b8ff" i] { color: var(--k-rank-main-2) !important; }
-[style*="color:#7f8eff" i],[style*="color: #7f8eff" i] { color: var(--k-rank-main-3) !important; }
-[style*="color:#508bf2" i],[style*="color: #508bf2" i] { color: var(--k-rank-main-4) !important; }
-[style*="color:#6c7eff" i],[style*="color: #6c7eff" i] { color: var(--k-rank-main-5) !important; }
-[style*="color:#596eff" i],[style*="color: #596eff" i] { color: var(--k-rank-main-6) !important; }
-[style*="color:#466eff" i],[style*="color: #466eff" i] { color: var(--k-rank-main-7) !important; }
-[style*="color:#214e96" i],[style*="color: #214e96" i] { color: var(--k-rank-main-8) !important; }
-[style*="color:#66d9a3" i],[style*="color: #66d9a3" i] { color: var(--k-rank-up-1) !important; }
-[style*="color:#47c98d" i],[style*="color: #47c98d" i] { color: var(--k-rank-up-2) !important; }
-[style*="color:#39b87d" i],[style*="color: #39b87d" i] { color: var(--k-rank-up-3) !important; }
-[style*="color:#2fa36e" i],[style*="color: #2fa36e" i] { color: var(--k-rank-up-4) !important; }
-[style*="color:#258a5d" i],[style*="color: #258a5d" i] { color: var(--k-rank-up-5) !important; }
-[style*="color:#1a6b48" i],[style*="color: #1a6b48" i] { color: var(--k-rank-up-6) !important; }
-[style*="color:#2ecc71" i],[style*="color: #2ecc71" i] { color: #2ECC71 !important; }
-[style*="color:#7fff00" i],[style*="color: #7fff00" i] { color: #7FFF00 !important; }
-[style*="color:#912cdb" i],[style*="color: #912cdb" i] { color: #912cdb !important; }
-[style*="color:#d47cf2" i],[style*="color: #d47cf2" i] { color: #D47CF2 !important; }
-[style*="color:#bf55ec" i],[style*="color: #bf55ec" i] { color: #BF55EC !important; }
-[style*="color:#baaf92" i],[style*="color: #baaf92" i] { color: #BAAF92 !important; }
-[style*="color:#20726c" i],[style*="color: #20726c" i] { color: #20726c !important; }
-[style*="color:#15b097" i],[style*="color: #15b097" i] { color: #15B097 !important; }
-[style*="color:#f92672" i],[style*="color: #f92672" i] { color: #FF6B81 !important; }
-[style*="color:#ff9100" i],[style*="color: #ff9100" i] { color: #ff9100 !important; }
-[style*="color:#ffb24d" i],[style*="color: #ffb24d" i] { color: #ffb24d !important; }
-[style*="color:#00abff" i],[style*="color: #00abff" i] { color: #00abff !important; }
-[style*="color:#4ecdc4" i],[style*="color: #4ecdc4" i] { color: #4ECDC4 !important; }
-[style*="color:#f5a623" i],[style*="color: #f5a623" i] { color: #f5a623 !important; }
 
 html body .panel__header { background-color: var(--k-bg2) !important; border-bottom: 0.5px solid var(--k-border) !important; border-radius: var(--k-radius) var(--k-radius) 0 0 !important; padding-right: 8px !important; display: flex !important; align-items: center !important; }
 html body .panel__header .panel__heading { flex: 1 !important; }
@@ -545,66 +496,6 @@ table td i.fas.fa-circle.fa-xs { color: var(--k-pink) !important; animation: k-d
 .page__torrent--create .form__group--horizontal .form__select:focus { border-color: rgba(244,170,202,0.4) !important; box-shadow: 0 0 0 2px rgba(244,170,202,0.08) !important; }
 .page__torrent--create .panel__sub-heading { border-radius: var(--k-radius-sm) !important; margin-top: 16px !important; border: none !important; }
 
-.group-requirements__group--header h3 > span[style*="color"] { font-size: 0 !important; }
-.group-requirements__group--header h3 > span[style*="95A5A6"], .group-requirements__group--header h3 > span[style*="95a5a6"], .group-requirements__group--header h3 > span[style*="color: red"], .group-requirements__group--header h3 > span[style*="color:red"] { font-size: inherit !important; }
-.group-requirements__group--header h3 > span[style*="5E372F"]::before, .group-requirements__group--header h3 > span[style*="5e372f"]::before { content: "Norowareshi"; font-size: 18px !important; color: #5E372F; }
-.group-requirements__group--header h3 > span[style*="b8c8ff"]::before, .group-requirements__group--header h3 > span[style*="B8C8FF"]::before { content: "Hitodama"; font-size: 18px !important; color: var(--k-rank-main-1); }
-.group-requirements__group--header h3 > span[style*="a5b8ff"]::before, .group-requirements__group--header h3 > span[style*="A5B8FF"]::before { content: "Tanuki"; font-size: 18px !important; color: var(--k-rank-main-2); }
-.group-requirements__group--header h3 > span[style*="7f8eff"]::before, .group-requirements__group--header h3 > span[style*="7F8EFF"]::before { content: "Tengu"; font-size: 18px !important; color: var(--k-rank-main-3); }
-.group-requirements__group--header h3 > span[style*="508bf2"]::before, .group-requirements__group--header h3 > span[style*="508BF2"]::before { content: "Inugami"; font-size: 18px !important; color: var(--k-rank-main-4); }
-.group-requirements__group--header h3 > span[style*="6c7eff"]::before, .group-requirements__group--header h3 > span[style*="6C7EFF"]::before { content: "Inari"; font-size: 18px !important; color: var(--k-rank-main-5); }
-.group-requirements__group--header h3 > span[style*="596eff"]::before, .group-requirements__group--header h3 > span[style*="596EFF"]::before { content: "Ryujin"; font-size: 18px !important; color: var(--k-rank-main-6); }
-.group-requirements__group--header h3 > span[style*="466eff"]::before, .group-requirements__group--header h3 > span[style*="466EFF"]::before { content: "Oni"; font-size: 18px !important; color: var(--k-rank-main-7); }
-.group-requirements__group--header h3 > span[style*="214e96"]::before, .group-requirements__group--header h3 > span[style*="214E96"]::before { content: "Okami"; font-size: 18px !important; color: var(--k-rank-main-8); }
-.group-requirements__group--header h3 > span[style*="6cdb9b"]::before, .group-requirements__group--header h3 > span[style*="6CDB9B"]::before { content: "Yoko"; font-size: 18px !important; color: #6cdb9b; }
-.group-requirements__group--header h3 > span[style*="2ECC71"]::before, .group-requirements__group--header h3 > span[style*="2ecc71"]::before { content: "Nibi"; font-size: 18px !important; color: #2ECC71; }
-.group-requirements__group--header h3 > span[style*="7FFF00"]::before, .group-requirements__group--header h3 > span[style*="7fff00"]::before { content: "Sanbi"; font-size: 18px !important; color: #7FFF00; }
-.group-requirements__group--header h3 > span[style*="912cdb"]::before, .group-requirements__group--header h3 > span[style*="912CDB"]::before { content: "Sakura"; font-size: 18px !important; color: #912cdb; }
-.group-requirements__group--header h3 > span[style*="BF55EC"]::before, .group-requirements__group--header h3 > span[style*="bf55ec"]::before { content: "Tomodachi"; font-size: 18px !important; color: #BF55EC; }
-.group-requirements__group--header h3 > span[style*="BAAF92"]::before, .group-requirements__group--header h3 > span[style*="baaf92"]::before { content: "Tsukai"; font-size: 18px !important; color: #BAAF92; }
-.group-requirements__group--header h3:has(i.fa-life-ring) > span[style*="20726c"]::before { content: "Kannagi"; font-size: 18px !important; color: #20726c; }
-.group-requirements__group--header h3:has(i.fa-edit) > span[style*="20726c"]::before { content: "Fudeshi"; font-size: 18px !important; color: #20726c; }
-.group-requirements__group--header h3 > span[style*="15B097"]::before, .group-requirements__group--header h3 > span[style*="15b097"]::before { content: "Shogun"; font-size: 18px !important; color: #15B097; }
-.group-requirements__group--header h3 > span[style*="4ECDC4"]::before, .group-requirements__group--header h3 > span[style*="4ecdc4"]::before { content: "Daimyo"; font-size: 18px !important; color: #4ECDC4; }
-.group-requirements__group--header h3 > span[style*="f92672"]::before { content: "Daimyo-no-Koe"; font-size: 18px !important; color: #FF6B81; }
-.group-requirements__group--header h3 > span[style*="ff9100"]::before { content: "Tanuki-shi"; font-size: 18px !important; color: #ff9100; }
-.group-requirements__group--header h3 > span[style*="ffb24d"]::before { content: "Oyakata"; font-size: 18px !important; color: #ffb24d; }
-.group-requirements__group--header h3 > span[style*="00abff"]::before { content: "Kappa"; font-size: 18px !important; color: #00abff; }
-
-.group-requirements__group--header h3 > span[style*="66d9a3" i]::before { content: "Yonbi"; font-size: 18px !important; color: var(--k-rank-up-1); }
-.group-requirements__group--header h3 > span[style*="47c98d" i]::before { content: "Gobi"; font-size: 18px !important; color: var(--k-rank-up-2); }
-.group-requirements__group--header h3 > span[style*="39b87d" i]::before { content: "Rokubi"; font-size: 18px !important; color: var(--k-rank-up-3); }
-.group-requirements__group--header h3 > span[style*="2fa36e" i]::before { content: "Shichibi"; font-size: 18px !important; color: var(--k-rank-up-4); }
-.group-requirements__group--header h3 > span[style*="258a5d" i]::before { content: "Hachibi"; font-size: 18px !important; color: var(--k-rank-up-5); }
-.group-requirements__group--header h3 > span[style*="1a6b48" i]::before { content: "Kyubi"; font-size: 18px !important; color: var(--k-rank-up-6); }
-.group-requirements__group--header h3 > span[style*="d47cf2" i]::before { content: "Mitama"; font-size: 18px !important; color: #D47CF2; }
-
-.group-requirements__group--header h3 > span[style*="b8c8ff" i]::after { content: "Phobos"; font-size: 9px !important; font-weight: 600 !important; vertical-align: super !important; margin-left: 4px !important; opacity: 0.5 !important; }
-.group-requirements__group--header h3 > span[style*="a5b8ff" i]::after { content: "Harmonia"; font-size: 9px !important; font-weight: 600 !important; vertical-align: super !important; margin-left: 4px !important; opacity: 0.5 !important; }
-.group-requirements__group--header h3 > span[style*="7f8eff" i]::after { content: "Zeus"; font-size: 9px !important; font-weight: 600 !important; vertical-align: super !important; margin-left: 4px !important; opacity: 0.5 !important; }
-.group-requirements__group--header h3 > span[style*="508bf2" i]::after { content: "Helios"; font-size: 9px !important; font-weight: 600 !important; vertical-align: super !important; margin-left: 4px !important; opacity: 0.5 !important; }
-.group-requirements__group--header h3 > span[style*="6c7eff" i]::after { content: "Prometheus"; font-size: 9px !important; font-weight: 600 !important; vertical-align: super !important; margin-left: 4px !important; opacity: 0.5 !important; }
-.group-requirements__group--header h3 > span[style*="596eff" i]::after { content: "Oceanus"; font-size: 9px !important; font-weight: 600 !important; vertical-align: super !important; margin-left: 4px !important; opacity: 0.5 !important; }
-.group-requirements__group--header h3 > span[style*="466eff" i]::after { content: "Gigantes"; font-size: 9px !important; font-weight: 600 !important; vertical-align: super !important; margin-left: 4px !important; opacity: 0.5 !important; }
-.group-requirements__group--header h3 > span[style*="214e96" i]::after { content: "Titan"; font-size: 9px !important; font-weight: 600 !important; vertical-align: super !important; margin-left: 4px !important; opacity: 0.5 !important; }
-.group-requirements__group--header h3 > span[style*="66d9a3" i]::after { content: "Selene"; font-size: 9px !important; font-weight: 600 !important; vertical-align: super !important; margin-left: 4px !important; opacity: 0.5 !important; }
-.group-requirements__group--header h3 > span[style*="47c98d" i]::after { content: "Eos"; font-size: 9px !important; font-weight: 600 !important; vertical-align: super !important; margin-left: 4px !important; opacity: 0.5 !important; }
-.group-requirements__group--header h3 > span[style*="39b87d" i]::after { content: "Epimetheus"; font-size: 9px !important; font-weight: 600 !important; vertical-align: super !important; margin-left: 4px !important; opacity: 0.5 !important; }
-.group-requirements__group--header h3 > span[style*="2fa36e" i]::after { content: "Iapetus"; font-size: 9px !important; font-weight: 600 !important; vertical-align: super !important; margin-left: 4px !important; opacity: 0.5 !important; }
-.group-requirements__group--header h3 > span[style*="258a5d" i]::after { content: "Hesperides"; font-size: 9px !important; font-weight: 600 !important; vertical-align: super !important; margin-left: 4px !important; opacity: 0.5 !important; }
-.group-requirements__group--header h3 > span[style*="1a6b48" i]::after { content: "Uranus"; font-size: 9px !important; font-weight: 600 !important; vertical-align: super !important; margin-left: 4px !important; opacity: 0.5 !important; }
-.group-requirements__group--header h3 > span[style*="2ecc71" i]::after { content: "Uploader"; font-size: 9px !important; font-weight: 600 !important; vertical-align: super !important; margin-left: 4px !important; opacity: 0.5 !important; }
-.group-requirements__group--header h3 > span[style*="7fff00" i]::after { content: "Typhon"; font-size: 9px !important; font-weight: 600 !important; vertical-align: super !important; margin-left: 4px !important; opacity: 0.5 !important; }
-.group-requirements__group--header h3 > span[style*="912cdb" i]::after { content: "Contributor"; font-size: 9px !important; font-weight: 600 !important; vertical-align: super !important; margin-left: 4px !important; opacity: 0.5 !important; }
-.group-requirements__group--header h3 > span[style*="d47cf2" i]::after { content: "Kleos"; font-size: 9px !important; font-weight: 600 !important; vertical-align: super !important; margin-left: 4px !important; opacity: 0.5 !important; }
-.group-requirements__group--header h3 > span[style*="bf55ec" i]::after { content: "Trustee"; font-size: 9px !important; font-weight: 600 !important; vertical-align: super !important; margin-left: 4px !important; opacity: 0.5 !important; }
-.group-requirements__group--header h3 > span[style*="baaf92" i]::after { content: "Internal"; font-size: 9px !important; font-weight: 600 !important; vertical-align: super !important; margin-left: 4px !important; opacity: 0.5 !important; }
-.group-requirements__group--header h3 > span[style*="15b097" i]::after { content: "Torrent Moderator"; font-size: 9px !important; font-weight: 600 !important; vertical-align: super !important; margin-left: 4px !important; opacity: 0.5 !important; }
-.group-requirements__group--header h3:has(i.fa-life-ring) > span[style*="20726c" i]::after { content: "FLS"; font-size: 9px !important; font-weight: 600 !important; vertical-align: super !important; margin-left: 4px !important; opacity: 0.5 !important; }
-.group-requirements__group--header h3:has(i.fa-edit) > span[style*="20726c" i]::after { content: "Editor"; font-size: 9px !important; font-weight: 600 !important; vertical-align: super !important; margin-left: 4px !important; opacity: 0.5 !important; }
-.group-requirements__group--header h3 > span[style*="5e372f" i]::after { content: "Leech"; font-size: 9px !important; font-weight: 600 !important; vertical-align: super !important; margin-left: 4px !important; }
-.group-requirements__group--header h3 > span[style*="color"]::after { color: var(--k-rank-badge) !important; opacity: 0.7 !important; }
-
 select.form__select option { background-color: var(--k-bg3) !important; color: var(--k-text) !important; }
 select.form__select option:checked { background-color: var(--k-bg4) !important; color: var(--k-pink) !important; }
 
@@ -617,7 +508,6 @@ select.form__select option:checked { background-color: var(--k-bg4) !important; 
 [class*="compact-search"] input.form__text:focus, [class*="torrent-search"] input:focus { border: 1px solid var(--k-pink) !important; box-shadow: 0 0 0 3px rgba(244,170,202,0.10) !important; outline: none !important; }
 
 li.top-nav__dropdown ul li a i.fas.fa-heartbeat, li.top-nav__dropdown ul li i.fas.fa-heartbeat { color: var(--k-pink) !important; text-shadow: 0 0 10px rgba(244,170,202,0.8) !important; animation: k-heart-pulse 1.5s ease-in-out infinite !important; filter: none !important; background-color: transparent !important; border: none !important; }
-
 
 .topic-listing__post-stats, .topic-listing__view-stats { text-align: right !important; min-width: 52px !important; padding-right: 6px !important; }
 .topic-listing__post-stats dt, .topic-listing__view-stats dt { color: var(--k-text3) !important; font-size: 10px !important; font-weight: 600 !important; text-transform: uppercase !important; letter-spacing: .06em !important; }
@@ -823,20 +713,20 @@ table.torrent-search--grouped__torrents tr:hover td { background-color: rgba(244
 .group-requirements__group-wrapper:has(h3 span[style]) .group-requirements__group--requirement-row,
 .group-requirements__group-wrapper:has(h3 span[style]) .group-requirements__group--requirement-multirow { background-color: transparent !important; }
 
-.group-requirements__group-wrapper:has(h3 span[style*="b8c8ff"]) { border-left: 3px solid var(--k-rank-main-1) !important; background: rgba(255,242,245,0.05) !important; }
-.group-requirements__group-wrapper:has(h3 span[style*="a5b8ff"]) { border-left: 3px solid var(--k-rank-main-2) !important; background: rgba(252,226,231,0.07) !important; }
-.group-requirements__group-wrapper:has(h3 span[style*="7f8eff"]) { border-left: 3px solid var(--k-rank-main-3) !important; background: rgba(249,211,219,0.09) !important; }
-.group-requirements__group-wrapper:has(h3 span[style*="508bf2"]) { border-left: 3px solid var(--k-rank-main-4) !important; background: rgba(246,196,206,0.11) !important; }
-.group-requirements__group-wrapper:has(h3 span[style*="6c7eff"]) { border-left: 3px solid var(--k-rank-main-5) !important; background: rgba(244,170,202,0.13) !important; }
-.group-requirements__group-wrapper:has(h3 span[style*="596eff"]) { border-left: 3px solid var(--k-rank-main-6) !important; background: rgba(232,143,175,0.15) !important; }
-.group-requirements__group-wrapper:has(h3 span[style*="466eff"]) { border-left: 3px solid var(--k-rank-main-7) !important; background: rgba(220,115,148,0.18) !important; }
-.group-requirements__group-wrapper:has(h3 span[style*="214e96"]) { border-left: 3px solid var(--k-rank-main-8) !important; background: rgba(201,77,115,0.22) !important; }
-.group-requirements__group-wrapper:has(h3 span[style*="66d9a3"]) { border-left: 3px solid var(--k-rank-up-1) !important; background: rgba(255,176,89,0.07) !important; }
-.group-requirements__group-wrapper:has(h3 span[style*="47c98d"]) { border-left: 3px solid var(--k-rank-up-2) !important; background: rgba(255,158,66,0.09) !important; }
-.group-requirements__group-wrapper:has(h3 span[style*="39b87d"]) { border-left: 3px solid var(--k-rank-up-3) !important; background: rgba(255,140,40,0.12) !important; }
-.group-requirements__group-wrapper:has(h3 span[style*="2fa36e"]) { border-left: 3px solid var(--k-rank-up-4) !important; background: rgba(245,120,25,0.15) !important; }
-.group-requirements__group-wrapper:has(h3 span[style*="258a5d"]) { border-left: 3px solid var(--k-rank-up-5) !important; background: rgba(214,99,15,0.18) !important; }
-.group-requirements__group-wrapper:has(h3 span[style*="1a6b48"]) { border-left: 3px solid var(--k-rank-up-6) !important; background: rgba(168,76,8,0.22) !important; }
+.group-requirements__group-wrapper:has(h3 span[style*="b8c8ff"]) { border-left: 3px solid #b8c8ff !important; background: rgba(184,200,255,0.07) !important; }
+.group-requirements__group-wrapper:has(h3 span[style*="a5b8ff"]) { border-left: 3px solid #a5b8ff !important; background: rgba(165,184,255,0.08) !important; }
+.group-requirements__group-wrapper:has(h3 span[style*="7f8eff"]) { border-left: 3px solid #7f8eff !important; background: rgba(127,142,255,0.10) !important; }
+.group-requirements__group-wrapper:has(h3 span[style*="508bf2"]) { border-left: 3px solid #508bf2 !important; background: rgba(80,139,242,0.12) !important; }
+.group-requirements__group-wrapper:has(h3 span[style*="6c7eff"]) { border-left: 3px solid #6c7eff !important; background: rgba(108,126,255,0.13) !important; }
+.group-requirements__group-wrapper:has(h3 span[style*="596eff"]) { border-left: 3px solid #596eff !important; background: rgba(89,110,255,0.14) !important; }
+.group-requirements__group-wrapper:has(h3 span[style*="466eff"]) { border-left: 3px solid #466eff !important; background: rgba(70,110,255,0.16) !important; }
+.group-requirements__group-wrapper:has(h3 span[style*="214e96"]) { border-left: 3px solid #214e96 !important; background: rgba(33,78,150,0.22) !important; }
+.group-requirements__group-wrapper:has(h3 span[style*="66d9a3"]) { border-left: 3px solid #66d9a3 !important; background: rgba(102,217,163,0.08) !important; }
+.group-requirements__group-wrapper:has(h3 span[style*="47c98d"]) { border-left: 3px solid #47c98d !important; background: rgba(71,201,141,0.10) !important; }
+.group-requirements__group-wrapper:has(h3 span[style*="39b87d"]) { border-left: 3px solid #39b87d !important; background: rgba(57,184,125,0.12) !important; }
+.group-requirements__group-wrapper:has(h3 span[style*="2fa36e"]) { border-left: 3px solid #2fa36e !important; background: rgba(47,163,110,0.14) !important; }
+.group-requirements__group-wrapper:has(h3 span[style*="258a5d"]) { border-left: 3px solid #258a5d !important; background: rgba(37,138,93,0.17) !important; }
+.group-requirements__group-wrapper:has(h3 span[style*="1a6b48"]) { border-left: 3px solid #1a6b48 !important; background: rgba(26,107,72,0.21) !important; }
 
 
 .panelV2:nth-of-type(2) .group-requirements__group-wrapper { background: rgba(255,255,255,0.02) !important; border: 1px solid rgba(255,255,255,0.06) !important; }

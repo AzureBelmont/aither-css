@@ -1,0 +1,67 @@
+A custom CSS theme built on top of Aither Dark — a port of the much-loved [url=https://github.com/catppuccin/catppuccin]Catppuccin[/url] palette (Mocha flavour) to Aither. Soothing pastel surfaces, a deep eye-friendly layered background, and clean panel styling throughout the site.
+
+Ships in [b]six accent flavours[/b] — Mauve, Peach, Blue, Red, Green, and Maroon — so you can pick the one you like. Same theme, same layout, only the accent changes. Install whichever URL you prefer (see [b]Install[/b] below).
+
+[b]Features[/b]
+[list]
+[*]Catppuccin Mocha palette with a three-layer depth system — [i]crust[/i] page background, [i]mantle[/i] nav/headers/cards, [i]base[/i] content areas
+[*]Six accent options — Mauve, Peach, Blue, Red, Green, Maroon
+[*]Accent-coloured panel headings, active nav underline, and notification dots
+[*]Accent left-border on hovered torrent rows and unread forum topics
+[*]Accent-tinted logo with hover glow (colour-matched per flavour)
+[*]Fully styled chatbox, dropdowns, inputs, and SweetAlert toasts
+[*]Slim accent scrollbar
+[*]Two-tone striping (base over mantle) on stats and key-value rows
+[*]One-line group requirement cards — name, perk icons, and expand button on a single row
+[*]Consistent advanced-search filters — inputs, selects, region/distributor dropdowns, and checkbox boxes all share one surface
+[*]All rank colours preserved (UNIT3D originals)
+[/list]
+
+[b]Preview[/b]
+[spoiler= Screenshots]
+[b]Mauve[/b]
+[url=https://ibb.co/nqLK8FXf][img]https://i.ibb.co/Gf5r3qZk/Screenshot-18-6-2026-8144-aither-cc.jpg[/img][/url]
+[b]Peach[/b]
+[url=https://ibb.co/PZv4F1Rm][img]https://i.ibb.co/RpkPYQ1v/Screenshot-18-6-2026-82326-aither-cc.jpg[/img][/url]
+[b]Blue[/b]
+[url=https://ibb.co/sBcsrsW][img]https://i.ibb.co/FPc8t8H/Screenshot-18-6-2026-84835-aither-cc.jpg[/img][/url]
+[b]Red[/b]
+[url=https://ibb.co/KppNNrNh][img]https://i.ibb.co/kss33S3B/Screenshot-18-6-2026-85515-aither-cc.jpg[/img][/url]
+[b]Green[/b]
+[url=https://ibb.co/hFGmjQT3][img]https://i.ibb.co/ZzQMP4bq/Screenshot-18-6-2026-9821-aither-cc.jpg[/img][/url]
+[b]Maroon[/b]
+[url=https://ibb.co/C3wJnd0y][img]https://i.ibb.co/XrWyzBJP/Screenshot-18-6-2026-95243-aither-cc.jpg[/img][/url]
+[/spoiler]
+
+[b]Install[/b]
+Go to Settings → General, set your theme to [b]Aither Dark[/b], then paste [b]one[/b] of the following into [b]External CSS Stylesheet (Stacks on top of above theme)[/b] depending on which accent you want:
+
+[b]Mauve[/b]
+[code]https://azurebelmont.github.io/aither-css/catppuccin-mocha.css[/code]
+[b]Peach[/b]
+[code]https://azurebelmont.github.io/aither-css/catppuccin-mocha-peach.css[/code]
+[b]Blue[/b]
+[code]https://azurebelmont.github.io/aither-css/catppuccin-mocha-blue.css[/code]
+[b]Red[/b]
+[code]https://azurebelmont.github.io/aither-css/catppuccin-mocha-red.css[/code]
+[b]Green[/b]
+[code]https://azurebelmont.github.io/aither-css/catppuccin-mocha-green.css[/code]
+[b]Maroon[/b]
+[code]https://azurebelmont.github.io/aither-css/catppuccin-mocha-maroon.css[/code]
+
+[url=https://ibb.co/B2Tt5j9k][img]https://i.ibb.co/MkPsxpmd/Screenshot-18-6-2026-0041-aither-cc.jpg[/img][/url]
+
+No extensions required. Updates automatically as the stylesheet is updated.
+
+Source: [url=https://github.com/AzureBelmont/aither-css]github.com/AzureBelmont/aither-css[/url]
+
+[hr]
+
+[b]Changelog[/b]
+[list]
+[*]18/6/26: Added Maroon accent flavour (six total)
+[*]18/6/26: Added four accent flavours — Peach, Blue, Red, and Green — alongside the original Mauve
+[*]18/6/26: Reworked backgrounds into a three-layer depth system (crust / mantle / base); two-tone striping now uses base over mantle
+[*]18/6/26: Quote blocks retoned to a neutral surface; advanced-search filters made consistent (inputs, selects, region/distributor dropdowns, and checkbox boxes now share one surface)
+[*]17/6/26: Initial release — Catppuccin Mocha flavour, mauve accent, UNIT3D rank colours preserved
+[/list]
