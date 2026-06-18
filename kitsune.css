@@ -3,7 +3,7 @@
    A Japanese fox-spirit theme for Aither (UNIT3D)
    Author : AzureBelmont
    Repo   : github.com/AzureBelmont/aither-css
-   Ver    : 2.4.3
+   Ver    : 2.4.4
    Palette
    ────────────────────────────────────────────
    Sakura Pink  #F4AACA   primary accent
@@ -864,4 +864,13 @@ table.torrent-search--grouped__torrents tr:hover td { background-color: rgba(244
     flex-direction: row-reverse !important;
     justify-content: flex-start !important;
   }
+  .group-requirements__group-wrapper > div:last-child .group-requirements__group--perks-wrapper > * { order: 99 !important; }
+  .group-requirements__group-wrapper > div:last-child .group-requirements__group--perks-wrapper > *:has(> i.fa-arrow-down-short-wide) { order: 1 !important; }
+  .group-requirements__group-wrapper > div:last-child .group-requirements__group--perks-wrapper > *:has(> i.fa-file-arrow-up)        { order: 2 !important; }
+  .group-requirements__group-wrapper > div:last-child .group-requirements__group--perks-wrapper > *:has(> i.fa-paper-plane)          { order: 3 !important; }
+  .group-requirements__group-wrapper > div:last-child .group-requirements__group--perks-wrapper > *:has(> i.fa-comments)             { order: 4 !important; }
+  .group-requirements__group-wrapper > div:last-child .group-requirements__group--perks-wrapper > *:has(> i.fa-tasks)                { order: 5 !important; }
+  .group-requirements__group-wrapper > div:last-child .group-requirements__group--perks-wrapper > *:has(> i.fa-star)                 { order: 6 !important; }
+  .group-requirements__group-wrapper > div:last-child .group-requirements__group--perks-wrapper > *:has(> i.fa-syringe)              { order: 7 !important; }
+  .group-requirements__group-wrapper > div:last-child .group-requirements__group--perks-wrapper > *:has(> i.fa-chevron-double-up)    { order: 8 !important; }
 }
