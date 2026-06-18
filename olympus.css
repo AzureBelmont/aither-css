@@ -342,9 +342,6 @@ input:focus, textarea:focus, select:focus, .form__input:focus, [type="search"]:f
 input[type="radio"] { accent-color: var(--at-gold) !important; }
 input.form__text { border-color: rgba(255,255,255,0.17); }
 
-/* Conversations/PM filter inputs (subject/username/message) sit in .panel__actions,
-   outside compact-search scope; force consistent styling so type="text" vs type="search"
-   don't render differently via UA appearance */
 .panel__actions input.form__text,
 .panelV2 .form__group input.form__text { background-color: #1c2336 !important; border: 1px solid rgba(255,255,255,0.07) !important; color: var(--at-text) !important; appearance: none !important; -webkit-appearance: none !important; }
 .panel__actions input.form__text:focus,
@@ -596,7 +593,6 @@ input[type="file"]::file-selector-button:hover { background-color: var(--at-gold
 .page__torrent--create .form__group--horizontal .form__select { background-color: var(--at-bg3) !important; border: 1px solid var(--at-border) !important; border-radius: 6px !important; color: var(--at-text) !important; }
 .page__torrent--create .form__group--horizontal .form__select:focus { border-color: rgba(245,166,35,0.4) !important; box-shadow: 0 0 0 2px rgba(245,166,35,0.08) !important; }
 .page__torrent--create .panel__sub-heading { border-radius: 6px !important; margin-top: 16px !important; border: none !important; }
-/* Upload page: unify all controls to the panel tone, with borders (Mocha-style consistency) */
 .page__torrent--create input.form__text, .page__torrent--create .form__input, .page__torrent--create input[type="text"], .page__torrent--create .form__group input.form__text, .page__torrent--create .form__group--horizontal input.form__text, .page__torrent--create .panelV2 .form__group input.form__text, .page__torrent--create select.form__select, .page__torrent--create .form__group--horizontal .form__select, .page__torrent--create textarea.form__textarea, .page__torrent--create .form__textarea, .page__torrent--create fieldset.form__fieldset { background-color: var(--at-bg2) !important; border: 1px solid var(--at-border) !important; border-radius: var(--at-radius) !important; }
 label.form__label.form__label--floating { background-color: transparent !important; }
 
@@ -1124,15 +1120,12 @@ i.category__icon { color: var(--at-gold) !important; }
   .group-requirements__group-wrapper > div:last-child .group-requirements__group--perks-wrapper > *:has(> i.fa-chevron-double-up)    { order: 8 !important; }
 }
 
-/* Subtitles page: Category fieldset matches the filter inputs (panel tone) */
 .page__subtitle--index fieldset.form__fieldset, .page__subtitle--index fieldset.form { background-color: var(--at-bg2) !important; border: 1px solid var(--at-border) !important; border-radius: var(--at-radius) !important; }
 
-/* Advanced torrent search: all controls share the darker panel tone (Mocha-style consistency) */
 .torrent-search__filters input.form__text, .torrent-search__filters .form__input, .torrent-search__filters input[type="text"], .torrent-search__filters input[type="search"], .torrent-search__filters .form__group input.form__text, .torrent-search__filters select.form__select, .torrent-search__filters .vscomp-wrapper, .torrent-search__filters .vscomp-ele-wrapper, .torrent-search__filters .vscomp-toggle-button, .torrent-search__filters fieldset.form__fieldset, .torrent-search__filters fieldset.form { background-color: var(--at-bg2) !important; border: 1px solid var(--at-border) !important; border-radius: var(--at-radius) !important; }
 .torrent-search__filters .vscomp-toggle-button { min-height: 40px !important; height: 40px !important; }
 .torrent-search__filters .vscomp-ele-wrapper { min-height: 40px !important; }
 
-/* Poll results: vote bars use the accent fill on a neutral track instead of default grey */
 .page__poll--result meter.form__meter { background: var(--at-bg3) !important; border: none !important; border-radius: var(--at-radius) !important; overflow: hidden !important; }
 .page__poll--result meter.form__meter::-webkit-meter-bar { background: var(--at-bg3) !important; border: none !important; border-radius: var(--at-radius) !important; }
 .page__poll--result meter.form__meter::-webkit-meter-optimum-value { background: var(--at-gold) !important; border-radius: var(--at-radius) !important; }
