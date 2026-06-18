@@ -3,7 +3,7 @@
    A Japanese fox-spirit theme for Aither (UNIT3D)
    Author : AzureBelmont
    Repo   : github.com/AzureBelmont/aither-css
-   Ver    : 2.4.2
+   Ver    : 2.4.3
    Palette
    ────────────────────────────────────────────
    Sakura Pink  #F4AACA   primary accent
@@ -571,17 +571,14 @@ table td i.fas.fa-circle.fa-xs { color: var(--k-pink) !important; animation: k-d
 .group-requirements__group--header h3 > span[style*="ffb24d"]::before { content: "Oyakata"; font-size: 18px !important; color: #ffb24d; }
 .group-requirements__group--header h3 > span[style*="00abff"]::before { content: "Kappa"; font-size: 18px !important; color: #00abff; }
 
-/* === Uploader path Kitsune names (tailed-fox 4-9) === */
 .group-requirements__group--header h3 > span[style*="66d9a3" i]::before { content: "Yonbi"; font-size: 18px !important; color: var(--k-rank-up-1); }
 .group-requirements__group--header h3 > span[style*="47c98d" i]::before { content: "Gobi"; font-size: 18px !important; color: var(--k-rank-up-2); }
 .group-requirements__group--header h3 > span[style*="39b87d" i]::before { content: "Rokubi"; font-size: 18px !important; color: var(--k-rank-up-3); }
 .group-requirements__group--header h3 > span[style*="2fa36e" i]::before { content: "Shichibi"; font-size: 18px !important; color: var(--k-rank-up-4); }
 .group-requirements__group--header h3 > span[style*="258a5d" i]::before { content: "Hachibi"; font-size: 18px !important; color: var(--k-rank-up-5); }
 .group-requirements__group--header h3 > span[style*="1a6b48" i]::before { content: "Kyubi"; font-size: 18px !important; color: var(--k-rank-up-6); }
-/* Kleos */
 .group-requirements__group--header h3 > span[style*="d47cf2" i]::before { content: "Mitama"; font-size: 18px !important; color: #D47CF2; }
 
-/* === English rank-name badges (superscript) === */
 .group-requirements__group--header h3 > span[style*="b8c8ff" i]::after { content: "Phobos"; font-size: 9px !important; font-weight: 600 !important; vertical-align: super !important; margin-left: 4px !important; opacity: 0.5 !important; }
 .group-requirements__group--header h3 > span[style*="a5b8ff" i]::after { content: "Harmonia"; font-size: 9px !important; font-weight: 600 !important; vertical-align: super !important; margin-left: 4px !important; opacity: 0.5 !important; }
 .group-requirements__group--header h3 > span[style*="7f8eff" i]::after { content: "Zeus"; font-size: 9px !important; font-weight: 600 !important; vertical-align: super !important; margin-left: 4px !important; opacity: 0.5 !important; }
@@ -605,9 +602,7 @@ table td i.fas.fa-circle.fa-xs { color: var(--k-pink) !important; animation: k-d
 .group-requirements__group--header h3 > span[style*="15b097" i]::after { content: "Torrent Moderator"; font-size: 9px !important; font-weight: 600 !important; vertical-align: super !important; margin-left: 4px !important; opacity: 0.5 !important; }
 .group-requirements__group--header h3:has(i.fa-life-ring) > span[style*="20726c" i]::after { content: "FLS"; font-size: 9px !important; font-weight: 600 !important; vertical-align: super !important; margin-left: 4px !important; opacity: 0.5 !important; }
 .group-requirements__group--header h3:has(i.fa-edit) > span[style*="20726c" i]::after { content: "Editor"; font-size: 9px !important; font-weight: 600 !important; vertical-align: super !important; margin-left: 4px !important; opacity: 0.5 !important; }
-/* Leech badge */
 .group-requirements__group--header h3 > span[style*="5e372f" i]::after { content: "Leech"; font-size: 9px !important; font-weight: 600 !important; vertical-align: super !important; margin-left: 4px !important; }
-/* Neutral badge color for ALL English badges (override original-hex inheritance: blue on Main, orange/green on Uploader) */
 .group-requirements__group--header h3 > span[style*="color"]::after { color: var(--k-rank-badge) !important; opacity: 0.7 !important; }
 
 select.form__select option { background-color: var(--k-bg3) !important; color: var(--k-text) !important; }
@@ -863,3 +858,10 @@ table.torrent-search--grouped__torrents tr:hover td { background-color: rgba(244
   }
 }
 .group-requirements__group-wrapper > .group-requirements__group--header { cursor: pointer !important; }
+
+@media (min-width: 767px) {
+  .group-requirements__group-wrapper > div:last-child .group-requirements__group--perks-wrapper {
+    flex-direction: row-reverse !important;
+    justify-content: flex-start !important;
+  }
+}
