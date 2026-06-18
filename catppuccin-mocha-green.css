@@ -342,6 +342,15 @@ li.pagination__previous--disabled:hover, li.pagination__next--disabled:hover { b
 fieldset, .form__fieldset { border-color: rgba(205,214,244,0.12) !important; }
 fieldset.form, .form.form__fieldset, fieldset.form__fieldset { background-color: var(--at-bg3) !important; border-color: rgba(205,214,244,0.10) !important; }
 .torrent-search__filters fieldset.form__fieldset, .torrent-search__filters fieldset.form { background-color: var(--at-bg2) !important; border: 1px solid rgba(205,214,244,0.07) !important; border-radius: 6px !important; }
+/* Subtitles page: Category fieldset matches the filter inputs (Base tone, not Mantle) */
+.page__subtitle--index fieldset.form__fieldset, .page__subtitle--index fieldset.form { background-color: var(--at-bg2) !important; border: 1px solid rgba(205,214,244,0.07) !important; border-radius: 6px !important; }
+/* Poll results: vote bars use the accent fill on a neutral track instead of default grey */
+.page__poll--result meter.form__meter { background: var(--at-bg3) !important; border: none !important; border-radius: 6px !important; overflow: hidden !important; }
+.page__poll--result meter.form__meter::-webkit-meter-bar { background: var(--at-bg3) !important; border: none !important; border-radius: 6px !important; }
+.page__poll--result meter.form__meter::-webkit-meter-optimum-value { background: var(--at-gold) !important; border-radius: 6px !important; }
+.page__poll--result meter.form__meter::-webkit-meter-suboptimum-value { background: var(--at-gold) !important; border-radius: 6px !important; }
+.page__poll--result meter.form__meter::-webkit-meter-even-less-good-value { background: var(--at-gold) !important; border-radius: 6px !important; }
+.page__poll--result meter.form__meter::-moz-meter-bar { background: var(--at-gold) !important; border-radius: 6px !important; }
 .torrent-search__filters .vscomp-wrapper, .torrent-search__filters .vscomp-ele-wrapper, .torrent-search__filters .vscomp-toggle-button { background-color: var(--at-bg2) !important; }
 .torrent-search__filters .vscomp-toggle-button { min-height: 40px !important; height: 40px !important; }
 .torrent-search__filters .vscomp-ele-wrapper { min-height: 40px !important; }
