@@ -1157,6 +1157,7 @@ i.category__icon { color: var(--at-gold) !important; }
   .group-requirements__group-wrapper > div:last-child .group-requirements__group--perks-wrapper > *:has(> i.fa-chevron-double-up)    { order: 8 !important; }
 }
 
+:root {
   --button-filled-bg: #8839ef !important;
   --button-filled-fg: #eff1f5 !important;
   --button-filled-border: none !important;
@@ -1178,4 +1179,27 @@ menu.post__toolbar a:hover i, menu.post__toolbar button:hover i, menu.post__tool
 
 .bbcode-rendered pre, .bbcode-rendered code, pre, code { background-color: var(--at-bg3) !important; color: var(--at-text) !important; border-radius: 6px !important; }
 
-a.user-tag__link { background-color: rgba(76,79,105,0.16) !important; padding: 1px 6px !important; border-radius: 6px !important; }
+html body [style*="color:#95a5a6" i], html body [style*="color: #95a5a6" i] { color: #6c6f85 !important; }
+html body [style*="color:#b8c8ff" i], html body [style*="color: #b8c8ff" i] { color: #5b6fd6 !important; }
+html body [style*="color:#a5b8ff" i], html body [style*="color: #a5b8ff" i] { color: #4f63d4 !important; }
+html body [style*="color:#7f8eff" i], html body [style*="color: #7f8eff" i] { color: #3f54e0 !important; }
+html body [style*="color:#6c7eff" i], html body [style*="color: #6c7eff" i] { color: #3a4fde !important; }
+html body [style*="color:#596eff" i], html body [style*="color: #596eff" i] { color: #2f44d8 !important; }
+html body [style*="color:#466eff" i], html body [style*="color: #466eff" i] { color: #1e66f5 !important; }
+html body [style*="color:#508bf2" i], html body [style*="color: #508bf2" i] { color: #2c6bd9 !important; }
+html body [style*="color:#66d9a3" i], html body [style*="color: #66d9a3" i] { color: #2f9e63 !important; }
+html body [style*="color:#47c98d" i], html body [style*="color: #47c98d" i] { color: #2b9159 !important; }
+html body [style*="color:#39b87d" i], html body [style*="color: #39b87d" i] { color: #2f8a5a !important; }
+html body [style*="color:#2fa36e" i], html body [style*="color: #2fa36e" i] { color: #2a8456 !important; }
+html body [style*="color:#2ecc71" i], html body [style*="color: #2ecc71" i] { color: #40a02b !important; }
+html body [style*="color:#7fff00" i], html body [style*="color: #7fff00" i] { color: #5a9e1a !important; }
+html body [style*="color:#912cdb" i], html body [style*="color: #912cdb" i] { color: #8430c9 !important; }
+html body [style*="color:#d47cf2" i], html body [style*="color: #d47cf2" i] { color: #9a40d0 !important; }
+html body [style*="color:#bf55ec" i], html body [style*="color: #bf55ec" i] { color: #8839ef !important; }
+html body [style*="color:#baaf92" i], html body [style*="color: #baaf92" i] { color: #8a7d5c !important; }
+html body [style*="color:#15b097" i], html body [style*="color: #15b097" i] { color: #179299 !important; }
+html body [style*="color:#4ecdc4" i], html body [style*="color: #4ecdc4" i] { color: #1a9b94 !important; }
+html body [style*="color:#ff9100" i], html body [style*="color: #ff9100" i] { color: #d97706 !important; }
+html body [style*="color:#ffb24d" i], html body [style*="color: #ffb24d" i] { color: #c97f12 !important; }
+html body [style*="color:#00abff" i], html body [style*="color: #00abff" i] { color: #0a8fd0 !important; }
+html body [style*="color:#f92672" i], html body [style*="color: #f92672" i] { color: #e01060 !important; }
