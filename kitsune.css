@@ -1,16 +1,18 @@
 /* ==========================================================
-   Kitsune — OLED Black × Cherry Blossom Pink
+   Kitsune — OLED Black — Cherry Blossom Pink
    A Japanese fox-spirit theme for Aither (UNIT3D)
+   Yokai-themed rank renames and recolouring
    Author : AzureBelmont
    Repo   : github.com/AzureBelmont/aither-css
-   Ver    : 2.4.4
+   Ver    : 2.4.5
+   Stacks on: Aither Dark
    Palette
    ────────────────────────────────────────────
    Sakura Pink  #F4AACA   primary accent
    Torii Red    #C0392B   danger / leechers
    Matcha       #4ade80   seeders / success
    OLED Black   #000000   page bg
-   ========================================================== */
+========================================================== */
 
 :root {
   --k-pink:        #F4AACA;
@@ -184,9 +186,6 @@ html body .panelV2 > :last-child { border-radius: 0 0 var(--k-radius) var(--k-ra
 .panel__heading::before { display: none !important; }
 .panel__body, div.panel__body { background-color: var(--k-bg2) !important; }
 
-/*------------------------------------*\
-  #RANK-RECOLOR (consolidated: was 3 families -> 1; case-insensitive; var-driven)
-\*------------------------------------*/
 [style*="color:#95a5a6" i],[style*="color: #95a5a6" i] { color: #95A5A6 !important; }
 [style*="color:#5e372f" i],[style*="color: #5e372f" i] { color: #5E372F !important; }
 [style*="color:#b8c8ff" i],[style*="color: #b8c8ff" i] { color: var(--k-rank-main-1) !important; }
@@ -618,7 +617,6 @@ select.form__select option:checked { background-color: var(--k-bg4) !important; 
 
 li.top-nav__dropdown ul li a i.fas.fa-heartbeat, li.top-nav__dropdown ul li i.fas.fa-heartbeat { color: var(--k-pink) !important; text-shadow: 0 0 10px rgba(244,170,202,0.8) !important; animation: k-heart-pulse 1.5s ease-in-out infinite !important; filter: none !important; background-color: transparent !important; border: none !important; }
 
-
 .topic-listing__post-stats, .topic-listing__view-stats { text-align: right !important; min-width: 52px !important; padding-right: 6px !important; }
 .topic-listing__post-stats dt, .topic-listing__view-stats dt { color: var(--k-text3) !important; font-size: 10px !important; font-weight: 600 !important; text-transform: uppercase !important; letter-spacing: .06em !important; }
 .topic-listing__post-stats dd, .topic-listing__view-stats dd { color: var(--k-text2) !important; }
@@ -705,6 +703,7 @@ input[type="checkbox"]:disabled { opacity: 0.6 !important; cursor: default !impo
 .page__stats--index .key-value { gap: 0 !important; }
 
 .bbcode-rendered.bbcode-rendered blockquote { background-color: var(--k-bg3) !important; border: 2px dotted var(--k-border) !important; }
+
 .post__footer { background-color: var(--k-bg2) !important; border-top: 1px solid var(--k-border) !important; }
 i.category__icon { color: var(--k-pink) !important; }
 
@@ -766,7 +765,6 @@ table.torrent-search--grouped__torrents tr:hover td { background-color: rgba(244
 .panelV2:nth-of-type(1) .group-requirements__group-wrapper:nth-child(n+9) { min-height: 78px !important; }
 .group-requirements__path-wrapper:nth-child(2) .group-requirements__group-wrapper:nth-child(9) { margin-top: 484px !important; }
 
-
 .group-requirements__group-wrapper .group-requirements__group--description { display: block !important; font-style: italic !important; font-size: 12px !important; color: var(--k-text2) !important; padding: 2px 14px 10px !important; }
 
 @media (min-width: 767px) {
@@ -817,7 +815,6 @@ table.torrent-search--grouped__torrents tr:hover td { background-color: rgba(244
   .group-requirements__perk, .group-requirements__perk-extended { border: none !important; background: transparent !important; }
 }
 
-
 .group-requirements__group-wrapper:has(h3 span[style]) .group-requirements__group--requirement-row,
 .group-requirements__group-wrapper:has(h3 span[style]) .group-requirements__group--requirement-multirow { background-color: transparent !important; }
 
@@ -835,7 +832,6 @@ table.torrent-search--grouped__torrents tr:hover td { background-color: rgba(244
 .group-requirements__group-wrapper:has(h3 span[style*="2fa36e"]) { border-left: 3px solid var(--k-rank-up-4) !important; background: rgba(245,120,25,0.15) !important; }
 .group-requirements__group-wrapper:has(h3 span[style*="258a5d"]) { border-left: 3px solid var(--k-rank-up-5) !important; background: rgba(214,99,15,0.18) !important; }
 .group-requirements__group-wrapper:has(h3 span[style*="1a6b48"]) { border-left: 3px solid var(--k-rank-up-6) !important; background: rgba(168,76,8,0.22) !important; }
-
 
 .panelV2:nth-of-type(2) .group-requirements__group-wrapper { background: rgba(255,255,255,0.02) !important; border: 1px solid rgba(255,255,255,0.06) !important; }
 

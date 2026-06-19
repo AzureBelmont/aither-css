@@ -1,16 +1,18 @@
 /* ==========================================================
-   Kitsune — OLED Black × Cherry Blossom Pink
+   Kitsune Clean — OLED Black — Cherry Blossom Pink
    A Japanese fox-spirit theme for Aither (UNIT3D)
+   Clean variant — same aesthetic, no rank renames or recolouring
    Author : AzureBelmont
    Repo   : github.com/AzureBelmont/aither-css
-   Ver    : 2.4.4
+   Ver    : 2.4.5
+   Stacks on: Aither Dark
    Palette
    ────────────────────────────────────────────
    Sakura Pink  #F4AACA   primary accent
    Torii Red    #C0392B   danger / leechers
    Matcha       #4ade80   seeders / success
    OLED Black   #000000   page bg
-   ========================================================== */
+========================================================== */
 
 :root {
   --k-pink:        #F4AACA;
@@ -595,6 +597,7 @@ input[type="checkbox"]:disabled { opacity: 0.6 !important; cursor: default !impo
 .page__stats--index .key-value { gap: 0 !important; }
 
 .bbcode-rendered.bbcode-rendered blockquote { background-color: var(--k-bg3) !important; border: 2px dotted var(--k-border) !important; }
+
 .post__footer { background-color: var(--k-bg2) !important; border-top: 1px solid var(--k-border) !important; }
 i.category__icon { color: var(--k-pink) !important; }
 
@@ -656,7 +659,6 @@ table.torrent-search--grouped__torrents tr:hover td { background-color: rgba(244
 .panelV2:nth-of-type(1) .group-requirements__group-wrapper:nth-child(n+9) { min-height: 78px !important; }
 .group-requirements__path-wrapper:nth-child(2) .group-requirements__group-wrapper:nth-child(9) { margin-top: 484px !important; }
 
-
 .group-requirements__group-wrapper .group-requirements__group--description { display: block !important; font-style: italic !important; font-size: 12px !important; color: var(--k-text2) !important; padding: 2px 14px 10px !important; }
 
 @media (min-width: 767px) {
@@ -707,7 +709,6 @@ table.torrent-search--grouped__torrents tr:hover td { background-color: rgba(244
   .group-requirements__perk, .group-requirements__perk-extended { border: none !important; background: transparent !important; }
 }
 
-
 .group-requirements__group-wrapper:has(h3 span[style]) .group-requirements__group--requirement-row,
 .group-requirements__group-wrapper:has(h3 span[style]) .group-requirements__group--requirement-multirow { background-color: transparent !important; }
 
@@ -725,7 +726,6 @@ table.torrent-search--grouped__torrents tr:hover td { background-color: rgba(244
 .group-requirements__group-wrapper:has(h3 span[style*="2fa36e"]) { border-left: 3px solid #2fa36e !important; background: rgba(47,163,110,0.14) !important; }
 .group-requirements__group-wrapper:has(h3 span[style*="258a5d"]) { border-left: 3px solid #258a5d !important; background: rgba(37,138,93,0.17) !important; }
 .group-requirements__group-wrapper:has(h3 span[style*="1a6b48"]) { border-left: 3px solid #1a6b48 !important; background: rgba(26,107,72,0.21) !important; }
-
 
 .panelV2:nth-of-type(2) .group-requirements__group-wrapper { background: rgba(255,255,255,0.02) !important; border: 1px solid rgba(255,255,255,0.06) !important; }
 

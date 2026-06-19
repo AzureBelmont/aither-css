@@ -3,8 +3,10 @@
    Soothing pastel theme. Blue accent. Dark surfaces.
    Author : AzureBelmont
    Repo   : github.com/AzureBelmont/aither-css
-   Ver    : 1.0
-   Flavor : Mocha   •   Accent : Blue
+   Ver    : 1.1
+   Flavor : Mocha   —   Accent : Blue
+   Family : one of 6 accents — Mauve, Peach, Blue, Red, Green, Maroon
+   Stacks on: Aither Dark
    Palette (Catppuccin Mocha)
    ────────────────────────────────────────────
    Blue     #89b4fa   primary accent
@@ -42,16 +44,16 @@
   --ctp-mantle:    #181825;
   --ctp-crust:     #11111b;
 
-  --at-bg:        #11111b;   
-  --at-bg2:       #1e1e2e;   
-  --at-bg3:       #181825;   
+  --at-bg:        #11111b;
+  --at-bg2:       #1e1e2e;
+  --at-bg3:       #181825;
   --at-border:    rgba(205,214,244,0.07);
-  --at-gold:      #89b4fa;   
-  --at-gold2:     #6f9ae8;  
+  --at-gold:      #89b4fa;
+  --at-gold2:     #6f9ae8;
   --at-goldfaint: rgba(137,180,250,0.14);
-  --at-text:      #cdd6f4;   
-  --at-text2:     #9399b2;  
-  --at-text3:     #585b70;   
+  --at-text:      #cdd6f4;
+  --at-text2:     #9399b2;
+  --at-text3:     #585b70;
   --at-green:     #a6e3a1;
   --at-red:       #f38ba8;
   --at-radius:    10px;
@@ -64,7 +66,7 @@
   --notification-unread:           #89b4fa;
   --color-links-hover:             #89b4fa;
   --panel-head-fg:                 #89b4fa;
-  --quick-search-bg:               #1e1e2e; 
+  --quick-search-bg:               #1e1e2e;
   --quick-search-result-hover-bg:  #1e1e2e;
   --post-toolbar-bg:               #1e1e2e;
   --post-toolbar-hover-bg:         #313244;
@@ -340,9 +342,11 @@ li.pagination__previous--disabled:hover, li.pagination__next--disabled:hover { b
 .secondary-nav__item--active, .secondary-nav a.active { color: var(--at-gold) !important; border-bottom-color: var(--at-gold) !important; }
 
 fieldset, .form__fieldset { border-color: rgba(205,214,244,0.12) !important; }
-fieldset.form, .form.form__fieldset, fieldset.form__fieldset { background-color: var(--at-bg3) !important; border-color: rgba(205,214,244,0.10) !important; }
+fieldset.form, .form.form__fieldset, fieldset.form__fieldset { background-color: var(--at-bg2) !important; border-color: rgba(205,214,244,0.10) !important; }
 .torrent-search__filters fieldset.form__fieldset, .torrent-search__filters fieldset.form { background-color: var(--at-bg2) !important; border: 1px solid rgba(205,214,244,0.07) !important; border-radius: 6px !important; }
+
 .page__subtitle--index fieldset.form__fieldset, .page__subtitle--index fieldset.form { background-color: var(--at-bg2) !important; border: 1px solid rgba(205,214,244,0.07) !important; border-radius: 6px !important; }
+
 .page__poll--result meter.form__meter { background: var(--at-bg3) !important; border: none !important; border-radius: 6px !important; overflow: hidden !important; }
 .page__poll--result meter.form__meter::-webkit-meter-bar { background: var(--at-bg3) !important; border: none !important; border-radius: 6px !important; }
 .page__poll--result meter.form__meter::-webkit-meter-optimum-value { background: var(--at-gold) !important; border-radius: 6px !important; }
@@ -387,7 +391,7 @@ input.form__text { border-color: rgba(205,214,244,0.17); }
 .panel__actions input.form__text:focus,
 .panelV2 .form__group input.form__text:focus { background-color: #45475a !important; border-color: rgba(137,180,250,0.4) !important; outline: none !important; }
 
-.vscomp-wrapper, .vscomp-ele-wrapper, .vscomp-toggle-button { background-color: var(--at-bg3) !important; border: 0.5px solid var(--at-border) !important; border-radius: 6px !important; color: var(--at-text2) !important; }
+.vscomp-wrapper, .vscomp-ele-wrapper, .vscomp-toggle-button { background-color: var(--at-bg2) !important; border: 0.5px solid var(--at-border) !important; border-radius: 6px !important; color: var(--at-text2) !important; }
 .vscomp-toggle-button:hover { border-color: rgba(137,180,250,0.45) !important; }
 .vscomp-value { color: var(--at-text2) !important; }
 .vscomp-arrow { color: var(--at-gold) !important; border-color: var(--at-gold) !important; }
@@ -633,6 +637,7 @@ input[type="file"]::file-selector-button:hover { background-color: var(--at-gold
 .page__torrent--create .form__group--horizontal .form__select { background-color: var(--at-bg3) !important; border: 1px solid var(--at-border) !important; border-radius: 6px !important; color: var(--at-text) !important; }
 .page__torrent--create .form__group--horizontal .form__select:focus { border-color: rgba(137,180,250,0.4) !important; box-shadow: 0 0 0 2px rgba(137,180,250,0.08) !important; }
 .page__torrent--create .panel__sub-heading { border-radius: 6px !important; margin-top: 16px !important; border: none !important; }
+
 .page__torrent--create input.form__text, .page__torrent--create .form__input, .page__torrent--create input[type="text"], .page__torrent--create .form__group input.form__text, .page__torrent--create .form__group--horizontal input.form__text, .page__torrent--create .panelV2 .form__group input.form__text, .page__torrent--create select.form__select, .page__torrent--create .form__group--horizontal .form__select, .page__torrent--create textarea.form__textarea, .page__torrent--create .form__textarea, .page__torrent--create fieldset.form__fieldset { background-color: var(--at-bg2) !important; border: 1px solid var(--at-border) !important; border-radius: var(--at-radius) !important; }
 label.form__label.form__label--floating { background-color: transparent !important; }
 
@@ -1048,7 +1053,6 @@ i.category__icon { color: var(--at-gold) !important; }
 .panelV2:nth-of-type(1) .group-requirements__group-wrapper:nth-child(n+9) { min-height: 78px !important; }
 .group-requirements__path-wrapper:nth-child(2) .group-requirements__group-wrapper:nth-child(9) { margin-top: 484px !important; }
 
-
 .panelV2:nth-of-type(1) .group-requirements__group-wrapper .group-requirements__group--description { display: block !important; font-style: italic !important; font-size: 12px !important; color: var(--at-text2) !important; padding: 2px 14px 10px !important; }
 
 @media (min-width: 767px) {
@@ -1100,7 +1104,6 @@ i.category__icon { color: var(--at-gold) !important; }
   .group-requirements__perk, .group-requirements__perk-extended { border: none !important; background: transparent !important; }
 }
 
-
 .group-requirements__group-wrapper:has(h3 span[style]) .group-requirements__group--requirement-row,
 .panelV2:nth-of-type(1) .group-requirements__group-wrapper:has(h3 span[style]) .group-requirements__group--requirement-multirow { background-color: transparent !important; }
 
@@ -1118,7 +1121,6 @@ i.category__icon { color: var(--at-gold) !important; }
 .group-requirements__group-wrapper:has(h3 span[style*="2fa36e"]) { border-left: 3px solid #2fa36e !important; background: rgba(47,163,110,0.14) !important; }
 .group-requirements__group-wrapper:has(h3 span[style*="258a5d"]) { border-left: 3px solid #258a5d !important; background: rgba(37,138,93,0.17) !important; }
 .group-requirements__group-wrapper:has(h3 span[style*="1a6b48"]) { border-left: 3px solid #1a6b48 !important; background: rgba(26,107,72,0.21) !important; }
-
 
 .panelV2:nth-of-type(2) .group-requirements__group-wrapper { background: rgba(205,214,244,0.02) !important; border: 1px solid rgba(205,214,244,0.06) !important; }
 
