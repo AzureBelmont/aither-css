@@ -3,7 +3,7 @@
    Soothing pastel theme. Blue accent. Dark surfaces.
    Author : AzureBelmont
    Repo   : github.com/AzureBelmont/aither-css
-   Ver    : 1.1
+   Ver    : 1.2
    Flavor : Mocha   —   Accent : Blue
    Family : one of 6 accents — Mauve, Peach, Blue, Red, Green, Maroon
    Stacks on: Aither Dark
@@ -1202,7 +1202,7 @@ aside .data-table tbody tr:nth-child(even) th { background-color: var(--at-bg3) 
 .panel__body:has(.donation__items-wrapper) > p:first-of-type{
   position:relative; text-align:center !important;
   font-size:20px !important; font-weight:800 !important; color:var(--at-text) !important;
-  margin:-20px -20px 0 -20px !important; padding:62px 24px 16px !important;
+  margin:-20px -20px 0 -20px !important; padding:38px 24px 16px !important;
   background:transparent !important;
 }
 .panel__body:has(.donation__items-wrapper) > p:first-of-type::before{
