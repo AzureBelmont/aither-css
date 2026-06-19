@@ -940,10 +940,6 @@ aside .data-table tbody tr:nth-child(even) th { background-color: var(--k-bg3) !
   background:transparent !important;
 }
 .panel__body:has(.donation__items-wrapper) > div:has(ul) p span{ color:var(--k-pink) !important; font-weight:800 !important; }
-.panel__body:has(.donation__items-wrapper) > div:has(ul) p::after{
-  content:""; display:block; height:14px; max-width:520px; margin:14px auto 4px; border-radius:999px;
-  border:1px solid var(--k-border); background:linear-gradient(90deg, var(--k-pink), var(--k-pink)); box-shadow:0 0 14px var(--k-pink-faint);
-}
 .panel__body:has(.donation__items-wrapper) > div:has(ul) ul{
   list-style:none !important; display:flex !important; gap:10px !important; justify-content:center !important;
   flex-wrap:wrap !important; padding:0 !important; margin:10px 0 0 !important;

@@ -1216,10 +1216,6 @@ aside .data-table tbody tr:nth-child(even) th { background-color: var(--at-bg3) 
   background:transparent !important;
 }
 .panel__body:has(.donation__items-wrapper) > div:has(ul) p span{ color:var(--at-gold) !important; font-weight:800 !important; }
-.panel__body:has(.donation__items-wrapper) > div:has(ul) p::after{
-  content:""; display:block; height:14px; max-width:520px; margin:14px auto 4px; border-radius:999px;
-  border:1px solid var(--at-border); background:linear-gradient(90deg, var(--at-gold2), var(--at-gold)); box-shadow:0 0 14px var(--at-goldfaint);
-}
 .panel__body:has(.donation__items-wrapper) > div:has(ul) ul{
   list-style:none !important; display:flex !important; gap:10px !important; justify-content:center !important;
   flex-wrap:wrap !important; padding:0 !important; margin:10px 0 0 !important;
