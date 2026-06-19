@@ -11,7 +11,7 @@
 
 (function () {
   'use strict';
-
+  
   /* Rank map: title attribute value → Yokai name
      Keep in sync with kitsune.css rank map         */
   const RANK_MAP = {
