@@ -165,7 +165,7 @@ article.quick-search__result:nth-child(odd) { background-color: #dce0e8 !importa
 article.quick-search__result:nth-child(even) { background-color: #e6e9ef !important; }
 article.quick-search__result { border-bottom: 1px solid rgba(0, 0, 0, .15) !important; }
 article.quick-search__result:last-child { border-bottom: none !important; }
-article.quick-search__result:hover { background-color: rgba(136,57,239,0.06) !important; }
+article.quick-search__result:hover, article.quick-search__result:hover .quick-search__result-link, .quick-search__result-link:hover { background-color: #ccd0da !important; }
 .quick-search__results { background-color: #eff1f5 !important; border: 1px solid rgba(136,57,239,0.85) !important; border-top: none !important; border-radius: 0 0 var(--at-radius) var(--at-radius) !important; overflow-y: auto !important; overflow-x: hidden !important; }
 .quick-search__image { border: solid 1px var(--at-border) !important; box-sizing: border-box !important; width: 46px !important; height: 69px !important; border-radius: 6px !important; object-fit: cover !important; }
 .quick-search__result-name { font-weight: 600 !important; font-size: 14px !important; }
@@ -1211,3 +1211,18 @@ html body [style*="color:#f92672" i], html body [style*="color: #f92672" i] { co
 
 aside .data-table tbody tr th { background-color: var(--at-bg2) !important; }
 aside .data-table tbody tr:nth-child(even) th { background-color: var(--at-bg3) !important; }
+
+/* Notification filter icons: theme accent instead of green */
+.form__fieldset-checkbox-container label.form__label i.text-success { color: var(--at-gold) !important; }
+
+/* Password strength meter: themed track + level colouring (weak->strong) */
+.page__user-password--edit meter.form__meter { background: var(--at-bg3) !important; border: none !important; border-radius: var(--at-radius) !important; overflow: hidden !important; height: 10px !important; }
+.page__user-password--edit meter.form__meter::-webkit-meter-bar { background: var(--at-bg3) !important; border: none !important; border-radius: var(--at-radius) !important; }
+.page__user-password--edit meter.form__meter[value="1"]::-webkit-meter-optimum-value, .page__user-password--edit meter.form__meter[value="1"]::-webkit-meter-suboptimum-value, .page__user-password--edit meter.form__meter[value="1"]::-webkit-meter-even-less-good-value { background: #e5484d !important; border-radius: var(--at-radius) !important; }
+.page__user-password--edit meter.form__meter[value="2"]::-webkit-meter-optimum-value, .page__user-password--edit meter.form__meter[value="2"]::-webkit-meter-suboptimum-value, .page__user-password--edit meter.form__meter[value="2"]::-webkit-meter-even-less-good-value { background: #f5a623 !important; border-radius: var(--at-radius) !important; }
+.page__user-password--edit meter.form__meter[value="3"]::-webkit-meter-optimum-value, .page__user-password--edit meter.form__meter[value="3"]::-webkit-meter-suboptimum-value, .page__user-password--edit meter.form__meter[value="3"]::-webkit-meter-even-less-good-value { background: #e6c84a !important; border-radius: var(--at-radius) !important; }
+.page__user-password--edit meter.form__meter[value="4"]::-webkit-meter-optimum-value, .page__user-password--edit meter.form__meter[value="4"]::-webkit-meter-suboptimum-value, .page__user-password--edit meter.form__meter[value="4"]::-webkit-meter-even-less-good-value { background: #46a758 !important; border-radius: var(--at-radius) !important; }
+.page__user-password--edit meter.form__meter[value="1"]::-moz-meter-bar { background: #e5484d !important; }
+.page__user-password--edit meter.form__meter[value="2"]::-moz-meter-bar { background: #f5a623 !important; }
+.page__user-password--edit meter.form__meter[value="3"]::-moz-meter-bar { background: #e6c84a !important; }
+.page__user-password--edit meter.form__meter[value="4"]::-moz-meter-bar { background: #46a758 !important; }
