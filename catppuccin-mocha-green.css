@@ -177,6 +177,12 @@ article.quick-search__result:hover, article.quick-search__result:hover .quick-se
 .panel__heading { background-color: var(--at-bg3) !important; border-bottom: 1px solid var(--at-goldfaint) !important; color: var(--at-gold) !important; font-weight: 600 !important; letter-spacing: .04em !important; border-radius: var(--at-radius) var(--at-radius) 0 0 !important; padding-left: 16px !important; }
 .panel__heading a, .panel__heading a:visited { color: var(--at-gold) !important; font-weight: 600 !important; }
 .panel__heading a:hover { color: var(--at-gold2) !important; }
+
+a.user-tag__link:hover, a.chatroom-users__user-link:hover,
+a.user-tag__link:hover span, a.chatroom-users__user-link:hover span { color: var(--at-gold) !important; }
+
+.group-requirements__group--requirement-row{ transition: background .12s ease !important; border-radius:6px !important; }
+.group-requirements__group--requirement-row:hover{ background: rgba(166,227,161,0.18) !important; box-shadow: inset 0 0 0 1px rgba(166,227,161,0.35) !important; }
 .panel--grid-item { background-color: var(--at-bg2) !important; border: 0.5px solid rgba(166,227,161,0.22) !important; border-radius: var(--at-radius) !important; }
 .panel__body, div.panel__body { background-color: var(--at-bg2) !important; }
 
@@ -244,7 +250,7 @@ section.chatroom__users { background-color: var(--at-bg2) !important; }
 h1, h2, h3 { color: var(--at-text) !important; }
 .panelV2 > .panel__heading, .block__heading, [class*="section__title"], [class*="section-title"] { color: var(--at-gold) !important; }
 h1.text-gold, h2.text-gold, h3.text-gold, h4.text-gold, .text-gold { color: var(--at-gold) !important; }
-i.fa-star.text-gold { color: var(--torrent-row-freeleech-fg, #ffb800) !important; } /* restore FL star to default amber (group requirements + anywhere text-gold catches freeleech) */
+i.fa-star.text-gold { color: var(--torrent-row-freeleech-fg, #ffb800) !important; } 
 .text-green { color: var(--color-green) !important; }
 .text-purple { color: var(--color-purple) !important; }
 .data-table-wrapper { border-radius: var(--at-radius) !important; overflow-x: auto !important; border: 0.5px solid rgba(166,227,161,0.15) !important; }
@@ -1165,10 +1171,8 @@ i.category__icon { color: var(--at-gold) !important; }
 aside .data-table tbody tr th { background-color: var(--at-bg2) !important; }
 aside .data-table tbody tr:nth-child(even) th { background-color: var(--at-bg3) !important; }
 
-/* Notification filter icons: theme accent instead of green */
 .form__fieldset-checkbox-container label.form__label i.text-success { color: var(--at-gold) !important; }
 
-/* Password strength meter: themed track + level colouring (weak->strong) */
 .page__user-password--edit meter.form__meter { background: var(--at-bg3) !important; border: none !important; border-radius: var(--at-radius) !important; overflow: hidden !important; height: 10px !important; }
 .page__user-password--edit meter.form__meter::-webkit-meter-bar { background: var(--at-bg3) !important; border: none !important; border-radius: var(--at-radius) !important; }
 .page__user-password--edit meter.form__meter[value="1"]::-webkit-meter-optimum-value, .page__user-password--edit meter.form__meter[value="1"]::-webkit-meter-suboptimum-value, .page__user-password--edit meter.form__meter[value="1"]::-webkit-meter-even-less-good-value { background: #e5484d !important; border-radius: var(--at-radius) !important; }
@@ -1180,11 +1184,6 @@ aside .data-table tbody tr:nth-child(even) th { background-color: var(--at-bg3) 
 .page__user-password--edit meter.form__meter[value="3"]::-moz-meter-bar { background: #e6c84a !important; }
 .page__user-password--edit meter.form__meter[value="4"]::-moz-meter-bar { background: #46a758 !important; }
 
-/* ============================================================
-   Donate page redesign
-   ============================================================ */
-
-/* single continuous hero gradient on the panel body (top-anchored) */
 .panel__body:has(.donation__items-wrapper){
   background-image:
     radial-gradient(1200px 420px at 50% -60px, var(--at-goldfaint), transparent 70%),
@@ -1193,11 +1192,9 @@ aside .data-table tbody tr:nth-child(even) th { background-color: var(--at-bg3) 
   background-position:top center !important;
 }
 
-/* hide the stock galaxy header image + theme hr lines that break the hero */
 .donation__item--header{ background-image:none !important; }
 .panel__body:has(.donation__items-wrapper) > hr{ display:none !important; }
 
-/* ---- HERO (intro paragraph styled as a full-bleed gradient header) ---- */
 .panel__body:has(.donation__items-wrapper) > p:first-of-type{
   position:relative; text-align:center !important;
   font-size:20px !important; font-weight:800 !important; color:var(--at-text) !important;
@@ -1209,7 +1206,6 @@ aside .data-table tbody tr:nth-child(even) th { background-color: var(--at-bg3) 
   display:block; font-size:30px; color:var(--at-gold); margin-bottom:14px; filter:drop-shadow(0 0 12px var(--at-goldfaint));
 }
 
-/* goal % block on the same gradient wash */
 .panel__body:has(.donation__items-wrapper) > div:has(ul):has(li){
   text-align:center !important; margin:0 -20px 6px -20px !important; padding:6px 24px 26px !important;
   background:transparent !important;
@@ -1233,13 +1229,11 @@ aside .data-table tbody tr:nth-child(even) th { background-color: var(--at-bg3) 
 .panel__body:has(.donation__items-wrapper) > div:has(ul) ul li input,
 .panel__body:has(.donation__items-wrapper) > div:has(ul) ul li [class*="fa-"]{ display:none !important; }
 
-/* section title "Tiers" */
 .panel__body:has(.donation__items-wrapper) > h2{
   font-size:15px !important; color:var(--at-gold) !important; text-transform:uppercase !important;
   letter-spacing:1.2px !important; font-weight:700 !important; margin:26px 0 6px !important;
 }
 
-/* ---- TIER CARDS ---- */
 .donation__items-wrapper{ display:grid !important; grid-template-columns:repeat(4,1fr) !important; gap:18px !important; }
 .donation__item{
   background:var(--at-bg3) !important; border:1px solid var(--at-border) !important; border-radius:14px !important;
@@ -1247,6 +1241,16 @@ aside .data-table tbody tr:nth-child(even) th { background-color: var(--at-bg3) 
   transition:transform .15s, border-color .15s, box-shadow .15s !important;
 }
 .donation__item:hover{ transform:translateY(-4px) !important; border-color:var(--at-gold) !important; box-shadow:0 14px 34px rgba(0,0,0,.45) !important; }
+
+.panelV2:nth-of-type(1) .group-requirements__group-wrapper:not(:has(.group-requirements__group--description)):has(> div:nth-child(2):not([style*="display: none"])) > .group-requirements__group--header,
+.panelV2:nth-of-type(2) .group-requirements__group-wrapper:not(:has(.group-requirements__group--description)):has(> div:nth-child(2):not([style*="display: none"])) > .group-requirements__group--header {
+  justify-content: center !important;
+}
+.panelV2:nth-of-type(1) .group-requirements__group-wrapper:not(:has(.group-requirements__group--description)):has(> div:nth-child(2):not([style*="display: none"])) > .group-requirements__group--header h3,
+.panelV2:nth-of-type(2) .group-requirements__group-wrapper:not(:has(.group-requirements__group--description)):has(> div:nth-child(2):not([style*="display: none"])) > .group-requirements__group--header h3 {
+  text-align: center !important;
+}
+
 .donation__item--header{
   background:linear-gradient(180deg, var(--at-goldfaint), transparent) !important;
   padding:22px 16px 16px !important; text-align:center !important; min-height:0 !important; height:auto !important;
@@ -1282,7 +1286,6 @@ aside .data-table tbody tr:nth-child(even) th { background-color: var(--at-bg3) 
 .donation__key-value__group:last-child dd{ color:var(--at-gold) !important; font-weight:700 !important; }
 .donation__key-value__group:last-child i[class*="fa-"]{ color:var(--at-gold) !important; }
 
-/* sparkles line: real donor sparkle gif behind the perk text */
 .donation__key-value__group:nth-child(3) dt i{ color:var(--at-gold) !important; }
 .donation__key-value__group:nth-child(3) dd{ background-image:url('https://aither.cc/img/sparkels.gif') !important; background-repeat:repeat !important; background-clip:border-box !important; padding:1px 6px !important; border-radius:4px !important; color:var(--at-text) !important; }
 
@@ -1301,19 +1304,15 @@ aside .data-table tbody tr:nth-child(even) th { background-color: var(--at-bg3) 
 @media(max-width:980px){ .donation__items-wrapper{ grid-template-columns:repeat(2,1fr) !important; } }
 @media(max-width:560px){ .donation__items-wrapper{ grid-template-columns:1fr !important; } }
 
-/* Textarea heights: trim oversized boxes (UNIT3D default is 140px) */
-/* chatbox -> compact single-line; comment + reply boxes -> moderate. */
-/* upload description, forum editor, and modal dialogs keep the default height. */
-.chatroom__new-message .form__textarea{ height:50px !important; transition:height .18s ease !important; padding-top:16px !important; padding-bottom:16px !important; }
-.chatroom__new-message .form__textarea:focus{ height:120px !important; padding-top:10px !important; padding-bottom:10px !important; }
+.chatroom__new-message .form__textarea{ height:42px !important; line-height:16px !important; padding:12px !important; box-sizing:border-box !important; overflow:hidden !important; transition:height .18s ease !important; }
+.chatroom__new-message .form__textarea:focus{ height:120px !important; padding:10px 12px !important; overflow:auto !important; }
 .new-comment .form__textarea,
 .reply-comment .form__textarea{ height:90px !important; transition:height .18s ease !important; }
 .new-comment .form__textarea:focus,
 .reply-comment .form__textarea:focus{ height:140px !important; }
-/* Even spacing above the reply box so it matches the gap below (inter-comment rhythm) */
+
 form.reply-comment{ margin-top:18px !important; }
 
-/* Group requirements: expanded perks as pills, wrapping to multiple lines, separated from requirements by a divider line */
 .group-requirements__group--perks-wrapper:has(.group-requirements__perk-extended){
   display:flex !important;
   flex-wrap:wrap !important;
@@ -1339,7 +1338,6 @@ form.reply-comment{ margin-top:18px !important; }
   line-height:1.3 !important;
 }
 
-/* Group requirements: expanded body box (requirements + perks) outlined in the rank color, below the header */
 .panelV2 .group-requirements__group-wrapper:not(:has(.group-requirements__group--description)):has(> div:nth-child(2):not([style*="display: none"])):has(h3 span[style*="b8c8ff" i]) > div:nth-child(2){border:1px solid rgba(184,200,255,0.5) !important;border-bottom:none !important;border-radius:8px 8px 0 0 !important;margin:6px 10px 0 !important;padding:8px 12px 0 !important;}
 .panelV2 .group-requirements__group-wrapper:not(:has(.group-requirements__group--description)):has(> div:nth-child(2):not([style*="display: none"])):has(h3 span[style*="b8c8ff" i]) > div:nth-child(3){border:1px solid rgba(184,200,255,0.5) !important;border-top:none !important;border-radius:0 0 8px 8px !important;margin:0 10px 8px !important;padding:0 12px 8px !important;}
 .panelV2 .group-requirements__group-wrapper:not(:has(.group-requirements__group--description)):has(> div:nth-child(2):not([style*="display: none"])):has(h3 span[style*="a5b8ff" i]) > div:nth-child(2){border:1px solid rgba(165,184,255,0.5) !important;border-bottom:none !important;border-radius:8px 8px 0 0 !important;margin:6px 10px 0 !important;padding:8px 12px 0 !important;}
@@ -1369,12 +1367,16 @@ form.reply-comment{ margin-top:18px !important; }
 .panelV2 .group-requirements__group-wrapper:not(:has(.group-requirements__group--description)):has(> div:nth-child(2):not([style*="display: none"])):has(h3 span[style*="1a6b48" i]) > div:nth-child(2){border:1px solid rgba(26,107,72,0.5) !important;border-bottom:none !important;border-radius:8px 8px 0 0 !important;margin:6px 10px 0 !important;padding:8px 12px 0 !important;}
 .panelV2 .group-requirements__group-wrapper:not(:has(.group-requirements__group--description)):has(> div:nth-child(2):not([style*="display: none"])):has(h3 span[style*="1a6b48" i]) > div:nth-child(3){border:1px solid rgba(26,107,72,0.5) !important;border-top:none !important;border-radius:0 0 8px 8px !important;margin:0 10px 8px !important;padding:0 12px 8px !important;}
 
-/* Current-rank card (highlight): theme-accent glow (always) */
 .panelV2 .group-requirements__group-wrapper.group-requirements__group-wrapper-highlight {
   box-shadow: 0 0 10px 1px rgba(166,227,161,0.5) !important;
   border-color: var(--at-gold) !important;
 }
-/* Rank-card header: keep name + action icons centered and in the SAME vertical spot whether collapsed or expanded (no shift on toggle). Scoped to real rank cards (excludes status rows + static groups, which have a description). */
+
+.panelV2 .group-requirements__group-wrapper.group-requirements__group-wrapper-highlight:hover {
+  box-shadow: 0 0 10px 1px rgba(166,227,161,0.22) !important;
+  border-color: rgba(166,227,161,0.4) !important;
+}
+
 .panelV2:nth-of-type(1) .group-requirements__group-wrapper:not(:has(.group-requirements__group--description)):has(> div:nth-child(2)[style*="display: none"]),
 .panelV2:nth-of-type(2) .group-requirements__group-wrapper:not(:has(.group-requirements__group--description)):has(> div:nth-child(2)[style*="display: none"]) {
   grid-template-rows: 1fr !important;
@@ -1402,5 +1404,4 @@ form.reply-comment{ margin-top:18px !important; }
   transform: translateY(-4px) !important;
 }
 
-/* Reply box: add breathing room below the reply-to-parent-comment form */
 form.reply-comment { margin-bottom: 16px !important; }
