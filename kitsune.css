@@ -1044,3 +1044,15 @@ aside .data-table tbody tr:nth-child(even) th { background-color: var(--k-bg3) !
   padding: 10px 14px !important;
   margin-top: 8px !important;
 }
+
+/* Current-rank card (highlight): theme-accent glow + center name and action icons */
+.panelV2 .group-requirements__group-wrapper.group-requirements__group-wrapper-highlight {
+  box-shadow: 0 0 10px 1px rgba(244,170,202,0.5) !important;
+  border-color: var(--k-pink) !important;
+  grid-template-rows: 1fr !important;
+}
+.panelV2 .group-requirements__group-wrapper-highlight .group-requirements__group--requirement-row-dropdown {
+  top: 50% !important;
+  bottom: auto !important;
+  transform: translateY(-50%) !important;
+}
