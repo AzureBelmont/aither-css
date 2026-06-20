@@ -967,7 +967,7 @@ aside .data-table tbody tr:nth-child(even) th { background-color: var(--k-bg3) !
 .donation__items-wrapper{ display:grid !important; grid-template-columns:repeat(4,1fr) !important; gap:18px !important; }
 .donation__item{
   background:var(--k-bg3) !important; border:1px solid var(--k-border) !important; border-radius:14px !important;
-  overflow:hidden !important; display:flex !important; flex-direction:column !important; padding-bottom:6px !important;
+  overflow:hidden !important; display:flex !important; flex-direction:column !important; padding-bottom:10px !important;
   transition:transform .15s, border-color .15s, box-shadow .15s !important;
 }
 .donation__item:hover{ transform:translateY(-4px) !important; border-color:var(--k-pink) !important; box-shadow:0 14px 34px rgba(0,0,0,.45) !important; }
@@ -1006,12 +1006,19 @@ aside .data-table tbody tr:nth-child(even) th { background-color: var(--k-bg3) !
 .donation__key-value__group:last-child dd{ color:var(--k-pink) !important; font-weight:700 !important; }
 .donation__key-value__group:last-child i[class*="fa-"]{ color:var(--k-pink) !important; }
 
-.donation__item--footer{ padding:8px 18px 22px !important; margin-top:auto !important; background:transparent !important; border-top:1px solid var(--k-border) !important; }
+
+
+
+/* sparkles line: real donor sparkle gif behind the perk text */
+.donation__key-value__group:nth-child(3) dt i{ color:var(--k-pink) !important; }
+.donation__key-value__group:nth-child(3) dd{ background-image:url('/img/sparkels.gif') !important; background-repeat:repeat !important; background-clip:border-box !important; padding:1px 6px !important; border-radius:4px !important; color:var(--k-text) !important; }
+
+.donation__item--footer{ padding:10px 18px 26px !important; margin-top:auto !important; background:transparent !important; border-top:1px solid var(--k-border) !important; }
 .donation__item--footer > div{ background:transparent !important; }
 .donation__item--footer button.payment{
   width:100% !important; background:var(--k-pink-faint) !important; color:var(--k-pink) !important;
-  border:1px solid var(--k-pink) !important; border-radius:8px !important; padding:12px !important; font-weight:600 !important;
-  letter-spacing:.3px !important; display:flex !important; align-items:center !important; justify-content:center !important; gap:8px !important;
+  border:1px solid var(--k-pink) !important; border-radius:8px !important; padding:9px !important; font-weight:600 !important;
+  letter-spacing:.3px !important; font-size:13px !important; display:flex !important; align-items:center !important; justify-content:center !important; gap:8px !important;
   transition:background-color .15s, box-shadow .15s !important;
 }
 .donation__item--footer button.payment i{ display:none !important; }
