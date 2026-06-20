@@ -1333,7 +1333,7 @@ aside .data-table tbody tr:nth-child(even) th { background-color: var(--at-bg3) 
 
 /* sparkles line: real donor sparkle gif behind the perk text */
 .donation__key-value__group:nth-child(3) dt i{ color:var(--at-gold) !important; }
-.donation__key-value__group:nth-child(3) dd{ background-image:url('/img/sparkels.gif') !important; background-repeat:repeat !important; background-clip:border-box !important; padding:1px 6px !important; border-radius:4px !important; color:var(--at-text) !important; }
+.donation__key-value__group:nth-child(3) dd{ background-image:url('https://aither.cc/img/sparkels.gif') !important; background-repeat:repeat !important; background-clip:border-box !important; padding:1px 6px !important; border-radius:4px !important; color:var(--at-text) !important; }
 
 .donation__item--footer{ padding:10px 18px 26px !important; margin-top:auto !important; background:transparent !important; border-top:1px solid var(--at-border) !important; }
 .donation__item--footer > div{ background:transparent !important; }
