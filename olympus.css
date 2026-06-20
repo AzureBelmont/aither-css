@@ -1273,3 +1273,13 @@ aside .data-table tbody tr:nth-child(even) th { background-color: var(--at-bg3) 
 
 @media(max-width:980px){ .donation__items-wrapper{ grid-template-columns:repeat(2,1fr) !important; } }
 @media(max-width:560px){ .donation__items-wrapper{ grid-template-columns:1fr !important; } }
+
+/* Textarea heights: trim oversized boxes (UNIT3D default is 140px) */
+/* chatbox -> compact single-line; comment + reply boxes -> moderate. */
+/* upload description, forum editor, and modal dialogs keep the default height. */
+.chatroom__new-message .form__textarea{ height:50px !important; transition:height .18s ease !important; }
+.chatroom__new-message .form__textarea:focus{ height:120px !important; }
+.new-comment .form__textarea,
+.reply-comment .form__textarea{ height:90px !important; transition:height .18s ease !important; }
+.new-comment .form__textarea:focus,
+.reply-comment .form__textarea:focus{ height:140px !important; }
