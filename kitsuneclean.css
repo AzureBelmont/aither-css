@@ -394,6 +394,7 @@ ul.meta__dropdown a:hover, ul.meta__dropdown button:hover { color: var(--k-pink)
 .footer__icons a[href*="rust-lang"] svg { filter: brightness(0) invert(1) opacity(0.6) !important; }
 
 h1.text-gold, h2.text-gold, h3.text-gold, h4.text-gold, .text-gold { color: var(--k-pink) !important; }
+i.fa-star.text-gold { color: var(--torrent-row-freeleech-fg, #ffb800) !important; } /* restore FL star to default amber (group requirements + anywhere text-gold catches freeleech) */
 .panel__sub-heading { background-color: var(--k-bg3) !important; color: var(--k-pink) !important; }
 
 #chatbox_header .form__select { border-color: var(--k-pink-border) !important; color: var(--k-text) !important; }
@@ -900,9 +901,6 @@ aside .data-table tbody tr:nth-child(even) th { background-color: var(--k-bg3) !
 .donation__key-value__group:last-child dd{ color:var(--k-pink) !important; font-weight:700 !important; }
 .donation__key-value__group:last-child i[class*="fa-"]{ color:var(--k-pink) !important; }
 
-
-
-
 /* sparkles line: real donor sparkle gif behind the perk text */
 .donation__key-value__group:nth-child(3) dt i{ color:var(--k-pink) !important; }
 .donation__key-value__group:nth-child(3) dd{ background-image:url('https://aither.cc/img/sparkels.gif') !important; background-repeat:repeat !important; background-clip:border-box !important; padding:1px 6px !important; border-radius:4px !important; color:var(--k-text) !important; }
@@ -931,3 +929,12 @@ aside .data-table tbody tr:nth-child(even) th { background-color: var(--k-bg3) !
 .reply-comment .form__textarea{ height:90px !important; transition:height .18s ease !important; }
 .new-comment .form__textarea:focus,
 .reply-comment .form__textarea:focus{ height:140px !important; }
+
+/* Group requirements: box the expanded perk bar (DL slots ... Torrent moderation) */
+.group-requirements__group--perks-wrapper:has(.group-requirements__perk-extended){
+  border: 1px solid var(--k-border) !important;
+  background: rgba(255,255,255,0.03) !important;
+  border-radius: 8px !important;
+  padding: 10px 14px !important;
+  margin-top: 8px !important;
+}
