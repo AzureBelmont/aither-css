@@ -307,7 +307,6 @@ menu.post__toolbar { background-color: var(--k-bg3) !important; border-top: 0.5p
 article.comment { background-color: var(--k-bg2) !important; border: 0.5px solid var(--k-border) !important; border-radius: var(--k-radius) !important; }
 aside.comment__aside { background-color: var(--k-bg3) !important; border-right: 0.5px solid var(--k-border) !important; }
 ul.comment-list { background-color: var(--k-bg2) !important; }
-li.comment__list-item { border-bottom: 0.5px solid var(--k-border) !important; }
 article.article-preview { background-color: var(--k-bg2) !important; border: 0.5px solid var(--k-border) !important; border-radius: var(--k-radius) !important; }
 
 nav.pagination { background-color: var(--k-bg2) !important; border: 0.5px solid var(--k-border) !important; border-radius: var(--k-radius) !important; overflow: hidden !important; }
@@ -1029,12 +1028,14 @@ aside .data-table tbody tr:nth-child(even) th { background-color: var(--k-bg3) !
 /* Textarea heights: trim oversized boxes (UNIT3D default is 140px) */
 /* chatbox -> compact single-line; comment + reply boxes -> moderate. */
 /* upload description, forum editor, and modal dialogs keep the default height. */
-.chatroom__new-message .form__textarea{ height:50px !important; transition:height .18s ease !important; }
-.chatroom__new-message .form__textarea:focus{ height:120px !important; }
+.chatroom__new-message .form__textarea{ height:50px !important; transition:height .18s ease !important; padding-top:16px !important; padding-bottom:16px !important; }
+.chatroom__new-message .form__textarea:focus{ height:120px !important; padding-top:10px !important; padding-bottom:10px !important; }
 .new-comment .form__textarea,
 .reply-comment .form__textarea{ height:90px !important; transition:height .18s ease !important; }
 .new-comment .form__textarea:focus,
 .reply-comment .form__textarea:focus{ height:140px !important; }
+/* Even spacing above the reply box so it matches the gap below (inter-comment rhythm) */
+form.reply-comment{ margin-top:18px !important; }
 
 /* Group requirements: box the expanded perk bar (DL slots ... Torrent moderation) */
 .group-requirements__group--perks-wrapper:has(.group-requirements__perk-extended){
@@ -1045,14 +1046,30 @@ aside .data-table tbody tr:nth-child(even) th { background-color: var(--k-bg3) !
   margin-top: 8px !important;
 }
 
-/* Current-rank card (highlight): theme-accent glow + center name and action icons */
+/* Current-rank card (highlight): theme-accent glow (always) */
 .panelV2 .group-requirements__group-wrapper.group-requirements__group-wrapper-highlight {
   box-shadow: 0 0 10px 1px rgba(244,170,202,0.5) !important;
   border-color: var(--k-pink) !important;
-  grid-template-rows: 1fr !important;
 }
-.panelV2 .group-requirements__group-wrapper-highlight .group-requirements__group--requirement-row-dropdown {
+/* Vertically center rank name + action icons on COLLAPSED group cards (all ranks) */
+.panelV2:nth-of-type(1) .group-requirements__group-wrapper:has(> div:nth-child(2)[style*="display: none"]),
+.panelV2:nth-of-type(2) .group-requirements__group-wrapper:has(> div:nth-child(2)[style*="display: none"]) {
+  grid-template-rows: 1fr !important;
+  align-items: center !important;
+  align-content: center !important;
+}
+.panelV2:nth-of-type(1) .group-requirements__group-wrapper:has(> div:nth-child(2)[style*="display: none"]) > .group-requirements__group--header,
+.panelV2:nth-of-type(2) .group-requirements__group-wrapper:has(> div:nth-child(2)[style*="display: none"]) > .group-requirements__group--header {
+  align-self: center !important;
+  height: auto !important;
+  min-height: 0 !important;
+}
+.panelV2:nth-of-type(1) .group-requirements__group-wrapper:has(> div:nth-child(2)[style*="display: none"]) .group-requirements__group--header .group-requirements__group--requirement-row-dropdown,
+.panelV2:nth-of-type(2) .group-requirements__group-wrapper:has(> div:nth-child(2)[style*="display: none"]) .group-requirements__group--header .group-requirements__group--requirement-row-dropdown {
   top: 50% !important;
   bottom: auto !important;
   transform: translateY(-50%) !important;
 }
+
+/* Reply box: add breathing room below the reply-to-parent-comment form */
+form.reply-comment { margin-bottom: 16px !important; }
