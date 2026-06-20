@@ -1313,22 +1313,7 @@ aside .data-table tbody tr:nth-child(even) th { background-color: var(--at-bg3) 
 /* Even spacing above the reply box so it matches the gap below (inter-comment rhythm) */
 form.reply-comment{ margin-top:18px !important; }
 
-/* Group requirements: expanded card dual-tone (distinct header band + body) with centered rank name */
-.panelV2 .group-requirements__group-wrapper:has(> div:nth-child(2):not([style*="display: none"])):not(:has(.group-requirements__group--description)){
-  background: var(--at-bg2) !important;
-}
-.panelV2 .group-requirements__group-wrapper:has(> div:nth-child(2):not([style*="display: none"])):not(:has(.group-requirements__group--description)) > .group-requirements__group--header{
-  background: var(--at-bg3) !important;
-  justify-content: center !important;
-  text-align: center !important;
-  padding: 10px 14px !important;
-  border-radius: 8px 8px 0 0 !important;
-}
-.panelV2 .group-requirements__group-wrapper:has(> div:nth-child(2):not([style*="display: none"])):not(:has(.group-requirements__group--description)) > .group-requirements__group--header h3{
-  width: 100% !important;
-  text-align: center !important;
-}
-/* Group requirements: expanded perks as pills; borderless, separated from requirements by a divider line + spacing (LST-style) */
+/* Group requirements: expanded perks as pills, wrapping to multiple lines, separated from requirements by a divider line */
 .group-requirements__group--perks-wrapper:has(.group-requirements__perk-extended){
   display:flex !important;
   flex-wrap:wrap !important;
@@ -1378,7 +1363,6 @@ form.reply-comment{ margin-top:18px !important; }
   bottom: auto !important;
   transform: translateY(-50%) !important;
 }
-/* expanded: nudge header + icons down to match the collapsed center position */
 .panelV2:nth-of-type(1) .group-requirements__group-wrapper:not(:has(.group-requirements__group--description)):has(> div:nth-child(2):not([style*="display: none"])) > .group-requirements__group--header,
 .panelV2:nth-of-type(2) .group-requirements__group-wrapper:not(:has(.group-requirements__group--description)):has(> div:nth-child(2):not([style*="display: none"])) > .group-requirements__group--header {
   padding-top: 7px !important;
