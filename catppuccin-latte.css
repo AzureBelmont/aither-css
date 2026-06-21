@@ -1482,6 +1482,8 @@ form.reply-comment { margin-bottom: 16px !important; }
 .user-card-wrapper{ display:grid !important; grid-template-columns:repeat(auto-fill, minmax(180px, 1fr)) !important; gap:10px !important; }
 .user-card{ padding:14px 12px !important; border-radius:8px !important; overflow:hidden !important; min-height:0 !important; }
 .user-card__username{ font-size:18px !important; margin:4px 0 6px !important; line-height:1.2 !important; }
+
+.user-card__username, .user-card .user-card__title, .user-card small{ color:#1a1a2e !important; text-shadow:0 1px 2px rgba(255,255,255,0.55) !important; }
 .user-card .user-card__title, .user-card small{ display:block !important; font-size:11px !important; white-space:nowrap !important; overflow:hidden !important; text-overflow:ellipsis !important; max-width:100% !important; opacity:0.9 !important; }
 
 .internals-card-wrapper{ display:grid !important; grid-template-columns:repeat(auto-fill, minmax(210px, 1fr)) !important; gap:14px !important; }
@@ -1493,7 +1495,7 @@ form.reply-comment { margin-bottom: 16px !important; }
 .internals-card__body{ all:unset !important; display:flex !important; flex-direction:column !important; align-items:center !important; gap:4px !important; text-align:center !important; width:100% !important; position:relative !important; z-index:1 !important; flex:1 1 auto !important; justify-content:flex-start !important; }
 .internals-card__body .user-tag{ font-size:15px !important; font-weight:600 !important; max-width:100% !important; white-space:nowrap !important; overflow:hidden !important; text-overflow:ellipsis !important; }
 .internals-card__body br{ display:none !important; }
-.internals-card__title{ font-size:11px !important; opacity:0.75 !important; margin:2px 0 0 !important; max-width:100% !important; white-space:nowrap !important; overflow:hidden !important; text-overflow:ellipsis !important; }
+.internals-card__title{ color:var(--at-text, #4c4f69) !important; font-size:11px !important; opacity:0.75 !important; margin:2px 0 0 !important; max-width:100% !important; white-space:nowrap !important; overflow:hidden !important; text-overflow:ellipsis !important; }
 .internals-card__body .badge-extra{ margin-top:auto !important; display:inline-flex !important; align-items:center !important; gap:5px !important; padding:4px 10px !important; background:rgba(136,57,239,0.12) !important; border:1px solid rgba(136,57,239,0.30) !important; border-radius:20px !important; font-size:12px !important; color:var(--at-gold, #8839ef) !important; }
 
 .internal-card__poster-popup-card{ background:var(--at-bg2, #e6e9ef) !important; border:1px solid var(--at-gold, #8839ef) !important; border-radius:12px !important; box-shadow:0 20px 50px -12px rgba(0,0,0,0.6), 0 0 0 1px rgba(136,57,239,0.15) !important; overflow:hidden !important; }
