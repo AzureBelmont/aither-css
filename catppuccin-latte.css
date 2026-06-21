@@ -1088,12 +1088,6 @@ i.category__icon { color: var(--at-gold) !important; }
   .panelV2:nth-of-type(2) .group-requirements__group-wrapper > .group-requirements__group--header {
     grid-row: 1 !important;
   }
-  .panelV2:nth-of-type(1) .group-requirements__group-wrapper > div:last-child,
-  .panelV2:nth-of-type(2) .group-requirements__group-wrapper > div:last-child {
-    position: relative !important;
-    z-index: 0 !important;
-    pointer-events: none !important;
-  }
   .panelV2:nth-of-type(1) .group-requirements__group-wrapper > div:last-child[style*="display: none"],
   .panelV2:nth-of-type(2) .group-requirements__group-wrapper > div:last-child[style*="display: none"] {
     display: none !important;
