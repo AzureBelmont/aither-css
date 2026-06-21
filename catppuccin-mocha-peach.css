@@ -1223,3 +1223,9 @@ form.reply-comment { margin-bottom: 16px !important; }
 .group-requirements__group--perks-wrapper.is-extended{ border: 1px solid var(--at-border) !important; border-radius: 0 0 8px 8px !important; margin-top: 0 !important; padding: 10px !important; }
 .group-requirements__group-wrapper.group-requirements__group-wrapper-highlight,
 .group-requirements__group-wrapper-highlight{ box-shadow: 0 0 10px 1px rgba(250,179,135,0.55) !important; border-color: rgba(250,179,135,0.45) !important; }
+
+/* flatten requirement sub-table cells (kill dual-tone striping) */
+.group-requirements__group--requirement-row table td,
+.group-requirements__group--requirement-multirow table td,
+.group-requirements__group--requirement-row td,
+.group-requirements__group--requirement-multirow td{ background-color: transparent !important; }
