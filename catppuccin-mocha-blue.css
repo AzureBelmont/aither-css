@@ -17,6 +17,7 @@
 ========================================================== */
 
 :root {
+  --key-value-padding: 10px;
   --ctp-rosewater: #f5e0dc;
   --ctp-flamingo:  #f2cdcd;
   --ctp-pink:      #f5c2e7;
