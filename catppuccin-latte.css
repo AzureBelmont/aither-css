@@ -1264,6 +1264,8 @@ form.reply-comment { margin-bottom: 16px !important; }
 .group-requirements__group--requirement-row i.fa-minus-circle,
 .group-requirements__group--header i.fa-plus-circle,
 .group-requirements__group--header i.fa-minus-circle{ color: var(--at-gold) !important; }
+.group-requirements__group--requirement-row-dropdown i.fa-plus-circle,
+.group-requirements__group--requirement-row-dropdown i.fa-minus-circle{ color: var(--at-gold) !important; }
 .group-requirements__group--requirement-wrapper{ border: none !important; border-radius: 0 !important; padding: 0 !important; }
 .group-requirements__group-wrapper.is-extended .group-requirements__group--content-wrapper{ border: 1px solid var(--at-border) !important; border-bottom: none !important; border-radius: 8px 8px 0 0 !important; padding: 10px 10px 0 !important; margin-bottom: 0 !important; }
 .group-requirements__group--perks-wrapper.is-extended{ border: 1px solid var(--at-border) !important; border-radius: 0 0 8px 8px !important; margin-top: 0 !important; padding: 10px !important; }
