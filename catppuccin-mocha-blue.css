@@ -1180,10 +1180,10 @@ form.reply-comment { margin-bottom: 16px !important; }
 .page__event--index .top-nav__dropdown > a > .top-nav--left__container > svg{ position:absolute !important; top:8px !important; right:8px !important; left:auto !important; bottom:auto !important; margin:0 !important; }
 @media (max-width:640px){ .page__event--index .panelV2 > .panel__body{ grid-template-columns:1fr !important; } }
 
-.user-card-wrapper{ display:grid !important; grid-template-columns:repeat(auto-fill, minmax(180px, 1fr)) !important; gap:10px !important; }
-.user-card{ padding:14px 12px !important; border-radius:8px !important; overflow:hidden !important; min-height:0 !important; }
-.user-card__username{ font-size:18px !important; margin:4px 0 6px !important; line-height:1.2 !important; }
-.user-card .user-card__title, .user-card small{ display:block !important; font-size:11px !important; white-space:nowrap !important; overflow:hidden !important; text-overflow:ellipsis !important; max-width:100% !important; opacity:0.9 !important; }
+.user-card-wrapper{ display:grid !important; grid-template-columns:repeat(auto-fill, minmax(270px, 1fr)) !important; gap:14px !important; }
+.user-card{ padding:20px 18px !important; border-radius:8px !important; overflow:hidden !important; min-height:0 !important; }
+.user-card__username{ font-size:26px !important; margin:4px 0 6px !important; line-height:1.2 !important; }
+.user-card .user-card__title, .user-card small{ display:block !important; font-size:16px !important; white-space:nowrap !important; overflow:hidden !important; text-overflow:ellipsis !important; max-width:100% !important; opacity:0.9 !important; }
 
 .internals-card-wrapper{ display:grid !important; grid-template-columns:repeat(auto-fill, minmax(210px, 1fr)) !important; gap:14px !important; }
 .internals-card{ position:relative !important; border:1px solid var(--at-border, rgba(255,255,255,0.08)) !important; border-bottom-color:rgba(255,255,255,0.025) !important; border-radius:12px !important; overflow:hidden !important; background: radial-gradient(120% 80% at 50% -10%, rgba(137,180,250,0.10), transparent 60%), linear-gradient(180deg, var(--at-bg3, #181825), var(--at-bg2, #1e1e2e)) !important; transition:border-color .2s ease, box-shadow .2s ease, transform .2s ease !important; display:flex !important; flex-direction:column !important; align-items:center !important; padding:18px 14px 16px !important; min-height:0 !important; }
