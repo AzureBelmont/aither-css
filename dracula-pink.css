@@ -103,13 +103,13 @@ a.user-tag__link i.fa-heart { background-color: transparent !important; border-c
 body { background-color: var(--at-bg) !important; color: var(--at-text) !important; }
 
 .top-nav { background-color: #191a21 !important; border-bottom: 1px solid var(--at-goldfaint) !important; box-shadow: 0 2px 20px rgba(0,0,0,0.5) !important; }
-.top-nav .top-nav__branding img { filter: brightness(0) saturate(100%) invert(72%) sepia(30%) saturate(900%) hue-rotate(206deg) brightness(101%) contrast(97%) !important; transition: filter .3s, transform .3s !important; }
-.top-nav .top-nav__branding:hover img { filter: brightness(0) saturate(100%) invert(72%) sepia(30%) saturate(900%) hue-rotate(206deg) brightness(108%) contrast(97%) drop-shadow(0 0 8px rgba(255,121,198,0.7)) !important; transform: scale(1.05) !important; }
+.top-nav .top-nav__branding img { filter: brightness(0) saturate(100%) invert(63%) sepia(49%) saturate(2248%) hue-rotate(298deg) brightness(111%) contrast(119%) !important; transition: filter .3s, transform .3s !important; }
+.top-nav .top-nav__branding:hover img { filter: brightness(0) saturate(100%) invert(63%) sepia(49%) saturate(2248%) hue-rotate(298deg) brightness(118%) contrast(119%) drop-shadow(0 0 8px rgba(255,121,198,0.7)) !important; transform: scale(1.05) !important; }
 .top-nav__site-logo { background: none !important; -webkit-background-clip: border-box !important; background-clip: border-box !important; -webkit-text-fill-color: var(--at-text) !important; color: var(--at-text) !important; font-weight: 700 !important; }
 .top-nav__dropdown--nontouch { border-radius: 0px !important; }
 
 .footer__section:first-child .footer__section-title { color: var(--at-text) !important; display: flex !important; align-items: center !important; gap: 8px !important; font-size: inherit !important; font-weight: inherit !important; text-transform: none !important; letter-spacing: normal !important; }
-.footer .footer__section:first-child .footer__section-title img { filter: brightness(0) saturate(100%) invert(72%) sepia(30%) saturate(900%) hue-rotate(206deg) brightness(101%) contrast(97%) !important; height: 28px !important; width: auto !important; }
+.footer .footer__section:first-child .footer__section-title img { filter: brightness(0) saturate(100%) invert(63%) sepia(49%) saturate(2248%) hue-rotate(298deg) brightness(111%) contrast(119%) !important; height: 28px !important; width: auto !important; }
 .footer__section:first-child .footer__section-title .top-nav__site-logo { background: none !important; -webkit-background-clip: border-box !important; background-clip: border-box !important; -webkit-text-fill-color: var(--at-text) !important; color: var(--at-text) !important; font-size: 15px !important; font-weight: 700 !important; letter-spacing: .05em !important; }
 
 html:has(main[class*="torrent"])  .top-nav--left__list-item:has(a[href="https://aither.cc/torrents"]) > a,
