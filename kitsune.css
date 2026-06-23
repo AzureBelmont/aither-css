@@ -906,3 +906,5 @@ form.reply-comment { margin-bottom: 16px !important; }
 .group-requirements__group-wrapper:has(h3 span[style*="2fa36e" i]){ background: rgba(47,163,110,0.14) !important; }
 .group-requirements__group-wrapper:has(h3 span[style*="258a5d" i]){ background: rgba(37,138,93,0.16) !important; }
 .group-requirements__group-wrapper:has(h3 span[style*="1a6b48" i]){ background: rgba(26,107,72,0.2) !important; }
+.data-table--checkbox-grid tbody tr:nth-child(odd) th{background-color:var(--at-bg2)!important}
+.data-table--checkbox-grid tbody tr:nth-child(even) th{background-color:var(--at-bg3)!important}
