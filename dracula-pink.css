@@ -522,10 +522,10 @@ ul.meta__dropdown a:hover, ul.meta__dropdown button:hover { color: var(--at-gold
 .meta__description { background: rgba(15,20,40,0.5) !important; padding: 3px 6px !important; border-radius: 6px !important; }
 .meta__ids > li > a:hover { border-radius: 6px !important; }
 .work__tags > li > a:hover { background-color: transparent; }
-h2.meta__heading { margin-top: -5px; }
+h2.meta__heading { margin-top: 0 !important; margin-bottom: 6px !important; }
 .meta__heading { background: none !important; }
 .meta-chip { background: rgba(15,20,40,0.55) !important; padding: 0 4px !important; border-radius: 8px !important; margin-bottom: 4px !important; }
-.meta__chip-container { max-height: 280px !important; overflow-y: auto !important; overflow-x: hidden !important; scrollbar-width: none !important; position: relative !important; -webkit-mask-image: linear-gradient(to bottom, black 0%, black 80%, transparent 100%) !important; mask-image: linear-gradient(to bottom, black 0%, black 80%, transparent 100%) !important; }
+.meta__chip-container { max-height: 286px !important; padding-top: 6px !important; overflow-y: auto !important; overflow-x: hidden !important; scrollbar-width: none !important; position: relative !important; -webkit-mask-image: linear-gradient(to bottom, black 0%, black 80%, transparent 100%) !important; mask-image: linear-gradient(to bottom, black 0%, black 80%, transparent 100%) !important; }
 .meta__chip-container::-webkit-scrollbar { width: 0 !important; display: none !important; }
 
 .footer, footer { background-color: #21222c !important; border-top: 1px solid var(--at-goldfaint) !important; }
