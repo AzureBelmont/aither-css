@@ -204,6 +204,13 @@ td { background-color: var(--k-bg2) !important; }
 tr:nth-child(even) td { background-color: var(--k-bg3) !important; }
 table.similar-torrents__torrents tbody:nth-of-type(odd) td, table.similar-torrents__torrents tbody:nth-of-type(odd) th { background-color: var(--k-bg2) !important; }
 table.similar-torrents__torrents tbody:nth-of-type(even) td, table.similar-torrents__torrents tbody:nth-of-type(even) th { background-color: var(--k-bg3) !important; }
+
+@media screen and (max-width: 900px) {
+  table.similar-torrents__torrents tbody:nth-of-type(odd) td,
+  table.similar-torrents__torrents tbody:nth-of-type(even) td,
+  table.similar-torrents__torrents tbody:nth-of-type(odd) th,
+  table.similar-torrents__torrents tbody:nth-of-type(even) th { background-color: transparent !important; }
+}
 table.similar-torrents__torrents { border: none !important; }
 table.similar-torrents__torrents tbody + tbody { border-top: 2px solid var(--k-pink-border) !important; }
 table.similar-torrents__torrents tbody th { border-bottom: none !important; }
