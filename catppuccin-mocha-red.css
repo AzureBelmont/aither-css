@@ -272,7 +272,7 @@ table.similar-torrents__torrents tbody:nth-of-type(even) td, table.similar-torre
   table.similar-torrents__torrents tbody:nth-of-type(even) th { background-color: transparent !important; }
 }
 table.similar-torrents__torrents { border: none !important; }
-table.similar-torrents__torrents tbody + tbody { border-top: 2px solid var(--at-goldfaint) !important; }
+table.similar-torrents__torrents tbody + tbody { border-top: 1px solid var(--at-goldfaint) !important; }
 table.similar-torrents__torrents tbody th { border-bottom: none !important; }
 tr:hover td { background-color: rgba(243,139,168,0.06) !important; }
 thead td, thead th { background-color: var(--at-bg3) !important; }
@@ -463,7 +463,7 @@ table.torrent-search--grouped__torrents tbody:nth-of-type(odd) td,
 table.torrent-search--grouped__torrents tbody:nth-of-type(odd) th { background-color: var(--at-bg2) !important; }
 table.torrent-search--grouped__torrents tbody:nth-of-type(even) td,
 table.torrent-search--grouped__torrents tbody:nth-of-type(even) th { background-color: var(--at-bg3) !important; }
-table.torrent-search--grouped__torrents tbody + tbody { border-top: 2px solid var(--at-goldfaint) !important; }
+table.torrent-search--grouped__torrents tbody + tbody { border-top: 1px solid var(--at-goldfaint) !important; }
 table.torrent-search--grouped__torrents tbody th { border-bottom: none !important; border-right: none !important; color: var(--at-text2) !important; }
 table.torrent-search--grouped__torrents tr:hover td { background-color: rgba(243,139,168,0.06) !important; }
 
@@ -857,9 +857,8 @@ html body .panel__header .form__select {
   min-width: 110px !important;
 }
 
-details.torrent-search--grouped__dropdown > details.torrent-search--grouped__dropdown + details.torrent-search--grouped__dropdown {
-  border-top: 2px solid rgba(243,139,168,0.25) !important;
-  margin-top: 4px !important;
+details.torrent-search--grouped__dropdown > details.torrent-search--grouped__dropdown + details.torrent-search--grouped__dropdown{
+  border-top: 1px solid rgba(243,139,168,0.25) !important;
 }
 
 td.data-table__bon-taxed {
