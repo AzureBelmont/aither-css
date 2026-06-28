@@ -261,7 +261,7 @@ table.similar-torrents__torrents tbody:nth-of-type(even) td, table.similar-torre
   table.similar-torrents__torrents tbody:nth-of-type(even) th { background-color: transparent !important; }
 }
 table.similar-torrents__torrents { border: none !important; }
-table.similar-torrents__torrents tbody + tbody { border-top: 1px solid var(--k-pink-border) !important; }
+table.similar-torrents__torrents tbody + tbody { border-top: 1px solid rgba(244,170,202,0.25) !important; }
 table.similar-torrents__torrents tbody th { border-bottom: none !important; }
 td[class*="torrent-search--list__"] { background-color: transparent !important; }
 .data-table tbody tr:hover td, tr:hover td { background-color: var(--k-pink-faint) !important; }
@@ -667,7 +667,7 @@ a.torrent-search--grouped__genre { border-color: rgba(244,170,202,0.25) !importa
 a.torrent-search--grouped__genre:hover { border-color: var(--k-pink) !important; color: var(--k-pink) !important; }
 table.torrent-search--grouped__torrents tbody:nth-of-type(odd) td, table.torrent-search--grouped__torrents tbody:nth-of-type(odd) th { background-color: var(--k-bg2) !important; }
 table.torrent-search--grouped__torrents tbody:nth-of-type(even) td, table.torrent-search--grouped__torrents tbody:nth-of-type(even) th { background-color: var(--k-bg3) !important; }
-table.torrent-search--grouped__torrents tbody + tbody { border-top: 1px solid var(--k-pink-border) !important; }
+table.torrent-search--grouped__torrents tbody + tbody { border-top: 1px solid rgba(244,170,202,0.25) !important; }
 table.torrent-search--grouped__torrents tbody th { border-bottom: none !important; border-right: none !important; color: var(--k-text2) !important; }
 table.torrent-search--grouped__torrents tr:hover td { background-color: rgba(244,170,202,0.06) !important; }
 .torrent-search__results:has(:is(.torrent-search--grouped__results, .torrent-search--poster__results)) table.data-table { display: block !important; height: 0 !important; border: none !important; overflow: visible !important; }
