@@ -257,7 +257,6 @@ i.fa-star.text-gold { color: var(--torrent-row-freeleech-fg, #ffb800) !important
 .data-table > tr > td, .data-table > thead > tr > td, .data-table > tbody > tr > td,
 .data-table > tr > th, .data-table > thead > tr > th, .data-table > tbody > tr > th { border-bottom: none !important; }
 
-
 .data-table tbody tr:hover td { background-color: #313244 !important; }
 .data-table td { }
 td { background-color: var(--at-bg2) !important; }
@@ -272,7 +271,7 @@ table.similar-torrents__torrents tbody:nth-of-type(even) td, table.similar-torre
   table.similar-torrents__torrents tbody:nth-of-type(even) th { background-color: transparent !important; }
 }
 table.similar-torrents__torrents { border: none !important; }
-table.similar-torrents__torrents tbody + tbody { border-top: 1px solid rgba(243,139,168,0.25) !important; }
+table.similar-torrents__torrents tbody + tbody { border-top: 1px solid var(--at-goldfaint) !important; }
 table.similar-torrents__torrents tbody th { border-bottom: none !important; }
 tr:hover td { background-color: rgba(243,139,168,0.06) !important; }
 thead td, thead th { background-color: var(--at-bg3) !important; }
@@ -455,7 +454,7 @@ input.form__text { border-color: rgba(205,214,244,0.17); }
 
 article.torrent-search--grouped__result { background-color: var(--at-bg2) !important; border: 0.5px solid var(--at-border) !important; border-radius: var(--at-radius) !important; overflow: hidden !important; }
 .torrent-search--grouped__plot { color: var(--at-text2) !important; }
-details.torrent-search--grouped__dropdown summary { background-color: var(--at-bg3) !important; }
+details.torrent-search--grouped__dropdown summary { background-color: var(--at-bg3) !important; border-top: 1px solid rgba(243,139,168,0.25) !important; }
 a.torrent-search--grouped__genre { border-color: rgba(243,139,168,0.25) !important; }
 a.torrent-search--grouped__genre:hover { border-color: var(--at-gold) !important; color: var(--at-gold) !important; }
 
@@ -463,7 +462,7 @@ table.torrent-search--grouped__torrents tbody:nth-of-type(odd) td,
 table.torrent-search--grouped__torrents tbody:nth-of-type(odd) th { background-color: var(--at-bg2) !important; }
 table.torrent-search--grouped__torrents tbody:nth-of-type(even) td,
 table.torrent-search--grouped__torrents tbody:nth-of-type(even) th { background-color: var(--at-bg3) !important; }
-table.torrent-search--grouped__torrents tbody + tbody { border-top: 1px solid rgba(243,139,168,0.25) !important; }
+table.torrent-search--grouped__torrents tbody + tbody { border-top: 1px solid var(--at-goldfaint) !important; }
 table.torrent-search--grouped__torrents tbody th { border-bottom: none !important; border-right: none !important; color: var(--at-text2) !important; }
 table.torrent-search--grouped__torrents tr:hover td { background-color: rgba(243,139,168,0.06) !important; }
 
@@ -855,10 +854,6 @@ ul.torrent__tags .torrent-icons {
 html body .panel__header select,
 html body .panel__header .form__select {
   min-width: 110px !important;
-}
-
-details.torrent-search--grouped__dropdown > details.torrent-search--grouped__dropdown + details.torrent-search--grouped__dropdown{
-  border-top: 1px solid rgba(243,139,168,0.25) !important;
 }
 
 td.data-table__bon-taxed {
