@@ -244,7 +244,7 @@ html body .panel__tab--active { color: var(--k-pink) !important; border-bottom-c
 .secondary-nav a:hover, .secondary-nav__item:hover { color: var(--k-text) !important; }
 .secondary-nav__item--active, .secondary-nav a.active { color: var(--k-pink) !important; border-bottom-color: var(--k-pink) !important; }
 
-.data-table-wrapper { border-radius: var(--k-radius) !important; overflow-x: auto !important; border: 0.5px solid var(--k-pink-border) !important; }
+.data-table-wrapper { border-radius: var(--k-radius) !important; overflow-x: auto !important; border: none !important; }
 .data-table thead th, .data-table thead td, .torrent-search--list__no-poster-headers th, .torrent-search--list__no-poster-headers td, thead td, thead th, th { background-color: var(--k-bg3) !important; color: var(--k-text2) !important; font-size: 11px !important; font-weight: 600 !important; letter-spacing: .08em !important; text-transform: uppercase !important; }
 td { background-color: var(--k-bg2) !important; }
 tr:nth-child(even) td { background-color: var(--k-bg3) !important; }
