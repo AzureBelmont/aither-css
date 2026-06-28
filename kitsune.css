@@ -245,7 +245,7 @@ html body .panel__tab--active { color: var(--k-pink) !important; border-bottom-c
 .secondary-nav__item--active, .secondary-nav a.active { color: var(--k-pink) !important; border-bottom-color: var(--k-pink) !important; }
 
 .data-table-wrapper { border-radius: var(--k-radius) !important; overflow-x: auto !important; border: 0.5px solid var(--k-pink-border) !important; }
-.data-table thead th, .data-table thead td, .torrent-search--list__no-poster-headers th, .torrent-search--list__no-poster-headers td, thead td, thead th, th { background-color: var(--k-bg3) !important; color: var(--k-text2) !important; font-size: 11px !important; font-weight: 600 !important; letter-spacing: .08em !important; text-transform: uppercase !important; border-bottom: 1px solid var(--k-pink-border) !important; }
+.data-table thead th, .data-table thead td, .torrent-search--list__no-poster-headers th, .torrent-search--list__no-poster-headers td, thead td, thead th, th { background-color: var(--k-bg3) !important; color: var(--k-text2) !important; font-size: 11px !important; font-weight: 600 !important; letter-spacing: .08em !important; text-transform: uppercase !important; }
 td { background-color: var(--k-bg2) !important; }
 tr:nth-child(even) td { background-color: var(--k-bg3) !important; }
 table.similar-torrents__torrents tbody:nth-of-type(odd) td, table.similar-torrents__torrents tbody:nth-of-type(odd) th { background-color: var(--k-bg2) !important; }
@@ -262,7 +262,7 @@ table.similar-torrents__torrents tbody + tbody { border-top: 2px solid var(--k-p
 table.similar-torrents__torrents tbody th { border-bottom: none !important; }
 td[class*="torrent-search--list__"] { background-color: transparent !important; }
 .data-table tbody tr:hover td, tr:hover td { background-color: var(--k-pink-faint) !important; }
-.data-table td { border-bottom: 0.5px solid var(--k-border-faint) !important; }
+.data-table td { }
 
 .af-row { background-color: var(--k-bg2) !important; border-bottom: 0.5px solid var(--k-border-faint) !important; transition: background .15s !important; }
 .af-row:hover { background-color: var(--k-pink-faint) !important; box-shadow: inset 3px 0 0 var(--k-pink) !important; }

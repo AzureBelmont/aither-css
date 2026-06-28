@@ -252,10 +252,10 @@ i.fa-star.text-gold { color: var(--torrent-row-freeleech-fg, #ffb800) !important
 .text-green { color: var(--color-green) !important; }
 .text-purple { color: var(--color-purple) !important; }
 .data-table-wrapper { border-radius: var(--at-radius) !important; overflow-x: auto !important; border: 0.5px solid rgba(136,57,239,0.15) !important; }
-.data-table thead th, .data-table thead td, .torrent-search--list__no-poster-headers th, .torrent-search--list__no-poster-headers td { background-color: var(--at-bg3) !important; color: var(--at-text2) !important; font-size: 11px !important; font-weight: 600 !important; letter-spacing: .08em !important; text-transform: uppercase !important; border-bottom: 1px solid var(--at-goldfaint) !important; }
+.data-table thead th, .data-table thead td, .torrent-search--list__no-poster-headers th, .torrent-search--list__no-poster-headers td { background-color: var(--at-bg3) !important; color: var(--at-text2) !important; font-size: 11px !important; font-weight: 600 !important; letter-spacing: .08em !important; text-transform: uppercase !important; }
 
 .data-table tbody tr:hover td { background-color: #ccd0da !important; }
-.data-table td { border-bottom: 0.5px solid var(--at-border) !important; }
+.data-table td { }
 td { background-color: var(--at-bg2) !important; }
 tr:nth-child(even) td { background-color: var(--at-bg3) !important; }
 table.similar-torrents__torrents tbody:nth-of-type(odd) td, table.similar-torrents__torrents tbody:nth-of-type(odd) th { background-color: var(--at-bg2) !important; }
@@ -773,9 +773,9 @@ a.pagination__link {
 
 .data-table:not(.similar-torrents__torrents) td[rowspan],
 .data-table:not(.similar-torrents__torrents):has(td[rowspan]) th:first-child {
-  width: 0 !important; max-width: 0 !important; min-width: 0 !important;
-  padding: 0 !important; font-size: 0 !important; border: none !important;
-  overflow: hidden !important;
+ width: 0 !important; max-width: 0 !important; min-width: 0 !important;
+ padding: 0 !important; font-size: 0 !important; border: none !important;
+ overflow: hidden !important;
 }
 
 table.similar-torrents__torrents a[title="Edit"],
@@ -859,8 +859,8 @@ details.torrent-search--grouped__dropdown > details.torrent-search--grouped__dro
 }
 
 td.data-table__bon-taxed {
-  display: table-cell !important;
-  vertical-align: middle !important;
+ display: table-cell !important;
+ vertical-align: middle !important;
 }
 td.data-table__bon-taxed i.fa-percent { margin-left: 4px !important; }
 
