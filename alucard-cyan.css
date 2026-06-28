@@ -253,6 +253,9 @@ i.fa-star.text-gold { color: var(--torrent-row-freeleech-fg, #ffb800) !important
 .text-purple { color: var(--color-purple) !important; }
 .data-table-wrapper { border-radius: var(--at-radius) !important; overflow-x: auto !important; border: none !important; }
 .data-table thead th, .data-table thead td, .torrent-search--list__no-poster-headers th, .torrent-search--list__no-poster-headers td { background-color: var(--at-bg3) !important; color: var(--at-text2) !important; font-size: 11px !important; font-weight: 600 !important; letter-spacing: .08em !important; text-transform: uppercase !important; }
+.data-table > tr > td, .data-table > thead > tr > td, .data-table > tbody > tr > td,
+.data-table > tr > th, .data-table > thead > tr > th, .data-table > tbody > tr > th { border-bottom: none !important; }
+
 
 .data-table tbody tr:hover td { background-color: #e3ddcd !important; }
 .data-table td { }
