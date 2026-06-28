@@ -222,10 +222,10 @@ a.user-tag__link:hover span, a.chatroom-users__user-link:hover span { color: var
 [style*="color:#4ecdc4" i],[style*="color: #4ecdc4" i] { color: #4ECDC4 !important; }
 [style*="color:#f5a623" i],[style*="color: #f5a623" i] { color: #f5a623 !important; }
 
-html body .panel__header { background-color: var(--k-bg2) !important; border-bottom: 0.5px solid var(--k-border) !important; border-radius: var(--k-radius) var(--k-radius) 0 0 !important; padding-right: 8px !important; display: flex !important; align-items: center !important; }
+html body .panel__header { background-color: var(--k-bg2) !important; border-radius: var(--k-radius) var(--k-radius) 0 0 !important; padding-right: 8px !important; display: flex !important; align-items: center !important; }
 html body .panel__header .panel__heading { flex: 1 !important; }
 section.panel { background-color: var(--k-bg2) !important; border: 0.5px solid var(--k-pink-border) !important; border-radius: var(--k-radius) !important; overflow: hidden !important; box-shadow: 0 4px 32px rgba(0,0,0,0.7) !important; }
-section.panel > .panel__heading { background-color: var(--k-bg2) !important; border-bottom: 0.5px solid var(--k-border) !important; }
+section.panel > .panel__heading { background-color: var(--k-bg2) !important; }
 html body .panel__heading--centered { background-color: transparent !important; border: none !important; }
 html body .panel__header .panel__heading, html body .panel__header .panel__heading--centered { background-color: transparent !important; border: none !important; }
 html body .panel__actions { background-color: transparent !important; display: flex !important; align-items: center !important; }
@@ -583,7 +583,7 @@ section.also-downloaded::-webkit-scrollbar { display: none !important; width: 0 
 
 a.pagination__link { min-width: 48px !important; text-align: center !important; }
 .panel__action-text { color: var(--k-text3) !important; font-size: 12px !important; font-weight: 400 !important; }
-.panelV2 > .panel__heading { background-color: var(--k-bg2) !important; border-bottom: 0.5px solid var(--k-border) !important; }
+.panelV2 > .panel__heading { background-color: var(--k-bg2) !important; }
 div.top-users__place { border: 2px solid var(--k-pink) !important; color: var(--k-pink) !important; font-weight: 700 !important; }
 article.user-stat-card, .user-stat-card { border: 1px solid var(--k-pink-border) !important; }
 .user-stat-card__avatar { border: 2px solid rgba(244,170,202,0.25) !important; border-radius: 10% !important; }
