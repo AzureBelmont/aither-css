@@ -1292,8 +1292,10 @@ html body #easyuploader-dropzone,
 html body .easy-upload3r__panel-beta{ border-color: #7E9CD8 !important; background: #1F1F28 !important; background-color: #1F1F28 !important; }
 /* Modal title: grey -> crystalBlue */
 html body .easy-upload3r__title{ color: #7E9CD8 !important; }
+/* Modal overlay title: class-less div set violet inline by JS -> theme accent */
+html body #easyuploader-enhanced-overlay div[style*="119, 96, 222"]:not(.step-progress):not(.processing-step){ color: #7E9CD8 !important; }
 /* Note: green success checkmarks/borders and any red error state are left as semantic status colors. */
 
 /* Active-step icon: recolor ONLY the brand violet (matched via inline rgb) -> crystalBlue; */
 /* grey (waiting), green (success) and red (error) step states are preserved. */
-html body .step-icon[style*="119, 96, 222"]{ background-color: #7E9CD8 !important; }
+html body .step-icon[style*="119, 96, 222"]{ background-color: #7E9CD8 !important; color: #16161D !important; }

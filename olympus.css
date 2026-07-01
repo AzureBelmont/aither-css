@@ -1249,9 +1249,11 @@ html body .easy-upload3r__version{ background: var(--at-gold2) !important; backg
 /* Dropzone dashed border: maroon -> theme accent; keep theme surface */
 html body #easyuploader-dropzone,
 html body .easy-upload3r__panel-beta{ border-color: var(--at-gold) !important; background: var(--at-bg2) !important; background-color: var(--at-bg2) !important; }
-/* Modal title: grey -> theme accent */
+/* Modal title (dropzone): grey -> theme accent */
 html body .easy-upload3r__title{ color: var(--at-gold) !important; }
+/* Modal overlay title: class-less div set violet inline by JS -> theme accent */
+html body #easyuploader-enhanced-overlay div[style*="119, 96, 222"]:not(.step-progress):not(.processing-step){ color: var(--at-gold) !important; }
 /* Active-step icon: recolor ONLY the brand violet (matched via inline rgb) -> theme accent; */
 /* grey (waiting), green (success) and red (error) step states are preserved. */
-html body .step-icon[style*="119, 96, 222"]{ background-color: var(--at-gold) !important; }
+html body .step-icon[style*="119, 96, 222"]{ background-color: var(--at-gold) !important; color: var(--at-bg) !important; }
 /* Note: green success checkmarks/borders and any red error state are left as semantic status colors. */
