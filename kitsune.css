@@ -954,5 +954,7 @@ html body .easy-upload3r__title{ color: var(--k-pink) !important; }
 html body #easyuploader-enhanced-overlay div[style*="119, 96, 222"]:not(.step-progress):not(.processing-step){ color: var(--k-pink) !important; }
 /* Active-step icon: recolor ONLY the brand violet (matched via inline rgb) -> theme accent; */
 /* grey (waiting), green (success) and red (error) step states are preserved. */
-html body .step-icon[style*="119, 96, 222"]{ background-color: var(--k-pink) !important; color: var(--k-bg) !important; }
+html body .step-icon[style*="119, 96, 222"]{ background-color: var(--k-pink) !important; }
 /* Note: green success checkmarks/borders and any red error state are left as semantic status colors. */
+/* Step-icon glyph legibility: dark outline so the white hourglass / check / X reads on any circle color */
+html body .step-icon{ text-shadow: 0 0 2px rgba(0,0,0,0.9), 0 1px 2px rgba(0,0,0,0.6) !important; font-weight: 900 !important; }

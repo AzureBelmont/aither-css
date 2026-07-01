@@ -1256,4 +1256,32 @@ html body .filmclub__homepreview_backdrop{ background-size: cover !important; ba
 /* === Film Club: homepage preview text pills (readability over backdrop) === */
 html body .filmclub__homepreview_data-table td{ background-color: transparent !important; text-align: center !important; }
 html body .filmclub__homepreview_data-table td > a,
-html body .filmclub__homepreview_data-table td > p{ display: inline-block !important; background-color: rgba(15,18,28,0.72) !important; border-radius: 8px !important; padding: 8px 14px !important; max-width: 100% !important; }
+html body .filmclub__homepreview_data-table td > p{ display: inline-block !important; background-color: rgba(30,31,43,0.76) !important; border-radius: 8px !important; padding: 8px 14px !important; max-width: 100% !important; }
+
+
+/* === EASY UPLOAD3R modal â€” theme accent (color only) === */
+/* Modal title (dropzone): grey -> theme accent */
+html body .easy-upload3r__title{ color: var(--at-gold) !important; }
+/* Version badge (0.0.1): maroon -> darker theme accent with readable text */
+html body .easy-upload3r__version{ background: var(--at-gold2) !important; background-color: var(--at-gold2) !important; color: var(--at-text) !important; }
+/* Progress bar fills: off-theme violet -> theme accent */
+html body #torrent-progress,
+html body #mediainfo-progress,
+html body #screenshots-progress,
+html body .step-progress{ background: var(--at-gold) !important; }
+/* Progress bar tracks: subtle theme surface */
+html body .step-progress-container,
+html body .step-progress-bar,
+html body .step-progress-track{ background: var(--at-bg) !important; }
+/* Mini Close button: violet -> theme accent with dark text */
+html body #easyuploader-enhanced-overlay button,
+html body [id*="easyuploader"] button{ background-color: var(--at-gold) !important; color: var(--at-bg) !important; }
+/* Dropzone dashed border: maroon -> theme accent; keep theme surface */
+html body #easyuploader-dropzone,
+html body .easy-upload3r__panel-beta{ border-color: var(--at-gold) !important; background: var(--at-bg2) !important; background-color: var(--at-bg2) !important; }
+/* Modal overlay title: class-less div set violet inline by JS -> theme accent */
+html body #easyuploader-enhanced-overlay div[style*="119, 96, 222"]:not(.step-progress):not(.processing-step){ color: var(--at-gold) !important; }
+/* Active-step icon: recolor ONLY the brand violet (matched via inline rgb) -> theme accent */
+html body .step-icon[style*="119, 96, 222"]{ background-color: var(--at-gold) !important; }
+/* Step-icon glyph legibility: dark outline so the white hourglass / check / X reads on any circle color */
+html body .step-icon{ text-shadow: 0 0 2px rgba(0,0,0,0.9), 0 1px 2px rgba(0,0,0,0.6) !important; font-weight: 900 !important; }
