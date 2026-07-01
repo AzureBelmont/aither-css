@@ -1265,7 +1265,7 @@ html body .filmclub__homepreview_data-table td > p{ display: inline-block !impor
 /* Modal title (dropzone): grey -> theme accent */
 html body .easy-upload3r__title{ color: var(--at-gold) !important; }
 /* Version badge (0.0.1): maroon -> darker theme accent with readable text */
-html body .easy-upload3r__version{ background: var(--at-gold2) !important; background-color: var(--at-gold2) !important; color: var(--at-text) !important; }
+html body .easy-upload3r__version{ background: var(--at-gold2) !important; background-color: var(--at-gold2) !important; color: var(--at-bg) !important; }
 /* Progress bar fills: off-theme violet -> theme accent */
 html body #torrent-progress,
 html body #mediainfo-progress,
