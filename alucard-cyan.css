@@ -1296,3 +1296,7 @@ form.reply-comment { margin-bottom: 16px !important; }
 .group-requirements__group-wrapper:has(h3 span[style*="1a6b48" i]){ background: rgba(26,107,72,0.2) !important; }
 .data-table--checkbox-grid tbody tr:nth-child(odd) th{background-color:var(--at-bg2)!important}
 .data-table--checkbox-grid tbody tr:nth-child(even) th{background-color:var(--at-bg3)!important}
+
+
+/* === Film Club: film-of-the-month backdrop cover fix === */
+html body .playlist__backdrop .filmclub__backdrop_row{ background-size: cover !important; background-position: center !important; background-repeat: no-repeat !important; }
