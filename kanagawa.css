@@ -86,6 +86,8 @@
   --color-blue:                    #7FB4CA;
   --color-green:                   #98BB6C;
   --color-purple:                  #7E9CD8;
+  --top-nav-icon-bar-icon-fg:      #DCD7BA;
+  --top-nav-dropdown-fg:           #DCD7BA;
 }
 
 li.top-nav__dropdown ul li a.top-nav__username i[class*="fa-"] { color: inherit !important; background-color: transparent !important; border-color: transparent !important; }
@@ -1250,6 +1252,12 @@ form.reply-comment { margin-bottom: 16px !important; }
 .group-requirements__group-wrapper:has(h3 span[style*="1a6b48" i]){ background: rgba(26,107,72,0.2) !important; }
 .data-table--checkbox-grid tbody tr:nth-child(odd) th{background-color:var(--at-bg2)!important}
 .data-table--checkbox-grid tbody tr:nth-child(even) th{background-color:var(--at-bg3)!important}
+
+
+/* === Content hyperlinks: give un-classed body-text links the crystal-blue accent === */
+/* Scoped to panel/sidebar body text only; excludes buttons/tags/user-tags (which carry classes) and image links */
+html body .panel__body a:not([class]):not(:has(img)):not(:has(svg)),
+html body article.sidebar2 .panel__body a:not([class]):not(:has(img)):not(:has(svg)){ color: #7E9CD8 !important; }
 
 
 /* === Film Club: film-of-the-month backdrop cover fix === */
