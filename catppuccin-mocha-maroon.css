@@ -1251,4 +1251,11 @@ form.reply-comment { margin-bottom: 16px !important; }
 
 
 /* === Film Club: film-of-the-month backdrop cover fix === */
-html body .playlist__backdrop .filmclub__backdrop_row{ background-size: cover !important; background-position: center !important; background-repeat: no-repeat !important; }
+html body .playlist__backdrop .filmclub__backdrop_row,
+html body .filmclub__homepreview_backdrop{ background-size: cover !important; background-position: center !important; background-repeat: no-repeat !important; }
+
+
+/* === Film Club: homepage preview text pills (readability over backdrop) === */
+html body .filmclub__homepreview_data-table td{ background-color: transparent !important; text-align: center !important; }
+html body .filmclub__homepreview_data-table td > a,
+html body .filmclub__homepreview_data-table td > p{ display: inline-block !important; background-color: rgba(15,18,28,0.72) !important; border-radius: 8px !important; padding: 8px 14px !important; max-width: 100% !important; }
