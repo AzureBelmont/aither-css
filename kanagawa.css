@@ -1269,3 +1269,31 @@ html body .filmclub__homepreview_backdrop{ background-size: cover !important; ba
 html body .filmclub__homepreview_data-table td{ background-color: transparent !important; text-align: center !important; }
 html body .filmclub__homepreview_data-table td > a,
 html body .filmclub__homepreview_data-table td > p{ display: inline-block !important; background-color: rgba(31,31,40,0.76) !important; border-radius: 8px !important; padding: 8px 14px !important; max-width: 100% !important; }
+
+
+
+/* === EASY UPLOAD3R modal — Kanagawa theming (color only) === */
+/* Progress bar fills: off-theme violet -> crystalBlue */
+html body #torrent-progress,
+html body #mediainfo-progress,
+html body #screenshots-progress,
+html body .step-progress{ background: #7E9CD8 !important; }
+/* Progress bar tracks: subtle sumi-ink */
+html body .step-progress-container,
+html body .step-progress-bar,
+html body .step-progress-track{ background: #16161D !important; }
+/* Mini Close button: violet -> crystalBlue with dark text */
+html body #easyuploader-enhanced-overlay button,
+html body [id*="easyuploader"] button{ background-color: #7E9CD8 !important; color: #16161D !important; }
+/* Version badge (0.0.1): maroon -> waveBlue2 with parchment text */
+html body .easy-upload3r__version{ background: #2D4F67 !important; background-color: #2D4F67 !important; color: #DCD7BA !important; }
+/* Dropzone dashed border: maroon -> crystalBlue; keep sumi-ink surface */
+html body #easyuploader-dropzone,
+html body .easy-upload3r__panel-beta{ border-color: #7E9CD8 !important; background: #1F1F28 !important; background-color: #1F1F28 !important; }
+/* Modal title: grey -> crystalBlue */
+html body .easy-upload3r__title{ color: #7E9CD8 !important; }
+/* Note: green success checkmarks/borders and any red error state are left as semantic status colors. */
+
+/* Active-step icon: recolor ONLY the brand violet (matched via inline rgb) -> crystalBlue; */
+/* grey (waiting), green (success) and red (error) step states are preserved. */
+html body .step-icon[style*="119, 96, 222"]{ background-color: #7E9CD8 !important; }
