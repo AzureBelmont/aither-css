@@ -1273,3 +1273,13 @@ html body .form__fieldset:has(.order__list) small.text-info{ color: var(--at-gol
 /* Scoped to panel/sidebar body text only; excludes buttons/tags/user-tags (which carry classes) and image links */
 html body .panel__body a:not([class]),
 html body article.sidebar2 .panel__body a:not([class]){ color: var(--at-gold) !important; }
+
+
+/* === Default profile banner: retheme stock user_background.jpg only === */
+/* Matches ONLY the default inline image; custom uploads (authenticated-images/user-backgrounds/*) never match */
+html body .user-profile-card__banner[style*="img/user_background.jpg"]{
+  background-image:
+    radial-gradient(900px 260px at 50% 0%, color-mix(in srgb, var(--at-gold) 20%, transparent), transparent 70%),
+    radial-gradient(500px 200px at 85% 100%, color-mix(in srgb, var(--at-gold) 10%, transparent), transparent 75%),
+    linear-gradient(165deg, var(--at-bg3) 0%, var(--at-bg2) 55%, var(--at-bg) 100%) !important;
+}

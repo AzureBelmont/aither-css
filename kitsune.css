@@ -982,3 +982,13 @@ html body legend.form__legend, html body .form__legend{ color: var(--k-pink) !im
 html body .form__select, html body .form__option, html body .order__item{ background-color: var(--k-bg3) !important; }
 /* Unchecked checkboxes: visible empty box instead of near-invisible dark void */
 html body input.form__checkbox:not(:checked){ border-color: rgba(244,170,202,0.45) !important; background-color: #161616 !important; }
+
+
+/* === Default profile banner: retheme stock user_background.jpg only === */
+/* Matches ONLY the default inline image; custom uploads (authenticated-images/user-backgrounds/*) never match */
+html body .user-profile-card__banner[style*="img/user_background.jpg"]{
+  background-image:
+    radial-gradient(900px 260px at 50% 0%, color-mix(in srgb, var(--k-pink) 20%, transparent), transparent 70%),
+    radial-gradient(500px 200px at 85% 100%, color-mix(in srgb, var(--k-pink) 10%, transparent), transparent 75%),
+    linear-gradient(165deg, var(--k-bg3) 0%, var(--k-bg2) 55%, var(--k-bg) 100%) !important;
+}
