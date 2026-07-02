@@ -924,3 +924,13 @@ html body .form__fieldset:has(.order__list) small.text-info{ color: var(--k-pink
 /* Scoped to panel/sidebar body text only; excludes buttons/tags/user-tags (which carry classes) and image links */
 html body .panel__body a:not([class]):not(:has(img)):not(:has(svg)),
 html body article.sidebar2 .panel__body a:not([class]):not(:has(img)):not(:has(svg)){ color: var(--k-pink) !important; }
+
+
+/* === Settings/forms: consistent 3-level surface hierarchy (OLED) === */
+/* Fieldsets stop being a competing grey slab; sections delineated by pink legends + faint pink border */
+html body fieldset.form__fieldset{ background-color: transparent !important; color: var(--k-text) !important; border-color: rgba(244,170,202,0.14) !important; }
+html body legend.form__legend, html body .form__legend{ color: var(--k-pink) !important; }
+/* All raised/interactive surfaces unified at bg3: inputs, selects, options, block-order cards */
+html body .form__select, html body .form__option, html body .order__item{ background-color: var(--k-bg3) !important; }
+/* Unchecked checkboxes: visible empty box instead of near-invisible dark void */
+html body input.form__checkbox:not(:checked){ border-color: rgba(244,170,202,0.45) !important; background-color: #161616 !important; }
