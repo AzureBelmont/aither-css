@@ -1057,8 +1057,9 @@ aside .data-table tbody tr:nth-child(even) th { background-color: var(--at-bg3) 
 
 .panel__body:has(.donation__items-wrapper){
   background-image:
-    radial-gradient(1200px 420px at 50% -60px, var(--at-goldfaint), transparent 70%),
-    linear-gradient(180deg, var(--at-goldfaint), transparent 360px) !important;
+    radial-gradient(1200px 420px at 50% -60px, rgba(163,212,213,0.16), transparent 70%),
+    radial-gradient(900px 300px at 50% -20px, rgba(126,156,216,0.16), transparent 72%),
+    linear-gradient(180deg, rgba(45,79,103,0.34), rgba(45,79,103,0.10) 300px, transparent 520px) !important;
   background-repeat:no-repeat !important;
   background-position:top center !important;
 }
@@ -1301,3 +1302,11 @@ html body .step-icon{ text-shadow: 0 0 2px rgba(0,0,0,0.9), 0 1px 2px rgba(0,0,0
 /* Active-step icon: recolor ONLY the brand violet (matched via inline rgb) -> crystalBlue; */
 /* grey (waiting), green (success) and red (error) step states are preserved. */
 html body .step-icon[style*="119, 96, 222"]{ background-color: #7E9CD8 !important; }
+
+
+/* === Homepage block-order reorder list (settings > edit): off-palette grey -> theme === */
+html body .order__list,
+html body .order__item{ color: var(--at-text) !important; border-color: color-mix(in srgb, var(--at-text) 18%, transparent) !important; }
+html body .order__item{ background-color: var(--at-bg2) !important; }
+html body .order__item i.fa-arrows-alt{ color: var(--at-gold) !important; }
+html body .form__fieldset:has(.order__list) small.text-info{ color: var(--at-gold) !important; }

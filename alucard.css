@@ -1328,3 +1328,17 @@ html body #easyuploader-enhanced-overlay div[style*="119, 96, 222"]:not(.step-pr
 html body .step-icon[style*="119, 96, 222"]{ background-color: var(--at-gold) !important; }
 /* Step-icon glyph legibility: dark outline so the white hourglass / check / X reads on any circle color */
 html body .step-icon{ text-shadow: 0 0 2px rgba(0,0,0,0.9), 0 1px 2px rgba(0,0,0,0.6) !important; font-weight: 900 !important; }
+
+
+/* === Homepage block-order reorder list (settings > edit): off-palette grey -> theme === */
+html body .order__list,
+html body .order__item{ color: var(--at-text) !important; border-color: color-mix(in srgb, var(--at-text) 18%, transparent) !important; }
+html body .order__item{ background-color: var(--at-bg2) !important; }
+html body .order__item i.fa-arrows-alt{ color: var(--at-gold) !important; }
+html body .form__fieldset:has(.order__list) small.text-info{ color: var(--at-gold) !important; }
+
+
+/* === Content hyperlinks: give un-classed body-text links the theme accent === */
+/* Scoped to panel/sidebar body text only; excludes buttons/tags/user-tags (which carry classes) and image links */
+html body .panel__body a:not([class]):not(:has(img)):not(:has(svg)),
+html body article.sidebar2 .panel__body a:not([class]):not(:has(img)):not(:has(svg)){ color: var(--at-gold) !important; }
