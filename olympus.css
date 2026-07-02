@@ -1306,5 +1306,5 @@ html body .panel__header{ background-color: var(--at-bg2) !important; border-bot
 html body .panel__header .panel__heading, html body .panel__header .panel__heading--centered{ background-color: transparent !important; }
 
 
-/* === Pagination bar divider: hairline between panel header and pagination (same tone as panel outlines) === */
-html body .panel__header + nav.pagination{ border-top: 0.5px solid var(--at-border) !important; }
+/* === Pagination bar divider: hairline above top AND bottom pagination bars (same tone as panel outlines) === */
+html body .panelV2 > nav.pagination{ border-top: 0.5px solid var(--at-border) !important; }
