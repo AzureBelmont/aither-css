@@ -1257,8 +1257,8 @@ form.reply-comment { margin-bottom: 16px !important; }
 
 /* === Content hyperlinks: give un-classed body-text links the crystal-blue accent === */
 /* Scoped to panel/sidebar body text only; excludes buttons/tags/user-tags (which carry classes) and image links */
-html body .panel__body a:not([class]):not(:has(img)):not(:has(svg)),
-html body article.sidebar2 .panel__body a:not([class]):not(:has(img)):not(:has(svg)){ color: #7E9CD8 !important; }
+html body .panel__body a:not([class]),
+html body article.sidebar2 .panel__body a:not([class]){ color: #7E9CD8 !important; }
 
 
 /* === Film Club: film-of-the-month backdrop cover fix === */

@@ -970,8 +970,8 @@ html body .form__fieldset:has(.order__list) small.text-info{ color: var(--k-pink
 
 /* === Content hyperlinks: give un-classed body-text links the theme accent === */
 /* Scoped to panel/sidebar body text only; excludes buttons/tags/user-tags (which carry classes) and image links */
-html body .panel__body a:not([class]):not(:has(img)):not(:has(svg)),
-html body article.sidebar2 .panel__body a:not([class]):not(:has(img)):not(:has(svg)){ color: var(--k-pink) !important; }
+html body .panel__body a:not([class]),
+html body article.sidebar2 .panel__body a:not([class]){ color: var(--k-pink) !important; }
 
 
 /* === Settings/forms: consistent 3-level surface hierarchy (OLED) === */
