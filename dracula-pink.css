@@ -129,7 +129,7 @@ html:has(main[class*="ticket"]).top-nav--left__list-item:has(a[href*="/ticket"])
 .top-nav__dropdown--touch { border-radius: 0 !important; }
 
 .top-nav--left__list-item > a:hover, .top-nav--left__list-item:hover > a, li.top-nav__dropdown > a:hover, li.top-nav__dropdown:hover > a { color: var(--at-gold) !important; background-color: transparent !important; }
-li.top-nav__dropdown ul li a i.fas.fa-heartbeat, li.top-nav__dropdown ul li i.fas.fa-heartbeat { color: var(--at-gold) !important; text-shadow: 0 0 10px rgba(255,121,198,0.8) !important; animation: at-heart-gold 1.5s ease-in-out infinite !important; filter: none !important; background-color: transparent !important; border: none !important; }
+li.top-nav__dropdown ul li a i.fas.fa-heartbeat, li.top-nav__dropdown ul li i.fas.fa-heartbeat { filter: none !important; background-border: none !important; }
 
 .top-nav--left__list-item ul, .top-nav__dropdown ul, .top-nav--left__dropdown { background-color: var(--at-bg3) !important; border: 0.5px solid var(--at-goldfaint) !important; border-radius: var(--at-radius) !important; box-shadow: 0 8px 24px rgba(0,0,0,0.5) !important; }
 .top-nav--left__list-item ul li a, .top-nav__dropdown ul li a, li.top-nav__dropdown ul li a { color: var(--at-text) !important; transition: color .15s, background .15s !important; }
@@ -156,7 +156,7 @@ li.top-nav__dropdown ul li button.top-nav--right__link:hover i.fab { background-
   50%  { text-shadow: 0 0 12px rgba(255,121,198,1.0), 0 0 24px rgba(255,121,198,0.6); color: #ff79c6; }
   100% { text-shadow: 0 0 4px rgba(255,121,198,0.4); color: #e85cae; }
 }
-.fa-heartbeat.text-gold, .top-nav .fa-heartbeat { color: var(--at-gold) !important; text-shadow: 0 0 10px rgba(255,121,198,0.8) !important; animation: at-heart-gold 1.5s ease-in-out infinite !important; filter: none !important; }
+.fa-heartbeat.text-gold, .top-nav .fa-heartbeat { filter: none !important; }
 
 .alert, .special-event-alert, .alerts .alert { background-color: var(--at-bg3) !important; border-bottom: 1px solid var(--at-goldfaint) !important; color: var(--at-text) !important; }
 .alert strong, .special-event-alert strong { color: var(--at-gold) !important; }
@@ -250,7 +250,7 @@ section.chatroom__users { background-color: var(--at-bg2) !important; }
 
 h1, h2, h3 { color: var(--at-text) !important; }
 .panelV2 > .panel__heading, .block__heading, [class*="section__title"], [class*="section-title"] { color: var(--at-gold) !important; }
-h1.text-gold, h2.text-gold, h3.text-gold, h4.text-gold, .text-gold { color: var(--at-gold) !important; }
+h1.text-gold, h2.text-gold, h3.text-gold, h4.text-gold, .text-gold:not(.fa-heartbeat) { color: var(--at-gold) !important; }
 i.fa-star.text-gold { color: var(--torrent-row-freeleech-fg, #ffb800) !important; } 
 .text-green { color: var(--color-green) !important; }
 .text-purple { color: var(--color-purple) !important; }

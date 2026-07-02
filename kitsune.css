@@ -148,7 +148,7 @@ li.top-nav__dropdown ul li button.top-nav--right__link:hover i.fab { background-
   50%  { text-shadow: 0 0 12px rgba(244,170,202,1.0), 0 0 24px rgba(244,170,202,0.6); color: #F4AACA; }
   100% { text-shadow: 0 0 4px rgba(244,170,202,0.4);  color: #c87aa0; }
 }
-.fa-heartbeat.text-gold, .top-nav .fa-heartbeat { color: var(--k-pink) !important; text-shadow: 0 0 10px rgba(244,170,202,0.8) !important; animation: k-heart-pulse 1.5s ease-in-out infinite !important; filter: none !important; }
+.fa-heartbeat.text-gold, .top-nav .fa-heartbeat { filter: none !important; }
 
 .alert, .special-event-alert, .alerts .alert { background-color: var(--k-bg3) !important; border-bottom: 1px solid var(--k-pink-border) !important; color: var(--k-text) !important; }
 .alert strong, .special-event-alert strong { color: var(--k-pink) !important; }
@@ -453,7 +453,7 @@ ul.meta__dropdown a:hover, ul.meta__dropdown button:hover { color: var(--k-pink)
 .footer__copyright, .footer__stats { color: var(--k-text3) !important; font-size: 12px !important; }
 .footer__icons a[href*="rust-lang"] svg { filter: brightness(0) invert(1) opacity(0.6) !important; }
 
-h1.text-gold, h2.text-gold, h3.text-gold, h4.text-gold, .text-gold { color: var(--k-pink) !important; }
+h1.text-gold, h2.text-gold, h3.text-gold, h4.text-gold, .text-gold:not(.fa-heartbeat) { color: var(--k-pink) !important; }
 i.fa-star.text-gold { color: var(--torrent-row-freeleech-fg, #ffb800) !important; } 
 .panel__sub-heading { background-color: var(--k-bg3) !important; color: var(--k-pink) !important; }
 
@@ -568,7 +568,7 @@ select.form__select option:checked { background-color: var(--k-bg4) !important; 
 
 [class*="compact-search"] input.form__text:focus, [class*="torrent-search"] input:focus { border: 1px solid var(--k-pink) !important; box-shadow: 0 0 0 3px rgba(244,170,202,0.10) !important; outline: none !important; }
 
-li.top-nav__dropdown ul li a i.fas.fa-heartbeat, li.top-nav__dropdown ul li i.fas.fa-heartbeat { color: var(--k-pink) !important; text-shadow: 0 0 10px rgba(244,170,202,0.8) !important; animation: k-heart-pulse 1.5s ease-in-out infinite !important; filter: none !important; background-color: transparent !important; border: none !important; }
+li.top-nav__dropdown ul li a i.fas.fa-heartbeat, li.top-nav__dropdown ul li i.fas.fa-heartbeat { filter: none !important; background-border: none !important; }
 
 .topic-listing__post-stats, .topic-listing__view-stats { text-align: right !important; min-width: 52px !important; padding-right: 6px !important; }
 .topic-listing__post-stats dt, .topic-listing__view-stats dt { color: var(--k-text3) !important; font-size: 10px !important; font-weight: 600 !important; text-transform: uppercase !important; letter-spacing: .06em !important; }
