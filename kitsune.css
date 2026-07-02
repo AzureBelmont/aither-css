@@ -1008,4 +1008,6 @@ html body .data-table tfoot td{ border-bottom: none !important; }
 
 
 /* === Panel header bars: header-wrapped headings match bare panelV2 headings (no underline on OLED) === */
-html body .panel__header{ background-color: var(--k-bg2) !important; }
+html body .panel__heading{ background-color: var(--k-bg2) !important; border-bottom: none !important; }
+html body .panel__header{ background-color: var(--k-bg2) !important; border-bottom: none !important; }
+html body .panel__header .panel__heading, html body .panel__header .panel__heading--centered{ background-color: transparent !important; }
