@@ -953,5 +953,7 @@ html body .user-profile-card__banner[style*="img/user_background.jpg"]{
 .user-profile__column--followers > div.panel__body{ border-radius: var(--k-radius) !important; }
 /* Clip square inner rows (Traffic/BON key-value stripes) to the rounded corners */
 [class*="user-profile__column"]{ overflow: hidden !important; }
+/* Column headings (Traffic/BON/Badges/etc) match standard panel heading surface */
+[class*="user-profile__column"] > .panel__heading{ background-color: var(--k-bg2) !important; }
 /* Clients and IP-addresses: remove base UNIT3D grey (#333) tfoot border */
 html body .data-table tfoot td{ border-bottom: none !important; }
