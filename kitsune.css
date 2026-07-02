@@ -1005,3 +1005,7 @@ html body .user-profile-card__banner[style*="img/user_background.jpg"]{
 [class*="user-profile__column"] > .panel__heading{ background-color: var(--k-bg2) !important; }
 /* Clients and IP-addresses: remove base UNIT3D grey (#333) tfoot border */
 html body .data-table tfoot td{ border-bottom: none !important; }
+
+
+/* === Panel header bars: header-wrapped headings match bare panelV2 headings (no underline on OLED) === */
+html body .panel__header{ background-color: var(--k-bg2) !important; }

@@ -1322,3 +1322,9 @@ html body .user-profile-card__banner[style*="img/user_background.jpg"]{
 [class*="user-profile__column"] > .panel__heading{ background-color: var(--at-bg2) !important; }
 /* Clients and IP-addresses: remove base UNIT3D grey (#333) tfoot border */
 html body .data-table tfoot td{ border-bottom: none !important; }
+
+
+/* === Panel header bars: header-wrapped headings (Featured torrents, Torrents, MediaInfo, etc) === */
+/* The heading inside .panel__header is transparent by design (shares the bar with action buttons), */
+/* but the container had no surface, so those bars bled into the body. Match bare panelV2 headings. */
+html body .panel__header{ background-color: var(--at-bg2) !important; border-bottom: 1px solid var(--at-goldfaint) !important; }
