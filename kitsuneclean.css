@@ -944,3 +944,12 @@ html body .user-profile-card__banner[style*="img/user_background.jpg"]{
     radial-gradient(500px 200px at 85% 100%, color-mix(in srgb, var(--k-pink) 10%, transparent), transparent 75%),
     linear-gradient(165deg, var(--k-bg3) 0%, var(--k-bg2) 55%, var(--k-bg) 100%) !important;
 }
+
+
+/* === User profile: rounded columns + panel corners (thanks mitsukiharuko) === */
+[class*="user-profile__column"],
+.user-profile__column--badges > div.panel__body,
+.user-profile__column--achievements > div.panel__body,
+.user-profile__column--followers > div.panel__body{ border-radius: var(--k-radius) !important; }
+/* Clients and IP-addresses: remove base UNIT3D grey (#333) tfoot border */
+html body .data-table tfoot td{ border-bottom: none !important; }
