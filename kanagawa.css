@@ -1270,6 +1270,8 @@ html body .filmclub__homepreview_backdrop{ background-size: cover !important; ba
 html body .filmclub__homepreview_data-table td{ background-color: transparent !important; text-align: center !important; }
 html body .filmclub__homepreview_data-table td > a,
 html body .filmclub__homepreview_data-table td > p{ display: inline-block !important; background-color: rgba(31,31,40,0.76) !important; border-radius: 8px !important; padding: 8px 14px !important; max-width: 100% !important; }
+/* Title heading inside the pill: strip default h-margins (excessive vertical padding feedback) */
+html body .filmclub__homepreview_data-table td > a :is(h1,h2,h3,h4){ margin: 0 !important; }
 
 
 
