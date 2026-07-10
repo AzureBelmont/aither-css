@@ -25,3 +25,5 @@ html body td.torrent-search--list__seeders a::before{ font-family: "Font Awesome
 html body td.torrent-search--list__leechers a::before{ font-family: "Font Awesome 6 Pro", "Font Awesome 5 Pro", FontAwesome; font-weight: 900; font-size: 0.8em; content: "\f063\00a0"; }
 /* Poll/comment vote counts (hardcoded green/red literals) */
 html body .votes__like-icon, html body .votes__like-count{ color: #58a6ff !important; }
+/* Top-bar ratio stats: hardcoded teal literal -> Primer blue (down/red pair is fine for tritanopia) */
+html body .top-nav__ratio-bar i.fa-arrow-up, html body .top-nav__ratio-bar i.fa-upload{ color: #58a6ff !important; }

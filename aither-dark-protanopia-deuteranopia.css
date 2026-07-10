@@ -30,3 +30,6 @@ html body td.torrent-search--list__leechers a::before{ font-family: "Font Awesom
 /* Poll/comment vote counts (hardcoded green/red literals) */
 html body .votes__like-icon, html body .votes__like-count{ color: #58a6ff !important; }
 html body .votes__dislike-icon, html body .votes__dislike-count{ color: #f0883e !important; }
+/* Top-bar ratio stats: hardcoded teal/pink literals -> Primer pair (arrows/icons already shape-distinct) */
+html body .top-nav__ratio-bar i.fa-arrow-up, html body .top-nav__ratio-bar i.fa-upload{ color: #58a6ff !important; }
+html body .top-nav__ratio-bar i.fa-arrow-down, html body .top-nav__ratio-bar i.fa-download{ color: #f0883e !important; }
