@@ -1,0 +1,25 @@
+/* ============================================================
+   Aither Dark - Tritanopia colorblind overlay
+   Stack on the DEFAULT Aither Dark theme via the profile
+   "External CSS Stylesheet" field.
+   Palette: GitHub Primer dark-tritanopia (green -> blue, red kept).
+   Rank/user-group colors are intentionally untouched.
+   ============================================================ */
+:root{
+  --color-green:             #58a6ff;
+  --color-light-green:       #79c0ff;
+  --color-dark-green:        #1f6feb;
+  --torrent-row-seeders-fg:  #58a6ff;
+}
+
+/* Direct class override: base theme hardcodes .text-green literally (#3fb618), bypassing the vars */
+html body .text-green{ color: #58a6ff !important; }
+
+
+/* --- Shape redundancy (not color-alone) --- */
+/* Seedtime satisfied/unsatisfied glyphs on torrent history - adapted from xzin's colorblind.css */
+main.page__user-torrents--index td.user-torrents__seedtime span.text-red::before{ font-family: "Font Awesome 6 Pro", "Font Awesome 5 Pro", FontAwesome; font-weight: 900; content: "\f00d\00a0"; }
+main.page__user-torrents--index td.user-torrents__seedtime span.text-green::before{ font-family: "Font Awesome 6 Pro", "Font Awesome 5 Pro", FontAwesome; font-weight: 900; content: "\f00c\00a0"; }
+/* Up/down arrows on seeders/leechers columns (torrent list) */
+html body td.torrent-search--list__seeders a::before{ font-family: "Font Awesome 6 Pro", "Font Awesome 5 Pro", FontAwesome; font-weight: 900; font-size: 0.8em; content: "\f062\00a0"; }
+html body td.torrent-search--list__leechers a::before{ font-family: "Font Awesome 6 Pro", "Font Awesome 5 Pro", FontAwesome; font-weight: 900; font-size: 0.8em; content: "\f063\00a0"; }
