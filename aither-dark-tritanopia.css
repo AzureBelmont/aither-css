@@ -23,3 +23,5 @@ main.page__user-torrents--index td.user-torrents__seedtime span.text-green::befo
 /* Up/down arrows on seeders/leechers columns (torrent list) */
 html body td.torrent-search--list__seeders a::before{ font-family: "Font Awesome 6 Pro", "Font Awesome 5 Pro", FontAwesome; font-weight: 900; font-size: 0.8em; content: "\f062\00a0"; }
 html body td.torrent-search--list__leechers a::before{ font-family: "Font Awesome 6 Pro", "Font Awesome 5 Pro", FontAwesome; font-weight: 900; font-size: 0.8em; content: "\f063\00a0"; }
+/* Poll/comment vote counts (hardcoded green/red literals) */
+html body .votes__like-icon, html body .votes__like-count{ color: #58a6ff !important; }
