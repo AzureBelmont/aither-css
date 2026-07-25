@@ -546,9 +546,9 @@ h2.meta__heading { margin-top: 0 !important; margin-bottom: 0 !important; }
 
 ::-webkit-scrollbar { width: 5px; height: 5px; }
 ::-webkit-scrollbar-track { background: var(--at-bg); }
-::-webkit-scrollbar-thumb { background: var(--at-bg3); border-radius: 3px; }
+::-webkit-scrollbar-thumb { background: #54546D; border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: rgba(126,156,216,0.4); }
-html { scrollbar-width: thin !important; scrollbar-color: var(--at-bg3) var(--at-bg) !important; }
+html { scrollbar-width: thin !important; scrollbar-color: #54546D var(--at-bg) !important; }
 
 [style*="color:#95A5A6"],[style*="color: #95A5A6"] { color: #95A5A6 !important; }
 [style*="color:#5E372F"],[style*="color: #5E372F"] { color: #5E372F !important; }
