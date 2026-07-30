@@ -1338,3 +1338,18 @@ html body .panel__header .panel__heading, html body .panel__header .panel__headi
 
 /* === Pagination bar divider: hairline above top AND bottom pagination bars (same tone as panel outlines) === */
 html body .panelV2 > nav.pagination{ border-top: 0.5px solid var(--at-border) !important; }
+
+
+/* === Torrent report modal + staff report page (new UNIT3D report system) === */
+/* Radio option cards: base hardcodes maroon #70233e selected + grey hover -> theme surfaces/accent */
+html body .form__group--radio-horizontal:hover .form__label{ background-color: var(--at-bg3) !important; }
+html body .form__group--radio-horizontal .form__label:has(.form__checkbox:checked),
+html body .form__group--radio-horizontal .form__label:has(.form__checkbox:focus-visible){ background-color: color-mix(in srgb, var(--at-gold) 18%, transparent) !important; }
+/* Side-by-side diff (php-diff) ships light-theme colors: retheme for dark reading */
+html body .diff-wrapper.diff{ color: var(--at-text) !important; }
+html body .diff-wrapper.diff td.old, html body .diff-wrapper.diff td.new{ color: var(--at-text) !important; }
+html body .diff-wrapper.diff td.none{ background: var(--at-bg) !important; }
+html body .diff-wrapper.diff tbody.change td.old{ background: color-mix(in srgb, var(--at-red) 12%, var(--at-bg2)) !important; }
+html body .diff-wrapper.diff tbody.change td.new{ background: color-mix(in srgb, var(--at-green) 12%, var(--at-bg2)) !important; }
+html body .diff-wrapper.diff ins{ background: color-mix(in srgb, var(--at-green) 32%, transparent) !important; color: var(--at-text) !important; text-decoration: none !important; }
+html body .diff-wrapper.diff del{ background: color-mix(in srgb, var(--at-red) 32%, transparent) !important; color: var(--at-text) !important; text-decoration: none !important; }

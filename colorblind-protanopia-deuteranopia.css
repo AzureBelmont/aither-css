@@ -1,0 +1,35 @@
+/* ============================================================
+   Protanopia & Deuteranopia colorblind overlay (red-green)
+   Paste into the profile "External CSS Stylesheet" field.
+   Built/tested on Aither Dark; largely works on other base styles.
+   Palette: green -> blue, red -> orange (Primer dark-colorblind values).
+   Rank/user-group colors are intentionally untouched.
+   ============================================================ */
+:root{
+  --color-green:             #58a6ff;
+  --color-light-green:       #79c0ff;
+  --color-dark-green:        #1f6feb;
+  --color-red:               #f0883e;
+  --color-light-red:         #ffa657;
+  --torrent-row-seeders-fg:  #58a6ff;
+  --torrent-row-leechers-fg: #f0883e;
+}
+
+/* Direct class overrides: base theme hardcodes .text-green literally (#3fb618), bypassing the vars */
+html body .text-green{ color: #58a6ff !important; }
+html body .text-red{ color: #f0883e !important; }
+
+
+/* --- Shape redundancy (not color-alone) --- */
+/* Seedtime satisfied/unsatisfied glyphs on torrent history - adapted from xzin's colorblind.css */
+main.page__user-torrents--index td.user-torrents__seedtime span.text-red::before{ font-family: "Font Awesome 6 Pro", "Font Awesome 5 Pro", FontAwesome; font-weight: 900; content: "\f00d\00a0"; }
+main.page__user-torrents--index td.user-torrents__seedtime span.text-green::before{ font-family: "Font Awesome 6 Pro", "Font Awesome 5 Pro", FontAwesome; font-weight: 900; content: "\f00c\00a0"; }
+/* Up/down arrows on seeders/leechers columns (torrent list) */
+html body td.torrent-search--list__seeders a::before{ font-family: "Font Awesome 6 Pro", "Font Awesome 5 Pro", FontAwesome; font-weight: 900; font-size: 0.8em; content: "\f062\00a0"; }
+html body td.torrent-search--list__leechers a::before{ font-family: "Font Awesome 6 Pro", "Font Awesome 5 Pro", FontAwesome; font-weight: 900; font-size: 0.8em; content: "\f063\00a0"; }
+/* Poll/comment vote counts (hardcoded green/red literals) */
+html body .votes__like-icon, html body .votes__like-count{ color: #58a6ff !important; }
+html body .votes__dislike-icon, html body .votes__dislike-count{ color: #f0883e !important; }
+/* Top-bar ratio stats: hardcoded teal/pink literals -> Primer pair (arrows/icons already shape-distinct) */
+html body .top-nav__ratio-bar i.fa-arrow-up, html body .top-nav__ratio-bar i.fa-upload{ color: #58a6ff !important; }
+html body .top-nav__ratio-bar i.fa-arrow-down, html body .top-nav__ratio-bar i.fa-download{ color: #f0883e !important; }
