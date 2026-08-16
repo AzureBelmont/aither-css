@@ -1823,3 +1823,93 @@ html body li.pagination__previous--disabled, html body li.pagination__next--disa
 html body li.pagination__previous--disabled:hover, html body li.pagination__next--disabled:hover{
   background-color: transparent !important; opacity: 0.45 !important;
 }
+
+
+/* ============================================================
+   Profile columns: one material, six identical panes
+   ------------------------------------------------------------
+   UNIT3D wraps only ONE of the six profile columns (External tracker) in a
+   .panelV2, so that column picked up the thick-glass treatment while Traffic /
+   BON / Badges / Achievements / Followers stayed bare divs whose heading and
+   body were painted as an opaque --at-bg2 slab: no hairline, no shadow, no blur.
+   The slab also only covered its own content, while the grid stretches every
+   column to the tallest sibling - so each card stopped at a different height
+   with dead space below it.
+   Fix: give the COLUMN the thick material and let the insides go transparent -
+   the same "one pane of glass" rule the sheet already applies to .panelV2.
+   ============================================================ */
+html body [class*="user-profile__column"]{
+  background: var(--g-thick) !important;
+  backdrop-filter: blur(28px) saturate(170%) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(170%) !important;
+  border: 1px solid var(--g-hairline) !important;
+  border-radius: var(--g-radius) !important;
+  box-shadow: var(--g-shadow), var(--g-highlight) !important;
+  overflow: hidden !important;
+  /* same layer as .panelV2 - the blur above makes this a stacking context */
+  position: relative !important;
+  z-index: 1 !important;
+}
+html body [class*="user-profile__column"] > .panel__heading,
+html body [class*="user-profile__column"] > .panel__body,
+html body [class*="user-profile__column"] > .panelV2,
+html body [class*="user-profile__column"] > .panelV2 > .panel__heading,
+html body [class*="user-profile__column"] > .panelV2 > .panel__body{
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+html body [class*="user-profile__column"] > .panel__heading,
+html body [class*="user-profile__column"] > .panelV2 > .panel__heading{
+  border-bottom: 1px solid var(--g-hairline-soft) !important;
+}
+/* key-value rows carry a hairline on all four sides; the side ones now land on
+   top of the column's own hairline and read as a doubled edge */
+html body [class*="user-profile__column"] .key-value__group{
+  border-left-color: transparent !important;
+  border-right-color: transparent !important;
+}
+
+
+/* ============================================================
+   Secondary-nav tab menu (Profile / Follow / Report)
+   ------------------------------------------------------------
+   The current page is marked with a 2px accent underline on
+   a.nav-tab--active__link. That is correct for the tab sitting in the bar, but
+   UNIT3D reuses the same class on the item INSIDE the dropdown, where the link
+   is inline-block with 8px of bottom padding - so the accent bar floats well
+   below its label and reads as a stray divider dropped into the menu.
+   In the menu, mark the current item with a surface instead. Hover and active
+   both go on the <li> (a block) rather than the inline-block link, so every row
+   highlights to the same width instead of hugging its own text.
+   The menu element is ul.nav-tab-menu__items, not .secondary-nav__dropdown-menu,
+   so it never picked up the thin-material treatment either.
+   ============================================================ */
+html body ul.nav-tab-menu__items{
+  background: var(--g-thin) !important;
+  backdrop-filter: blur(40px) saturate(190%) !important;
+  -webkit-backdrop-filter: blur(40px) saturate(190%) !important;
+  border: 1px solid var(--g-hairline) !important;
+  border-radius: var(--g-radius) !important;
+  box-shadow: var(--g-shadow-pop) !important;
+  overflow: hidden !important;
+  z-index: 1000 !important;
+}
+html body ul.nav-tab-menu__items a.nav-tab--active__link,
+html body ul.nav-tab-menu__items span.nav-tab--active__link{
+  border-bottom: 0 !important;
+}
+html body ul.nav-tab-menu__items li{ transition: background-color .15s ease !important; }
+html body ul.nav-tab-menu__items li:hover{ background-color: var(--at-goldfaint) !important; }
+html body ul.nav-tab-menu__items li.nav-tab--active{
+  background-color: color-mix(in srgb, var(--at-gold) 16%, transparent) !important;
+}
+html body ul.nav-tab-menu__items li a,
+html body ul.nav-tab-menu__items li span,
+html body ul.nav-tab-menu__items li a:hover,
+html body ul.nav-tab-menu__items li span:hover{ background-color: transparent !important; }
