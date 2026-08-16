@@ -1730,3 +1730,30 @@ html body .user-profile-card__meta-item small{ color: #6E6E73 !important; }
 /* icons sitting beside those labels inherit the same white */
 html body .user-profile-card__meta-title i,
 html body .user-profile-card__meta-item-title i{ color: #6E6E73 !important; }
+
+/* Pagination contrast: Previous/Next were using the pale border tint as text
+   (~1.7:1), and the current page sat as accent-coloured text on an accent-tinted
+   chip (~1:1 - effectively invisible). Prev/Next take the secondary tone; the
+   current page becomes a solid accent pill with white text, which also makes
+   "where am I" read at a glance. */
+html body li.pagination__previous, html body li.pagination__next,
+html body a.pagination__previous, html body a.pagination__next,
+html body .pagination__previous, html body .pagination__next,
+html body .pagination__ellipsis{ color: #6E6E73 !important; }
+
+html body li.pagination__current, html body .pagination__current,
+html body li.pagination__current a, html body .pagination__current a{
+  background-color: #0071E3 !important;
+  border-color: #0071E3 !important;
+  color: #FFFFFF !important;
+  font-weight: 600 !important;
+}
+
+/* Panes: no border, shadow defines the edge. A hairline on a light pane reads
+   as a hard dark line where it meets the wallpaper (most obvious as a tick beside
+   panel headings); Apple's light cards use shadow + a white top highlight instead. */
+html body .panelV2, html body footer, html body .torrent-card,
+html body .user-stat-card, html body .playlist-card, html body .article-card{
+  border: none !important;
+  box-shadow: 0 10px 34px rgba(0,0,0,0.10), 0 1px 3px rgba(0,0,0,0.06), inset 0 1px 0 rgba(255,255,255,0.85) !important;
+}
