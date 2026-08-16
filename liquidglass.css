@@ -1778,3 +1778,12 @@ html body .pagination__current::before{
   content: none !important;
 }
 html body nav.pagination{ border-width: 0 !important; }
+
+/* Unread notifications are marked by an 8px left border on the cell. A blanket
+   cell border-colour rule (from the glass transparency sweep) was overwriting it
+   with the faint hairline, so unread rows looked identical to read ones. Pin the
+   accent back on unread and keep read transparent. */
+html body td.notification--unread,
+html body .notification--unread{ border-left-color: #0A84FF !important; }
+html body td.notification--read,
+html body .notification--read{ border-left-color: transparent !important; }
