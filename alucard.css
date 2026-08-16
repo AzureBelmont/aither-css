@@ -1459,3 +1459,21 @@ html body .user-profile-card__meta-item small{ color: #5a5a5a !important; }
 /* icons sitting beside those labels inherit the same white */
 html body .user-profile-card__meta-title i,
 html body .user-profile-card__meta-item-title i{ color: #5a5a5a !important; }
+
+/* Pagination contrast: Previous/Next were using the pale border tint as text
+   (~1.7:1), and the current page sat as accent-coloured text on an accent-tinted
+   chip (~1:1 - effectively invisible). Prev/Next take the secondary tone; the
+   current page becomes a solid accent pill with white text, which also makes
+   "where am I" read at a glance. */
+html body li.pagination__previous, html body li.pagination__next,
+html body a.pagination__previous, html body a.pagination__next,
+html body .pagination__previous, html body .pagination__next,
+html body .pagination__ellipsis{ color: #5a5a5a !important; }
+
+html body li.pagination__current, html body .pagination__current,
+html body li.pagination__current a, html body .pagination__current a{
+  background-color: #644ac9 !important;
+  border-color: #644ac9 !important;
+  color: #FFFFFF !important;
+  font-weight: 600 !important;
+}
