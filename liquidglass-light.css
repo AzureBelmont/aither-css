@@ -1892,39 +1892,15 @@ html body [class*="user-profile__column"] .key-value__group{
 
 
 /* ============================================================
-   Secondary-nav tab menu (Profile / Follow / Report)
+   Secondary-nav tab menu (Profile / Follow / Report) - vertical offset
    ------------------------------------------------------------
-   The current page is marked with a 2px accent underline on
-   a.nav-tab--active__link. That is correct for the tab sitting in the bar, but
-   UNIT3D reuses the same class on the item INSIDE the dropdown, where the link
-   is inline-block with 8px of bottom padding - so the accent bar floats well
-   below its label and reads as a stray divider dropped into the menu.
-   In the menu, mark the current item with a surface instead. Hover and active
-   both go on the <li> (a block) rather than the inline-block link, so every row
-   highlights to the same width instead of hugging its own text.
-   The menu element is ul.nav-tab-menu__items, not .secondary-nav__dropdown-menu,
-   so it never picked up the thin-material treatment either.
+   The menu was opening ~40px BELOW the secondary nav instead of flush under it.
+   Not a padding bug: `backdrop-filter` makes an element a containing block for
+   its absolutely positioned descendants, so the frosted `.secondary-nav` stole
+   that job from the sticky <header>. UNIT3D's `top: 75px` is measured from the
+   header's top (49px of top-nav + the tab strip); measured from the secondary
+   nav's own top it lands a whole top-nav height too low.
+   `top: 100%` is the same edge either way - flush under whichever ancestor ends
+   up being the containing block - so it also survives if the blur ever moves.
    ============================================================ */
-html body ul.nav-tab-menu__items{
-  background: var(--g-thin) !important;
-  backdrop-filter: blur(40px) saturate(190%) !important;
-  -webkit-backdrop-filter: blur(40px) saturate(190%) !important;
-  border: 1px solid var(--g-hairline) !important;
-  border-radius: var(--g-radius) !important;
-  box-shadow: var(--g-shadow-pop) !important;
-  overflow: hidden !important;
-  z-index: 1000 !important;
-}
-html body ul.nav-tab-menu__items a.nav-tab--active__link,
-html body ul.nav-tab-menu__items span.nav-tab--active__link{
-  border-bottom: 0 !important;
-}
-html body ul.nav-tab-menu__items li{ transition: background-color .15s ease !important; }
-html body ul.nav-tab-menu__items li:hover{ background-color: var(--at-goldfaint) !important; }
-html body ul.nav-tab-menu__items li.nav-tab--active{
-  background-color: color-mix(in srgb, var(--at-gold) 12%, transparent) !important;
-}
-html body ul.nav-tab-menu__items li a,
-html body ul.nav-tab-menu__items li span,
-html body ul.nav-tab-menu__items li a:hover,
-html body ul.nav-tab-menu__items li span:hover{ background-color: transparent !important; }
+html body .secondary-nav ul.nav-tab-menu__items{ top: 100% !important; }
