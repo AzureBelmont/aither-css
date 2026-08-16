@@ -1480,3 +1480,21 @@ html body li.pagination__current a, html body .pagination__current a{
   color: #FFFFFF !important;
   font-weight: 600 !important;
 }
+
+/* Pagination pills: no fill. The opaque pill background showed as a thin dark
+   sliver where the Next button gets clipped at the panel edge (it read as a
+   stray line beside the panel heading, and hovering it highlighted "Next").
+   Transparent chips with a hover tint keep the control fully usable and are
+   closer to Apple's pagination anyway. The current page keeps its solid accent
+   pill, set above, so "where am I" still reads at a glance. */
+html body .pagination__link, html body a.pagination__link,
+html body li.pagination__previous, html body li.pagination__next,
+html body li.pagination__ellipsis, html body .pagination__previous,
+html body .pagination__next{
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
+html body .pagination__link:hover, html body a.pagination__link:hover,
+html body li.pagination__next:hover, html body li.pagination__previous:hover{
+  background-color: rgba(0,0,0,0.06) !important;
+}
