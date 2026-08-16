@@ -1947,8 +1947,12 @@ html body .internal-card__footer{
   box-shadow: none !important;
 }
 
-/* --- Chatbox: the largest surface on the site, and it was a flat slab ----- */
-html body .panelV2.chatbox{ background-color: transparent !important; }
+/* --- Chatbox: the largest surface on the site, and it was a flat slab -----
+   NB: `.panelV2.chatbox` (2 classes) outranks the thick tier's `html body
+   .panelV2` (1 class), so this rule has to RESTATE the material. Setting it to
+   `transparent` - the first attempt - left the panel blurring the wallpaper
+   with no material over it, which reads as a hole, not as glass. */
+html body .panelV2.chatbox{ background-color: var(--g-thick) !important; }
 html body article.chatbox-message{
   background-color: transparent !important;
   border-bottom: 1px solid var(--g-hairline-soft) !important;  /* was a dashed #3A3A3C */
@@ -1980,6 +1984,20 @@ html body article.post .post__content.bbcode-rendered{
   border-radius: 0 !important;
 }
 html body ul.comment-list{ background-color: transparent !important; }
+/* Comments are built exactly like posts - aside + header + content, all three
+   painted #0E0F12, and the content carrying a 10px radius so its top corners
+   cut inward under the square header bar. That notch is the "weird gap". */
+html body article.comment > .comment__aside{
+  background-color: transparent !important;
+  border-right: 0 !important;
+  border-radius: 0 !important;
+}
+html body article.comment > .comment__header,
+html body article.comment .comment__content.bbcode-rendered{
+  background-color: transparent !important;
+  border-bottom: 0 !important;
+  border-radius: 0 !important;
+}
 
 /* --- Torrent + internal cards: header/footer were solid on a glass card --- */
 html body header.torrent-card__header{
@@ -1997,11 +2015,6 @@ html body .internal-card__header{
    They are controls, not panels, so they take the same language as
    .form__text rather than a panel material (and no blur - ten blurred boxes
    in one row is exactly the per-element blur the sheet avoids elsewhere). */
-html body fieldset.form__fieldset{
-  background-color: rgba(0,0,0,0.03) !important;
-  border: 1px solid var(--g-hairline) !important;
-  border-radius: 10px !important;
-}
 
 /* --- Pagination reads as a strip again ----------------------------------
    The base theme separated the pager from the list with a tone shift; one
@@ -2052,3 +2065,80 @@ html body .pagination__previous--disabled, html body .pagination__next--disabled
 }
 /* UNIT3D hardcodes #555 on fieldset legends (Category / Type / Resolution...) */
 html body .form__legend{ color: var(--at-text2) !important; }
+
+
+/* --- One control language ------------------------------------------------
+   Fields were three different things inside the same form: `.form__text` at
+   6px, `.form__select` at 10px, and the filter fieldsets + the vscomp pickers
+   still opaque --at-bg2 with the old border. The generic glass field rule was
+   losing to page-scoped ones (`.torrent-search__filters fieldset...`,
+   `.page__subtitle--index ...`, `.page__torrent--create ...`) - two classes
+   beats one class + three elements, no matter how late in the file it sits.
+   Every control now takes the same fill, hairline and radius. Deliberately no
+   blur: ten blurred boxes in one filter row is exactly the per-element blur
+   this sheet avoids everywhere else. */
+html body input.form__text,
+html body select.form__select,
+html body .form__search,
+html body textarea.form__textarea,
+html body .form__textarea,
+html body fieldset.form__fieldset,
+html body .torrent-search__filters fieldset.form__fieldset,
+html body .torrent-search__filters fieldset.form,
+html body .page__subtitle--index fieldset.form__fieldset,
+html body .page__subtitle--index fieldset.form,
+html body .page__torrent--create fieldset.form__fieldset,
+html body .vscomp-wrapper,
+html body .vscomp-ele-wrapper,
+html body .vscomp-toggle-button,
+html body .torrent-search__filters .vscomp-wrapper,
+html body .torrent-search__filters .vscomp-ele-wrapper,
+html body .torrent-search__filters .vscomp-toggle-button,
+html body #chatbox_header .form__select,
+html body .panelV2.chatbox .form__select{
+  background-color: rgba(0,0,0,0.03) !important;
+  border: 1px solid var(--g-hairline) !important;
+  border-radius: 10px !important;
+}
+/* the chatbox Room/Status selects carry an extra `border-color` override with
+   an id in it (#chatbox_header), so the shorthand above does not settle it -
+   restate the colour with the element type in the selector. */
+html body #chatbox_header select.form__select,
+html body .panelV2.chatbox select.form__select{ border-color: var(--g-hairline) !important; }
+/* the big compact-search bar had its own 6px input inside an 8px wrapper -
+   three radii in one form. One value. */
+html body .compact-search,
+html body .compact-search__visible-default,
+html body .compact-search input.form__text,
+html body .compact-search__visible-default input.form__text{ border-radius: 10px !important; }
+
+/* --- vscomp pickers (Select Regions / Select Distributor) ----------------
+   `.vscomp-ele-wrapper` and the `.vscomp-toggle-button` inside it are BOTH
+   full-size, so giving both the field fill stacked 0.06 over 0.06 and drew two
+   hairlines a pixel apart - the pickers read brighter and heavier than every
+   other control in the row. The button is the control; the wrapper carries
+   nothing. Its dropbox is a popover, so it takes the thin material like every
+   other menu instead of an opaque --at-bg2 box with a doubled border. */
+html body .vscomp-wrapper,
+html body .vscomp-ele-wrapper,
+html body .torrent-search__filters .vscomp-wrapper,
+html body .torrent-search__filters .vscomp-ele-wrapper{
+  background-color: transparent !important;
+  border: 0 !important;
+}
+html body .vscomp-dropbox-container{
+  background-color: transparent !important; border: 0 !important; box-shadow: none !important;
+}
+html body .vscomp-dropbox{
+  background-color: var(--g-thin) !important;
+  backdrop-filter: blur(40px) saturate(190%) !important;
+  -webkit-backdrop-filter: blur(40px) saturate(190%) !important;
+  border: 1px solid var(--g-hairline) !important;
+  border-radius: var(--g-radius) !important;
+  box-shadow: var(--g-shadow-pop) !important;
+}
+html body .vscomp-options-container, html body .vscomp-options-list, html body .vscomp-option,
+html body .vscomp-search-container, html body .vscomp-search-wrapper,
+html body .vscomp-no-options, html body .vscomp-no-search-results{ background-color: transparent !important; }
+html body .vscomp-option:hover, html body .vscomp-option.focused{ background-color: var(--g-hover) !important; }
+html body .vscomp-option.selected{ background-color: color-mix(in srgb, var(--at-gold) 12%, transparent) !important; }
