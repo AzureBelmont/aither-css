@@ -1353,3 +1353,19 @@ html body .diff-wrapper.diff tbody.change td.old{ background: color-mix(in srgb,
 html body .diff-wrapper.diff tbody.change td.new{ background: color-mix(in srgb, var(--at-green) 12%, var(--at-bg2)) !important; }
 html body .diff-wrapper.diff ins{ background: color-mix(in srgb, var(--at-green) 32%, transparent) !important; color: var(--at-text) !important; text-decoration: none !important; }
 html body .diff-wrapper.diff del{ background: color-mix(in srgb, var(--at-red) 32%, transparent) !important; color: var(--at-text) !important; text-decoration: none !important; }
+
+/* UNIT3D draws a solid #888 divider as a ::before on the pagination items.
+   On dark panels it passes as a subtle separator; on light surfaces it reads as
+   a stray dark tick beside the panel heading (and hovering it highlights "Next",
+   since it belongs to that button). No theme was styling it, so it's removed
+   here for all of them - the pagination reads fine without it. */
+html body .pagination__next::before,
+html body .pagination__previous::before,
+html body .pagination__link::before,
+html body .pagination__ellipsis::before,
+html body .pagination__current::before{
+  display: none !important;
+  background: none !important;
+  content: none !important;
+}
+html body nav.pagination{ border-width: 0 !important; }
