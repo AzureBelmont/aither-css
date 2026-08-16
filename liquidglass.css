@@ -1645,11 +1645,9 @@ html body .similar-torrents__name,
 html body td.similar-torrents__name{ background-color: transparent !important; }
 
 
-/* Fractional border widths (0.8px, inherited from the base theme) get rounded
-   per-cell on a border-collapse table, so a header rule renders thin in some
-   segments and thick in others. Snap table hairlines to a whole pixel. */
-html body table{ border-collapse: collapse !important; }
+/* The base theme sets a 0.8px header rule; fractional widths get rounded
+   per-cell on a collapsed table, so the line renders thin in some segments and
+   thick in others. Snap just that rule to a whole pixel and keep the accent tint.
+   Row/group dividers are left exactly as the base theme draws them - adding
+   borders per row invents separators that were never in the design. */
 html body table thead th{ border-bottom: 1px solid rgba(10,132,255,0.22) !important; }
-html body table tbody td,
-html body table tbody th{ border-top-width: 0 !important; border-bottom-width: 0 !important; }
-html body table tbody tr{ border-bottom: 1px solid rgba(10,132,255,0.14) !important; }
