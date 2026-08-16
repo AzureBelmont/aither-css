@@ -1801,3 +1801,25 @@ html body .bbcode-rendered{
   border-radius: var(--at-radius) !important;
 }
 html body .bbcode-input__tabs{ overflow: hidden !important; }
+
+/* Pagination on glass: the inherited rules paint the bar and chips as SOLID
+   surfaces (--at-bg2 bar, --at-bg3 current chip). Correct on opaque themes, but
+   reads as a slab sitting inside a translucent pane, so here the bar and chips go
+   transparent and let the glass show through. Only the current page stays solid,
+   so "where am I" still reads at a glance. */
+html body nav.pagination{ background-color: transparent !important; border: none !important; }
+html body .panelV2 > nav.pagination{ border-top: 1px solid rgba(255,255,255,0.10) !important; }
+html body .pagination__link, html body a.pagination__link,
+html body li.pagination__previous, html body li.pagination__next,
+html body li.pagination__ellipsis, html body .pagination__previous,
+html body .pagination__next{ background-color: transparent !important; border-color: transparent !important; }
+html body .pagination__link:hover, html body a.pagination__link:hover,
+html body li.pagination__next:hover, html body li.pagination__previous:hover{ background-color: rgba(255,255,255,0.10) !important; }
+html body li.pagination__current, html body .pagination__current{
+  background-color: rgba(10,132,255,0.85) !important; border-color: transparent !important;
+  color: #fff !important; font-weight: 600 !important;
+}
+html body li.pagination__previous--disabled, html body li.pagination__next--disabled,
+html body li.pagination__previous--disabled:hover, html body li.pagination__next--disabled:hover{
+  background-color: transparent !important; opacity: 0.45 !important;
+}
