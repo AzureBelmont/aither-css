@@ -1444,3 +1444,21 @@ html body .form__hint,
 html body .form__legend{ color: #6c6f85 !important; }
 html body .panel__tab--active,
 html body .panel__tab[aria-selected="true"]{ color: #4c4f69 !important; }
+
+/* Profile card LABELS were still pure #fff (the previous pass only caught the
+   values): section titles - General / Permissions / Stats / Donations - and every
+   item label - User ID, E-mail, 2FA, Ratio, Average seedtime... - rendered
+   white-on-white. Labels take the secondary tone, section titles the primary,
+   so the hierarchy still reads. */
+html body .user-profile-card__meta-title,
+html body .user-profile-card__section-title,
+html body .user-profile-card__meta-heading{ color: #4c4f69 !important; }
+
+html body .user-profile-card__meta-item-title,
+html body .user-profile-card__meta-item-label,
+html body .user-profile-card__meta-item sub,
+html body .user-profile-card__meta-item small{ color: #6c6f85 !important; }
+
+/* icons sitting beside those labels inherit the same white */
+html body .user-profile-card__meta-title i,
+html body .user-profile-card__meta-item-title i{ color: #6c6f85 !important; }
