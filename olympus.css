@@ -90,9 +90,15 @@ html:has(main[class*="article"])    .top-nav--left__list-item:has(a[href="https:
 html:has(main[class*="poll"])       .top-nav--left__list-item:has(a[href="https://aither.cc/forums"]) > a,
 html:has(main[class*="playlist"])   .top-nav--left__list-item:has(a[href="https://aither.cc/forums"]) > a,
 html:has(main[class*="event"])      .top-nav--left__list-item:has(a[href="https://aither.cc/forums"]) > a,
-html:has(main[class*="collectible"]) .top-nav--left__list-item:has(a[href="https://aither.cc/forums"]) > a { color: var(--at-gold) !important; border: none !important; border-bottom: 2px solid var(--at-gold) !important; border-radius: 0 !important; outline: none !important; box-shadow: none !important; padding-bottom: 2px !important; }
-html:has(main[class*="wiki"])  .top-nav--left__list-item:has(a[href*="/wiki"]) > a,
-html:has(main[class*="ticket"]) .top-nav--left__list-item:has(a[href*="/ticket"]) > a { color: var(--at-gold) !important; border: none !important; border-bottom: 2px solid var(--at-gold) !important; border-radius: 0 !important; outline: none !important; box-shadow: none !important; padding-bottom: 2px !important; }
+/* Nav section highlight - see PROJECT-NOTES. Collectibles pages render
+   `main.page__stats--overview` (no "collectible" in the class at all), so they are
+   identified by their breadcrumb instead. Wiki and Tickets live under **Support**,
+   which carries `top-nav__dropdown` WITHOUT `top-nav--left__list-item`, and the old
+   `[href*="/wiki"]` matched Community's IRC link (/wikis/62) - `$=` pins both to
+   Support's own entries. Verified: fires only on the intended pages. */
+html:has(.breadcrumbsV2 a[href$="/collectibles"]) .top-nav--left__list-item:has(a[href="https://aither.cc/forums"]) > a { color: var(--at-gold) !important; border: none !important; border-bottom: 2px solid var(--at-gold) !important; border-radius: 0 !important; outline: none !important; box-shadow: none !important; padding-bottom: 2px !important; }
+html:has(main[class*="wiki"]) nav.top-nav li.top-nav__dropdown:has(a[href$="/wikis"]) > a,
+html:has(main[class*="ticket"]) nav.top-nav li.top-nav__dropdown:has(a[href$="/tickets"]) > a { color: var(--at-gold) !important; border: none !important; border-bottom: 2px solid var(--at-gold) !important; border-radius: 0 !important; outline: none !important; box-shadow: none !important; padding-bottom: 2px !important; }
 
 .top-nav__dropdown--touch { border-radius: 0 !important; }
 
