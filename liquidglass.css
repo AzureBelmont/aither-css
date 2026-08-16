@@ -1634,3 +1634,22 @@ html body .similar-torrents__torrents tbody tr:nth-child(even){ background-color
 html body .data-table tbody tr:hover,
 html body .similar-torrents__torrents tbody tr:hover{ background-color: rgba(255,255,255,0.085) !important; }
 html body .torrent-search--grouped__header{ background-color: rgba(255,255,255,0.05) !important; }
+
+/* The grouped name/overview cell keeps a solid fill that the attribute selector
+   above doesn't reach, so it reads as a heavier seam against its transparent
+   neighbours. Target it (and its heading) directly. */
+html body td.torrent-search--grouped__overview,
+html body .torrent-search--grouped__overview,
+html body .torrent-search--grouped__name,
+html body .similar-torrents__name,
+html body td.similar-torrents__name{ background-color: transparent !important; }
+
+
+/* Fractional border widths (0.8px, inherited from the base theme) get rounded
+   per-cell on a border-collapse table, so a header rule renders thin in some
+   segments and thick in others. Snap table hairlines to a whole pixel. */
+html body table{ border-collapse: collapse !important; }
+html body table thead th{ border-bottom: 1px solid rgba(10,132,255,0.22) !important; }
+html body table tbody td,
+html body table tbody th{ border-top-width: 0 !important; border-bottom-width: 0 !important; }
+html body table tbody tr{ border-bottom: 1px solid rgba(10,132,255,0.14) !important; }
