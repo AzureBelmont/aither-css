@@ -112,7 +112,7 @@ html:has(main[class*="article"])  .top-nav--left__list-item:has(a[href*="/forums
 html:has(main[class*="poll"])     .top-nav--left__list-item:has(a[href*="/forums"]) > a,
 html:has(main[class*="playlist"]) .top-nav--left__list-item:has(a[href*="/forums"]) > a,
 html:has(main[class*="event"])      .top-nav--left__list-item:has(a[href*="/forums"]) > a,
-html:has(main[class*="collectible"]).top-nav--left__list-item:has(a[href*="/forums"]) > a,
+html:has(main[class*="collectible"]) .top-nav--left__list-item:has(a[href*="/forums"]) > a,
 html:has(main[class*="wiki"])     .top-nav--left__list-item:has(a[href*="/wiki"]) > a,
 html:has(main[class*="ticket"])   .top-nav--left__list-item:has(a[href*="/ticket"]) > a { color: var(--k-pink) !important; border: none !important; border-bottom: 2px solid var(--k-pink) !important; border-radius: 0 !important; outline: none !important; box-shadow: none !important; padding-bottom: 2px !important; }
 
@@ -1071,3 +1071,13 @@ html body .bbcode-rendered{
   border-radius: var(--k-radius) !important;
 }
 html body .bbcode-input__tabs{ overflow: hidden !important; }
+
+
+/* === Readability fixes (2026-08-16) =======================================
+   --at-text3 / --k-text3 is a BORDER tint. Used as type it lands at
+   1.56-2.71:1 across the theme set - the "Total | Alive | Dead" line on the
+   torrent list reads as disabled. UNIT3D also hardcodes #555 on fieldset
+   legends (Category / Type / Resolution...), 1.91-2.43:1 on dark. Both moved
+   to the theme's real secondary text colour. The variables are untouched;
+   they are still correct as border tints. ===================================== */
+html body .panel__action-text{ color: var(--k-text2) !important; }

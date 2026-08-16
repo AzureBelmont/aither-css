@@ -130,9 +130,9 @@ html:has(main[class*="article"])    .top-nav--left__list-item:has(a[href="https:
 html:has(main[class*="poll"])       .top-nav--left__list-item:has(a[href="https://aither.cc/forums"]) > a,
 html:has(main[class*="playlist"])   .top-nav--left__list-item:has(a[href="https://aither.cc/forums"]) > a,
 html:has(main[class*="event"])      .top-nav--left__list-item:has(a[href="https://aither.cc/forums"]) > a,
-html:has(main[class*="collectible"]).top-nav--left__list-item:has(a[href="https://aither.cc/forums"]) > a { color: var(--at-gold) !important; border: none !important; border-bottom: 2px solid var(--at-gold) !important; border-radius: 0 !important; outline: none !important; box-shadow: none !important; padding-bottom: 2px !important; }
+html:has(main[class*="collectible"]) .top-nav--left__list-item:has(a[href="https://aither.cc/forums"]) > a { color: var(--at-gold) !important; border: none !important; border-bottom: 2px solid var(--at-gold) !important; border-radius: 0 !important; outline: none !important; box-shadow: none !important; padding-bottom: 2px !important; }
 html:has(main[class*="wiki"])  .top-nav--left__list-item:has(a[href*="/wiki"]) > a,
-html:has(main[class*="ticket"]).top-nav--left__list-item:has(a[href*="/ticket"]) > a { color: var(--at-gold) !important; border: none !important; border-bottom: 2px solid var(--at-gold) !important; border-radius: 0 !important; outline: none !important; box-shadow: none !important; padding-bottom: 2px !important; }
+html:has(main[class*="ticket"]) .top-nav--left__list-item:has(a[href*="/ticket"]) > a { color: var(--at-gold) !important; border: none !important; border-bottom: 2px solid var(--at-gold) !important; border-radius: 0 !important; outline: none !important; box-shadow: none !important; padding-bottom: 2px !important; }
 
 .top-nav__dropdown--touch { border-radius: 0 !important; }
 
@@ -2127,3 +2127,39 @@ html body .vscomp-search-container, html body .vscomp-search-wrapper,
 html body .vscomp-no-options, html body .vscomp-no-search-results{ background-color: transparent !important; }
 html body .vscomp-option:hover, html body .vscomp-option.focused{ background-color: var(--g-hover) !important; }
 html body .vscomp-option.selected{ background-color: color-mix(in srgb, var(--at-gold) 16%, transparent) !important; }
+
+
+/* --- Wallpaper dither ----------------------------------------------------
+   Azure is on an OLED HDR panel and was seeing banding in the wallpaper. It is
+   not a colour choice, it is 8-bit quantisation: #15161A -> #0E0F12 -> #0A0B0D
+   spread over ~1000px puts roughly 80-110px between every representable step,
+   and OLED near-black resolves those steps far better than an LCD hides them.
+   Extra colour stops do not help - the ramp is already linear; what breaks a
+   band is dither. A tiled feTurbulence layer sits on top of the gradients in
+   `overlay`, perturbing each pixel by a couple of levels so the eye integrates
+   a smooth ramp.
+   Why `overlay` and not plain low-opacity noise: overlay leaves pure black at
+   pure black (blend(0, anything) = 0), so OLED pixels that should be off stay
+   off. Additive grey noise would lift them into a dark grey haze - the one
+   thing an OLED owner notices immediately.
+   `background-attachment: fixed` pins the grain to the viewport so it does not
+   crawl while scrolling. To tune: change `opacity` inside the data URI. Higher
+   = more dither and more visible grain. Nothing else moves.
+   NOTE: this dithers the WALLPAPER. Panels blur it, and blur averages noise
+   away, so faint banding can survive inside a large glass pane. Fixing that
+   needs a dither over the whole composite (a fixed `html::after` with
+   `mix-blend-mode: overlay`), which adds a top-level stacking layer - not worth
+   the z-index risk unless Azure says the panes still band.
+   ------------------------------------------------------------------------ */
+html body{
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E"),
+    radial-gradient(1100px 820px at 14% 4%, rgba(10,132,255,0.20), transparent 60%),
+    radial-gradient(900px 700px at 86% 18%, rgba(94,92,230,0.16), transparent 58%),
+    radial-gradient(1000px 900px at 50% 108%, rgba(48,209,88,0.07), transparent 62%),
+    linear-gradient(168deg,#15161A 0%,#0E0F12 55%,#0A0B0D 100%) !important;
+  background-size: 180px 180px, auto, auto, auto, auto !important;
+  background-repeat: repeat, no-repeat, no-repeat, no-repeat, no-repeat !important;
+  background-blend-mode: overlay, normal, normal, normal, normal !important;
+  background-attachment: fixed !important;
+}
