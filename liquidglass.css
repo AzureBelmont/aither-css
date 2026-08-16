@@ -1656,7 +1656,7 @@ html body table thead th{ border-bottom: 1px solid rgba(10,132,255,0.22) !import
    top border on the row/cells below, stacking into a visibly thicker bar that
    also brightened on hover. Remove the bottom edge and the per-cell tops so a
    single group line stands on its own.
-   (Sub-pixel widths made this worse: at a 1.75x device pixel ratio a 0.5px
+   (Sub-pixel widths made this worse: at a 1.75x device pixel ratio a 1px
    border rounds inconsistently, which is why it looked thin in places and
    thick in others. All fractional borders in this file are snapped to 1px.) */
 html body table tbody td{ border-top: 0 !important; border-bottom: 0 !important; }
@@ -1698,3 +1698,67 @@ html body table.torrent-search--grouped__torrents tbody tr:hover td,
 html body table.torrent-search--grouped__torrents tbody tr:hover th{
   background-color: transparent !important;
 }
+
+/* ============================================================
+   Audit sweep - settings / requests / forums
+   Each of these is painted solid by an inherited base rule whose selector
+   outranks a generic override, so they're matched directly here. Controls
+   keep a light inset fill (they should read as inputs, not as glass), while
+   list rows and pagination become translucent so panes stay continuous.
+   ============================================================ */
+/* forum + subforum listings */
+html body li.subforum-listings__item,
+html body li.subforum-listings__item:nth-child(even),
+html body li.topic-listings__item,
+html body li.topic-listings__item:nth-child(even){ background-color: transparent !important; }
+html body li.subforum-listings__item:hover,
+html body li.topic-listings__item:hover{ background-color: rgba(255,255,255,0.05) !important; }
+
+/* pagination chips -> glass pills */
+html body .pagination__link, html body a.pagination__link,
+html body li.pagination__previous, html body li.pagination__next,
+html body li.pagination__ellipsis, html body .pagination__previous,
+html body .pagination__next{
+  background-color: rgba(255,255,255,0.06) !important;
+  border-color: rgba(255,255,255,0.12) !important;
+  border-radius: 980px !important;
+}
+html body .pagination__link:hover, html body a.pagination__link:hover,
+html body li.pagination__next:hover, html body li.pagination__previous:hover{
+  background-color: rgba(255,255,255,0.12) !important;
+}
+html body li.pagination__current, html body .pagination__current{
+  background-color: rgba(10,132,255,0.22) !important;
+  border-color: rgba(10,132,255,0.35) !important;
+  border-radius: 980px !important;
+}
+
+/* search bars sit on the panel, not on their own slab */
+html body search.compact-search, html body .compact-search,
+html body .compact-search__visible-default,
+html body .torrent-search__filters,
+html body [class*="compact-search"]{ background-color: transparent !important; }
+
+/* text inputs: readable inset fill rather than an opaque block */
+html body [class*="compact-search"] .form__text,
+html body [class*="compact-search"] input.form__text,
+html body [class*="torrent-search"] input,
+html body .panelV2 .form__group input.form__text,
+html body textarea, html body .form__textarea{
+  background-color: rgba(255,255,255,0.06) !important;
+  border: 1px solid rgba(255,255,255,0.12) !important;
+}
+html body [class*="compact-search"] input.form__text:focus,
+html body [class*="torrent-search"] input:focus,
+html body .panelV2 .form__group input.form__text:focus{
+  background-color: rgba(255,255,255,0.10) !important;
+  border-color: rgba(10,132,255,0.45) !important;
+}
+
+/* settings: drag-to-reorder blocks */
+html body .order__item{
+  background-color: rgba(255,255,255,0.06) !important;
+  border: 1px solid rgba(255,255,255,0.12) !important;
+  border-radius: 10px !important;
+}
+html body .order__item:hover{ background-color: rgba(255,255,255,0.10) !important; }
