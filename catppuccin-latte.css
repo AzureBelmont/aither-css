@@ -1397,3 +1397,32 @@ html body .diff-wrapper.diff tbody.change td.old{ background: color-mix(in srgb,
 html body .diff-wrapper.diff tbody.change td.new{ background: color-mix(in srgb, var(--at-green) 12%, var(--at-bg2)) !important; }
 html body .diff-wrapper.diff ins{ background: color-mix(in srgb, var(--at-green) 32%, transparent) !important; color: var(--at-text) !important; text-decoration: none !important; }
 html body .diff-wrapper.diff del{ background: color-mix(in srgb, var(--at-red) 32%, transparent) !important; color: var(--at-text) !important; text-decoration: none !important; }
+
+/* Muted UI text was using the pale --at-text3 tint (fine for borders, far too
+   light for type: ~1.7:1 on white, well under the 4.5:1 minimum). These are the
+   small secondary labels - panel action text, chat meta, counts - pinned to a
+   readable secondary colour. */
+html body .panel__action-text,
+html body .chatbox-message__address,
+html body .chatbox__meta,
+html body .text-muted,
+html body small.text-muted,
+html body .form__help,
+html body .torrent-search--list__age,
+html body .key-value__key{ color: #6c6f85 !important; }
+
+/* Icon colour was inconsistent in the light themes: the top-bar icons used a
+   stray near-black (#1f2525, in neither palette) while dropdown icons were the
+   lighter secondary grey - so a menu showed a dark label beside a grey icon,
+   which reads as disabled. Apple's light menus give glyph and label the same
+   primary label colour, so both are unified here. */
+:root{
+  --top-nav-icon-bar-icon-fg: #4c4f69 !important;
+  --top-nav-icon-bar-icon-bg: rgba(76,79,105,0.08) !important;
+  --top-nav-dropdown-menu-item-icon-fg: #4c4f69 !important;
+  --top-nav-dropdown-menu-item-icon-bg: rgba(76,79,105,0.08) !important;
+}
+html body .top-nav__dropdown-menu i,
+html body .top-nav__dropdown ul i,
+html body .top-nav__icon-bar i,
+html body .top-nav--right__icon-link i{ color: #4c4f69 !important; }
