@@ -1661,3 +1661,35 @@ html body table thead th{ border-bottom: 1px solid rgba(10,132,255,0.22) !import
    thick in others. All fractional borders in this file are snapped to 1px.) */
 html body table tbody td{ border-top: 0 !important; border-bottom: 0 !important; }
 html body table tbody tr{ border-bottom: 0 !important; }
+
+/* ROOT CAUSE of the "lines" under Size / seeders / completed / age:
+   the base theme paints grouped-table CELLS solid, alternating per group:
+     table.similar-torrents__torrents tbody:nth-of-type(odd) td  -> --at-bg2
+     table.similar-torrents__torrents tbody:nth-of-type(even) td -> --at-bg3
+   Each row therefore renders as a strip of opaque blocks, and the row's own
+   tint shows through the gaps between them, reading as thin lines. Those
+   selectors outrank a plain [class*=] rule, so they must be matched directly.
+   Cells go transparent; striping lives on the row instead. */
+html body table.similar-torrents__torrents tbody:nth-of-type(odd) td,
+html body table.similar-torrents__torrents tbody:nth-of-type(odd) th,
+html body table.similar-torrents__torrents tbody:nth-of-type(even) td,
+html body table.similar-torrents__torrents tbody:nth-of-type(even) th,
+html body table.torrent-search--grouped__torrents tbody:nth-of-type(odd) td,
+html body table.torrent-search--grouped__torrents tbody:nth-of-type(odd) th,
+html body table.torrent-search--grouped__torrents tbody:nth-of-type(even) td,
+html body table.torrent-search--grouped__torrents tbody:nth-of-type(even) th{
+  background-color: transparent !important;
+}
+/* rows: no zebra (the tint edges were reading as lines); hover only */
+html body table.similar-torrents__torrents tbody tr,
+html body table.similar-torrents__torrents tbody tr:nth-child(even),
+html body table.torrent-search--grouped__torrents tbody tr,
+html body table.torrent-search--grouped__torrents tbody tr:nth-child(even){
+  background-color: transparent !important;
+}
+html body table.similar-torrents__torrents tbody tr:hover,
+html body table.similar-torrents__torrents tbody tr:hover td,
+html body table.torrent-search--grouped__torrents tbody tr:hover,
+html body table.torrent-search--grouped__torrents tr:hover td{
+  background-color: rgba(10,132,255,0.10) !important;
+}
