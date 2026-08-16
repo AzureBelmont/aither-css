@@ -1694,3 +1694,21 @@ html body .top-nav__dropdown-menu i,
 html body .top-nav__dropdown ul i,
 html body .top-nav__icon-bar i,
 html body .top-nav--right__icon-link i{ color: #1D1D1F !important; }
+
+/* White-on-white leftovers. Several places inherit a hardcoded #fff that only
+   works on a dark base: the profile card's stat values were rendering at 1:1
+   contrast (invisible), and the anonymous eye-slash tag likewise. Anything that
+   should be primary text is pinned here; muted labels get the secondary tone. */
+html body .user-profile-card__meta-item-value,
+html body .user-profile-card__meta-item-value sub,
+html body .user-profile-card__meta-item sub,
+html body .user-tag.fa-eye-slash,
+html body .user-tag.fas.fa-eye-slash,
+html body i.fa-eye-slash{ color: #1D1D1F !important; }
+
+html body .panel__tab,
+html body .form__label,
+html body .form__hint,
+html body .form__legend{ color: #6E6E73 !important; }
+html body .panel__tab--active,
+html body .panel__tab[aria-selected="true"]{ color: #1D1D1F !important; }
