@@ -1498,3 +1498,42 @@ html body .pagination__link:hover, html body a.pagination__link:hover,
 html body li.pagination__next:hover, html body li.pagination__previous:hover{
   background-color: rgba(0,0,0,0.06) !important;
 }
+
+/* UNIT3D draws a solid #888 divider as a ::before on the pagination items.
+   On dark panels it passes as a subtle separator; on light surfaces it reads as
+   a stray dark tick beside the panel heading (and hovering it highlights "Next",
+   since it belongs to that button). No theme was styling it, so it's removed
+   here for all of them - the pagination reads fine without it. */
+html body .pagination__next::before,
+html body .pagination__previous::before,
+html body .pagination__link::before,
+html body .pagination__ellipsis::before,
+html body .pagination__current::before{
+  display: none !important;
+  background: none !important;
+  content: none !important;
+}
+html body nav.pagination{ border-width: 0 !important; }
+
+/* Unread notifications are marked by an 8px left border on the cell. A blanket
+   cell border-colour rule (from the glass transparency sweep) was overwriting it
+   with the faint hairline, so unread rows looked identical to read ones. Pin the
+   accent back on unread and keep read transparent. */
+html body td.notification--unread,
+html body .notification--unread{ border-left-color: var(--at-gold) !important; }
+html body td.notification--read,
+html body .notification--read{ border-left-color: transparent !important; }
+
+/* The BBCode reply box was the one square component: the Write/Preview tab strip
+   carried a lopsided 5px-top-left-only radius, and the preview pane rendered with
+   no radius at all, so the whole editor read as a hard-edged box next to every
+   other rounded panel. Round the component as a unit. */
+html body .bbcode-input,
+html body .bbcode-input__tabs,
+html body .bbcode-input__input,
+html body .form__textarea,
+html body .post__content.bbcode-rendered,
+html body .bbcode-rendered{
+  border-radius: var(--at-radius) !important;
+}
+html body .bbcode-input__tabs{ overflow: hidden !important; }

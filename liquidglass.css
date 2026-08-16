@@ -1787,3 +1787,17 @@ html body td.notification--unread,
 html body .notification--unread{ border-left-color: #0A84FF !important; }
 html body td.notification--read,
 html body .notification--read{ border-left-color: transparent !important; }
+
+/* The BBCode reply box was the one square component: the Write/Preview tab strip
+   carried a lopsided 5px-top-left-only radius, and the preview pane rendered with
+   no radius at all, so the whole editor read as a hard-edged box next to every
+   other rounded panel. Round the component as a unit. */
+html body .bbcode-input,
+html body .bbcode-input__tabs,
+html body .bbcode-input__input,
+html body .form__textarea,
+html body .post__content.bbcode-rendered,
+html body .bbcode-rendered{
+  border-radius: var(--at-radius) !important;
+}
+html body .bbcode-input__tabs{ overflow: hidden !important; }

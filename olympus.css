@@ -1341,3 +1341,26 @@ html body .pagination__current::before{
   content: none !important;
 }
 html body nav.pagination{ border-width: 0 !important; }
+
+/* Unread notifications are marked by an 8px left border on the cell. A blanket
+   cell border-colour rule (from the glass transparency sweep) was overwriting it
+   with the faint hairline, so unread rows looked identical to read ones. Pin the
+   accent back on unread and keep read transparent. */
+html body td.notification--unread,
+html body .notification--unread{ border-left-color: var(--at-gold) !important; }
+html body td.notification--read,
+html body .notification--read{ border-left-color: transparent !important; }
+
+/* The BBCode reply box was the one square component: the Write/Preview tab strip
+   carried a lopsided 5px-top-left-only radius, and the preview pane rendered with
+   no radius at all, so the whole editor read as a hard-edged box next to every
+   other rounded panel. Round the component as a unit. */
+html body .bbcode-input,
+html body .bbcode-input__tabs,
+html body .bbcode-input__input,
+html body .form__textarea,
+html body .post__content.bbcode-rendered,
+html body .bbcode-rendered{
+  border-radius: var(--at-radius) !important;
+}
+html body .bbcode-input__tabs{ overflow: hidden !important; }
