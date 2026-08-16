@@ -1687,9 +1687,14 @@ html body table.torrent-search--grouped__torrents tbody tr,
 html body table.torrent-search--grouped__torrents tbody tr:nth-child(even){
   background-color: transparent !important;
 }
+/* No row hover in grouped tables: only the title is a link, so a full-row
+   highlight implies the whole row is clickable when it isn't. The title's own
+   link hover is the correct affordance. */
 html body table.similar-torrents__torrents tbody tr:hover,
 html body table.similar-torrents__torrents tbody tr:hover td,
+html body table.similar-torrents__torrents tbody tr:hover th,
 html body table.torrent-search--grouped__torrents tbody tr:hover,
-html body table.torrent-search--grouped__torrents tr:hover td{
-  background-color: rgba(10,132,255,0.10) !important;
+html body table.torrent-search--grouped__torrents tbody tr:hover td,
+html body table.torrent-search--grouped__torrents tbody tr:hover th{
+  background-color: transparent !important;
 }
