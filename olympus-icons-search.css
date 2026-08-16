@@ -1,11 +1,17 @@
 /* ============================================================
-   Olympus + Custom User Icons
+   Olympus + Custom User Icons + Restored Search
    Olympus theme by AzureBelmont, with the custom rank icons from
    xzin's "Aither Custom User Icons" add-on (used with thanks):
    https://aither.cc/forums/topics/3786
    Icon artwork is xzin's; only the selectors are scoped here so
    the swaps apply to rank icons (a.user-tag__link) and nothing else.
-
+ 
+   Same as olympus-icons.css, and additionally restores the torrent
+   search and filter controls that base olympus.css hides on the
+   similar/movie pages (.similar-torrents__filters). Pick this file
+   if you want those controls visible; pick olympus-icons.css if you
+   prefer the tidier layout without them.
+ 
    Paste this URL into the profile "External CSS Stylesheet" field
    INSTEAD of olympus.css - it pulls Olympus in automatically, so it
    always stays in sync with the base theme.
