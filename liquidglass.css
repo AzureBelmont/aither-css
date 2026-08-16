@@ -1415,7 +1415,7 @@ html body .secondary-nav{
 
 /* --- Tier: thick (panels) --- */
 html body .panelV2,
-html body footer,
+html body > footer,
 html body .torrent-card,
 html body .user-stat-card,
 html body .playlist-card,
@@ -1517,7 +1517,7 @@ html body ::-webkit-scrollbar-track{ background: transparent !important; }
 
 /* --- Reduced transparency: honour the OS accessibility setting --- */
 @media (prefers-reduced-transparency: reduce){
-  html body nav.top-nav, html body .panelV2, html body footer,
+  html body nav.top-nav, html body .panelV2, html body > footer,
   html body .top-nav__dropdown-menu, html body .swal2-popup{
     backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
     background: #15161A !important;
@@ -1535,7 +1535,7 @@ html body .secondary-nav{ position: relative !important; z-index: 800 !important
 html body .panelV2{ position: relative !important; z-index: 1 !important; }
 /* NB: do NOT position the footer - UNIT3D has a dormant `top: 1249px` on it that
    activates as soon as it is positioned, pushing it far down the page. */
-html body footer{ position: static !important; top: auto !important; }
+html body > footer{ position: static !important; top: auto !important; }
 /* popovers must clear both */
 html body .top-nav__dropdown-menu,
 html body .secondary-nav__dropdown-menu,
@@ -1889,3 +1889,151 @@ html body [class*="user-profile__column"] .key-value__group{
    up being the containing block - so it also survives if the blur ever moves.
    ============================================================ */
 html body .secondary-nav ul.nav-tab-menu__items{ top: 100% !important; }
+
+
+/* ============================================================
+   SITE-WIDE MATERIAL SWEEP  (2026-08-16)
+   ------------------------------------------------------------
+   Everything below fixes one class of problem: surfaces authored BEFORE the
+   glass layer existed still paint an opaque --at-bg2 / --at-bg3 slab, so a
+   glass panel keeps sprouting solid blocks inside it. Under a frosted theme
+   that reads as unfinished, page by page. The rule is the same one .panelV2
+   already follows: the OUTER element carries the material, everything nested
+   inside it is transparent or a tint.
+   ============================================================ */
+
+/* Two tints, so the rules below are identical text in the dark and light
+   sheets and only these values differ. */
+:root{
+  --g-tint: rgba(255,255,255,0.04);   /* a nested surface that needs to read apart */
+  --g-bar:  rgba(255,255,255,0.035);  /* a control strip (pagination, headers)     */
+}
+
+/* --- Content footers are NOT the page footer -----------------------------
+   The thick tier used the bare element selector `footer`, which caught every
+   <footer class="post__footer"> / torrent-card__footer / internal-card__footer
+   on the page - each one got a 12px radius, a hairline, a 40px drop shadow and
+   its own 28px backdrop-blur. That is the corner gap under post signatures, the
+   detached "This is a featured torrent until..." block under carousel cards,
+   and 20-40 stacked blur layers per page. The tier selectors are now scoped to
+   `body > footer`; this makes content footers quiet strips instead. */
+html body article footer,
+html body .panelV2 footer,
+html body .post__footer,
+html body .comment__footer,
+html body .torrent-card__footer,
+html body .internal-card__footer{
+  background: transparent !important;
+  background-color: transparent !important;
+  backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
+  border: 0 !important;
+  border-top: 1px solid var(--g-hairline-soft) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* --- Chatbox: the largest surface on the site, and it was a flat slab ----- */
+html body .panelV2.chatbox{ background-color: transparent !important; }
+html body article.chatbox-message{
+  background-color: transparent !important;
+  border-bottom: 1px solid var(--g-hairline-soft) !important;  /* was a dashed #3A3A3C */
+}
+html body article.chatbox-message:hover{ background-color: var(--g-hover) !important; }
+
+/* --- Forum posts: one pane, not four stacked slabs -----------------------
+   The aside, header, toolbar and content were all painted #0E0F12 and the
+   content carried its own 10px radius. First pass gave the aside and header a
+   tint to keep them legible as regions; Azure: "i don't like that line
+   separating the glass panels ... it should look the same left and right".
+   He is right - a tinted column plus a tinted header band draws two internal
+   seams across a card that is supposed to be a single pane. Everything inside
+   the post is now the same surface; the post's own hairline is the only edge,
+   and the signature strip's top rule is the only line, running the full width. */
+html body article.post > .post__aside{
+  background-color: transparent !important;
+  border-right: 0 !important;
+  border-radius: 0 !important;
+}
+html body article.post > .post__header,
+html body article.post > .post__header .post__toolbar{
+  background-color: transparent !important;
+  border-bottom: 0 !important;
+  border-radius: 0 !important;
+}
+html body article.post .post__content.bbcode-rendered{
+  background-color: transparent !important;
+  border-radius: 0 !important;
+}
+html body ul.comment-list{ background-color: transparent !important; }
+
+/* --- Torrent + internal cards: header/footer were solid on a glass card --- */
+html body header.torrent-card__header{
+  background-color: var(--g-bar) !important;
+  border-bottom: 1px solid var(--g-hairline-soft) !important;
+  border-radius: 0 !important;
+}
+html body .internal-card{ background-color: var(--g-tint) !important; }
+html body .internal-card__header{
+  background-color: var(--g-bar) !important;
+  border-bottom: 1px solid var(--g-hairline-soft) !important;
+}
+
+/* --- Advanced search filters: 10 opaque boxes floating on the wallpaper ---
+   They are controls, not panels, so they take the same language as
+   .form__text rather than a panel material (and no blur - ten blurred boxes
+   in one row is exactly the per-element blur the sheet avoids elsewhere). */
+html body fieldset.form__fieldset{
+  background-color: rgba(255,255,255,0.06) !important;
+  border: 1px solid var(--g-hairline) !important;
+  border-radius: 10px !important;
+}
+
+/* --- Pagination reads as a strip again ----------------------------------
+   The base theme separated the pager from the list with a tone shift; one
+   uniform pane of glass cannot, so the rows ran straight into the pager.
+   A tint plus a hairline on whichever side faces the content restores it. */
+html body .panelV2 nav.pagination{
+  background-color: var(--g-bar) !important;
+  border-bottom: 1px solid var(--g-hairline-soft) !important;
+}
+html body .panelV2 > nav.pagination:last-child{
+  border-bottom: 0 !important;
+  border-top: 1px solid var(--g-hairline-soft) !important;
+}
+
+/* --- Film Club hero fills its pane --------------------------------------
+   The backdrop sat inset by the panel body's 20px padding with square corners
+   inside a 12px-rounded pane, so it read as a photo dropped on a card. Let it
+   bleed to the edges and take the pane's own corner clipping. */
+html body .panelV2:has(.filmclub__homepreview_backdrop) > .panel__body{ padding: 0 !important; }
+html body .filmclub__homepreview_backdrop{ border-radius: 0 !important; }
+
+/* ============================================================
+   Muted type: --at-text3 is a BORDER tint, not a text colour
+   ------------------------------------------------------------
+   Nine rules in this sheet set `color: var(--at-text3)`. On dark that lands at
+   1.95-2.10:1, on light 1.68:1 - well under the 4.5:1 floor, and visibly so
+   (the "Total | Alive | Dead" line and the inactive panel tabs read as
+   disabled). --at-text2 is the real secondary colour and clears 4.5:1.
+   The variable itself is untouched - it is still correct as a border tint.
+   ============================================================ */
+html body .panel__tab,
+html body .panel__action-text,
+html body .footer__copyright,
+html body .footer__stats,
+html body .topic-listing__post-stats dt,
+html body .topic-listing__view-stats dt,
+html body .topic-listing__latest-post .topic-listing__latest-datetime,
+html body .vscomp-dropbox-close-button,
+html body .vscomp-clear-button,
+html body .vscomp-search-clear,
+html body .vscomp-no-options,
+html body .vscomp-no-search-results{ color: var(--at-text2) !important; }
+/* disabled pager: dim by opacity, not by an unreadable colour */
+html body li.pagination__previous--disabled, html body li.pagination__next--disabled,
+html body li.pagination__previous--disabled:hover, html body li.pagination__next--disabled:hover,
+html body .pagination__previous--disabled, html body .pagination__next--disabled{
+  color: var(--at-text2) !important; opacity: 0.5 !important;
+}
+/* UNIT3D hardcodes #555 on fieldset legends (Category / Type / Resolution...) */
+html body .form__legend{ color: var(--at-text2) !important; }
