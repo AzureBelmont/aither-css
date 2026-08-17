@@ -2260,3 +2260,55 @@ html body .panelV2:has(.featured-carousel){
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
 }
+
+/* === Audit sweep: remaining opaque slabs + one #555 label ================
+   Full-site audit, 20 pages. Everything below is the same bug the earlier
+   sweep chased - surfaces authored before the glass layer still painting a
+   solid --at-bg2/--at-bg3 slab inside a glass panel. These four were simply on
+   pages nobody had opened yet.
+     playlists  - `.playlists__playlist` cards + their empty-image placeholders
+     mediahub   - `.mediahub-card`
+     donate     - `.donation__item` tier cards (and the <li> wrapping them)
+     wiki/bbcode- unclassed <table> cells in user content
+   Verified by screenshot on playlists and donate: they read as flat boxes on
+   the glass, exactly the pre-glass look. Wiki tables keep a tinted header so
+   the table still has structure rather than dissolving.
+   `.bbcode-input__tab-label` ("Write" / "Preview" on every editor on the site)
+   was still on base's hardcoded #555 - 2.43:1. The active tab keeps its accent
+   from the existing `:checked + label` rule, which outranks this.
+   ======================================================================== */
+html body .playlists__playlist{ background-color: var(--g-tint) !important; }
+html body .playlists__playlist:hover{ background-color: var(--g-hover) !important; }
+html body .playlists__playlist-image--none{ background-color: var(--g-bar) !important; }
+
+html body .mediahub-card{ background-color: var(--g-tint) !important; }
+html body .mediahub-card:hover{ background-color: var(--g-hover) !important; }
+
+html body .donation__item{ background-color: var(--g-tint) !important; }
+html body .donation__items-wrapper > li,
+html body .donation__item--body,
+html body .donation__item--header{ background-color: transparent !important; }
+
+html body .bbcode-rendered table th{ background-color: var(--g-bar) !important; }
+html body .bbcode-rendered table td{ background-color: transparent !important; }
+
+html body .bbcode-input__tab-label{ color: var(--at-text2) !important; }
+
+/* === Quick-search dead zone ==============================================
+   `.quick-search` is 400px wide and transparent at all times, but the visible
+   input inside it is only ~157px - leaving ~243px of invisible container
+   sitting in the top bar. Base UNIT3D expands the field on
+   `.quick-search:active`, and `:active` fires on a mousedown ANYWHERE in that
+   container, so pressing empty space beside the logo pops the search open.
+   All three width rules are base (`main-*.css`); no theme touches search width,
+   so every theme has the dead zone. Aether is not editing site CSS right now,
+   so it is fixed here instead.
+   `pointer-events: none` on the container makes that invisible strip
+   click-through (verified: a click at x=450 lands on `.top-nav__left` instead
+   of `.quick-search`); the field and its results get `auto` back, so focus,
+   the 157->400 expansion and result links all still work. Not layout - nothing
+   moves. If Aether ever narrows the container this can simply be deleted.
+   ========================================================================= */
+html body .quick-search{ pointer-events: none !important; }
+html body .quick-search__inputs,
+html body .quick-search__results{ pointer-events: auto !important; }

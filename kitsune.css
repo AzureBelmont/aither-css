@@ -1087,3 +1087,22 @@ html body .bbcode-input__tabs{ overflow: hidden !important; }
    to the theme's real secondary text colour. The variables are untouched;
    they are still correct as border tints. ===================================== */
 html body .panel__action-text{ color: var(--k-text2) !important; }
+
+/* === Quick-search dead zone ==============================================
+   `.quick-search` is 400px wide and transparent at all times, but the visible
+   input inside it is only ~157px - leaving ~243px of invisible container
+   sitting in the top bar. Base UNIT3D expands the field on
+   `.quick-search:active`, and `:active` fires on a mousedown ANYWHERE in that
+   container, so pressing empty space beside the logo pops the search open.
+   All three width rules are base (`main-*.css`); no theme touches search width,
+   so every theme has the dead zone. Aether is not editing site CSS right now,
+   so it is fixed here instead.
+   `pointer-events: none` on the container makes that invisible strip
+   click-through (verified: a click at x=450 lands on `.top-nav__left` instead
+   of `.quick-search`); the field and its results get `auto` back, so focus,
+   the 157->400 expansion and result links all still work. Not layout - nothing
+   moves. If Aether ever narrows the container this can simply be deleted.
+   ========================================================================= */
+html body .quick-search{ pointer-events: none !important; }
+html body .quick-search__inputs,
+html body .quick-search__results{ pointer-events: auto !important; }
