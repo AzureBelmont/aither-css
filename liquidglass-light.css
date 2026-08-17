@@ -2251,3 +2251,27 @@ html body .article-card{
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
 }
+
+/* === Featured-torrents flicker: the FIX (verified by Azure) ===============
+   The carousel auto-advances on its own timer - measured: perfectly still for
+   ~4.5s (90 frames sampled, one single scrollLeft value), then a ~330ms
+   smooth-scroll animation stepping 728 -> ~1300 across 59 frames, then still
+   again. During those 330ms twelve card edges slide sub-pixel INSIDE a panel
+   that has `backdrop-filter: blur(28px)` and `overflow: hidden`, so Chromium
+   re-rasters the blurred region every frame of the slide and the card edges
+   shimmer. A 330ms shimmer on a 4.5s loop reads as a persistent flicker.
+   The auto-advance and the `scroll-snap-type: x mandatory` are both base
+   UNIT3D; the blur is ours, and it is what makes the sub-pixel slide visible -
+   which is why no other theme in the set shows it and Firefox does not either.
+   Azure confirmed: killing the blur on this one panel stops it; making the
+   wallpaper `background-attachment: scroll` does NOT (so the dither and the
+   fixed background were both innocent).
+   Scoped with `:has()` so every other panel keeps its material. Checked the
+   other horizontal strips on the homepage - "Latest Internals" `.scroller` does
+   not auto-advance (stable for 9.5s), and the overflowing `.panel__tabs` /
+   `.post__toolbar` never animate, so none of them need this.
+   ========================================================================= */
+html body .panelV2:has(.featured-carousel){
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
