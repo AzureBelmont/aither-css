@@ -131,9 +131,15 @@ html:has(main[class*="article"])    .top-nav--left__list-item:has(a[href="https:
 html:has(main[class*="poll"])       .top-nav--left__list-item:has(a[href="https://aither.cc/forums"]) > a,
 html:has(main[class*="playlist"])   .top-nav--left__list-item:has(a[href="https://aither.cc/forums"]) > a,
 html:has(main[class*="event"])      .top-nav--left__list-item:has(a[href="https://aither.cc/forums"]) > a,
-html:has(main[class*="collectible"]) .top-nav--left__list-item:has(a[href="https://aither.cc/forums"]) > a { color: var(--at-gold) !important; border: none !important; border-bottom: 2px solid var(--at-gold) !important; border-radius: 0 !important; outline: none !important; box-shadow: none !important; padding-bottom: 2px !important; }
-html:has(main[class*="wiki"])  .top-nav--left__list-item:has(a[href*="/wiki"]) > a,
-html:has(main[class*="ticket"]) .top-nav--left__list-item:has(a[href*="/ticket"]) > a { color: var(--at-gold) !important; border: none !important; border-bottom: 2px solid var(--at-gold) !important; border-radius: 0 !important; outline: none !important; box-shadow: none !important; padding-bottom: 2px !important; }
+/* Nav section highlight - see PROJECT-NOTES. Collectibles pages render
+   `main.page__stats--overview` (no "collectible" in the class at all), so they are
+   identified by their breadcrumb instead. Wiki and Tickets live under **Support**,
+   which carries `top-nav__dropdown` WITHOUT `top-nav--left__list-item`, and the old
+   `[href*="/wiki"]` matched Community's IRC link (/wikis/62) - `$=` pins both to
+   Support's own entries. Verified: fires only on the intended pages. */
+html:has(.breadcrumbsV2 a[href$="/collectibles"]) .top-nav--left__list-item:has(a[href="https://aither.cc/forums"]) > a { color: var(--at-gold) !important; border: none !important; border-bottom: 2px solid var(--at-gold) !important; border-radius: 0 !important; outline: none !important; box-shadow: none !important; padding-bottom: 2px !important; }
+html:has(main[class*="wiki"]) nav.top-nav li.top-nav__dropdown:has(a[href$="/wikis"]) > a,
+html:has(main[class*="ticket"]) nav.top-nav li.top-nav__dropdown:has(a[href$="/tickets"]) > a { color: var(--at-gold) !important; border: none !important; border-bottom: 2px solid var(--at-gold) !important; border-radius: 0 !important; outline: none !important; box-shadow: none !important; padding-bottom: 2px !important; }
 
 .top-nav__dropdown--touch { border-radius: 0 !important; }
 
@@ -2177,4 +2183,41 @@ html body{
   background-repeat: repeat, no-repeat, no-repeat, no-repeat, no-repeat !important;
   background-blend-mode: overlay, normal, normal, normal, normal !important;
   background-attachment: fixed !important;
+}
+
+/* === iOS Safari white top bar =============================================
+   iPhone Safari paints the area behind its chrome (and the rubber-band
+   over-scroll) from the CANVAS colour. Base Aither Dark sets a solid
+   `body { background-color: rgb(48,48,48) }` which propagates to the canvas,
+   so stock has no problem. This sheet replaced it with the `background:`
+   SHORTHAND - which resets `background-color` to transparent - leaving only
+   five `background-attachment: fixed` gradient layers. Fixed layers are
+   clipped to the layout viewport, so everything outside it had no paint at all
+   and Safari fell back to its default: white.
+   Two fixes, both needed:
+     - a solid colour on the ROOT element, which is what actually paints the
+       canvas everywhere including the safe area;
+     - `color-scheme`, which tells the browser this page is light so its own
+       default canvas, form controls and scrollbars stop assuming light.
+   This is liquidglass-only: every other theme in the set still sets
+   `body { background-color: ... }` as a longhand and keeps its canvas colour.
+   ========================================================================= */
+:root{ color-scheme: light; }
+html{ background-color: #EAEAF0 !important; }
+
+
+/* === Post tip input: pill when idle, square while typing ==================
+   Two rules disagreed about the same control. `html body input[type="text"]`
+   in the glass field spec gave it the field treatment (10px + hairline), while
+   an older pre-glass rule - `.post__tip-input, .post__tip-input:focus
+   { border: none; border-radius: 2px }`, which appears TWICE in this file -
+   won back on `:focus` and stripped both. So it rounded on idle and squared
+   the moment you typed. Pinned to the field spec in both states; the accent
+   focus ring still comes from the shared `:focus` rule.
+   ========================================================================= */
+html body .post__tip-input,
+html body .post__tip-input:focus{
+  background-color: rgba(0,0,0,0.03) !important;
+  border: 1px solid var(--g-hairline) !important;
+  border-radius: 10px !important;
 }
