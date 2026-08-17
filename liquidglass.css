@@ -1,59 +1,10 @@
-/* ==========================================================
-   Aither — Liquid Glass
-   Frosted translucent panes over a fixed aurora wallpaper.
-   Near-neutral surfaces; depth comes from material weight,
-   not from a flat surface ladder.
-   Author : AzureBelmont
-   Repo   : github.com/AzureBelmont/aither-css
-   Ver    : 1.0
-   Accent : Apple system blue
-   Stacks on: Aither Dark
-   Palette
-   ────────────────────────────────────────────
-   Blue      #0A84FF   primary accent
-   Blue hi   #409CFF   hover / secondary accent
-   Base      #15161A   page background
-   Deep      #0E0F12   deeper surface
-   Raised    #2C2C2E   raised surfaces
-   Text      #F5F5F7   body text
-   Green     #30D158   success / seeders
-   Red       #FF453A   danger / leechers
-   Materials (blur + opacity, not solid fills)
-   ────────────────────────────────────────────
-   thick     rgba(28,28,30,0.72)   panels, footer
-   regular   rgba(28,28,30,0.58)   nav, bars
-   thin      rgba(44,44,46,0.46)   popovers, modals
-   Note: rank and user-group colours are intentionally untouched.
-========================================================== */
-
+/* Liquid Glass — Aither
+   Apple-style frosted glass, aurora wallpaper.
+   Accent #0A84FF · AzureBelmont · github.com/AzureBelmont/aither-css
+*/
 :root {
   --key-value-padding: 10px;
-  --ctp-rosewater: #f5e0dc;
-  --ctp-flamingo:  #f2cdcd;
-  --ctp-pink:      #f5c2e7;
   --ctp-system blue:     #0A84FF;
-  --ctp-red:       #FF453A;
-  --ctp-maroon:    #eba0ac;
-  --ctp-peach:     #fab387;
-  --ctp-yellow:    #f9e2af;
-  --ctp-green:     #30D158;
-  --ctp-teal:      #94e2d5;
-  --ctp-sky:       #89dceb;
-  --ctp-sapphire:  #74c7ec;
-  --ctp-blue:      #64D2FF;
-  --ctp-lavender:  #b4befe;
-  --ctp-text:      #F5F5F7;
-  --ctp-subtext1:  #EBEBF5;
-  --ctp-subtext0:  #AEAEB2;
-  --ctp-overlay2:  #8E8E93;
-  --ctp-overlay1:  #8E8E93;
-  --ctp-overlay0:  #636366;
-  --ctp-surface2:  #48484A;
-  --ctp-surface1:  #3A3A3C;
-  --ctp-surface0:  #2C2C2E;
-  --ctp-base:      #15161A;
-  --ctp-mantle:    #0E0F12;
-  --ctp-crust:     #0A0B0D;
 
   --at-bg:        #0A0B0D;
   --at-bg2:       #15161A;
@@ -130,12 +81,7 @@ html:has(main[class*="article"])    .top-nav--left__list-item:has(a[href="https:
 html:has(main[class*="poll"])       .top-nav--left__list-item:has(a[href="https://aither.cc/forums"]) > a,
 html:has(main[class*="playlist"])   .top-nav--left__list-item:has(a[href="https://aither.cc/forums"]) > a,
 html:has(main[class*="event"])      .top-nav--left__list-item:has(a[href="https://aither.cc/forums"]) > a,
-/* Nav section highlight - see PROJECT-NOTES. Collectibles pages render
-   `main.page__stats--overview` (no "collectible" in the class at all), so they are
-   identified by their breadcrumb instead. Wiki and Tickets live under **Support**,
-   which carries `top-nav__dropdown` WITHOUT `top-nav--left__list-item`, and the old
-   `[href*="/wiki"]` matched Community's IRC link (/wikis/62) - `$=` pins both to
-   Support's own entries. Verified: fires only on the intended pages. */
+
 html:has(.breadcrumbsV2 a[href$="/collectibles"]) .top-nav--left__list-item:has(a[href="https://aither.cc/forums"]) > a { color: var(--at-gold) !important; border: none !important; border-bottom: 2px solid var(--at-gold) !important; border-radius: 0 !important; outline: none !important; box-shadow: none !important; padding-bottom: 2px !important; }
 html:has(main[class*="wiki"]) nav.top-nav li.top-nav__dropdown:has(a[href$="/wikis"]) > a,
 html:has(main[class*="ticket"]) nav.top-nav li.top-nav__dropdown:has(a[href$="/tickets"]) > a { color: var(--at-gold) !important; border: none !important; border-bottom: 2px solid var(--at-gold) !important; border-radius: 0 !important; outline: none !important; box-shadow: none !important; padding-bottom: 2px !important; }
@@ -166,9 +112,9 @@ li.top-nav__dropdown ul li button.top-nav--right__link:hover i.fab { background-
 .top-nav circle, .top-nav--left__container circle, .top-nav svg circle { stroke: var(--at-gold) !important; fill: var(--at-gold) !important; }
 
 @keyframes at-heart-gold {
-  0%   { text-shadow: 0 0 4px rgba(10,132,255,0.4); color: #a98fd8; }
+  0%   { text-shadow: 0 0 4px rgba(10,132,255,0.4); color: var(--at-gold); }
   50%  { text-shadow: 0 0 12px rgba(10,132,255,1.0), 0 0 24px rgba(10,132,255,0.6); color: #0A84FF; }
-  100% { text-shadow: 0 0 4px rgba(10,132,255,0.4); color: #a98fd8; }
+  100% { text-shadow: 0 0 4px rgba(10,132,255,0.4); color: var(--at-gold); }
 }
 .fa-heartbeat.text-gold, .top-nav .fa-heartbeat { filter: none !important; }
 
@@ -393,7 +339,7 @@ textarea, textarea.form__textarea, .form__textarea { background-color: var(--at-
 textarea:focus, textarea.form__textarea:focus, .form__textarea:focus { border-color: rgba(10,132,255,0.6) !important; box-shadow: 0 0 0 3px rgba(10,132,255,0.10) !important; outline: none !important; }
 
 .form__button--text { background: transparent !important; border: none !important; box-shadow: none !important; color: var(--at-gold) !important; }
-.bbcode-input__icon-bar .form__button--text { color: #9d7fd0 !important; }
+.bbcode-input__icon-bar .form__button--text { color: var(--at-gold) !important; }
 .form__button--text:hover { color: #d9c4fb !important; text-shadow: 0 0 8px rgba(10,132,255,0.7) !important; transition: color .15s, text-shadow .15s !important; }
 a.form__button--text[href*="/dashboard/reports"], a.form__button--text[href*="/contributors/internal-claim"], a.form__button--text[href*="/contributors/contest"] { color: var(--at-text) !important; }
 a.form__button--text[href*="/dashboard/reports"]:hover, a.form__button--text[href*="/contributors/internal-claim"]:hover, a.form__button--text[href*="/contributors/contest"]:hover { color: var(--at-gold) !important; }
@@ -522,7 +468,7 @@ a.nav-tab__link:hover, span.nav-tab__link:hover { text-decoration: none; color: 
 
 @keyframes at-dot-pulse {
   0%, 100% { color: var(--at-gold); filter: drop-shadow(0 0 2px rgba(10,132,255,0.4)); }
-  50%       { color: #d9c4fb;        filter: drop-shadow(0 0 6px rgba(10,132,255,0.9)); }
+  50%       { color: var(--at-gold);        filter: drop-shadow(0 0 6px rgba(10,132,255,0.9)); }
 }
 circle[fill="#33B5E5"] { fill: var(--at-gold) !important; }
 circle[stroke="#33B5E5"] { stroke: var(--at-gold) !important; }
@@ -620,7 +566,7 @@ a[style*="color:#95A5A6"],a[style*="color: #95A5A6"] { color: #95A5A6 !important
 .page__torrent--create .sidebar2 .panel__body a[href*="/wikis/"],
 .page__user-profile--show .data-table tfoot a[href*="/tickets"] { color: var(--at-gold) !important; text-decoration: none !important; transition: color .15s, text-shadow .15s !important; }
 .page__torrent--create .sidebar2 .panel__body a[href*="/wikis/"]:hover,
-.page__user-profile--show .data-table tfoot a[href*="/tickets"]:hover { color: #d9c4fb !important; text-shadow: 0 0 8px rgba(10,132,255,0.7) !important; }
+.page__user-profile--show .data-table tfoot a[href*="/tickets"]:hover { color: var(--at-gold) !important; text-shadow: 0 0 8px rgba(10,132,255,0.7) !important; }
 
 .top-nav__dropdown a.top-nav__username i.fas, .top-nav__dropdown a.top-nav__username i.far { background-color: transparent !important; border-color: transparent !important; }
 li.top-nav__dropdown ul li:hover a.top-nav__username i.fas, li.top-nav__dropdown ul li a.top-nav__username:hover i.fas { background-color: transparent !important; border-color: transparent !important; }
@@ -645,7 +591,7 @@ li.top-nav__dropdown ul li:hover a.top-nav__username i.fas, li.top-nav__dropdown
 .dialog__form { background-color: var(--at-bg2) !important; }
 .dialog__header { background-color: var(--at-bg3) !important; }
 .dialog__actions, .dialog__action { background-color: var(--at-bg3) !important; }
-dialog.dialog--auto-width tr:hover td { background-color: #222e48 !important; }
+dialog.dialog--auto-width tr:hover td { background-color: var(--at-bg3) !important; }
 
 article.achievement { background-color: var(--at-bg3) !important; border: 1px solid var(--at-border) !important; border-radius: var(--at-radius) !important; }
 article.achievement progress.achievement__progress { accent-color: var(--at-gold) !important; }
@@ -846,7 +792,7 @@ ul.torrent__tags .torrent-icons {
 }
 
 .bbcode-input__icon-bar .form__button--text abbr {
-  color: #9d7fd0 !important;
+  color: var(--at-gold) !important;
   filter: none !important;
   font-weight: 600 !important;
 }
@@ -1214,7 +1160,7 @@ form.reply-comment { margin-bottom: 16px !important; }
 .internals-card__body{ all:unset !important; display:flex !important; flex-direction:column !important; align-items:center !important; gap:4px !important; text-align:center !important; width:100% !important; position:relative !important; z-index:1 !important; flex:1 1 auto !important; justify-content:flex-start !important; }
 .internals-card__body .user-tag{ font-size:15px !important; font-weight:600 !important; line-height:1.4 !important; padding-bottom:2px !important; max-width:100% !important; white-space:nowrap !important; overflow:hidden !important; text-overflow:ellipsis !important; }
 .internals-card__body br{ display:none !important; }
-.internals-card__title{ color:var(--at-text, #dde1f0) !important; font-size:11px !important; opacity:0.75 !important; margin:2px 0 0 !important; max-width:100% !important; white-space:nowrap !important; overflow:hidden !important; text-overflow:ellipsis !important; }
+.internals-card__title{ color:var(--at-text, #F5F5F7) !important; font-size:11px !important; opacity:0.75 !important; margin:2px 0 0 !important; max-width:100% !important; white-space:nowrap !important; overflow:hidden !important; text-overflow:ellipsis !important; }
 .internals-card__body .badge-extra{ margin-top:auto !important; display:inline-flex !important; align-items:center !important; gap:5px !important; padding:4px 10px !important; background:rgba(10,132,255,0.12) !important; border:1px solid rgba(10,132,255,0.30) !important; border-radius:20px !important; font-size:12px !important; color:var(--at-gold, #0A84FF) !important; }
 
 .internal-card__poster-popup-card{ background:var(--at-bg2, #15161A) !important; border:1px solid var(--at-gold, #0A84FF) !important; border-radius:12px !important; box-shadow:0 20px 50px -12px rgba(0,0,0,0.6), 0 0 0 1px rgba(10,132,255,0.15) !important; overflow:hidden !important; }
@@ -1227,7 +1173,6 @@ form.reply-comment { margin-bottom: 16px !important; }
 .panel__heading{ position: relative !important; }
 .internal-card__poster-popup{ position: absolute !important; top: 100% !important; left: 0 !important; right: auto !important; inset: auto !important; transform: none !important; margin-top: 8px !important; width: 360px !important; max-width: 80vw !important; }
 
-/* === Requirements page: card/row colors === */
 .group-requirements__group-wrapper:hover{ background-color: transparent !important; background-image: none !important; }
 .group-requirements__group--requirement-row,
 .group-requirements__group--requirement-multirow{ background-color: transparent !important; }
@@ -1241,13 +1186,11 @@ form.reply-comment { margin-bottom: 16px !important; }
 .group-requirements__group-wrapper.group-requirements__group-wrapper-highlight,
 .group-requirements__group-wrapper-highlight{ box-shadow: 0 0 10px 1px rgba(10,132,255,0.55) !important; border-color: rgba(10,132,255,0.45) !important; }
 
-/* flatten requirement sub-table cells (kill dual-tone striping) */
 .group-requirements__group--requirement-row table td,
 .group-requirements__group--requirement-multirow table td,
 .group-requirements__group--requirement-row td,
 .group-requirements__group--requirement-multirow td{ background-color: transparent !important; }
 
-/* === Requirements: blue(main)/green(uploader) rank fills === */
 .group-requirements__group-wrapper:has(h3 span[style*="b8c8ff" i]){ background: rgba(184,200,255,0.1) !important; }
 .group-requirements__group-wrapper:has(h3 span[style*="a5b8ff" i]){ background: rgba(165,184,255,0.11) !important; }
 .group-requirements__group-wrapper:has(h3 span[style*="7f8eff" i]){ background: rgba(127,142,255,0.12) !important; }
@@ -1265,64 +1208,49 @@ form.reply-comment { margin-bottom: 16px !important; }
 .data-table--checkbox-grid tbody tr:nth-child(odd) th{background-color:var(--at-bg2)!important}
 .data-table--checkbox-grid tbody tr:nth-child(even) th{background-color:var(--at-bg3)!important}
 
-
-/* === Film Club: film-of-the-month backdrop cover fix === */
 html body .playlist__backdrop .filmclub__backdrop_row,
 html body .filmclub__homepreview_backdrop{ background-size: cover !important; background-position: center !important; background-repeat: no-repeat !important; }
 
-
-/* === Film Club: homepage preview text pills (readability over backdrop) === */
 html body .filmclub__homepreview_data-table td{ background-color: transparent !important; text-align: center !important; }
 html body .filmclub__homepreview_data-table td > a,
 html body .filmclub__homepreview_data-table td > p{ display: inline-block !important; background-color: rgba(14,15,18,0.76) !important; border-radius: 8px !important; padding: 8px 14px !important; max-width: 100% !important; }
-/* Title heading inside the pill: strip default h-margins (excessive vertical padding feedback) */
+
 html body .filmclub__homepreview_data-table td > a :is(h1,h2,h3,h4){ margin: 0 !important; }
 
-
-/* === EASY UPLOAD3R modal â€” theme accent (color only) === */
-/* Modal title (dropzone): grey -> theme accent */
 html body .easy-upload3r__title{ color: var(--at-gold) !important; }
-/* Version badge (0.0.1): maroon -> darker theme accent with readable text */
+
 html body .easy-upload3r__version{ background: var(--at-gold2) !important; background-color: var(--at-gold2) !important; color: var(--at-bg) !important; }
-/* Progress bar fills: off-theme violet -> theme accent */
+
 html body #torrent-progress,
 html body #mediainfo-progress,
 html body #screenshots-progress,
 html body .step-progress{ background: var(--at-gold) !important; }
-/* Progress bar tracks: subtle theme surface */
+
 html body .step-progress-container,
 html body .step-progress-bar,
 html body .step-progress-track{ background: var(--at-bg) !important; }
-/* Mini Close button: violet -> theme accent with dark text */
+
 html body #easyuploader-enhanced-overlay button,
 html body [id*="easyuploader"] button{ background-color: var(--at-gold) !important; color: var(--at-bg) !important; }
-/* Dropzone dashed border: maroon -> theme accent; keep theme surface */
+
 html body #easyuploader-dropzone,
 html body .easy-upload3r__panel-beta{ border-color: var(--at-gold) !important; background: var(--at-bg2) !important; background-color: var(--at-bg2) !important; }
-/* Modal overlay title: class-less div set violet inline by JS -> theme accent */
+
 html body #easyuploader-enhanced-overlay div[style*="119, 96, 222"]:not(.step-progress):not(.processing-step){ color: var(--at-gold) !important; }
-/* Active-step icon: recolor ONLY the brand violet (matched via inline rgb) -> theme accent */
+
 html body .step-icon[style*="119, 96, 222"]{ background-color: var(--at-gold) !important; }
-/* Step-icon glyph legibility: dark outline so the white hourglass / check / X reads on any circle color */
+
 html body .step-icon{ text-shadow: 0 0 2px rgba(0,0,0,0.9), 0 1px 2px rgba(0,0,0,0.6) !important; font-weight: 900 !important; }
 
-
-/* === Homepage block-order reorder list (settings > edit): off-palette grey -> theme === */
 html body .order__list,
 html body .order__item{ color: var(--at-text) !important; border-color: color-mix(in srgb, var(--at-text) 18%, transparent) !important; }
 html body .order__item{ background-color: var(--at-bg2) !important; }
 html body .order__item i.fa-arrows-alt{ color: var(--at-gold) !important; }
 html body .form__fieldset:has(.order__list) small.text-info{ color: var(--at-gold) !important; }
 
-
-/* === Content hyperlinks: give un-classed body-text links the theme accent === */
-/* Scoped to panel/sidebar body text only; excludes buttons/tags/user-tags (which carry classes) and image links */
 html body .panel__body a:not([class]),
 html body article.sidebar2 .panel__body a:not([class]){ color: var(--at-gold) !important; }
 
-
-/* === Default profile banner: retheme stock user_background.jpg only === */
-/* Matches ONLY the default inline image; custom uploads (authenticated-images/user-backgrounds/*) never match */
 html body .user-profile-card__banner[style*="img/user_background.jpg"]{
   background-image:
     radial-gradient(900px 260px at 50% 0%, color-mix(in srgb, var(--at-gold) 20%, transparent), transparent 70%),
@@ -1330,38 +1258,27 @@ html body .user-profile-card__banner[style*="img/user_background.jpg"]{
     linear-gradient(165deg, var(--at-bg3) 0%, var(--at-bg2) 55%, var(--at-bg) 100%) !important;
 }
 
-
-/* === User profile: rounded columns + panel corners (thanks mitsukiharuko) === */
 [class*="user-profile__column"],
 .user-profile__column--badges > div.panel__body,
 .user-profile__column--achievements > div.panel__body,
 .user-profile__column--followers > div.panel__body{ border-radius: var(--at-radius) !important; }
-/* Clip square inner rows (Traffic/BON key-value stripes) to the rounded corners */
+
 [class*="user-profile__column"]{ overflow: hidden !important; }
-/* Column headings (Traffic/BON/Badges/etc) match standard panel heading surface */
+
 [class*="user-profile__column"] > .panel__heading{ background-color: var(--at-bg2) !important; }
-/* Clients and IP-addresses: remove base UNIT3D grey (#333) tfoot border */
+
 html body .data-table tfoot td{ border-bottom: none !important; }
 
-
-/* === Panel header bars: header-wrapped headings (Featured torrents, Torrents, MediaInfo, etc) === */
-/* The heading inside .panel__header is transparent by design (shares the bar with action buttons), */
-/* but the container had no surface, so those bars bled into the body. Match bare panelV2 headings. */
 html body .panel__heading{ background-color: var(--at-bg2) !important; border-bottom: none !important; }
 html body .panel__header{ background-color: var(--at-bg2) !important; border-bottom: none !important; }
 html body .panel__header .panel__heading, html body .panel__header .panel__heading--centered{ background-color: transparent !important; }
 
-
-/* === Pagination bar divider: hairline above top AND bottom pagination bars (same tone as panel outlines) === */
 html body .panelV2 > nav.pagination{ border-top: 1px solid var(--at-border) !important; }
 
-
-/* === Torrent report modal + staff report page (new UNIT3D report system) === */
-/* Radio option cards: base hardcodes maroon #70233e selected + grey hover -> theme surfaces/accent */
 html body .form__group--radio-horizontal:hover .form__label{ background-color: var(--at-bg3) !important; }
 html body .form__group--radio-horizontal .form__label:has(.form__checkbox:checked),
 html body .form__group--radio-horizontal .form__label:has(.form__checkbox:focus-visible){ background-color: color-mix(in srgb, var(--at-gold) 18%, transparent) !important; }
-/* Side-by-side diff (php-diff) ships light-theme colors: retheme for dark reading */
+
 html body .diff-wrapper.diff{ color: var(--at-text) !important; }
 html body .diff-wrapper.diff td.old, html body .diff-wrapper.diff td.new{ color: var(--at-text) !important; }
 html body .diff-wrapper.diff td.none{ background: var(--at-bg) !important; }
@@ -1370,17 +1287,6 @@ html body .diff-wrapper.diff tbody.change td.new{ background: color-mix(in srgb,
 html body .diff-wrapper.diff ins{ background: color-mix(in srgb, var(--at-green) 32%, transparent) !important; color: var(--at-text) !important; text-decoration: none !important; }
 html body .diff-wrapper.diff del{ background: color-mix(in srgb, var(--at-red) 32%, transparent) !important; color: var(--at-text) !important; text-decoration: none !important; }
 
-
-/* ============================================================
-   LIQUID GLASS - material layer
-   Depth comes from MATERIAL WEIGHT (blur + opacity), not from a
-   bg/bg2/bg3 ladder. Three tiers, mirroring Apple's system materials:
-     thick   - panels, footer            (most opaque, sits on wallpaper)
-     regular - bars, nav                 (mid)
-     thin    - popovers, dropdowns, modals (most transparent + most blurred)
-   Rows are TINTED, never blurred: per-row backdrop-filter is the one
-   thing that will actually tank scroll performance on long tables.
-   ============================================================ */
 :root{
   --g-thick:   rgba(28,28,30,0.72);
   --g-regular: rgba(28,28,30,0.58);
@@ -1394,7 +1300,6 @@ html body .diff-wrapper.diff del{ background: color-mix(in srgb, var(--at-red) 3
   --g-hover: rgba(255,255,255,0.085);
 }
 
-/* --- Wallpaper: fixed, so panes drift across it while scrolling --- */
 html body{
   background:
     radial-gradient(1100px 820px at 14% 4%, rgba(10,132,255,0.20), transparent 60%),
@@ -1404,7 +1309,6 @@ html body{
   background-attachment: fixed !important;
 }
 
-/* --- Tier: regular (bars) --- */
 html body nav.top-nav{
   background: var(--g-regular) !important;
   backdrop-filter: blur(30px) saturate(180%) !important;
@@ -1419,7 +1323,6 @@ html body .secondary-nav{
   border-bottom: 1px solid var(--g-hairline-soft) !important;
 }
 
-/* --- Tier: thick (panels) --- */
 html body .panelV2,
 html body > footer,
 html body .torrent-card,
@@ -1435,7 +1338,6 @@ html body .article-card{
   overflow: hidden !important;
 }
 
-/* --- Tier: thin (popovers / modals / menus) --- */
 html body .top-nav__dropdown-menu,
 html body .secondary-nav__dropdown-menu,
 html body .swal2-popup,
@@ -1450,8 +1352,6 @@ html body .meta__dropdown{
   box-shadow: var(--g-shadow-pop) !important;
 }
 
-/* --- UNIT3D nests boxes several deep. Inner surfaces go transparent so a
-       panel reads as ONE pane of glass rather than stacked slabs. --- */
 html body .panelV2 .panel__body,
 html body .panelV2 .panel__header,
 html body .panelV2 .panel__heading,
@@ -1477,7 +1377,6 @@ html body .subforum-listing{
 }
 html body .panelV2 .panel__header{ border-bottom: 1px solid var(--g-hairline-soft) !important; }
 
-/* --- Tables: tint only. No per-row blur. --- */
 html body .data-table thead th{
   background: transparent !important;
   border-bottom: 1px solid var(--g-hairline) !important;
@@ -1488,7 +1387,6 @@ html body .data-table tbody tr:hover,
 html body .torrent-search--list__row:hover{ background-color: var(--g-hover) !important; }
 html body .data-table td, html body .data-table th{ border-color: var(--g-hairline-soft) !important; }
 
-/* --- Controls: Apple pills + soft inset fields --- */
 html body .form__button--filled, html body a.form__button--filled{
   border-radius: 980px !important; border: none !important;
   box-shadow: 0 2px 10px rgba(10,132,255,0.35) !important;
@@ -1506,8 +1404,6 @@ html body .form__textarea, html body input[type="text"], html body input[type="s
   border-radius: 10px !important;
 }
 
-/* --- Media pages: the poster backdrop is real art to blur, so let it through.
-       Only the chips/dropdowns over it get glass; the backdrop keeps its own filter. --- */
 html body .meta__backdrop{ backdrop-filter: none !important; }
 html body .meta__chip, html body .meta__id-tag{
   background-color: rgba(255,255,255,0.10) !important;
@@ -1517,11 +1413,9 @@ html body .meta__chip, html body .meta__id-tag{
   border-radius: 8px !important;
 }
 
-/* --- Scrollbar --- */
 html body ::-webkit-scrollbar-thumb{ background: rgba(255,255,255,0.22) !important; border-radius: 980px !important; }
 html body ::-webkit-scrollbar-track{ background: transparent !important; }
 
-/* --- Reduced transparency: honour the OS accessibility setting --- */
 @media (prefers-reduced-transparency: reduce){
   html body nav.top-nav, html body .panelV2, html body > footer,
   html body .top-nav__dropdown-menu, html body .swal2-popup{
@@ -1530,36 +1424,20 @@ html body ::-webkit-scrollbar-track{ background: transparent !important; }
   }
 }
 
-
-/* === Layer order ===
-   backdrop-filter creates a stacking context even on position:static elements,
-   so every glass panel became its own layer and painted over the nav's dropdowns.
-   Explicit z-index restores the intended order. Sticky nav is a bonus: the frosted
-   bar stays put while content scrolls under it. */
 html body nav.top-nav{ position: sticky !important; top: 0 !important; z-index: 900 !important; }
 html body .secondary-nav{ position: relative !important; z-index: 800 !important; }
 html body .panelV2{ position: relative !important; z-index: 1 !important; }
-/* NB: do NOT position the footer - UNIT3D has a dormant `top: 1249px` on it that
-   activates as soon as it is positioned, pushing it far down the page. */
+
 html body > footer{ position: static !important; top: auto !important; }
-/* popovers must clear both */
+
 html body .top-nav__dropdown-menu,
 html body .secondary-nav__dropdown-menu,
 html body .quick-search__results,
 html body .meta__dropdown{ z-index: 1000 !important; }
 html body .swal2-container, html body dialog{ z-index: 2000 !important; }
 
-/* === Logo: monochrome pillar, blue glow on hover (wordmark set above) === */
 html body .top-nav__site-logo{ font-weight: 600 !important; letter-spacing: -0.01em !important; }
 
-
-/* ============================================================
-   Internals page - rebuilt for glass
-   The original design (eclipse crescent, scanline overlay, radial card art)
-   was built for opaque surfaces and mixes badly with translucency. Here the
-   cards are thin-material panes floating on the panel's thick material, so
-   depth comes from blur and layering rather than glow.
-   ============================================================ */
 html body .internals-card{
   background: rgba(44,44,46,0.46) !important;
   background-image: none !important;
@@ -1575,10 +1453,10 @@ html body .internals-card:hover{
   transform: translateY(-2px) !important;
   box-shadow: 0 14px 40px rgba(0,0,0,0.48), inset 0 1px 0 rgba(255,255,255,0.14) !important;
 }
-/* drop the scanline overlay / inherited card art */
+
 html body .internals-card::before,
 html body .internals-card::after{ display: none !important; }
-/* avatars: hairline ring instead of the eclipse crescent */
+
 html body .internals-card__header img{
   box-shadow: 0 0 0 1px rgba(255,255,255,0.18), 0 4px 14px rgba(0,0,0,0.40) !important;
   filter: none !important;
@@ -1586,7 +1464,7 @@ html body .internals-card__header img{
 html body .internals-card__header img:hover{
   box-shadow: 0 0 0 2px rgba(10,132,255,0.75), 0 6px 18px rgba(0,0,0,0.45) !important;
 }
-/* upload badge -> glass chip */
+
 html body .internals-card .torrent-icons,
 html body .internals-card [class*="badge"],
 html body .internals-card [class*="pill"]{
@@ -1597,16 +1475,6 @@ html body .internals-card [class*="pill"]{
   -webkit-backdrop-filter: blur(10px) !important;
 }
 
-
-/* ============================================================
-   Nested surfaces - audit pass
-   UNIT3D nests boxes several deep and many inner surfaces carry a solid
-   theme colour, which reads as opaque slabs stacked on the glass. These
-   are driven to transparent so each panel renders as one pane.
-   The key-value tables are handled at the VARIABLE level: the base sheet
-   paints those rows from --key-value-*-bg, so overriding the vars covers
-   every page that uses them rather than chasing selectors.
-   ============================================================ */
 :root{
   --key-value-even-bg: rgba(255,255,255,0.035) !important;
   --key-value-odd-bg: transparent !important;
@@ -1632,7 +1500,7 @@ html body [class*="torrent-search--grouped__"],
 html body [class*="torrent-search--list__"]{
   background-color: transparent !important;
 }
-/* zebra + hover live on the row, so the transparent cells let them show through */
+
 html body .data-table tbody tr,
 html body .similar-torrents__torrents tbody tr{ background-color: rgba(255,255,255,0.022) !important; }
 html body .data-table tbody tr:nth-child(even),
@@ -1641,41 +1509,17 @@ html body .data-table tbody tr:hover,
 html body .similar-torrents__torrents tbody tr:hover{ background-color: rgba(255,255,255,0.085) !important; }
 html body .torrent-search--grouped__header{ background-color: rgba(255,255,255,0.05) !important; }
 
-/* The grouped name/overview cell keeps a solid fill that the attribute selector
-   above doesn't reach, so it reads as a heavier seam against its transparent
-   neighbours. Target it (and its heading) directly. */
 html body td.torrent-search--grouped__overview,
 html body .torrent-search--grouped__overview,
 html body .torrent-search--grouped__name,
 html body .similar-torrents__name,
 html body td.similar-torrents__name{ background-color: transparent !important; }
 
-
-/* The base theme sets a 0.8px header rule; fractional widths get rounded
-   per-cell on a collapsed table, so the line renders thin in some segments and
-   thick in others. Snap just that rule to a whole pixel and keep the accent tint.
-   Row/group dividers are left exactly as the base theme draws them - adding
-   borders per row invents separators that were never in the design. */
 html body table thead th{ border-bottom: 1px solid rgba(10,132,255,0.22) !important; }
 
-/* Group boundaries were drawing twice: a bottom border on the row above AND a
-   top border on the row/cells below, stacking into a visibly thicker bar that
-   also brightened on hover. Remove the bottom edge and the per-cell tops so a
-   single group line stands on its own.
-   (Sub-pixel widths made this worse: at a 1.75x device pixel ratio a 1px
-   border rounds inconsistently, which is why it looked thin in places and
-   thick in others. All fractional borders in this file are snapped to 1px.) */
 html body table tbody td{ border-top: 0 !important; border-bottom: 0 !important; }
 html body table tbody tr{ border-bottom: 0 !important; }
 
-/* ROOT CAUSE of the "lines" under Size / seeders / completed / age:
-   the base theme paints grouped-table CELLS solid, alternating per group:
-     table.similar-torrents__torrents tbody:nth-of-type(odd) td  -> --at-bg2
-     table.similar-torrents__torrents tbody:nth-of-type(even) td -> --at-bg3
-   Each row therefore renders as a strip of opaque blocks, and the row's own
-   tint shows through the gaps between them, reading as thin lines. Those
-   selectors outrank a plain [class*=] rule, so they must be matched directly.
-   Cells go transparent; striping lives on the row instead. */
 html body table.similar-torrents__torrents tbody:nth-of-type(odd) td,
 html body table.similar-torrents__torrents tbody:nth-of-type(odd) th,
 html body table.similar-torrents__torrents tbody:nth-of-type(even) td,
@@ -1686,16 +1530,14 @@ html body table.torrent-search--grouped__torrents tbody:nth-of-type(even) td,
 html body table.torrent-search--grouped__torrents tbody:nth-of-type(even) th{
   background-color: transparent !important;
 }
-/* rows: no zebra (the tint edges were reading as lines); hover only */
+
 html body table.similar-torrents__torrents tbody tr,
 html body table.similar-torrents__torrents tbody tr:nth-child(even),
 html body table.torrent-search--grouped__torrents tbody tr,
 html body table.torrent-search--grouped__torrents tbody tr:nth-child(even){
   background-color: transparent !important;
 }
-/* No row hover in grouped tables: only the title is a link, so a full-row
-   highlight implies the whole row is clickable when it isn't. The title's own
-   link hover is the correct affordance. */
+
 html body table.similar-torrents__torrents tbody tr:hover,
 html body table.similar-torrents__torrents tbody tr:hover td,
 html body table.similar-torrents__torrents tbody tr:hover th,
@@ -1705,14 +1547,6 @@ html body table.torrent-search--grouped__torrents tbody tr:hover th{
   background-color: transparent !important;
 }
 
-/* ============================================================
-   Audit sweep - settings / requests / forums
-   Each of these is painted solid by an inherited base rule whose selector
-   outranks a generic override, so they're matched directly here. Controls
-   keep a light inset fill (they should read as inputs, not as glass), while
-   list rows and pagination become translucent so panes stay continuous.
-   ============================================================ */
-/* forum + subforum listings */
 html body li.subforum-listings__item,
 html body li.subforum-listings__item:nth-child(even),
 html body li.topic-listings__item,
@@ -1720,7 +1554,6 @@ html body li.topic-listings__item:nth-child(even){ background-color: transparent
 html body li.subforum-listings__item:hover,
 html body li.topic-listings__item:hover{ background-color: rgba(255,255,255,0.05) !important; }
 
-/* pagination chips -> glass pills */
 html body .pagination__link, html body a.pagination__link,
 html body li.pagination__previous, html body li.pagination__next,
 html body li.pagination__ellipsis, html body .pagination__previous,
@@ -1739,13 +1572,11 @@ html body li.pagination__current, html body .pagination__current{
   border-radius: 980px !important;
 }
 
-/* search bars sit on the panel, not on their own slab */
 html body search.compact-search, html body .compact-search,
 html body .compact-search__visible-default,
 html body .torrent-search__filters,
 html body [class*="compact-search"]{ background-color: transparent !important; }
 
-/* text inputs: readable inset fill rather than an opaque block */
 html body [class*="compact-search"] .form__text,
 html body [class*="compact-search"] input.form__text,
 html body [class*="torrent-search"] input,
@@ -1761,7 +1592,6 @@ html body .panelV2 .form__group input.form__text:focus{
   border-color: rgba(10,132,255,0.45) !important;
 }
 
-/* settings: drag-to-reorder blocks */
 html body .order__item{
   background-color: rgba(255,255,255,0.06) !important;
   border: 1px solid rgba(255,255,255,0.12) !important;
@@ -1769,11 +1599,6 @@ html body .order__item{
 }
 html body .order__item:hover{ background-color: rgba(255,255,255,0.10) !important; }
 
-/* UNIT3D draws a solid #888 divider as a ::before on the pagination items.
-   On dark panels it passes as a subtle separator; on light surfaces it reads as
-   a stray dark tick beside the panel heading (and hovering it highlights "Next",
-   since it belongs to that button). No theme was styling it, so it's removed
-   here for all of them - the pagination reads fine without it. */
 html body .pagination__next::before,
 html body .pagination__previous::before,
 html body .pagination__link::before,
@@ -1785,19 +1610,11 @@ html body .pagination__current::before{
 }
 html body nav.pagination{ border-width: 0 !important; }
 
-/* Unread notifications are marked by an 8px left border on the cell. A blanket
-   cell border-colour rule (from the glass transparency sweep) was overwriting it
-   with the faint hairline, so unread rows looked identical to read ones. Pin the
-   accent back on unread and keep read transparent. */
 html body td.notification--unread,
 html body .notification--unread{ border-left-color: #0A84FF !important; }
 html body td.notification--read,
 html body .notification--read{ border-left-color: transparent !important; }
 
-/* The BBCode reply box was the one square component: the Write/Preview tab strip
-   carried a lopsided 5px-top-left-only radius, and the preview pane rendered with
-   no radius at all, so the whole editor read as a hard-edged box next to every
-   other rounded panel. Round the component as a unit. */
 html body .bbcode-input,
 html body .bbcode-input__tabs,
 html body .bbcode-input__input,
@@ -1808,11 +1625,6 @@ html body .bbcode-rendered{
 }
 html body .bbcode-input__tabs{ overflow: hidden !important; }
 
-/* Pagination on glass: the inherited rules paint the bar and chips as SOLID
-   surfaces (--at-bg2 bar, --at-bg3 current chip). Correct on opaque themes, but
-   reads as a slab sitting inside a translucent pane, so here the bar and chips go
-   transparent and let the glass show through. Only the current page stays solid,
-   so "where am I" still reads at a glance. */
 html body nav.pagination{ background-color: transparent !important; border: none !important; }
 html body .panelV2 > nav.pagination{ border-top: 1px solid rgba(255,255,255,0.10) !important; }
 html body .pagination__link, html body a.pagination__link,
@@ -1830,20 +1642,6 @@ html body li.pagination__previous--disabled:hover, html body li.pagination__next
   background-color: transparent !important; opacity: 0.45 !important;
 }
 
-
-/* ============================================================
-   Profile columns: one material, six identical panes
-   ------------------------------------------------------------
-   UNIT3D wraps only ONE of the six profile columns (External tracker) in a
-   .panelV2, so that column picked up the thick-glass treatment while Traffic /
-   BON / Badges / Achievements / Followers stayed bare divs whose heading and
-   body were painted as an opaque --at-bg2 slab: no hairline, no shadow, no blur.
-   The slab also only covered its own content, while the grid stretches every
-   column to the tallest sibling - so each card stopped at a different height
-   with dead space below it.
-   Fix: give the COLUMN the thick material and let the insides go transparent -
-   the same "one pane of glass" rule the sheet already applies to .panelV2.
-   ============================================================ */
 html body [class*="user-profile__column"]{
   background: var(--g-thick) !important;
   backdrop-filter: blur(28px) saturate(170%) !important;
@@ -1852,7 +1650,7 @@ html body [class*="user-profile__column"]{
   border-radius: var(--g-radius) !important;
   box-shadow: var(--g-shadow), var(--g-highlight) !important;
   overflow: hidden !important;
-  /* same layer as .panelV2 - the blur above makes this a stacking context */
+  
   position: relative !important;
   z-index: 1 !important;
 }
@@ -1874,55 +1672,19 @@ html body [class*="user-profile__column"] > .panel__heading,
 html body [class*="user-profile__column"] > .panelV2 > .panel__heading{
   border-bottom: 1px solid var(--g-hairline-soft) !important;
 }
-/* key-value rows carry a hairline on all four sides; the side ones now land on
-   top of the column's own hairline and read as a doubled edge */
+
 html body [class*="user-profile__column"] .key-value__group{
   border-left-color: transparent !important;
   border-right-color: transparent !important;
 }
 
-
-/* ============================================================
-   Secondary-nav tab menu (Profile / Follow / Report) - vertical offset
-   ------------------------------------------------------------
-   The menu was opening ~40px BELOW the secondary nav instead of flush under it.
-   Not a padding bug: `backdrop-filter` makes an element a containing block for
-   its absolutely positioned descendants, so the frosted `.secondary-nav` stole
-   that job from the sticky <header>. UNIT3D's `top: 75px` is measured from the
-   header's top (49px of top-nav + the tab strip); measured from the secondary
-   nav's own top it lands a whole top-nav height too low.
-   `top: 100%` is the same edge either way - flush under whichever ancestor ends
-   up being the containing block - so it also survives if the blur ever moves.
-   ============================================================ */
 html body .secondary-nav ul.nav-tab-menu__items{ top: 100% !important; }
 
-
-/* ============================================================
-   SITE-WIDE MATERIAL SWEEP  (2026-08-16)
-   ------------------------------------------------------------
-   Everything below fixes one class of problem: surfaces authored BEFORE the
-   glass layer existed still paint an opaque --at-bg2 / --at-bg3 slab, so a
-   glass panel keeps sprouting solid blocks inside it. Under a frosted theme
-   that reads as unfinished, page by page. The rule is the same one .panelV2
-   already follows: the OUTER element carries the material, everything nested
-   inside it is transparent or a tint.
-   ============================================================ */
-
-/* Two tints, so the rules below are identical text in the dark and light
-   sheets and only these values differ. */
 :root{
-  --g-tint: rgba(255,255,255,0.04);   /* a nested surface that needs to read apart */
-  --g-bar:  rgba(255,255,255,0.035);  /* a control strip (pagination, headers)     */
+  --g-tint: rgba(255,255,255,0.04);   
+  --g-bar:  rgba(255,255,255,0.035);  
 }
 
-/* --- Content footers are NOT the page footer -----------------------------
-   The thick tier used the bare element selector `footer`, which caught every
-   <footer class="post__footer"> / torrent-card__footer / internal-card__footer
-   on the page - each one got a 12px radius, a hairline, a 40px drop shadow and
-   its own 28px backdrop-blur. That is the corner gap under post signatures, the
-   detached "This is a featured torrent until..." block under carousel cards,
-   and 20-40 stacked blur layers per page. The tier selectors are now scoped to
-   `body > footer`; this makes content footers quiet strips instead. */
 html body article footer,
 html body .panelV2 footer,
 html body .post__footer,
@@ -1938,27 +1700,13 @@ html body .internal-card__footer{
   box-shadow: none !important;
 }
 
-/* --- Chatbox: the largest surface on the site, and it was a flat slab -----
-   NB: `.panelV2.chatbox` (2 classes) outranks the thick tier's `html body
-   .panelV2` (1 class), so this rule has to RESTATE the material. Setting it to
-   `transparent` - the first attempt - left the panel blurring the wallpaper
-   with no material over it, which reads as a hole, not as glass. */
 html body .panelV2.chatbox{ background-color: var(--g-thick) !important; }
 html body article.chatbox-message{
   background-color: transparent !important;
-  border-bottom: 1px solid var(--g-hairline-soft) !important;  /* was a dashed #3A3A3C */
+  border-bottom: 1px solid var(--g-hairline-soft) !important;  
 }
 html body article.chatbox-message:hover{ background-color: var(--g-hover) !important; }
 
-/* --- Forum posts: one pane, not four stacked slabs -----------------------
-   The aside, header, toolbar and content were all painted #0E0F12 and the
-   content carried its own 10px radius. First pass gave the aside and header a
-   tint to keep them legible as regions; Azure: "i don't like that line
-   separating the glass panels ... it should look the same left and right".
-   He is right - a tinted column plus a tinted header band draws two internal
-   seams across a card that is supposed to be a single pane. Everything inside
-   the post is now the same surface; the post's own hairline is the only edge,
-   and the signature strip's top rule is the only line, running the full width. */
 html body article.post > .post__aside{
   background-color: transparent !important;
   border-right: 0 !important;
@@ -1975,9 +1723,7 @@ html body article.post .post__content.bbcode-rendered{
   border-radius: 0 !important;
 }
 html body ul.comment-list{ background-color: transparent !important; }
-/* Comments are built exactly like posts - aside + header + content, all three
-   painted #0E0F12, and the content carrying a 10px radius so its top corners
-   cut inward under the square header bar. That notch is the "weird gap". */
+
 html body article.comment > .comment__aside{
   background-color: transparent !important;
   border-right: 0 !important;
@@ -1990,7 +1736,6 @@ html body article.comment .comment__content.bbcode-rendered{
   border-radius: 0 !important;
 }
 
-/* --- Torrent + internal cards: header/footer were solid on a glass card --- */
 html body header.torrent-card__header{
   background-color: var(--g-bar) !important;
   border-bottom: 1px solid var(--g-hairline-soft) !important;
@@ -2002,15 +1747,6 @@ html body .internal-card__header{
   border-bottom: 1px solid var(--g-hairline-soft) !important;
 }
 
-/* --- Advanced search filters: 10 opaque boxes floating on the wallpaper ---
-   They are controls, not panels, so they take the same language as
-   .form__text rather than a panel material (and no blur - ten blurred boxes
-   in one row is exactly the per-element blur the sheet avoids elsewhere). */
-
-/* --- Pagination reads as a strip again ----------------------------------
-   The base theme separated the pager from the list with a tone shift; one
-   uniform pane of glass cannot, so the rows ran straight into the pager.
-   A tint plus a hairline on whichever side faces the content restores it. */
 html body .panelV2 nav.pagination{
   background-color: var(--g-bar) !important;
   border-bottom: 1px solid var(--g-hairline-soft) !important;
@@ -2020,22 +1756,9 @@ html body .panelV2 > nav.pagination:last-child{
   border-top: 1px solid var(--g-hairline-soft) !important;
 }
 
-/* --- Film Club hero fills its pane --------------------------------------
-   The backdrop sat inset by the panel body's 20px padding with square corners
-   inside a 12px-rounded pane, so it read as a photo dropped on a card. Let it
-   bleed to the edges and take the pane's own corner clipping. */
 html body .panelV2:has(.filmclub__homepreview_backdrop) > .panel__body{ padding: 0 !important; }
 html body .filmclub__homepreview_backdrop{ border-radius: 0 !important; }
 
-/* ============================================================
-   Muted type: --at-text3 is a BORDER tint, not a text colour
-   ------------------------------------------------------------
-   Nine rules in this sheet set `color: var(--at-text3)`. On dark that lands at
-   1.95-2.10:1, on light 1.68:1 - well under the 4.5:1 floor, and visibly so
-   (the "Total | Alive | Dead" line and the inactive panel tabs read as
-   disabled). --at-text2 is the real secondary colour and clears 4.5:1.
-   The variable itself is untouched - it is still correct as a border tint.
-   ============================================================ */
 html body .panel__tab,
 html body .panel__action-text,
 html body .footer__copyright,
@@ -2048,26 +1771,15 @@ html body .vscomp-clear-button,
 html body .vscomp-search-clear,
 html body .vscomp-no-options,
 html body .vscomp-no-search-results{ color: var(--at-text2) !important; }
-/* disabled pager: dim by opacity, not by an unreadable colour */
+
 html body li.pagination__previous--disabled, html body li.pagination__next--disabled,
 html body li.pagination__previous--disabled:hover, html body li.pagination__next--disabled:hover,
 html body .pagination__previous--disabled, html body .pagination__next--disabled{
   color: var(--at-text2) !important; opacity: 0.5 !important;
 }
-/* UNIT3D hardcodes #555 on fieldset legends (Category / Type / Resolution...) */
+
 html body .form__legend{ color: var(--at-text2) !important; }
 
-
-/* --- One control language ------------------------------------------------
-   Fields were three different things inside the same form: `.form__text` at
-   6px, `.form__select` at 10px, and the filter fieldsets + the vscomp pickers
-   still opaque --at-bg2 with the old border. The generic glass field rule was
-   losing to page-scoped ones (`.torrent-search__filters fieldset...`,
-   `.page__subtitle--index ...`, `.page__torrent--create ...`) - two classes
-   beats one class + three elements, no matter how late in the file it sits.
-   Every control now takes the same fill, hairline and radius. Deliberately no
-   blur: ten blurred boxes in one filter row is exactly the per-element blur
-   this sheet avoids everywhere else. */
 html body input.form__text,
 html body select.form__select,
 html body .form__search,
@@ -2091,25 +1803,15 @@ html body .panelV2.chatbox .form__select{
   border: 1px solid var(--g-hairline) !important;
   border-radius: 10px !important;
 }
-/* the chatbox Room/Status selects carry an extra `border-color` override with
-   an id in it (#chatbox_header), so the shorthand above does not settle it -
-   restate the colour with the element type in the selector. */
+
 html body #chatbox_header select.form__select,
 html body .panelV2.chatbox select.form__select{ border-color: var(--g-hairline) !important; }
-/* the big compact-search bar had its own 6px input inside an 8px wrapper -
-   three radii in one form. One value. */
+
 html body .compact-search,
 html body .compact-search__visible-default,
 html body .compact-search input.form__text,
 html body .compact-search__visible-default input.form__text{ border-radius: 10px !important; }
 
-/* --- vscomp pickers (Select Regions / Select Distributor) ----------------
-   `.vscomp-ele-wrapper` and the `.vscomp-toggle-button` inside it are BOTH
-   full-size, so giving both the field fill stacked 0.06 over 0.06 and drew two
-   hairlines a pixel apart - the pickers read brighter and heavier than every
-   other control in the row. The button is the control; the wrapper carries
-   nothing. Its dropbox is a popover, so it takes the thin material like every
-   other menu instead of an opaque --at-bg2 box with a doubled border. */
 html body .vscomp-wrapper,
 html body .vscomp-ele-wrapper,
 html body .torrent-search__filters .vscomp-wrapper,
@@ -2134,29 +1836,6 @@ html body .vscomp-no-options, html body .vscomp-no-search-results{ background-co
 html body .vscomp-option:hover, html body .vscomp-option.focused{ background-color: var(--g-hover) !important; }
 html body .vscomp-option.selected{ background-color: color-mix(in srgb, var(--at-gold) 16%, transparent) !important; }
 
-
-/* --- Wallpaper dither ----------------------------------------------------
-   Azure is on an OLED HDR panel and was seeing banding in the wallpaper. It is
-   not a colour choice, it is 8-bit quantisation: #15161A -> #0E0F12 -> #0A0B0D
-   spread over ~1000px puts roughly 80-110px between every representable step,
-   and OLED near-black resolves those steps far better than an LCD hides them.
-   Extra colour stops do not help - the ramp is already linear; what breaks a
-   band is dither. A tiled feTurbulence layer sits on top of the gradients in
-   `overlay`, perturbing each pixel by a couple of levels so the eye integrates
-   a smooth ramp.
-   Why `overlay` and not plain low-opacity noise: overlay leaves pure black at
-   pure black (blend(0, anything) = 0), so OLED pixels that should be off stay
-   off. Additive grey noise would lift them into a dark grey haze - the one
-   thing an OLED owner notices immediately.
-   `background-attachment: fixed` pins the grain to the viewport so it does not
-   crawl while scrolling. To tune: change `opacity` inside the data URI. Higher
-   = more dither and more visible grain. Nothing else moves.
-   NOTE: this dithers the WALLPAPER. Panels blur it, and blur averages noise
-   away, so faint banding can survive inside a large glass pane. Fixing that
-   needs a dither over the whole composite (a fixed `html::after` with
-   `mix-blend-mode: overlay`), which adds a top-level stacking layer - not worth
-   the z-index risk unless Azure says the panes still band.
-   ------------------------------------------------------------------------ */
 html body{
   background:
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E"),
@@ -2170,36 +1849,9 @@ html body{
   background-attachment: fixed !important;
 }
 
-/* === iOS Safari white top bar =============================================
-   iPhone Safari paints the area behind its chrome (and the rubber-band
-   over-scroll) from the CANVAS colour. Base Aither Dark sets a solid
-   `body { background-color: rgb(48,48,48) }` which propagates to the canvas,
-   so stock has no problem. This sheet replaced it with the `background:`
-   SHORTHAND - which resets `background-color` to transparent - leaving only
-   five `background-attachment: fixed` gradient layers. Fixed layers are
-   clipped to the layout viewport, so everything outside it had no paint at all
-   and Safari fell back to its default: white.
-   Two fixes, both needed:
-     - a solid colour on the ROOT element, which is what actually paints the
-       canvas everywhere including the safe area;
-     - `color-scheme`, which tells the browser this page is dark so its own
-       default canvas, form controls and scrollbars stop assuming light.
-   This is liquidglass-only: every other theme in the set still sets
-   `body { background-color: ... }` as a longhand and keeps its canvas colour.
-   ========================================================================= */
 :root{ color-scheme: dark; }
 html{ background-color: #0A0B0D !important; }
 
-
-/* === Post tip input: pill when idle, square while typing ==================
-   Two rules disagreed about the same control. `html body input[type="text"]`
-   in the glass field spec gave it the field treatment (10px + hairline), while
-   an older pre-glass rule - `.post__tip-input, .post__tip-input:focus
-   { border: none; border-radius: 2px }`, which appears TWICE in this file -
-   won back on `:focus` and stripped both. So it rounded on idle and squared
-   the moment you typed. Pinned to the field spec in both states; the accent
-   focus ring still comes from the shared `:focus` rule.
-   ========================================================================= */
 html body .post__tip-input,
 html body .post__tip-input:focus{
   background-color: rgba(255,255,255,0.06) !important;
@@ -2207,28 +1859,6 @@ html body .post__tip-input:focus{
   border-radius: 10px !important;
 }
 
-/* === Card tier: material without blur ====================================
-   Azure reported a flicker on the Featured-torrents band in Edge and Chrome
-   (never Firefox), only with the page scrolled fully to the top. Frame-by-frame
-   analysis of his recording put it on scanlines 73-90 of the clip - the top
-   edge and header strip of the carousel's torrent cards - alternating every few
-   frames with a delta up to 3.5 brightness levels against a 0.035 median. So it
-   is real, it is those cards, and it is a compositor artefact rather than a
-   paint state (which is why it never showed up in a screenshot).
-   Cause: the homepage was running **36 backdrop-filter layers**, 12 of them
-   `.torrent-card` and 8 `.user-stat-card`, each blurring the body wallpaper -
-   which is five `background-attachment: fixed` layers topped with a
-   high-frequency noise dither in `overlay`. A blur kernel sampling a stochastic
-   texture is exquisitely sensitive to sub-pixel offset, and at scrollY 0 the
-   fixed background sits at its origin; scroll a little and Chromium handles the
-   fixed layer differently, which is exactly when Azure said it stops.
-   Fix follows this sheet's own rule - **blur only on large surfaces**. Cards are
-   small, numerous, and already sit on a blurred panel, so they keep the
-   material, the hairline and the shadow and simply stop blurring. 36 layers ->
-   16. Visually indistinguishable; also a real compositing win.
-   If any flicker survives, the next lever is the dither `opacity` in the
-   wallpaper block, not the panels.
-   ========================================================================= */
 html body .torrent-card,
 html body .user-stat-card,
 html body .playlist-card,
@@ -2237,46 +1867,11 @@ html body .article-card{
   -webkit-backdrop-filter: none !important;
 }
 
-/* === Featured-torrents flicker: the FIX (verified by Azure) ===============
-   The carousel auto-advances on its own timer - measured: perfectly still for
-   ~4.5s (90 frames sampled, one single scrollLeft value), then a ~330ms
-   smooth-scroll animation stepping 728 -> ~1300 across 59 frames, then still
-   again. During those 330ms twelve card edges slide sub-pixel INSIDE a panel
-   that has `backdrop-filter: blur(28px)` and `overflow: hidden`, so Chromium
-   re-rasters the blurred region every frame of the slide and the card edges
-   shimmer. A 330ms shimmer on a 4.5s loop reads as a persistent flicker.
-   The auto-advance and the `scroll-snap-type: x mandatory` are both base
-   UNIT3D; the blur is ours, and it is what makes the sub-pixel slide visible -
-   which is why no other theme in the set shows it and Firefox does not either.
-   Azure confirmed: killing the blur on this one panel stops it; making the
-   wallpaper `background-attachment: scroll` does NOT (so the dither and the
-   fixed background were both innocent).
-   Scoped with `:has()` so every other panel keeps its material. Checked the
-   other horizontal strips on the homepage - "Latest Internals" `.scroller` does
-   not auto-advance (stable for 9.5s), and the overflowing `.panel__tabs` /
-   `.post__toolbar` never animate, so none of them need this.
-   ========================================================================= */
 html body .panelV2:has(.featured-carousel){
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
 }
 
-/* === Audit sweep: remaining opaque slabs + one #555 label ================
-   Full-site audit, 20 pages. Everything below is the same bug the earlier
-   sweep chased - surfaces authored before the glass layer still painting a
-   solid --at-bg2/--at-bg3 slab inside a glass panel. These four were simply on
-   pages nobody had opened yet.
-     playlists  - `.playlists__playlist` cards + their empty-image placeholders
-     mediahub   - `.mediahub-card`
-     donate     - `.donation__item` tier cards (and the <li> wrapping them)
-     wiki/bbcode- unclassed <table> cells in user content
-   Verified by screenshot on playlists and donate: they read as flat boxes on
-   the glass, exactly the pre-glass look. Wiki tables keep a tinted header so
-   the table still has structure rather than dissolving.
-   `.bbcode-input__tab-label` ("Write" / "Preview" on every editor on the site)
-   was still on base's hardcoded #555 - 2.43:1. The active tab keeps its accent
-   from the existing `:checked + label` rule, which outranks this.
-   ======================================================================== */
 html body .playlists__playlist{ background-color: var(--g-tint) !important; }
 html body .playlists__playlist:hover{ background-color: var(--g-hover) !important; }
 html body .playlists__playlist-image--none{ background-color: var(--g-bar) !important; }
@@ -2294,21 +1889,6 @@ html body .bbcode-rendered table td{ background-color: transparent !important; }
 
 html body .bbcode-input__tab-label{ color: var(--at-text2) !important; }
 
-/* === Quick-search dead zone ==============================================
-   `.quick-search` is 400px wide and transparent at all times, but the visible
-   input inside it is only ~157px - leaving ~243px of invisible container
-   sitting in the top bar. Base UNIT3D expands the field on
-   `.quick-search:active`, and `:active` fires on a mousedown ANYWHERE in that
-   container, so pressing empty space beside the logo pops the search open.
-   All three width rules are base (`main-*.css`); no theme touches search width,
-   so every theme has the dead zone. Aether is not editing site CSS right now,
-   so it is fixed here instead.
-   `pointer-events: none` on the container makes that invisible strip
-   click-through (verified: a click at x=450 lands on `.top-nav__left` instead
-   of `.quick-search`); the field and its results get `auto` back, so focus,
-   the 157->400 expansion and result links all still work. Not layout - nothing
-   moves. If Aether ever narrows the container this can simply be deleted.
-   ========================================================================= */
 html body .quick-search{ pointer-events: none !important; }
 html body .quick-search__inputs,
 html body .quick-search__results{ pointer-events: auto !important; }

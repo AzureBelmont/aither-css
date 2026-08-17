@@ -1,24 +1,11 @@
-/* ==========================================================
-   Aither — Catppuccin Latte
-   Soothing pastel theme. Mauve accent. Light surfaces.
-   Author : AzureBelmont
-   Repo   : github.com/AzureBelmont/aither-css
-   Ver    : 1.2
-   Flavor : Latte (light)   —   Accent : Mauve
-   Stacks on: Aither Light
-   Palette (Catppuccin Latte)
-   ────────────────────────────────────────────
-   Mauve    #644ac9   primary accent
-   Base     #eff1f5   page background
-   Mantle   #e6e9ef   deeper surface
-   Crust    #dce0e8   raised surfaces
-   Text     #4c4f69   body text
-========================================================== */
-
+/* Alucard — Aither
+   Dracula's official light counterpart. Light.
+   Accent #644ac9 · AzureBelmont · github.com/AzureBelmont/aither-css
+*/
 :root {
   --key-value-padding: 10px;
 
-  /* Dracula Alucard palette (official light theme) */
+  
   --alu-bg:       #fffbeb;
   --alu-current:  #6c664b;
   --alu-selection:#cfcfde;
@@ -32,28 +19,28 @@
   --alu-red:      #cb3a2a;
   --alu-yellow:   #846e15;
 
-  /* Surfaces (light) */
+  
   --at-bg:        #fffbeb;
   --at-bg2:       #f6f2e8;
   --at-bg3:       #ece7da;
   --at-border:    rgba(31,31,31,0.12);
 
-  /* Accent = Alucard Purple */
+  
   --at-gold:      #644ac9;
   --at-gold2:     #523aa8;
   --at-goldfaint: rgba(100,74,201,0.10);
 
-  /* Text */
+  
   --at-text:      #1f1f1f;
   --at-text2:     #6c664b;
   --at-text3:     #9a9484;
 
-  /* Semantic */
+  
   --at-green:     #14710a;
   --at-red:       #cb3a2a;
   --at-radius:    10px;
 
-  /* UNIT3D mapped vars */
+  
   --key-value-odd-bg:              #f6f2e8;
   --key-value-even-bg:             #ece7da;
   --color-links:                   #036a96;
@@ -116,12 +103,7 @@ html:has(main[class*="article"])    .top-nav--left__list-item:has(a[href="https:
 html:has(main[class*="poll"])       .top-nav--left__list-item:has(a[href="https://aither.cc/forums"]) > a,
 html:has(main[class*="playlist"])   .top-nav--left__list-item:has(a[href="https://aither.cc/forums"]) > a,
 html:has(main[class*="event"])      .top-nav--left__list-item:has(a[href="https://aither.cc/forums"]) > a,
-/* Nav section highlight - see PROJECT-NOTES. Collectibles pages render
-   `main.page__stats--overview` (no "collectible" in the class at all), so they are
-   identified by their breadcrumb instead. Wiki and Tickets live under **Support**,
-   which carries `top-nav__dropdown` WITHOUT `top-nav--left__list-item`, and the old
-   `[href*="/wiki"]` matched Community's IRC link (/wikis/62) - `$=` pins both to
-   Support's own entries. Verified: fires only on the intended pages. */
+
 html:has(.breadcrumbsV2 a[href$="/collectibles"]) .top-nav--left__list-item:has(a[href="https://aither.cc/forums"]) > a { color: var(--at-gold) !important; border: none !important; border-bottom: 2px solid var(--at-gold) !important; border-radius: 0 !important; outline: none !important; box-shadow: none !important; padding-bottom: 2px !important; }
 html:has(main[class*="wiki"]) nav.top-nav li.top-nav__dropdown:has(a[href$="/wikis"]) > a,
 html:has(main[class*="ticket"]) nav.top-nav li.top-nav__dropdown:has(a[href$="/tickets"]) > a { color: var(--at-gold) !important; border: none !important; border-bottom: 2px solid var(--at-gold) !important; border-radius: 0 !important; outline: none !important; box-shadow: none !important; padding-bottom: 2px !important; }
@@ -152,9 +134,9 @@ li.top-nav__dropdown ul li button.top-nav--right__link:hover i.fab { background-
 .top-nav circle, .top-nav--left__container circle, .top-nav svg circle { stroke: var(--at-gold) !important; fill: var(--at-gold) !important; }
 
 @keyframes at-heart-gold {
-  0%   { text-shadow: 0 0 4px rgba(100,74,201,0.4); color: #a98fd8; }
-  50%  { text-shadow: 0 0 12px rgba(100,74,201,1.0), 0 0 24px rgba(100,74,201,0.6); color: #cba6f7; }
-  100% { text-shadow: 0 0 4px rgba(100,74,201,0.4); color: #a98fd8; }
+  0%   { text-shadow: 0 0 4px rgba(100,74,201,0.4); color: var(--at-gold); }
+  50%  { text-shadow: 0 0 12px rgba(100,74,201,1.0), 0 0 24px rgba(100,74,201,0.6); color: var(--at-gold); }
+  100% { text-shadow: 0 0 4px rgba(100,74,201,0.4); color: var(--at-gold); }
 }
 .fa-heartbeat.text-gold, .top-nav .fa-heartbeat { filter: none !important; }
 
@@ -508,7 +490,7 @@ a.nav-tab__link:hover, span.nav-tab__link:hover { text-decoration: none; color: 
 
 @keyframes at-dot-pulse {
   0%, 100% { color: var(--at-gold); filter: drop-shadow(0 0 2px rgba(100,74,201,0.4)); }
-  50%       { color: #d9c4fb;        filter: drop-shadow(0 0 6px rgba(100,74,201,0.9)); }
+  50%       { color: var(--at-gold);        filter: drop-shadow(0 0 6px rgba(100,74,201,0.9)); }
 }
 circle[fill="#33B5E5"] { fill: var(--at-gold) !important; }
 circle[stroke="#33B5E5"] { stroke: var(--at-gold) !important; }
@@ -606,7 +588,7 @@ a[style*="color:#95A5A6"],a[style*="color: #95A5A6"] { color: #95A5A6 !important
 .page__torrent--create .sidebar2 .panel__body a[href*="/wikis/"],
 .page__user-profile--show .data-table tfoot a[href*="/tickets"] { color: var(--at-gold) !important; text-decoration: none !important; transition: color .15s, text-shadow .15s !important; }
 .page__torrent--create .sidebar2 .panel__body a[href*="/wikis/"]:hover,
-.page__user-profile--show .data-table tfoot a[href*="/tickets"]:hover { color: #d9c4fb !important; text-shadow: 0 0 8px rgba(100,74,201,0.7) !important; }
+.page__user-profile--show .data-table tfoot a[href*="/tickets"]:hover { color: var(--at-gold) !important; text-shadow: 0 0 8px rgba(100,74,201,0.7) !important; }
 
 .top-nav__dropdown a.top-nav__username i.fas, .top-nav__dropdown a.top-nav__username i.far { background-color: transparent !important; border-color: transparent !important; }
 li.top-nav__dropdown ul li:hover a.top-nav__username i.fas, li.top-nav__dropdown ul li a.top-nav__username:hover i.fas { background-color: transparent !important; border-color: transparent !important; }
@@ -631,7 +613,7 @@ li.top-nav__dropdown ul li:hover a.top-nav__username i.fas, li.top-nav__dropdown
 .dialog__form { background-color: var(--at-bg2) !important; }
 .dialog__header { background-color: var(--at-bg3) !important; }
 .dialog__actions, .dialog__action { background-color: var(--at-bg3) !important; }
-dialog.dialog--auto-width tr:hover td { background-color: #222e48 !important; }
+dialog.dialog--auto-width tr:hover td { background-color: var(--at-bg3) !important; }
 
 article.achievement { background-color: var(--at-bg3) !important; border: 1px solid var(--at-border) !important; border-radius: var(--at-radius) !important; }
 article.achievement progress.achievement__progress { accent-color: var(--at-gold) !important; }
@@ -1237,7 +1219,7 @@ form.reply-comment { margin-bottom: 16px !important; }
 .user-card{ padding:20px 18px !important; border-radius:8px !important; overflow:hidden !important; min-height:0 !important; }
 .user-card__username{ font-size:26px !important; margin:4px 0 6px !important; line-height:1.2 !important; }
 
-.user-card__username, .user-card .user-card__title, .user-card small{ color:#1a1a2e !important; text-shadow:0 1px 2px rgba(255,255,255,0.55) !important; }
+.user-card__username, .user-card .user-card__title, .user-card small{ color:var(--at-text) !important; text-shadow:0 1px 2px rgba(255,255,255,0.55) !important; }
 .user-card .user-card__title, .user-card small{ display:block !important; font-size:16px !important; white-space:nowrap !important; overflow:hidden !important; text-overflow:ellipsis !important; max-width:100% !important; opacity:0.9 !important; }
 
 .internals-card-wrapper{ display:grid !important; grid-template-columns:repeat(auto-fill, minmax(210px, 1fr)) !important; gap:14px !important; }
@@ -1262,7 +1244,6 @@ form.reply-comment { margin-bottom: 16px !important; }
 .panel__heading{ position: relative !important; }
 .internal-card__poster-popup{ position: absolute !important; top: 100% !important; left: 0 !important; right: auto !important; inset: auto !important; transform: none !important; margin-top: 8px !important; width: 360px !important; max-width: 80vw !important; }
 
-/* === Requirements page: card/row colors === */
 .group-requirements__group-wrapper:hover{ background-color: transparent !important; background-image: none !important; }
 .group-requirements__group--requirement-row,
 .group-requirements__group--requirement-multirow{ background-color: transparent !important; }
@@ -1276,13 +1257,11 @@ form.reply-comment { margin-bottom: 16px !important; }
 .group-requirements__group-wrapper.group-requirements__group-wrapper-highlight,
 .group-requirements__group-wrapper-highlight{ box-shadow: 0 0 10px 1px rgba(100,74,201,0.55) !important; border-color: rgba(100,74,201,0.45) !important; }
 
-/* flatten requirement sub-table cells (kill dual-tone striping) */
 .group-requirements__group--requirement-row table td,
 .group-requirements__group--requirement-multirow table td,
 .group-requirements__group--requirement-row td,
 .group-requirements__group--requirement-multirow td{ background-color: transparent !important; }
 
-/* === Requirements: blue(main)/green(uploader) rank fills === */
 .group-requirements__group-wrapper:has(h3 span[style*="b8c8ff" i]){ background: rgba(184,200,255,0.1) !important; }
 .group-requirements__group-wrapper:has(h3 span[style*="a5b8ff" i]){ background: rgba(165,184,255,0.11) !important; }
 .group-requirements__group-wrapper:has(h3 span[style*="7f8eff" i]){ background: rgba(127,142,255,0.12) !important; }
@@ -1300,60 +1279,45 @@ form.reply-comment { margin-bottom: 16px !important; }
 .data-table--checkbox-grid tbody tr:nth-child(odd) th{background-color:var(--at-bg2)!important}
 .data-table--checkbox-grid tbody tr:nth-child(even) th{background-color:var(--at-bg3)!important}
 
-
-/* === Film Club: film-of-the-month backdrop cover fix === */
 html body .playlist__backdrop .filmclub__backdrop_row,
 html body .filmclub__homepreview_backdrop{ background-size: cover !important; background-position: center !important; background-repeat: no-repeat !important; }
 
-
-/* === Film Club: homepage preview text pills (readability over backdrop) === */
 html body .filmclub__homepreview_data-table td{ background-color: transparent !important; text-align: center !important; }
 html body .filmclub__homepreview_data-table td > a,
 html body .filmclub__homepreview_data-table td > p{ display: inline-block !important; background-color: rgba(246,242,232,0.82) !important; border-radius: 8px !important; padding: 8px 14px !important; max-width: 100% !important; }
-/* Title heading inside the pill: strip default h-margins (excessive vertical padding feedback) */
+
 html body .filmclub__homepreview_data-table td > a :is(h1,h2,h3,h4){ margin: 0 !important; }
 
-
-/* === EASY UPLOAD3R modal â€” theme accent (color only) === */
-/* Progress bar fills: off-theme violet -> theme accent */
 html body #torrent-progress,
 html body #mediainfo-progress,
 html body #screenshots-progress,
 html body .step-progress{ background: var(--at-gold) !important; }
-/* Progress bar tracks: subtle theme surface */
+
 html body .step-progress-container,
 html body .step-progress-bar,
 html body .step-progress-track{ background: var(--at-bg) !important; }
-/* Mini Close button: violet -> theme accent with dark text */
+
 html body #easyuploader-enhanced-overlay button,
 html body [id*="easyuploader"] button{ background-color: var(--at-gold) !important; color: var(--at-bg) !important; }
-/* Dropzone dashed border: maroon -> theme accent; keep theme surface */
+
 html body #easyuploader-dropzone,
 html body .easy-upload3r__panel-beta{ border-color: var(--at-gold) !important; background: var(--at-bg2) !important; background-color: var(--at-bg2) !important; }
-/* Modal overlay title: class-less div set violet inline by JS -> theme accent */
+
 html body #easyuploader-enhanced-overlay div[style*="119, 96, 222"]:not(.step-progress):not(.processing-step){ color: var(--at-gold) !important; }
-/* Active-step icon: recolor ONLY the brand violet (matched via inline rgb) -> theme accent */
+
 html body .step-icon[style*="119, 96, 222"]{ background-color: var(--at-gold) !important; }
-/* Step-icon glyph legibility: dark outline so the white hourglass / check / X reads on any circle color */
+
 html body .step-icon{ text-shadow: 0 0 2px rgba(0,0,0,0.9), 0 1px 2px rgba(0,0,0,0.6) !important; font-weight: 900 !important; }
 
-
-/* === Homepage block-order reorder list (settings > edit): off-palette grey -> theme === */
 html body .order__list,
 html body .order__item{ color: var(--at-text) !important; border-color: color-mix(in srgb, var(--at-text) 18%, transparent) !important; }
 html body .order__item{ background-color: var(--at-bg2) !important; }
 html body .order__item i.fa-arrows-alt{ color: var(--at-gold) !important; }
 html body .form__fieldset:has(.order__list) small.text-info{ color: var(--at-gold) !important; }
 
-
-/* === Content hyperlinks: give un-classed body-text links the theme accent === */
-/* Scoped to panel/sidebar body text only; excludes buttons/tags/user-tags (which carry classes) and image links */
 html body .panel__body a:not([class]),
 html body article.sidebar2 .panel__body a:not([class]){ color: var(--at-gold) !important; }
 
-
-/* === Default profile banner: retheme stock user_background.jpg only === */
-/* Matches ONLY the default inline image; custom uploads (authenticated-images/user-backgrounds/*) never match */
 html body .user-profile-card__banner[style*="img/user_background.jpg"]{
   background-image:
     radial-gradient(900px 260px at 50% 0%, color-mix(in srgb, var(--at-gold) 20%, transparent), transparent 70%),
@@ -1361,38 +1325,27 @@ html body .user-profile-card__banner[style*="img/user_background.jpg"]{
     linear-gradient(165deg, var(--at-bg3) 0%, var(--at-bg2) 55%, var(--at-bg) 100%) !important;
 }
 
-
-/* === User profile: rounded columns + panel corners (thanks mitsukiharuko) === */
 [class*="user-profile__column"],
 .user-profile__column--badges > div.panel__body,
 .user-profile__column--achievements > div.panel__body,
 .user-profile__column--followers > div.panel__body{ border-radius: var(--at-radius) !important; }
-/* Clip square inner rows (Traffic/BON key-value stripes) to the rounded corners */
+
 [class*="user-profile__column"]{ overflow: hidden !important; }
-/* Column headings (Traffic/BON/Badges/etc) match standard panel heading surface */
+
 [class*="user-profile__column"] > .panel__heading{ background-color: var(--at-bg2) !important; }
-/* Clients and IP-addresses: remove base UNIT3D grey (#333) tfoot border */
+
 html body .data-table tfoot td{ border-bottom: none !important; }
 
-
-/* === Panel header bars: header-wrapped headings (Featured torrents, Torrents, MediaInfo, etc) === */
-/* The heading inside .panel__header is transparent by design (shares the bar with action buttons), */
-/* but the container had no surface, so those bars bled into the body. Match bare panelV2 headings. */
 html body .panel__heading{ background-color: var(--at-bg2) !important; border-bottom: none !important; }
 html body .panel__header{ background-color: var(--at-bg2) !important; border-bottom: none !important; }
 html body .panel__header .panel__heading, html body .panel__header .panel__heading--centered{ background-color: transparent !important; }
 
-
-/* === Pagination bar divider: hairline above top AND bottom pagination bars (same tone as panel outlines) === */
 html body .panelV2 > nav.pagination{ border-top: 1px solid var(--at-border) !important; }
 
-
-/* === Torrent report modal + staff report page (new UNIT3D report system) === */
-/* Radio option cards: base hardcodes maroon #70233e selected + grey hover -> theme surfaces/accent */
 html body .form__group--radio-horizontal:hover .form__label{ background-color: var(--at-bg3) !important; }
 html body .form__group--radio-horizontal .form__label:has(.form__checkbox:checked),
 html body .form__group--radio-horizontal .form__label:has(.form__checkbox:focus-visible){ background-color: color-mix(in srgb, var(--at-gold) 18%, transparent) !important; }
-/* Side-by-side diff (php-diff) ships light-theme colors: retheme for dark reading */
+
 html body .diff-wrapper.diff{ color: var(--at-text) !important; }
 html body .diff-wrapper.diff td.old, html body .diff-wrapper.diff td.new{ color: var(--at-text) !important; }
 html body .diff-wrapper.diff td.none{ background: var(--at-bg) !important; }
@@ -1401,10 +1354,6 @@ html body .diff-wrapper.diff tbody.change td.new{ background: color-mix(in srgb,
 html body .diff-wrapper.diff ins{ background: color-mix(in srgb, var(--at-green) 32%, transparent) !important; color: var(--at-text) !important; text-decoration: none !important; }
 html body .diff-wrapper.diff del{ background: color-mix(in srgb, var(--at-red) 32%, transparent) !important; color: var(--at-text) !important; text-decoration: none !important; }
 
-/* Muted UI text was using the pale --at-text3 tint (fine for borders, far too
-   light for type: ~1.7:1 on white, well under the 4.5:1 minimum). These are the
-   small secondary labels - panel action text, chat meta, counts - pinned to a
-   readable secondary colour. */
 html body .panel__action-text,
 html body .chatbox-message__address,
 html body .chatbox__meta,
@@ -1414,11 +1363,6 @@ html body .form__help,
 html body .torrent-search--list__age,
 html body .key-value__key{ color: #5a5a5a !important; }
 
-/* Icon colour was inconsistent in the light themes: the top-bar icons used a
-   stray near-black (#1f2525, in neither palette) while dropdown icons were the
-   lighter secondary grey - so a menu showed a dark label beside a grey icon,
-   which reads as disabled. Apple's light menus give glyph and label the same
-   primary label colour, so both are unified here. */
 :root{
   --top-nav-icon-bar-icon-fg: #1f1f1f !important;
   --top-nav-icon-bar-icon-bg: rgba(31,31,31,0.07) !important;
@@ -1430,10 +1374,6 @@ html body .top-nav__dropdown ul i,
 html body .top-nav__icon-bar i,
 html body .top-nav--right__icon-link i{ color: #1f1f1f !important; }
 
-/* White-on-white leftovers. Several places inherit a hardcoded #fff that only
-   works on a dark base: the profile card's stat values were rendering at 1:1
-   contrast (invisible), and the anonymous eye-slash tag likewise. Anything that
-   should be primary text is pinned here; muted labels get the secondary tone. */
 html body .user-profile-card__meta-item-value,
 html body .user-profile-card__meta-item-value sub,
 html body .user-profile-card__meta-item sub,
@@ -1448,11 +1388,6 @@ html body .form__legend{ color: #5a5a5a !important; }
 html body .panel__tab--active,
 html body .panel__tab[aria-selected="true"]{ color: #1f1f1f !important; }
 
-/* Profile card LABELS were still pure #fff (the previous pass only caught the
-   values): section titles - General / Permissions / Stats / Donations - and every
-   item label - User ID, E-mail, 2FA, Ratio, Average seedtime... - rendered
-   white-on-white. Labels take the secondary tone, section titles the primary,
-   so the hierarchy still reads. */
 html body .user-profile-card__meta-title,
 html body .user-profile-card__section-title,
 html body .user-profile-card__meta-heading{ color: #1f1f1f !important; }
@@ -1462,15 +1397,9 @@ html body .user-profile-card__meta-item-label,
 html body .user-profile-card__meta-item sub,
 html body .user-profile-card__meta-item small{ color: #5a5a5a !important; }
 
-/* icons sitting beside those labels inherit the same white */
 html body .user-profile-card__meta-title i,
 html body .user-profile-card__meta-item-title i{ color: #5a5a5a !important; }
 
-/* Pagination contrast: Previous/Next were using the pale border tint as text
-   (~1.7:1), and the current page sat as accent-coloured text on an accent-tinted
-   chip (~1:1 - effectively invisible). Prev/Next take the secondary tone; the
-   current page becomes a solid accent pill with white text, which also makes
-   "where am I" read at a glance. */
 html body li.pagination__previous, html body li.pagination__next,
 html body a.pagination__previous, html body a.pagination__next,
 html body .pagination__previous, html body .pagination__next,
@@ -1484,12 +1413,6 @@ html body li.pagination__current a, html body .pagination__current a{
   font-weight: 600 !important;
 }
 
-/* Pagination pills: no fill. The opaque pill background showed as a thin dark
-   sliver where the Next button gets clipped at the panel edge (it read as a
-   stray line beside the panel heading, and hovering it highlighted "Next").
-   Transparent chips with a hover tint keep the control fully usable and are
-   closer to Apple's pagination anyway. The current page keeps its solid accent
-   pill, set above, so "where am I" still reads at a glance. */
 html body .pagination__link, html body a.pagination__link,
 html body li.pagination__previous, html body li.pagination__next,
 html body li.pagination__ellipsis, html body .pagination__previous,
@@ -1502,11 +1425,6 @@ html body li.pagination__next:hover, html body li.pagination__previous:hover{
   background-color: rgba(0,0,0,0.06) !important;
 }
 
-/* UNIT3D draws a solid #888 divider as a ::before on the pagination items.
-   On dark panels it passes as a subtle separator; on light surfaces it reads as
-   a stray dark tick beside the panel heading (and hovering it highlights "Next",
-   since it belongs to that button). No theme was styling it, so it's removed
-   here for all of them - the pagination reads fine without it. */
 html body .pagination__next::before,
 html body .pagination__previous::before,
 html body .pagination__link::before,
@@ -1518,19 +1436,11 @@ html body .pagination__current::before{
 }
 html body nav.pagination{ border-width: 0 !important; }
 
-/* Unread notifications are marked by an 8px left border on the cell. A blanket
-   cell border-colour rule (from the glass transparency sweep) was overwriting it
-   with the faint hairline, so unread rows looked identical to read ones. Pin the
-   accent back on unread and keep read transparent. */
 html body td.notification--unread,
 html body .notification--unread{ border-left-color: var(--at-gold) !important; }
 html body td.notification--read,
 html body .notification--read{ border-left-color: transparent !important; }
 
-/* The BBCode reply box was the one square component: the Write/Preview tab strip
-   carried a lopsided 5px-top-left-only radius, and the preview pane rendered with
-   no radius at all, so the whole editor read as a hard-edged box next to every
-   other rounded panel. Round the component as a unit. */
 html body .bbcode-input,
 html body .bbcode-input__tabs,
 html body .bbcode-input__input,
@@ -1541,21 +1451,6 @@ html body .bbcode-rendered{
 }
 html body .bbcode-input__tabs{ overflow: hidden !important; }
 
-/* === Quick-search dead zone ==============================================
-   `.quick-search` is 400px wide and transparent at all times, but the visible
-   input inside it is only ~157px - leaving ~243px of invisible container
-   sitting in the top bar. Base UNIT3D expands the field on
-   `.quick-search:active`, and `:active` fires on a mousedown ANYWHERE in that
-   container, so pressing empty space beside the logo pops the search open.
-   All three width rules are base (`main-*.css`); no theme touches search width,
-   so every theme has the dead zone. Aether is not editing site CSS right now,
-   so it is fixed here instead.
-   `pointer-events: none` on the container makes that invisible strip
-   click-through (verified: a click at x=450 lands on `.top-nav__left` instead
-   of `.quick-search`); the field and its results get `auto` back, so focus,
-   the 157->400 expansion and result links all still work. Not layout - nothing
-   moves. If Aether ever narrows the container this can simply be deleted.
-   ========================================================================= */
 html body .quick-search{ pointer-events: none !important; }
 html body .quick-search__inputs,
 html body .quick-search__results{ pointer-events: auto !important; }

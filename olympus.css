@@ -1,18 +1,7 @@
-/* ==========================================================
-   Aither — Greek Theme
-   Gold accents. Dark panels. Clean.
-   Author : AzureBelmont
-   Repo   : github.com/AzureBelmont/aither-css
-   Ver    : 2.4.0
-   Stacks on: Aither Dark
-   Palette
-   ────────────────────────────────────────────
-   Gold         #f5a623   primary accent
-   Navy         #080b16   page background
-   Panel        #111928   surfaces
-   Text         #dde1f0   body text
-========================================================== */
-
+/* Olympus — Aither
+   Deep navy + gold. Greek mythology feel.
+   Accent #f5a623 · AzureBelmont · github.com/AzureBelmont/aither-css
+*/
 :root {
   --key-value-padding: 10px;
   --at-bg:        #080b16;
@@ -90,12 +79,7 @@ html:has(main[class*="article"])    .top-nav--left__list-item:has(a[href="https:
 html:has(main[class*="poll"])       .top-nav--left__list-item:has(a[href="https://aither.cc/forums"]) > a,
 html:has(main[class*="playlist"])   .top-nav--left__list-item:has(a[href="https://aither.cc/forums"]) > a,
 html:has(main[class*="event"])      .top-nav--left__list-item:has(a[href="https://aither.cc/forums"]) > a,
-/* Nav section highlight - see PROJECT-NOTES. Collectibles pages render
-   `main.page__stats--overview` (no "collectible" in the class at all), so they are
-   identified by their breadcrumb instead. Wiki and Tickets live under **Support**,
-   which carries `top-nav__dropdown` WITHOUT `top-nav--left__list-item`, and the old
-   `[href*="/wiki"]` matched Community's IRC link (/wikis/62) - `$=` pins both to
-   Support's own entries. Verified: fires only on the intended pages. */
+
 html:has(.breadcrumbsV2 a[href$="/collectibles"]) .top-nav--left__list-item:has(a[href="https://aither.cc/forums"]) > a { color: var(--at-gold) !important; border: none !important; border-bottom: 2px solid var(--at-gold) !important; border-radius: 0 !important; outline: none !important; box-shadow: none !important; padding-bottom: 2px !important; }
 html:has(main[class*="wiki"]) nav.top-nav li.top-nav__dropdown:has(a[href$="/wikis"]) > a,
 html:has(main[class*="ticket"]) nav.top-nav li.top-nav__dropdown:has(a[href$="/tickets"]) > a { color: var(--at-gold) !important; border: none !important; border-bottom: 2px solid var(--at-gold) !important; border-radius: 0 !important; outline: none !important; box-shadow: none !important; padding-bottom: 2px !important; }
@@ -1187,7 +1171,6 @@ form.reply-comment { margin-bottom: 16px !important; }
 .panel__heading{ position: relative !important; }
 .internal-card__poster-popup{ position: absolute !important; top: 100% !important; left: 0 !important; right: auto !important; inset: auto !important; transform: none !important; margin-top: 8px !important; width: 360px !important; max-width: 80vw !important; }
 
-/* === Requirements page: card/row colors === */
 .group-requirements__group-wrapper:hover{ background-color: transparent !important; background-image: none !important; }
 .group-requirements__group--requirement-row,
 .group-requirements__group--requirement-multirow{ background-color: transparent !important; }
@@ -1201,13 +1184,11 @@ form.reply-comment { margin-bottom: 16px !important; }
 .group-requirements__group-wrapper.group-requirements__group-wrapper-highlight,
 .group-requirements__group-wrapper-highlight{ box-shadow: 0 0 10px 1px rgba(245,166,35,0.55) !important; border-color: rgba(245,166,35,0.45) !important; }
 
-/* flatten requirement sub-table cells (kill dual-tone striping) */
 .group-requirements__group--requirement-row table td,
 .group-requirements__group--requirement-multirow table td,
 .group-requirements__group--requirement-row td,
 .group-requirements__group--requirement-multirow td{ background-color: transparent !important; }
 
-/* === Requirements: blue(main)/green(uploader) rank fills === */
 .group-requirements__group-wrapper:has(h3 span[style*="b8c8ff" i]){ background: rgba(184,200,255,0.1) !important; }
 .group-requirements__group-wrapper:has(h3 span[style*="a5b8ff" i]){ background: rgba(165,184,255,0.11) !important; }
 .group-requirements__group-wrapper:has(h3 span[style*="7f8eff" i]){ background: rgba(127,142,255,0.12) !important; }
@@ -1225,66 +1206,49 @@ form.reply-comment { margin-bottom: 16px !important; }
 .data-table--checkbox-grid tbody tr:nth-child(odd) th{background-color:var(--at-bg2)!important}
 .data-table--checkbox-grid tbody tr:nth-child(even) th{background-color:var(--at-bg3)!important}
 
-
-/* === Film Club: film-of-the-month backdrop cover fix === */
 html body .playlist__backdrop .filmclub__backdrop_row,
 html body .filmclub__homepreview_backdrop{ background-size: cover !important; background-position: center !important; background-repeat: no-repeat !important; }
 
-
-/* === Film Club: homepage preview text pills (readability over backdrop) === */
 html body .filmclub__homepreview_data-table td{ background-color: transparent !important; text-align: center !important; }
 html body .filmclub__homepreview_data-table td > a,
 html body .filmclub__homepreview_data-table td > p{ display: inline-block !important; background-color: rgba(17,25,40,0.74) !important; border-radius: 8px !important; padding: 8px 14px !important; max-width: 100% !important; }
-/* Title heading inside the pill: strip default h-margins (excessive vertical padding feedback) */
+
 html body .filmclub__homepreview_data-table td > a :is(h1,h2,h3,h4){ margin: 0 !important; }
 
-
-/* === EASY UPLOAD3R modal — theme accent (color only) === */
-/* Progress bar fills: off-theme violet -> theme accent */
 html body #torrent-progress,
 html body #mediainfo-progress,
 html body #screenshots-progress,
 html body .step-progress{ background: var(--at-gold) !important; }
-/* Progress bar tracks: subtle theme surface */
+
 html body .step-progress-container,
 html body .step-progress-bar,
 html body .step-progress-track{ background: var(--at-bg) !important; }
-/* Mini Close button: violet -> theme accent with dark text */
+
 html body #easyuploader-enhanced-overlay button,
 html body [id*="easyuploader"] button{ background-color: var(--at-gold) !important; color: var(--at-bg) !important; }
-/* Version badge (0.0.1): maroon -> theme chip with readable text */
+
 html body .easy-upload3r__version{ background: var(--at-gold2) !important; background-color: var(--at-gold2) !important; color: var(--at-bg) !important; }
-/* Dropzone dashed border: maroon -> theme accent; keep theme surface */
+
 html body #easyuploader-dropzone,
 html body .easy-upload3r__panel-beta{ border-color: var(--at-gold) !important; background: var(--at-bg2) !important; background-color: var(--at-bg2) !important; }
-/* Modal title (dropzone): grey -> theme accent */
+
 html body .easy-upload3r__title{ color: var(--at-gold) !important; }
-/* Modal overlay title: class-less div set violet inline by JS -> theme accent */
+
 html body #easyuploader-enhanced-overlay div[style*="119, 96, 222"]:not(.step-progress):not(.processing-step){ color: var(--at-gold) !important; }
-/* Active-step icon: recolor ONLY the brand violet (matched via inline rgb) -> theme accent; */
-/* grey (waiting), green (success) and red (error) step states are preserved. */
+
 html body .step-icon[style*="119, 96, 222"]{ background-color: var(--at-gold) !important; }
-/* Note: green success checkmarks/borders and any red error state are left as semantic status colors. */
-/* Step-icon glyph legibility: dark outline so the white hourglass / check / X reads on any circle color */
+
 html body .step-icon{ text-shadow: 0 0 2px rgba(0,0,0,0.9), 0 1px 2px rgba(0,0,0,0.6) !important; font-weight: 900 !important; }
 
-
-/* === Homepage block-order reorder list (settings > edit): off-palette grey -> theme === */
 html body .order__list,
 html body .order__item{ color: var(--at-text) !important; border-color: color-mix(in srgb, var(--at-text) 18%, transparent) !important; }
 html body .order__item{ background-color: var(--at-bg2) !important; }
 html body .order__item i.fa-arrows-alt{ color: var(--at-gold) !important; }
 html body .form__fieldset:has(.order__list) small.text-info{ color: var(--at-gold) !important; }
 
-
-/* === Content hyperlinks: give un-classed body-text links the theme accent === */
-/* Scoped to panel/sidebar body text only; excludes buttons/tags/user-tags (which carry classes) and image links */
 html body .panel__body a:not([class]),
 html body article.sidebar2 .panel__body a:not([class]){ color: var(--at-gold) !important; }
 
-
-/* === Default profile banner: retheme stock user_background.jpg only === */
-/* Matches ONLY the default inline image; custom uploads (authenticated-images/user-backgrounds/*) never match */
 html body .user-profile-card__banner[style*="img/user_background.jpg"]{
   background-image:
     radial-gradient(900px 260px at 50% 0%, color-mix(in srgb, var(--at-gold) 20%, transparent), transparent 70%),
@@ -1292,38 +1256,27 @@ html body .user-profile-card__banner[style*="img/user_background.jpg"]{
     linear-gradient(165deg, var(--at-bg3) 0%, var(--at-bg2) 55%, var(--at-bg) 100%) !important;
 }
 
-
-/* === User profile: rounded columns + panel corners (thanks mitsukiharuko) === */
 [class*="user-profile__column"],
 .user-profile__column--badges > div.panel__body,
 .user-profile__column--achievements > div.panel__body,
 .user-profile__column--followers > div.panel__body{ border-radius: var(--at-radius) !important; }
-/* Clip square inner rows (Traffic/BON key-value stripes) to the rounded corners */
+
 [class*="user-profile__column"]{ overflow: hidden !important; }
-/* Column headings (Traffic/BON/Badges/etc) match standard panel heading surface */
+
 [class*="user-profile__column"] > .panel__heading{ background-color: var(--at-bg2) !important; }
-/* Clients and IP-addresses: remove base UNIT3D grey (#333) tfoot border */
+
 html body .data-table tfoot td{ border-bottom: none !important; }
 
-
-/* === Panel header bars: header-wrapped headings (Featured torrents, Torrents, MediaInfo, etc) === */
-/* The heading inside .panel__header is transparent by design (shares the bar with action buttons), */
-/* but the container had no surface, so those bars bled into the body. Match bare panelV2 headings. */
 html body .panel__heading{ background-color: var(--at-bg2) !important; border-bottom: none !important; }
 html body .panel__header{ background-color: var(--at-bg2) !important; border-bottom: none !important; }
 html body .panel__header .panel__heading, html body .panel__header .panel__heading--centered{ background-color: transparent !important; }
 
-
-/* === Pagination bar divider: hairline above top AND bottom pagination bars (same tone as panel outlines) === */
 html body .panelV2 > nav.pagination{ border-top: 1px solid var(--at-border) !important; }
 
-
-/* === Torrent report modal + staff report page (new UNIT3D report system) === */
-/* Radio option cards: base hardcodes maroon #70233e selected + grey hover -> theme surfaces/accent */
 html body .form__group--radio-horizontal:hover .form__label{ background-color: var(--at-bg3) !important; }
 html body .form__group--radio-horizontal .form__label:has(.form__checkbox:checked),
 html body .form__group--radio-horizontal .form__label:has(.form__checkbox:focus-visible){ background-color: color-mix(in srgb, var(--at-gold) 18%, transparent) !important; }
-/* Side-by-side diff (php-diff) ships light-theme colors: retheme for dark reading */
+
 html body .diff-wrapper.diff{ color: var(--at-text) !important; }
 html body .diff-wrapper.diff td.old, html body .diff-wrapper.diff td.new{ color: var(--at-text) !important; }
 html body .diff-wrapper.diff td.none{ background: var(--at-bg) !important; }
@@ -1332,11 +1285,6 @@ html body .diff-wrapper.diff tbody.change td.new{ background: color-mix(in srgb,
 html body .diff-wrapper.diff ins{ background: color-mix(in srgb, var(--at-green) 32%, transparent) !important; color: var(--at-text) !important; text-decoration: none !important; }
 html body .diff-wrapper.diff del{ background: color-mix(in srgb, var(--at-red) 32%, transparent) !important; color: var(--at-text) !important; text-decoration: none !important; }
 
-/* UNIT3D draws a solid #888 divider as a ::before on the pagination items.
-   On dark panels it passes as a subtle separator; on light surfaces it reads as
-   a stray dark tick beside the panel heading (and hovering it highlights "Next",
-   since it belongs to that button). No theme was styling it, so it's removed
-   here for all of them - the pagination reads fine without it. */
 html body .pagination__next::before,
 html body .pagination__previous::before,
 html body .pagination__link::before,
@@ -1348,19 +1296,11 @@ html body .pagination__current::before{
 }
 html body nav.pagination{ border-width: 0 !important; }
 
-/* Unread notifications are marked by an 8px left border on the cell. A blanket
-   cell border-colour rule (from the glass transparency sweep) was overwriting it
-   with the faint hairline, so unread rows looked identical to read ones. Pin the
-   accent back on unread and keep read transparent. */
 html body td.notification--unread,
 html body .notification--unread{ border-left-color: var(--at-gold) !important; }
 html body td.notification--read,
 html body .notification--read{ border-left-color: transparent !important; }
 
-/* The BBCode reply box was the one square component: the Write/Preview tab strip
-   carried a lopsided 5px-top-left-only radius, and the preview pane rendered with
-   no radius at all, so the whole editor read as a hard-edged box next to every
-   other rounded panel. Round the component as a unit. */
 html body .bbcode-input,
 html body .bbcode-input__tabs,
 html body .bbcode-input__input,
@@ -1371,32 +1311,9 @@ html body .bbcode-rendered{
 }
 html body .bbcode-input__tabs{ overflow: hidden !important; }
 
-
-/* === Readability fixes (2026-08-16) =======================================
-   --at-text3 / --k-text3 is a BORDER tint. Used as type it lands at
-   1.56-2.71:1 across the theme set - the "Total | Alive | Dead" line on the
-   torrent list reads as disabled. UNIT3D also hardcodes #555 on fieldset
-   legends (Category / Type / Resolution...), 1.91-2.43:1 on dark. Both moved
-   to the theme's real secondary text colour. The variables are untouched;
-   they are still correct as border tints. ===================================== */
 html body .panel__action-text{ color: var(--at-text2) !important; }
 html body .form__legend{ color: var(--at-text2) !important; }
 
-/* === Quick-search dead zone ==============================================
-   `.quick-search` is 400px wide and transparent at all times, but the visible
-   input inside it is only ~157px - leaving ~243px of invisible container
-   sitting in the top bar. Base UNIT3D expands the field on
-   `.quick-search:active`, and `:active` fires on a mousedown ANYWHERE in that
-   container, so pressing empty space beside the logo pops the search open.
-   All three width rules are base (`main-*.css`); no theme touches search width,
-   so every theme has the dead zone. Aether is not editing site CSS right now,
-   so it is fixed here instead.
-   `pointer-events: none` on the container makes that invisible strip
-   click-through (verified: a click at x=450 lands on `.top-nav__left` instead
-   of `.quick-search`); the field and its results get `auto` back, so focus,
-   the 157->400 expansion and result links all still work. Not layout - nothing
-   moves. If Aether ever narrows the container this can simply be deleted.
-   ========================================================================= */
 html body .quick-search{ pointer-events: none !important; }
 html body .quick-search__inputs,
 html body .quick-search__results{ pointer-events: auto !important; }
