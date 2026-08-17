@@ -2206,3 +2206,33 @@ html body .post__tip-input:focus{
   border: 1px solid var(--g-hairline) !important;
   border-radius: 10px !important;
 }
+
+/* === Card tier: material without blur ====================================
+   Azure reported a flicker on the Featured-torrents band in Edge and Chrome
+   (never Firefox), only with the page scrolled fully to the top. Frame-by-frame
+   analysis of his recording put it on scanlines 73-90 of the clip - the top
+   edge and header strip of the carousel's torrent cards - alternating every few
+   frames with a delta up to 3.5 brightness levels against a 0.035 median. So it
+   is real, it is those cards, and it is a compositor artefact rather than a
+   paint state (which is why it never showed up in a screenshot).
+   Cause: the homepage was running **36 backdrop-filter layers**, 12 of them
+   `.torrent-card` and 8 `.user-stat-card`, each blurring the body wallpaper -
+   which is five `background-attachment: fixed` layers topped with a
+   high-frequency noise dither in `overlay`. A blur kernel sampling a stochastic
+   texture is exquisitely sensitive to sub-pixel offset, and at scrollY 0 the
+   fixed background sits at its origin; scroll a little and Chromium handles the
+   fixed layer differently, which is exactly when Azure said it stops.
+   Fix follows this sheet's own rule - **blur only on large surfaces**. Cards are
+   small, numerous, and already sit on a blurred panel, so they keep the
+   material, the hairline and the shadow and simply stop blurring. 36 layers ->
+   16. Visually indistinguishable; also a real compositing win.
+   If any flicker survives, the next lever is the dither `opacity` in the
+   wallpaper block, not the panels.
+   ========================================================================= */
+html body .torrent-card,
+html body .user-stat-card,
+html body .playlist-card,
+html body .article-card{
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
