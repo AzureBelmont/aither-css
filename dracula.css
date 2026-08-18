@@ -1395,3 +1395,31 @@ html body .quick-search__results{ pointer-events: auto !important; }
     background-color: transparent !important;
   }
 }
+
+@media only screen and (max-width: 1100px){
+  html body .panel__actions:not(:has(> .panel__action ~ .panel__action ~ .panel__action))::before{
+    display: none !important;
+  }
+  html body .panel__actions:not(:has(> .panel__action ~ .panel__action ~ .panel__action)) > .panel__action{
+    display: block !important;
+  }
+  html body .panel__actions:not(:has(> .panel__action ~ .panel__action ~ .panel__action)){
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 4px !important;
+  }
+  html body .panel__actions:has(> .panel__action ~ .panel__action ~ .panel__action):hover,
+  html body .panel__actions:has(> .panel__action ~ .panel__action ~ .panel__action):focus,
+  html body .panel__actions:has(> .panel__action ~ .panel__action ~ .panel__action):focus-within{
+    z-index: 40 !important;
+    min-width: 210px !important;
+    max-height: 70vh !important;
+    overflow-y: auto !important;
+    padding: 6px !important;
+    background-color: var(--at-bg3) !important;
+    background-image: none !important;
+    border: 1px solid var(--at-border) !important;
+    border-radius: var(--at-radius) !important;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.55) !important;
+  }
+}
