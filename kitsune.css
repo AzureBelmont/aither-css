@@ -580,7 +580,6 @@ li.top-nav__dropdown ul li a i.fas.fa-heartbeat, li.top-nav__dropdown ul li i.fa
 .topic-listing__latest-post .topic-listing__latest-author { font-size: 12px !important; }
 .topic-listing__latest-post .topic-listing__latest-datetime { font-size: 11px !important; color: var(--k-text3) !important; }
 .compact-search, .compact-search__visible-default { padding: 6px 8px !important; }
-.similar-torrents__filters { display: none !important; }
 .collection-posters { overflow-x: hidden !important; }
 section.also-downloaded { scrollbar-width: none !important; -ms-overflow-style: none !important; }
 section.also-downloaded::-webkit-scrollbar { display: none !important; width: 0 !important; height: 0 !important; }

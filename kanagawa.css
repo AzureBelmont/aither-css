@@ -668,9 +668,6 @@ label.form__label.form__label--floating { background-color: transparent !importa
 .compact-search__visible-default {
   padding: 6px 8px !important;
 }
-.similar-torrents__filters {
-  display: none !important;
-}
 .collection-posters {
   overflow-x: hidden !important;
 }
