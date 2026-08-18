@@ -1504,27 +1504,85 @@ html body .quick-search__results{ pointer-events: auto !important; }
     box-shadow: 0 16px 40px rgba(0,0,0,0.18) !important;
   }
   html body article.post > .post__header:focus-within .post__toolbar .post__toolbar-item,
-  html body article.post > .post__header:focus-within .post__toolbar .post__toolbar-item a,
-  html body article.post > .post__header:focus-within .post__toolbar .post__toolbar-item button{
+  html body article.post > .post__header .post__toolbar:hover .post__toolbar-item{
+    display: block !important;
     background-color: transparent !important;
+    border-bottom: 1px solid var(--at-border) !important;
+  }
+  html body article.post > .post__header:focus-within .post__toolbar .post__toolbar-item:last-child,
+  html body article.post > .post__header .post__toolbar:hover .post__toolbar-item:last-child{
+    border-bottom: 0 !important;
+  }
+  html body article.post > .post__header:focus-within .post__toolbar .post__toolbar-item > a,
+  html body article.post > .post__header:focus-within .post__toolbar .post__toolbar-item > button,
+  html body article.post > .post__header:focus-within .post__toolbar .post__toolbar-item > form,
+  html body article.post > .post__header .post__toolbar:hover .post__toolbar-item > a,
+  html body article.post > .post__header .post__toolbar:hover .post__toolbar-item > button,
+  html body article.post > .post__header .post__toolbar:hover .post__toolbar-item > form{
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 10px !important;
+    width: 100% !important;
+    padding: 9px 10px !important;
+    text-align: left !important;
+    background-color: transparent !important;
+  }
+  html body article.post > .post__header:focus-within .post__toolbar .post__toolbar-item i,
+  html body article.post > .post__header .post__toolbar:hover .post__toolbar-item i{
+    flex: 0 0 18px !important;
+    width: 18px !important;
+    text-align: center !important;
+  }
+  html body article.post > .post__header:focus-within .post__toolbar .post__tip-button,
+  html body article.post > .post__header:focus-within .post__toolbar .post__delete-button,
+  html body article.post > .post__header .post__toolbar:hover .post__tip-button,
+  html body article.post > .post__header .post__toolbar:hover .post__delete-button{
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 10px !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    background-color: transparent !important;
+  }
+  html body article.post > .post__header:focus-within .post__toolbar .post__tip-input,
+  html body article.post > .post__header .post__toolbar:hover .post__tip-input{
+    flex: 1 1 auto !important;
+    width: auto !important;
+    min-width: 0 !important;
+  }
+  html body article.post > .post__header:focus-within .post__toolbar .post__permalink::after,
+  html body article.post > .post__header:focus-within .post__toolbar .post__quote::after,
+  html body article.post > .post__header:focus-within .post__toolbar .post__edit::after,
+  html body article.post > .post__header:focus-within .post__toolbar .post__delete-button::after,
+  html body article.post > .post__header .post__toolbar:hover .post__permalink::after,
+  html body article.post > .post__header .post__toolbar:hover .post__quote::after,
+  html body article.post > .post__header .post__toolbar:hover .post__edit::after,
+  html body article.post > .post__header .post__toolbar:hover .post__delete-button::after{
+    content: attr(title) !important;
   }
 }
 
 @media only screen and (max-width: 1100px){
-  html body .panel__actions:not(:has(> .panel__action ~ .panel__action ~ .panel__action))::before{
+  html body .panel__actions:not(:has(> .panel__action ~ .panel__action ~ .panel__action)):not(:has(input)):not(:has(select)):not(:has(textarea))::before{
     display: none !important;
   }
-  html body .panel__actions:not(:has(> .panel__action ~ .panel__action ~ .panel__action)) > .panel__action{
+  html body .panel__actions:not(:has(> .panel__action ~ .panel__action ~ .panel__action)):not(:has(input)):not(:has(select)):not(:has(textarea)) > .panel__action{
     display: block !important;
   }
-  html body .panel__actions:not(:has(> .panel__action ~ .panel__action ~ .panel__action)){
+  html body .panel__actions:not(:has(> .panel__action ~ .panel__action ~ .panel__action)):not(:has(input)):not(:has(select)):not(:has(textarea)){
     flex-direction: row !important;
     align-items: center !important;
     gap: 4px !important;
   }
-  html body .panel__actions:has(> .panel__action ~ .panel__action ~ .panel__action):hover,
-  html body .panel__actions:has(> .panel__action ~ .panel__action ~ .panel__action):focus,
-  html body .panel__actions:has(> .panel__action ~ .panel__action ~ .panel__action):focus-within{
+  html body .panel__actions:is(:has(> .panel__action ~ .panel__action ~ .panel__action), :has(input), :has(select), :has(textarea)):hover,
+  html body .panel__actions:is(:has(> .panel__action ~ .panel__action ~ .panel__action), :has(input), :has(select), :has(textarea)):focus,
+  html body .panel__actions:is(:has(> .panel__action ~ .panel__action ~ .panel__action), :has(input), :has(select), :has(textarea)):focus-within{
     z-index: 40 !important;
     min-width: 210px !important;
     max-height: 70vh !important;
