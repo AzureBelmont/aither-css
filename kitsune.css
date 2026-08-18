@@ -225,7 +225,7 @@ a.user-tag__link:hover span, a.chatroom-users__user-link:hover span { color: var
 [style*="color:#4ecdc4" i],[style*="color: #4ecdc4" i] { color: #4ECDC4 !important; }
 [style*="color:#f5a623" i],[style*="color: #f5a623" i] { color: #f5a623 !important; }
 
-html body .panel__header { background-color: var(--k-bg2) !important; border-radius: var(--k-radius) var(--k-radius) 0 0 !important; padding-right: 8px !important; display: flex !important; align-items: center !important; }
+html body .panel__header { background-color: var(--k-bg2) !important; border-radius: var(--k-radius) var(--k-radius) 0 0 !important; padding-right: 0 !important; display: flex !important; align-items: center !important; }
 html body .panel__header .panel__heading { flex: 1 !important; }
 section.panel { background-color: var(--k-bg2) !important; border: 1px solid var(--k-accent-border) !important; border-radius: var(--k-radius) !important; overflow: hidden !important; box-shadow: 0 4px 32px rgba(0,0,0,0.7) !important; }
 section.panel > .panel__heading { background-color: var(--k-bg2) !important; }
@@ -476,7 +476,7 @@ i.fa-star.text-gold { color: var(--torrent-row-freeleech-fg, #ffb800) !important
 article.chatbox-message { background-color: #060608 !important; position: relative !important; transition: background-color 0.15s ease; border-radius: 0 !important; padding: 5px 8px 5px 0 !important; margin: 0 !important; gap: 0px 8px !important; grid-template-columns: 40px auto 1fr auto !important; align-items: start !important; border-bottom: 1px dashed #222222 !important; }
 article.chatbox-message::before { display: none !important; }
 article.chatbox-message:hover { background-color: rgba(244,170,202,0.02) !important; }
-.chatbox-message__menu { position: absolute !important; right: 8px !important; top: 4px !important; }
+.chatbox-message__menu { position: absolute !important; right: 0 !important; top: 4px !important; }
 .chatbox-message__aside { position: static !important; left: auto !important; padding: 0 !important; width: 40px !important; min-width: 40px !important; grid-row: 1 / -1 !important; align-self: start !important; line-height: 0 !important; font-size: 0 !important; }
 .chatbox-message__aside figure { line-height: 0 !important; font-size: 0 !important; margin: 0 !important; padding: 0 !important; }
 .chatbox-message__aside img { width: 40px !important; height: 40px !important; min-width: 40px !important; border-radius: 50% !important; object-fit: cover !important; }
@@ -1035,3 +1035,37 @@ html body .panel__action-text{ color: var(--k-text2) !important; }
 html body .quick-search{ pointer-events: none !important; }
 html body .quick-search__inputs,
 html body .quick-search__results{ pointer-events: auto !important; }
+
+@media screen and (max-width: 576px){
+  html body .post:has(.post__header:focus-within){
+    overflow: visible !important;
+  }
+  html body .post__header{
+    position: relative !important;
+  }
+  html body .post__header:focus-within .post__toolbar,
+  html body .post__header .post__toolbar:hover,
+  html body article.post > .post__header:focus-within .post__toolbar,
+  html body article.post > .post__header .post__toolbar:hover{
+    position: absolute !important;
+    top: calc(100% + 8px) !important;
+    right: 0 !important;
+    z-index: 40 !important;
+    width: max-content !important;
+    min-width: 200px !important;
+    max-width: calc(100vw - 32px) !important;
+    max-height: 70vh !important;
+    overflow-y: auto !important;
+    padding: 4px !important;
+    background-color: var(--k-bg3) !important;
+    background-image: none !important;
+    border: 1px solid var(--k-border) !important;
+    border-radius: var(--k-radius) !important;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.60) !important;
+  }
+  html body article.post > .post__header:focus-within .post__toolbar .post__toolbar-item,
+  html body article.post > .post__header:focus-within .post__toolbar .post__toolbar-item a,
+  html body article.post > .post__header:focus-within .post__toolbar .post__toolbar-item button{
+    background-color: transparent !important;
+  }
+}
