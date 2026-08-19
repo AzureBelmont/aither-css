@@ -1125,3 +1125,28 @@ html body select option{
   background-color: var(--k-bg3) !important;
   color: var(--k-text) !important;
 }
+
+html body ::selection{
+  background-color: color-mix(in srgb, var(--k-accent) 32%, transparent) !important;
+  color: var(--k-text) !important;
+}
+html body input:-webkit-autofill,
+html body input:-webkit-autofill:hover,
+html body input:-webkit-autofill:focus,
+html body textarea:-webkit-autofill,
+html body select:-webkit-autofill{
+  -webkit-box-shadow: 0 0 0 1000px var(--k-bg3) inset !important;
+  box-shadow: 0 0 0 1000px var(--k-bg3) inset !important;
+  -webkit-text-fill-color: var(--k-text) !important;
+  caret-color: var(--k-text) !important;
+}
+html body ::placeholder{
+  color: var(--k-text3) !important;
+  opacity: 1 !important;
+}
+html body dialog::backdrop{
+  background-color: rgba(0,0,0,0.55) !important;
+}
+:root{
+  accent-color: var(--k-accent);
+}
