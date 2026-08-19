@@ -284,9 +284,9 @@ th { background-color: var(--at-bg3) !important; color: var(--at-text2) !importa
 td[class*="torrent-search--list__"] { background-color: transparent !important; }
 
 .af-row { background-color: var(--at-bg2) !important; border-bottom: 1px solid var(--at-border) !important; border-left: 3px solid transparent !important; transition: box-shadow .15s, background .15s !important; }
-.af-row:hover { box-shadow: inset 3px 0 0 var(--at-accent) !important; background-color: rgba(243,139,168,0.03) !important; }
+.af-row:hover { background-color: rgba(243,139,168,0.03) !important; }
 
-tr.torrent-search--list__sticky-row { background-color: #181825 !important; border-left: 3px solid var(--at-accent) !important; box-shadow: inset 3px 0 0 var(--at-accent) !important; }
+tr.torrent-search--list__sticky-row { background-color: #181825 !important; border-left: 3px solid var(--at-accent) !important; }
 tr.torrent-search--list__sticky-row td { background-color: transparent !important; }
 tr.torrent-search--list__sticky-row .torrent-search--list__name > a:first-child { color: var(--at-text) !important; }
 
@@ -743,7 +743,7 @@ tr.torrent-search--list__sticky-row:hover td {
   background-color: transparent !important;
 }
 tr.torrent-search--list__sticky-row:hover {
-  background-color: rgba(243,139,168,0.08) !important;
+  background-color: color-mix(in srgb, var(--at-accent) 16%, #181825) !important;
 }
 
 li.top-nav__dropdown ul li i.fas,
