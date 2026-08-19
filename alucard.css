@@ -1589,3 +1589,11 @@ html body .quick-search__results{ pointer-events: auto !important; }
     box-shadow: 0 16px 40px rgba(0,0,0,0.18) !important;
   }
 }
+
+@media screen and (min-width: 577px){
+  html body .post__toolbar{
+    flex-wrap: wrap !important;
+    overflow-x: visible !important;
+    justify-content: flex-end !important;
+  }
+}
