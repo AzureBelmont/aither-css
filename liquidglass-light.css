@@ -717,7 +717,7 @@ tr.torrent-search--list__sticky-row:hover td {
   background-color: transparent !important;
 }
 tr.torrent-search--list__sticky-row:hover {
-  background-color: color-mix(in srgb, var(--at-accent) 16%, #FFFFFF) !important;
+  background-color: #E5E5EA !important;
 }
 
 li.top-nav__dropdown ul li i.fas,

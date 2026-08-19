@@ -576,7 +576,7 @@ h2.meta__heading { margin-top: 0 !important; margin-bottom: 6px !important; }
 .torrent-icons img, .torrent-icons__vision img { display: inline-block !important; vertical-align: middle !important; height: 14px !important; width: auto !important; filter: invert(1) brightness(0.8) !important; }
 
 tr.torrent-search--list__sticky-row:hover td { background-color: transparent !important; }
-tr.torrent-search--list__sticky-row:hover { background-color: color-mix(in srgb, var(--k-accent) 16%, var(--k-accent-faint)) !important; }
+tr.torrent-search--list__sticky-row:hover { background-color: rgba(244,170,202,0.18) !important; }
 
 .donation-packages { gap: 16px !important; }
 .donation-package__wrapper { max-width: calc(25% - 16px) !important; padding: 20px 12px !important; background-color: var(--k-bg3) !important; border: 1px solid rgba(244,170,202,0.55) !important; border-radius: var(--k-radius) !important; transition: border-color .2s, box-shadow .2s !important; }
