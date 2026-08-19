@@ -1116,3 +1116,12 @@ html body .quick-search__results{ pointer-events: auto !important; }
     justify-content: flex-end !important;
   }
 }
+
+html body select optgroup{
+  background-color: var(--k-bg3) !important;
+  color: var(--k-text2) !important;
+}
+html body select option{
+  background-color: var(--k-bg3) !important;
+  color: var(--k-text) !important;
+}
