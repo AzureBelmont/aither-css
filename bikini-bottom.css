@@ -21,10 +21,14 @@
 
    Notes
    ----------------------------------------------------------
-   Panels sit at 82% opacity so the background reads through
-   the margins. The artwork is loaded from lostimg.cc; move it
-   into the repo and update the two url() references if that
-   host ever goes away.
+   The content column carries an 86% wash and panels sit at
+   82% on top of it, so the artwork reads in the side margins
+   and never behind body text. Without the column wash, any
+   container the base leaves transparent shows the art through
+   the text -- settings, the BBCode editor, forum listings.
+
+   The artwork is loaded from lostimg.cc; move it into the repo
+   and update the url() if that host ever goes away.
    ========================================================== */
 :root {
   --key-value-padding: 10px;
@@ -111,14 +115,14 @@ a.user-tag__link i.fa-heart { background-color: transparent !important; border-c
 body { background-color: var(--at-bg) !important; color: var(--at-text) !important; }
 
 .top-nav { background-color: #123653 !important; border-bottom: 1px solid var(--at-accent-faint) !important; box-shadow: 0 2px 20px rgba(0,0,0,0.5) !important; }
-.top-nav .top-nav__branding img { filter: brightness(0) saturate(100%) invert(72%) sepia(30%) saturate(900%) hue-rotate(206deg) brightness(101%) contrast(97%) !important; transition: filter .3s, transform .3s !important; }
-.top-nav .top-nav__branding:hover img { filter: brightness(0) saturate(100%) invert(72%) sepia(30%) saturate(900%) hue-rotate(206deg) brightness(108%) contrast(97%) drop-shadow(0 0 8px rgba(249,226,175,0.7)) !important; transform: scale(1.05) !important; }
-.top-nav__site-logo { background: none !important; -webkit-background-clip: border-box !important; background-clip: border-box !important; -webkit-text-fill-color: var(--at-text) !important; color: var(--at-text) !important; font-weight: 700 !important; }
+.top-nav .top-nav__branding img { filter: brightness(0) saturate(100%) invert(75%) sepia(99%) saturate(100%) hue-rotate(3deg) brightness(99%) contrast(100%) !important; transition: filter .3s, transform .3s !important; }
+.top-nav .top-nav__branding:hover img { filter: brightness(0) saturate(100%) invert(75%) sepia(99%) saturate(100%) hue-rotate(3deg) brightness(107%) contrast(100%) drop-shadow(0 0 8px rgba(249,226,175,0.7)) !important; transform: scale(1.05) !important; }
+.top-nav__site-logo { background: none !important; -webkit-background-clip: border-box !important; background-clip: border-box !important; -webkit-text-fill-color: var(--at-accent) !important; color: var(--at-accent) !important; font-weight: 700 !important; }
 .top-nav__dropdown--nontouch { border-radius: 0px !important; }
 
 .footer__section:first-child .footer__section-title { color: var(--at-text) !important; display: flex !important; align-items: center !important; gap: 8px !important; font-size: inherit !important; font-weight: inherit !important; text-transform: none !important; letter-spacing: normal !important; }
-.footer .footer__section:first-child .footer__section-title img { filter: brightness(0) saturate(100%) invert(72%) sepia(30%) saturate(900%) hue-rotate(206deg) brightness(101%) contrast(97%) !important; height: 28px !important; width: auto !important; }
-.footer__section:first-child .footer__section-title .top-nav__site-logo { background: none !important; -webkit-background-clip: border-box !important; background-clip: border-box !important; -webkit-text-fill-color: var(--at-text) !important; color: var(--at-text) !important; font-size: 15px !important; font-weight: 700 !important; letter-spacing: .05em !important; }
+.footer .footer__section:first-child .footer__section-title img { filter: brightness(0) saturate(100%) invert(75%) sepia(99%) saturate(100%) hue-rotate(3deg) brightness(99%) contrast(100%) !important; height: 28px !important; width: auto !important; }
+.footer__section:first-child .footer__section-title .top-nav__site-logo { background: none !important; -webkit-background-clip: border-box !important; background-clip: border-box !important; -webkit-text-fill-color: var(--at-accent) !important; color: var(--at-accent) !important; font-size: 15px !important; font-weight: 700 !important; letter-spacing: .05em !important; }
 
 html:has(main[class*="torrent"])  .top-nav--left__list-item:has(a[href="https://aither.cc/torrents"]) > a,
 html:has(main[class*="request"])  .top-nav--left__list-item:has(a[href="https://aither.cc/torrents"]) > a,
@@ -1542,6 +1546,9 @@ html body {
   background-repeat: no-repeat, no-repeat !important;
   background-attachment: fixed, fixed !important;
 }
+html body main > article {
+  background-color: rgba(7,26,46,0.86) !important;
+}
 html body section.panelV2,
 html body .panel__body,
 html body section.torrent-results,
@@ -1565,4 +1572,8 @@ html body nav.top-nav {
 html body > footer,
 html body footer.footer {
   background-color: rgba(7,26,46,0.92) !important;
+}
+html body img[src$="/img/profile.png"] {
+  content: url("https://lostimg.cc/tPG9pIxb.png") !important;
+  object-fit: cover !important;
 }
