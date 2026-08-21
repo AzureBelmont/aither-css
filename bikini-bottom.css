@@ -1611,6 +1611,18 @@ html body section.torrent-results {
   border-radius: 14px !important;
   overflow: hidden !important;
 }
+html body img.meta__backdrop {
+  display: none !important;
+}
+html body h1.torrent__name,
+html body ul.torrent__tags,
+html body h1.torrent-header__title,
+html body div.torrent-meta-bar {
+  width: fit-content !important;
+  max-width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
 html body nav.top-nav {
   background-color: rgba(7,26,46,0.92) !important;
 }
