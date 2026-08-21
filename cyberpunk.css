@@ -1508,6 +1508,13 @@ html body dialog::backdrop{
 html body select, html body input, html body textarea, html body button,
 html body [class*="__select"], html body [class*="__input"] { color-scheme: dark; }
 
+html body .panelV2:has(.filmclub__homepreview_backdrop) > .panel__body{
+  padding: 0 !important;
+}
+html body .filmclub__homepreview_backdrop{
+  border-radius: 0!important;
+}
+
 html body{
   background-color: var(--at-bg) !important;
   background-image:
@@ -1584,24 +1591,112 @@ html body .panel__heading{
 html body .torrent-results__title{
   padding-left: 10px !important;
 }
-html body header[class*="__header"]:not([class*="comment"]):not([class*="message"]):not([class*="card"]):not([class*="chat"]):not([class*="post"]){
+html body .panel__header,
+html body .torrent-reviews__header,
+html body .topic-list__header,
+html body .pm-thread__header,
+html body .forum-category__header,
+html body .settings-section__header,
+html body .settings-card__header,
+html body .privacy-category__header,
+html body .dialog__header{
   border-left: 3px solid var(--at-accent) !important;
   text-transform: uppercase !important;
 }
-html body *{
+html body *:not(#_){
   border-radius: 0 !important;
 }
-html body .chatbox-message__aside img,
-html body .internals-card__header,
-html body .internals-card__header img,
-html body .user-stat-card__avatar,
-html body .chatV2__avatar,
-html body img.chatV2__avatar,
-html body img[class*="avatar" i],
-html body [class$="__avatar"],
-html body [class*="__avatar "],
-html body .vscomp-clear-button,
-html body .vscomp-search-clear,
-html body .vscomp-dropbox-close-button{
+html body .chatbox-message__aside img:not(#_),
+html body .internals-card__header:not(#_),
+html body .internals-card__header img:not(#_),
+html body .user-stat-card__avatar:not(#_),
+html body .chatV2__avatar:not(#_),
+html body img.chatV2__avatar:not(#_),
+html body img[class*="avatar" i]:not(#_),
+html body [class$="__avatar"]:not(#_),
+html body [class*="__avatar "]:not(#_),
+html body .vscomp-clear-button:not(#_),
+html body .vscomp-search-clear:not(#_),
+html body .vscomp-dropbox-close-button:not(#_){
   border-radius: 50% !important;
+}
+
+html body footer.footer,
+html body footer.footer p,
+html body footer.footer li,
+html body footer.footer span,
+html body footer.footer strong,
+html body > footer,
+html body > footer p,
+html body > footer span,
+html body > footer strong{
+  color: var(--at-text2) !important;
+  -webkit-text-fill-color: var(--at-text2) !important;
+}
+html body footer.footer a,
+html body > footer a{
+  color: var(--at-accent2) !important;
+  -webkit-text-fill-color: var(--at-accent2) !important;
+}
+html body ::placeholder{
+  color: color-mix(in srgb, var(--at-text2) 85%, var(--at-bg)) !important;
+  opacity: 1 !important;
+}
+html body .bbcode-input__tab-label{
+  color: var(--at-text2) !important;
+  -webkit-text-fill-color: var(--at-text2) !important;
+}
+html body input:checked + .bbcode-input__tab-label,
+html body .bbcode-input__tab-label--active{
+  color: var(--at-accent) !important;
+  -webkit-text-fill-color: var(--at-accent) !important;
+}
+html body .forum-item__title,
+html body .forum-item__title a,
+html body .forum-item__latest-title,
+html body .forum-item__latest a,
+html body .topic-item__title,
+html body .topic-item__title a{
+  color: var(--at-accent2) !important;
+  -webkit-text-fill-color: var(--at-accent2) !important;
+}
+html body .forum-item__stat-label,
+html body .forum-hero__stat-label,
+html body .profile-stat-card__label{
+  color: var(--at-text2) !important;
+  -webkit-text-fill-color: var(--at-text2) !important;
+}
+html body .forum-item__stat-value,
+html body .forum-hero__stat-value,
+html body .profile-stat-card__value{
+  color: var(--at-text) !important;
+  -webkit-text-fill-color: var(--at-text) !important;
+}
+
+@keyframes cp-glitch{
+  0%       { clip-path: inset(0 0 0 0);     transform: translate(0,0); }
+  10%      { clip-path: inset(14% 0 66% 0); transform: translate(-3px,0); }
+  20%      { clip-path: inset(56% 0 24% 0); transform: translate(3px,0); }
+  30%      { clip-path: inset(30% 0 46% 0); transform: translate(-2px,1px); }
+  40%      { clip-path: inset(0 0 0 0);     transform: translate(0,0); }
+  55%      { clip-path: inset(72% 0 10% 0); transform: translate(3px,-1px); }
+  65%      { clip-path: inset(22% 0 58% 0); transform: translate(-3px,0); }
+  75%      { clip-path: inset(46% 0 34% 0); transform: translate(2px,0); }
+  85%,100% { clip-path: inset(0 0 0 0);     transform: translate(0,0); }
+}
+html body .top-nav__branding:hover,
+html body a.top-nav__branding:hover{
+  animation: cp-glitch .5s steps(1) 2 !important;
+  filter: drop-shadow(2px 0 0 var(--at-accent2)) drop-shadow(-2px 0 0 var(--at-red)) !important;
+}
+@media (prefers-reduced-motion: reduce){
+  html body .top-nav__branding:hover,
+  html body a.top-nav__branding:hover{ animation: none !important; }
+}
+
+html body .panelV2:has(.filmclub__homepreview_backdrop) > .panel__body{
+  padding: 0 !important;
+}
+html body .filmclub__homepreview_backdrop{
+  border-radius: 0 !important;
 }

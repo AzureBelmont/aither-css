@@ -2122,3 +2122,11 @@ html body dialog::backdrop{
 :root, html, html body { color-scheme: light; }
 html body select, html body input, html body textarea, html body button,
 html body [class*="__select"], html body [class*="__input"] { color-scheme: light; }
+
+html body .random__media > a{
+  opacity: 1 !important;
+}
+html body .random__media > a:hover{
+  opacity: 1 !important;
+  filter: brightness(0.9) !important;
+}

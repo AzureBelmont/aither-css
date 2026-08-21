@@ -1525,3 +1525,10 @@ html body dialog::backdrop{
 :root, html, html body { color-scheme: dark; }
 html body select, html body input, html body textarea, html body button,
 html body [class*="__select"], html body [class*="__input"] { color-scheme: dark; }
+
+html body .panelV2:has(.filmclub__homepreview_backdrop) > .panel__body{
+  padding: 0 !important;
+}
+html body .filmclub__homepreview_backdrop{
+  border-radius: 0 !important;
+}

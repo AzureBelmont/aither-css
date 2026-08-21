@@ -1630,3 +1630,10 @@ html body > footer,
 html body footer.footer {
   background-color: rgba(7,26,46,0.92) !important;
 }
+
+html body .panelV2:has(.filmclub__homepreview_backdrop) > .panel__body{
+  padding: 0 !important;
+}
+html body .filmclub__homepreview_backdrop{
+  border-radius: 0 !important;
+}
