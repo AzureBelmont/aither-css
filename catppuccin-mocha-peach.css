@@ -1521,3 +1521,7 @@ html body dialog::backdrop{
 :root{
   accent-color: var(--at-accent);
 }
+
+:root, html, html body { color-scheme: dark; }
+html body select, html body input, html body textarea, html body button,
+html body [class*="__select"], html body [class*="__input"] { color-scheme: dark; }
