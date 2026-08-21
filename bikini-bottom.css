@@ -1548,6 +1548,8 @@ html body {
 }
 html body main > article {
   background-color: rgba(7,26,46,0.86) !important;
+  border: 1px solid rgba(180,215,240,0.16) !important;
+  border-radius: 14px !important;
 }
 html body section.panelV2,
 html body .panel__body,
@@ -1572,8 +1574,4 @@ html body nav.top-nav {
 html body > footer,
 html body footer.footer {
   background-color: rgba(7,26,46,0.92) !important;
-}
-html body img[src$="/img/profile.png"] {
-  content: url("https://lostimg.cc/tPG9pIxb.png") !important;
-  object-fit: cover !important;
 }
