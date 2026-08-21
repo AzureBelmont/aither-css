@@ -390,8 +390,8 @@ a[href*="/dashboard/reports"] svg circle, a[href*="/contributors"] svg circle { 
 .page__contributor--index a svg circle { stroke: var(--at-accent) !important; }
 .form__standard-icon-button { background: transparent !important; border: none !important; box-shadow: none !important; color: var(--at-accent) !important; opacity: 0.65 !important; transition: opacity .15s !important; }
 .form__standard-icon-button:hover { opacity: 1 !important; color: var(--at-accent) !important; filter: drop-shadow(0 0 4px rgba(100,74,201,0.5)) !important; }
-.form__select, select.form__select { background-color: #f6f2e8 !important; border: 1px solid var(--at-border) !important; border-radius: 6px !important; box-shadow: none !important; color: var(--at-text) !important; color-scheme: dark; }
-#currentChatroom.form__select, #currentChatstatus.form__select { background-color: #f6f2e8 !important; border: 1px solid var(--at-border) !important; border-radius: 6px !important; box-shadow: none !important; color: var(--at-text) !important; color-scheme: dark; font-weight: 350 !important; font-size: 12px !important; }
+.form__select, select.form__select { background-color: #f6f2e8 !important; border: 1px solid var(--at-border) !important; border-radius: 6px !important; box-shadow: none !important; color: var(--at-text) !important; color-scheme: light; }
+#currentChatroom.form__select, #currentChatstatus.form__select { background-color: #f6f2e8 !important; border: 1px solid var(--at-border) !important; border-radius: 6px !important; box-shadow: none !important; color: var(--at-text) !important; color-scheme: light; font-weight: 350 !important; font-size: 12px !important; }
 
 .form__select:hover, select.form__select:hover { border-color: rgba(100,74,201,0.4) !important; }
 .form__select:focus, select.form__select:focus { border-color: var(--at-accent) !important; color: var(--at-text) !important; }
@@ -1631,3 +1631,7 @@ html body dialog::backdrop{
 :root{
   accent-color: var(--at-accent);
 }
+
+:root, html, html body { color-scheme: light; }
+html body select, html body input, html body textarea, html body button,
+html body [class*="__select"], html body [class*="__input"] { color-scheme: light; }
