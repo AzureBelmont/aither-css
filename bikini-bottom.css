@@ -1564,6 +1564,10 @@ html body main > article:has(> aside) > aside {
 html body main > article > aside {
   align-self: flex-start !important;
 }
+html body main > article > :last-child,
+html body main > article > div > :last-child {
+  margin-bottom: 0 !important;
+}
 html body main > article:has(> .torrent-search__component) {
   background-color: transparent !important;
   border: 0 !important;
