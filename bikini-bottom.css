@@ -1639,3 +1639,46 @@ html body .panelV2:has(.filmclub__homepreview_backdrop) > .panel__body{
 html body .filmclub__homepreview_backdrop{
   border-radius: 0 !important;
 }
+
+html body .panelV2.chatbox,
+html body section.panelV2.chatV2{
+  background-color: rgba(13,39,66,0.55) !important;
+  background-image: none !important;
+}
+html body .panelV2.chatbox .panel__body,
+html body .panelV2.chatbox .panel__body > *,
+html body section.panelV2.chatV2 .panel__body{
+  background-color: transparent !important;
+  background-image: none !important;
+}
+html body .panelV2.chatbox .panel__header,
+html body #chatbox_header{
+  background-color: rgba(18,54,83,0.62) !important;
+  background-image: none !important;
+}
+html body .chatV2__barSurface,
+html body .chatV2__columnHeader,
+html body .chatV2__footerDock,
+html body .chatV2__sidebarBrand,
+html body .chatV2__sidebarFooter,
+html body .chatV2__threadHeader,
+html body .chatV2__mePanel,
+html body .chatV2__composer,
+html body .chatV2__composerSurface{
+  background-color: rgba(18,54,83,0.45) !important;
+}
+html body article.chatbox-message{
+  background-color: transparent !important;
+}
+html body article.chatbox-message:hover{
+  background-color: rgba(249,226,175,0.06) !important;
+}
+html body .panelV2.chatbox .form__group input.form__text,
+html body .panelV2.chatbox textarea,
+html body .panelV2.chatbox input[type="text"]{
+  background-color: rgba(7,26,46,0.72) !important;
+}
+html body:not(#_){
+  --chatbox-message-bg: transparent;
+  --chatbox-users-bg: rgba(13,39,66,0.55);
+}
