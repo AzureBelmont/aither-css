@@ -5,6 +5,8 @@
    Author  AzureBelmont
    Repo    github.com/AzureBelmont/aither-css
    Version 1.0
+   Base    Site style must be set to "Light".
+   Install Settings -> General -> External CSS Stylesheet
 
    Palette
    ----------------------------------------------------------
@@ -2129,4 +2131,61 @@ html body .random__media > a{
 html body .random__media > a:hover{
   opacity: 1 !important;
   filter: brightness(0.9) !important;
+}
+
+html body .bbcode-rendered,
+html body .bbcode-rendered p,
+html body .bbcode-rendered li,
+html body .bbcode-rendered td,
+html body .chatbox-message__content,
+html body .comment__content,
+html body .post__content,
+html body .torrent-card__plot,
+html body .torrent-card__body,
+html body .media__title,
+html body div.top-nav--left__container,
+html body main summary,
+html body main cite{
+  color: var(--at-text) !important;
+  -webkit-text-fill-color: var(--at-text) !important;
+}
+html body a.torrent-card__link,
+html body a.torrent-card__genre,
+html body a.torrent-search--list__name,
+html body a.topic-listing__created-link,
+html body a.topic-listing__latest-author-link,
+html body a.topic-listing__latest-post-link,
+html body a.torrent__times-completed-count,
+html body li.topic-tag,
+html body main a:not([class]):not([style]){
+  color: var(--at-accent) !important;
+  -webkit-text-fill-color: var(--at-accent) !important;
+}
+html body main dd,
+html body main dt,
+html body main time,
+html body main figcaption,
+html body main b,
+html body main small,
+html body h4[class*="stat"],
+html body time[class*="datetime"],
+html body time[class*="join-date"],
+html body figcaption.topic-listing__forum{
+  color: var(--at-text2) !important;
+  -webkit-text-fill-color: var(--at-text2) !important;
+}
+html body a.torrent__seeder-count,
+html body a.torrent__seeder-count i,
+html body .text-success{
+  color: var(--at-green) !important;
+  -webkit-text-fill-color: var(--at-green) !important;
+}
+html body a.torrent__leecher-count,
+html body .text-danger{
+  color: var(--at-red) !important;
+  -webkit-text-fill-color: var(--at-red) !important;
+}
+html body .text-warning{
+  color: var(--at-accent2) !important;
+  -webkit-text-fill-color: var(--at-accent2) !important;
 }
