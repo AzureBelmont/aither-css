@@ -90,9 +90,9 @@ body, html { background-color: var(--k-bg) !important; color: var(--k-text) !imp
 
 ::-webkit-scrollbar       { width: 4px; height: 4px; }
 ::-webkit-scrollbar-track { background: var(--k-bg); }
-::-webkit-scrollbar-thumb { background: var(--k-bg5); border-radius: 2px; }
-::-webkit-scrollbar-thumb:hover { background: rgba(244,170,202,0.30); }
-html { scrollbar-width: thin !important; scrollbar-color: var(--k-bg5) var(--k-bg) !important; }
+::-webkit-scrollbar-thumb { background: color-mix(in srgb, var(--k-accent) 50%, var(--k-bg)); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: color-mix(in srgb, var(--k-accent) 75%, var(--k-bg)); }
+html { scrollbar-width: thin !important; scrollbar-color: color-mix(in srgb, var(--k-accent) 50%, var(--k-bg)) var(--k-bg) !important; }
 
 .top-nav { background-color: #000 !important; border-bottom: 1px solid var(--k-accent-border) !important; }
 
