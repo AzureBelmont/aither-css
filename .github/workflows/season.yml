@@ -1,0 +1,58 @@
+name: Rotate season.css
+
+on:
+  schedule:
+    - cron: '17 4 * * *'      # daily at 04:17 UTC
+  workflow_dispatch:           # and on demand, for testing
+
+permissions:
+  contents: write
+
+jobs:
+  rotate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - id: pick
+        run: python3 .github/pick-season.py >> "$GITHUB_OUTPUT"
+
+      - name: Point season.css at today's theme
+        run: |
+          src="${{ steps.pick.outputs.theme }}.css"
+
+          # a season with no theme built yet must never blank the file
+          if [ ! -f "$src" ]; then
+            echo "::notice::$src does not exist yet, leaving season.css as it is"
+          elif cmp -s "$src" season.css; then
+            echo "season.css is already $src"
+          else
+            cp "$src" season.css
+            echo "season.css -> $src"
+          fi
+
+      - name: Keep the schedule alive
+        run: |
+          # GitHub disables scheduled workflows after 60 days of repository
+          # inactivity. Rotations are ~7 a year, so the gaps are far longer than
+          # that. Stamping a file monthly keeps the repo active without adding a
+          # commit every single day.
+          stamp=.github/last-rotation-check
+          last=$(cat "$stamp" 2>/dev/null || echo 1970-01-01)
+          age=$(( ( $(date -u +%s) - $(date -u -d "$last" +%s) ) / 86400 ))
+          if [ "$age" -ge 30 ]; then
+            date -u +%F > "$stamp"
+            echo "stamped (previous was $age days ago)"
+          fi
+
+      - name: Commit if anything changed
+        run: |
+          git config user.name  "season-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A season.css .github/last-rotation-check
+          if git diff --cached --quiet; then
+            echo "nothing to commit"
+            exit 0
+          fi
+          git commit -m "season.css: ${{ steps.pick.outputs.theme }}"
+          git push
