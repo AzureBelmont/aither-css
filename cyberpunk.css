@@ -1555,7 +1555,8 @@ html body section.panelV2,
 html body .blocks__block,
 html body article.post,
 html body section.torrent-results,
-html body section.topic-list{
+html body section.topic-list,
+html body section.report-list{
   border-top: 2px solid color-mix(in srgb, var(--at-accent) 55%, transparent) !important;
 }
 html body section.panelV2,
@@ -1596,6 +1597,7 @@ html body .torrent-reviews__header,
 html body .topic-list__header,
 html body .pm-thread__header,
 html body .forum-category__header,
+html body .report-list__header,
 html body .settings-section__header,
 html body .settings-card__header,
 html body .privacy-category__header,
