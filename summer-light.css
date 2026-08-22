@@ -1620,6 +1620,7 @@ html body dialog::backdrop{
 }
 
 :root, html, html body { color-scheme: light; }
+html body iframe { color-scheme: normal !important; }
 html body select, html body input, html body textarea, html body button,
 html body [class*="__select"], html body [class*="__input"] { color-scheme: light; }
 
