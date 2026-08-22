@@ -1796,19 +1796,24 @@ html body .profile-stat-card__value{
 }
 
 @keyframes cp-glitch{
-  0%       { clip-path: inset(0 0 0 0);     transform: translate(0,0); }
-  10%      { clip-path: inset(14% 0 66% 0); transform: translate(-3px,0); }
-  20%      { clip-path: inset(56% 0 24% 0); transform: translate(3px,0); }
-  30%      { clip-path: inset(30% 0 46% 0); transform: translate(-2px,1px); }
-  40%      { clip-path: inset(0 0 0 0);     transform: translate(0,0); }
-  55%      { clip-path: inset(72% 0 10% 0); transform: translate(3px,-1px); }
-  65%      { clip-path: inset(22% 0 58% 0); transform: translate(-3px,0); }
-  75%      { clip-path: inset(46% 0 34% 0); transform: translate(2px,0); }
-  85%,100% { clip-path: inset(0 0 0 0);     transform: translate(0,0); }
+  0%       { clip-path: inset(0 0 0 0);     transform: translate(0,0) scale(1.04); }
+  10%      { clip-path: inset(14% 0 66% 0); transform: translate(-3px,0) scale(1.04); }
+  20%      { clip-path: inset(56% 0 24% 0); transform: translate(3px,0) scale(1.04); }
+  30%      { clip-path: inset(30% 0 46% 0); transform: translate(-2px,1px) scale(1.04); }
+  40%      { clip-path: inset(0 0 0 0);     transform: translate(0,0) scale(1.04); }
+  55%      { clip-path: inset(72% 0 10% 0); transform: translate(3px,-1px) scale(1.04); }
+  65%      { clip-path: inset(22% 0 58% 0); transform: translate(-3px,0) scale(1.04); }
+  75%      { clip-path: inset(46% 0 34% 0); transform: translate(2px,0) scale(1.04); }
+  85%,100% { clip-path: inset(0 0 0 0);     transform: translate(0,0) scale(1.04); }
+}
+html body .top-nav__branding:hover img,
+html body a.top-nav__branding:hover img{
+  transform: none !important;
 }
 html body .top-nav__branding:hover,
 html body a.top-nav__branding:hover{
   animation: cp-glitch .5s steps(1) 2 !important;
+  transform: scale(1.04) !important;
   filter: drop-shadow(2px 0 0 var(--at-accent2)) drop-shadow(-2px 0 0 var(--at-red)) !important;
 }
 @media (prefers-reduced-motion: reduce){
