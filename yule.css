@@ -1519,12 +1519,13 @@ html body .filmclub__homepreview_backdrop{
 html body{
   background-color: var(--at-bg) !important;
   background-image:
+    linear-gradient(var(--at-bg3), var(--at-bg3)),
     radial-gradient(120% 30% at 50% 100%, color-mix(in srgb, var(--at-accent) 10%, transparent) 0%, rgba(0,0,0,0) 70%),
     radial-gradient(150% 26% at 50% 0%, color-mix(in srgb, var(--at-accent) 12%, transparent) 0%, rgba(0,0,0,0) 72%) !important;
-  background-repeat: no-repeat, no-repeat !important;
-  background-size: cover, cover !important;
-  background-position: center bottom, center top !important;
-  background-attachment: fixed, fixed !important;
+  background-repeat: no-repeat, no-repeat, no-repeat !important;
+  background-size: 100% 40px, cover, cover !important;
+  background-position: left top, center bottom, center top !important;
+  background-attachment: scroll, fixed, fixed !important;
   padding-top: 40px !important;
   padding-bottom: 134px !important;
 }
