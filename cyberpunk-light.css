@@ -89,7 +89,7 @@ body { background-color: var(--at-bg) !important; color: var(--at-text) !importa
 
 .top-nav { background-color: #ded700 !important; border-bottom: 1px solid var(--at-accent-faint) !important; box-shadow: 0 2px 12px rgba(0,0,0,0.08) !important; }
 .top-nav .top-nav__branding img { filter: brightness(0) saturate(100%) invert(0%) sepia(81%) saturate(1226%) hue-rotate(34deg) brightness(111%) contrast(85%) !important; transition: filter .3s, transform .3s !important; }
-.top-nav .top-nav__branding:hover img { filter: brightness(0) saturate(100%) invert(20%) sepia(86%) saturate(3500%) hue-rotate(264deg) brightness(102%) contrast(101%) drop-shadow(0 0 8px rgba(19,19,19,0.7)) !important; transform: scale(1.05) !important; }
+.top-nav .top-nav__branding:hover img { filter: brightness(0) saturate(100%) invert(0%) sepia(81%) saturate(1226%) hue-rotate(34deg) brightness(120%) contrast(85%) drop-shadow(0 0 8px rgba(19,19,19,0.7)) !important; transform: scale(1.05) !important; }
 .top-nav__site-logo { background: none !important; -webkit-background-clip: border-box !important; background-clip: border-box !important; -webkit-text-fill-color: var(--at-text) !important; color: var(--at-text) !important; font-weight: 700 !important; }
 .top-nav__dropdown--nontouch { border-radius: 0!important; }
 
