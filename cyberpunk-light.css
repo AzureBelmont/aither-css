@@ -1671,16 +1671,16 @@ html body .torrent-search--list__header{
   -webkit-text-fill-color: var(--at-accent2) !important;
   letter-spacing: .06em !important;
 }
-html body section.panelV2:not(#_),
-html body .blocks__block:not(#_),
-html body article.post:not(#_),
-html body section.torrent-results:not(#_),
-html body section.topic-list:not(#_),
-html body section.report-list:not(#_),
-html body section.torrent-reviews:not(#_),
-html body section.profile-section:not(#_),
-html body section[class$="-hero"]:not(#_),
-html body section[class*="-hero "]:not(#_){
+html body section.panelV2,
+html body .blocks__block,
+html body article.post,
+html body section.torrent-results,
+html body section.topic-list,
+html body section.report-list,
+html body section.torrent-reviews,
+html body section.profile-section,
+html body section[class$="-hero"],
+html body section[class*="-hero "]{
   border-top: 2px solid color-mix(in srgb, var(--at-accent) 55%, transparent) !important;
 }
 html body section.panelV2,
@@ -1709,24 +1709,23 @@ html body *:focus-visible{
   outline: 2px solid var(--at-accent2) !important;
   outline-offset: 1px !important;
 }
-html body .panel__heading:not(#_){
+html body .panel__heading{
   border-left: 3px solid var(--at-accent) !important;
   text-transform: uppercase !important;
 }
 html body .torrent-results__title{
   padding-left: 10px !important;
 }
-html body .panel__header:not(#_),
-html body .torrent-reviews__header:not(#_),
-html body .topic-list__header:not(#_),
-html body .pm-thread__header:not(#_),
-html body .forum-category__header:not(#_),
-html body .report-list__header:not(#_),
-html body .profile-section__header:not(#_),
-html body .settings-section__header:not(#_),
-html body .settings-card__header:not(#_),
-html body .privacy-category__header:not(#_),
-html body .dialog__header:not(#_){
+html body .panel__header,
+html body .torrent-reviews__header,
+html body .topic-list__header,
+html body .pm-thread__header,
+html body .forum-category__header,
+html body .report-list__header,
+html body .settings-section__header,
+html body .settings-card__header,
+html body .privacy-category__header,
+html body .dialog__header{
   border-left: 3px solid var(--at-accent) !important;
   text-transform: uppercase !important;
 }
