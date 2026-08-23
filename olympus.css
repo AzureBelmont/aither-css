@@ -1510,3 +1510,9 @@ html body .panelV2:has(.filmclub__homepreview_backdrop) > .panel__body{
 html body .filmclub__homepreview_backdrop{
   border-radius: 0 !important;
 }
+
+@media (min-width: 1400px) {
+    .quick-search {
+        transform: translateY(6px) !important;
+    }
+}
