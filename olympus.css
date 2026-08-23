@@ -1513,6 +1513,6 @@ html body .filmclub__homepreview_backdrop{
 
 @media (min-width: 1400px) {
     .quick-search__input {
-        transform: translateY(3.5px) !important;
+        transform: translateY(10px) !important;
     }
 }
