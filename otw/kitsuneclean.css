@@ -1,16 +1,16 @@
 /* ============================================================
-   Olympus + OTW layout
-   Olympus theme by AzureBelmont, with layout adjustments for OTW
+   Kitsune Clean + OTW layout
+   Kitsune Clean theme by AzureBelmont, with layout adjustments for OTW
    contributed by Macley (github.com/Macleykun)
    OTW's chat rows and nav sit differently to Aither's, so these
    are pixel offsets calibrated to OTW. They are deliberately NOT
    in the base themes - on Aither and LST the same elements are
    already aligned, and applying these there would misalign them.
    Paste this URL into the "External CSS Stylesheet" field INSTEAD
-   of olympus.css - it pulls Olympus in automatically, so it always
+   of kitsuneclean.css - it pulls Kitsune Clean in automatically, so it always
    stays in sync with the base theme.
    ============================================================ */
-@import url('https://azurebelmont.github.io/aither-css/olympus.css');
+@import url('https://azurebelmont.github.io/aither-css/kitsuneclean.css');
 article.chatbox-message { max-width: 100% !important; }
 .chatroom__messages { padding-right: 0 !important; }
 .chatbox-message__aside figure { transform: translateY(19px) !important; padding-left: 3px !important; }
