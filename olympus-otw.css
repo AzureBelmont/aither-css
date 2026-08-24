@@ -1,8 +1,7 @@
 /* ============================================================
    Olympus + OTW layout
    Olympus theme by AzureBelmont, with layout adjustments for OTW
-   contributed by Macley (github.com/Macleykun), used with thanks:
-   https://github.com/AzureBelmont/aither-css/pull/3
+   contributed by Macley (github.com/Macleykun)
 
    OTW's chat rows and nav sit differently to Aither's, so these
    are pixel offsets calibrated to OTW. They are deliberately NOT
@@ -13,7 +12,6 @@
    of olympus.css - it pulls Olympus in automatically, so it always
    stays in sync with the base theme.
 
-   Selectors are kept exactly as Macley tested them on OTW.
    ============================================================ */
 @import url('https://azurebelmont.github.io/aither-css/olympus.css');
 
