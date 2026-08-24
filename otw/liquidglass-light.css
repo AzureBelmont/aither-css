@@ -1,20 +1,33 @@
 /* ============================================================
    Liquid Glass Light + OTW layout
-   Liquid Glass Light theme by AzureBelmont, with layout adjustments for OTW
-   contributed by Macley (github.com/Macleykun)
+   Liquid Glass Light, with layout adjustments for OTW.
+
+   Theme   AzureBelmont
+   Layout  Macley (github.com/Macleykun)
+   Base    Pulls liquidglass-light.css in automatically, so it
+           always stays in sync with the base theme.
+   Install Settings -> General -> External CSS Stylesheet
+           Paste this URL INSTEAD of liquidglass-light.css
+
    OTW's chat rows and nav sit differently to Aither's, so these
    are pixel offsets calibrated to OTW. They are deliberately NOT
    in the base themes - on Aither and LST the same elements are
    already aligned, and applying these there would misalign them.
-   Paste this URL into the "External CSS Stylesheet" field INSTEAD
-   of liquidglass-light.css - it pulls Liquid Glass Light in automatically, so it always
-   stays in sync with the base theme.
    ============================================================ */
 @import url('https://azurebelmont.github.io/aither-css/liquidglass-light.css');
+
 article.chatbox-message { max-width: 100% !important; }
+
 .chatroom__messages { padding-right: 0 !important; }
-.chatbox-message__aside figure { transform: translateY(19px) !important; padding-left: 3px !important; }
-html body [class*="__select"], html body [class*="__input"] { height: 40px; }
+
+.chatbox-message__aside figure {
+  transform: translateY(19px) !important;
+  padding-left: 3px !important;
+}
+
+html body [class*="__select"],
+html body [class*="__input"] { height: 40px; }
+
 @media (min-width: 1400px) {
   .quick-search__input { transform: translateY(10px) !important; }
 }
