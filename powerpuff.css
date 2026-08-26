@@ -27,6 +27,12 @@
    scrim runs 58-74% rather than the 42-66% an already-dark
    image needs. Panels sit on top of that.
 
+   The art is positioned center center, not center top. The
+   image is 1.6:1, so any viewport wider than that crops it
+   vertically -- and pinning the top threw away the girls
+   rather than the sky. Taller viewports are unaffected,
+   since nothing is cropped there.
+
    The content column carries an 86% wash and panels sit at
    82% on top of it, so the artwork reads in the side margins
    and never behind body text. Without the column wash, any
@@ -1558,7 +1564,7 @@ html body {
     linear-gradient(180deg, rgba(24,10,23,0.58) 0%, rgba(20,8,20,0.66) 60%, rgba(16,6,16,0.74) 100%),
     url("https://lostimg.cc/jLUpRgLL.png") !important;
   background-size: cover, cover !important;
-  background-position: center top, center top !important;
+  background-position: center top, center center !important;
   background-repeat: no-repeat, no-repeat !important;
   background-attachment: fixed, fixed !important;
 }
