@@ -1324,9 +1324,11 @@ html body .bbcode-input,
 html body .bbcode-input__tabs,
 html body .bbcode-input__input,
 html body .form__textarea,
-html body .post__content.bbcode-rendered,
 html body .bbcode-rendered{
   border-radius: var(--at-radius) !important;
+}
+html body article.post > .post__content.bbcode-rendered{
+  border-radius: 0 0 var(--at-radius) 0 !important;
 }
 html body .bbcode-input__tabs{ overflow: hidden !important; }
 
