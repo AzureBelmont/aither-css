@@ -982,8 +982,9 @@ html body .form__textarea,
 html body .bbcode-rendered{
   border-radius: var(--k-radius) !important;
 }
-html body article.post > .post__content.bbcode-rendered{
-  border-radius: 0 0 var(--k-radius) 0 !important;
+html body article.post > .post__content.bbcode-rendered,
+html body article.comment > .comment__content.bbcode-rendered{
+  border-radius: 0 !important;
 }
 html body .bbcode-input__tabs{ overflow: hidden !important; }
 
