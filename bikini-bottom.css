@@ -29,6 +29,10 @@
    container the base leaves transparent shows the art through
    the text -- settings, the BBCode editor, forum listings.
 
+   The home page is the exception: every block there brings its
+   own surface, so the wash is dropped on main.page__home and
+   the artwork reads through the panels instead.
+
    The artwork is loaded from lostimg.cc; move it into the repo
    and update the url() if that host ever goes away.
    ========================================================== */
@@ -1567,6 +1571,12 @@ html body main > article:has(> aside) > aside {
   border: 1px solid rgba(180,215,240,0.16) !important;
   border-radius: 14px !important;
 }
+html body main.page__home > article,
+html body main.page__home > article:has(> aside) > div,
+html body main.page__home > article:has(> aside) > aside {
+  background-color: transparent !important;
+  border: 0 !important;
+}
 html body main > article > aside {
   align-self: flex-start !important;
 }
@@ -1670,6 +1680,26 @@ html body .chatV2__mePanel,
 html body .chatV2__composer,
 html body .chatV2__composerSurface{
   background-color: rgba(18,54,83,0.45) !important;
+}
+html body main.page__home section.panelV2.chatV2,
+html body main.page__home .panelV2.chatbox{
+  background-color: rgba(13,39,66,0.75) !important;
+}
+html body main.page__home .chatV2__barSurface,
+html body main.page__home .chatV2__columnHeader,
+html body main.page__home .chatV2__footerDock,
+html body main.page__home .chatV2__sidebarBrand,
+html body main.page__home .chatV2__sidebarFooter,
+html body main.page__home .chatV2__threadHeader,
+html body main.page__home .chatV2__mePanel,
+html body main.page__home .chatV2__composer,
+html body main.page__home .chatV2__composerSurface{
+  background-color: rgba(18,54,83,0.62) !important;
+}
+html body main.page__home .panelV2.chatbox .form__group input.form__text,
+html body main.page__home .panelV2.chatbox textarea,
+html body main.page__home .panelV2.chatbox input[type="text"]{
+  background-color: rgba(7,26,46,0.82) !important;
 }
 html body article.chatbox-message{
   background-color: transparent !important;
