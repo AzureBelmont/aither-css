@@ -1599,24 +1599,11 @@ html body {
   background-repeat: no-repeat, no-repeat !important;
   background-attachment: fixed, fixed !important;
 }
-html body main > article {
-  background-color: rgba(7,26,46,0.86) !important;
-  border: 1px solid rgba(180,215,240,0.16) !important;
-  border-radius: 14px !important;
-}
-html body main > article:has(> aside) {
-  background-color: transparent !important;
-  border: 0 !important;
-}
+html body main > article,
+html body main > article > aside,
 html body main > article:has(> aside) > div,
-html body main > article:has(> aside) > aside {
-  background-color: rgba(7,26,46,0.86) !important;
-  border: 1px solid rgba(180,215,240,0.16) !important;
-  border-radius: 14px !important;
-}
-html body main.page__home > article,
-html body main.page__home > article:has(> aside) > div,
-html body main.page__home > article:has(> aside) > aside {
+html body main > article > .torrent-search__component,
+html body main > article > .request-search__component {
   background-color: transparent !important;
   border: 0 !important;
 }
@@ -1627,13 +1614,12 @@ html body main > article > :last-child,
 html body main > article > div > :last-child {
   margin-bottom: 0 !important;
 }
-html body main > article:has(> .torrent-search__component) {
-  background-color: transparent !important;
-  border: 0 !important;
-}
-html body main > article > .torrent-search__component {
-  background-color: transparent !important;
-  border: 0 !important;
+html body a.profile-stat-card,
+html body div.profile-stat-card,
+html body section.error {
+  background-color: rgba(7,26,46,0.86) !important;
+  border: 1px solid rgba(180,215,240,0.16) !important;
+  border-radius: 14px !important;
 }
 html body .compact-search__visible-default,
 html body search > div,
@@ -1665,11 +1651,14 @@ html body footer.topic-list__footer {
   background-color: rgba(18,54,83,0.86) !important;
   background-image: none !important;
 }
-html body search.compact-search,
-html body .compact-search__visible-default {
+html body search.compact-search {
   background-color: transparent !important;
   background-image: none !important;
   border-color: transparent !important;
+  box-shadow: none !important;
+}
+html body .compact-search__visible-default {
+  background-image: none !important;
   box-shadow: none !important;
 }
 html body section.torrent-results {
