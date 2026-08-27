@@ -35,6 +35,10 @@
 
    The artwork lives in the repo at art/bikini-bottom/ and is
    served from GitHub Pages, same origin as this stylesheet.
+   It is padded to 1920x1240 so that "cover" trims the padding
+   rather than the faces -- the un-padded 1.93:1 crop lost about
+   a fifth of the width on a normal window, taking Plankton and
+   half of SpongeBob with it.
       Decor
    ----------------------------------------------------------
    Bubbles rise across the whole background, two layers at
@@ -1566,7 +1570,7 @@ html body {
     linear-gradient(180deg, rgba(6,20,38,0.42) 0%, rgba(5,16,32,0.56) 60%, rgba(4,12,26,0.66) 100%),
     url("https://azurebelmont.github.io/lst-css/art/bikini-bottom/underwater.jpg") !important;
   background-size: cover, cover !important;
-  background-position: center top, 30% center !important;
+  background-position: center top, center center !important;
   background-repeat: no-repeat, no-repeat !important;
   background-attachment: fixed, fixed !important;
 }

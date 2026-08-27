@@ -35,6 +35,13 @@
    torn red paper edge -- the one shape the game never stops
    using. The page ground is a red halftone lattice over the
    character art.
+
+   Panels are opaque. The art reads in the margins and in the
+   gutters between panels, not through them -- translucent
+   panels over a busy illustration made dense torrent rows hard
+   to read, and mixing translucent and opaque boxes on one page
+   looked like a bug rather than a choice. The chatbox is the
+   single exception, at 0.82.
    ========================================================== */
 :root {
   --key-value-padding: 10px;
@@ -1591,7 +1598,7 @@ html body section[class*="-hero "]{
 html body section.panelV2,
 html body section.torrent-results{
   background-color: transparent !important;
-  background-image: linear-gradient(135deg, rgba(0,0,0,0) 20px, rgba(11,8,9,0.66) 20px) !important;
+  background-image: linear-gradient(135deg, rgba(0,0,0,0) 20px, var(--at-bg2) 20px) !important;
 }
 html body .form__button,
 html body button.form__button,
@@ -1741,14 +1748,22 @@ html body section.panelV2,
 html body .blocks__block,
 html body article.post,
 html body section.torrent-results,
-html body section.topic-list{
+html body section.topic-list,
+html body section.forum-category{
   border-top: 0 !important;
   border-left: 3px solid var(--at-accent) !important;
 }
 html body .blocks__block,
 html body article.post,
-html body section.topic-list{
-  background-color: rgba(11,8,9,0.66) !important;
+html body section.topic-list,
+html body .forum-category__body,
+html body .forum-hero,
+html body section[class*="-hero"]{
+  background-color: var(--at-bg2) !important;
+}
+html body section.forum-category{
+  background-color: transparent !important;
+  background-image: linear-gradient(135deg, rgba(0,0,0,0) 20px, var(--at-bg2) 20px) !important;
 }
 html body .panel__header,
 html body .torrent-reviews__header,
