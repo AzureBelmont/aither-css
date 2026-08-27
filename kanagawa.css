@@ -1488,6 +1488,7 @@ html body ::selection{
 html body input:-webkit-autofill,
 html body input:-webkit-autofill:hover,
 html body input:-webkit-autofill:focus,
+html body input:-webkit-autofill:active,
 html body textarea:-webkit-autofill,
 html body select:-webkit-autofill{
   -webkit-box-shadow: 0 0 0 1000px var(--at-bg2) inset !important;
@@ -1516,4 +1517,16 @@ html body .panelV2:has(.filmclub__homepreview_backdrop) > .panel__body{
 }
 html body .filmclub__homepreview_backdrop{
   border-radius: 0 !important;
+}
+
+html body .form__text,
+html body .form__text:hover,
+html body .form__text:focus,
+html body .form__text:focus-visible,
+html body textarea.form__textarea:focus,
+html body input.form__text:-webkit-autofill:active{
+  background-color: var(--at-bg2) !important;
+  background-image: none !important;
+  -webkit-text-fill-color: var(--at-text) !important;
+  transition: none !important;
 }

@@ -1513,6 +1513,7 @@ html body ::selection{
 html body input:-webkit-autofill,
 html body input:-webkit-autofill:hover,
 html body input:-webkit-autofill:focus,
+html body input:-webkit-autofill:active,
 html body textarea:-webkit-autofill,
 html body select:-webkit-autofill{
   -webkit-box-shadow: 0 0 0 1000px var(--at-bg2) inset !important;
@@ -1712,15 +1713,11 @@ html body .profile-stat-card__value{
 }
 
 @keyframes p5-flicker{
-  0%       { clip-path: inset(0 0 0 0);     transform: translate(0,0) scale(1.04); }
-  10%      { clip-path: inset(14% 0 66% 0); transform: translate(-3px,0) scale(1.04); }
-  20%      { clip-path: inset(56% 0 24% 0); transform: translate(3px,0) scale(1.04); }
-  30%      { clip-path: inset(30% 0 46% 0); transform: translate(-2px,1px) scale(1.04); }
-  40%      { clip-path: inset(0 0 0 0);     transform: translate(0,0) scale(1.04); }
-  55%      { clip-path: inset(72% 0 10% 0); transform: translate(3px,-1px) scale(1.04); }
-  65%      { clip-path: inset(22% 0 58% 0); transform: translate(-3px,0) scale(1.04); }
-  75%      { clip-path: inset(46% 0 34% 0); transform: translate(2px,0) scale(1.04); }
-  85%,100% { clip-path: inset(0 0 0 0);     transform: translate(0,0) scale(1.04); }
+  0%       { transform: skewX(0deg);   filter: none; }
+  15%      { transform: skewX(-9deg);  filter: drop-shadow(3px 0 0 var(--at-accent)) drop-shadow(-3px 0 0 var(--at-text)); }
+  30%      { transform: skewX(6deg);   filter: drop-shadow(-2px 0 0 var(--at-accent)); }
+  45%      { transform: skewX(-4deg);  filter: drop-shadow(2px 0 0 var(--at-text)); }
+  60%,100% { transform: skewX(0deg);   filter: none; }
 }
 html body .top-nav__branding:hover img,
 html body a.top-nav__branding:hover img{
@@ -1728,9 +1725,7 @@ html body a.top-nav__branding:hover img{
 }
 html body .top-nav__branding:hover,
 html body a.top-nav__branding:hover{
-  animation: p5-flicker .5s steps(1) 2 !important;
-  transform: scale(1.04) !important;
-  filter: drop-shadow(2px 0 0 var(--at-accent2)) drop-shadow(-2px 0 0 var(--at-red)) !important;
+  animation: p5-flicker .38s steps(1) 1 !important;
 }
 @media (prefers-reduced-motion: reduce){
   html body .top-nav__branding:hover,
@@ -1806,4 +1801,20 @@ html body a.form__button:hover{
   color: var(--at-text) !important;
   -webkit-text-fill-color: var(--at-text) !important;
   box-shadow: 0 0 12px rgba(230,0,18,0.45) !important;
+}
+
+html body .form__text,
+html body .form__text:hover,
+html body .form__text:focus,
+html body .form__text:focus-visible,
+html body textarea.form__textarea:focus,
+html body input.form__text:-webkit-autofill:active{
+  background-color: var(--at-bg2) !important;
+  background-image: none !important;
+  -webkit-text-fill-color: var(--at-text) !important;
+  transition: none !important;
+}
+
+html body main:not(.page__home) > article{
+  background-color: var(--at-bg2) !important;
 }

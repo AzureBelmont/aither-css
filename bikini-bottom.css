@@ -35,10 +35,12 @@
 
    The artwork lives in the repo at art/bikini-bottom/ and is
    served from GitHub Pages, same origin as this stylesheet.
-   It is padded to 1920x1240 so that "cover" trims the padding
-   rather than the faces -- the un-padded 1.93:1 crop lost about
-   a fifth of the width on a normal window, taking Plankton and
-   half of SpongeBob with it.
+   The source is padded back to 1920x1080 -- the size it was
+   before the logo was cropped off the bottom. Matching the
+   original ratio matters more than matching the viewport:
+   "cover" scales by the short edge, so a taller canvas shrinks
+   the artwork. Padding to the viewport ratio removed the crop
+   but rendered every face 17% smaller.
       Decor
    ----------------------------------------------------------
    Bubbles rise across the whole background, two layers at
@@ -1541,6 +1543,7 @@ html body ::selection{
 html body input:-webkit-autofill,
 html body input:-webkit-autofill:hover,
 html body input:-webkit-autofill:focus,
+html body input:-webkit-autofill:active,
 html body textarea:-webkit-autofill,
 html body select:-webkit-autofill{
   -webkit-box-shadow: 0 0 0 1000px var(--at-bg2) inset !important;
@@ -1570,7 +1573,7 @@ html body {
     linear-gradient(180deg, rgba(6,20,38,0.42) 0%, rgba(5,16,32,0.56) 60%, rgba(4,12,26,0.66) 100%),
     url("https://azurebelmont.github.io/lst-css/art/bikini-bottom/underwater.jpg") !important;
   background-size: cover, cover !important;
-  background-position: center top, center center !important;
+  background-position: center top, center top !important;
   background-repeat: no-repeat, no-repeat !important;
   background-attachment: fixed, fixed !important;
 }
@@ -1776,4 +1779,16 @@ html body:not(#_){
 @media (prefers-reduced-motion: reduce){
   html::before,
   html::after{ animation: none !important; }
+}
+
+html body .form__text,
+html body .form__text:hover,
+html body .form__text:focus,
+html body .form__text:focus-visible,
+html body textarea.form__textarea:focus,
+html body input.form__text:-webkit-autofill:active{
+  background-color: var(--at-bg2) !important;
+  background-image: none !important;
+  -webkit-text-fill-color: var(--at-text) !important;
+  transition: none !important;
 }
