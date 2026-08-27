@@ -1621,6 +1621,21 @@ html body section.error {
   border: 1px solid rgba(180,215,240,0.16) !important;
   border-radius: 14px !important;
 }
+html body section.general-prefs-panel,
+html body section.general-homepage-editor,
+html body section.settings-section,
+html body div.privacy-preview,
+html body aside.privacy-settings,
+html body section.forum-category,
+html body section.pm-hero,
+html body div.torrent-alert {
+  background-color: rgba(13,39,66,0.82) !important;
+  background-image: none !important;
+}
+html body .stats__panels > * {
+  align-self: start !important;
+  height: auto !important;
+}
 html body .compact-search__visible-default,
 html body search > div,
 html body .torrent-search__filters > div{
