@@ -52,6 +52,13 @@
    The torrent header itself is left bare so the artwork carries
    the page title; only the chips and action buttons inside it
    are opaque, because those are small and were washing out.
+
+   Top-level sections inside the content column all take a
+   surface. Settings had 61 elements sitting straight on the
+   artwork because none of its general-* containers paint one.
+   This is at panel level, not a full-width slab, so the gaps
+   between sections still show the art -- and the chat is
+   excluded so it keeps its 0.82.
    ========================================================== */
 :root {
   --key-value-padding: 10px;
@@ -1889,4 +1896,15 @@ html body .panelV2.chatbox > .panel__body,
 html body section.panelV2.chatV2 .chatV2__composer,
 html body section.panelV2.chatV2 .chatV2__footerDock{
   background-color: transparent !important;
+}
+
+html body main > article > section:not([class*="chat"]),
+html body main > article > form > section:not([class*="chat"]),
+html body main > article > form > div > section:not([class*="chat"]),
+html body main > article > div > section:not([class*="chat"]),
+html body main > article > form > div[class*="panels"] > *,
+html body .general-prefs-panel,
+html body .general-homepage-editor,
+html body .settings-section{
+  background-color: var(--at-bg2) !important;
 }
