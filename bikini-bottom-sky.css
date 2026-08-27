@@ -10,14 +10,27 @@
            to the theme flows through here too.
    Install Settings -> General -> External CSS Stylesheet
            Paste this URL INSTEAD of bikini-bottom.css
+
+   Notes
+   ----------------------------------------------------------
+   Only the wallpaper and its scrim differ, so this stays a thin
+   overlay rather than a second copy of the theme.
+
+   The flower sky is 16:9, so it barely crops on a normal screen
+   -- unlike the 1.6:1 art, which loses its bottom fifth. It is
+   also brighter at the top (relative luminance 0.68) than at the
+   bottom (0.40), so the scrim runs the other way to the usual:
+   heaviest at the top, lightest at the bottom. That lands the
+   composited background at 0.16 / 0.16 / 0.11 top to bottom,
+   in the same range as the deep-sea original.
    ========================================================== */
 @import url('https://azurebelmont.github.io/aither-css/bikini-bottom.css');
 
 html body{
   background-image:
     linear-gradient(180deg,
-      rgba(6,20,38,0.70) 0%,
-      rgba(5,16,32,0.58) 55%,
-      rgba(4,12,26,0.45) 100%),
-    url("https://lostimg.cc/JeE3WEmB.png") !important;
+      rgba(6,20,38,0.78) 0%,
+      rgba(5,16,32,0.74) 55%,
+      rgba(4,12,26,0.73) 100%),
+    url("https://azurebelmont.github.io/lst-css/art/bikini-bottom/sky.jpg") !important;
 }

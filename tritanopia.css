@@ -1,8 +1,8 @@
 /* ============================================================
-   Aither Dark - Tritanopia colorblind overlay
-   Stack on the DEFAULT Aither Dark theme via the profile
-   "External CSS Stylesheet" field.
-   Palette: GitHub Primer dark-tritanopia (green -> blue, red kept).
+   Tritanopia colorblind overlay (blue-yellow)
+   Paste into the profile "External CSS Stylesheet" field.
+   Built/tested on Aither Dark; largely works on other base styles.
+   Palette: green -> blue, red kept (Primer dark-tritanopia values).
    Rank/user-group colors are intentionally untouched.
    ============================================================ */
 :root{

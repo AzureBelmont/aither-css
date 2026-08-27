@@ -19,6 +19,7 @@
    --k-text3        #404040    hairline     borders / tint
    ========================================================== */
 :root {
+  --quick-search-border-radius: 9px;
   --key-value-padding: 10px;
   --k-accent:        #F4AACA;
   --k-accent-soft:   rgba(244,170,202,0.55);
@@ -589,8 +590,8 @@ html body .panel__header select, html body .panel__header .form__select { min-wi
 td.data-table__bon-taxed { display: table-cell !important; vertical-align: middle !important; }
 td.data-table__bon-taxed i.fa-percent { margin-left: 4px !important; }
 
-.quick-search__input, input.quick-search__input { border-radius: var(--quick-search-border-radius, 16px) !important; }
-.quick-search:active .quick-search__input, .quick-search:focus-within .quick-search__input { border-radius: var(--quick-search-border-radius, 16px) var(--quick-search-border-radius, 16px) 0 0 !important; }
+html body .quick-search__input, html body input.quick-search__input { border-radius: var(--quick-search-border-radius, 9px) !important; }
+html body .quick-search:active .quick-search__input, html body .quick-search:focus-within .quick-search__input { border-radius: var(--quick-search-border-radius, 9px) var(--quick-search-border-radius, 9px) 0 0 !important; }
 .post__tip-input, .post__tip-input:focus { border: none !important; border-radius: 2px !important; }
 
 .top-nav--left__list-item ul li i.fas, .top-nav--left__list-item ul li i.far, .top-nav--left__list-item ul li i.fab, li.top-nav__dropdown ul li i.fas, li.top-nav__dropdown ul li i.far, li.top-nav__dropdown ul li i.fab { width: 32px !important; height: 32px !important; display: inline-flex !important; align-items: center !important; justify-content: center !important; line-height: 1 !important; padding: 0 !important; }

@@ -49,6 +49,7 @@
    z-index -1 so it stays behind page content.
    ========================================================== */
 :root {
+  --quick-search-border-radius: 9px;
   --key-value-padding: 10px;
   --ctp-rosewater: #f5e0dc;
   --ctp-flamingo:  #f2cdcd;
@@ -904,12 +905,13 @@ input[type="password"] {
   font-size: 14px !important;
 }
 
-.quick-search__input, input.quick-search__input {
-  border-radius: var(--quick-search-border-radius, 16px) !important;
+html body .quick-search__input,
+html body input.quick-search__input {
+  border-radius: var(--quick-search-border-radius, 9px) !important;
 }
-.quick-search:active .quick-search__input,
-.quick-search:focus-within .quick-search__input {
-  border-radius: var(--quick-search-border-radius, 16px) var(--quick-search-border-radius, 16px) 0 0 !important;
+html body .quick-search:active .quick-search__input,
+html body .quick-search:focus-within .quick-search__input {
+  border-radius: var(--quick-search-border-radius, 9px) var(--quick-search-border-radius, 9px) 0 0 !important;
 }
 .post__tip-input, .post__tip-input:focus { border: none !important; border-radius: 2px !important; }
 
@@ -1562,7 +1564,7 @@ html body {
   background-color: #180a17 !important;
   background-image:
     linear-gradient(180deg, rgba(24,10,23,0.58) 0%, rgba(20,8,20,0.66) 60%, rgba(16,6,16,0.74) 100%),
-    url("https://lostimg.cc/jLUpRgLL.png") !important;
+    url("https://azurebelmont.github.io/lst-css/art/powerpuff/townsville.jpg") !important;
   background-size: cover, cover !important;
   background-position: center top, center center !important;
   background-repeat: no-repeat, no-repeat !important;

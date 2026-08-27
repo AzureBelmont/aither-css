@@ -1,8 +1,8 @@
 /* ============================================================
-   Aither Dark - Protanopia & Deuteranopia colorblind overlay
-   Stack on the DEFAULT Aither Dark theme via the profile
-   "External CSS Stylesheet" field.
-   Palette: GitHub Primer dark-colorblind (green -> blue, red -> orange).
+   Protanopia & Deuteranopia colorblind overlay (red-green)
+   Paste into the profile "External CSS Stylesheet" field.
+   Built/tested on Aither Dark; largely works on other base styles.
+   Palette: green -> blue, red -> orange (Primer dark-colorblind values).
    Rank/user-group colors are intentionally untouched.
    ============================================================ */
 :root{

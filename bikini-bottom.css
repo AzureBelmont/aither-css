@@ -33,8 +33,8 @@
    own surface, so the wash is dropped on main.page__home and
    the artwork reads through the panels instead.
 
-   The artwork is loaded from lostimg.cc; move it into the repo
-   and update the url() if that host ever goes away.
+   The artwork lives in the repo at art/bikini-bottom/ and is
+   served from GitHub Pages, same origin as this stylesheet.
       Decor
    ----------------------------------------------------------
    Bubbles rise across the whole background, two layers at
@@ -49,6 +49,7 @@
    Animation is disabled under prefers-reduced-motion.
    ========================================================== */
 :root {
+  --quick-search-border-radius: 9px;
   --key-value-padding: 10px;
   --ctp-rosewater: #f5e0dc;
   --ctp-flamingo:  #f2cdcd;
@@ -904,12 +905,13 @@ input[type="password"] {
   font-size: 14px !important;
 }
 
-.quick-search__input, input.quick-search__input {
-  border-radius: var(--quick-search-border-radius, 16px) !important;
+html body .quick-search__input,
+html body input.quick-search__input {
+  border-radius: var(--quick-search-border-radius, 9px) !important;
 }
-.quick-search:active .quick-search__input,
-.quick-search:focus-within .quick-search__input {
-  border-radius: var(--quick-search-border-radius, 16px) var(--quick-search-border-radius, 16px) 0 0 !important;
+html body .quick-search:active .quick-search__input,
+html body .quick-search:focus-within .quick-search__input {
+  border-radius: var(--quick-search-border-radius, 9px) var(--quick-search-border-radius, 9px) 0 0 !important;
 }
 .post__tip-input, .post__tip-input:focus { border: none !important; border-radius: 2px !important; }
 
@@ -1562,9 +1564,9 @@ html body {
   background-color: #071a2e !important;
   background-image:
     linear-gradient(180deg, rgba(6,20,38,0.42) 0%, rgba(5,16,32,0.56) 60%, rgba(4,12,26,0.66) 100%),
-    url("https://lostimg.cc/ZUzHaojG.png") !important;
+    url("https://azurebelmont.github.io/lst-css/art/bikini-bottom/underwater.jpg") !important;
   background-size: cover, cover !important;
-  background-position: center top, center top !important;
+  background-position: center top, 30% center !important;
   background-repeat: no-repeat, no-repeat !important;
   background-attachment: fixed, fixed !important;
 }
