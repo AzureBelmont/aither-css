@@ -36,6 +36,11 @@
    using. The page ground is a red halftone lattice over the
    character art.
 
+   Panels are plain rectangles. An earlier pass gave them a
+   sliced corner and a red left bar, which shifted on resize and
+   read as a broken box -- the torn header edge carries the
+   Persona language on its own without them.
+
    Panels are opaque. The art reads in the margins and in the
    gutters between panels, not through them -- translucent
    panels over a busy illustration made dense torrent rows hard
@@ -79,13 +84,13 @@
   --quick-search-bg:               #16100f;
   --quick-search-result-hover-bg:  #16100f;
   --post-toolbar-bg:               #16100f;
-  --post-toolbar-hover-bg:         #23232f;
+  --post-toolbar-hover-bg:         #2a1c19;
   --post-toolbar-hover-fg:         #e60012;
   --top-nav-dropdown-menu-item-hover-bg: var(--at-accent-faint);
   --label-fg:                      #a89f92;
   --label-fg-active:               #a89f92;
   --paginate-bg:                   #16100f;
-  --paginate-bg-hover:             #23232f;
+  --paginate-bg-hover:             #2a1c19;
   --paginate-fg:                   #a89f92;
   --data-table-tr-hover-bg:        rgba(230,0,18,0.06);
   --secondary-nav-tab-hover-text-decoration: underline #e60012 2px;
@@ -110,13 +115,13 @@ a.user-tag__link i.fa-heart { background-color: transparent !important; border-c
 body { background-color: var(--at-bg) !important; color: var(--at-text) !important; }
 
 .top-nav { background-color: #1e1513 !important; border-bottom: 1px solid var(--at-accent-faint) !important; box-shadow: 0 2px 20px rgba(0,0,0,0.5) !important; }
-.top-nav .top-nav__branding img { filter: brightness(0) saturate(100%) invert(71%) sepia(7%) saturate(2655%) hue-rotate(20deg) brightness(92%) contrast(231%) !important; transition: filter .3s, transform .3s !important; }
-.top-nav .top-nav__branding:hover img { filter: brightness(0) saturate(100%) invert(71%) sepia(7%) saturate(2655%) hue-rotate(20deg) brightness(99%) contrast(231%) drop-shadow(0 0 8px rgba(230,0,18,0.7)) !important; transform: scale(1.05) !important; }
+.top-nav .top-nav__branding img { filter: brightness(0) saturate(100%) invert(31%) sepia(35%) saturate(3465%) hue-rotate(-6deg) brightness(73%) contrast(215%) !important; transition: filter .3s, transform .3s !important; }
+.top-nav .top-nav__branding:hover img { filter: brightness(0) saturate(100%) invert(31%) sepia(35%) saturate(3465%) hue-rotate(-6deg) brightness(78%) contrast(215%) drop-shadow(0 0 8px rgba(230,0,18,0.7)) !important; transform: scale(1.05) !important; }
 .top-nav__site-logo { background: none !important; -webkit-background-clip: border-box !important; background-clip: border-box !important; -webkit-text-fill-color: var(--at-text) !important; color: var(--at-text) !important; font-weight: 700 !important; }
 .top-nav__dropdown--nontouch { border-radius: 0!important; }
 
 .footer__section:first-child .footer__section-title { color: var(--at-text) !important; display: flex !important; align-items: center !important; gap: 8px !important; font-size: inherit !important; font-weight: inherit !important; text-transform: none !important; letter-spacing: normal !important; }
-.footer .footer__section:first-child .footer__section-title img { filter: brightness(0) saturate(100%) invert(71%) sepia(7%) saturate(2655%) hue-rotate(20deg) brightness(92%) contrast(231%) !important; height: 28px !important; width: auto !important; }
+.footer .footer__section:first-child .footer__section-title img { filter: brightness(0) saturate(100%) invert(31%) sepia(35%) saturate(3465%) hue-rotate(-6deg) brightness(73%) contrast(215%) !important; height: 28px !important; width: auto !important; }
 .footer__section:first-child .footer__section-title .top-nav__site-logo { background: none !important; -webkit-background-clip: border-box !important; background-clip: border-box !important; -webkit-text-fill-color: var(--at-text) !important; color: var(--at-text) !important; font-size: 15px !important; font-weight: 700 !important; letter-spacing: .05em !important; }
 
 html:has(main[class*="torrent"])  .top-nav--left__list-item:has(a[href="https://aither.cc/torrents"]) > a,
@@ -177,7 +182,7 @@ article.quick-search__result:nth-child(odd) { background-color: #1e1513 !importa
 article.quick-search__result:nth-child(even) { background-color: #16100f !important; }
 article.quick-search__result { border-bottom: 1px solid rgba(0, 0, 0, .15) !important; }
 article.quick-search__result:last-child { border-bottom: none !important; }
-article.quick-search__result:hover, article.quick-search__result:hover .quick-search__result-link, .quick-search__result-link:hover { background-color: #23232f !important; }
+article.quick-search__result:hover, article.quick-search__result:hover .quick-search__result-link, .quick-search__result-link:hover { background-color: #2a1c19 !important; }
 .quick-search__results { background-color: #0b0809 !important; border: 1px solid rgba(230,0,18,0.85) !important; border-top: none !important; border-radius: 0 0 var(--at-radius) var(--at-radius) !important; overflow-y: auto !important; overflow-x: hidden !important; }
 .quick-search__image { border: solid 1px var(--at-border) !important; box-sizing: border-box !important; width: 46px !important; height: 69px !important; border-radius: 0!important; object-fit: cover !important; }
 .quick-search__result-name { font-weight: 600 !important; font-size: 14px !important; }
@@ -238,7 +243,7 @@ html body .panel__tab:hover { color: var(--at-text2) !important; }
 html body .panel__tab--active, html body .panel__tab--active:hover { color: var(--at-accent) !important; border-bottom-color: var(--at-accent) !important; }
 html body .panel__header .panel__heading, html body .panel__header .panel__heading--centered { background-color: transparent !important; border: none !important; box-shadow: none !important; }
 
-article.chatbox-message { background-color: #1e1513 !important; position: relative !important; transition: background-color 0.15s ease; border-radius: 0!important; padding: 5px 8px 5px 0 !important; margin: 0 !important; gap: 0px 8px !important; grid-template-columns: 40px auto 1fr auto !important; align-items: start !important; border-bottom: 1px dashed #32324a !important; }
+article.chatbox-message { background-color: #1e1513 !important; position: relative !important; transition: background-color 0.15s ease; border-radius: 0!important; padding: 5px 8px 5px 0 !important; margin: 0 !important; gap: 0px 8px !important; grid-template-columns: 40px auto 1fr auto !important; align-items: start !important; border-bottom: 1px dashed var(--at-border) !important; }
 article.chatbox-message::before { display: none !important; }
 article.chatbox-message:hover { background-color: rgba(230,0,18,0.02) !important; }
 .chatbox-message__menu { position: absolute !important; right: 0 !important; top: 4px !important; }
@@ -267,7 +272,7 @@ i.fa-star.text-gold { color: var(--torrent-row-freeleech-fg, #ffb800) !important
 .data-table > tr > td, .data-table > thead > tr > td, .data-table > tbody > tr > td,
 .data-table > tr > th, .data-table > thead > tr > th, .data-table > tbody > tr > th { border-bottom: none !important; }
 
-.data-table tbody tr:hover td { background-color: #23232f !important; }
+.data-table tbody tr:hover td { background-color: #2a1c19 !important; }
 .data-table td { }
 td { background-color: var(--at-bg2) !important; }
 tr:nth-child(even) td { background-color: var(--at-bg3) !important; }
@@ -310,7 +315,7 @@ tr.torrent-search--list__sticky-row .torrent-search--list__name > a:first-child 
 search.compact-search, .compact-search, .compact-search__visible-default, .torrent-search__filters, [class*="compact-search"] { background-color: var(--at-bg2) !important; border-color: var(--at-border) !important; }
 [class*="compact-search"] p.form__group, [class*="compact-search"] .form__group, [class*="torrent-search"] .form__group { background-color: transparent !important; }
 [class*="compact-search"] .form__text, [class*="compact-search"] input.form__text, [class*="torrent-search"] input { background-color: #16100f !important; border-color: var(--at-border) !important; color: var(--at-text) !important; }
-[class*="compact-search"] input.form__text:focus, [class*="torrent-search"] input:focus { background-color: #32324a !important; border-color: rgba(230,0,18,0.4) !important; }
+[class*="compact-search"] input.form__text:focus, [class*="torrent-search"] input:focus { background-color: var(--at-bg3) !important; border-color: rgba(230,0,18,0.4) !important; }
 p.form__group { background-color: transparent !important; }
 
 .internal-card { background-color: var(--at-bg2) !important; border: 1px solid rgba(230,0,18,0.18) !important; border-radius: var(--at-radius) !important; overflow: hidden !important; transition: border-color .2s, transform .2s !important; }
@@ -335,7 +340,7 @@ article.topic-listing { grid-template-columns: 95px 1fr repeat(3, auto) !importa
 .topic-listing__item--unread .topic-listing__link { color: var(--at-text) !important; font-weight: 600 !important; }
 .topic-listing__item--read .topic-listing__link { color: var(--at-text2) !important; }
 li.topic-listings__item { background-color: var(--at-bg2) !important; border-bottom: 1px solid var(--at-border) !important; }
-li.topic-listings__item:hover { background-color: #23232f !important; }
+li.topic-listings__item:hover { background-color: #2a1c19 !important; }
 li.subforum-listings__item { background-color: var(--at-bg2) !important; border-bottom: 1px solid var(--at-border) !important; }
 li.subforum-listings__item:nth-child(even) { background-color: var(--at-bg3) !important; }
 li.subforum-listings__item:hover { border-left: 3px solid var(--at-accent) !important; }
@@ -354,7 +359,7 @@ article.article-preview { background-color: #16100f !important; border: 1px soli
 nav.pagination { background-color: var(--at-bg2) !important; border: 1px solid var(--at-border) !important; border-radius: var(--at-radius) !important; overflow: hidden !important; }
 .pagination__link, a.pagination__link, li.pagination__previous, li.pagination__next, li.pagination__ellipsis, .pagination__previous, .pagination__next { background-color: var(--at-bg2) !important; color: var(--at-text2) !important; border-color: var(--at-border) !important; }
 a.pagination__next, a.pagination__previous { color: var(--at-text2) !important; }
-.pagination__link:hover, a.pagination__link:hover, li.pagination__next:hover, li.pagination__previous:hover, a.pagination__next:hover, a.pagination__previous:hover { background-color: #23232f !important; color: var(--at-accent) !important; }
+.pagination__link:hover, a.pagination__link:hover, li.pagination__next:hover, li.pagination__previous:hover, a.pagination__next:hover, a.pagination__previous:hover { background-color: #2a1c19 !important; color: var(--at-accent) !important; }
 li.pagination__current, .pagination__current { background-color: var(--at-bg3) !important; color: var(--at-accent) !important; border-color: var(--at-accent-faint) !important; font-weight: 600 !important; }
 li.pagination__previous--disabled, li.pagination__next--disabled { background-color: var(--at-bg2) !important; color: var(--at-text3) !important; opacity: 0.7 !important; }
 li.pagination__previous--disabled:hover, li.pagination__next--disabled:hover { background-color: var(--at-bg2) !important; color: var(--at-text3) !important; cursor: default !important; }
@@ -412,7 +417,7 @@ input.form__text { border-color: rgba(242,239,228,0.17); }
 .panel__actions input.form__text,
 .panelV2 .form__group input.form__text { background-color: #16100f !important; border: 1px solid rgba(242,239,228,0.07) !important; color: var(--at-text) !important; appearance: none !important; -webkit-appearance: none !important; }
 .panel__actions input.form__text:focus,
-.panelV2 .form__group input.form__text:focus { background-color: #32324a !important; border-color: rgba(230,0,18,0.4) !important; outline: none !important; }
+.panelV2 .form__group input.form__text:focus { background-color: var(--at-bg3) !important; border-color: rgba(230,0,18,0.4) !important; outline: none !important; }
 
 .vscomp-wrapper, .vscomp-ele-wrapper, .vscomp-toggle-button { background-color: var(--at-bg2) !important; border: 1px solid var(--at-border) !important; border-radius: 0!important; color: var(--at-text2) !important; }
 .vscomp-toggle-button:hover { border-color: rgba(230,0,18,0.45) !important; }
@@ -450,11 +455,11 @@ input.form__text { border-color: rgba(242,239,228,0.17); }
 [class*="user-profile__column"] { background-color: var(--at-bg2) !important; }
 [class*="user-profile__column"] .panel__heading { background-color: var(--at-bg3) !important; }
 .mediahub-card { background-color: var(--at-bg2) !important; }
-.mediahub-card:hover { background-color: #23232f !important; }
+.mediahub-card:hover { background-color: #2a1c19 !important; }
 .collectible-card { background-color: var(--at-bg2) !important; }
-.collectible-card:hover { background-color: #23232f !important; }
+.collectible-card:hover { background-color: #2a1c19 !important; }
 .playlists__playlist { background-color: var(--at-bg2) !important; }
-.playlists__playlist:hover { background-color: #23232f !important; }
+.playlists__playlist:hover { background-color: #2a1c19 !important; }
 .playlists__playlist-image--none { background-color: var(--at-bg3) !important; }
 .easy-upload3r__panel-beta { background-color: var(--at-bg2) !important; }
 .torrent-search--grouped__dropdown { background-color: var(--at-bg2) !important; }
@@ -609,7 +614,7 @@ a[style*="color:#95A5A6"],a[style*="color: #95A5A6"] { color: #95A5A6 !important
 .post__permalink:hover, .post__edit:hover, .post__quote:hover, .post__delete-button:hover { color: var(--at-accent) !important; background-color: var(--at-bg3) !important; }
 .post__tip-input, .post__tip-input:focus { border: none !important; border-radius: 0!important; }
 .post__content.bbcode-rendered, .post__header, .comment__content.bbcode-rendered, .comment__header { background-color: #1e1513; }
-.bbcode-rendered.bbcode-rendered blockquote { background-color: #16100f !important; border: 2px dotted #23232f !important; }
+.bbcode-rendered.bbcode-rendered blockquote { background-color: #16100f !important; border: 2px dotted #2a1c19 !important; }
 
 .page__torrent--create .sidebar2 .panel__body a[href*="/wikis/"],
 .page__user-profile--show .data-table tfoot a[href*="/tickets"] { color: var(--at-accent) !important; text-decoration: none !important; transition: color .15s, text-shadow .15s !important; }
@@ -748,7 +753,7 @@ tr.torrent-search--list__sticky-row:hover td {
   background-color: transparent !important;
 }
 tr.torrent-search--list__sticky-row:hover {
-  background-color: #23232f !important;
+  background-color: #2a1c19 !important;
 }
 
 li.top-nav__dropdown ul li i.fas,
@@ -1018,7 +1023,7 @@ i.category__icon { color: var(--at-accent) !important; }
 .page__event--index [class*="event"] > a:hover,
 .page__event--index .panel__body > div > a:hover {
   border-color: rgba(230,0,18,0.3) !important;
-  background-color: #23232f !important;
+  background-color: #2a1c19 !important;
 }
 
 @media (max-width: 1100px) {
@@ -1598,8 +1603,8 @@ html body section[class*="-hero "]{
 }
 html body section.panelV2,
 html body section.torrent-results{
-  background-color: transparent !important;
-  background-image: linear-gradient(135deg, rgba(0,0,0,0) 20px, var(--at-bg2) 20px) !important;
+  background-color: var(--at-bg2) !important;
+  background-image: none !important;
 }
 html body .form__button,
 html body button.form__button,
@@ -1746,7 +1751,6 @@ html body section.torrent-results,
 html body section.topic-list,
 html body section.forum-category{
   border-top: 0 !important;
-  border-left: 3px solid var(--at-accent) !important;
 }
 html body .blocks__block,
 html body article.post,
@@ -1757,8 +1761,8 @@ html body section[class*="-hero"]{
   background-color: var(--at-bg2) !important;
 }
 html body section.forum-category{
-  background-color: transparent !important;
-  background-image: linear-gradient(135deg, rgba(0,0,0,0) 20px, var(--at-bg2) 20px) !important;
+  background-color: var(--at-bg2) !important;
+  background-image: none !important;
 }
 html body .panel__header,
 html body .torrent-reviews__header,
@@ -1815,6 +1819,8 @@ html body input.form__text:-webkit-autofill:active{
   transition: none !important;
 }
 
-html body main:not(.page__home) > article{
+html body section.torrent-header,
+html body .torrent-meta-bar,
+html body .torrent-header__meta{
   background-color: var(--at-bg2) !important;
 }

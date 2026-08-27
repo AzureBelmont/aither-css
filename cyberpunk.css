@@ -217,7 +217,7 @@ html body .panel__tab:hover { color: var(--at-text2) !important; }
 html body .panel__tab--active, html body .panel__tab--active:hover { color: var(--at-accent) !important; border-bottom-color: var(--at-accent) !important; }
 html body .panel__header .panel__heading, html body .panel__header .panel__heading--centered { background-color: transparent !important; border: none !important; box-shadow: none !important; }
 
-article.chatbox-message { background-color: #101018 !important; position: relative !important; transition: background-color 0.15s ease; border-radius: 0!important; padding: 5px 8px 5px 0 !important; margin: 0 !important; gap: 0px 8px !important; grid-template-columns: 40px auto 1fr auto !important; align-items: start !important; border-bottom: 1px dashed #32324a !important; }
+article.chatbox-message { background-color: #101018 !important; position: relative !important; transition: background-color 0.15s ease; border-radius: 0!important; padding: 5px 8px 5px 0 !important; margin: 0 !important; gap: 0px 8px !important; grid-template-columns: 40px auto 1fr auto !important; align-items: start !important; border-bottom: 1px dashed var(--at-border) !important; }
 article.chatbox-message::before { display: none !important; }
 article.chatbox-message:hover { background-color: rgba(249,240,2,0.02) !important; }
 .chatbox-message__menu { position: absolute !important; right: 0 !important; top: 4px !important; }
@@ -289,7 +289,7 @@ tr.torrent-search--list__sticky-row .torrent-search--list__name > a:first-child 
 search.compact-search, .compact-search, .compact-search__visible-default, .torrent-search__filters, [class*="compact-search"] { background-color: var(--at-bg2) !important; border-color: var(--at-border) !important; }
 [class*="compact-search"] p.form__group, [class*="compact-search"] .form__group, [class*="torrent-search"] .form__group { background-color: transparent !important; }
 [class*="compact-search"] .form__text, [class*="compact-search"] input.form__text, [class*="torrent-search"] input { background-color: #16161f !important; border-color: var(--at-border) !important; color: var(--at-text) !important; }
-[class*="compact-search"] input.form__text:focus, [class*="torrent-search"] input:focus { background-color: #32324a !important; border-color: rgba(249,240,2,0.4) !important; }
+[class*="compact-search"] input.form__text:focus, [class*="torrent-search"] input:focus { background-color: var(--at-bg3) !important; border-color: rgba(249,240,2,0.4) !important; }
 p.form__group { background-color: transparent !important; }
 
 .internal-card { background-color: var(--at-bg2) !important; border: 1px solid rgba(249,240,2,0.18) !important; border-radius: var(--at-radius) !important; overflow: hidden !important; transition: border-color .2s, transform .2s !important; }
@@ -391,7 +391,7 @@ input.form__text { border-color: rgba(232,232,242,0.17); }
 .panel__actions input.form__text,
 .panelV2 .form__group input.form__text { background-color: #16161f !important; border: 1px solid rgba(232,232,242,0.07) !important; color: var(--at-text) !important; appearance: none !important; -webkit-appearance: none !important; }
 .panel__actions input.form__text:focus,
-.panelV2 .form__group input.form__text:focus { background-color: #32324a !important; border-color: rgba(249,240,2,0.4) !important; outline: none !important; }
+.panelV2 .form__group input.form__text:focus { background-color: var(--at-bg3) !important; border-color: rgba(249,240,2,0.4) !important; outline: none !important; }
 
 .vscomp-wrapper, .vscomp-ele-wrapper, .vscomp-toggle-button { background-color: var(--at-bg2) !important; border: 1px solid var(--at-border) !important; border-radius: 0!important; color: var(--at-text2) !important; }
 .vscomp-toggle-button:hover { border-color: rgba(249,240,2,0.45) !important; }
