@@ -1629,3 +1629,30 @@ html body input.form__text:-webkit-autofill:active{
   -webkit-text-fill-color: var(--at-text) !important;
   transition: none !important;
 }
+
+:root{
+  --post-head-bg: var(--at-bg3);
+  --post-head-fg: var(--at-text2);
+}
+html body article.rating{
+  background-color: var(--at-bg2) !important;
+  border: 1px solid var(--at-border) !important;
+  border-radius: var(--at-radius) !important;
+  overflow: hidden !important;
+}
+html body .rating__header{
+  background-color: var(--at-bg3) !important;
+  color: var(--at-text2) !important;
+  -webkit-text-fill-color: var(--at-text2) !important;
+  border-bottom: 1px solid var(--at-border) !important;
+  border-radius: 0 !important;
+}
+html body article.rating > .comment__content.bbcode-rendered,
+html body article.rating > .comment__aside{
+  background-color: var(--at-bg) !important;
+  border-radius: 0 !important;
+}
+html body .comment__replies,
+html body li.comment__list-item{
+  background-color: transparent !important;
+}
