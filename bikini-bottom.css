@@ -33,6 +33,12 @@
    own surface, so the wash is dropped on main.page__home and
    the artwork reads through the panels instead.
 
+   The home chat sits at 0.88 rather than 0.75. At 0.75 body
+   text over the brighter parts of the artwork measured 3.8:1,
+   under the 4.5:1 floor for small text -- reported as "hard to
+   read" and confirmed against the image. The scrim was lifted
+   with it so the margins stay in the same family.
+
    The artwork lives in the repo at art/bikini-bottom/ and is
    served from GitHub Pages, same origin as this stylesheet.
    The source is padded back to 1920x1080 -- the size it was
@@ -1570,7 +1576,7 @@ html body [class*="__select"], html body [class*="__input"] { color-scheme: dark
 html body {
   background-color: #071a2e !important;
   background-image:
-    linear-gradient(180deg, rgba(6,20,38,0.42) 0%, rgba(5,16,32,0.56) 60%, rgba(4,12,26,0.66) 100%),
+    linear-gradient(180deg, rgba(6,20,38,0.55) 0%, rgba(5,16,32,0.66) 60%, rgba(4,12,26,0.74) 100%),
     url("https://azurebelmont.github.io/lst-css/art/bikini-bottom/underwater.jpg") !important;
   background-size: cover, cover !important;
   background-position: center top, center top !important;
@@ -1688,7 +1694,7 @@ html body section.panelV2.chatV2 .panel__body{
 }
 html body .panelV2.chatbox .panel__header,
 html body #chatbox_header{
-  background-color: rgba(18,54,83,0.62) !important;
+  background-color: rgba(18,54,83,0.70) !important;
   background-image: none !important;
 }
 html body .chatV2__barSurface,
@@ -1703,7 +1709,7 @@ html body .chatV2__composer{
 }
 html body main.page__home section.panelV2.chatV2,
 html body main.page__home .panelV2.chatbox{
-  background-color: rgba(13,39,66,0.75) !important;
+  background-color: rgba(13,39,66,0.88) !important;
 }
 html body main.page__home .chatV2__barSurface,
 html body main.page__home .chatV2__columnHeader,
@@ -1713,7 +1719,7 @@ html body main.page__home .chatV2__sidebarFooter,
 html body main.page__home .chatV2__threadHeader,
 html body main.page__home .chatV2__mePanel,
 html body main.page__home .chatV2__composer{
-  background-color: rgba(18,54,83,0.62) !important;
+  background-color: rgba(18,54,83,0.70) !important;
 }
 html body main.page__home .panelV2.chatbox .form__group input.form__text,
 html body main.page__home .panelV2.chatbox textarea,
