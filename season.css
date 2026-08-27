@@ -23,6 +23,7 @@
    --at-red           #ff6b6b                leechers / error
    ========================================================== */
 :root {
+  --quick-search-border-radius: 9px;
   --key-value-padding: 10px;
   --ns-pool:       #35d6e8;
   --ns-coral:      #ff7a5c;
@@ -859,12 +860,13 @@ input[type="password"] {
   font-size: 14px !important;
 }
 
-.quick-search__input, input.quick-search__input {
-  border-radius: var(--quick-search-border-radius, 16px) !important;
+html body .quick-search__input,
+html body input.quick-search__input {
+  border-radius: var(--quick-search-border-radius, 9px) !important;
 }
-.quick-search:active .quick-search__input,
-.quick-search:focus-within .quick-search__input {
-  border-radius: var(--quick-search-border-radius, 16px) var(--quick-search-border-radius, 16px) 0 0 !important;
+html body .quick-search:active .quick-search__input,
+html body .quick-search:focus-within .quick-search__input {
+  border-radius: var(--quick-search-border-radius, 9px) var(--quick-search-border-radius, 9px) 0 0 !important;
 }
 .post__tip-input, .post__tip-input:focus { border: none !important; border-radius: 2px !important; }
 
@@ -1330,9 +1332,12 @@ html body .bbcode-input,
 html body .bbcode-input__tabs,
 html body .bbcode-input__input,
 html body .form__textarea,
-html body .post__content.bbcode-rendered,
 html body .bbcode-rendered{
   border-radius: var(--at-radius) !important;
+}
+html body article.post > .post__content.bbcode-rendered,
+html body article.comment > .comment__content.bbcode-rendered{
+  border-radius: 0 !important;
 }
 html body .bbcode-input__tabs{ overflow: hidden !important; }
 
@@ -1487,6 +1492,7 @@ html body ::selection{
 html body input:-webkit-autofill,
 html body input:-webkit-autofill:hover,
 html body input:-webkit-autofill:focus,
+html body input:-webkit-autofill:active,
 html body textarea:-webkit-autofill,
 html body select:-webkit-autofill{
   -webkit-box-shadow: 0 0 0 1000px var(--at-bg2) inset !important;
@@ -1610,4 +1616,43 @@ html body .bbcode-input__tab-label{
 html body .topic-item--read .topic-item__indicator,
 html body [class*="topic-"][class*="--read"] [class*="__indicator"]{
   background-color: var(--at-text3) !important;
+}
+
+html body .form__text,
+html body .form__text:hover,
+html body .form__text:focus,
+html body .form__text:focus-visible,
+html body textarea.form__textarea:focus,
+html body input.form__text:-webkit-autofill:active{
+  background-color: var(--at-bg2) !important;
+  background-image: none !important;
+  -webkit-text-fill-color: var(--at-text) !important;
+  transition: none !important;
+}
+
+:root{
+  --post-head-bg: var(--at-bg3);
+  --post-head-fg: var(--at-text2);
+}
+html body article.rating{
+  background-color: var(--at-bg2) !important;
+  border: 1px solid var(--at-border) !important;
+  border-radius: var(--at-radius) !important;
+  overflow: hidden !important;
+}
+html body .rating__header{
+  background-color: var(--at-bg3) !important;
+  color: var(--at-text2) !important;
+  -webkit-text-fill-color: var(--at-text2) !important;
+  border-bottom: 1px solid var(--at-border) !important;
+  border-radius: 0 !important;
+}
+html body article.rating > .comment__content.bbcode-rendered,
+html body article.rating > .comment__aside{
+  background-color: var(--at-bg) !important;
+  border-radius: 0 !important;
+}
+html body .comment__replies,
+html body li.comment__list-item{
+  background-color: transparent !important;
 }
