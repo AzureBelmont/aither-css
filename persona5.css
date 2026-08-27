@@ -1834,6 +1834,16 @@ html body a.torrent-actions__btn.torrent-actions__btn--download,
 html body button.torrent-actions__btn.torrent-actions__btn--download{
   background-color: #560f13 !important;
   background-image: none !important;
+  border-color: var(--at-accent) !important;
+  color: var(--at-text) !important;
+  -webkit-text-fill-color: var(--at-text) !important;
+}
+html body a.torrent-actions__btn.torrent-actions__btn--download i,
+html body a.torrent-actions__btn.torrent-actions__btn--download span,
+html body button.torrent-actions__btn.torrent-actions__btn--download i,
+html body button.torrent-actions__btn.torrent-actions__btn--download span{
+  color: var(--at-text) !important;
+  -webkit-text-fill-color: var(--at-text) !important;
 }
 html body section.panelV2.chatV2,
 html body .panelV2.chatbox{
@@ -1847,4 +1857,44 @@ html body article.chatbox-message{
 }
 html body article.chatbox-message:nth-child(even){
   background-color: rgba(11,8,9,0.28) !important;
+}
+
+html body:has(main.page__home){
+  background-image: radial-gradient(circle at 50% 50%, rgba(230,0,18,0.18) 1.7px, rgba(0,0,0,0) 1.9px), radial-gradient(circle at 50% 50%, rgba(230,0,18,0.18) 1.7px, rgba(0,0,0,0) 1.9px), linear-gradient(180deg, rgba(11,8,9,0.34) 0%, rgba(11,8,9,0.30) 60%, rgba(11,8,9,0.55) 100%), url("https://azurebelmont.github.io/lst-css/art/persona5/thieves.jpg"), linear-gradient(180deg, #0b0809 0%, #12090b 100%) !important;
+}
+html body:has(main[class*="page__torrent"]){
+  background-image: radial-gradient(circle at 50% 50%, rgba(230,0,18,0.18) 1.7px, rgba(0,0,0,0) 1.9px), radial-gradient(circle at 50% 50%, rgba(230,0,18,0.18) 1.7px, rgba(0,0,0,0) 1.9px), linear-gradient(180deg, rgba(11,8,9,0.34) 0%, rgba(11,8,9,0.30) 60%, rgba(11,8,9,0.55) 100%), url("https://azurebelmont.github.io/lst-css/art/persona5/joker.jpg"), linear-gradient(180deg, #0b0809 0%, #12090b 100%) !important;
+}
+html body:has(main[class*="page__forum"]){
+  background-image: radial-gradient(circle at 50% 50%, rgba(230,0,18,0.18) 1.7px, rgba(0,0,0,0) 1.9px), radial-gradient(circle at 50% 50%, rgba(230,0,18,0.18) 1.7px, rgba(0,0,0,0) 1.9px), linear-gradient(180deg, rgba(11,8,9,0.34) 0%, rgba(11,8,9,0.30) 60%, rgba(11,8,9,0.55) 100%), url("https://azurebelmont.github.io/lst-css/art/persona5/queen.jpg"), linear-gradient(180deg, #0b0809 0%, #12090b 100%) !important;
+}
+html body:has(main[class*="page__request"]){
+  background-image: radial-gradient(circle at 50% 50%, rgba(230,0,18,0.18) 1.7px, rgba(0,0,0,0) 1.9px), radial-gradient(circle at 50% 50%, rgba(230,0,18,0.18) 1.7px, rgba(0,0,0,0) 1.9px), linear-gradient(180deg, rgba(11,8,9,0.34) 0%, rgba(11,8,9,0.30) 60%, rgba(11,8,9,0.55) 100%), url("https://azurebelmont.github.io/lst-css/art/persona5/skull.jpg"), linear-gradient(180deg, #0b0809 0%, #12090b 100%) !important;
+}
+html body:has(main[class*="page__upload"]){
+  background-image: radial-gradient(circle at 50% 50%, rgba(230,0,18,0.18) 1.7px, rgba(0,0,0,0) 1.9px), radial-gradient(circle at 50% 50%, rgba(230,0,18,0.18) 1.7px, rgba(0,0,0,0) 1.9px), linear-gradient(180deg, rgba(11,8,9,0.34) 0%, rgba(11,8,9,0.30) 60%, rgba(11,8,9,0.55) 100%), url("https://azurebelmont.github.io/lst-css/art/persona5/fox.jpg"), linear-gradient(180deg, #0b0809 0%, #12090b 100%) !important;
+}
+html body:has(main[class*="page__article"]){
+  background-image: radial-gradient(circle at 50% 50%, rgba(230,0,18,0.18) 1.7px, rgba(0,0,0,0) 1.9px), radial-gradient(circle at 50% 50%, rgba(230,0,18,0.18) 1.7px, rgba(0,0,0,0) 1.9px), linear-gradient(180deg, rgba(11,8,9,0.34) 0%, rgba(11,8,9,0.30) 60%, rgba(11,8,9,0.55) 100%), url("https://azurebelmont.github.io/lst-css/art/persona5/navi.jpg"), linear-gradient(180deg, #0b0809 0%, #12090b 100%) !important;
+}
+html body:has(main[class*="page__wiki"]){
+  background-image: radial-gradient(circle at 50% 50%, rgba(230,0,18,0.18) 1.7px, rgba(0,0,0,0) 1.9px), radial-gradient(circle at 50% 50%, rgba(230,0,18,0.18) 1.7px, rgba(0,0,0,0) 1.9px), linear-gradient(180deg, rgba(11,8,9,0.34) 0%, rgba(11,8,9,0.30) 60%, rgba(11,8,9,0.55) 100%), url("https://azurebelmont.github.io/lst-css/art/persona5/navi.jpg"), linear-gradient(180deg, #0b0809 0%, #12090b 100%) !important;
+}
+html body:has(main[class*="page__staff"]){
+  background-image: radial-gradient(circle at 50% 50%, rgba(230,0,18,0.18) 1.7px, rgba(0,0,0,0) 1.9px), radial-gradient(circle at 50% 50%, rgba(230,0,18,0.18) 1.7px, rgba(0,0,0,0) 1.9px), linear-gradient(180deg, rgba(11,8,9,0.34) 0%, rgba(11,8,9,0.30) 60%, rgba(11,8,9,0.55) 100%), url("https://azurebelmont.github.io/lst-css/art/persona5/crow.jpg"), linear-gradient(180deg, #0b0809 0%, #12090b 100%) !important;
+}
+html body:has(main[class*="page__user"]){
+  background-image: radial-gradient(circle at 50% 50%, rgba(230,0,18,0.18) 1.7px, rgba(0,0,0,0) 1.9px), radial-gradient(circle at 50% 50%, rgba(230,0,18,0.18) 1.7px, rgba(0,0,0,0) 1.9px), linear-gradient(180deg, rgba(11,8,9,0.34) 0%, rgba(11,8,9,0.30) 60%, rgba(11,8,9,0.55) 100%), url("https://azurebelmont.github.io/lst-css/art/persona5/noir.jpg"), linear-gradient(180deg, #0b0809 0%, #12090b 100%) !important;
+}
+html body:has(main[class*="page__playlist"]){
+  background-image: radial-gradient(circle at 50% 50%, rgba(230,0,18,0.18) 1.7px, rgba(0,0,0,0) 1.9px), radial-gradient(circle at 50% 50%, rgba(230,0,18,0.18) 1.7px, rgba(0,0,0,0) 1.9px), linear-gradient(180deg, rgba(11,8,9,0.34) 0%, rgba(11,8,9,0.30) 60%, rgba(11,8,9,0.55) 100%), url("https://azurebelmont.github.io/lst-css/art/persona5/panther.jpg"), linear-gradient(180deg, #0b0809 0%, #12090b 100%) !important;
+}
+html body:has(main[class*="page__media"]){
+  background-image: radial-gradient(circle at 50% 50%, rgba(230,0,18,0.18) 1.7px, rgba(0,0,0,0) 1.9px), radial-gradient(circle at 50% 50%, rgba(230,0,18,0.18) 1.7px, rgba(0,0,0,0) 1.9px), linear-gradient(180deg, rgba(11,8,9,0.34) 0%, rgba(11,8,9,0.30) 60%, rgba(11,8,9,0.55) 100%), url("https://azurebelmont.github.io/lst-css/art/persona5/panther.jpg"), linear-gradient(180deg, #0b0809 0%, #12090b 100%) !important;
+}
+html body:has(main[class*="page__subtitle"]){
+  background-image: radial-gradient(circle at 50% 50%, rgba(230,0,18,0.18) 1.7px, rgba(0,0,0,0) 1.9px), radial-gradient(circle at 50% 50%, rgba(230,0,18,0.18) 1.7px, rgba(0,0,0,0) 1.9px), linear-gradient(180deg, rgba(11,8,9,0.34) 0%, rgba(11,8,9,0.30) 60%, rgba(11,8,9,0.55) 100%), url("https://azurebelmont.github.io/lst-css/art/persona5/violet.jpg"), linear-gradient(180deg, #0b0809 0%, #12090b 100%) !important;
+}
+html body:has(main[class*="page__chat"]){
+  background-image: radial-gradient(circle at 50% 50%, rgba(230,0,18,0.18) 1.7px, rgba(0,0,0,0) 1.9px), radial-gradient(circle at 50% 50%, rgba(230,0,18,0.18) 1.7px, rgba(0,0,0,0) 1.9px), linear-gradient(180deg, rgba(11,8,9,0.34) 0%, rgba(11,8,9,0.30) 60%, rgba(11,8,9,0.55) 100%), url("https://azurebelmont.github.io/lst-css/art/persona5/mona.jpg"), linear-gradient(180deg, #0b0809 0%, #12090b 100%) !important;
 }
