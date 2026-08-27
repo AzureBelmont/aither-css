@@ -33,6 +33,15 @@
    own surface, so the wash is dropped on main.page__home and
    the artwork reads through the panels instead.
 
+   The torrent search page is the same story: the wash used to
+   sit on .torrent-search__component, which is full width and
+   the height of the whole results list, so it read as an empty
+   slab between the search box and the table. The results panel
+   already carries its own opaque surface, so the wash moves off
+   it and onto the search row alone -- the row needs one because
+   the filter button beside the input has no surface of its own
+   and was landing straight on the artwork.
+
    The home chat sits at 0.88 rather than 0.75. At 0.75 body
    text over the brighter parts of the artwork measured 3.8:1,
    under the 4.5:1 floor for small text -- reported as "hard to
@@ -50,7 +59,14 @@
       Decor
    ----------------------------------------------------------
    Bubbles rise across the whole background, two layers at
-   different sizes and speeds -- big ones rise faster, the way
+   different sizes and speeds. The layer sits at z-index 0 on
+   html::before/::after, which paints above any body content
+   that is not itself positioned -- so main is lifted to
+   z-index 1. The header and footer are already sticky and so
+   were never covered, which is why the bubbles appeared over
+   panels but not over the nav.
+
+   Two layers at different sizes and speeds -- big ones rise faster, the way
    they actually do. Full width with repeat on both axes: an
    earlier version used narrow gutter columns with an x offset
    and repeat-y, which sliced every bubble at the column edge.
@@ -1616,6 +1632,12 @@ html body main > article:has(> .torrent-search__component) {
   border: 0 !important;
 }
 html body main > article > .torrent-search__component {
+  background-color: transparent !important;
+  border: 0 !important;
+}
+html body .compact-search__visible-default,
+html body search > div,
+html body .torrent-search__filters > div{
   background-color: rgba(7,26,46,0.86) !important;
   border: 1px solid rgba(180,215,240,0.16) !important;
   border-radius: 14px !important;
@@ -1842,4 +1864,9 @@ html body .rating__add-rating--stars input:checked + label::after{
 }
 html body .rating__add-rating--stars:hover input:checked ~ label{
   color: rgba(250,204,21,0.42) !important;
+}
+
+html body main{
+  position: relative !important;
+  z-index: 1 !important;
 }
