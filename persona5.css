@@ -46,7 +46,12 @@
    panels over a busy illustration made dense torrent rows hard
    to read, and mixing translucent and opaque boxes on one page
    looked like a bug rather than a choice. The chatbox is the
-   single exception, at 0.82.
+   single exception, at 0.82, the same idea as Bikini Bottom --
+   it is the one panel you look past rather than read closely.
+
+   The torrent header itself is left bare so the artwork carries
+   the page title; only the chips and action buttons inside it
+   are opaque, because those are small and were washing out.
    ========================================================== */
 :root {
   --key-value-padding: 10px;
@@ -259,7 +264,7 @@ article.chatbox-message:hover { background-color: rgba(230,0,18,0.02) !important
 .chatroom__whispers { font-size: 11px !important; padding: 1px 8px !important; opacity: 0.5 !important; line-height: 1.2 !important; }
 .chatroom__new-message { padding-top: 4px !important; margin-top: 0 !important; }
 section.chatroom__users { background-color: var(--at-bg2) !important; }
-.panelV2.chatbox { background-color: #1e1513 !important; }
+.panelV2.chatbox { background-color: rgba(30,21,19,0.82) !important; }
 
 h1, h2, h3 { color: var(--at-text) !important; }
 .panelV2 > .panel__heading, .block__heading, [class*="section__title"], [class*="section-title"] { color: var(--at-accent) !important; }
@@ -1819,8 +1824,27 @@ html body input.form__text:-webkit-autofill:active{
   transition: none !important;
 }
 
-html body section.torrent-header,
-html body .torrent-meta-bar,
-html body .torrent-header__meta{
-  background-color: var(--at-bg2) !important;
+html body .torrent-meta-bar__uploader,
+html body .torrent-badges__item,
+html body .torrent-actions__btn{
+  background-color: var(--at-bg3) !important;
+  background-image: none !important;
+}
+html body a.torrent-actions__btn.torrent-actions__btn--download,
+html body button.torrent-actions__btn.torrent-actions__btn--download{
+  background-color: #560f13 !important;
+  background-image: none !important;
+}
+html body section.panelV2.chatV2,
+html body .panelV2.chatbox{
+  background-color: rgba(30,21,19,0.82) !important;
+}
+html body .chatV2__barSurface,
+html body .chatV2__messages,
+html body .chatV2__sidebar,
+html body article.chatbox-message{
+  background-color: transparent !important;
+}
+html body article.chatbox-message:nth-child(even){
+  background-color: rgba(11,8,9,0.28) !important;
 }
