@@ -1582,3 +1582,21 @@ html body .comment__replies,
 html body li.comment__list-item{
   background-color: transparent !important;
 }
+
+html body .rating__add-rating--stars label{
+  position: relative !important;
+}
+html body .rating__add-rating--stars input:checked + label::after{
+  content: "" !important;
+  position: absolute !important;
+  left: 12% !important;
+  right: 12% !important;
+  bottom: -3px !important;
+  height: 2px !important;
+  border-radius: 1px !important;
+  background: var(--at-accent) !important;
+  pointer-events: none !important;
+}
+html body .rating__add-rating--stars:hover input:checked ~ label{
+  color: rgba(250,204,21,0.42) !important;
+}
