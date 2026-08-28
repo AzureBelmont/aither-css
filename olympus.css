@@ -313,11 +313,11 @@ li.subforum-listings__item:hover { border-left: 3px solid var(--at-accent) !impo
 .trending-poster__download-count { border: 2px solid var(--at-accent2); }
 
 article.post { background-color: var(--at-bg2) !important; border: 1px solid var(--at-border) !important; border-radius: var(--at-radius) !important; }
-aside.post__aside { background-color: #182232 !important; border-right: 1px solid var(--at-border) !important; }
+aside.post__aside { background-color: var(--at-bg3) !important; border-right: 1px solid var(--at-border) !important; }
 menu.post__toolbar { background-color: #1e293b !important; border-top: 1px solid var(--at-border) !important; }
 .post__footer { background-color: #121927 !important }
 article.comment { background-color: var(--at-bg2) !important; border: 1px solid var(--at-border) !important; border-radius: var(--at-radius) !important; }
-aside.comment__aside { background-color: #182232 !important; border-right: 1px solid var(--at-border) !important; }
+aside.comment__aside { background-color: var(--at-bg3) !important; border-right: 1px solid var(--at-border) !important; }
 ul.comment-list { background-color: var(--at-bg2) !important; }
 article.article-preview { background-color: #162032 !important; border: 1px solid var(--at-border) !important; border-radius: var(--at-radius) !important; }
 
@@ -565,7 +565,7 @@ a[style*="color:#95A5A6"],a[style*="color: #95A5A6"] { color: #95A5A6 !important
 
 .post__permalink:hover, .post__edit:hover, .post__quote:hover, .post__delete-button:hover { color: var(--at-accent) !important; background-color: var(--at-bg3) !important; }
 .post__tip-input, .post__tip-input:focus { border: none !important; border-radius: 2px !important; }
-.post__content.bbcode-rendered, .post__header, .comment__content.bbcode-rendered, .comment__header, .rating__header { background-color: #111928; }
+.post__content.bbcode-rendered, .post__header, .comment__content.bbcode-rendered, .comment__header, .rating__header { background-color: var(--at-bg3); }
 .bbcode-rendered.bbcode-rendered blockquote { background-color: #121823 !important; border: 2px dotted #3e4455 !important; }
 
 .page__torrent--create .sidebar2 .panel__body a[href*="/wikis/"],
@@ -1547,7 +1547,7 @@ html body .rating__header{
 }
 html body article.rating > .comment__content.bbcode-rendered,
 html body article.rating > .comment__aside{
-  background-color: var(--at-bg2) !important;
+  background-color: var(--at-bg3) !important;
   border-radius: 0 !important;
 }
 html body .comment__replies,
