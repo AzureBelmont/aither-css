@@ -1597,3 +1597,8 @@ html body .rating__add-rating--stars input:checked + label::after{
 html body .rating__add-rating--stars:hover input:checked ~ label{
   color: rgba(250,204,21,0.42) !important;
 }
+
+html body .stats__panels > * {
+  align-self: start !important;
+  height: auto !important;
+}
