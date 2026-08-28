@@ -1817,12 +1817,6 @@ html body input.form__text:-webkit-autofill:active{
   transition: none !important;
 }
 
-html body .torrent-meta-bar__uploader,
-html body .torrent-badges__item,
-html body .torrent-actions__btn{
-  background-color: var(--at-bg3) !important;
-  background-image: none !important;
-}
 html body a.torrent-actions__btn.torrent-actions__btn--download,
 html body button.torrent-actions__btn.torrent-actions__btn--download{
   background-color: #560f13 !important;

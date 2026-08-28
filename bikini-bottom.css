@@ -1884,13 +1884,6 @@ html body .form__button--outlined {
   background-color: var(--at-bg3) !important;
 }
 
-html body .torrent-meta-bar__uploader,
-html body .torrent-meta-bar__age,
-html body .torrent-badges__item,
-html body .torrent-actions__btn {
-  background-color: var(--at-bg3) !important;
-  background-image: none !important;
-}
 
 html body .form__button.form__button--filled {
   background-color: var(--at-bg3) !important;
