@@ -1826,6 +1826,13 @@ html body .rating__header{
   border-bottom: 1px solid var(--at-border) !important;
   border-radius: 0 !important;
 }
+html body .rating__user-rating{
+  font-size: 15px !important;
+  font-weight: 700 !important;
+}
+html body .rating__user-rating i.fa-star{
+  color: var(--at-accent) !important;
+}
 html body article.rating > .comment__content.bbcode-rendered,
 html body article.rating > .comment__aside{
   background-color: var(--at-bg) !important;
