@@ -588,7 +588,7 @@ a[style*="color:#95A5A6"],a[style*="color: #95A5A6"] { color: #95A5A6 !important
 
 .post__permalink:hover, .post__edit:hover, .post__quote:hover, .post__delete-button:hover { color: var(--at-accent) !important; background-color: var(--at-bg3) !important; }
 .post__tip-input, .post__tip-input:focus { border: none !important; border-radius: 2px !important; }
-.post__content.bbcode-rendered, .post__header, .comment__content.bbcode-rendered, .comment__header { background-color: #0e1b15; }
+.post__content.bbcode-rendered, .post__header, .comment__content.bbcode-rendered, .comment__header, .rating__header { background-color: #0e1b15; }
 .bbcode-rendered.bbcode-rendered blockquote { background-color: #12211a !important; border: 2px dotted #1c3226 !important; }
 
 .page__torrent--create .sidebar2 .panel__body a[href*="/wikis/"],
@@ -1656,7 +1656,6 @@ html body article.rating{
   overflow: hidden !important;
 }
 html body .rating__header{
-  background-color: transparent !important;
   color: var(--at-text) !important;
   -webkit-text-fill-color: var(--at-text) !important;
   border-bottom: 1px solid var(--at-border) !important;
