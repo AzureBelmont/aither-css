@@ -22,12 +22,17 @@
    None of it is needed on Aither or LST -- they leave those
    variables alone -- which is why it is not in the base theme.
 
+   A few OE colours are written inline in its HTML -- the radio
+   music note and the chat reply arrow -- so those need
+   !important to reach at all.
+
    Left deliberately alone
    ----------------------------------------------------------
    Freeleech gold, bumped gold and the personal-release purple
-   are real semantic states, so they keep OE's colours. The
-   footer STATUS badge is an image served by Uptime Kuma, not
-   CSS, so no stylesheet can recolour it.
+   are real semantic states, so they keep OE's colours. The chat
+   avatar rings are per-user group colours, set inline, so they
+   stay too. The footer STATUS badge is an image served by
+   Uptime Kuma, not CSS, so no stylesheet can recolour it.
    ========================================================== */
 @import url('https://azurebelmont.github.io/aither-css/cyberpunk.css');
 
@@ -74,6 +79,17 @@ html body i.torrent-icon{ color: var(--at-accent) !important; }
 html body .text-info,
 html body .footer__icon{ color: var(--at-accent) !important; }
 
-html body .panel__heading:has(.marquee-container){
+html body .panel__heading:has(.marquee-container),
+html body .panelV2:has(.marquee-container){
   border-radius: 0 !important;
+}
+
+html body i.fa-music,
+html body .panel__heading i.fa-music,
+html body .top-nav--right__icon-link i.fa-music{
+  color: var(--at-accent) !important;
+}
+html body .chatbox-message__reply-button,
+html body .chatbox-message__reply-button i{
+  color: var(--at-accent2) !important;
 }
