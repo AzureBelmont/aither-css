@@ -1833,3 +1833,25 @@ html body .form__button--filled,
 html body .form__button--outlined {
   background-color: var(--at-bg3) !important;
 }
+
+html body .torrent-meta-bar__uploader,
+html body .torrent-meta-bar__age,
+html body .torrent-badges__item,
+html body .torrent-actions__btn {
+  background-color: var(--at-bg3) !important;
+  background-image: none !important;
+}
+
+html body .form__button.form__button--filled {
+  background-color: var(--at-bg3) !important;
+}
+
+html body ul.request__tags > li {
+  background-color: var(--at-bg3) !important;
+  border: 1px solid rgba(180,215,240,0.07) !important;
+  border-radius: 8px !important;
+  padding: 0 12px !important;
+}
+html body ul.request__tags > li::after {
+  display: none !important;
+}
