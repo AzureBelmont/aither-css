@@ -1828,3 +1828,8 @@ html body .profile-sections > * {
   align-self: start !important;
   height: auto !important;
 }
+
+html body .form__button--filled,
+html body .form__button--outlined {
+  background-color: var(--at-bg3) !important;
+}

@@ -1626,6 +1626,7 @@ html body .form__button--filled,
 html body .form__button--outlined{
   clip-path: polygon(9px 0, 100% 0, 100% 100%, 0 100%, 0 9px) !important;
   border-radius: 0 !important;
+  background-color: var(--at-bg3) !important;
 }
 html body .form__button:hover,
 html body button.form__button:hover,
