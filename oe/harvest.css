@@ -89,6 +89,11 @@ html body .panel__heading i.fa-music,
 html body .top-nav--right__icon-link i.fa-music{
   color: var(--at-accent) !important;
 }
+html body .top-nav--right__icon-link i.fa-music{
+  background-color: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
 html body .chatbox-message__reply-button,
 html body .chatbox-message__reply-button i{
   color: var(--at-accent2) !important;
