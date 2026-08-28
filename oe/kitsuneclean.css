@@ -1,0 +1,79 @@
+/* ==========================================================
+   Kitsuneclean + OnlyEncodes+
+   Kitsuneclean, remapped for OnlyEncodes+.
+
+   Author  AzureBelmont
+   Repo    github.com/AzureBelmont/aither-css
+   Base    Pulls kitsuneclean.css in automatically, so every fix
+           to the theme flows through here too.
+   Install Settings -> General -> External CSS Stylesheet
+           Paste this URL INSTEAD of kitsuneclean.css
+
+   Why this file exists
+   ----------------------------------------------------------
+   The default "OnlyEncodes Theme" loads two layers, _galactic
+   and _dark-yellow. The second one's first rule points
+   fourteen different colour variables at one orange, #ff6d00,
+   then maps UNIT3D's component colours onto those. So links,
+   hover, headings, icons, ratings and most semantic states all
+   read orange whichever theme sits on top. These overrides give
+   each name its job back, from this theme's own palette.
+
+   None of it is needed on Aither or LST -- they leave those
+   variables alone -- which is why it is not in the base theme.
+
+   Left deliberately alone
+   ----------------------------------------------------------
+   Freeleech gold, bumped gold and the personal-release purple
+   are real semantic states, so they keep OE's colours. The
+   footer STATUS badge is an image served by Uptime Kuma, not
+   CSS, so no stylesheet can recolour it.
+   ========================================================== */
+@import url('https://azurebelmont.github.io/aither-css/kitsuneclean.css');
+
+:root{
+  --color-blue:            var(--k-accent);
+  --color-light-blue:      var(--k-accent2);
+  --color-green:           var(--k-green);
+  --color-light-green:     var(--k-green);
+  --color-dark-green:      var(--k-green);
+  --color-red:             var(--k-red);
+  --color-light-red:       var(--k-red);
+  --color-yellow:          var(--k-accent);
+  --color-magenta:         var(--k-accent);
+  --color-light-magenta:   var(--k-accent);
+  --color-purple:          var(--k-accent);
+  --color-light-purple:    var(--k-accent);
+  --color-400:             var(--k-accent);
+  --color-A200:            var(--k-accent);
+  --color-A400:            var(--k-accent);
+  --color-dark-blue:       var(--k-bg);
+  --color-dark-red:        var(--k-bg);
+  --text-color:            var(--k-text);
+
+  --torrent-row-fg:                  var(--k-text);
+  --torrent-row-format-fg:           var(--k-text);
+  --torrent-row-format-bg:           var(--k-bg3);
+  --torrent-row-buttons-fg:          currentColor;
+  --torrent-row-seeders-fg:          var(--k-green);
+  --torrent-row-leechers-fg:         var(--k-red);
+  --torrent-row-completed-fg:        var(--k-accent);
+  --torrent-row-thanks-fg:           var(--k-red);
+  --torrent-row-comments-fg:         var(--k-accent);
+  --torrent-row-internal-fg:         var(--k-accent2);
+  --torrent-row-stream-optimized-fg: var(--k-accent2);
+  --torrent-row-featured-fg:         var(--k-accent);
+  --torrent-row-double-upload-fg:    var(--k-green);
+  --torrent-row-sticky-fg:           var(--k-text);
+  --torrent-row-highspeed-fg:        var(--k-red);
+  --torrent-row-sd-fg:               var(--k-text2);
+}
+
+html body .text-green{ color: var(--k-green) !important; }
+html body i.torrent-icon{ color: var(--k-accent) !important; }
+html body .text-info,
+html body .footer__icon{ color: var(--k-accent) !important; }
+
+html body .panel__heading:has(.marquee-container){
+  border-radius: 0 !important;
+}

@@ -1,0 +1,79 @@
+/* ==========================================================
+   Powerpuff + OnlyEncodes+
+   Powerpuff, remapped for OnlyEncodes+.
+
+   Author  AzureBelmont
+   Repo    github.com/AzureBelmont/aither-css
+   Base    Pulls powerpuff.css in automatically, so every fix
+           to the theme flows through here too.
+   Install Settings -> General -> External CSS Stylesheet
+           Paste this URL INSTEAD of powerpuff.css
+
+   Why this file exists
+   ----------------------------------------------------------
+   The default "OnlyEncodes Theme" loads two layers, _galactic
+   and _dark-yellow. The second one's first rule points
+   fourteen different colour variables at one orange, #ff6d00,
+   then maps UNIT3D's component colours onto those. So links,
+   hover, headings, icons, ratings and most semantic states all
+   read orange whichever theme sits on top. These overrides give
+   each name its job back, from this theme's own palette.
+
+   None of it is needed on Aither or LST -- they leave those
+   variables alone -- which is why it is not in the base theme.
+
+   Left deliberately alone
+   ----------------------------------------------------------
+   Freeleech gold, bumped gold and the personal-release purple
+   are real semantic states, so they keep OE's colours. The
+   footer STATUS badge is an image served by Uptime Kuma, not
+   CSS, so no stylesheet can recolour it.
+   ========================================================== */
+@import url('https://azurebelmont.github.io/aither-css/powerpuff.css');
+
+:root{
+  --color-blue:            var(--at-accent);
+  --color-light-blue:      var(--at-accent2);
+  --color-green:           var(--at-green);
+  --color-light-green:     var(--at-green);
+  --color-dark-green:      var(--at-green);
+  --color-red:             var(--at-red);
+  --color-light-red:       var(--at-red);
+  --color-yellow:          var(--at-accent);
+  --color-magenta:         var(--at-accent);
+  --color-light-magenta:   var(--at-accent);
+  --color-purple:          var(--at-accent);
+  --color-light-purple:    var(--at-accent);
+  --color-400:             var(--at-accent);
+  --color-A200:            var(--at-accent);
+  --color-A400:            var(--at-accent);
+  --color-dark-blue:       var(--at-bg);
+  --color-dark-red:        var(--at-bg);
+  --text-color:            var(--at-text);
+
+  --torrent-row-fg:                  var(--at-text);
+  --torrent-row-format-fg:           var(--at-text);
+  --torrent-row-format-bg:           var(--at-bg3);
+  --torrent-row-buttons-fg:          currentColor;
+  --torrent-row-seeders-fg:          var(--at-green);
+  --torrent-row-leechers-fg:         var(--at-red);
+  --torrent-row-completed-fg:        var(--at-accent);
+  --torrent-row-thanks-fg:           var(--at-red);
+  --torrent-row-comments-fg:         var(--at-accent);
+  --torrent-row-internal-fg:         var(--at-accent2);
+  --torrent-row-stream-optimized-fg: var(--at-accent2);
+  --torrent-row-featured-fg:         var(--at-accent);
+  --torrent-row-double-upload-fg:    var(--at-green);
+  --torrent-row-sticky-fg:           var(--at-text);
+  --torrent-row-highspeed-fg:        var(--at-red);
+  --torrent-row-sd-fg:               var(--at-text2);
+}
+
+html body .text-green{ color: var(--at-green) !important; }
+html body i.torrent-icon{ color: var(--at-accent) !important; }
+html body .text-info,
+html body .footer__icon{ color: var(--at-accent) !important; }
+
+html body .panel__heading:has(.marquee-container){
+  border-radius: 0 !important;
+}
