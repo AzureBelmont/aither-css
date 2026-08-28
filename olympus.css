@@ -1547,7 +1547,7 @@ html body .rating__header{
 }
 html body article.rating > .comment__content.bbcode-rendered,
 html body article.rating > .comment__aside{
-  background-color: var(--at-bg) !important;
+  background-color: var(--at-bg2) !important;
   border-radius: 0 !important;
 }
 html body .comment__replies,
