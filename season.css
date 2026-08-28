@@ -587,7 +587,7 @@ a[style*="color:#95A5A6"],a[style*="color: #95A5A6"] { color: #95A5A6 !important
 
 .post__permalink:hover, .post__edit:hover, .post__quote:hover, .post__delete-button:hover { color: var(--at-accent) !important; background-color: var(--at-bg3) !important; }
 .post__tip-input, .post__tip-input:focus { border: none !important; border-radius: 2px !important; }
-.post__content.bbcode-rendered, .post__header, .comment__content.bbcode-rendered, .comment__header { background-color: #08222b; }
+.post__content.bbcode-rendered, .post__header, .comment__content.bbcode-rendered, .comment__header, .rating__header { background-color: #08222b; }
 .bbcode-rendered.bbcode-rendered blockquote { background-color: #0b2a34 !important; border: 2px dotted #123c48 !important; }
 
 .page__torrent--create .sidebar2 .panel__body a[href*="/wikis/"],
@@ -1154,7 +1154,7 @@ select.form-control option, select.form__select option, select option { backgrou
 .chatroom__new-message .form__textarea{ height:38px !important; line-height:16px !important; padding:11px 12px 9px !important; box-sizing:border-box !important; overflow:hidden !important; transition:height .18s ease !important; }
 .chatroom__new-message .form__textarea:focus{ height:120px !important; padding:10px 12px !important; overflow:auto !important; }
 .new-comment .form__textarea,
-.reply-comment .form__textarea{ height:90px !important; transition:height .18s ease !important; }
+.reply-comment .form__textarea{ transition:height .18s ease !important; }
 .new-comment .form__textarea:focus,
 .reply-comment .form__textarea:focus{ height:140px !important; }
 
@@ -1641,9 +1641,8 @@ html body article.rating{
   overflow: hidden !important;
 }
 html body .rating__header{
-  background-color: var(--at-bg3) !important;
-  color: var(--at-text2) !important;
-  -webkit-text-fill-color: var(--at-text2) !important;
+  color: var(--at-text) !important;
+  -webkit-text-fill-color: var(--at-text) !important;
   border-bottom: 1px solid var(--at-border) !important;
   border-radius: 0 !important;
 }
@@ -1655,4 +1654,32 @@ html body article.rating > .comment__aside{
 html body .comment__replies,
 html body li.comment__list-item{
   background-color: transparent !important;
+}
+
+html body .rating__add-rating--stars label{
+  position: relative !important;
+}
+html body .rating__add-rating--stars input:checked + label::after{
+  content: "" !important;
+  position: absolute !important;
+  left: 12% !important;
+  right: 12% !important;
+  bottom: -3px !important;
+  height: 2px !important;
+  border-radius: 1px !important;
+  background: var(--at-accent) !important;
+  pointer-events: none !important;
+}
+html body .rating__add-rating--stars:hover input:checked ~ label{
+  color: rgba(250,204,21,0.42) !important;
+}
+
+html body .stats__panels > * {
+  align-self: start !important;
+  height: auto !important;
+}
+
+html body .profile-sections > * {
+  align-self: start !important;
+  height: auto !important;
 }
