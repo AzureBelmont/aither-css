@@ -94,6 +94,27 @@ html body .top-nav--right__icon-link i.fa-music{
   border-color: transparent !important;
   box-shadow: none !important;
 }
+
+html body .top-nav__ratio-bar i.fa-arrow-up,
+html body .top-nav__ratio-bar i.fa-upload{
+  color: var(--k-green) !important;
+}
+html body .top-nav__ratio-bar i.fa-arrow-down,
+html body .top-nav__ratio-bar i.fa-download{
+  color: var(--k-red) !important;
+}
+html body .top-nav__ratio-bar i.fa-exchange,
+html body .top-nav__ratio-bar i.fa-sync-alt{
+  color: var(--k-accent) !important;
+}
+
+html body a[style*="007BFF" i],
+html body .panel__body a[style*="007BFF" i],
+html body article.sidebar2 .panel__body a[style*="007BFF" i]{
+  background-color: var(--k-accent) !important;
+  color: var(--k-bg) !important;
+  -webkit-text-fill-color: var(--k-bg) !important;
+}
 html body .chatbox-message__reply-button,
 html body .chatbox-message__reply-button i{
   color: var(--k-accent2) !important;
