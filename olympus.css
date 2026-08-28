@@ -315,7 +315,7 @@ li.subforum-listings__item:hover { border-left: 3px solid var(--at-accent) !impo
 article.post { background-color: var(--at-bg2) !important; border: 1px solid var(--at-border) !important; border-radius: var(--at-radius) !important; }
 aside.post__aside { background-color: var(--at-bg3) !important; border-right: 1px solid var(--at-border) !important; }
 menu.post__toolbar { background-color: #1e293b !important; border-top: 1px solid var(--at-border) !important; }
-.post__footer { background-color: #121927 !important }
+.post__footer { background-color: var(--at-bg3) !important }
 article.comment { background-color: var(--at-bg2) !important; border: 1px solid var(--at-border) !important; border-radius: var(--at-radius) !important; }
 aside.comment__aside { background-color: var(--at-bg3) !important; border-right: 1px solid var(--at-border) !important; }
 ul.comment-list { background-color: var(--at-bg2) !important; }
