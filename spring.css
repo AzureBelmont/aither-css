@@ -1155,7 +1155,7 @@ select.form-control option, select.form__select option, select option { backgrou
 .chatroom__new-message .form__textarea{ height:38px !important; line-height:16px !important; padding:11px 12px 9px !important; box-sizing:border-box !important; overflow:hidden !important; transition:height .18s ease !important; }
 .chatroom__new-message .form__textarea:focus{ height:120px !important; padding:10px 12px !important; overflow:auto !important; }
 .new-comment .form__textarea,
-.reply-comment .form__textarea{ height:90px !important; transition:height .18s ease !important; }
+.reply-comment .form__textarea{ transition:height .18s ease !important; }
 .new-comment .form__textarea:focus,
 .reply-comment .form__textarea:focus{ height:140px !important; }
 
@@ -1627,9 +1627,9 @@ html body article.rating{
   overflow: hidden !important;
 }
 html body .rating__header{
-  background-color: var(--at-bg3) !important;
-  color: var(--at-text2) !important;
-  -webkit-text-fill-color: var(--at-text2) !important;
+  background-color: transparent !important;
+  color: var(--at-text) !important;
+  -webkit-text-fill-color: var(--at-text) !important;
   border-bottom: 1px solid var(--at-border) !important;
   border-radius: 0 !important;
 }
@@ -1662,6 +1662,11 @@ html body .rating__add-rating--stars:hover input:checked ~ label{
 }
 
 html body .stats__panels > * {
+  align-self: start !important;
+  height: auto !important;
+}
+
+html body .profile-sections > * {
   align-self: start !important;
   height: auto !important;
 }
