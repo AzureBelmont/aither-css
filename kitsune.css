@@ -1251,6 +1251,7 @@ html body .rating__user-rating{
 }
 html body .rating__user-rating i.fa-star{
   color: var(--k-accent) !important;
+  -webkit-text-fill-color: var(--k-accent) !important;
 }
 html body article.rating > .comment__content.bbcode-rendered,
 html body article.rating > .comment__aside{
