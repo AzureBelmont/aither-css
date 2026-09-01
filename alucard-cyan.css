@@ -1793,3 +1793,8 @@ html body .profile-sections > * {
   align-self: start !important;
   height: auto !important;
 }
+
+html body ul.top-nav__icon-bar.mobile li.top-nav__dropdown ul li a:not(.top-nav__username){
+  text-align: left !important;
+  grid-template-columns: 30px auto !important;
+}
