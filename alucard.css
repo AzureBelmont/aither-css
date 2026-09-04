@@ -688,8 +688,7 @@ label.form__label.form__label--floating { background-color: transparent !importa
   font-size: 11px !important;
   color: var(--at-text3) !important;
 }
-.compact-search,
-.compact-search__visible-default {
+.compact-search {
   padding: 6px 8px !important;
 }
 .collection-posters {
