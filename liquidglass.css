@@ -1901,6 +1901,7 @@ html body .panelV2:has(.featured-carousel){
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
 }
+html body .panelV2:has(.comparison__screenshots:not([style*="display: none"])) { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; z-index: auto !important; }
 
 html body .playlists__playlist{ background-color: var(--g-tint) !important; }
 html body .playlists__playlist:hover{ background-color: var(--g-hover) !important; }
