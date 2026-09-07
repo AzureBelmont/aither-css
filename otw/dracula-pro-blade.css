@@ -1,20 +1,20 @@
 /* ============================================================
-   Persona 5 + OTW layout
-   Persona 5, with layout adjustments for OTW.
+   Dracula Pro Blade + OTW layout
+   Dracula Pro Blade, with layout adjustments for OTW.
 
    Theme   AzureBelmont
    Layout  Macley (github.com/Macleykun)
-   Base    Pulls persona5.css in automatically, so it always
+   Base    Pulls dracula-pro-blade.css in automatically, so it always
            stays in sync with the base theme.
    Install Settings -> General -> External CSS Stylesheet
-           Paste this URL INSTEAD of persona5.css
+           Paste this URL INSTEAD of dracula-pro-blade.css
 
    OTW's chat rows and nav sit differently to Aither's, so these
    are pixel offsets calibrated to OTW. They are deliberately NOT
    in the base themes - on Aither and LST the same elements are
    already aligned, and applying these there would misalign them.
    ============================================================ */
-@import url('https://azurebelmont.github.io/aither-css/persona5.css');
+@import url('https://azurebelmont.github.io/aither-css/dracula-pro-blade.css');
 
 article.chatbox-message { max-width: 100% !important; }
 
