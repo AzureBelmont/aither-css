@@ -9,7 +9,7 @@
    Base    Site style must be set to "Aither Dark".
    Install Settings -> General -> External CSS Stylesheet
 
-   Art     Wallpaper slot: lst-css/art/ocarina/wallpaper.jpg (self-hosted).
+   Art     Wallpaper slot: lst-css/art/ocarina/wallpaper.jpg|webp|png (self-hosted).
    Font    Cinzel if installed locally (Aither CSP is font-src self),
            else Palatino / Georgia caps.
    Decor   Fairy lights drift up behind the page (CSS only,
@@ -1625,11 +1625,13 @@ html body{
   background-color: var(--at-bg) !important;
   background-image:
     linear-gradient(180deg, rgba(11,16,12,0.80) 0%, rgba(11,16,12,0.84) 55%, rgba(11,16,12,0.90) 100%),
-    url("https://azurebelmont.github.io/lst-css/art/ocarina/wallpaper.jpg") !important;
-  background-size: cover, cover !important;
-  background-position: center top, center 30% !important;
-  background-repeat: no-repeat, no-repeat !important;
-  background-attachment: fixed, fixed !important;
+    url("https://azurebelmont.github.io/lst-css/art/ocarina/wallpaper.jpg"),
+    url("https://azurebelmont.github.io/lst-css/art/ocarina/wallpaper.webp"),
+    url("https://azurebelmont.github.io/lst-css/art/ocarina/wallpaper.png") !important;
+  background-size: cover, cover, cover, cover !important;
+  background-position: center top, center 30%, center 30%, center 30% !important;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat !important;
+  background-attachment: fixed, fixed, fixed, fixed !important;
 }
 html body .panelV2,
 html body .panel--grid-item{
@@ -1653,7 +1655,7 @@ html body::after{
   bottom: 14px !important;
   width: 112px !important;
   height: 66px !important;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 170' width='260' height='170'%3E%3Cdefs%3E %3CradialGradient id='b' cx='0.30' cy='0.35' r='0.85'%3E%3Cstop offset='0' stop-color='%238d80ff'/%3E%3Cstop offset='0.35' stop-color='%234b44c8'/%3E%3Cstop offset='1' stop-color='%231b1866'/%3E%3C/radialGradient%3E %3ClinearGradient id='m' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%236f66e6'/%3E%3Cstop offset='1' stop-color='%232a2690'/%3E%3C/linearGradient%3E %3ClinearGradient id='k' x1='0' y1='0' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%233a3a4a'/%3E%3Cstop offset='0.5' stop-color='%236a6a7c'/%3E%3Cstop offset='1' stop-color='%232e2e3c'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg%3E %3Cpath d='M60 70 L28 22 Q24 14 33 12 L52 8 Q60 7 63 15 L84 60 Z' fill='url(%23m)' stroke='%230f0c4a' stroke-width='2.5' stroke-linejoin='round'/%3E %3Cpath d='M46 46 L76 36 L84 54 L58 66 Z' fill='url(%23k)' stroke='%230f0c4a' stroke-width='2'/%3E %3Cpath d='M50 50 L74 41' stroke='%23d9b64a' stroke-width='3' stroke-linecap='round'/%3E %3Cpath d='M36 108 C20 84 34 56 66 52 C110 46 170 34 236 20 Q252 17 246 32 C226 74 178 128 118 150 C84 162 48 150 36 108 Z' fill='url(%23b)' stroke='%230f0c4a' stroke-width='2.8' stroke-linejoin='round'/%3E %3Cpath d='M66 74 C96 60 150 46 210 34' fill='none' stroke='%23cfc6ff' stroke-width='3' stroke-linecap='round' opacity='0.5'/%3E %3Cg fill='%2307062a'%3E  %3Cellipse cx='68' cy='98' rx='6.5' ry='7'/%3E%3Cellipse cx='88' cy='94' rx='6.5' ry='7'/%3E  %3Cellipse cx='72' cy='120' rx='6.5' ry='7'/%3E%3Cellipse cx='92' cy='116' rx='6.5' ry='7'/%3E  %3Cellipse cx='150' cy='66' rx='6' ry='6.5'/%3E%3Cellipse cx='172' cy='58' rx='6' ry='6.5'/%3E%3Cellipse cx='166' cy='82' rx='6' ry='6.5'/%3E %3C/g%3E%3C/g%3E%3C/svg%3E") center / contain no-repeat !important;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 190' width='300' height='190'%3E%3Cdefs%3E %3CradialGradient id='b' cx='0.34' cy='0.42' r='0.80'%3E%3Cstop offset='0' stop-color='%237d74ff'/%3E%3Cstop offset='0.32' stop-color='%234a45d2'/%3E%3Cstop offset='0.75' stop-color='%232c2895'/%3E%3Cstop offset='1' stop-color='%23171450'/%3E%3C/radialGradient%3E %3ClinearGradient id='m' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237a72f2'/%3E%3Cstop offset='0.5' stop-color='%233f3ac0'/%3E%3Cstop offset='1' stop-color='%23221e80'/%3E%3C/linearGradient%3E %3ClinearGradient id='k' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%234a4a58'/%3E%3Cstop offset='0.45' stop-color='%238a8a9c'/%3E%3Cstop offset='1' stop-color='%232c2c3a'/%3E%3C/linearGradient%3E %3CradialGradient id='h'%3E%3Cstop offset='0' stop-color='%23050418'/%3E%3Cstop offset='0.7' stop-color='%23050418'/%3E%3Cstop offset='1' stop-color='%231a1750'/%3E%3C/radialGradient%3E%3C/defs%3E%3Cg%3E %3Cpath d='M78 92 L30 20 Q25 10 36 7 L58 2 Q68 0 72 10 L108 76 Z' fill='url(%23m)' stroke='%230d0a44' stroke-width='3' stroke-linejoin='round'/%3E %3Cpath d='M52 52 L86 40 L100 66 L68 80 Z' fill='url(%23k)' stroke='%230d0a44' stroke-width='2.5' stroke-linejoin='round'/%3E %3Cpath d='M56 58 L88 47' stroke='%23e0c25a' stroke-width='3.5' stroke-linecap='round'/%3E %3Cpath d='M60 66 L92 55' stroke='%23e0c25a' stroke-width='2' stroke-linecap='round' opacity='0.8'/%3E %3Cpath d='M38 128 C20 96 40 68 80 66 C124 64 176 46 234 26 Q288 8 276 26 C250 66 204 128 140 158 C104 176 60 176 44 148 C40 141 39 135 38 128 Z' fill='url(%23b)' stroke='%230d0a44' stroke-width='3.2' stroke-linejoin='round'/%3E %3Cpath d='M70 84 C104 70 160 52 226 34' fill='none' stroke='%23d6d0ff' stroke-width='3.5' stroke-linecap='round' opacity='0.45'/%3E %3Cpath d='M62 96 C90 84 130 74 172 62' fill='none' stroke='%23b9b2ff' stroke-width='2' stroke-linecap='round' opacity='0.25'/%3E %3Cg fill='url(%23h)'%3E  %3Cellipse cx='74' cy='112' rx='9' ry='9.5'/%3E%3Cellipse cx='100' cy='106' rx='9' ry='9.5'/%3E  %3Cellipse cx='80' cy='140' rx='9' ry='9.5'/%3E%3Cellipse cx='106' cy='134' rx='9' ry='9.5'/%3E  %3Cellipse cx='176' cy='80' rx='8.5' ry='9'/%3E%3Cellipse cx='204' cy='70' rx='8.5' ry='9'/%3E%3Cellipse cx='198' cy='100' rx='8.5' ry='9'/%3E %3C/g%3E%3C/g%3E%3C/svg%3E") center / contain no-repeat !important;
   filter: drop-shadow(0 0 10px rgba(142,193,255,0.45)) !important;
   opacity: 0.95 !important;
   pointer-events: none !important;
