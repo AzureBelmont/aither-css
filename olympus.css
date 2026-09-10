@@ -189,7 +189,9 @@ a.user-tag__link:hover span, a.chatroom-users__user-link:hover span { color: var
 .panel__heading a.user-tag__link[style*="color:#00abff"],.panel__heading a.user-tag__link[style*="color: #00abff"] { color: #00abff !important; }
 .panel__heading a.user-tag__link[style*="color:#4ECDC4"],.panel__heading a.user-tag__link[style*="color: #4ECDC4"] { color: #4ECDC4 !important; }
 
-html body .panelV2 { overflow: hidden !important; }
+html body .panelV2:not(.chatbox) { overflow: hidden !important; }
+html body .panelV2.chatbox { overflow: visible !important; }
+html body .panelV2.chatbox > .panel__body { border-radius: inherit !important; }
 .panelV2 > .data-table-wrapper { border-radius: 0 !important; border-left: none !important; border-right: none !important; border-top: none !important; }
 .panelV2 > table { border-radius: 0 !important; }
 .panelV2 > .panel__body > .data-table-wrapper { border-radius: 0 !important; border: none !important; }
