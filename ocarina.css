@@ -1700,3 +1700,7 @@ html::after{
   html::before,
   html::after{ animation: none !important; }
 }
+
+html body .panel__header .panel__action > .form__button--text{
+  transform: translateY(1px) !important;
+}

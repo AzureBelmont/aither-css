@@ -1697,3 +1697,7 @@ html body ul.top-nav__icon-bar.mobile li.top-nav__dropdown ul li a:not(.top-nav_
   text-align: left !important;
   grid-template-columns: 30px auto !important;
 }
+
+html body .panel__header .panel__action > .form__button--text{
+  transform: translateY(1px) !important;
+}
