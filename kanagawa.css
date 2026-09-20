@@ -1602,3 +1602,12 @@ html body ul.top-nav__icon-bar.mobile li.top-nav__dropdown ul li a:not(.top-nav_
 html body .panel__header .panel__action > .form__button--text{
   transform: translateY(1px) !important;
 }
+
+html body .mediahub-card{
+  border-radius: 10px !important;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.38), 0 1px 2px rgba(0,0,0,0.30), inset 0 1px 0 rgba(255,255,255,0.03) !important;
+  transition: box-shadow .15s !important;
+}
+html body .mediahub-card:hover{
+  box-shadow: 0 6px 18px rgba(0,0,0,0.46), 0 1px 2px rgba(0,0,0,0.30), inset 0 1px 0 rgba(255,255,255,0.05) !important;
+}
