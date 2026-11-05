@@ -125,8 +125,8 @@ li.top-nav__dropdown ul li button.top-nav--right__link:hover i.fas,
 li.top-nav__dropdown ul li button.top-nav--right__link:hover i.far,
 li.top-nav__dropdown ul li button.top-nav--right__link:hover i.fab { background-color: var(--at-accent-faint) !important; border-color: var(--at-accent) !important; color: var(--at-accent) !important; }
 
-.top-nav--right__icon-link i.fas, .top-nav--right__icon-link i.far, .top-nav--right__link i.fas { background-color: var(--at-bg3) !important; border: 1px solid var(--at-accent-faint) !important; }
-.top-nav--right__icon-link:hover i.fas, .top-nav--right__icon-link:hover i.far, .top-nav--right__link:hover i.fas { background-color: var(--at-accent-faint) !important; border-color: var(--at-accent) !important; color: var(--at-accent) !important; }
+[class*="top-nav--right__icon-link"] i.fas, [class*="top-nav--right__icon-link"] i.far, .top-nav--right__link i.fas { background-color: var(--at-bg3) !important; border: 1px solid var(--at-accent-faint) !important; }
+[class*="top-nav--right__icon-link"]:hover i.fas, [class*="top-nav--right__icon-link"]:hover i.far, .top-nav--right__link:hover i.fas { background-color: var(--at-accent-faint) !important; border-color: var(--at-accent) !important; color: var(--at-accent) !important; }
 
 .dot { background-color: var(--at-accent) !important; box-shadow: 0 0 6px rgba(0,113,227,0.6) !important; }
 .top-nav circle, .top-nav--left__container circle, .top-nav svg circle { stroke: var(--at-accent) !important; fill: var(--at-accent) !important; }
@@ -882,8 +882,8 @@ li.top-nav__dropdown ul li i.fab {
   line-height: 1 !important;
   padding: 0 !important;
 }
-.top-nav--right__icon-link i.fas,
-.top-nav--right__icon-link i.far,
+[class*="top-nav--right__icon-link"] i.fas,
+[class*="top-nav--right__icon-link"] i.far,
 .top-nav--right__link i.fas {
   display: inline-flex !important;
   align-items: center !important;
@@ -1608,7 +1608,7 @@ html body .key-value__key{ color: #6E6E73 !important; }
 html body .top-nav__dropdown-menu i,
 html body .top-nav__dropdown ul i,
 html body .top-nav__icon-bar i,
-html body .top-nav--right__icon-link i{ color: #1D1D1F !important; }
+html body [class*="top-nav--right__icon-link"] i{ color: #1D1D1F !important; }
 
 html body .user-profile-card__meta-item-value,
 html body .user-profile-card__meta-item-value sub,
