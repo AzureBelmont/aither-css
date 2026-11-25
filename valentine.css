@@ -341,7 +341,7 @@ li.pagination__current, .pagination__current { background-color: var(--at-bg3) !
 li.pagination__previous--disabled, li.pagination__next--disabled { background-color: var(--at-bg2) !important; color: var(--at-text3) !important; opacity: 0.7 !important; }
 li.pagination__previous--disabled:hover, li.pagination__next--disabled:hover { background-color: var(--at-bg2) !important; color: var(--at-text3) !important; cursor: default !important; }
 
-.secondary-nav { background-color: var(--at-bg2) !important; border-bottom: 1px solid rgb(41, 32, 24) !important; }
+.secondary-nav { background-color: var(--at-bg2) !important; border-bottom: 1px solid var(--at-border) !important; }
 .secondary-nav a, .secondary-nav__item { color: var(--at-text2) !important; }
 .secondary-nav a:hover, .secondary-nav__item:hover { color: var(--at-text) !important; }
 .secondary-nav__item--active, .secondary-nav a.active { color: var(--at-accent) !important; border-bottom-color: var(--at-accent) !important; }
@@ -1749,4 +1749,14 @@ html body .panel__heading > i.fa-pull-right{
 
 html body .chatbox .panel__tab .text-danger{
   color: var(--at-red, var(--k-torii, #c0392b)) !important;
+}
+
+html body .footer__sub-footer{
+  border-top-color: var(--at-border, var(--k-border, #333)) !important;
+}
+html body hr{
+  border-color: var(--at-border, var(--k-border, #333)) !important;
+}
+html body .topic-listing__item--unread{
+  box-shadow: -3px 0 0 0 var(--at-accent, var(--k-accent, #888)) !important;
 }

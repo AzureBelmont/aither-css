@@ -1336,3 +1336,13 @@ html body .panel__heading > i.fa-pull-right{
 html body .chatbox .panel__tab .text-danger{
   color: var(--at-red, var(--k-torii, #c0392b)) !important;
 }
+
+html body .footer__sub-footer{
+  border-top-color: var(--at-border, var(--k-border, #333)) !important;
+}
+html body hr{
+  border-color: var(--at-border, var(--k-border, #333)) !important;
+}
+html body .topic-listing__item--unread{
+  box-shadow: -3px 0 0 0 var(--at-accent, var(--k-accent, #888)) !important;
+}
