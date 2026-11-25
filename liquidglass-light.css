@@ -24,7 +24,6 @@
 :root {
   --quick-search-border-radius: 9px;
   --key-value-padding: 10px;
-  --ctp-system blue:     #0071E3;
 
   --at-bg:        #F2F2F7;
   --at-bg2:       #FFFFFF;
@@ -265,7 +264,7 @@ td[class*="torrent-search--list__"] { background-color: transparent !important; 
 .af-row { background-color: var(--at-bg2) !important; border-bottom: 1px solid var(--at-border) !important; border-left: 3px solid transparent !important; transition: box-shadow .15s, background .15s !important; }
 .af-row:hover { background-color: rgba(0,113,227,0.03) !important; }
 
-tr.torrent-search--list__sticky-row { background-color: #FFFFFF !important; border-left: 3px solid var(--at-accent) !important; }
+tr.torrent-search--list__sticky-row { background-color: #FFFFFF !important; }
 tr.torrent-search--list__sticky-row td { background-color: transparent !important; }
 tr.torrent-search--list__sticky-row .torrent-search--list__name > a:first-child { color: var(--at-text) !important; }
 
@@ -2310,4 +2309,25 @@ html body .collectible-card__subheading:not([class*="__banner"]){
 
 :root{
   --at-text-dim: #929297;
+}
+
+html body tr[class*="sticky-row"] > td:first-child,
+html body tr[class*="sticky_row"] > td:first-child{
+  box-shadow: inset 3px 0 0 var(--at-accent, var(--k-accent, currentColor)) !important;
+}
+
+:where(a, summary, tbody tr, tbody td, .panel__tab, .torrent-search-row, .form__text, .form__select, .form__textarea){
+  transition: color .15s ease, background-color .15s ease, border-color .15s ease, box-shadow .15s ease;
+}
+@media (prefers-reduced-motion: reduce){
+  :where(a, summary, tbody tr, tbody td, .panel__tab, .torrent-search-row, .form__text, .form__select, .form__textarea){
+    transition: none;
+  }
+}
+html body :is(.form__button, .pagination__link, .panel__tab):active{
+  filter: brightness(.9) !important;
+}
+html body :is(a, button, summary, [role="button"], [role="tab"]):focus-visible{
+  outline: 2px solid var(--at-accent, var(--k-accent, currentColor)) !important;
+  outline-offset: 2px !important;
 }
