@@ -2040,3 +2040,7 @@ html body :is(a, button, summary, [role="button"], [role="tab"]):focus-visible{
   outline: 2px solid var(--at-accent, var(--k-accent, currentColor)) !important;
   outline-offset: 2px !important;
 }
+
+html body ::placeholder{
+  -webkit-text-fill-color: currentColor !important;
+}
