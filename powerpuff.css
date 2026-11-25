@@ -1626,6 +1626,16 @@ html body section.pm-compose {
   background-color: rgba(41,18,39,0.82) !important;
   background-image: none !important;
 }
+html body section.panelV2:where(:not(.chatbox, .chatV2, .chatbox *, .chatV2 *)),
+html body .panel__body:where(:not(.chatbox, .chatV2, .chatbox *, .chatV2 *)),
+html body section.torrent-results:where(:not(.chatbox, .chatV2, .chatbox *, .chatV2 *)),
+html body .blocks__block:where(:not(.chatbox, .chatV2, .chatbox *, .chatV2 *)),
+html body article.post:where(:not(.chatbox, .chatV2, .chatbox *, .chatV2 *)),
+html body section.forum-reply:where(:not(.chatbox, .chatV2, .chatbox *, .chatV2 *)),
+html body section.topic-list:where(:not(.chatbox, .chatV2, .chatbox *, .chatV2 *)),
+html body section.pm-compose:where(:not(.chatbox, .chatV2, .chatbox *, .chatV2 *)){
+  background-color: rgb(41,18,39) !important;
+}
 html body main form:has(> .bbcode-input) {
   background-color: rgba(41,18,39,0.82) !important;
   border: 1px solid rgba(255,205,235,0.16) !important;
@@ -1637,6 +1647,11 @@ html body header.topic-list__header,
 html body footer.topic-list__footer {
   background-color: rgba(58,26,55,0.86) !important;
   background-image: none !important;
+}
+html body .panel__header:where(:not(.chatbox, .chatV2, .chatbox *, .chatV2 *)),
+html body header.topic-list__header:where(:not(.chatbox, .chatV2, .chatbox *, .chatV2 *)),
+html body footer.topic-list__footer:where(:not(.chatbox, .chatV2, .chatbox *, .chatV2 *)){
+  background-color: rgb(58,26,55) !important;
 }
 html body search.compact-search {
   background-color: transparent !important;
