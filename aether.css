@@ -5,7 +5,7 @@
 
    Author  AzureBelmont
    Repo    github.com/AzureBelmont/aither-css
-   Version 0.36 preview
+   Version 0.37 preview
    Base    Site style must be set to "Aither Dark".
    Install Settings -> General -> External CSS Stylesheet
 
@@ -2417,8 +2417,19 @@ html body li.top-nav__dropdown ul li a.top-nav__username:hover{
   }
 }
 
+html{
+  background: #0a0d1a !important;
+}
 html body{
-  background: radial-gradient(900px 520px at 80% -8%,rgba(232,201,138,.12),transparent 62%),radial-gradient(800px 560px at 0% 100%,rgba(90,110,220,.12),transparent 60%),linear-gradient(180deg,#0e1330 0%,#0a0d1a 45%,#070914 100%) fixed !important;
+  background: transparent !important;
+}
+html body::before{
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(900px 520px at 80% -8%,rgba(232,201,138,.12),transparent 62%),radial-gradient(800px 560px at 0% 100%,rgba(90,110,220,.12),transparent 60%),linear-gradient(180deg,#0e1330 0%,#0a0d1a 45%,#070914 100%);
 }
 html body .panel__heading,
 html body .panel__heading a{
@@ -2443,9 +2454,7 @@ html body tbody tr[class*="torrent-search--list__"] td{
     background: linear-gradient(180deg,#0e1330,#090c18) !important;
   }
   html body .top-nav::after{
-    background: rgba(10,13,26,.78);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
+    background: rgba(10,13,26,.97);
   }
   html body tbody:has(> tr[class*="torrent-search--list__"]){
     display: flex !important;
