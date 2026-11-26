@@ -6,7 +6,7 @@
 
    Author  AzureBelmont
    Repo    github.com/AzureBelmont/aither-css
-   Version 0.2 preview
+   Version 0.3 preview
    Base    Site style must be set to "Aither Dark".
    Install Settings -> General -> External CSS Stylesheet
 
@@ -3129,8 +3129,7 @@ html body li:has(> .topic-listing__item--unread){box-shadow:inset 3px 0 0 var(--
 html body::before{background:var(--ak-bough) no-repeat right calc(200px + var(--gut)) top 0/600px 170px,linear-gradient(180deg,#1c0e1b 0%,#0b080c 45%,#060407 100%);}
 html body .top-nav::after{background:var(--ak-bough) no-repeat right calc(200px + var(--gut)) top 0/600px 170px,rgba(11,8,12,.97);}
 html body .top-nav::before{content:"";position:fixed;left:0;top:0;width:var(--rail);height:100vh;z-index:-1;pointer-events:none;background:var(--ak-weep) no-repeat right 6px top/236px 860px;}
-html body nav.secondary-nav > ol.breadcrumbsV2,html body nav.secondary-nav > ul.nav-tabsV2{position:relative !important;}
-html body nav.secondary-nav > ol.breadcrumbsV2::before,html body nav.secondary-nav > ul.nav-tabsV2::before{content:"";position:absolute;left:-14px;right:-34px;top:50%;height:var(--bar);transform:translateY(-50%);z-index:-1;pointer-events:none;background:linear-gradient(90deg,rgba(11,8,12,0),#0b080c 14px,#0b080c calc(100% - 34px),rgba(11,8,12,0));}
+html body nav.secondary-nav > ol.breadcrumbsV2,html body nav.secondary-nav > ul.nav-tabsV2{background:#0b080c !important;box-shadow:0 0 0 9px #0b080c,16px 0 12px 5px #0b080c,-10px 0 10px 5px #0b080c !important;}
 html body .top-nav__main-menus > li > a{display:flex !important;align-items:baseline !important;}
 html body .top-nav__main-menus > li > a::after{margin-left:8px;font-size:10px;font-weight:400;letter-spacing:.2em;color:rgba(244,170,202,.5);}
 html body .top-nav__main-menus > li:nth-child(1) > a::after{content:"\914D\4FE1";}
