@@ -5,7 +5,7 @@
 
    Author  AzureBelmont
    Repo    github.com/AzureBelmont/aither-css
-   Version 0.14 preview
+   Version 0.15 preview
    Base    Site style must be set to "Aither Dark".
    Install Settings -> General -> External CSS Stylesheet
 
@@ -2105,10 +2105,10 @@ html body li.top-nav__dropdown ul li a.top-nav__username:hover{
     max-width: 2300px !important;
   }
 }
-@media (min-width:1800px){
+@media (min-width:1500px){
   html body main:is(.page__torrent--show,.page__torrent-similar--index) > article{
     display: grid !important;
-    grid-template-columns: minmax(0,1fr) 440px !important;
+    grid-template-columns: minmax(0,1fr) clamp(340px,24vw,440px) !important;
     column-gap: 22px !important;
     row-gap: 0 !important;
     align-items: start !important;
@@ -2240,6 +2240,12 @@ html body li.top-nav__dropdown ul li a.top-nav__username:hover{
     overflow-wrap: anywhere !important;
     font-size: 12.5px !important;
     line-height: 1.25 !important;
+  }
+}
+@media (min-width:1500px) and (max-width:1799px){
+  html body main:is(.page__torrent--show,.page__torrent-similar--index) .torrent__buttons{
+    grid-template-columns: repeat(4,minmax(0,1fr)) !important;
+    gap: 8px !important;
   }
 }
 
