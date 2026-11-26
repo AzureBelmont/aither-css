@@ -5,7 +5,7 @@
 
    Author  AzureBelmont
    Repo    github.com/AzureBelmont/aither-css
-   Version 1.1
+   Version 1.2
    Base    Site style must be set to "Aither Dark".
    Install Settings -> General -> External CSS Stylesheet
 
@@ -3136,4 +3136,26 @@ html body table.data-table > tbody > tr > td.notification--read a{
 }
 html body table.data-table > tbody > tr:has(> td.notification--unread) .data-table__action > :not(.dialog){
   visibility: visible !important;
+}
+@media (min-width:1400px){
+  html body .top-nav .top-nav__main-menus > li > ul > li i[class*="fa-"]{
+    background-color: transparent !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+    color: var(--at-text-dim) !important;
+  }
+  html body .top-nav .top-nav__main-menus > li > ul > li > a,
+  html body .top-nav .top-nav__main-menus > li > ul > li > form > button{
+    color: var(--at-text2) !important;
+  }
+  html body .top-nav .top-nav__main-menus > li > ul > li > a:hover,
+  html body .top-nav .top-nav__main-menus > li > ul > li > form > button:hover{
+    color: var(--at-text) !important;
+  }
+  html body .top-nav__main-menus > li > ul > li > a:hover i{
+    color: var(--at-text) !important;
+  }
+  html body .top-nav .top-nav__main-menus{
+    gap: calc(var(--rh) * .38 + clamp(0px,calc((100vh - 1204px) / 5),12px)) !important;
+  }
 }
