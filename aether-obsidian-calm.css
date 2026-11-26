@@ -3144,3 +3144,5 @@ html body .top-nav .top-nav__main-menus > li > ul > li > a:hover,html body .top-
 html body .top-nav__main-menus > li > ul > li > a:hover i{color:var(--at-text) !important;}
 html body .top-nav .top-nav__main-menus{gap:calc(var(--rh) * .38 + clamp(0px,calc((100vh - 1204px) / 5),12px)) !important;}
 }
+html body .top-nav ul.top-nav__ratio-bar i[class*="fa-"]{filter:saturate(.42) brightness(.96);transition:filter .2s;}
+html body .top-nav ul.top-nav__ratio-bar:hover i[class*="fa-"]{filter:none;}
