@@ -5,7 +5,7 @@
 
    Author  AzureBelmont
    Repo    github.com/AzureBelmont/aither-css
-   Version 0.37 preview
+   Version 0.38 preview
    Base    Site style must be set to "Aither Dark".
    Install Settings -> General -> External CSS Stylesheet
 
@@ -2421,7 +2421,7 @@ html{
   background: #090a0b !important;
 }
 html body{
-  background: transparent !important;
+  background: radial-gradient(900px 520px at 80% -8%,rgba(214,218,226,.12),transparent 62%),radial-gradient(800px 560px at 0% 100%,rgba(150,158,176,.12),transparent 60%) !important;
 }
 html body::before{
   content: "";
@@ -2429,7 +2429,7 @@ html body::before{
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  background: radial-gradient(900px 520px at 80% -8%,rgba(214,218,226,.12),transparent 62%),radial-gradient(800px 560px at 0% 100%,rgba(150,158,176,.12),transparent 60%),linear-gradient(180deg,#111215 0%,#090a0b 45%,#050506 100%);
+  background: linear-gradient(180deg,#111215 0%,#090a0b 45%,#050506 100%);
 }
 html body .panel__heading,
 html body .panel__heading a{
