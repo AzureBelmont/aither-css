@@ -5,7 +5,7 @@
 
    Author  AzureBelmont
    Repo    github.com/AzureBelmont/aither-css
-   Version 1.0
+   Version 1.1
    Base    Site style must be set to "Aither Dark".
    Install Settings -> General -> External CSS Stylesheet
 
@@ -2175,6 +2175,12 @@ html body li.top-nav__dropdown ul li a.top-nav__username:hover{
   html body main:is(.page__torrent--show,.page__torrent-similar--index,.page__request--show) section.meta > :is(.work__tags,.meta__ids){
     justify-self: center !important;
   }
+  html body main:is(.page__torrent--show,.page__torrent-similar--index,.page__request--show) section.meta > .meta__ids{
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    max-width: 100% !important;
+    row-gap: 6px !important;
+  }
   html body main:is(.page__torrent--show,.page__torrent-similar--index,.page__request--show) section.meta > .meta__chips{
     display: flex !important;
     flex-direction: column !important;
@@ -2535,6 +2541,20 @@ html body .panelV2 > .panel__heading,
 html body .panel__heading,
 html body .panel__heading a{
   color: var(--at-text) !important;
+}
+html body .panel__heading > a:not(.user-tag__link)::after{
+  content: "\203A";
+  display: inline-block;
+  margin-left: .45em;
+  color: var(--at-accent);
+  font-weight: 400;
+  transition: transform .15s;
+}
+html body .panel__heading > a:not(.user-tag__link):hover{
+  color: var(--at-accent) !important;
+}
+html body .panel__heading > a:not(.user-tag__link):hover::after{
+  transform: translateX(3px);
 }
 html body .torrent__buttons .form__button{
   white-space: nowrap !important;
