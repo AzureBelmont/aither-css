@@ -5,7 +5,7 @@
 
    Author  AzureBelmont
    Repo    github.com/AzureBelmont/aither-css
-   Version 0.7 preview
+   Version 0.8 preview
    Base    Site style must be set to "Aither Dark".
    Install Settings -> General -> External CSS Stylesheet
 
@@ -2008,6 +2008,33 @@ html body li.top-nav__dropdown ul li a.top-nav__username:hover{
   html body .top-nav ul.top-nav__ratio-bar{
     gap: calc(var(--rh) * .12) 10px !important;
     padding-top: calc(var(--rh) * .3) !important;
+  }
+}
+@media (min-width:1400px){
+  html body nav.secondary-nav .nav-tab-menu__items{
+    top: calc(var(--bar) - 6px) !important;
+    border-radius: 12px !important;
+    overflow: visible !important;
+  }
+  html body nav.secondary-nav .nav-tab-menu__items::before{
+    content: "" !important;
+    display: block !important;
+    position: absolute !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: -10px !important;
+    height: 10px !important;
+    width: auto !important;
+    background: transparent !important;
+    border: 0 !important;
+    transform: none !important;
+  }
+  html body .top-nav__main-menus > li:has(> ul > li > a[href$="/pages/donate"]) > a{
+    display: none !important;
+  }
+  html body .top-nav > a.top-nav__username--highresolution,
+  html body .top-nav__right > a.top-nav__username--highresolution{
+    display: none !important;
   }
 }
 @media (min-width:2000px){
