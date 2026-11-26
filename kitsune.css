@@ -1427,3 +1427,10 @@ html body li.top-nav__dropdown ul li a.top-nav__username:hover{
   background-color: var(--at-accent-faint, var(--k-accent-faint)) !important;
   box-shadow: 0 6px 0 0 var(--at-accent-faint, var(--k-accent-faint)) !important;
 }
+
+html body .panel__heading a:has(.internal-card__poster-popup):hover{
+  opacity: 1 !important;
+}
+html body .panel__heading a:has(.internal-card__poster-popup):hover > i{
+  opacity: .75 !important;
+}
