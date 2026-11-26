@@ -5,7 +5,7 @@
 
    Author  AzureBelmont
    Repo    github.com/AzureBelmont/aither-css
-   Version 0.11 preview
+   Version 0.12 preview
    Base    Site style must be set to "Aither Dark".
    Install Settings -> General -> External CSS Stylesheet
 
@@ -2003,7 +2003,7 @@ html body li.top-nav__dropdown ul li a.top-nav__username:hover{
     height: calc(var(--rh) - 4px) !important;
     min-width: calc(var(--rh) - 4px) !important;
     line-height: calc(var(--rh) - 4px) !important;
-    font-size: clamp(10.5px,calc(var(--rh) * .45),12.5px) !important;
+    font-size: clamp(11px,calc(var(--rh) * .4),12px) !important;
   }
   html body .top-nav ul.top-nav__ratio-bar{
     gap: calc(var(--rh) * .12) 10px !important;
@@ -2040,6 +2040,7 @@ html body li.top-nav__dropdown ul li a.top-nav__username:hover{
 @media (min-width:1400px){
   html body:has(> main[class*="page__torrent--index"]) .top-nav__main-menus > li > ul > li > a[href$="/torrents"],
   html body:has(> main[class*="page__torrent--show"]) .top-nav__main-menus > li > ul > li > a[href$="/torrents"],
+  html body:has(> main[class*="page__torrent-similar"]) .top-nav__main-menus > li > ul > li > a[href$="/torrents"],
   html body:has(> main[class*="page__torrent-pending"]) .top-nav__main-menus > li > ul > li > a[href$="/torrents/pending"],
   html body:has(> main[class*="page__torrent--create"]) .top-nav__main-menus > li > ul > li > a[href$="/torrents/create"],
   html body:has(> main[class*="page__request"]) .top-nav__main-menus > li > ul > li > a[href$="/requests"],
@@ -2064,6 +2065,7 @@ html body li.top-nav__dropdown ul li a.top-nav__username:hover{
   }
   html body:has(> main[class*="page__torrent--index"]) .top-nav__main-menus > li > ul > li > a[href$="/torrents"] i,
   html body:has(> main[class*="page__torrent--show"]) .top-nav__main-menus > li > ul > li > a[href$="/torrents"] i,
+  html body:has(> main[class*="page__torrent-similar"]) .top-nav__main-menus > li > ul > li > a[href$="/torrents"] i,
   html body:has(> main[class*="page__torrent-pending"]) .top-nav__main-menus > li > ul > li > a[href$="/torrents/pending"] i,
   html body:has(> main[class*="page__torrent--create"]) .top-nav__main-menus > li > ul > li > a[href$="/torrents/create"] i,
   html body:has(> main[class*="page__request"]) .top-nav__main-menus > li > ul > li > a[href$="/requests"] i,
@@ -2086,6 +2088,16 @@ html body li.top-nav__dropdown ul li a.top-nav__username:hover{
     color: var(--at-accent) !important;
   }
 }
+@media (min-width:1400px){
+  @supports (width:round(down,1.5px,1px)){
+    html body .top-nav{
+      --rh: round(down,clamp(19px,calc((100vh - 322px) / 29.4),30px),1px);
+    }
+  }
+  html body .top-nav__main-menus > li > ul > li > a[href$="/pages/donate"] i::before{
+    transform: translateY(1px);
+  }
+}
 @media (min-width:2000px){
   html body > main{
     margin-left: auto !important;
@@ -2094,19 +2106,19 @@ html body li.top-nav__dropdown ul li a.top-nav__username:hover{
   }
 }
 @media (min-width:1800px){
-  html body main.page__torrent--show > article{
+  html body main:is(.page__torrent--show,.page__torrent-similar--index) > article{
     display: grid !important;
     grid-template-columns: minmax(0,1fr) 440px !important;
     column-gap: 22px !important;
     row-gap: 0 !important;
     align-items: start !important;
   }
-  html body main.page__torrent--show > article > *{
+  html body main:is(.page__torrent--show,.page__torrent-similar--index) > article > *{
     grid-column: 1 !important;
     min-width: 0 !important;
     margin-bottom: 10px !important;
   }
-  html body main.page__torrent--show > article > section.meta{
+  html body main:is(.page__torrent--show,.page__torrent-similar--index) > article > section.meta{
     grid-column: 2 !important;
     grid-row: 1 / span 60 !important;
     position: sticky !important;
@@ -2127,7 +2139,7 @@ html body li.top-nav__dropdown ul li a.top-nav__username:hover{
     box-shadow: 0 24px 60px -34px rgba(0,0,0,.9) !important;
     justify-items: start !important;
   }
-  html body main.page__torrent--show section.meta > .meta__backdrop{
+  html body main:is(.page__torrent--show,.page__torrent-similar--index) section.meta > .meta__backdrop{
     position: absolute !important;
     inset: 0 !important;
     width: 100% !important;
@@ -2138,32 +2150,31 @@ html body li.top-nav__dropdown ul li a.top-nav__username:hover{
     mask-image: linear-gradient(#000 40%,transparent) !important;
     border-radius: 0 !important;
   }
-  html body main.page__torrent--show section.meta > .meta__poster-link{
+  html body main:is(.page__torrent--show,.page__torrent-similar--index) section.meta > .meta__poster-link{
     justify-self: center !important;
     width: 230px !important;
     position: relative !important;
   }
-  html body main.page__torrent--show section.meta > .meta__poster-link img{
+  html body main:is(.page__torrent--show,.page__torrent-similar--index) section.meta > .meta__poster-link img{
     width: 100% !important;
     height: auto !important;
     border-radius: 12px !important;
   }
-  html body main.page__torrent--show section.meta > .meta__actions{
+  html body main:is(.page__torrent--show,.page__torrent-similar--index) section.meta > .meta__actions{
     grid-area: 1 / 1 !important;
     justify-self: end !important;
     align-self: start !important;
   }
-  html body main.page__torrent--show section.meta > .meta__title-link{
+  html body main:is(.page__torrent--show,.page__torrent-similar--index) section.meta > .meta__title-link{
     justify-self: center !important;
     text-align: center !important;
     width: auto !important;
     max-width: 100% !important;
   }
-  html body main.page__torrent--show section.meta > :is(.work__tags,
-  .meta__ids){
+  html body main:is(.page__torrent--show,.page__torrent-similar--index) section.meta > :is(.work__tags,.meta__ids){
     justify-self: center !important;
   }
-  html body main.page__torrent--show section.meta > .meta__chips{
+  html body main:is(.page__torrent--show,.page__torrent-similar--index) section.meta > .meta__chips{
     display: flex !important;
     flex-direction: column !important;
     gap: 14px !important;
@@ -2171,13 +2182,43 @@ html body li.top-nav__dropdown ul li a.top-nav__username:hover{
     max-height: none !important;
     overflow: visible !important;
   }
-  html body main.page__torrent--show section.meta > .meta__chips > .meta__chip-container{
+  html body main:is(.page__torrent--show,.page__torrent-similar--index) section.meta > .meta__chips > .meta__chip-container{
     flex: none !important;
     max-height: 260px !important;
   }
-  html body main.page__torrent--show section.meta > .meta__description{
+  html body main:is(.page__torrent--show,.page__torrent-similar--index) section.meta > .meta__description{
     width: auto !important;
     max-width: 100% !important;
+  }
+}
+@media (min-width:1400px) and (min-height:870px){
+  html body .top-nav{
+    overflow: visible !important;
+  }
+  html body .quick-search{
+    box-shadow: none !important;
+  }
+  html body .quick-search,
+  html body .quick-search__inputs,
+  html body .quick-search__input{
+    border-radius: 10px !important;
+  }
+  html body .quick-search__results{
+    position: absolute !important;
+    left: 0 !important;
+    top: calc(100% + 6px) !important;
+    right: auto !important;
+    width: 420px !important;
+    max-height: calc(100vh - 150px) !important;
+    border: 1px solid rgba(200,208,255,.14) !important;
+    border-radius: 12px !important;
+    background: var(--at-bg2) !important;
+    box-shadow: 0 18px 44px rgba(0,0,0,.6) !important;
+    z-index: 40 !important;
+  }
+  html body .quick-search__result--default{
+    padding: 10px 12px !important;
+    background: transparent !important;
   }
 }
 
@@ -2426,4 +2467,8 @@ html body table.data-table:not(:has(tr[class*="torrent-search--list__"])) > thea
     padding-top: 6px !important;
     padding-bottom: 6px !important;
   }
+}
+html body .compact-search__visible-default{
+  background: transparent !important;
+  --fl-surface: transparent;
 }
