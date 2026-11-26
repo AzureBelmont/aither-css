@@ -5,7 +5,7 @@
 
    Author  AzureBelmont
    Repo    github.com/AzureBelmont/aither-css
-   Version 0.35 preview
+   Version 0.36 preview
    Base    Site style must be set to "Aither Dark".
    Install Settings -> General -> External CSS Stylesheet
 
@@ -3104,4 +3104,7 @@ html body table.data-table > tbody > tr > td.notification--unread a{
 }
 html body table.data-table > tbody > tr > td.notification--read a{
   color: var(--at-text2) !important;
+}
+html body table.data-table > tbody > tr:has(> td.notification--unread) .data-table__action > :not(.dialog){
+  visibility: visible !important;
 }
