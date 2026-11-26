@@ -5,7 +5,7 @@
 
    Author  AzureBelmont
    Repo    github.com/AzureBelmont/aither-css
-   Version 0.32 preview
+   Version 0.33 preview
    Base    Site style must be set to "Aither Dark".
    Install Settings -> General -> External CSS Stylesheet
 
@@ -2391,6 +2391,12 @@ html body li.top-nav__dropdown ul li a.top-nav__username:hover{
     height: auto !important;
     width: 100% !important;
     margin: 0 0 1rem !important;
+  }
+}
+@media (min-width:1400px){
+  html body .top-nav__icon-bar > li.top-nav__dropdown > ul{
+    right: 0 !important;
+    left: auto !important;
   }
 }
 
