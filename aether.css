@@ -5,7 +5,7 @@
 
    Author  AzureBelmont
    Repo    github.com/AzureBelmont/aither-css
-   Version 0.10 preview
+   Version 0.11 preview
    Base    Site style must be set to "Aither Dark".
    Install Settings -> General -> External CSS Stylesheet
 
@@ -2273,12 +2273,6 @@ html body .top-nav__site-logo{
   font-size: 0 !important;
   letter-spacing: 0 !important;
 }
-html body .footer__section-title .top-nav__site-logo{
-  font-size: 0 !important;
-}
-html body .footer__section-title .top-nav__site-logo::after{
-  font-size: 15px !important;
-}
 html body .top-nav__site-logo::after{
   content: "\C6THER";
   font-size: 25px;
@@ -2376,4 +2370,60 @@ html body li.topic-listings__item:hover{
 }
 html body article.chatbox-message:hover{
   background-color: rgba(200,208,255,.05) !important;
+}
+html body .footer__section:first-child .footer__section-title .top-nav__site-logo{
+  font-size: 0 !important;
+}
+html body .footer__section:first-child .footer__section-title .top-nav__site-logo::after{
+  font-size: 15px !important;
+}
+html body .footer .footer__section:first-child .footer__section-title img{
+  filter: brightness(0) saturate(1) invert(.788) sepia(.856) saturate(2.245) hue-rotate(-25.4deg) brightness(.91) !important;
+}
+html body table.data-table:not(:has(tr[class*="torrent-search--list__"])){
+  border-collapse: separate !important;
+  border-spacing: 0 6px !important;
+  padding: 0 10px !important;
+}
+html body table.data-table:not(:has(tr[class*="torrent-search--list__"])) > tbody > tr > td{
+  background-color: rgba(200,208,255,.035) !important;
+  background-image: none !important;
+  border-top: 1px solid rgba(200,208,255,.07) !important;
+  border-bottom: 1px solid rgba(200,208,255,.07) !important;
+  transition: background-color .15s ease,border-color .15s ease;
+}
+html body table.data-table:not(:has(tr[class*="torrent-search--list__"])) > tbody > tr > td:first-child{
+  border-left: 1px solid rgba(200,208,255,.07) !important;
+  border-radius: 12px 0 0 12px !important;
+}
+html body table.data-table:not(:has(tr[class*="torrent-search--list__"])) > tbody > tr > td:last-child{
+  border-right: 1px solid rgba(200,208,255,.07) !important;
+  border-radius: 0 12px 12px 0 !important;
+}
+html body table.data-table:not(:has(tr[class*="torrent-search--list__"])) > tbody > tr:hover > td{
+  background-color: rgba(200,208,255,.06) !important;
+  border-color: rgba(232,201,138,.38) !important;
+}
+html body table.data-table:not(:has(tr[class*="torrent-search--list__"])) > thead > tr > th{
+  background: transparent !important;
+  box-shadow: none !important;
+}
+@media (min-width:1000px){
+  html body main.page__wiki--index article.sidebar2 > div{
+    display: block !important;
+    columns: 360px auto !important;
+    column-gap: 12px !important;
+  }
+  html body main.page__wiki--index article.sidebar2 > div > section.panelV2{
+    break-inside: avoid !important;
+    margin: 0 0 12px !important;
+    width: 100% !important;
+  }
+  html body main.page__wiki--index table.data-table{
+    border-spacing: 0 3px !important;
+  }
+  html body main.page__wiki--index table.data-table td{
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+  }
 }
