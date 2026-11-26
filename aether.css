@@ -5,7 +5,7 @@
 
    Author  AzureBelmont
    Repo    github.com/AzureBelmont/aither-css
-   Version 0.27 preview
+   Version 0.28 preview
    Base    Site style must be set to "Aither Dark".
    Install Settings -> General -> External CSS Stylesheet
 
@@ -2896,7 +2896,7 @@ html body .vscomp-ele .vscomp-option.selected{
 }
 html body section.blocks__featured ul.featured-carousel{
   scroll-padding-inline: 16px !important;
-  gap: 14px !important;
+  gap: 16px !important;
   padding: 14px 16px 16px !important;
 }
 html body section.blocks__featured li.featured-carousel__slide{
