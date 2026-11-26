@@ -6,7 +6,7 @@
 
    Author  AzureBelmont
    Repo    github.com/AzureBelmont/aither-css
-   Version 0.4 preview
+   Version 0.5 preview
    Base    Site style must be set to "Aither Dark".
    Install Settings -> General -> External CSS Stylesheet
 
@@ -3138,8 +3138,8 @@ html body .top-nav__main-menus > li:nth-child(1) > a::after{content:"\914D\4FE1"
 html body .top-nav__main-menus > li:nth-child(2) > a::after{content:"\4EA4\6D41";}
 html body .top-nav__main-menus > li:nth-child(3) > a::after{content:"\652F\63F4";}
 html body .top-nav__main-menus > li:nth-child(4) > a::after{content:"\305D\306E\4ED6";}
-html body .top-nav__main-menus > li:nth-child(3)::before,html body .top-nav__main-menus > li:nth-child(3)::after{content:"";position:fixed;left:170px;bottom:196px;width:16px;height:16px;z-index:-1;pointer-events:none;border-radius:50%;background:radial-gradient(circle at 50% 58%,#fff 0,#ffd9ea 20%,rgba(244,170,202,.6) 42%,rgba(244,170,202,0) 70%);}
-html body .top-nav__main-menus > li:nth-child(3)::after{left:150px;bottom:238px;width:11px;height:11px;opacity:.7;}
+html body .top-nav__main-menus > li:nth-child(3)::before,html body .top-nav__main-menus > li:nth-child(3)::after{content:"";position:fixed;left:207px;bottom:184px;width:16px;height:16px;z-index:-1;pointer-events:none;border-radius:50%;background:radial-gradient(circle at 50% 58%,#fff 0,#ffd9ea 20%,rgba(244,170,202,.6) 42%,rgba(244,170,202,0) 70%);}
+html body .top-nav__main-menus > li:nth-child(3)::after{left:192px;bottom:224px;width:11px;height:11px;opacity:.7;}
 }
 @media (min-width:1400px) and (min-height:880px){
 html body .top-nav ul.top-nav__ratio-bar::before{content:"";position:absolute;right:6px;bottom:100%;width:34px;height:53px;pointer-events:none;background:var(--ak-fox) no-repeat center bottom/contain;filter:drop-shadow(0 0 10px rgba(244,170,202,.25));}
