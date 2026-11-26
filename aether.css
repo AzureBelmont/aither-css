@@ -5,7 +5,7 @@
 
    Author  AzureBelmont
    Repo    github.com/AzureBelmont/aither-css
-   Version 0.26 preview
+   Version 0.27 preview
    Base    Site style must be set to "Aither Dark".
    Install Settings -> General -> External CSS Stylesheet
 
@@ -1744,6 +1744,8 @@ html body li.top-nav__dropdown ul li a.top-nav__username:hover{
   html body{
     --rail: 236px;
     --bar: 52px;
+    --col: 2300px;
+    --gut: max(0px,calc((100% - var(--rail) - var(--col)) / 2));
     padding-left: var(--rail) !important;
     padding-top: var(--bar) !important;
   }
@@ -1916,14 +1918,14 @@ html body li.top-nav__dropdown ul li a.top-nav__username:hover{
   html body .top-nav__icon-bar{
     position: fixed !important;
     top: 8px;
-    right: 16px;
+    right: calc(22px + var(--gut));
     z-index: 32;
   }
   html body nav.secondary-nav{
     position: fixed !important;
     top: 0;
-    left: var(--rail);
-    right: 230px !important;
+    left: calc(var(--rail) + var(--gut));
+    right: calc(236px + var(--gut)) !important;
     width: auto !important;
     height: var(--bar) !important;
     z-index: 31;
@@ -1934,7 +1936,7 @@ html body li.top-nav__dropdown ul li a.top-nav__username:hover{
     background: transparent !important;
     border: 0 !important;
     box-shadow: none !important;
-    padding: 0 16px !important;
+    padding: 0 22px !important;
     max-width: none !important;
   }
   html body > main{
@@ -2054,9 +2056,9 @@ html body li.top-nav__dropdown ul li a.top-nav__username:hover{
   html body:has(> main[class*="page__poll"]) .top-nav__main-menus > li > ul > li > a[href$="/polls"],
   html body:has(> main[class*="page__article"]) .top-nav__main-menus > li > ul > li > a[href$="/articles"],
   html body:has(> main[class*="page__event"]) .top-nav__main-menus > li > ul > li > a[href$="/events"],
-  html body:has(> main[class*="page__wiki--index"]) .top-nav__main-menus > li > ul > li > a[href$="/wikis"],
+  html body:has(> main[class*="page__wiki"]) .top-nav__main-menus > li > ul > li > a[href$="/wikis"],
   html body:has(> main[class*="page__ticket"]) .top-nav__main-menus > li > ul > li > a[href$="/tickets"],
-  html body:has(> main[class*="page__stats--index"]) .top-nav__main-menus > li > ul > li > a[href$="/stats"],
+  html body:has(> main[class*="page__stats"]):not(:has(a.breadcrumb__link[href$="/collectibles"])) .top-nav__main-menus > li > ul > li > a[href$="/stats"],
   html body:has(> main[class*="page__trending"]) .top-nav__main-menus > li > ul > li > a[href$="/trending"],
   html body:has(> main[class*="page__missing"]) .top-nav__main-menus > li > ul > li > a[href$="/missing"],
   html body:has(> main[class*="page__internal"]) .top-nav__main-menus > li > ul > li > a[href$="/pages/internal"]{
@@ -2079,9 +2081,9 @@ html body li.top-nav__dropdown ul li a.top-nav__username:hover{
   html body:has(> main[class*="page__poll"]) .top-nav__main-menus > li > ul > li > a[href$="/polls"] i,
   html body:has(> main[class*="page__article"]) .top-nav__main-menus > li > ul > li > a[href$="/articles"] i,
   html body:has(> main[class*="page__event"]) .top-nav__main-menus > li > ul > li > a[href$="/events"] i,
-  html body:has(> main[class*="page__wiki--index"]) .top-nav__main-menus > li > ul > li > a[href$="/wikis"] i,
+  html body:has(> main[class*="page__wiki"]) .top-nav__main-menus > li > ul > li > a[href$="/wikis"] i,
   html body:has(> main[class*="page__ticket"]) .top-nav__main-menus > li > ul > li > a[href$="/tickets"] i,
-  html body:has(> main[class*="page__stats--index"]) .top-nav__main-menus > li > ul > li > a[href$="/stats"] i,
+  html body:has(> main[class*="page__stats"]):not(:has(a.breadcrumb__link[href$="/collectibles"])) .top-nav__main-menus > li > ul > li > a[href$="/stats"] i,
   html body:has(> main[class*="page__trending"]) .top-nav__main-menus > li > ul > li > a[href$="/trending"] i,
   html body:has(> main[class*="page__missing"]) .top-nav__main-menus > li > ul > li > a[href$="/missing"] i,
   html body:has(> main[class*="page__internal"]) .top-nav__main-menus > li > ul > li > a[href$="/pages/internal"] i{
@@ -2102,23 +2104,23 @@ html body li.top-nav__dropdown ul li a.top-nav__username:hover{
   html body > main{
     margin-left: auto !important;
     margin-right: auto !important;
-    max-width: 2300px !important;
+    max-width: var(--col) !important;
   }
 }
 @media (min-width:1500px){
-  html body main:is(.page__torrent--show,.page__torrent-similar--index) > article{
+  html body main:is(.page__torrent--show,.page__torrent-similar--index,.page__request--show) > article{
     display: grid !important;
     grid-template-columns: minmax(0,1fr) clamp(340px,24vw,440px) !important;
     column-gap: 22px !important;
     row-gap: 0 !important;
     align-items: start !important;
   }
-  html body main:is(.page__torrent--show,.page__torrent-similar--index) > article > *{
+  html body main:is(.page__torrent--show,.page__torrent-similar--index,.page__request--show) > article > *{
     grid-column: 1 !important;
     min-width: 0 !important;
     margin-bottom: 10px !important;
   }
-  html body main:is(.page__torrent--show,.page__torrent-similar--index) > article > section.meta{
+  html body main:is(.page__torrent--show,.page__torrent-similar--index,.page__request--show) > article > section.meta{
     grid-column: 2 !important;
     grid-row: 1 / span 60 !important;
     position: sticky !important;
@@ -2138,7 +2140,7 @@ html body li.top-nav__dropdown ul li a.top-nav__username:hover{
     box-shadow: 0 24px 60px -34px rgba(0,0,0,.9) !important;
     justify-items: start !important;
   }
-  html body main:is(.page__torrent--show,.page__torrent-similar--index) section.meta > .meta__backdrop{
+  html body main:is(.page__torrent--show,.page__torrent-similar--index,.page__request--show) section.meta > .meta__backdrop{
     position: absolute !important;
     inset: 0 !important;
     width: 100% !important;
@@ -2149,31 +2151,31 @@ html body li.top-nav__dropdown ul li a.top-nav__username:hover{
     mask-image: linear-gradient(#000 40%,transparent) !important;
     border-radius: 0 !important;
   }
-  html body main:is(.page__torrent--show,.page__torrent-similar--index) section.meta > .meta__poster-link{
+  html body main:is(.page__torrent--show,.page__torrent-similar--index,.page__request--show) section.meta > .meta__poster-link{
     justify-self: center !important;
     width: 230px !important;
     position: relative !important;
   }
-  html body main:is(.page__torrent--show,.page__torrent-similar--index) section.meta > .meta__poster-link img{
+  html body main:is(.page__torrent--show,.page__torrent-similar--index,.page__request--show) section.meta > .meta__poster-link img{
     width: 100% !important;
     height: auto !important;
     border-radius: 12px !important;
   }
-  html body main:is(.page__torrent--show,.page__torrent-similar--index) section.meta > .meta__actions{
+  html body main:is(.page__torrent--show,.page__torrent-similar--index,.page__request--show) section.meta > .meta__actions{
     grid-area: 1 / 1 !important;
     justify-self: end !important;
     align-self: start !important;
   }
-  html body main:is(.page__torrent--show,.page__torrent-similar--index) section.meta > .meta__title-link{
+  html body main:is(.page__torrent--show,.page__torrent-similar--index,.page__request--show) section.meta > .meta__title-link{
     justify-self: center !important;
     text-align: center !important;
     width: auto !important;
     max-width: 100% !important;
   }
-  html body main:is(.page__torrent--show,.page__torrent-similar--index) section.meta > :is(.work__tags,.meta__ids){
+  html body main:is(.page__torrent--show,.page__torrent-similar--index,.page__request--show) section.meta > :is(.work__tags,.meta__ids){
     justify-self: center !important;
   }
-  html body main:is(.page__torrent--show,.page__torrent-similar--index) section.meta > .meta__chips{
+  html body main:is(.page__torrent--show,.page__torrent-similar--index,.page__request--show) section.meta > .meta__chips{
     display: flex !important;
     flex-direction: column !important;
     gap: 14px !important;
@@ -2181,11 +2183,11 @@ html body li.top-nav__dropdown ul li a.top-nav__username:hover{
     max-height: none !important;
     overflow: visible !important;
   }
-  html body main:is(.page__torrent--show,.page__torrent-similar--index) section.meta > .meta__chips > .meta__chip-container{
+  html body main:is(.page__torrent--show,.page__torrent-similar--index,.page__request--show) section.meta > .meta__chips > .meta__chip-container{
     flex: none !important;
     max-height: 260px !important;
   }
-  html body main:is(.page__torrent--show,.page__torrent-similar--index) section.meta > .meta__description{
+  html body main:is(.page__torrent--show,.page__torrent-similar--index,.page__request--show) section.meta > .meta__description{
     width: auto !important;
     max-width: 100% !important;
   }
@@ -2357,6 +2359,25 @@ html body li.top-nav__dropdown ul li a.top-nav__username:hover{
 @media (min-width:1400px){
   html body main article.sidebar--inverse{
     flex-direction: row !important;
+  }
+}
+@media (min-width:1400px){
+  html body:has(a.breadcrumb__link[href$="/collectibles"]) .top-nav__main-menus > li > ul > li > a[href$="/collectibles"],
+  html body:has(> main[class*="page__collection"]) .top-nav__main-menus > li > ul > li > a[href$="/mediahub"],
+  html body:has(> main[class*="page__person"]) .top-nav__main-menus > li > ul > li > a[href$="/mediahub"],
+  html body:has(> main[class*="page__network"]) .top-nav__main-menus > li > ul > li > a[href$="/mediahub"],
+  html body:has(> main[class*="page__company"]) .top-nav__main-menus > li > ul > li > a[href$="/mediahub"],
+  html body:has(> main[class*="page__genre"]) .top-nav__main-menus > li > ul > li > a[href$="/mediahub"]{
+    background: rgba(232,201,138,.12) !important;
+    color: var(--at-accent) !important;
+  }
+  html body:has(a.breadcrumb__link[href$="/collectibles"]) .top-nav__main-menus > li > ul > li > a[href$="/collectibles"] i,
+  html body:has(> main[class*="page__collection"]) .top-nav__main-menus > li > ul > li > a[href$="/mediahub"] i,
+  html body:has(> main[class*="page__person"]) .top-nav__main-menus > li > ul > li > a[href$="/mediahub"] i,
+  html body:has(> main[class*="page__network"]) .top-nav__main-menus > li > ul > li > a[href$="/mediahub"] i,
+  html body:has(> main[class*="page__company"]) .top-nav__main-menus > li > ul > li > a[href$="/mediahub"] i,
+  html body:has(> main[class*="page__genre"]) .top-nav__main-menus > li > ul > li > a[href$="/mediahub"] i{
+    color: var(--at-accent) !important;
   }
 }
 
@@ -2535,15 +2556,15 @@ html body ul.topic-listings{
   gap: 6px !important;
   padding: 8px 10px 12px !important;
 }
-html body li.subforum-listings__item,
-html body li.topic-listings__item{
+html body li.subforum-listings__item:nth-child(n),
+html body li.topic-listings__item:nth-child(n){
   background: rgba(200,208,255,.035) !important;
   border: 1px solid rgba(200,208,255,.07) !important;
   border-radius: 12px !important;
   transition: border-color .15s ease,background-color .15s ease !important;
 }
-html body li.subforum-listings__item:hover,
-html body li.topic-listings__item:hover{
+html body li.subforum-listings__item:nth-child(n):hover,
+html body li.topic-listings__item:nth-child(n):hover{
   background: rgba(200,208,255,.06) !important;
   border-color: rgba(232,201,138,.38) !important;
 }
@@ -2872,4 +2893,93 @@ html body .vscomp-ele .vscomp-option.selected{
   html body select.form__select:not([multiple]):not([size])::picker-icon{
     display: none !important;
   }
+}
+html body section.blocks__featured ul.featured-carousel{
+  scroll-padding-inline: 16px !important;
+  gap: 14px !important;
+  padding: 14px 16px 16px !important;
+}
+html body section.blocks__featured li.featured-carousel__slide{
+  scroll-snap-align: start !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+  background: rgba(200,208,255,.035) !important;
+  border: 1px solid rgba(200,208,255,.10) !important;
+  border-radius: 14px !important;
+  transition: border-color .15s ease;
+}
+html body section.blocks__featured li.featured-carousel__slide:hover{
+  border-color: rgba(232,201,138,.45) !important;
+}
+html body section.blocks__featured li.featured-carousel__slide > article.torrent-card{
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  flex: 1 1 auto !important;
+  width: 100% !important;
+}
+html body section.blocks__featured li.featured-carousel__slide > article.torrent-card > header.torrent-card__header{
+  border-radius: 0 !important;
+}
+html body section.blocks__featured footer.featured-carousel__feature-details{
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 12px !important;
+  padding: 9px 14px !important;
+  border-top: 1px solid rgba(200,208,255,.08) !important;
+  font-size: 12px !important;
+  color: var(--at-text2) !important;
+}
+html body section.blocks__featured footer.featured-carousel__feature-details p{
+  margin: 0 !important;
+  text-align: left !important;
+}
+html body section.blocks__featured footer.featured-carousel__feature-details p.featured-carousel__featured-by{
+  text-align: right !important;
+  white-space: nowrap !important;
+}
+html body input[type].form__text:not(.quick-search__input):not(.post__tip-input):not([class*="compact-search"] *){
+  border-radius: 10px !important;
+}
+html body input[type].form__text:not(.quick-search__input):not(.post__tip-input):focus{
+  border-color: rgba(232,201,138,.55) !important;
+}
+html body input[list]::-webkit-calendar-picker-indicator{
+  opacity: .45 !important;
+}
+html body input[list]:hover::-webkit-calendar-picker-indicator{
+  opacity: .9 !important;
+}
+html body .person--no-still{
+  background-image: linear-gradient(rgba(200,208,255,.13),rgba(200,208,255,.05)) !important;
+  color: var(--at-text2) !important;
+  box-shadow: inset 0 0 0 1px rgba(200,208,255,.10) !important;
+}
+html body article.collection[style*="via.placeholder"]{
+  background-image: linear-gradient(135deg,rgba(200,208,255,.09),rgba(200,208,255,.02)) !important;
+  border: 1px solid rgba(200,208,255,.09) !important;
+  height: auto !important;
+  min-height: 0 !important;
+}
+html body li.collection__list-item:has(> article.collection[style*="via.placeholder"]){
+  height: auto !important;
+  min-height: 0 !important;
+}
+html body img.mediahub-card__image{
+  filter: drop-shadow(0 0 1px rgba(255,255,255,.8)) drop-shadow(0 0 7px rgba(236,233,223,.22)) !important;
+}
+html body img[src*="via.placeholder"]{
+  opacity: .1 !important;
+}
+html body h3.pages{
+  border-top: 0 !important;
+  border-bottom: 1px solid rgba(232,201,138,.32) !important;
+  padding: 6px 0 10px !important;
+}
+html body .bbcode-rendered hr{
+  background: rgba(200,208,255,.10) !important;
+  border: 0 !important;
 }
