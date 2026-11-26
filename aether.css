@@ -5,7 +5,7 @@
 
    Author  AzureBelmont
    Repo    github.com/AzureBelmont/aither-css
-   Version 0.2 preview
+   Version 0.3 preview
    Base    Site style must be set to "Aither Dark".
    Install Settings -> General -> External CSS Stylesheet
 
@@ -1740,7 +1740,7 @@ html body li.top-nav__dropdown ul li a.top-nav__username:hover{
   box-shadow: 0 6px 0 0 var(--at-accent-faint, var(--k-accent-faint)) !important;
 }
 
-@media (min-width:1200px){
+@media (min-width:1400px){
   html body{
     --rail: 236px;
     --bar: 52px;
@@ -1940,6 +1940,25 @@ html body li.top-nav__dropdown ul li a.top-nav__username:hover{
   html body > main{
     padding: 18px 22px 0 !important;
   }
+  html body .top-nav ul.top-nav__ratio-bar{
+    background: #090c18 !important;
+  }
+  html body .top-nav__main-menus{
+    gap: 12px !important;
+  }
+  html body .top-nav__main-menus > li > ul > li > a,
+  html body .top-nav__main-menus > li > ul > li > form > button{
+    padding: 2px 8px !important;
+    min-height: 0 !important;
+    gap: 10px !important;
+  }
+  html body .top-nav__main-menus > li > ul > li i[class*="fa-"]{
+    width: 26px !important;
+    height: 26px !important;
+    min-width: 26px !important;
+    line-height: 26px !important;
+    font-size: 12px !important;
+  }
 }
 
 html body{
@@ -1963,7 +1982,7 @@ html body tr:nth-child(2n) td{
 html body tbody tr[class*="torrent-search--list__"] td{
   background-color: transparent !important;
 }
-@media (min-width:1200px){
+@media (min-width:1000px){
   html body .top-nav{
     background: linear-gradient(180deg,#0e1330,#090c18) !important;
   }
@@ -1971,9 +1990,6 @@ html body tbody tr[class*="torrent-search--list__"] td{
     background: rgba(10,13,26,.78);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
-  }
-  html body .top-nav ul.top-nav__ratio-bar{
-    background: #090c18 !important;
   }
   html body tbody:has(> tr[class*="torrent-search--list__"]){
     display: flex !important;
@@ -2050,24 +2066,6 @@ html body header nav.top-nav a.top-nav__branding > img{
 html body a.torrent-search--list__name:visited{
   color: #b7b0d6 !important;
 }
-@media (min-width:1200px){
-  html body .top-nav__main-menus{
-    gap: 12px !important;
-  }
-  html body .top-nav__main-menus > li > ul > li > a,
-  html body .top-nav__main-menus > li > ul > li > form > button{
-    padding: 2px 8px !important;
-    min-height: 0 !important;
-    gap: 10px !important;
-  }
-  html body .top-nav__main-menus > li > ul > li i[class*="fa-"]{
-    width: 26px !important;
-    height: 26px !important;
-    min-width: 26px !important;
-    line-height: 26px !important;
-    font-size: 12px !important;
-  }
-}
 html body .panelV2 > .panel__heading,
 html body .panel__heading,
 html body .panel__heading a{
@@ -2130,4 +2128,26 @@ html body dialog.dialog{
 html body dialog::backdrop{
   backdrop-filter: blur(6px);
   background: rgba(4,6,14,.6) !important;
+}
+html body ul.subforum-listings,
+html body ul.topic-listings{
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+  padding: 8px 10px 12px !important;
+}
+html body li.subforum-listings__item,
+html body li.topic-listings__item{
+  background: rgba(200,208,255,.035) !important;
+  border: 1px solid rgba(200,208,255,.07) !important;
+  border-radius: 12px !important;
+  transition: border-color .15s ease,background-color .15s ease !important;
+}
+html body li.subforum-listings__item:hover,
+html body li.topic-listings__item:hover{
+  background: rgba(200,208,255,.06) !important;
+  border-color: rgba(232,201,138,.38) !important;
+}
+html body article.chatbox-message:hover{
+  background-color: rgba(200,208,255,.05) !important;
 }
