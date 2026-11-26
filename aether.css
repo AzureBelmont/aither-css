@@ -5,7 +5,7 @@
 
    Author  AzureBelmont
    Repo    github.com/AzureBelmont/aither-css
-   Version 0.21 preview
+   Version 0.22 preview
    Base    Site style must be set to "Aither Dark".
    Install Settings -> General -> External CSS Stylesheet
 
@@ -1938,7 +1938,7 @@ html body li.top-nav__dropdown ul li a.top-nav__username:hover{
     max-width: none !important;
   }
   html body > main{
-    padding: 18px 22px 0 !important;
+    padding: 10px 22px 0 !important;
   }
   html body .top-nav ul.top-nav__ratio-bar{
     background: #090c18 !important;
@@ -2122,8 +2122,8 @@ html body li.top-nav__dropdown ul li a.top-nav__username:hover{
     grid-column: 2 !important;
     grid-row: 1 / span 60 !important;
     position: sticky !important;
-    top: calc(var(--bar) + 14px) !important;
-    max-height: calc(100vh - var(--bar) - 28px) !important;
+    top: calc(var(--bar) + 10px) !important;
+    max-height: calc(100vh - var(--bar) - 20px) !important;
     overflow-x: hidden !important;
     overflow-y: auto !important;
     grid-template-columns: minmax(0,1fr) !important;
@@ -2283,8 +2283,8 @@ html body li.top-nav__dropdown ul li a.top-nav__username:hover{
     grid-column: 2 !important;
     grid-row: 1 / span 60 !important;
     position: sticky !important;
-    top: calc(var(--bar) + 14px) !important;
-    max-height: calc(100vh - var(--bar) - 28px) !important;
+    top: calc(var(--bar) + 10px) !important;
+    max-height: calc(100vh - var(--bar) - 20px) !important;
     overflow-x: hidden !important;
     overflow-y: auto !important;
     margin: 0 !important;
@@ -2311,6 +2311,16 @@ html body li.top-nav__dropdown ul li a.top-nav__username:hover{
   }
   html body main.page__user-profile--show .user-profile-card__right-block .user-profile-card__stats .user-profile-card__meta-list{
     grid-template-columns: repeat(3,minmax(0,1fr)) !important;
+  }
+  html body main.page__user-profile--show .user-profile-card__meta-item-subrow{
+    display: grid !important;
+    grid-template-columns: repeat(3,minmax(0,1fr)) !important;
+    gap: 12px 8px !important;
+  }
+  html body main.page__user-profile--show .user-profile-card__meta-item-subrow > .user-profile-card__meta-item{
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: none !important;
   }
   html body main.page__internal--index > article{
     display: block !important;
@@ -2662,4 +2672,50 @@ html body li:has(> .topic-listing__item--unread){
   html body tbody tr[class*="torrent-search--list__"][class*="sticky"] > td:first-child{
     box-shadow: none !important;
   }
+}
+html body li.top-nav__dropdown ul li a.top-nav__username:hover{
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+html body li.top-nav__dropdown ul li a.top-nav__username > span{
+  justify-self: center !important;
+  padding: 3px 14px !important;
+  margin: -3px 0 !important;
+  border-radius: 999px !important;
+  transition: background-color .15s ease;
+}
+html body li.top-nav__dropdown ul li a.top-nav__username:hover > span{
+  background-color: var(--at-accent-faint) !important;
+}
+html body .quick-search__results article.quick-search__result,
+html body .quick-search__results article.quick-search__result:hover{
+  background-color: transparent !important;
+  border-bottom: 0 !important;
+  padding: 2px 6px !important;
+}
+html body .quick-search__results article.quick-search__result:first-of-type{
+  padding-top: 6px !important;
+}
+html body .quick-search__results article.quick-search__result:last-child{
+  padding-bottom: 6px !important;
+}
+html body .quick-search__results a.quick-search__result-link{
+  background-color: transparent !important;
+  border-radius: 8px !important;
+  transition: background-color .15s ease;
+}
+html body .quick-search__results article.quick-search__result:hover a.quick-search__result-link,
+html body .quick-search__results a.quick-search__result-link:focus-visible{
+  background-color: var(--at-accent-faint) !important;
+}
+html body table.internal-claim__inner-table tr td,
+html body table.internal-claim__inner-table tr:nth-child(2n) td{
+  background-color: transparent !important;
+  border: 0 !important;
+  padding: 1px 0 !important;
+  line-height: 1.45 !important;
+}
+html body main.page__internal-claim--index table.data-table tr > td:nth-last-child(-n+2):not(table.internal-claim__inner-table td),
+html body main.page__internal-claim--index table.data-table th{
+  white-space: nowrap !important;
 }
