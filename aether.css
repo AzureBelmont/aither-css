@@ -5,7 +5,7 @@
 
    Author  AzureBelmont
    Repo    github.com/AzureBelmont/aither-css
-   Version 0.25 preview
+   Version 0.26 preview
    Base    Site style must be set to "Aither Dark".
    Install Settings -> General -> External CSS Stylesheet
 
@@ -2354,6 +2354,11 @@ html body li.top-nav__dropdown ul li a.top-nav__username:hover{
     margin-right: 0 !important;
   }
 }
+@media (min-width:1400px){
+  html body main article.sidebar--inverse{
+    flex-direction: row !important;
+  }
+}
 
 html body{
   background: radial-gradient(900px 520px at 80% -8%,rgba(232,201,138,.12),transparent 62%),radial-gradient(800px 560px at 0% 100%,rgba(90,110,220,.12),transparent 60%),linear-gradient(180deg,#0e1330 0%,#0a0d1a 45%,#070914 100%) fixed !important;
@@ -2827,11 +2832,11 @@ html body .vscomp-ele .vscomp-option.selected{
   color: var(--at-accent) !important;
 }
 @supports (appearance:base-select){
-  html body select:not([multiple]):not([size]),
-  html body select:not([multiple]):not([size])::picker(select){
+  html body select.form__select:not([multiple]):not([size]),
+  html body select.form__select:not([multiple]):not([size])::picker(select){
     appearance: base-select !important;
   }
-  html body select:not([multiple]):not([size])::picker(select){
+  html body select.form__select:not([multiple]):not([size])::picker(select){
     margin-top: 6px !important;
     padding: 6px !important;
     background: var(--at-bg2) !important;
@@ -2840,7 +2845,7 @@ html body .vscomp-ele .vscomp-option.selected{
     box-shadow: 0 18px 40px rgba(0,0,0,.5) !important;
     color: var(--at-text2) !important;
   }
-  html body select:not([multiple]):not([size]) option{
+  html body select.form__select:not([multiple]):not([size]) option{
     padding: 6px 10px !important;
     border-radius: 8px !important;
     background: transparent !important;
@@ -2848,19 +2853,23 @@ html body .vscomp-ele .vscomp-option.selected{
     font-size: 14px !important;
     line-height: 1.35 !important;
   }
-  html body select:not([multiple]):not([size]) option:hover,
-  html body select:not([multiple]):not([size]) option:focus-visible{
+  html body select.form__select:not([multiple]):not([size]) option:hover,
+  html body select.form__select:not([multiple]):not([size]) option:focus-visible{
     background: var(--at-accent-faint) !important;
     color: var(--at-text) !important;
     outline: 0 !important;
   }
-  html body select:not([multiple]):not([size]) option:checked{
+  html body select.form__select:not([multiple]):not([size]):has(option:hover) option:focus-visible:not(:hover){
+    background: transparent !important;
+    color: var(--at-text2) !important;
+  }
+  html body select.form__select:not([multiple]):not([size]) option:checked{
     color: var(--at-accent) !important;
   }
-  html body select:not([multiple]):not([size]) option::checkmark{
+  html body select.form__select:not([multiple]):not([size]) option::checkmark{
     display: none !important;
   }
-  html body select:not([multiple]):not([size])::picker-icon{
+  html body select.form__select:not([multiple]):not([size])::picker-icon{
     display: none !important;
   }
 }
