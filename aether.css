@@ -5,7 +5,7 @@
 
    Author  AzureBelmont
    Repo    github.com/AzureBelmont/aither-css
-   Version 0.9 preview
+   Version 0.10 preview
    Base    Site style must be set to "Aither Dark".
    Install Settings -> General -> External CSS Stylesheet
 
@@ -2091,6 +2091,93 @@ html body li.top-nav__dropdown ul li a.top-nav__username:hover{
     margin-left: auto !important;
     margin-right: auto !important;
     max-width: 2300px !important;
+  }
+}
+@media (min-width:1800px){
+  html body main.page__torrent--show > article{
+    display: grid !important;
+    grid-template-columns: minmax(0,1fr) 440px !important;
+    column-gap: 22px !important;
+    row-gap: 0 !important;
+    align-items: start !important;
+  }
+  html body main.page__torrent--show > article > *{
+    grid-column: 1 !important;
+    min-width: 0 !important;
+    margin-bottom: 10px !important;
+  }
+  html body main.page__torrent--show > article > section.meta{
+    grid-column: 2 !important;
+    grid-row: 1 / span 60 !important;
+    position: sticky !important;
+    top: calc(var(--bar) + 14px) !important;
+    max-height: calc(100vh - var(--bar) - 28px) !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    scrollbar-width: thin;
+    grid-template-columns: minmax(0,1fr) !important;
+    grid-template-rows: none !important;
+    grid-template-areas: "poster" "title" "tags" "ids" "description" "chips" !important;
+    gap: 10px !important;
+    padding: 18px !important;
+    margin: 0 !important;
+    border: 1px solid rgba(200,208,255,.09) !important;
+    border-radius: 16px !important;
+    background: var(--at-bg2) !important;
+    box-shadow: 0 24px 60px -34px rgba(0,0,0,.9) !important;
+    justify-items: start !important;
+  }
+  html body main.page__torrent--show section.meta > .meta__backdrop{
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 340px !important;
+    object-fit: cover !important;
+    opacity: .35 !important;
+    -webkit-mask-image: linear-gradient(#000 40%,transparent) !important;
+    mask-image: linear-gradient(#000 40%,transparent) !important;
+    border-radius: 0 !important;
+  }
+  html body main.page__torrent--show section.meta > .meta__poster-link{
+    justify-self: center !important;
+    width: 230px !important;
+    position: relative !important;
+  }
+  html body main.page__torrent--show section.meta > .meta__poster-link img{
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 12px !important;
+  }
+  html body main.page__torrent--show section.meta > .meta__actions{
+    grid-area: 1 / 1 !important;
+    justify-self: end !important;
+    align-self: start !important;
+  }
+  html body main.page__torrent--show section.meta > .meta__title-link{
+    justify-self: center !important;
+    text-align: center !important;
+    width: auto !important;
+    max-width: 100% !important;
+  }
+  html body main.page__torrent--show section.meta > :is(.work__tags,
+  .meta__ids){
+    justify-self: center !important;
+  }
+  html body main.page__torrent--show section.meta > .meta__chips{
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+    width: 100% !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+  html body main.page__torrent--show section.meta > .meta__chips > .meta__chip-container{
+    flex: none !important;
+    max-height: 260px !important;
+  }
+  html body main.page__torrent--show section.meta > .meta__description{
+    width: auto !important;
+    max-width: 100% !important;
   }
 }
 
