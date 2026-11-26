@@ -1894,3 +1894,29 @@ html body hr{
 html body .topic-listing__item--unread{
   box-shadow: -3px 0 0 0 var(--at-accent, var(--k-accent, #888)) !important;
 }
+
+::-webkit-resizer{
+  background-color: transparent;
+  background-image: linear-gradient(135deg, transparent 0 56%, var(--scrollbar-color, currentColor) 56% 64%, transparent 64% 76%, var(--scrollbar-color, currentColor) 76% 84%, transparent 84%);
+}
+::-webkit-scrollbar-corner{
+  background-color: transparent;
+}
+
+html body{
+  --fl-surface: var(--at-bg2);
+}
+html body .panelV2.chatbox{
+  --fl-surface: #ece7da;
+}
+html body .panel__header{
+  --fl-surface: var(--at-bg2);
+}
+html body label.form__label.form__label--floating{
+  background-image: linear-gradient(to bottom, var(--fl-surface, transparent) 0, var(--fl-surface, transparent) calc((14px - 1em) * 3), transparent calc((14px - 1em) * 3)) !important;
+}
+
+html body li.top-nav__dropdown ul li a.top-nav__username:hover{
+  background-color: var(--at-accent-faint, var(--k-accent-faint)) !important;
+  box-shadow: 0 6px 0 0 var(--at-accent-faint, var(--k-accent-faint)) !important;
+}
