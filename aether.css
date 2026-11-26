@@ -5,7 +5,7 @@
 
    Author  AzureBelmont
    Repo    github.com/AzureBelmont/aither-css
-   Version 0.18 preview
+   Version 0.19 preview
    Base    Site style must be set to "Aither Dark".
    Install Settings -> General -> External CSS Stylesheet
 
@@ -2604,4 +2604,44 @@ html body main.page__staff--index a.user-card{
 html body main.page__staff--index a.user-card:hover{
   transform: translateY(-2px);
   box-shadow: 0 14px 30px -14px rgba(0,0,0,.8) !important;
+}
+html body #comments > .panel__body{
+  padding: 12px 14px !important;
+}
+html body #comments form.new-comment{
+  padding: 0 0 10px !important;
+  gap: 8px !important;
+}
+html body .comment-list{
+  gap: 10px !important;
+}
+html body .comment__reply-list{
+  margin-top: 8px !important;
+  gap: 8px !important;
+}
+html body form.reply-comment{
+  padding-top: 0 !important;
+  margin-top: 8px !important;
+  margin-bottom: 4px !important;
+  gap: 8px !important;
+}
+html body form.reply-comment textarea.form__textarea,
+html body form.new-comment textarea.form__textarea{
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  min-height: 0 !important;
+}
+html body form.reply-comment textarea.form__textarea:not(:focus){
+  height: 34px !important;
+}
+html body .comment__aside{
+  padding: 8px !important;
+  gap: 4px !important;
+}
+html body .comment__aside img{
+  width: 48px !important;
+  height: 48px !important;
+}
+html body .comment__content{
+  padding-top: 8px !important;
 }
