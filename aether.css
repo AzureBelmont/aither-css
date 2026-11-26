@@ -5,7 +5,7 @@
 
    Author  AzureBelmont
    Repo    github.com/AzureBelmont/aither-css
-   Version 0.15 preview
+   Version 0.16 preview
    Base    Site style must be set to "Aither Dark".
    Install Settings -> General -> External CSS Stylesheet
 
@@ -2248,6 +2248,28 @@ html body li.top-nav__dropdown ul li a.top-nav__username:hover{
     gap: 8px !important;
   }
 }
+@media (min-width:1400px){
+  html body .top-nav__main-menus > li > a > .top-nav--left__container{
+    position: relative !important;
+  }
+  html body .top-nav__main-menus > li > a > .top-nav--left__container > svg{
+    top: 50% !important;
+    right: -2px !important;
+    transform: translateY(-50%) !important;
+    width: 14px !important;
+    height: 14px !important;
+  }
+  html body .top-nav__main-menus > li > ul > li > a{
+    position: relative !important;
+  }
+  html body .top-nav__main-menus > li > ul > li > a > svg{
+    top: 50% !important;
+    right: 8px !important;
+    transform: translateY(-50%) !important;
+    width: 14px !important;
+    height: 14px !important;
+  }
+}
 
 html body{
   background: radial-gradient(900px 520px at 80% -8%,rgba(232,201,138,.12),transparent 62%),radial-gradient(800px 560px at 0% 100%,rgba(90,110,220,.12),transparent 60%),linear-gradient(180deg,#0e1330 0%,#0a0d1a 45%,#070914 100%) fixed !important;
@@ -2498,4 +2520,25 @@ html body table.data-table:not(:has(tr[class*="torrent-search--list__"])) > thea
 html body .compact-search__visible-default{
   background: transparent !important;
   --fl-surface: transparent;
+}
+html body main[class*="page__torrent"] .panel__body.text-center:has(> h3.text-info){
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
+}
+html body main[class*="page__torrent"] .panel__body.text-center > h3.text-info{
+  margin: 2px 0 6px !important;
+}
+html body #internal_text > br{
+  display: none !important;
+}
+html body #internal_text > #countdownwrap{
+  margin-top: 10px !important;
+  line-height: 0 !important;
+}
+html body #internal_text > :is(#countdown_date,#current_server_time){
+  position: absolute !important;
+  width: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  overflow: hidden !important;
 }
