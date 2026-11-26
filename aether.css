@@ -5,7 +5,7 @@
 
    Author  AzureBelmont
    Repo    github.com/AzureBelmont/aither-css
-   Version 0.19 preview
+   Version 0.20 preview
    Base    Site style must be set to "Aither Dark".
    Install Settings -> General -> External CSS Stylesheet
 
@@ -2644,4 +2644,19 @@ html body .comment__aside img{
 }
 html body .comment__content{
   padding-top: 8px !important;
+}
+html body .topic-listing__item--unread{
+  border-left-color: transparent !important;
+  box-shadow: none !important;
+}
+html body li:has(> .topic-listing__item--unread){
+  box-shadow: inset 3px 0 0 var(--at-accent) !important;
+}
+@media (min-width:1000px){
+  html body tbody tr[class*="torrent-search--list__"][class*="sticky"]{
+    box-shadow: inset 3px 0 0 var(--at-accent) !important;
+  }
+  html body tbody tr[class*="torrent-search--list__"][class*="sticky"] > td:first-child{
+    box-shadow: none !important;
+  }
 }
