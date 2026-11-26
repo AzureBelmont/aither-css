@@ -5,7 +5,7 @@
 
    Author  AzureBelmont
    Repo    github.com/AzureBelmont/aither-css
-   Version 0.16 preview
+   Version 0.17 preview
    Base    Site style must be set to "Aither Dark".
    Install Settings -> General -> External CSS Stylesheet
 
@@ -2270,6 +2270,65 @@ html body li.top-nav__dropdown ul li a.top-nav__username:hover{
     height: 14px !important;
   }
 }
+@media (min-width:1500px){
+  html body main.page__user-profile--show > article{
+    display: grid !important;
+    grid-template-columns: minmax(0,1fr) clamp(340px,24vw,440px) !important;
+    column-gap: 22px !important;
+    row-gap: 0 !important;
+    align-items: start !important;
+  }
+  html body main.page__user-profile--show > article > *{
+    grid-column: 1 !important;
+    min-width: 0 !important;
+    margin-bottom: 10px !important;
+  }
+  html body main.page__user-profile--show > article > section.panelV2:has(> .user-profile-card__banner){
+    grid-column: 2 !important;
+    grid-row: 1 / span 60 !important;
+    position: sticky !important;
+    top: calc(var(--bar) + 14px) !important;
+    max-height: calc(100vh - var(--bar) - 28px) !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    margin: 0 !important;
+  }
+  html body main.page__user-profile--show .user-profile-card__banner{
+    grid-template-columns: minmax(0,1fr) !important;
+    grid-template-areas: "buttons" "left" "right" !important;
+    gap: 14px !important;
+    padding: 18px !important;
+  }
+  html body main.page__user-profile--show .user-profile-card__left-block{
+    justify-self: center !important;
+  }
+  html body main.page__user-profile--show .user-profile-card__right-block{
+    grid-template-columns: minmax(0,1fr) !important;
+    width: 100% !important;
+    gap: 12px !important;
+  }
+  html body main.page__user-profile--show .user-profile-card__meta-list{
+    display: grid !important;
+    grid-template-columns: repeat(2,minmax(0,1fr)) !important;
+    gap: 8px !important;
+    width: 100% !important;
+  }
+  html body main.page__internal--index > article{
+    display: block !important;
+    columns: 2 !important;
+    column-gap: 12px !important;
+  }
+  html body main.page__internal--index > article > section.panelV2{
+    break-inside: avoid !important;
+    margin: 0 0 12px !important;
+    width: 100% !important;
+  }
+}
+@media (min-width:2400px){
+  html body main.page__internal--index > article{
+    columns: 3 !important;
+  }
+}
 
 html body{
   background: radial-gradient(900px 520px at 80% -8%,rgba(232,201,138,.12),transparent 62%),radial-gradient(800px 560px at 0% 100%,rgba(90,110,220,.12),transparent 60%),linear-gradient(180deg,#0e1330 0%,#0a0d1a 45%,#070914 100%) fixed !important;
@@ -2541,4 +2600,12 @@ html body #internal_text > :is(#countdown_date,#current_server_time){
   height: 0 !important;
   margin: 0 !important;
   overflow: hidden !important;
+}
+html body main.page__staff--index a.user-card{
+  border-radius: 14px !important;
+  transition: transform .15s ease,box-shadow .15s ease !important;
+}
+html body main.page__staff--index a.user-card:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px -14px rgba(0,0,0,.8) !important;
 }
