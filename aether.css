@@ -5,7 +5,7 @@
 
    Author  AzureBelmont
    Repo    github.com/AzureBelmont/aither-css
-   Version 0.34 preview
+   Version 0.35 preview
    Base    Site style must be set to "Aither Dark".
    Install Settings -> General -> External CSS Stylesheet
 
@@ -3094,4 +3094,14 @@ html body table.data-table > tbody > tr > td{
 }
 html body table.data-table > tbody > tr:hover > td{
   --fl-surface: #1c2138;
+}
+html body table.data-table > tbody > tr > td.notification--unread{
+  box-shadow: inset 3px 0 0 var(--at-accent) !important;
+}
+html body table.data-table > tbody > tr > td.notification--unread a{
+  font-weight: 700 !important;
+  color: var(--at-text) !important;
+}
+html body table.data-table > tbody > tr > td.notification--read a{
+  color: var(--at-text2) !important;
 }
