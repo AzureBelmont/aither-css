@@ -5,7 +5,7 @@
 
    Author  AzureBelmont
    Repo    github.com/AzureBelmont/aither-css
-   Version 0.8 preview
+   Version 0.9 preview
    Base    Site style must be set to "Aither Dark".
    Install Settings -> General -> External CSS Stylesheet
 
@@ -2037,6 +2037,55 @@ html body li.top-nav__dropdown ul li a.top-nav__username:hover{
     display: none !important;
   }
 }
+@media (min-width:1400px){
+  html body:has(> main[class*="page__torrent--index"]) .top-nav__main-menus > li > ul > li > a[href$="/torrents"],
+  html body:has(> main[class*="page__torrent--show"]) .top-nav__main-menus > li > ul > li > a[href$="/torrents"],
+  html body:has(> main[class*="page__torrent-pending"]) .top-nav__main-menus > li > ul > li > a[href$="/torrents/pending"],
+  html body:has(> main[class*="page__torrent--create"]) .top-nav__main-menus > li > ul > li > a[href$="/torrents/create"],
+  html body:has(> main[class*="page__request"]) .top-nav__main-menus > li > ul > li > a[href$="/requests"],
+  html body:has(> main[class*="page__torrent-reseed"]) .top-nav__main-menus > li > ul > li > a[href$="/torrent-reseed"],
+  html body:has(> main[class*="page__subtitle"]) .top-nav__main-menus > li > ul > li > a[href$="/subtitles"],
+  html body:has(> main[class*="page__rss"]) .top-nav__main-menus > li > ul > li > a[href$="/rss"],
+  html body:has(> main[class*="page__mediahub"]) .top-nav__main-menus > li > ul > li > a[href$="/mediahub"],
+  html body:has(> main[class*="page__forum"]) .top-nav__main-menus > li > ul > li > a[href$="/forums"],
+  html body:has(> main[class*="page__topic"]) .top-nav__main-menus > li > ul > li > a[href$="/forums"],
+  html body:has(> main[class*="page__playlist"]) .top-nav__main-menus > li > ul > li > a[href$="/playlists"],
+  html body:has(> main[class*="page__poll"]) .top-nav__main-menus > li > ul > li > a[href$="/polls"],
+  html body:has(> main[class*="page__article"]) .top-nav__main-menus > li > ul > li > a[href$="/articles"],
+  html body:has(> main[class*="page__event"]) .top-nav__main-menus > li > ul > li > a[href$="/events"],
+  html body:has(> main[class*="page__wiki--index"]) .top-nav__main-menus > li > ul > li > a[href$="/wikis"],
+  html body:has(> main[class*="page__ticket"]) .top-nav__main-menus > li > ul > li > a[href$="/tickets"],
+  html body:has(> main[class*="page__stats--index"]) .top-nav__main-menus > li > ul > li > a[href$="/stats"],
+  html body:has(> main[class*="page__trending"]) .top-nav__main-menus > li > ul > li > a[href$="/trending"],
+  html body:has(> main[class*="page__missing"]) .top-nav__main-menus > li > ul > li > a[href$="/missing"],
+  html body:has(> main[class*="page__internal"]) .top-nav__main-menus > li > ul > li > a[href$="/pages/internal"]{
+    background: rgba(232,201,138,.12) !important;
+    color: var(--at-accent) !important;
+  }
+  html body:has(> main[class*="page__torrent--index"]) .top-nav__main-menus > li > ul > li > a[href$="/torrents"] i,
+  html body:has(> main[class*="page__torrent--show"]) .top-nav__main-menus > li > ul > li > a[href$="/torrents"] i,
+  html body:has(> main[class*="page__torrent-pending"]) .top-nav__main-menus > li > ul > li > a[href$="/torrents/pending"] i,
+  html body:has(> main[class*="page__torrent--create"]) .top-nav__main-menus > li > ul > li > a[href$="/torrents/create"] i,
+  html body:has(> main[class*="page__request"]) .top-nav__main-menus > li > ul > li > a[href$="/requests"] i,
+  html body:has(> main[class*="page__torrent-reseed"]) .top-nav__main-menus > li > ul > li > a[href$="/torrent-reseed"] i,
+  html body:has(> main[class*="page__subtitle"]) .top-nav__main-menus > li > ul > li > a[href$="/subtitles"] i,
+  html body:has(> main[class*="page__rss"]) .top-nav__main-menus > li > ul > li > a[href$="/rss"] i,
+  html body:has(> main[class*="page__mediahub"]) .top-nav__main-menus > li > ul > li > a[href$="/mediahub"] i,
+  html body:has(> main[class*="page__forum"]) .top-nav__main-menus > li > ul > li > a[href$="/forums"] i,
+  html body:has(> main[class*="page__topic"]) .top-nav__main-menus > li > ul > li > a[href$="/forums"] i,
+  html body:has(> main[class*="page__playlist"]) .top-nav__main-menus > li > ul > li > a[href$="/playlists"] i,
+  html body:has(> main[class*="page__poll"]) .top-nav__main-menus > li > ul > li > a[href$="/polls"] i,
+  html body:has(> main[class*="page__article"]) .top-nav__main-menus > li > ul > li > a[href$="/articles"] i,
+  html body:has(> main[class*="page__event"]) .top-nav__main-menus > li > ul > li > a[href$="/events"] i,
+  html body:has(> main[class*="page__wiki--index"]) .top-nav__main-menus > li > ul > li > a[href$="/wikis"] i,
+  html body:has(> main[class*="page__ticket"]) .top-nav__main-menus > li > ul > li > a[href$="/tickets"] i,
+  html body:has(> main[class*="page__stats--index"]) .top-nav__main-menus > li > ul > li > a[href$="/stats"] i,
+  html body:has(> main[class*="page__trending"]) .top-nav__main-menus > li > ul > li > a[href$="/trending"] i,
+  html body:has(> main[class*="page__missing"]) .top-nav__main-menus > li > ul > li > a[href$="/missing"] i,
+  html body:has(> main[class*="page__internal"]) .top-nav__main-menus > li > ul > li > a[href$="/pages/internal"] i{
+    color: var(--at-accent) !important;
+  }
+}
 @media (min-width:2000px){
   html body > main{
     margin-left: auto !important;
@@ -2136,6 +2185,12 @@ html body tbody tr[class*="torrent-search--list__"] td{
 html body .top-nav__site-logo{
   font-size: 0 !important;
   letter-spacing: 0 !important;
+}
+html body .footer__section-title .top-nav__site-logo{
+  font-size: 0 !important;
+}
+html body .footer__section-title .top-nav__site-logo::after{
+  font-size: 15px !important;
 }
 html body .top-nav__site-logo::after{
   content: "\C6THER";
