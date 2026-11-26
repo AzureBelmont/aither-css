@@ -5,7 +5,7 @@
 
    Author  AzureBelmont
    Repo    github.com/AzureBelmont/aither-css
-   Version 0.1 preview
+   Version 0.2 preview
    Base    Site style must be set to "Aither Dark".
    Install Settings -> General -> External CSS Stylesheet
 
@@ -2043,4 +2043,91 @@ html body .top-nav__site-logo::after{
   font-weight: 700;
   letter-spacing: .04em;
   color: var(--at-text);
+}
+html body header nav.top-nav a.top-nav__branding > img{
+  filter: brightness(0) saturate(1) invert(.788) sepia(.856) saturate(2.245) hue-rotate(-25.4deg) brightness(.91) !important;
+}
+html body a.torrent-search--list__name:visited{
+  color: #b7b0d6 !important;
+}
+@media (min-width:1200px){
+  html body .top-nav__main-menus{
+    gap: 12px !important;
+  }
+  html body .top-nav__main-menus > li > ul > li > a,
+  html body .top-nav__main-menus > li > ul > li > form > button{
+    padding: 2px 8px !important;
+    min-height: 0 !important;
+    gap: 10px !important;
+  }
+  html body .top-nav__main-menus > li > ul > li i[class*="fa-"]{
+    width: 26px !important;
+    height: 26px !important;
+    min-width: 26px !important;
+    line-height: 26px !important;
+    font-size: 12px !important;
+  }
+}
+html body .panelV2 > .panel__heading,
+html body .panel__heading,
+html body .panel__heading a{
+  color: var(--at-text) !important;
+}
+html body .torrent__buttons .form__button{
+  white-space: nowrap !important;
+  padding-left: 6px !important;
+  padding-right: 6px !important;
+}
+html body .form__button{
+  border-radius: 999px !important;
+}
+html body .form__button--filled{
+  background: var(--at-accent) !important;
+  color: #0a0d1a !important;
+  border-color: transparent !important;
+}
+html body .form__button--filled:hover{
+  background: #f4dcaa !important;
+}
+html body .form__button--outlined{
+  border-color: rgba(200,208,255,.16) !important;
+  background: rgba(200,208,255,.03) !important;
+}
+html body .form__button--outlined:hover{
+  border-color: rgba(232,201,138,.55) !important;
+  color: var(--at-accent) !important;
+}
+html body .form__text,
+html body .form__select,
+html body .form__textarea{
+  border-radius: 10px !important;
+}
+html body .form__text:focus,
+html body .form__select:focus,
+html body .form__textarea:focus{
+  border-color: rgba(232,201,138,.55) !important;
+  box-shadow: 0 0 0 3px rgba(232,201,138,.12) !important;
+}
+html body .nav-tab--active__link{
+  border-bottom-color: transparent !important;
+  background: rgba(232,201,138,.12) !important;
+  border-radius: 999px !important;
+  color: var(--at-accent) !important;
+}
+html body .nav-tab__link{
+  border-radius: 999px !important;
+}
+html body .post,
+html body .comment,
+html body .torrent-card,
+html body .topic-listing,
+html body .subforum-listing{
+  border-radius: 14px !important;
+}
+html body dialog.dialog{
+  border-radius: 16px !important;
+}
+html body dialog::backdrop{
+  backdrop-filter: blur(6px);
+  background: rgba(4,6,14,.6) !important;
 }
