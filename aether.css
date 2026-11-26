@@ -5,7 +5,7 @@
 
    Author  AzureBelmont
    Repo    github.com/AzureBelmont/aither-css
-   Version 0.13 preview
+   Version 0.14 preview
    Base    Site style must be set to "Aither Dark".
    Install Settings -> General -> External CSS Stylesheet
 
@@ -2126,7 +2126,6 @@ html body li.top-nav__dropdown ul li a.top-nav__username:hover{
     max-height: calc(100vh - var(--bar) - 28px) !important;
     overflow-x: hidden !important;
     overflow-y: auto !important;
-    scrollbar-width: thin;
     grid-template-columns: minmax(0,1fr) !important;
     grid-template-rows: none !important;
     grid-template-areas: "poster" "title" "tags" "ids" "description" "chips" !important;
@@ -2208,8 +2207,10 @@ html body li.top-nav__dropdown ul li a.top-nav__username:hover{
     left: 0 !important;
     top: calc(100% + 6px) !important;
     right: auto !important;
-    width: 420px !important;
-    max-height: calc(100vh - 150px) !important;
+    width: 100% !important;
+    max-height: min(58vh,560px) !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
     border: 1px solid rgba(200,208,255,.14) !important;
     border-radius: 12px !important;
     background: var(--at-bg2) !important;
@@ -2219,6 +2220,26 @@ html body li.top-nav__dropdown ul li a.top-nav__username:hover{
   html body .quick-search__result--default{
     padding: 10px 12px !important;
     background: transparent !important;
+  }
+  html body .quick-search__results article{
+    padding: 6px 8px !important;
+    gap: 8px !important;
+    min-width: 0 !important;
+  }
+  html body .quick-search__results article img{
+    width: 30px !important;
+    height: auto !important;
+    flex: none !important;
+    border-radius: 4px !important;
+  }
+  html body .quick-search__results article p,
+  html body .quick-search__results article h3,
+  html body .quick-search__results article a{
+    min-width: 0 !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+    font-size: 12.5px !important;
+    line-height: 1.25 !important;
   }
 }
 
