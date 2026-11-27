@@ -6,7 +6,7 @@
 
    Author  AzureBelmont
    Repo    github.com/AzureBelmont/aither-css
-   Version 0.13 preview
+   Version 0.14 preview
    Base    Site style must be set to "Aither Dark".
    Install Settings -> General -> External CSS Stylesheet
 
@@ -3228,7 +3228,7 @@ html body main.page__home #chatbody:not(.chatbox--fullscreen) #chatbox_header{fl
 html body main.page__home #chatbody:not(.chatbox--fullscreen) #chatbox_header .panel__actions{flex:1 1 100% !important;flex-wrap:wrap !important;justify-content:flex-start !important;align-items:center !important;gap:2px 10px !important;}
 html body main.page__home #chatbody:not(.chatbox--fullscreen) #chatbox_header .panel__action:has(select){flex:1 1 38% !important;min-width:0 !important;}
 html body main.page__home #chatbody:not(.chatbox--fullscreen) #chatbox_header .panel__action select{width:100% !important;min-width:0 !important;}
-html body main.page__home .torrent-search--list__no-poster-headers,html body main.page__home .torrent-search--list__no-poster-row{grid-template-columns:72px minmax(0,1fr) 112px 54px 82px 38px 38px 38px 112px !important;}
+html body main.page__home .torrent-search--list__no-poster-headers,html body main.page__home .torrent-search--list__no-poster-row{grid-template-columns:68px minmax(0,1fr) 150px 54px 78px 38px 38px 38px 110px !important;}
 html body main.page__home > article > section:not(#chatbody) .panel__tabs{flex-wrap:wrap !important;overflow:visible !important;}
 }
 @media (min-width:1400px){
