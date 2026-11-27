@@ -3200,6 +3200,7 @@ html::after{left:calc(100% - 260px);animation-duration:33s,6s;animation-delay:-2
 @supports (animation-timeline:scroll()){
 @media (min-width:1400px) and (prefers-reduced-motion:no-preference){
 html body nav.secondary-nav::before,html body::after{animation:tk-run linear both;animation-timeline:scroll(root block);will-change:transform;}
+html body nav.secondary-nav > ol.breadcrumbsV2{max-width:calc(100% - var(--tk-travel) - 140px) !important;}
 }
 }
 @keyframes tk-run{from{transform:translateX(calc(-1 * var(--tk-travel)));}to{transform:none;}}
