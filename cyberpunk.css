@@ -1949,3 +1949,10 @@ html body li.top-nav__dropdown ul li a.top-nav__username:hover{
     display: none !important;
   }
 }
+
+html body li.pagination__previous--disabled,
+html body li.pagination__next--disabled,
+html body li.pagination__previous--disabled:hover,
+html body li.pagination__next--disabled:hover{
+  color: #79798a !important;
+}

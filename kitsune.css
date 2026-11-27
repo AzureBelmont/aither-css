@@ -1473,3 +1473,10 @@ html body .panel__heading a:has(.internal-card__poster-popup):hover > i{
     display: none !important;
   }
 }
+
+html body li.pagination__previous--disabled,
+html body li.pagination__next--disabled,
+html body li.pagination__previous--disabled:hover,
+html body li.pagination__next--disabled:hover{
+  color: #a2a2a2 !important;
+}
