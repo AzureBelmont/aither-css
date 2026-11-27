@@ -6,7 +6,7 @@
 
    Author  AzureBelmont
    Repo    github.com/AzureBelmont/aither-css
-   Version 0.11 preview
+   Version 0.12 preview
    Base    Site style must be set to "Aither Dark".
    Install Settings -> General -> External CSS Stylesheet
 
@@ -3215,7 +3215,7 @@ html body nav.secondary-nav{view-transition-name:ae-bar;}
 @keyframes ae-vt-out{to{opacity:0;}}
 @keyframes ae-vt-in{from{opacity:0;transform:translateY(6px);}}
 @media (min-width:1600px){
-html body main.page__home > article{display:grid !important;grid-template-columns:minmax(0,1fr) clamp(380px,27vw,480px) !important;column-gap:16px !important;row-gap:0 !important;align-items:start !important;}
+html body main.page__home > article{display:grid !important;grid-template-columns:minmax(0,1fr) clamp(380px,27vw,480px) !important;column-gap:16px !important;row-gap:0 !important;align-items:start !important;align-content:start !important;grid-auto-rows:min-content !important;}
 html body main.page__home > article > *{grid-column:1 !important;min-width:0 !important;margin-bottom:10px !important;}
 html body main.page__home > article > #chatbody{grid-column:2 !important;grid-row:1 / span 40 !important;position:sticky !important;top:calc(var(--bar) + 10px) !important;height:calc(100vh - var(--bar) - 20px) !important;margin:0 !important;overflow:hidden !important;}
 html body main.page__home > article > #chatbody > div:has(> #chatbox_header){height:100% !important;display:flex !important;flex-direction:column !important;}
