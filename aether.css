@@ -5,7 +5,7 @@
 
    Author  AzureBelmont
    Repo    github.com/AzureBelmont/aither-css
-   Version 1.3
+   Version 1.4
    Base    Site style must be set to "Aither Dark".
    Install Settings -> General -> External CSS Stylesheet
 
@@ -2454,6 +2454,12 @@ html body tr:nth-child(2n) td{
 }
 html body tbody tr[class*="torrent-search--list__"] td{
   background-color: transparent !important;
+}
+html body li.pagination__previous--disabled,
+html body li.pagination__next--disabled,
+html body li.pagination__previous--disabled:hover,
+html body li.pagination__next--disabled:hover{
+  color: var(--at-text-dim,#6f7799) !important;
 }
 @media (min-width:1000px){
   html body .top-nav{
