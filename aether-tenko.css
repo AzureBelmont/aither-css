@@ -6,7 +6,7 @@
 
    Author  AzureBelmont
    Repo    github.com/AzureBelmont/aither-css
-   Version 0.14 preview
+   Version 0.15 preview
    Base    Site style must be set to "Aither Dark".
    Install Settings -> General -> External CSS Stylesheet
 
@@ -3170,6 +3170,8 @@ html body header nav.top-nav a.top-nav__branding::before{content:"";flex:none;wi
 html body table.data-table > tbody > tr > td.notification--unread{box-shadow:inset 3px 0 0 var(--tk-fire) !important;}
 html body li:has(> .topic-listing__item--unread){box-shadow:inset 3px 0 0 var(--tk-fire) !important;}
 html body::before{background:var(--tk-stars) repeat 0 0/480px 480px,linear-gradient(180deg,#0c0e1e 0%,#050508 45%,#020204 100%);}
+html body table tbody > tr:only-child > td[colspan]:only-child:not(:has(form,table,input,select,textarea,img,ul,ol,div)){text-align:center !important;padding:30px 16px 28px !important;color:var(--at-text-dim) !important;font-size:13px !important;letter-spacing:.02em !important;background:transparent !important;}
+html body table tbody > tr:only-child > td[colspan]:only-child:not(:has(form,table,input,select,textarea,img,ul,ol,div))::before{content:"";display:block;width:92px;height:78px;margin:0 auto 10px;background:var(--tk-fox) no-repeat center/contain;opacity:.75;}
 @media (min-width:1400px){
 html body:has(.top-nav__icon-bar > li:nth-child(5)){--tk-right:266px;}
 html body:has(.top-nav__icon-bar > li:nth-child(6)){--tk-right:320px;}
